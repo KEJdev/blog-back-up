@@ -1,20 +1,41 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
-    <url>
-        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
-    </url>
-    {% endfor %}
-
-    {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
-    <url>
-        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    </url>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/Attentive-Deep-Local-Features</loc>
+<lastmod>2018-01-17T19:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/SQL-Grammar-1</loc>
+<lastmod>2018-08-17T18:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/SQL-Grammar-2</loc>
+<lastmod>2018-08-18T18:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/SQL-Grammar-3</loc>
+<lastmod>2018-08-19T18:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/R-Grammar-1</loc>
+<lastmod>2018-10-30T18:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/author/KEJdev/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/paper/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/sql/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/r/</loc>
+</url>
 </urlset>
