@@ -15,9 +15,9 @@ baseurl: /
 title: 덕복희
 description: If i was rich, i would eat tteokbokki every day.
 cover: ./assets/images/covers.jpg
-logo: assets/images/blog-icon.png
-logo_dark: assets/images/blog-icon.png
-favicon: assets/images/blog-icon.png
+logo: ./assets/images/blog-icon.png
+logo_dark: ./assets/images/blog-icon.png
+favicon: ./assets/images/blog-icon.png
 production_url: https://KEJdev.github.io/
 source_url: https://KEJdev.github.io/
 CNAME: #add cname for website to be created
