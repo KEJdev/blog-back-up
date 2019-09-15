@@ -14,7 +14,7 @@ baseurl: /
 # Website info
 title: 덕복희
 description: If i was rich, i would eat tteokbokki every day.
-#cover: ./assets/images/covers.jpg
+cover: ./assets/images/covers.jpg
 logo: ../assets/images/blog-icon.png
 logo_dark: ../assets/images/blog-icon.png
 favicon: ../assets/images/blog-icon.png
