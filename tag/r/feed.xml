@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/r/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2019-09-14T23:36:25+09:00</updated>
+  <id>http://localhost:4000/tag/r/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">덕복희 | </title>
+  
+
+  
+    <subtitle>If i was rich, i would eat tteokbokki every day.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">R을 배워야 하는 이유</title>
+      <link href="http://localhost:4000/R-Grammar-1" rel="alternate" type="text/html" title="R을 배워야 하는 이유" />
+      <published>2018-10-30T18:00:00+09:00</published>
+      <updated>2018-10-30T18:00:00+09:00</updated>
+      <id>http://localhost:4000/R-Grammar-1</id>
+      <content type="html" xml:base="http://localhost:4000/R-Grammar-1">&lt;p&gt;R이라는 언어를 들어보신 적 있을꺼예요.&lt;br /&gt;
+R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요.&lt;br /&gt;
+요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. &lt;strong&gt;재밌는 이야기&lt;/strong&gt; 하나를 들려드릴께요.&lt;/p&gt;
+
+&lt;p&gt;카카오톡은 2010년 3월에 서비스르르 시작한 이후에 폭발적으로 성장해서 2012년 말에 8000만명의 가입자를 넘어섰다고 합니다. 하루 평균 43분간 카카오톡을 하고 하루 방문자가 2700만명, 하루 최대 메세지 이용건수가 42억건에 달한다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;예전에는 &lt;strong&gt;“문자해”&lt;/strong&gt;라는 말이 현재는 &lt;strong&gt;“카톡해”&lt;/strong&gt;로 바뀐거를 보면 정말 카카오톡은 성공했다고 볼 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이런 성공에도 불고하고 마땅한 수익모델이 없어서 2010년에 41억 적자, 2011년 153억 적자였다고 합니다. 카톡 사용자들에 대한 데이터 분석을 하고난 다음부터 2012년에 애니팡의 인기에 힘 입어 흑자라인으로 들어섰다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;(소문으로는 개발자 하루 통장에 1억씩 입금할정도였다고 …)&lt;/p&gt;
+
+&lt;p&gt;그렇다면 카카오는 카톡 사용자들을 어떻게 분석했을까요 ?&lt;br /&gt;
+간단해요.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;누가(성별, 연령)&lt;/li&gt;
+  &lt;li&gt;무엇을(게임 아이템)&lt;/li&gt;
+  &lt;li&gt;언제(아이템 구매시간)&lt;/li&gt;
+  &lt;li&gt;얼마나(아이템 구매빈도)&lt;/li&gt;
+  &lt;li&gt;어떻게(결제 방법)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;sql과-r의-차이점&quot;&gt;SQL과 R의 차이점&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;R과 SQL의 차이점이 무엇일까요 ?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;아주 긴 SQL코드를 R코드로 단순하게 작성할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;예)&lt;/p&gt;
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'SALESMAN'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ANALYST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.....&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이것을 R로 만들면 ,&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;emp.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tapply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;데이터를 시각화 할 수 있다.(가장 큰 이유)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;center&gt;&lt;img src=&quot;/../assets/images/pie1.png&quot; width=&quot;150&quot; height=&quot;150&quot; /&gt;&lt;/center&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;r이란&quot;&gt;R이란?&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;그렇다면 R이란 무엇일까요?
+뉴질랜드의 aukland 대학의 robert gentlman 과 Ross ihaka 가 1995년에 
+개발한 소프트웨어이고 데이터 분석을 위한 통계 및 그래픽스를 지원하는 무료
+소프트웨어입니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 대체 R은 왜 사용해야 하는걸까요?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;r을-왜-사용해야하는가&quot;&gt;R을 왜 사용해야하는가?&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;R is free&lt;/li&gt;
+  &lt;li&gt;data 분석을 위해 가장 많이 쓰는 통계 플랫폼이다.&lt;/li&gt;
+  &lt;li&gt;복잡한 데이터를 다양한 그래프로 표현할 수 있다.&lt;/li&gt;
+  &lt;li&gt;분석을 위한 데이터를 쉽게 저장하고 조작할 수 있다.&lt;/li&gt;
+  &lt;li&gt;누구든지 유용한 패키지를 생성해서 공유할 수 있고 새로운 기능에 대한 전달이 빠르다.&lt;/li&gt;
+  &lt;li&gt;어떤 os에서 설치가 가능하다. 심지어 아이폰에서도 설치가 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;r의-자료구조&quot;&gt;R의 자료구조&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;type&lt;/center&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; 설명 &lt;/center&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;vector&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;같은 데이터 타입을 갖는 1차원 배열구조&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;matrix&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;같은 데이터 타입을 갖는 2차원 배열구조&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;array&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;같은 데이터 타입을 갖는 다차원 배열구조&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;data.frame&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;각각의 데이터 타입을 갖는 컬럼으로 이루어진 2차원 배열구조&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;list&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;서로 다른 데이터 구조인 데이터 타입이 중첩된 구조&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;그림으로 설명하면 아래의 그림과 같습니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/../assets/images/type.png&quot; width=&quot;450&quot; height=&quot;350&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;이번엔 간단하게 R을 배워야 하는 이유와 자료구조에 대해 알아봤습니다. &lt;br /&gt;
+다음엔 간단하게 R문법에 대해 배워보겠습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="R" />
+      
+
+      
+        <summary type="html">R이라는 언어를 들어보신 적 있을꺼예요. R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. 재밌는 이야기 하나를 들려드릴께요.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
