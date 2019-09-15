@@ -1,0 +1,28 @@
+SQL:
+  name: SQL
+  description: False
+  cover: False
+PYTHON:
+  name: PYTHON
+  description: False
+  cover: False
+PLSQL:
+  name: PLSQL
+  description: False
+  cover: False
+R:
+  name: R
+  description: False
+  cover: False
+MACHINE-LEARNING:
+  name: MACHINE-LEARNING
+  description: False
+  cover: False
+PAPER:
+  name: PAPER
+  description: False
+  cover: False
+ALGORITHM:
+  name: ALGORITHM
+  description: False
+  cover: False
