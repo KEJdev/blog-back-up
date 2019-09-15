@@ -1,0 +1,10 @@
+<nav class="site-nav">
+    {% if page.current != 'home' %}
+
+    {% endif %}
+    <div class="site-nav-right">
+        {% if page.navigation %}
+            {% include navigation.html %}
+        {% endif %}
+    </div>
+</nav>
