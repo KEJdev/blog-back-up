@@ -7,6 +7,8 @@ title: Large-Scale Image Retrieval with Attentive Deep Local Features
 date: 2018-01-17 10:00:00
 tags: [PAPER]
 sitemap :
+  changefreq : daily
+  priority : 1.0
 class: post-template
 subclass: 'post tag-paper'
 author: KEJdev

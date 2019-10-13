@@ -7,6 +7,8 @@ title: SQL 기본 문법
 date: 2018-08-17 09:00:00
 tags: [SQL]
 sitemap :
+  changefreq : daily
+  priority : 1.0
 class: post-template
 subclass: 'post tag-sql'
 author: KEJdev

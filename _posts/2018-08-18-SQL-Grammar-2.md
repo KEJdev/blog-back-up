@@ -7,6 +7,8 @@ title: SQL 컬럼검색과 별칭 사용하기
 date: 2018-08-18 09:00:00
 tags: [SQL]
 sitemap :
+  changefreq : daily
+  priority : 1.0
 class: post-template
 subclass: 'post tag-sql'
 author: KEJdev
