@@ -11,7 +11,7 @@
 
 
 
-    <title>문자함수와 날짜 함수 2</title>
+    <title>Knn(K-Nearest Neighbors)이란?</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -61,30 +61,30 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
     <link rel="shortcut icon" href="http://localhost:4000/../assets/images/blog-icon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/SQL-Grammar-6" />
+    <link rel="canonical" href="http://localhost:4000/R-Grammar-2" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="덕복희" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="문자함수와 날짜 함수 2" />
-    <meta property="og:description" content="저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다. 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다. 그러면 오늘도 SQL에 대해 알아보러 갈까요? 숫자함수와 날짜함수 숫자 함수는 생각보다 간단하답니다. 프로그래밍을 조금 해보신 분들은 금방 자주 하는 함수일 수도 있겠습니다. 숫자함수의 종류는 아래와 같습니다. 숫자 함수 round 반올림하는 함수" />
-    <meta property="og:url" content="http://localhost:4000/SQL-Grammar-6" />
-    <meta property="og:image" content="http://localhost:4000/../assets/images/SQL_cover1.png" />
+    <meta property="og:title" content="Knn(K-Nearest Neighbors)이란?" />
+    <meta property="og:description" content="오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다. Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다. 이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다. knn이란 무엇인가? 사회적인 관계를 관찰해본적인 있나요 ? 대략적으로 비슷한 사람끼리 모이는 성질이 있다고 합니다. 그래서 비슷한 취향의 사람들끼리 모여서 동회회를 만들거나 비슷한 부류의 계층의 사람들끼리" />
+    <meta property="og:url" content="http://localhost:4000/R-Grammar-2" />
+    <meta property="og:image" content="http://localhost:4000/../assets/images/R_cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2018-08-22T18:00:00+09:00" />
-    <meta property="article:modified_time" content="2018-08-22T18:00:00+09:00" />
-    <meta property="article:tag" content="Sql" />
+    <meta property="article:published_time" content="2018-10-30T18:00:00+09:00" />
+    <meta property="article:modified_time" content="2018-10-30T18:00:00+09:00" />
+    <meta property="article:tag" content="R" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="문자함수와 날짜 함수 2" />
-    <meta name="twitter:description" content="저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다. 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다. 그러면 오늘도 SQL에 대해 알아보러 갈까요? 숫자함수와 날짜함수 숫자 함수는 생각보다 간단하답니다. 프로그래밍을 조금 해보신 분들은 금방 자주 하는 함수일 수도 있겠습니다. 숫자함수의 종류는 아래와 같습니다. 숫자 함수 round 반올림하는 함수" />
+    <meta name="twitter:title" content="Knn(K-Nearest Neighbors)이란?" />
+    <meta name="twitter:description" content="오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다. Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다. 이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다. knn이란 무엇인가? 사회적인 관계를 관찰해본적인 있나요 ? 대략적으로 비슷한 사람끼리 모이는 성질이 있다고 합니다. 그래서 비슷한 취향의 사람들끼리 모여서 동회회를 만들거나 비슷한 부류의 계층의 사람들끼리" />
     <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/../assets/images/SQL_cover1.png" />
+    <meta name="twitter:image" content="http://localhost:4000/../assets/images/R_cover1.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="덕복희" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Sql" />
+    <meta name="twitter:data2" content="R" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -99,18 +99,18 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
         "name": "덕복희",
         "logo": "http://localhost:4000/../assets/images/blog-icon.png"
     },
-    "url": "http://localhost:4000/SQL-Grammar-6",
+    "url": "http://localhost:4000/R-Grammar-2",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/../assets/images/SQL_cover1.png",
+        "url": "http://localhost:4000/../assets/images/R_cover1.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/SQL-Grammar-6"
+        "@id": "http://localhost:4000/R-Grammar-2"
     },
-    "description": "저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다. 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다. 그러면 오늘도 SQL에 대해 알아보러 갈까요? 숫자함수와 날짜함수 숫자 함수는 생각보다 간단하답니다. 프로그래밍을 조금 해보신 분들은 금방 자주 하는 함수일 수도 있겠습니다. 숫자함수의 종류는 아래와 같습니다. 숫자 함수 round 반올림하는 함수"
+    "description": "오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다. Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다. 이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다. knn이란 무엇인가? 사회적인 관계를 관찰해본적인 있나요 ? 대략적으로 비슷한 사람끼리 모이는 성질이 있다고 합니다. 그래서 비슷한 취향의 사람들끼리 모여서 동회회를 만들거나 비슷한 부류의 계층의 사람들끼리"
 }
     </script>
 
@@ -123,7 +123,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="문자함수와 날짜 함수 2" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Knn(K-Nearest Neighbors)이란?" href="/feed.xml" />
 
 
 </head>
@@ -166,150 +166,82 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post tag-sql ">
+        <article class="post-full post tag-r ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="22 August 2018">22 August 2018</time>
+                    <time class="post-full-meta-date" datetime="30 October 2018">30 October 2018</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/sql/'>SQL</a>
+                               <a href='/tag/r/'>R</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">문자함수와 날짜 함수 2</h1>
+                <h1 class="post-full-title">Knn(K-Nearest Neighbors)이란?</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/../assets/images/SQL_cover1.png)">
+            <figure class="post-full-image" style="background-image: url(/../assets/images/R_cover1.png)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다.<br />
-숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다.<br />
-그러면 오늘도 SQL에 대해 알아보러 갈까요?</p>
+                    <p>오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.<br />
+Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.</p>
+
+<p>이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다.</p>
+
+<p><br /></p>
 
 <blockquote>
-  <h4 id="숫자함수와-날짜함수">숫자함수와 날짜함수</h4>
+  <h4 id="knn이란-무엇인가">knn이란 무엇인가?</h4>
 </blockquote>
 
-<p>숫자 함수는 생각보다 간단하답니다.<br />
-프로그래밍을 조금 해보신 분들은 금방 자주 하는 함수일 수도 있겠습니다.</p>
+<p>사회적인 관계를 관찰해본적인 있나요 ?<br />
+대략적으로 비슷한 사람끼리 모이는 성질이 있다고 합니다. 그래서 비슷한 취향의 사람들끼리 모여서 동회회를 만들거나 비슷한 부류의 계층의 사람들끼리 친분을 맺기도 합니다.</p>
 
-<p>숫자함수의 종류는 아래와 같습니다.</p>
+<p>그렇다면 공간적은 관계를 관찰해볼까요?<br />
+길을 지나다가 보면 가구점이 모여있는 상가지역이 따로 형성된 곳이 있지 않나요? 한약방이 밀집되어 있는 지역이나, 가구점, 음식점 등 밀집되어 있는 지역이 따로 모여 있는 경우가 많은 것을 우리는 길을 지나다가 느낄 수 있습니다.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><center></center></th>
-      <th style="text-align: center"><center>숫자 함수</center></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>round</strong></td>
-      <td style="text-align: center"><center>반올림하는 함수</center></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>trunc</strong></td>
-      <td style="text-align: center"><center>반올림하지 않고 버리는 함수</center></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>mod</strong></td>
-      <td style="text-align: center"><center>나눈 나머지값을 출력하는 함수</center></td>
-    </tr>
-  </tbody>
-</table>
+<p>이러한 <strong>특성</strong>을 가진 데이터를 겨낭해서 만들어진 알고리즘이 <strong>knn</strong>입니다.</p>
 
-<p>날짜 함수의 정류는 아래와 같습니다.</p>
+<p><br /></p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><center></center></th>
-      <th style="text-align: center"><center>날짜 함수</center></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>between_months</strong></td>
-      <td style="text-align: center"><center>날짜와 날짜 사이의 개월 수를 출력하는 함수</center></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>add_months</strong></td>
-      <td style="text-align: center"><center>특정 개월 수 후의 날짜를 출력하는 함수</center></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>next_day</strong></td>
-      <td style="text-align: center"><center> 돌아올 요일의 날짜를 출력하는 함수</center></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>last_day</strong></td>
-      <td style="text-align: center"><center>그 달의 마지막 날이 언제인지 출력하는 함수</center></td>
-    </tr>
-  </tbody>
-</table>
+<blockquote>
+  <h4 id="knn이-필요한-이유">knn이 필요한 이유</h4>
+</blockquote>
 
-<p>날짜 함수는</p>
+<p>유방암의 데이터를 가지고 있다고 가정을 했을때, 
+유방암의 종양의 크기에 대한 데이터(반지름, 둘레, 면적 등)만을 가지고 이 종양이 악성인지, 양성인지 예측할 수 있습니다.<br />
+그렇다면 환자에 대한 치료 스케줄에 큰 영향을 미칠 수 있겠죠 ?</p>
 
-<p>날짜 - 숫자 = 날짜<br />
-날짜 + 숫자 = 날짜<br />
-날짜 - 날짜 = 숫자</p>
+<p><br /></p>
 
-<p>등으로도 사용할수 있습니다. 잘 기억해두세요~!
-자, 그럼! 이제 숫자 함수를 사용하여 SQL문법 예시를 볼까요?<br />
-숫자 함수는 너무 간단하게 한번 슬쩍 보시면 된답니다.</p>
+<blockquote>
+  <h4 id="knn-분류-이해">knn 분류 이해</h4>
+</blockquote>
 
-<p><strong>round</strong>함수를 사용할때는 아래와 같이 작성하시면 됩니다.</p>
+<p>knn은 분류를 어떻게 할까요 ?<br />
+knn은 어떤 라벨을 정의할 때, 그 데이터의 주변 반경 ε(입실론)안의 데이터들의 라벨들을 조사하여 다수결로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  
-<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
-</code></pre></div></div>
+<p>쉬운 이해를 위해 아래의 그림을 봐주세요.</p>
 
-<p><strong>trunc</strong>함수를 사용할때는 아래와 같이 작성하시면 됩니다.</p>
+<center><img src="../assets/images/knn.png" width="1000" height="450" /></center>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  
-<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
-</code></pre></div></div>
+<p><strong><center>knn 분류 예시</center></strong></p>
 
-<p><strong>mod</strong>함수를 사용할때는 아래와 같이 작성하시면 됩니다.</p>
+<p>knn을 5로 잡았을 때를 가정으로 하면 위처럼 표시 할 수 있습니다. A에는 빨간색이 많았으므로 물음표안에는 빨간색이 들어가고, B에는 파란색이 들어갑니다.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">mod</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
-</code></pre></div></div>
+<p>이해 하셨나요?<br />
+위에서도 말했듯이 어떠한 라벨을 정의할 때, <strong>다수결</strong>로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.</p>
 
-<p>자, 이제 어려운 날짜 함수에 대해 알아볼까요?</p>
-
-<p>이름과 입사한 날짜부터 오늘까지 총 몇일 근무했는지를 출력하려면 SQL을 어떻게 짜야댈까요?<br />
-아까 말했던 <strong>-</strong>를 사용하면 된답니다?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">trunc</span><span class="p">(</span><span class="n">sysdate</span><span class="o">-</span><span class="n">hiredate</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>위와 같이 SQL문법을 작성하면 된답니다.<br />
-조금 어렵죠? 계속 계속 이어서 작성해볼까요 ?</p>
-
-<p>이름과 입사한 날짜가 오늘부터 총 몇 달을 근무했는 출력하려면 SQL을 어떻게 짜야댈까요?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">months_between</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="n">hiredate</span><span class="p">)</span>
-<span class="n">months_between</span><span class="p">(</span><span class="err">최신날짜</span><span class="p">,</span><span class="err">입사일</span><span class="p">)</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>위와 같이 SQL문법을 작성하면 되는데요. 그렇다면 오늘부터 100달 뒤에 날짜가 어떻게 되는지는 어떻게 해야댈까요?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">add_months</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>이렇게 작성하시면 된답니다.<br />
-생각보다 날짜 함수는 꽤 어렵답니다. 날짜함수는 나중에 사용할 곳이 많으니까, 잘 기억해두세요!</p>
+<p>이제 knn개념을 잘 아시겠죠?
+다음 포스팅에는 실제 데이터를 이용해서 knn을 해보겠습니다.<br />
+knn을 하기 위한 데이터는 제 깃허브에 있으니, <strong>[여기]</strong>(https://github.com/KEJdev/DataSet)를 눌러  미리 다운받아주세요.</p>
 
 
                 </div>
@@ -366,7 +298,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; 덕복희 &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/sql/">Sql</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/r/">R</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -376,21 +308,15 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/R-Grammar-3">KNN(K-Nearest Neighbors)이란?</a></li>
+                                        
                                     
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/SQL-Grammar-5">문자함수와 날짜 함수 1</a></li>
-                                        
                                     
                                   
                                 
@@ -398,32 +324,21 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/SQL-Grammar-4">데이터 제한 및 정렬 2</a></li>
+                                            <li><a href="/R-Grammar-1">R을 배워야 하는 이유</a></li>
                                         
                                     
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/SQL-Grammar-3">데이터 제한 및 정렬 1</a></li>
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
@@ -431,9 +346,9 @@ into the {body} of the default.hbs template -->
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/sql/">
+                            <a href="/tag/r/">
                                 
-                                    See all 5 posts  →
+                                    See all 2 posts  →
                                 
                             </a>
                         </footer>
@@ -442,6 +357,56 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/R-Grammar-3">
+                <div class="post-card-image" style="background-image: url(/../assets/images/R_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/R-Grammar-3">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">R</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">KNN(K-Nearest Neighbors)이란?</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
 
@@ -491,56 +456,6 @@ into the {body} of the default.hbs template -->
 
             
 
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/SQL-Grammar-5">
-                <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/SQL-Grammar-5">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Sql</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">문자함수와 날짜 함수 1</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <span class="post-card-author">
-                            <a href="/author/KEJdev/">KEJdev</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
         </div>
     </div>
 </aside>
@@ -556,7 +471,7 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">문자함수와 날짜 함수 2</div>
+    <div class="floating-header-title">Knn(K-Nearest Neighbors)이란?</div>
     
     <progress class="progress" value="0">
         <div class="progress-container">
