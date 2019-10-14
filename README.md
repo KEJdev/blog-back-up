@@ -1,6 +1,6 @@
 ### Github.io Blog 
 
-* 아래의 지킬테마를 기반으로 제작하였습니다.
+* 아래의 지킬테마를 기반으로 제작하였습니다.  
 http://jekyllthemes.org/themes/jasper2/  
 ###
 * 수정된 제 블로그 테마를 사용하고 싶으신 분들은  Fork하신 후 자유롭게 사용하셔도 됩니다. 
