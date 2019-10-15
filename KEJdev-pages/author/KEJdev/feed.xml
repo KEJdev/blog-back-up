@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-15T00:26:42+09:00</updated>
+  <updated>2019-10-15T21:30:28+09:00</updated>
   <id>http://localhost:4000/author/KEJdev/feed.xml</id>
 
   
@@ -21,6 +21,16 @@
 
   
 
+  
+    
+      
+    
+  
+
+  
+  
+
+  
     <entry>
       <title type="html">Knn(K-Nearest Neighbors)이란?</title>
       <link href="http://localhost:4000/R-Grammar-2" rel="alternate" type="text/html" title="Knn(K-Nearest Neighbors)이란?" />
@@ -78,7 +88,7 @@ knn은 어떤 라벨을 정의할 때, 그 데이터의 주변 반경 ε(입실�
 
 &lt;p&gt;이제 knn개념을 잘 아시겠죠?
 다음 포스팅에는 실제 데이터를 이용해서 knn을 해보겠습니다.&lt;br /&gt;
-knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;strong&gt;[여기]&lt;/strong&gt;(https://github.com/KEJdev/DataSet)를 눌러  미리 다운받아주세요.&lt;/p&gt;</content>
+knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;를 눌러  미리 다운받아주세요.&lt;/p&gt;</content>
 
       
       
