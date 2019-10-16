@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-16T20:52:24+09:00</updated>
+  <updated>2019-10-16T20:54:21+09:00</updated>
   <id>http://localhost:4000/author/KEJdev/feed.xml</id>
 
   
@@ -32,8 +32,8 @@
 
   
     <entry>
-      <title type="html">knn을 이용한 소개팅 데이터 분류</title>
-      <link href="http://localhost:4000/R-Grammar-3" rel="alternate" type="text/html" title="knn을 이용한 소개팅 데이터 분류" />
+      <title type="html">Knn을 이용한 소개팅 데이터 분류</title>
+      <link href="http://localhost:4000/R-Grammar-3" rel="alternate" type="text/html" title="Knn을 이용한 소개팅 데이터 분류" />
       <published>2018-11-01T18:00:00+09:00</published>
       <updated>2018-11-01T18:00:00+09:00</updated>
       <id>http://localhost:4000/R-Grammar-3</id>

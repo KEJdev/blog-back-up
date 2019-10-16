@@ -1,4 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-15T00:22:50+09:00</updated><id>http://localhost:4000/</id><title type="html">덕복희</title><subtitle>If i was rich, i would eat tteokbokki every day.</subtitle><entry><title type="html">Knn(K-Nearest Neighbors)이란?</title><link href="http://localhost:4000/R-Grammar-2" rel="alternate" type="text/html" title="Knn(K-Nearest Neighbors)이란?" /><published>2018-10-30T18:00:00+09:00</published><updated>2018-10-30T18:00:00+09:00</updated><id>http://localhost:4000/R-Grammar-2</id><content type="html" xml:base="http://localhost:4000/R-Grammar-2">&lt;p&gt;오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.&lt;br /&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>덕복희</title>
+    <description>If i was rich, i would eat tteokbokki every day.</description>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 16 Oct 2019 20:54:21 +0900</pubDate>
+    <lastBuildDate>Wed, 16 Oct 2019 20:54:21 +0900</lastBuildDate>
+    <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Knn을 이용한 소개팅 데이터 분류</title>
+        <description>&lt;p&gt;저번시간에 knn의 개념에 대해 알아보았습니다. &lt;br /&gt;
+오늘부터는 knn 분류 예제를 보면서 공부해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;knn실습을 위해서 &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;에서 데이터를 다운 받아주세요.&lt;br /&gt;
+R Dataset 폴더에서 like.csv 데이터를 다운 받아주시면 됩니다!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;dataset&quot;&gt;Dataset&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;데이터 설명을 하자면, 소개팅을 수천번하지 않기 때문에 그동안 14번정 소개팅을 했다고 가정하고 만난 남학생들에 대한 라벨을 호감라벨로 만들었습니다.&lt;/p&gt;
+
+&lt;p&gt;14개의 데이터를 knn으로 학습시켜서 예측 모델을 생성하고, 새로 만나게 될 남학생에 대한 데이터로 이 학생의 호감 라벨을 예측해보려고 합니다.&lt;/p&gt;
+
+&lt;p&gt;머신러닝을 할 때는 필수적으로 데이터 전처리라고 하는 Input 데이터를 알고리즘에 맞게 잘 정재하는 작업이 필요합니다. 이것을 표준화 또는 정규화 작업이라고도 합니다.&lt;/p&gt;
+
+&lt;p&gt;데이터 양이 작을 경우에는 scale() 이란 함수를 사용합니다.&lt;br /&gt;
+&lt;strong&gt;&lt;center&gt; 음수 ~ 양수 &lt;/center&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;반대로 데이터의 양이 많을 경우에는 nomalize() 이란 함수를 사용합니다.&lt;br /&gt;
+&lt;strong&gt;&lt;center&gt; 0 ~ 100 &lt;/center&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;왜-표준화나-정규화를-해야하는가&quot;&gt;왜 표준화나 정규화를 해야하는가?&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;어떤 데이터는 cm이고 어떤 데이터는 kg이면 결과가 제대로 나올수가 없기 때문입니다.&lt;br /&gt;
+그래서 cm이던 kg이던 0~100 사이의 데이터로 일관되게 만드는 작업이 필요합니다.&lt;/p&gt;
+
+&lt;p&gt;정규화 공식을 쉽게 보면 아래와 같습니다.&lt;/p&gt;
+
+&lt;center&gt;값 - 평균값 &lt;/center&gt;
+&lt;center&gt;------------------&lt;/center&gt;
+&lt;center&gt;표준편차&lt;/center&gt;
+
+&lt;p&gt;그럼 이제 knn을 이용하여 간단하게 분류를 해볼까요 ?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;knn-example&quot;&gt;knn Example&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;R에서 csv파일을 불러올때는 아래와 같이 하면 불러올 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;like&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;like.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;출력하면 아래의 데이터가 나오는 것을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/R1.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;한글 컬럼명이 너무 긴것 같지 않나요 ?  생각보다 불편한거 같습니다.&lt;br /&gt;
+그러니, 컬럼명을 바꿔볼까요 ??&lt;/p&gt;
+
+&lt;p&gt;컬럼명은 아래와 같이 입력하면 바꿀 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;colnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;taik&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;book&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;travel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;school&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tall&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;skin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;muslce&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;출력하면 아래와 같이 컬럼명이 변경되어 나오는 것을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/R2.png&quot; width=&quot;350&quot; height=&quot;230&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;이제 knn을 이용해서 분류를 하려고 하는데 맨 끝 컬럼에 있는 label과 data를 분리해야합니다. 분리는 아래와 같이 하시면 컬럼을 분리하실 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;train_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;[,-8]은 8번째 컬럼을 제외하고 라는 뜻이고, [,8]는 8번째 컬럼만 이라는 뜻이예요. 이제 진짜 knn을 사용해서 분류를 하려고 하는데 간단하게 test 데이터를 만들고 분류를 해보겠습니다. 여기서 test data는 위에서 언급했듯이 새로 만나게 될 사람에 대한 호감 라벨을 알아보기 위한 데이터예요. 데이터를 생성을 위해 아래의 코드를 넣어 데이터를 생성해주세요.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;test.data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;talk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;travel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;school&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;skin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;muslce&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;데이터를 넣었으면, 이제 knn분류를 해보겠습니다. 아래와 같이 코드를 작성해주세요.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;knn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test.data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그리고 출력하면 3타입이라는 결과를 얻을 수 있습니다.&lt;br /&gt;
+knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
+
+&lt;p&gt;그렇다면 위의 모델을 다시 생성하는데, k값을 다르게 했을때, 호감 라벨이 어떻게 변화하는지 확인헤보세요.&lt;br /&gt;
+여기서 &lt;strong&gt;주의&lt;/strong&gt; 해야할 점은 k값이 너무 크면 분류를 잘못하고 k값이 너무 작으면 테스트 데이터에만 너무 익숙해져요. 그러면 나중에 새로운 데이터를 분류할때, 분류를 잘 못하는 현상이 일어나는데, 이것을 &lt;strong&gt;오버피팅&lt;/strong&gt;이라고합니다. 앞으로 머신러닝을 다루게 되면 가장 많이 나오는 단어중 하나예요. 잘 기억해두세요 ~!&lt;/p&gt;
+
+&lt;p&gt;R에 대한 전체 코드는 &lt;a href=&quot;https://github.com/KEJdev/R-Example&quot;&gt;여기&lt;/a&gt;에서 볼 수 있습니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 01 Nov 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//R-Grammar-3</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-3</guid>
+        
+        <category>R</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Knn(K-Nearest Neighbors)이란?</title>
+        <description>&lt;p&gt;오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.&lt;br /&gt;
 Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.&lt;/p&gt;
 
 &lt;p&gt;이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다.&lt;/p&gt;
@@ -49,7 +167,21 @@ knn은 어떤 라벨을 정의할 때, 그 데이터의 주변 반경 ε(입실�
 
 &lt;p&gt;이제 knn개념을 잘 아시겠죠?
 다음 포스팅에는 실제 데이터를 이용해서 knn을 해보겠습니다.&lt;br /&gt;
-knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;strong&gt;[여기]&lt;/strong&gt;(https://github.com/KEJdev/DataSet)를 눌러  미리 다운받아주세요.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="R" /><summary type="html">오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다. Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.</summary></entry><entry><title type="html">R을 배워야 하는 이유</title><link href="http://localhost:4000/R-Grammar-1" rel="alternate" type="text/html" title="R을 배워야 하는 이유" /><published>2018-10-30T18:00:00+09:00</published><updated>2018-10-30T18:00:00+09:00</updated><id>http://localhost:4000/R-Grammar-1</id><content type="html" xml:base="http://localhost:4000/R-Grammar-1">&lt;p&gt;R이라는 언어를 들어보신 적 있을꺼예요.&lt;br /&gt;
+knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;를 눌러  미리 다운받아주세요.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//R-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-2</guid>
+        
+        <category>R</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>R을 배워야 하는 이유</title>
+        <description>&lt;p&gt;R이라는 언어를 들어보신 적 있을꺼예요.&lt;br /&gt;
 R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요.&lt;br /&gt;
 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. &lt;strong&gt;재밌는 이야기&lt;/strong&gt; 하나를 들려드릴께요.&lt;/p&gt;
 
@@ -175,7 +307,20 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 &lt;center&gt;&lt;img src=&quot;/../assets/images/type.png&quot; width=&quot;450&quot; height=&quot;350&quot; /&gt;&lt;/center&gt;
 
 &lt;p&gt;이번엔 간단하게 R을 배워야 하는 이유와 자료구조에 대해 알아봤습니다. &lt;br /&gt;
-다음 포스팅부터는 간단하게 R을 이용하여 머신러닝에 대해 알아보겠습니다.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="R" /><summary type="html">R이라는 언어를 들어보신 적 있을꺼예요. R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. 재밌는 이야기 하나를 들려드릴께요.</summary></entry><entry><title type="html">문자함수와 날짜 함수 2</title><link href="http://localhost:4000/SQL-Grammar-6" rel="alternate" type="text/html" title="문자함수와 날짜 함수 2" /><published>2018-08-22T18:00:00+09:00</published><updated>2018-08-22T18:00:00+09:00</updated><id>http://localhost:4000/SQL-Grammar-6</id><content type="html" xml:base="http://localhost:4000/SQL-Grammar-6">&lt;p&gt;저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다.&lt;br /&gt;
+다음 포스팅부터는 간단하게 R을 이용하여 머신러닝에 대해 알아보겠습니다.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//R-Grammar-1</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-1</guid>
+        
+        <category>R</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>문자함수와 날짜 함수 2</title>
+        <description>&lt;p&gt;저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다.&lt;br /&gt;
 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다.&lt;br /&gt;
 그러면 오늘도 SQL에 대해 알아보러 갈까요?&lt;/p&gt;
 
@@ -294,7 +439,21 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;이렇게 작성하시면 된답니다.&lt;br /&gt;
-생각보다 날짜 함수는 꽤 어렵답니다. 날짜함수는 나중에 사용할 곳이 많으니까, 잘 기억해두세요!&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="SQL" /><summary type="html">저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다. 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다. 그러면 오늘도 SQL에 대해 알아보러 갈까요?</summary></entry><entry><title type="html">문자함수와 날짜 함수 1</title><link href="http://localhost:4000/SQL-Grammar-5" rel="alternate" type="text/html" title="문자함수와 날짜 함수 1" /><published>2018-08-21T18:00:00+09:00</published><updated>2018-08-21T18:00:00+09:00</updated><id>http://localhost:4000/SQL-Grammar-5</id><content type="html" xml:base="http://localhost:4000/SQL-Grammar-5">&lt;p&gt;이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.&lt;br /&gt;
+생각보다 날짜 함수는 꽤 어렵답니다. 날짜함수는 나중에 사용할 곳이 많으니까, 잘 기억해두세요!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 22 Aug 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//SQL-Grammar-6</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-6</guid>
+        
+        <category>SQL</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>문자함수와 날짜 함수 1</title>
+        <description>&lt;p&gt;이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.&lt;br /&gt;
 우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -442,7 +601,21 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;생각보다 문자함수는 간단하죠?&lt;br /&gt;
-다음 포스팅때는 간단하게 숫자 함수와 날짜 함수에 대해 알아볼께요.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="SQL" /><summary type="html">이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다. 우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?</summary></entry><entry><title type="html">데이터 제한 및 정렬 2</title><link href="http://localhost:4000/SQL-Grammar-4" rel="alternate" type="text/html" title="데이터 제한 및 정렬 2" /><published>2018-08-20T18:00:00+09:00</published><updated>2018-08-20T18:00:00+09:00</updated><id>http://localhost:4000/SQL-Grammar-4</id><content type="html" xml:base="http://localhost:4000/SQL-Grammar-4">&lt;p&gt;저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
+다음 포스팅때는 간단하게 숫자 함수와 날짜 함수에 대해 알아볼께요.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 21 Aug 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//SQL-Grammar-5</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-5</guid>
+        
+        <category>SQL</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>데이터 제한 및 정렬 2</title>
+        <description>&lt;p&gt;저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
 
 &lt;p&gt;우선 여태까지 배워본 것을 생각하며 간단하게 사원번호가 7788, 7902, 7369번인 사원들의 사원번호와 이름을 출력해볼까요 ? 
 출력하는 문법은 두가지로 쓸 수 있는데요.&lt;br /&gt;
@@ -523,7 +696,21 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 order by절은 생각보다 어렵지 않죠? 
 오늘도 이렇게 간단하고 쉽게 SQL문법에 대해 알아봤습니다.&lt;/p&gt;
 
-&lt;p&gt;다음 포스팅 때는 문자함수와 날짜 함수에 대해 알아볼께요.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="SQL" /><summary type="html">저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아볼께요.</summary></entry><entry><title type="html">데이터 제한 및 정렬 1</title><link href="http://localhost:4000/SQL-Grammar-3" rel="alternate" type="text/html" title="데이터 제한 및 정렬 1" /><published>2018-08-19T18:00:00+09:00</published><updated>2018-08-19T18:00:00+09:00</updated><id>http://localhost:4000/SQL-Grammar-3</id><content type="html" xml:base="http://localhost:4000/SQL-Grammar-3">&lt;p&gt;오늘은 SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다.&lt;br /&gt;
+&lt;p&gt;다음 포스팅 때는 문자함수와 날짜 함수에 대해 알아볼께요.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 20 Aug 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//SQL-Grammar-4</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-4</guid>
+        
+        <category>SQL</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>데이터 제한 및 정렬 1</title>
+        <description>&lt;p&gt;오늘은 SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다.&lt;br /&gt;
 여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말한답니다.&lt;/p&gt;
 
 &lt;p&gt;그럼 저번에 만든 테이블을 이용하여 계속해서 공부해볼까요?&lt;/p&gt;
@@ -698,7 +885,20 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
 
 &lt;p&gt;출력이 잘되는 것을 확인하셨나요?&lt;br /&gt;
 이제 like와 연산자에 많이 익숙해졌을꺼라 생각해요! &lt;br /&gt;
-다음 포스팅에서는 계속해서 데이터 제한 및 정렬에 필요한 기타 비교연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="SQL" /><summary type="html">오늘은 SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다. 여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말한답니다.</summary></entry><entry><title type="html">SQL 컬럼검색과 별칭 사용하기</title><link href="http://localhost:4000/SQL-Grammar-2" rel="alternate" type="text/html" title="SQL 컬럼검색과 별칭 사용하기" /><published>2018-08-18T18:00:00+09:00</published><updated>2018-08-18T18:00:00+09:00</updated><id>http://localhost:4000/SQL-Grammar-2</id><content type="html" xml:base="http://localhost:4000/SQL-Grammar-2">&lt;p&gt;저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다.&lt;br /&gt;
+다음 포스팅에서는 계속해서 데이터 제한 및 정렬에 필요한 기타 비교연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 Aug 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//SQL-Grammar-3</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-3</guid>
+        
+        <category>SQL</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>SQL 컬럼검색과 별칭 사용하기</title>
+        <description>&lt;p&gt;저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다.&lt;br /&gt;
 이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;우선 저번 시간에 만든 EMP과 DEPT 테이블에 있는 컬럼에 대해 알아볼까요?&lt;/p&gt;
@@ -901,7 +1101,20 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 이제 별칭을 사용하여 잘 출력할 수 있겠죠?&lt;/p&gt;
 
 &lt;p&gt;오늘도 이렇게 간단하게 SQL문법을 알아봤습니다. &lt;br /&gt;
-다음 포스팅때는 데이터 제한 및 정렬에 관한 함수와 연산자를 사용하여 출력하는 것을 알아보겠습니다.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="SQL" /><summary type="html">저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다. 이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.</summary></entry><entry><title type="html">SQL 기본 문법</title><link href="http://localhost:4000/SQL-Grammar-1" rel="alternate" type="text/html" title="SQL 기본 문법" /><published>2018-08-17T18:00:00+09:00</published><updated>2018-08-17T18:00:00+09:00</updated><id>http://localhost:4000/SQL-Grammar-1</id><content type="html" xml:base="http://localhost:4000/SQL-Grammar-1">&lt;p&gt;이번 포스팅에서는 가볍게 SQL이 무엇인지, SQL 명령의 종류, 마지막으로 기본 문법에 대해 알아보겠습니다.&lt;/p&gt;
+다음 포스팅때는 데이터 제한 및 정렬에 관한 함수와 연산자를 사용하여 출력하는 것을 알아보겠습니다.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Aug 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//SQL-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-2</guid>
+        
+        <category>SQL</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>SQL 기본 문법</title>
+        <description>&lt;p&gt;이번 포스팅에서는 가볍게 SQL이 무엇인지, SQL 명령의 종류, 마지막으로 기본 문법에 대해 알아보겠습니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;h3 id=&quot;what-is-sql&quot;&gt;What is SQL?&lt;/h3&gt;
@@ -1027,7 +1240,20 @@ dept 테이블을 검색하는 코드는 아래와 같습니다.&lt;/p&gt;
 &lt;p&gt;오늘은 간단하게 SQL이 무엇인지 배웠습니다.&lt;br /&gt;
 이제 테이블을 검색하는 법은 잘 아시겠죠?&lt;/p&gt;
 
-&lt;p&gt;다음 포스팅부터는 emp테이블과 nvl 함수와 disinct등에 대해 알아보겠습니다.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="SQL" /><summary type="html">이번 포스팅에서는 가볍게 SQL이 무엇인지, SQL 명령의 종류, 마지막으로 기본 문법에 대해 알아보겠습니다.</summary></entry><entry><title type="html">Large-Scale Image Retrieval with Attentive Deep Local Features</title><link href="http://localhost:4000/Attentive-Deep-Local-Features" rel="alternate" type="text/html" title="Large-Scale Image Retrieval with Attentive Deep Local Features" /><published>2018-01-17T19:00:00+09:00</published><updated>2018-01-17T19:00:00+09:00</updated><id>http://localhost:4000/Attentive-Deep-Local-Features</id><content type="html" xml:base="http://localhost:4000/Attentive-Deep-Local-Features">&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
+&lt;p&gt;다음 포스팅부터는 emp테이블과 nvl 함수와 disinct등에 대해 알아보겠습니다.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 17 Aug 2018 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//SQL-Grammar-1</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-1</guid>
+        
+        <category>SQL</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Large-Scale Image Retrieval with Attentive Deep Local Features</title>
+        <description>&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
 &lt;p&gt;Paper URL: https://arxiv.org/pdf/1612.06321.pdf&lt;/p&gt;
 
 &lt;p&gt;이 논문은 CNN 계열의 DELF 라고 부르는 모델을 설명하는 논문입니다.&lt;br /&gt;
@@ -1164,4 +1390,17 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
 저는 이 논문을 기반으로 짠 코드를 Never AI 해커톤에 나갔으며, 결승까지 가게 되었습니다.&lt;/p&gt;
 
 &lt;p&gt;이 논문을 기반으로 짠 코드가 궁금하시다면 &lt;a href=&quot;https://github.com/KEJdev/mandoo-model&quot;&gt;여기&lt;/a&gt;를 클릭해주세요.&lt;br /&gt;
-다음에는 더 좋은 논문과 더 잘 요약된 포스팅글로 찾아뵐께요.&lt;/p&gt;</content><author><name>KEJdev</name></author><category term="PAPER" /><summary type="html">Large-Scale Image Retrieval with Attentive Deep Local Features Paper URL: https://arxiv.org/pdf/1612.06321.pdf</summary></entry></feed>
+다음에는 더 좋은 논문과 더 잘 요약된 포스팅글로 찾아뵐께요.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 17 Jan 2018 19:00:00 +0900</pubDate>
+        <link>http://localhost:4000//Attentive-Deep-Local-Features</link>
+        <guid isPermaLink="true">http://localhost:4000//Attentive-Deep-Local-Features</guid>
+        
+        <category>PAPER</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
