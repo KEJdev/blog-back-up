@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/r/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-16T20:40:56+09:00</updated>
+  <updated>2019-10-16T20:52:24+09:00</updated>
   <id>http://localhost:4000/tag/r/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">knn을 이용한 소개팅 데이터 분류</title>
       <link href="http://localhost:4000/R-Grammar-3" rel="alternate" type="text/html" title="knn을 이용한 소개팅 데이터 분류" />
-      <published>2018-12-01T09:00:00+09:00</published>
-      <updated>2018-12-01T09:00:00+09:00</updated>
+      <published>2018-11-01T18:00:00+09:00</published>
+      <updated>2018-11-01T18:00:00+09:00</updated>
       <id>http://localhost:4000/R-Grammar-3</id>
       <content type="html" xml:base="http://localhost:4000/R-Grammar-3">&lt;p&gt;저번시간에 knn의 개념에 대해 알아보았습니다. &lt;br /&gt;
 오늘부터는 knn 분류 예제를 보면서 공부해보도록 하겠습니다.&lt;/p&gt;
