@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/r/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-17T22:28:39+09:00</updated>
+  <updated>2019-10-16T20:56:39+09:00</updated>
   <id>http://localhost:4000/tag/r/feed.xml</id>
 
   
@@ -49,7 +49,7 @@ R Dataset 폴더에서 like.csv 데이터를 다운 받아주시면 됩니다!&l
   &lt;h4 id=&quot;dataset&quot;&gt;Dataset&lt;/h4&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;데이터 설명을 하자면, 소개팅을 수천번하지 않기 때문에 그동안 14번정도 소개팅을 했다고 가정하고 만난 남학생들에 대한 라벨을 호감라벨로 만들었습니다.&lt;/p&gt;
+&lt;p&gt;데이터 설명을 하자면, 소개팅을 수천번하지 않기 때문에 그동안 14번정 소개팅을 했다고 가정하고 만난 남학생들에 대한 라벨을 호감라벨로 만들었습니다.&lt;/p&gt;
 
 &lt;p&gt;14개의 데이터를 knn으로 학습시켜서 예측 모델을 생성하고, 새로 만나게 될 남학생에 대한 데이터로 이 학생의 호감 라벨을 예측해보려고 합니다.&lt;/p&gt;
 
@@ -125,7 +125,7 @@ R Dataset 폴더에서 like.csv 데이터를 다운 받아주시면 됩니다!&l
 &lt;p&gt;그리고 출력하면 3타입이라는 결과를 얻을 수 있습니다.&lt;br /&gt;
 knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
 
-&lt;p&gt;그렇다면 위의 모델을 다시 생성하는데, k값을 다르게 했을때, 호감 라벨이 어떻게 변화하는지 확인해보세요.&lt;br /&gt;
+&lt;p&gt;그렇다면 위의 모델을 다시 생성하는데, k값을 다르게 했을때, 호감 라벨이 어떻게 변화하는지 확인헤보세요.&lt;br /&gt;
 여기서 &lt;strong&gt;주의&lt;/strong&gt; 해야할 점은 k값이 너무 크면 분류를 잘못하고 k값이 너무 작으면 테스트 데이터에만 너무 익숙해져요. 그러면 나중에 새로운 데이터를 분류할때, 분류를 잘 못하는 현상이 일어나는데, 이것을 &lt;strong&gt;오버피팅&lt;/strong&gt;이라고합니다. 앞으로 머신러닝을 다루게 되면 가장 많이 나오는 단어중 하나예요. 잘 기억해두세요 ~!&lt;/p&gt;
 
 &lt;p&gt;R에 대한 전체 코드는 &lt;a href=&quot;https://github.com/KEJdev/R-Example&quot;&gt;여기&lt;/a&gt;에서 볼 수 있습니다.&lt;/p&gt;</content>

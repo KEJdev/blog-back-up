@@ -36,7 +36,7 @@
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
-    <link rel="shortcut icon" href="http://localhost:4000/./assets/images/blog-icon.png" type="image/png" />
+    <link rel="shortcut icon" href="http://localhost:4000/./assets/images/favicon.png" type="image/png" />
     <link rel="canonical" href="http://localhost:4000/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -105,7 +105,7 @@
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
 
-<!-- The big featured header, it uses sblog cover image as a BG if available -->
+<!-- The big featured header, it uses blog cover image as a BG if available -->
 <header class="site-header outer " style="background-image:  url(/./assets/images/covers.jpg) ">
     <div class="inner">
         <div class="site-header-content">
@@ -114,7 +114,7 @@ into the {body} of the default.hbs template -->
                     <img class="site-logo" src="/./assets/images/blog-icon.png" alt="덕복희"/>
                 
             </h1>
-            <h2  style="font-weight:bold;" class="site-description">If i was rich, i would eat tteokbokki every day.</h2>
+            <h2 class="site-description">If i was rich, i would eat tteokbokki every day.</h2>
         </div>
         <nav class="site-nav">
     
@@ -139,37 +139,40 @@ into the {body} of the default.hbs template -->
 </header>
 
 <!-- The main content area -->
-
-
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-    <div class="post-feed">
-        <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            
+
 
     <article class="post-card home-template">
         
-        <a class="post-card-image-link" href="/R-Grammar-2">
-            <div class="post-card-image" style="background-image: url(/../assets/images/R_cover1.png)"></div>
-        </a>
+            <a class="post-card-image-link" href="/ML-Grammar-1">
+                <div class="post-card-image" style="background-image: url(/../assets/images/ML_cover1.png)"></div>
+            </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/R-Grammar-2">
+            <a class="post-card-content-link" href="/ML-Grammar-1">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">R</span>
+                                <span class="post-card-tags">Machine-learning</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Knn(K-Nearest Neighbors)이란?</h2>
+                    <h2 class="post-card-title">퍼셉트론(Perceptron)이란?</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.  
-                            Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.</p>
+                        <p>퍼셉트론(Perceptron)이란 무엇인지, 딥러닝의 역사에 대해 알아보겠습니다.
+아시다시피 “딥러닝” 이라는 분야가 이렇게까지 뜨거워진지는 그리 오래되지는 않았습니다.
+하지만 딥러닝 분야는 1943년부터 조금씩 조금씩 시작하고 있었답니다.
+
+</p>
                     
                 </section>
             </a>
@@ -192,30 +195,31 @@ into the {body} of the default.hbs template -->
         </div>
     </article>
 
-
-        <article class="post-card home-template">
-    
-            <a class="post-card-image-link" href="/SQL-Grammar-4">
-                <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
+    <article class="post-card home-template">
+        
+            <a class="post-card-image-link" href="/R-Grammar-3">
+                <div class="post-card-image" style="background-image: url(/../assets/images/R_cover1.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/SQL-Grammar-4">
+            <a class="post-card-content-link" href="/R-Grammar-3">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Sql</span>
+                                <span class="post-card-tags">R</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">데이터 제한 및 정렬 2</h2>
+                    <h2 class="post-card-title">Knn을 이용한 소개팅 데이터 분류</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아볼께요.
-                            우선 여태까지 배워본 것을 생각하며 간단하게 사원번호가 7788, 7902, 7369번인 사원들의</p>
+                        <p>저번시간에 knn의 개념에 대해 알아보았습니다. 
+오늘부터는 knn 분류 예제를 보면서 공부해보도록 하겠습니다.
+
+</p>
                     
                 </section>
             </a>
@@ -231,17 +235,60 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                        1 min read
+                      1 min read
                     
                 </span>
             </footer>
         </div>
     </article>
 
-
-
-
+    <article class="post-card home-template">
         
+            <a class="post-card-image-link" href="/R-Grammar-2">
+                <div class="post-card-image" style="background-image: url(/../assets/images/R_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/R-Grammar-2">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">R</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Knn(K-Nearest Neighbors)이란?</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.
+Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
     <article class="post-card home-template">
         
             <a class="post-card-image-link" href="/R-Grammar-1">
@@ -264,6 +311,147 @@ into the {body} of the default.hbs template -->
                 <section class="post-card-excerpt">
                     
                         <p>R이라는 언어를 들어보신 적 있을꺼예요. R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card home-template">
+        
+            <a class="post-card-image-link" href="/SQL-Grammar-6">
+                <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/SQL-Grammar-6">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Sql</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">문자함수와 날짜 함수 2</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다.
+숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다.
+그러면 오늘도 SQL에 대해 알아보러 갈까요?
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card home-template">
+        
+            <a class="post-card-image-link" href="/SQL-Grammar-5">
+                <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/SQL-Grammar-5">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Sql</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">문자함수와 날짜 함수 1</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.
+우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card home-template">
+        
+            <a class="post-card-image-link" href="/SQL-Grammar-4">
+                <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/SQL-Grammar-4">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Sql</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">데이터 제한 및 정렬 2</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아볼께요.
+
+</p>
                     
                 </section>
             </a>
@@ -475,9 +663,9 @@ Paper URL: https://arxiv.org/pdf/1612.06321.pdf
 
 
         </div>
+
     </div>
 </main>
-
 
         <!-- Previous/next page links - displayed on every page -->
         
@@ -537,7 +725,7 @@ Paper URL: https://arxiv.org/pdf/1612.06321.pdf
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-69281367-1', 'auto');
+  ga('create', 'UA-148043528-1', 'auto');
   ga('send', 'pageview');
 
  </script>
