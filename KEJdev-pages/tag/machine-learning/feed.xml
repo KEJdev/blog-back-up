@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/machine-learning/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2019-10-17T21:51:48+09:00</updated>
+  <id>http://localhost:4000/tag/machine-learning/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">덕복희 | </title>
+  
+
+  
+    <subtitle>If i was rich, i would eat tteokbokki every day.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">퍼셉트론과 신경망의 차이점</title>
+      <link href="http://localhost:4000/ML-Grammar-1" rel="alternate" type="text/html" title="퍼셉트론과 신경망의 차이점" />
+      <published>2019-10-15T18:00:00+09:00</published>
+      <updated>2019-10-15T18:00:00+09:00</updated>
+      <id>http://localhost:4000/ML-Grammar-1</id>
+      <content type="html" xml:base="http://localhost:4000/ML-Grammar-1"></content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="MACHINE-LEARNING" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
