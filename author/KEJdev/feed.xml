@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-19T01:08:09+09:00</updated>
+  <updated>2019-10-20T14:36:57+09:00</updated>
   <id>http://localhost:4000/author/KEJdev/feed.xml</id>
 
   
@@ -32,10 +32,126 @@
 
   
     <entry>
+      <title type="html">PL/SQL이란?</title>
+      <link href="http://localhost:4000/PLSQL-Grammar-1" rel="alternate" type="text/html" title="PL/SQL이란?" />
+      <published>2018-11-03T18:00:00+09:00</published>
+      <updated>2018-11-03T18:00:00+09:00</updated>
+      <id>http://localhost:4000/PLSQL-Grammar-1</id>
+      <content type="html" xml:base="http://localhost:4000/PLSQL-Grammar-1">&lt;p&gt;PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;plsql-이란&quot;&gt;PLSQL 이란?&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다.
+if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;plsql을-배워야-하는-이유&quot;&gt;PL/SQL을 배워야 하는 이유&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다.&lt;br /&gt;
+우리가 분석해야할 데이터들은 크게 2가지 타입으로 볼 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;samll data -&amp;gt; business data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;business data를 분석하려면, 알고리즘 사고방식을 갖춰야할 필요가 있습니다. 
+그래서 수학식을 PL/SQL 또는 Python 으로 구현하려고 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;big data ?&lt;br /&gt;
+“ 지금까지 한번도 분석해보지 않은 data”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;소셜미디어에 올라오는 data, 트위터, 페이스북, 인스타그램 data는 마케팅에 조금 도움되는 data일뿐 크게 중요하지 않은 data입니다.&lt;/p&gt;
+
+&lt;p&gt;우리가 분석해야할 가장 중요한 데이터는 대부분 RDBMS에 저장되어 있습니다. SQL을 사용해서 분석하기에는 노가다를 해야할 일들이 많습니다. 그래서 힘들게 하드코딩을 하지 않고 쉽게 business data를 분석을 하려면 PL/SQL을 사용해야합니다.&lt;/p&gt;
+
+&lt;p&gt;PL/SQL을 사용하게 되면 SQL로 보여줄수 있는 분석 결과와 PL/SQL로 보여줄수 있는 분석 결과가 훨신 더 많습니다. SQL로는 DATA에서 정보를 추출해서 보여지는 현상을 증명할 수 있을 뿐이지만, PL/SQL로 데이터 분석을 하게 되면, 회귀 분석을 구현하여 방정식을 도출해내고 결정트리를 이용해 확률 및 엔트로피 등을 구할수 있수 있습니다. 
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;plsql에서의-기본-용어&quot;&gt;PL/SQL에서의 기본 용어&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;식별자는 v_ename, v_sal 과 같은 변수를 이야기 합니다.&lt;/li&gt;
+  &lt;li&gt;구분자는 * / + - 와 같은 연산자를 이야기 합니다.&lt;/li&gt;
+  &lt;li&gt;리터럴은 7788, SCOTT 과 같은 문자나 숫자를 이야기 합니다.&lt;/li&gt;
+  &lt;li&gt;PL/SQL에서도 주석을 사용할 수 있으며 실행하고 싶지 않은 구문을 실행하지 않고자 할때 사용합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;plsql에서의-sql-함수-사용법&quot;&gt;PL/SQL에서의 SQL 함수 사용법&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;declare 절의 경우
+사용할 수 있는 함수는 단일행 함수 뿐이며, 복수행 함수나 decode 함수 등은 사용할 수 없습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;begin 실행절의 경우 
+어떠한 함수든 다 사용할 수 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;plsql의-기본-block-의-구조&quot;&gt;PL/SQL의 기본 block 의 구조&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;PL/SQL은 선언절, 실행절, 종료절이 있습니다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-plsql&quot;&gt;  declare //선언절
+      변수, 상수,예외 등을 선언한다.
+  begin // 실행절 
+      실행할 SQL, IF문 , LOOP 문등을 실행한다.
+  end ; //종료절
+/   &amp;lt;-------------------------PL/SQL 을 종료하겠다. * 주의 : /는 벽에 딱 붙여야 한다.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;조금 더 자세한 문법 설명은 다음 포스팅부터 알아보겠습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="PLSQL" />
+      
+
+      
+        <summary type="html">PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">단층/다층퍼셉트론(Perceptron) 구현</title>
       <link href="http://localhost:4000/ML-Grammar-2" rel="alternate" type="text/html" title="단층/다층퍼셉트론(Perceptron) 구현" />
-      <published>2018-11-02T18:00:00+09:00</published>
-      <updated>2018-11-02T18:00:00+09:00</updated>
+      <published>2018-11-03T18:00:00+09:00</published>
+      <updated>2018-11-03T18:00:00+09:00</updated>
       <id>http://localhost:4000/ML-Grammar-2</id>
       <content type="html" xml:base="http://localhost:4000/ML-Grammar-2">&lt;p&gt;퍼셉트론에 대한 개념은 저번 포스팅때 다뤘습니다. 이번에는 퍼셉트론에 대해 좀더 자세히 다뤄보겠습니다. 또한 직접 PYTHON으로 구현해보겠습니다.&lt;/p&gt;
 
@@ -1544,243 +1660,6 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
 
       
         <summary type="html">오늘은 SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다. 여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말한답니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">SQL 컬럼검색과 별칭 사용하기</title>
-      <link href="http://localhost:4000/SQL-Grammar-2" rel="alternate" type="text/html" title="SQL 컬럼검색과 별칭 사용하기" />
-      <published>2018-08-18T18:00:00+09:00</published>
-      <updated>2018-08-18T18:00:00+09:00</updated>
-      <id>http://localhost:4000/SQL-Grammar-2</id>
-      <content type="html" xml:base="http://localhost:4000/SQL-Grammar-2">&lt;p&gt;저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다.&lt;br /&gt;
-이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;우선 저번 시간에 만든 EMP과 DEPT 테이블에 있는 컬럼에 대해 알아볼까요?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;emp-tabel-column&quot;&gt;EMP Tabel Column&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;emp table 컬럼은 아래와 같습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;column&lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; 설명 &lt;/center&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;empno&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;사원번호&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;ename&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;사원이름&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;sql&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;월급&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;job&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;직업&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;mgr&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;사원의 관리자&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;hiredate&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;입사일&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;comm&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;커미션&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;deptno&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;부서번호&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;dept-table-column&quot;&gt;DEPT Table Column&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;dept table 컬럼은 아래와 같습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;column&lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; 설명 &lt;/center&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;deptno&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;부서번호&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;dname&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;부서명&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;loc&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;부서위치&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;table colunm에 대해 알았으니,&lt;br /&gt;
-emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;sql-column-search&quot;&gt;SQL Column Search&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sql&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 코드를 치면 emp 테이블에서 사원번호와 이름, 월급만 출력이 된답니다.&lt;br /&gt;
-그렇다면 이번엔 이름, 직업, 입사일, 부서번호를 출력해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hiredate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이제 좀 감이 잡히나요 ?
-그렇다면 이름, 월급, 커미션을 출력해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이제 원하는 컬럼을 잘 출력할 수 있겠죠?&lt;br /&gt;
-그렇다면 이번엔 이름과 월급, 커미션 그리고 월급 + 커미션을 출력해볼까요?  &lt;br /&gt;
-월급과 커미션을 더한 값을 출력하려면 어떻게 해야댈까요?&lt;br /&gt;
-간답합니다. 아래와 같이 작성하시면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그런데 출력하시면 에러가 뜰꺼예요.왜그럴까요? 그 이유는 &lt;strong&gt;null 값 때문&lt;/strong&gt;이랍니다. &lt;br /&gt;
-그렇다면 여기서 잠깐, &lt;strong&gt;null&lt;/strong&gt; 값에 대해 알아볼까요 ?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;※ null&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;데이터가 없는 상태&lt;/li&gt;
-  &lt;li&gt;알 수 없는 값(unknown)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;위와 같은 상태에 있을 때, null 값이라고 합니다.&lt;br /&gt;
-그래서 null 대신에 다른 값이 출력되게 하는 &lt;strong&gt;nvl 함수를 사용&lt;/strong&gt;해야합니다.&lt;br /&gt;
-&lt;strong&gt;nvl&lt;/strong&gt;함수는 null 대신 다른 값이 출력되게 하는 함수입니다.&lt;/p&gt;
-
-&lt;p&gt;그럼 이제 nvl 함수를 사용하여 comm에 있는 null값을 0으로 바꾸어 출력을 해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 작성 하면 comm에 있는 null이 0으로 바뀐 것을 확인 할 수 있습니다.&lt;br /&gt;
-그러면 아까 풀지못했던 위의 문제를 다시 작성해서 풀어볼까요 ?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nvl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 작성하면 월급과 커미션을 더한 값이 함께 출력 된답니다.&lt;br /&gt;
-그렇다면 직업을 출력하는데 &lt;strong&gt;중복을 제거&lt;/strong&gt;하고 싶은데 어떻게 해야댈까요?&lt;br /&gt;
-중복을 제거하는 것을 배워볼까요 ?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;keyword&quot;&gt;Keyword&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;중복을 제거할때는 &lt;strong&gt;distinct&lt;/strong&gt; 키워드를 사용하시면 된답니다.&lt;br /&gt;
-그럼 직업을 출력하는데 중복을 제거해서 출력해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;자 이제 이름과 월급을 연결해서 출력하는 것을 배워볼까요 ?&lt;br /&gt;
-이름과 월급을 연결해서 출력하려면 연결연산자를 사용해야 합니다.&lt;br /&gt;
-&lt;strong&gt;||&lt;/strong&gt; 연결연산자는 두 컬럼의 데이터를 연결해서 출력하는 키워드 입니다.&lt;/p&gt;
-
-&lt;p&gt;연결연산자를 알았으니 아름과 월급을 연결해서 출력해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;연결해서 연락이 잘 되는 것을 확인 하셨나요 ?&lt;br /&gt;
-하지만 보기에 불편하니, 예쁘게 문자열과 함께 출력해볼까요 ?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'의 월급은'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;예쁘게 출력 된 것을 확인 하셨나요 ?
-이제 컬럼에 대한 &lt;strong&gt;별칭&lt;/strong&gt;을 사용하여 출력해볼까요?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;별칭&quot;&gt;별칭&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;컬럼별칭을 사용할때는 너무 길게 써서도 안되고, 언더바를 사용하셔도 안된다는 점을 기억해두세요.
-컬럼명을 변경해서 출력할때는 아랴와 같이 하시면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'의 직업은'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'입니다'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;사원&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그렇다면 별칭을 사용하여 아래와 같이 출력되게 하려면 어떻게 해야댈까요 ?&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/../assets/images/as.png&quot; width=&quot;420&quot; height=&quot;200&quot; /&gt;&lt;/center&gt;
-
-&lt;p&gt;위와 같이 출력하려면 어떻게 해야댈까요 ?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'의 부서번호는 '&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'번 입니다.'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&quot;사원에 대한 부서번호 정보&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 작성하면 별칭을 사용하여 출력할 수 있습니다.&lt;br /&gt;
-이제 별칭을 사용하여 잘 출력할 수 있겠죠?&lt;/p&gt;
-
-&lt;p&gt;오늘도 이렇게 간단하게 SQL문법을 알아봤습니다. &lt;br /&gt;
-다음 포스팅때는 데이터 제한 및 정렬에 관한 함수와 연산자를 사용하여 출력하는 것을 알아보겠습니다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>KEJdev</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="SQL" />
-      
-
-      
-        <summary type="html">저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다. 이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.</summary>
       
 
       

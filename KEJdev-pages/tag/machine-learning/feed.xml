@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/machine-learning/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-19T01:11:09+09:00</updated>
+  <updated>2019-10-20T14:37:34+09:00</updated>
   <id>http://localhost:4000/tag/machine-learning/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">단층/다층퍼셉트론(Perceptron) 구현</title>
       <link href="http://localhost:4000/ML-Grammar-2" rel="alternate" type="text/html" title="단층/다층퍼셉트론(Perceptron) 구현" />
-      <published>2018-11-02T18:00:00+09:00</published>
-      <updated>2018-11-02T18:00:00+09:00</updated>
+      <published>2018-11-03T18:00:00+09:00</published>
+      <updated>2018-11-03T18:00:00+09:00</updated>
       <id>http://localhost:4000/ML-Grammar-2</id>
       <content type="html" xml:base="http://localhost:4000/ML-Grammar-2">&lt;p&gt;퍼셉트론에 대한 개념은 저번 포스팅때 다뤘습니다. 이번에는 퍼셉트론에 대해 좀더 자세히 다뤄보겠습니다. 또한 직접 PYTHON으로 구현해보겠습니다.&lt;/p&gt;
 
