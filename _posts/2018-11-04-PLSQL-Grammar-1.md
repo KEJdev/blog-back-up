@@ -4,7 +4,7 @@ current: post
 cover:  ../assets/images/plsql_cover1.png
 navigation: True
 title: PL/SQL이란?
-date: 2018-11-03 09:00:00
+date: 2018-11-04 09:00:00
 tags: [PLSQL]
 sitemap :
   changefreq : daily

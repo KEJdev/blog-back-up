@@ -11,7 +11,7 @@
 
 
 
-    <title>PL/SQL이란?</title>
+    <title>PL/SQL의 예외처리(exception)란?</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -61,24 +61,24 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
     <link rel="shortcut icon" href="http://localhost:4000/./assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/PLSQL-Grammar-1" />
+    <link rel="canonical" href="http://localhost:4000/PLSQL-Grammar-2" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="덕복희" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PL/SQL이란?" />
-    <meta property="og:description" content="PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다. PLSQL 이란? PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다. if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다. PL/SQL을 배워야 하는 이유 우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다. 우리가 분석해야할 데이터들은" />
-    <meta property="og:url" content="http://localhost:4000/PLSQL-Grammar-1" />
+    <meta property="og:title" content="PL/SQL의 예외처리(exception)란?" />
+    <meta property="og:description" content="이번 포스팅에서는 PL/SQL의 예외처리(exception)처리에 대해서 알아볼꼐요. 그리고 예외처리를 왜 해야하는지와 종류에 대해 알아보겠습니다. 예외처리(exception) ? 에외처리는 오라클에 에러가 났을 때, 엔드유져(프로그램 사용자)의 눈높이를 맞추기위해 사용하는 문법입니다. 예를들어 홈플러스 계산원이 컴퓨터 프로그램 화면에 고객번호를 입력하고 해당고객정보를 보려고 했는데, 오라클 에러메세지가 화면에 “ORA-0001 Data not found ….” 이런식으로 나온다면 사용자의 경우 알" />
+    <meta property="og:url" content="http://localhost:4000/PLSQL-Grammar-2" />
     <meta property="og:image" content="http://localhost:4000/../assets/images/plsql_cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2018-11-04T18:00:00+09:00" />
-    <meta property="article:modified_time" content="2018-11-04T18:00:00+09:00" />
+    <meta property="article:published_time" content="2018-11-05T18:00:00+09:00" />
+    <meta property="article:modified_time" content="2018-11-05T18:00:00+09:00" />
     <meta property="article:tag" content="Plsql" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PL/SQL이란?" />
-    <meta name="twitter:description" content="PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다. PLSQL 이란? PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다. if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다. PL/SQL을 배워야 하는 이유 우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다. 우리가 분석해야할 데이터들은" />
+    <meta name="twitter:title" content="PL/SQL의 예외처리(exception)란?" />
+    <meta name="twitter:description" content="이번 포스팅에서는 PL/SQL의 예외처리(exception)처리에 대해서 알아볼꼐요. 그리고 예외처리를 왜 해야하는지와 종류에 대해 알아보겠습니다. 예외처리(exception) ? 에외처리는 오라클에 에러가 났을 때, 엔드유져(프로그램 사용자)의 눈높이를 맞추기위해 사용하는 문법입니다. 예를들어 홈플러스 계산원이 컴퓨터 프로그램 화면에 고객번호를 입력하고 해당고객정보를 보려고 했는데, 오라클 에러메세지가 화면에 “ORA-0001 Data not found ….” 이런식으로 나온다면 사용자의 경우 알" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/../assets/images/plsql_cover1.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -99,7 +99,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
         "name": "덕복희",
         "logo": "http://localhost:4000/./assets/images/blog-icon.png"
     },
-    "url": "http://localhost:4000/PLSQL-Grammar-1",
+    "url": "http://localhost:4000/PLSQL-Grammar-2",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/../assets/images/plsql_cover1.png",
@@ -108,9 +108,9 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/PLSQL-Grammar-1"
+        "@id": "http://localhost:4000/PLSQL-Grammar-2"
     },
-    "description": "PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다. PLSQL 이란? PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다. if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다. PL/SQL을 배워야 하는 이유 우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다. 우리가 분석해야할 데이터들은"
+    "description": "이번 포스팅에서는 PL/SQL의 예외처리(exception)처리에 대해서 알아볼꼐요. 그리고 예외처리를 왜 해야하는지와 종류에 대해 알아보겠습니다. 예외처리(exception) ? 에외처리는 오라클에 에러가 났을 때, 엔드유져(프로그램 사용자)의 눈높이를 맞추기위해 사용하는 문법입니다. 예를들어 홈플러스 계산원이 컴퓨터 프로그램 화면에 고객번호를 입력하고 해당고객정보를 보려고 했는데, 오라클 에러메세지가 화면에 “ORA-0001 Data not found ….” 이런식으로 나온다면 사용자의 경우 알"
 }
     </script>
 
@@ -123,7 +123,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="PL/SQL이란?" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="PL/SQL의 예외처리(exception)란?" href="/feed.xml" />
 
 
 </head>
@@ -170,7 +170,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 4 November 2018"> 4 November 2018</time>
+                    <time class="post-full-meta-date" datetime=" 5 November 2018"> 5 November 2018</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -180,7 +180,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">PL/SQL이란?</h1>
+                <h1 class="post-full-title">PL/SQL의 예외처리(exception)란?</h1>
             </header>
 
             
@@ -190,90 +190,90 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.<br />
-<br /></p>
+                    <p>이번 포스팅에서는 PL/SQL의 예외처리(exception)처리에 대해서 알아볼꼐요.<br />
+그리고 예외처리를 왜 해야하는지와 종류에 대해 알아보겠습니다.</p>
 
 <blockquote>
-  <h4 id="plsql-이란">PLSQL 이란?</h4>
+  <h4 id="예외처리exception-">예외처리(exception) ?</h4>
 </blockquote>
 
-<p>PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다.
-if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다.</p>
+<p>에외처리는 오라클에 에러가 났을 때, 엔드유져(프로그램 사용자)의 눈높이를 맞추기위해 사용하는 문법입니다. 예를들어 홈플러스 계산원이 컴퓨터 프로그램 화면에 고객번호를 입력하고 해당고객정보를 보려고 했는데, 오라클 에러메세지가 화면에 “ORA-0001 Data not found ….” 이런식으로 나온다면 사용자의 경우 알 수 없습니다. 그렇기 때문에 “해당 고객은 존재하지 않습니다.”와 같이 에러 메세지를 바꿔주어야 합니다.</p>
 
-<p><br /></p>
+<p>또한 비정상장적으로 프로그램이 종료되지 않기 위해서도 사용합니다. Data가 잘못되어서 프로그램이 종료되버린 현상을 막기위해서 프로그램이 종료되는게 아니라 정상적으로 처리가 되고 Data가 잘못되어서 발생하는 에러 메세지만 따로 출력해주겠금 하려고 예외를 쓰기도 합니다.</p>
 
 <blockquote>
-  <h4 id="plsql을-배워야-하는-이유">PL/SQL을 배워야 하는 이유</h4>
+  <h4 id="예외처리exception-종류-3가지">예외처리(exception) 종류 3가지</h4>
 </blockquote>
 
-<p>우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다.<br />
-우리가 분석해야할 데이터들은 크게 2가지 타입으로 볼 수 있습니다.</p>
-
-<ul>
-  <li>samll data -&gt; business data</li>
-</ul>
-
-<p>business data를 분석하려면, 알고리즘 사고방식을 갖춰야할 필요가 있습니다. 
-그래서 수학식을 PL/SQL 또는 Python 으로 구현하려고 합니다.</p>
-
-<ul>
-  <li>big data ?<br />
-“ 지금까지 한번도 분석해보지 않은 data”</li>
-</ul>
-
-<p>소셜미디어에 올라오는 data, 트위터, 페이스북, 인스타그램 data는 마케팅에 조금 도움되는 data일뿐 크게 중요하지 않은 data입니다.</p>
-
-<p>우리가 분석해야할 가장 중요한 데이터는 대부분 RDBMS에 저장되어 있습니다. SQL을 사용해서 분석하기에는 노가다를 해야할 일들이 많습니다. 그래서 힘들게 하드코딩을 하지 않고 쉽게 business data를 분석을 하려면 PL/SQL을 사용해야합니다.</p>
-
-<p>PL/SQL을 사용하게 되면 SQL로 보여줄수 있는 분석 결과와 PL/SQL로 보여줄수 있는 분석 결과가 훨신 더 많습니다. SQL로는 DATA에서 정보를 추출해서 보여지는 현상을 증명할 수 있을 뿐이지만, PL/SQL로 데이터 분석을 하게 되면, 회귀 분석을 구현하여 방정식을 도출해내고 결정트리를 이용해 확률 및 엔트로피 등을 구할수 있수 있습니다. 
-<br /></p>
+<p>PL/SQL의 예외처리에는 3가지의 종류가 있습니다. 
+오라클에서 미리 정의한 예외처리, 오라클에서 미리 정의하지 않은 예외처리, 사용자 정의 에외처리가 있습니다. 
+우리가 알아야 할것은 사용자 정의 예외처리입니다. 사용자 정의 예외처리는 오라클에서 미리 정의한 예외나 오라클에서 미리 정의하지 않는 예외는 둘다 오라클 에러 메세지가 출력될 때, 발생하는 예외인데, 그에 반해 사용자 정의 예외는 오라클에서 에러가 발생하지 않지만 이것은 예외다 라고 사용자가 정의하는 것을 말합니다.</p>
 
 <blockquote>
-  <h4 id="plsql에서의-기본-용어">PL/SQL에서의 기본 용어</h4>
+  <h4 id="예외처리exception-사용하기">예외처리(exception) 사용하기</h4>
 </blockquote>
 
-<ul>
-  <li>식별자는 v_ename, v_sal 과 같은 변수를 이야기 합니다.</li>
-  <li>구분자는 * / + - 와 같은 연산자를 이야기 합니다.</li>
-  <li>리터럴은 7788, SCOTT 과 같은 문자나 숫자를 이야기 합니다.</li>
-  <li>PL/SQL에서도 주석을 사용할 수 있으며 실행하고 싶지 않은 구문을 실행하지 않고자 할때 사용합니다.</li>
-</ul>
+<p>PL/SQL을 이용하여 사원번호를 입력하면 해당 사원의 월급이 출려되게 해볼까요?</p>
 
-<p><br /></p>
-
-<blockquote>
-  <h4 id="plsql에서의-sql-함수-사용법">PL/SQL에서의 SQL 함수 사용법</h4>
-</blockquote>
-
-<ul>
-  <li>
-    <p>declare 절의 경우
-사용할 수 있는 함수는 단일행 함수 뿐이며, 복수행 함수나 decode 함수 등은 사용할 수 없습니다.</p>
-  </li>
-  <li>
-    <p>begin 실행절의 경우 
-어떠한 함수든 다 사용할 수 있습니다.</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<blockquote>
-  <h4 id="plsql의-기본-block-의-구조">PL/SQL의 기본 block 의 구조</h4>
-</blockquote>
-
-<p>PL/SQL은 선언절, 실행절, 종료절이 있습니다.</p>
-
-<pre><code class="language-plsql">  declare //선언절
-      변수, 상수,예외 등을 선언한다.
-  begin // 실행절 
-      실행할 SQL, IF문 , LOOP 문등을 실행한다.
-  end ; //종료절
-/   &lt;-------------------------PL/SQL 을 종료하겠다. * 주의 : /는 벽에 딱 붙여야 한다.
+<pre><code class="language-plsql">accept p_empno prompt ' 사원번호?  : '
+declare
+  v_empno emp.empno%type := &amp;p_empno;
+  v_sal  emp.sal%type;
+begin
+  select sal into v_sal
+    from emp
+    where empno = v_empno;
+  dbms_output.put_line(v_sal);
+end;
+/
 </code></pre>
 
-<p>조금 더 자세한 문법 설명은 다음 포스팅부터 알아보겠습니다.</p>
+<p>위와 같이 입력하면 출력이 되는데, 저 코드에서 예외처리를 한번 해볼까요?<br />
+예외처리를 할때에는 begin절에 exception~ 을 넣으면 됩니다.</p>
 
+<p>아래와 같이 코드를 짜면 예외처리를 할 수 있습니다.</p>
+
+<pre><code class="language-plsql">accept p_empno prompt ' 사원번호?  : '
+declare
+  v_empno emp.empno%type := &amp;p_empno;
+  v_sal  emp.sal%type;
+begin
+  select sal into v_sal
+    from emp
+    where empno = v_empno;
+  dbms_output.put_line(v_sal);
+	
+  exception
+    when no_data_found then
+      dbms_output.put_line('없는 사원입니다.');
+end;
+/
+</code></pre>
+
+<p>위의 코드는 실행절에 넣는 예외처리였습니다. 그렇다면 declare절에도 예외처리를 할 수 있을까요?<br />
+네! 가능합니다. declare 절에서 예외처리를 사용할 경우는 보통 먼저 체크해야할 부분이 있을 때 사용합니다.<br />
+예를 들면 월급을 물어보고 월급을 입력하지 않고 enter를 치면 ‘월급을 반드시 입력해야 합니다’ 라는 메세지를 출력하는 경우에 declare절에 사용 할 수 있습니다.</p>
+
+<pre><code class="language-plsql">accept p_empno prompt ' 사원번호를 입력하세요 : '
+accept p_ename prompt ' 이름을 입력하세요 : '
+accept p_sal prompt ' 월급을 입력하세요  : '
+declare
+  e_sal_nl exception;
+  pragma exception_init( e_sal_nl, -01400 ) ;
+begin
+  insert into emp(empno, ename, sal)
+  values(&amp;p_empno, '&amp;p_ename', '&amp;p_sal');
+dbms_output.put_line(SQL%rowcount || ' 건이 입력되었다. ');
+
+exception
+  when e_sal_nl then
+    dbms_output.put_line ( '월급을 반드시 입력해야 합니다.');
+end;
+/
+</code></pre>
+
+<p>이제 예외처리에 대한 감이 조금 잡히시나요 ? 아마 예외처리는 조금만 더 깊게 공부하시면 금방 하실 수 있을꺼예요.
+다음 포스팅에서는 좀 더 어려운 package하는 방법에 대해 알아보겠습니다.</p>
 
                 </div>
             </section>
@@ -340,14 +340,14 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/PLSQL-Grammar-2">PL/SQL의 예외처리(exception)란?</a></li>
-                                        
-                                    
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                            <li><a href="/PLSQL-Grammar-1">PL/SQL이란?</a></li>
+                                        
                                     
                                   
                                 
@@ -390,16 +390,19 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
                 
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/PLSQL-Grammar-2">
+            <a class="post-card-image-link" href="/PLSQL-Grammar-1">
                 <div class="post-card-image" style="background-image: url(/../assets/images/plsql_cover1.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/PLSQL-Grammar-2">
+            <a class="post-card-content-link" href="/PLSQL-Grammar-1">
                 <header class="post-card-header">
                     
                         
@@ -409,57 +412,7 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
                         
                     
 
-                    <h2 class="post-card-title">PL/SQL의 예외처리(exception)란?</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <span class="post-card-author">
-                            <a href="/author/KEJdev/">KEJdev</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/ML-Grammar-2">
-                <div class="post-card-image" style="background-image: url(/../assets/images/ML_cover1.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/ML-Grammar-2">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Machine-learning</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">단층/다층퍼셉트론(Perceptron) 구현</h2>
+                    <h2 class="post-card-title">PL/SQL이란?</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -503,7 +456,7 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">PL/SQL이란?</div>
+    <div class="floating-header-title">PL/SQL의 예외처리(exception)란?</div>
     
     <progress class="progress" value="0">
         <div class="progress-container">
