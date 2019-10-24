@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-21T23:52:21+09:00</updated>
+  <updated>2019-10-24T22:04:25+09:00</updated>
   <id>http://localhost:4000/author/KEJdev/feed.xml</id>
 
   
@@ -32,8 +32,97 @@
 
   
     <entry>
-      <title type="html">활성화 함수란?</title>
-      <link href="http://localhost:4000/ML-Grammar-3" rel="alternate" type="text/html" title="활성화 함수란?" />
+      <title type="html">활성화 함수란?(2)</title>
+      <link href="http://localhost:4000/ML-Grammar-4" rel="alternate" type="text/html" title="활성화 함수란?(2)" />
+      <published>2018-11-07T18:00:00+09:00</published>
+      <updated>2018-11-07T18:00:00+09:00</updated>
+      <id>http://localhost:4000/ML-Grammar-4</id>
+      <content type="html" xml:base="http://localhost:4000/ML-Grammar-4">&lt;p&gt;지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. &lt;br /&gt;
+전시간에 이야기 했던 활성화 함수 3가지는 가장 기본적인 활성화 함수이며, 흔히 쓰이는 활성화 함수입니다. 그런데 이 활성화 함수 외에도 더 많은 활성화 함수가 있습니다. 오늘은 그 외 나머지 활성화 함수에 대해서 이야기 해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;오늘 포스팅할 대부분의 활성화 함수는 Relu함수의 변형 버전이 많습니다. 한번 알아볼까요?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;relu-함수에서-변형된-활성화-함수들&quot;&gt;Relu 함수에서 변형된 활성화 함수들&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Relu 함수에서 변형된 활성화 함수들은 아래와 같습니다. 물론 여기서 Softplus와 Tanh함수는 변형된 함수는 아니라는 점! 기억해주세요.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/at.png&quot; width=&quot;400&quot; height=&quot;280&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;위의 그래프에서 Leaky ReLu, ELU가 Relu의 변형 함수입니다. 위 그래프 외에도 p-Relu와 swish함수도 다루어보겠습니다.&lt;br /&gt;
+그럼 차근차근 함수들에 대해 알아볼까요?&lt;/p&gt;
+
+&lt;p&gt;Relu함수는 저번 포스팅때 현업에서도 많이 쓰인다고 이야기 했습니다. 그런데 왜, Relu의 번형들이 많이 생겨나는 걸까요?&lt;br /&gt;
+Relu 또한 저번에 말했던 vanishing현상이 생긴답니다? 왜냐하면 &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+x &lt; 0 %]]&gt;&lt;/script&gt; 때는 0을 출력하고 &lt;script type=&quot;math/tex&quot;&gt;x&gt;0&lt;/script&gt;을 출력하기 때문에 학습할 때, 뉴런이 죽는 경우가 발생하기 때문입니다. 그래서 Relu에 약간의 변화를 줘서 0이 되어 뉴런이 죽지 않도록, 신경망이 죽지 않도록 활성화 함수를 변형 시킨거랍니다.&lt;/p&gt;
+
+&lt;p&gt;우선 &lt;strong&gt;leake Relu&lt;/strong&gt;함수에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/leake.png&quot; width=&quot;450&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;leake Relu는 기존의 Relu의 음수 부분에 약간의 기울기를 준 함수입니다. 때문에 이 활성화 함수는 기울기가 0일때의 문제점을 해결하기 위해 나온 함수입니다.&lt;/p&gt;
+
+&lt;p&gt;두번째 활성화 함수는 &lt;strong&gt;P-Relu&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/prelu.png&quot; width=&quot;450&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;P-Relu는 leake Relu와 비슷하지만 피라미터는 &lt;script type=&quot;math/tex&quot;&gt;∂&lt;/script&gt;를 추가해서 &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+x &lt; 0 %]]&gt;&lt;/script&gt; 때 학습에 따라 각도를 바꾸는 활성화 함수입니다. 좋아보이는 이 활성화 함수도 단점이 존재합니다. Out of memory라는 에러를 만날 수 있는데, 그 이유는 학습을 하는 동안에 그 속에서도 또 다시 학습을 하기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;세번째 함수는 &lt;strong&gt;ELU&lt;/strong&gt;함수입니다.&lt;br /&gt;
+ELU 함수는 OOM(Out of memory)를 해결하기 위해 나온 함수입니다.  0이하의 기울기가 곡선이므로 미분이 잘되며, OOM이 뜨지 않으며 정확도가 높다고 합니다.
+대신 계산량이 많아 학습시간이 오래걸리는 단점이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;마지막 함수는 비교적 최근에 나온 함수인 &lt;strong&gt;Swish&lt;/strong&gt;함수입니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/swish.png&quot; width=&quot;550&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;2017년 11월 경 구글에서 만든 함수라고 합니다. 가장 효율성이 좋았다고 이야기 합니다.&lt;/p&gt;
+
+&lt;p&gt;아마 그래프를 보면서 느끼셨겠지만, 정확도와 효율이 좋은 함수를 보면 음수 기 울기 부분이 상당히 매끄러운 모습을 볼 수 있습니다. 이 뜻은 미분과 기울기의 매끈함이 활성화 함수의 가장 주요 포인트라 할 수있습니다.&lt;/p&gt;
+
+&lt;p&gt;Relu와 Swish, 이 두가지의 차이점을 분명하게 보여주는 그래프는 아래와 같습니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/des.png&quot; width=&quot;450&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;Relu와 Swish의 차이점이 분명하게 보이지 않나요 ?&lt;br /&gt;
+Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지만, 정확도와 OOM, vanishing현상을 막기 위해 여러가지 연구를 하고 있다는 점 ! 잘 기억해두세요.&lt;/p&gt;
+
+&lt;p&gt;다음에 시간이 된다면 또 다른 활성화 함수에 대해 다루어보겠습니다.&lt;br /&gt;
+다음 포스팅에선 배치(batch)에 대해 이야기 해보겠습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="MACHINE-LEARNING" />
+      
+
+      
+        <summary type="html">지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. 전시간에 이야기 했던 활성화 함수 3가지는 가장 기본적인 활성화 함수이며, 흔히 쓰이는 활성화 함수입니다. 그런데 이 활성화 함수 외에도 더 많은 활성화 함수가 있습니다. 오늘은 그 외 나머지 활성화 함수에 대해서 이야기 해보도록 하겠습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">활성화 함수란?(1)</title>
+      <link href="http://localhost:4000/ML-Grammar-3" rel="alternate" type="text/html" title="활성화 함수란?(1)" />
       <published>2018-11-06T18:00:00+09:00</published>
       <updated>2018-11-06T18:00:00+09:00</updated>
       <id>http://localhost:4000/ML-Grammar-3</id>
@@ -160,15 +249,15 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 &lt;p&gt;값과 실수들의 합이 1인것을 확인 하셨나요 ? 
 그러나 아래와 같이 소프트 맥스 함수를 사용하게 된다면 nan 값을 볼 수 있습니다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-pytohn&quot;&gt;def softmaxFunction(x):
-    expX = np.exp(x) 
-    sumExpX = np.sum(expX) 
-    return expX / sumExpX
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;softmaxFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;expX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;sumExpX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sumExpX&lt;/span&gt;
 
-a = np.array([900, 1000, 1000])
-y4 = softmaxFunction(a)
-print(y4, np.sum(y4))
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;softmaxFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;nan 값을 확인 하셨나요 ? 소프트 맥스 함수 구현시 문제점이 바로 이것이랍니다.&lt;br /&gt;
 지수함수를 사용하다보니 계산 결과가 너무 크면 오버플로(너무 큰값을 표현할 수 없는 문제)를 야기하는데, 주로 입력신호 중 최댓값을 이용하면 이 문제를 해결 수 있습니다.&lt;/p&gt;
@@ -186,7 +275,7 @@ print(y4, np.sum(y4))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;오늘은 기본적인 활성화 함수 3가지에 대해 알아보았습니다.&lt;br /&gt;
-다음 포스팅에서는 비용 함수가 무엇인지에 대해 이야기 해보도록 하겠습니다.&lt;/p&gt;</content>
+다음 포스팅에서는 기본 활성화 함수이외 다른 활성화 함수에 대해 다루어 보겠습니다.&lt;/p&gt;</content>
 
       
       
@@ -1063,91 +1152,6 @@ knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">Knn(K-Nearest Neighbors)이란?</title>
-      <link href="http://localhost:4000/R-Grammar-2" rel="alternate" type="text/html" title="Knn(K-Nearest Neighbors)이란?" />
-      <published>2018-10-30T18:00:00+09:00</published>
-      <updated>2018-10-30T18:00:00+09:00</updated>
-      <id>http://localhost:4000/R-Grammar-2</id>
-      <content type="html" xml:base="http://localhost:4000/R-Grammar-2">&lt;p&gt;오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.&lt;br /&gt;
-Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.&lt;/p&gt;
-
-&lt;p&gt;이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;knn이란-무엇인가&quot;&gt;knn이란 무엇인가?&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;사회적인 관계를 관찰해본적인 있나요 ?&lt;br /&gt;
-대략적으로 비슷한 사람끼리 모이는 성질이 있다고 합니다. 그래서 비슷한 취향의 사람들끼리 모여서 동회회를 만들거나 비슷한 부류의 계층의 사람들끼리 친분을 맺기도 합니다.&lt;/p&gt;
-
-&lt;p&gt;그렇다면 공간적은 관계를 관찰해볼까요?&lt;br /&gt;
-길을 지나다가 보면 가구점이 모여있는 상가지역이 따로 형성된 곳이 있지 않나요? 한약방이 밀집되어 있는 지역이나, 가구점, 음식점 등 밀집되어 있는 지역이 따로 모여 있는 경우가 많은 것을 우리는 길을 지나다가 느낄 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;이러한 &lt;strong&gt;특성&lt;/strong&gt;을 가진 데이터를 겨낭해서 만들어진 알고리즘이 &lt;strong&gt;knn&lt;/strong&gt;입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;knn이-필요한-이유&quot;&gt;knn이 필요한 이유&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;유방암의 데이터를 가지고 있다고 가정을 했을때, 
-유방암의 종양의 크기에 대한 데이터(반지름, 둘레, 면적 등)만을 가지고 이 종양이 악성인지, 양성인지 예측할 수 있습니다.&lt;br /&gt;
-그렇다면 환자에 대한 치료 스케줄에 큰 영향을 미칠 수 있겠죠 ?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;knn-분류-이해&quot;&gt;knn 분류 이해&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;knn은 분류를 어떻게 할까요 ?&lt;br /&gt;
-knn은 어떤 라벨을 정의할 때, 그 데이터의 주변 반경 ε(입실론)안의 데이터들의 라벨들을 조사하여 다수결로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.&lt;/p&gt;
-
-&lt;p&gt;쉬운 이해를 위해 아래의 그림을 봐주세요.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;../assets/images/knn.png&quot; width=&quot;1000&quot; height=&quot;450&quot; /&gt;&lt;/center&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;center&gt;knn 분류 예시&lt;/center&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;knn을 5로 잡았을 때를 가정으로 하면 위처럼 표시 할 수 있습니다. A에는 빨간색이 많았으므로 물음표안에는 빨간색이 들어가고, B에는 파란색이 들어갑니다.&lt;/p&gt;
-
-&lt;p&gt;이해 하셨나요?&lt;br /&gt;
-위에서도 말했듯이 어떠한 라벨을 정의할 때, &lt;strong&gt;다수결&lt;/strong&gt;로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.&lt;/p&gt;
-
-&lt;p&gt;이제 knn개념을 잘 아시겠죠?
-다음 포스팅에는 실제 데이터를 이용해서 knn을 해보겠습니다.&lt;br /&gt;
-knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;를 눌러  미리 다운받아주세요.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>KEJdev</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="R" />
-      
-
-      
-        <summary type="html">오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다. Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">R을 배워야 하는 이유</title>
       <link href="http://localhost:4000/R-Grammar-1" rel="alternate" type="text/html" title="R을 배워야 하는 이유" />
       <published>2018-10-30T18:00:00+09:00</published>
@@ -1308,6 +1312,91 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
     </entry>
   
     <entry>
+      <title type="html">Knn(K-Nearest Neighbors)이란?</title>
+      <link href="http://localhost:4000/R-Grammar-2" rel="alternate" type="text/html" title="Knn(K-Nearest Neighbors)이란?" />
+      <published>2018-10-30T18:00:00+09:00</published>
+      <updated>2018-10-30T18:00:00+09:00</updated>
+      <id>http://localhost:4000/R-Grammar-2</id>
+      <content type="html" xml:base="http://localhost:4000/R-Grammar-2">&lt;p&gt;오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.&lt;br /&gt;
+Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.&lt;/p&gt;
+
+&lt;p&gt;이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;knn이란-무엇인가&quot;&gt;knn이란 무엇인가?&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;사회적인 관계를 관찰해본적인 있나요 ?&lt;br /&gt;
+대략적으로 비슷한 사람끼리 모이는 성질이 있다고 합니다. 그래서 비슷한 취향의 사람들끼리 모여서 동회회를 만들거나 비슷한 부류의 계층의 사람들끼리 친분을 맺기도 합니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 공간적은 관계를 관찰해볼까요?&lt;br /&gt;
+길을 지나다가 보면 가구점이 모여있는 상가지역이 따로 형성된 곳이 있지 않나요? 한약방이 밀집되어 있는 지역이나, 가구점, 음식점 등 밀집되어 있는 지역이 따로 모여 있는 경우가 많은 것을 우리는 길을 지나다가 느낄 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이러한 &lt;strong&gt;특성&lt;/strong&gt;을 가진 데이터를 겨낭해서 만들어진 알고리즘이 &lt;strong&gt;knn&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;knn이-필요한-이유&quot;&gt;knn이 필요한 이유&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;유방암의 데이터를 가지고 있다고 가정을 했을때, 
+유방암의 종양의 크기에 대한 데이터(반지름, 둘레, 면적 등)만을 가지고 이 종양이 악성인지, 양성인지 예측할 수 있습니다.&lt;br /&gt;
+그렇다면 환자에 대한 치료 스케줄에 큰 영향을 미칠 수 있겠죠 ?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;knn-분류-이해&quot;&gt;knn 분류 이해&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;knn은 분류를 어떻게 할까요 ?&lt;br /&gt;
+knn은 어떤 라벨을 정의할 때, 그 데이터의 주변 반경 ε(입실론)안의 데이터들의 라벨들을 조사하여 다수결로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;쉬운 이해를 위해 아래의 그림을 봐주세요.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/knn.png&quot; width=&quot;1000&quot; height=&quot;450&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;center&gt;knn 분류 예시&lt;/center&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;knn을 5로 잡았을 때를 가정으로 하면 위처럼 표시 할 수 있습니다. A에는 빨간색이 많았으므로 물음표안에는 빨간색이 들어가고, B에는 파란색이 들어갑니다.&lt;/p&gt;
+
+&lt;p&gt;이해 하셨나요?&lt;br /&gt;
+위에서도 말했듯이 어떠한 라벨을 정의할 때, &lt;strong&gt;다수결&lt;/strong&gt;로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;이제 knn개념을 잘 아시겠죠?
+다음 포스팅에는 실제 데이터를 이용해서 knn을 해보겠습니다.&lt;br /&gt;
+knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;를 눌러  미리 다운받아주세요.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="R" />
+      
+
+      
+        <summary type="html">오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다. Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">문자함수와 날짜 함수 2</title>
       <link href="http://localhost:4000/SQL-Grammar-6" rel="alternate" type="text/html" title="문자함수와 날짜 함수 2" />
       <published>2018-08-22T18:00:00+09:00</published>
@@ -1454,188 +1543,6 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
       
         <summary type="html">저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다. 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다. 그러면 오늘도 SQL에 대해 알아보러 갈까요?</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">문자함수와 날짜 함수 1</title>
-      <link href="http://localhost:4000/SQL-Grammar-5" rel="alternate" type="text/html" title="문자함수와 날짜 함수 1" />
-      <published>2018-08-21T18:00:00+09:00</published>
-      <updated>2018-08-21T18:00:00+09:00</updated>
-      <id>http://localhost:4000/SQL-Grammar-5</id>
-      <content type="html" xml:base="http://localhost:4000/SQL-Grammar-5">&lt;p&gt;이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.&lt;br /&gt;
-우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;함수를-사용해야-하는-이유&quot;&gt;함수를 사용해야 하는 이유?&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;SQL에서 함수를 사용해야 하는 이유는 함수를 이용하면 데이터 검색을 더 쉽고 자세하게 구현할 수 있기 때문입니다.&lt;br /&gt;
-간단한 이유죠?&lt;/p&gt;
-
-&lt;p&gt;그렇다면 함수의 종류의 대해 알아볼까요 ?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;함수의-종류&quot;&gt;함수의 종류&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;함수의 종류는 크게 2가지로 볼 수 있습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;&lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;함수의 종류&lt;/center&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;단일행 함수&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;center&gt;문자, 숫자, 날짜, 변환, 일반&lt;/center&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;복수행 함수&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;center&gt;max, min, avg, sum, count&lt;/center&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;문자 함수의 종류에 대해 자세하게 알아볼까요?&lt;br /&gt;
-문자 함수의 종류에는 아래와 같습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;&lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;문자 함수 &lt;/center&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;upper&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;문자를 대문자로 변환하는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;lower&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;문자를 소문자로 변환하는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;initcap&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;첫 문자는 대문자로, 나머지는 소문자로 변환하는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;substr&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;특정 철자만 잘라서 출력하는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Instr&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;단어에서 철자의 위치를 출력하는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Rpad&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;특정 철자나 공백을 채워넣는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Pad&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;특정 철자나 공백을 채워넣는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Length&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;철자의 개수를 세는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Concat&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;두 컬럼의 데이터를 연결해서 출력하는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;replace&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;어떤 특정 절차를 다른 철자로 변경해서 출력하는 함수&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;생각보다 많죠?&lt;br /&gt;
-문자 함수를 이용한 기초적인 SQL문법을 작성해볼까요?&lt;/p&gt;
-
-&lt;p&gt;이름을 출력하는데 대문자로도 출력하고 소문자로도 출력하고 첫번째 철자는 대문자로 나머지는 소문자로 출력하려면 SQL을 어떻게 짜야댈까요? 아래와 같이 SQL문법을 작성하시면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initcap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;출력이 잘되는 것을 확인 하셨나요?&lt;br /&gt;
-그러면 이번에 조건을 살짝 걸어서 출력해보겠습니다. 이름이 king인 사원의 이름과 월급을 출력하는데 철자를 모두 소문자로 작성해서 검색되게 하려면 어떻게 해야댈까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'king'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 작성하시면 출력이 잘 되는 것을 확인할 수 있습니다.&lt;br /&gt;
-그렇다면 이번엔 &lt;strong&gt;substr&lt;/strong&gt;(특정 철자만 잘라서 출력하는 함수)사용해볼까요?&lt;/p&gt;
-
-&lt;p&gt;이름의 첫 글자가 S로 시작하는 사원의 이름을 출력하려면 어떻게 해야댈까요? 단! like를 사용하지말고 위에서 말한 &lt;strong&gt;substr&lt;/strong&gt;함수를 사용해서 SQL을 작성해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'S'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 작성하셨나요?&lt;br /&gt;
-그러면 조금 더 응용해서 SQL문법을 작성해볼까요?&lt;br /&gt;
-아래의 SQL로 출력되는 결과를 &lt;strong&gt;initcap&lt;/strong&gt;을 사용하지 말고 여태까지 배운  substr, upper, lower, ||를 사용해서 출력되게 해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initcap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위의 SQL의 출력 결과를 한번 바꿔볼까요? 
-조금 길기는 하지만 아래와 같이 SQL을 작성하면 된답니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;다음 문자 함수는 &lt;strong&gt;instr&lt;/strong&gt;입니다. 단어에서 철자의 위치를 출력하는 함수인데요. 간단하게 사원들의 이름 철자에 ‘M’자의 위치를 출력해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'M'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;간단하죠 ?&lt;br /&gt;
-다음으로 철자의 개수를 세는 함수인 length 함수를 사용하여 사원들의 이름 철자의 개수를 세워볼까요?&lt;br /&gt;
-이것도 아까와 마찬가지로 간단하게 아래처럼 작성하면 된답니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;생각보다 문자함수는 간단하죠?&lt;br /&gt;
-다음 포스팅때는 간단하게 숫자 함수와 날짜 함수에 대해 알아볼께요.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>KEJdev</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="SQL" />
-      
-
-      
-        <summary type="html">이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다. 우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?</summary>
       
 
       

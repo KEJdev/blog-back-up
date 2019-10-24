@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/machine-learning/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2019-10-21T23:52:21+09:00</updated>
+  <updated>2019-10-24T22:04:25+09:00</updated>
   <id>http://localhost:4000/tag/machine-learning/feed.xml</id>
 
   
@@ -32,8 +32,97 @@
 
   
     <entry>
-      <title type="html">활성화 함수란?</title>
-      <link href="http://localhost:4000/ML-Grammar-3" rel="alternate" type="text/html" title="활성화 함수란?" />
+      <title type="html">활성화 함수란?(2)</title>
+      <link href="http://localhost:4000/ML-Grammar-4" rel="alternate" type="text/html" title="활성화 함수란?(2)" />
+      <published>2018-11-07T18:00:00+09:00</published>
+      <updated>2018-11-07T18:00:00+09:00</updated>
+      <id>http://localhost:4000/ML-Grammar-4</id>
+      <content type="html" xml:base="http://localhost:4000/ML-Grammar-4">&lt;p&gt;지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. &lt;br /&gt;
+전시간에 이야기 했던 활성화 함수 3가지는 가장 기본적인 활성화 함수이며, 흔히 쓰이는 활성화 함수입니다. 그런데 이 활성화 함수 외에도 더 많은 활성화 함수가 있습니다. 오늘은 그 외 나머지 활성화 함수에 대해서 이야기 해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;오늘 포스팅할 대부분의 활성화 함수는 Relu함수의 변형 버전이 많습니다. 한번 알아볼까요?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;relu-함수에서-변형된-활성화-함수들&quot;&gt;Relu 함수에서 변형된 활성화 함수들&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Relu 함수에서 변형된 활성화 함수들은 아래와 같습니다. 물론 여기서 Softplus와 Tanh함수는 변형된 함수는 아니라는 점! 기억해주세요.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/at.png&quot; width=&quot;400&quot; height=&quot;280&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;위의 그래프에서 Leaky ReLu, ELU가 Relu의 변형 함수입니다. 위 그래프 외에도 p-Relu와 swish함수도 다루어보겠습니다.&lt;br /&gt;
+그럼 차근차근 함수들에 대해 알아볼까요?&lt;/p&gt;
+
+&lt;p&gt;Relu함수는 저번 포스팅때 현업에서도 많이 쓰인다고 이야기 했습니다. 그런데 왜, Relu의 번형들이 많이 생겨나는 걸까요?&lt;br /&gt;
+Relu 또한 저번에 말했던 vanishing현상이 생긴답니다? 왜냐하면 &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+x &lt; 0 %]]&gt;&lt;/script&gt; 때는 0을 출력하고 &lt;script type=&quot;math/tex&quot;&gt;x&gt;0&lt;/script&gt;을 출력하기 때문에 학습할 때, 뉴런이 죽는 경우가 발생하기 때문입니다. 그래서 Relu에 약간의 변화를 줘서 0이 되어 뉴런이 죽지 않도록, 신경망이 죽지 않도록 활성화 함수를 변형 시킨거랍니다.&lt;/p&gt;
+
+&lt;p&gt;우선 &lt;strong&gt;leake Relu&lt;/strong&gt;함수에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/leake.png&quot; width=&quot;450&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;leake Relu는 기존의 Relu의 음수 부분에 약간의 기울기를 준 함수입니다. 때문에 이 활성화 함수는 기울기가 0일때의 문제점을 해결하기 위해 나온 함수입니다.&lt;/p&gt;
+
+&lt;p&gt;두번째 활성화 함수는 &lt;strong&gt;P-Relu&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/prelu.png&quot; width=&quot;450&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;P-Relu는 leake Relu와 비슷하지만 피라미터는 &lt;script type=&quot;math/tex&quot;&gt;∂&lt;/script&gt;를 추가해서 &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+x &lt; 0 %]]&gt;&lt;/script&gt; 때 학습에 따라 각도를 바꾸는 활성화 함수입니다. 좋아보이는 이 활성화 함수도 단점이 존재합니다. Out of memory라는 에러를 만날 수 있는데, 그 이유는 학습을 하는 동안에 그 속에서도 또 다시 학습을 하기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;세번째 함수는 &lt;strong&gt;ELU&lt;/strong&gt;함수입니다.&lt;br /&gt;
+ELU 함수는 OOM(Out of memory)를 해결하기 위해 나온 함수입니다.  0이하의 기울기가 곡선이므로 미분이 잘되며, OOM이 뜨지 않으며 정확도가 높다고 합니다.
+대신 계산량이 많아 학습시간이 오래걸리는 단점이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;마지막 함수는 비교적 최근에 나온 함수인 &lt;strong&gt;Swish&lt;/strong&gt;함수입니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/swish.png&quot; width=&quot;550&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;2017년 11월 경 구글에서 만든 함수라고 합니다. 가장 효율성이 좋았다고 이야기 합니다.&lt;/p&gt;
+
+&lt;p&gt;아마 그래프를 보면서 느끼셨겠지만, 정확도와 효율이 좋은 함수를 보면 음수 기 울기 부분이 상당히 매끄러운 모습을 볼 수 있습니다. 이 뜻은 미분과 기울기의 매끈함이 활성화 함수의 가장 주요 포인트라 할 수있습니다.&lt;/p&gt;
+
+&lt;p&gt;Relu와 Swish, 이 두가지의 차이점을 분명하게 보여주는 그래프는 아래와 같습니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/des.png&quot; width=&quot;450&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;Relu와 Swish의 차이점이 분명하게 보이지 않나요 ?&lt;br /&gt;
+Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지만, 정확도와 OOM, vanishing현상을 막기 위해 여러가지 연구를 하고 있다는 점 ! 잘 기억해두세요.&lt;/p&gt;
+
+&lt;p&gt;다음에 시간이 된다면 또 다른 활성화 함수에 대해 다루어보겠습니다.&lt;br /&gt;
+다음 포스팅에선 배치(batch)에 대해 이야기 해보겠습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="MACHINE-LEARNING" />
+      
+
+      
+        <summary type="html">지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. 전시간에 이야기 했던 활성화 함수 3가지는 가장 기본적인 활성화 함수이며, 흔히 쓰이는 활성화 함수입니다. 그런데 이 활성화 함수 외에도 더 많은 활성화 함수가 있습니다. 오늘은 그 외 나머지 활성화 함수에 대해서 이야기 해보도록 하겠습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">활성화 함수란?(1)</title>
+      <link href="http://localhost:4000/ML-Grammar-3" rel="alternate" type="text/html" title="활성화 함수란?(1)" />
       <published>2018-11-06T18:00:00+09:00</published>
       <updated>2018-11-06T18:00:00+09:00</updated>
       <id>http://localhost:4000/ML-Grammar-3</id>
@@ -160,15 +249,15 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 &lt;p&gt;값과 실수들의 합이 1인것을 확인 하셨나요 ? 
 그러나 아래와 같이 소프트 맥스 함수를 사용하게 된다면 nan 값을 볼 수 있습니다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-pytohn&quot;&gt;def softmaxFunction(x):
-    expX = np.exp(x) 
-    sumExpX = np.sum(expX) 
-    return expX / sumExpX
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;softmaxFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;expX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;sumExpX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sumExpX&lt;/span&gt;
 
-a = np.array([900, 1000, 1000])
-y4 = softmaxFunction(a)
-print(y4, np.sum(y4))
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;softmaxFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;nan 값을 확인 하셨나요 ? 소프트 맥스 함수 구현시 문제점이 바로 이것이랍니다.&lt;br /&gt;
 지수함수를 사용하다보니 계산 결과가 너무 크면 오버플로(너무 큰값을 표현할 수 없는 문제)를 야기하는데, 주로 입력신호 중 최댓값을 이용하면 이 문제를 해결 수 있습니다.&lt;/p&gt;
@@ -186,7 +275,7 @@ print(y4, np.sum(y4))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;오늘은 기본적인 활성화 함수 3가지에 대해 알아보았습니다.&lt;br /&gt;
-다음 포스팅에서는 비용 함수가 무엇인지에 대해 이야기 해보도록 하겠습니다.&lt;/p&gt;</content>
+다음 포스팅에서는 기본 활성화 함수이외 다른 활성화 함수에 대해 다루어 보겠습니다.&lt;/p&gt;</content>
 
       
       
