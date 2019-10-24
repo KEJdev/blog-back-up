@@ -14,30 +14,28 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}{{ site.favicon }}" type="image/png" />
-    <link rel="canonical" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}" />
+    <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
+    <link rel="shortcut icon" href="http://localhost:4000/./assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/404.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
-
      <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:site_name" content="덕복희" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta property="og:url" content="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}" />
-    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}" />
-    <meta property="article:publisher" content="https://www.facebook.com/{{ site.facebook }}" />{% if excerpt %}
+    <meta property="og:title" content="404 - Page Not Found" />
+    <meta property="og:description" content="If i was rich, i would eat tteokbokki every day." />
+    <meta property="og:url" content="http://localhost:4000/404.html" />
+    <meta property="og:image" content="http://localhost:4000/./assets/images/covers.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}" />
-    <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}" />
+    <meta name="twitter:title" content="404 - Page Not Found" />
+    <meta name="twitter:description" content="If i was rich, i would eat tteokbokki every day." />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/./assets/images/covers.jpg" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="{{ site.title }}" />{% if page.tags.size > 0 %}
-    <meta name="twitter:site" content="@{{ site.twitter }}" />
-    <meta name="twitter:creator" content="@{{ site.twitter }}" />{% if excerpt %}
+    <meta name="twitter:data1" content="덕복희" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="2000" />
     <meta property="og:image:height" content="666" />
 
@@ -47,23 +45,24 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "{{ site.title }}",
-        "logo": "{{ site.url }}{{ site.baseurl }}{{ site.logo }}"
+        "name": "덕복희",
+        "logo": "http://localhost:4000/./assets/images/blog-icon.png"
     },
-    "url": "{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}",
+    "url": "http://localhost:4000/404.html",
     "image": {
         "@type": "ImageObject",
-        "url": "{{ site.url }}{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}",
+        "url": "http://localhost:4000/./assets/images/covers.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}"
+        "@id": "http://localhost:4000/404.html"
     },
-    "description": "{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    "description": "If i was rich, i would eat tteokbokki every day."
 }
     </script>
+    
     <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
     <script type="text/javascript">
     ghost.init({
@@ -79,7 +78,7 @@ It's a good idea to keep this template as minimal as possible in terms of both f
 <body class="error-template">
     <div class="site-wrapper">
 
-        <header class="site-header outer">
+        <header class="site-header outer no-cover">
             <div class="inner">
                 <nav class="site-nav-center">
                     
@@ -113,26 +112,26 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     
         <article class="post-card ">
             
-                <a class="post-card-image-link" href="/R-Grammar-1">
-                    <div class="post-card-image" style="background-image: url(/../assets/images/R_cover1.png)"></div>
+                <a class="post-card-image-link" href="/ML-Grammar-4">
+                    <div class="post-card-image" style="background-image: url(/../assets/images/ML_cover1.png)"></div>
                 </a>
             
             <div class="post-card-content">
-                <a class="post-card-content-link" href="/R-Grammar-1">
+                <a class="post-card-content-link" href="/ML-Grammar-4">
                     <header class="post-card-header">
                         
                             
                                 
-                                    <span class="post-card-tags">R</span>
+                                    <span class="post-card-tags">Machine-learning</span>
                                 
                             
                         
 
-                        <h2 class="post-card-title">R을 배워야 하는 이유</h2>
+                        <h2 class="post-card-title">활성화 함수란?(2)</h2>
                     </header>
                     <section class="post-card-excerpt">
                         
-                            <p>R이라는 언어를 들어보신 적 있을꺼예요. R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는</p>
+                            <p>지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. 전시간에 이야기 했던 활성화 함수 3가지는 가장 기본적인 활성화 함수이며, 흔히 쓰이는 활성화 함수입니다. 그런데 이 활성화 함수 외에도 더 많은 활성화 함수가</p>
                         
                     </section>
                 </a>
@@ -160,27 +159,27 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     
         <article class="post-card ">
             
-                <a class="post-card-image-link" href="/SQL-Grammar-3">
-                    <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
+                <a class="post-card-image-link" href="/ML-Grammar-3">
+                    <div class="post-card-image" style="background-image: url(/../assets/images/ML_cover1.png)"></div>
                 </a>
             
             <div class="post-card-content">
-                <a class="post-card-content-link" href="/SQL-Grammar-3">
+                <a class="post-card-content-link" href="/ML-Grammar-3">
                     <header class="post-card-header">
                         
                             
                                 
-                                    <span class="post-card-tags">Sql</span>
+                                    <span class="post-card-tags">Machine-learning</span>
                                 
                             
                         
 
-                        <h2 class="post-card-title">데이터 제한 및 정렬 1</h2>
+                        <h2 class="post-card-title">활성화 함수란?(1)</h2>
                     </header>
                     <section class="post-card-excerpt">
                         
-                            <p>오늘은 SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다.
-여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말한답니다.
+                            <p>이제 머신러닝을 조금 하시는 분이라면, 혹은 관련 서적을 읽어보신 분이라면 
+활성화 함수가 무엇인지에 대해서는 아마 알고 있거나 감이 잡힐꺼라 생각합니다.
 
 </p>
                         
@@ -210,27 +209,27 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     
         <article class="post-card ">
             
-                <a class="post-card-image-link" href="/SQL-Grammar-2">
-                    <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
+                <a class="post-card-image-link" href="/PLSQL-Grammar-2">
+                    <div class="post-card-image" style="background-image: url(/../assets/images/plsql_cover1.png)"></div>
                 </a>
             
             <div class="post-card-content">
-                <a class="post-card-content-link" href="/SQL-Grammar-2">
+                <a class="post-card-content-link" href="/PLSQL-Grammar-2">
                     <header class="post-card-header">
                         
                             
                                 
-                                    <span class="post-card-tags">Sql</span>
+                                    <span class="post-card-tags">Plsql</span>
                                 
                             
                         
 
-                        <h2 class="post-card-title">SQL 컬럼검색과 별칭 사용하기</h2>
+                        <h2 class="post-card-title">PL/SQL의 예외처리(exception)란?</h2>
                     </header>
                     <section class="post-card-excerpt">
                         
-                            <p>저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다.
-이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.
+                            <p>이번 포스팅에서는 PL/SQL의 예외처리(exception)처리에 대해서 알아볼꼐요.
+그리고 예외처리를 왜 해야하는지와 종류에 대해 알아보겠습니다.
 
 </p>
                         
@@ -248,12 +247,45 @@ It's a good idea to keep this template as minimal as possible in terms of both f
                     <span class="reading-time">
                         
                         
-                          2 min read
+                          1 min read
                         
                     </span>
                 </footer>
             </div>
         </article>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
     
 
     
