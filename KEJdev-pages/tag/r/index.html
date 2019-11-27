@@ -35,28 +35,28 @@
     <![endif]-->
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
-    <link rel="shortcut icon" href="http://localhost:4000/./assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/tag/r/" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}{{ site.favicon }}" type="image/png" />
+    <link rel="canonical" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="덕복희" />
+    <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="R - 덕복희" />
-    <meta property="og:description" content="If i was rich, i would eat tteokbokki every day." />
-    <meta property="og:url" content="http://localhost:4000/tag/r/" />
-    <meta property="og:image" content="http://localhost:4000/./assets/images/covers.jpg" />
-    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="og:title" content="{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:url" content="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}" />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}" />
+    <meta property="article:publisher" content="https://www.facebook.com/{{ site.facebook }}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="R - 덕복희" />
-    <meta name="twitter:description" content="If i was rich, i would eat tteokbokki every day." />
-    <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/./assets/images/covers.jpg" />
+    <meta name="twitter:title" content="{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}" />
+    <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="덕복희" />
-    <meta name="twitter:site" content="@" />
-    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:data1" content="{{ site.title }}" />
+    <meta name="twitter:site" content="@{{ site.twitter }}" />
+    <meta name="twitter:creator" content="@{{ site.twitter }}" />
     <meta property="og:image:width" content="2000" />
     <meta property="og:image:height" content="666" />
 
@@ -66,21 +66,21 @@
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "덕복희",
-        "logo": "http://localhost:4000/./assets/images/blog-icon.png"
+        "name": "{{ site.title }}",
+        "logo": "{{ site.url }}{{ site.baseurl }}{{ site.logo }}"
     },
-    "url": "http://localhost:4000/tag/r/",
+    "url": "{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/./assets/images/covers.jpg",
+        "url": "{{ site.url }}{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/tag/r/"
+        "@id": "{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}"
     },
-    "description": "If i was rich, i would eat tteokbokki every day."
+    "description": "{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
 }
     </script>
     
