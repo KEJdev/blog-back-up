@@ -4,7 +4,7 @@ current: post
 cover:  ../assets/images/python_cover1.png
 navigation: True
 title: Python if문 개념 ①
-date: 2019-11-28 09:00:00
+date: 2019-11-26 09:00:00
 tags: [PYTHON]
 sitemap :
   changefreq : daily
@@ -14,6 +14,7 @@ subclass: 'post tag-python'
 author: KEJdev
 use_math: true
 ---  
+
 
 Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.  
 
