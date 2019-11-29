@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://KEJdev.github.io/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://KEJdev.github.io/" rel="alternate" type="text/html" />
+  <updated>2019-11-29T16:59:30+09:00</updated>
+  <id>https://KEJdev.github.io/tag/algorithm/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">덕복희 | </title>
+  
+
+  
+    <subtitle>If i was rich, i would eat tteokbokki every day.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">두개의 숫자의 합 구하기(PLSQL)</title>
+      <link href="https://KEJdev.github.io/ALGORITHM-1" rel="alternate" type="text/html" title="두개의 숫자의 합 구하기(PLSQL)" />
+      <published>2019-11-26T18:00:00+09:00</published>
+      <updated>2019-11-26T18:00:00+09:00</updated>
+      <id>https://KEJdev.github.io/ALGORITHM-1</id>
+      <content type="html" xml:base="https://KEJdev.github.io/ALGORITHM-1">&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
+오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.&lt;/p&gt;
+
+&lt;p&gt;PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, &lt;strong&gt;PLSQL이 무엇인가?&lt;/strong&gt; 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만!
+안보실꺼 같으니 다시 한번 설명 드리자면, PLSQL은 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다.
+if문과 loop문을 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 가장 기본적인 두 수자의 덧셈을 풀어볼까요 ?&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_num1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'첫번째 숫자를 입력하세요 ~ '&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_num2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'두번째 숫자를 입력하세요 ~ '&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;declare&lt;/span&gt;              
+  &lt;span class=&quot;n&quot;&gt;v_num1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_num1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;v_num2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;v_num3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  
+&lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;v_num3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v_num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v_num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;dbms_output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put_line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'총합은 : '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v_num3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;사실 너무 쉬운거라 알고리즘이라고 하기가 좀 그렇지만, 그래도 간단하게 PLSQL로 숫자의 합을 구하는 문제를 풀어보았습니다. 
+어때요? 간단하죠 ?&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ALGORITHM" />
+      
+
+      
+        <summary type="html">주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

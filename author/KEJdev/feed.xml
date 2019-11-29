@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://KEJdev.github.io/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://KEJdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-11-29T14:18:40+09:00</updated>
+  <updated>2019-11-29T16:59:30+09:00</updated>
   <id>https://KEJdev.github.io/author/KEJdev/feed.xml</id>
 
   
@@ -30,6 +30,65 @@
   
   
 
+  
+    <entry>
+      <title type="html">두개의 숫자의 합 구하기(PLSQL)</title>
+      <link href="https://KEJdev.github.io/ALGORITHM-1" rel="alternate" type="text/html" title="두개의 숫자의 합 구하기(PLSQL)" />
+      <published>2019-11-26T18:00:00+09:00</published>
+      <updated>2019-11-26T18:00:00+09:00</updated>
+      <id>https://KEJdev.github.io/ALGORITHM-1</id>
+      <content type="html" xml:base="https://KEJdev.github.io/ALGORITHM-1">&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
+오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.&lt;/p&gt;
+
+&lt;p&gt;PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, &lt;strong&gt;PLSQL이 무엇인가?&lt;/strong&gt; 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만!
+안보실꺼 같으니 다시 한번 설명 드리자면, PLSQL은 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다.
+if문과 loop문을 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 가장 기본적인 두 수자의 덧셈을 풀어볼까요 ?&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_num1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'첫번째 숫자를 입력하세요 ~ '&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_num2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'두번째 숫자를 입력하세요 ~ '&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;declare&lt;/span&gt;              
+  &lt;span class=&quot;n&quot;&gt;v_num1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_num1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;v_num2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;v_num3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  
+&lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;v_num3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v_num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v_num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;dbms_output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put_line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'총합은 : '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v_num3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;사실 너무 쉬운거라 알고리즘이라고 하기가 좀 그렇지만, 그래도 간단하게 PLSQL로 숫자의 합을 구하는 문제를 풀어보았습니다. 
+어때요? 간단하죠 ?&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ALGORITHM" />
+      
+
+      
+        <summary type="html">주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Python if문 개념 ①</title>
@@ -1367,189 +1426,6 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
       
         <summary type="html">퍼셉트론에 대한 개념은 저번 포스팅때 다뤘습니다. 이번에는 퍼셉트론에 대해 좀더 자세히 다뤄보겠습니다. 또한 직접 PYTHON으로 구현해보겠습니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">퍼셉트론(Perceptron)이란?</title>
-      <link href="https://KEJdev.github.io/ML-Grammar-1" rel="alternate" type="text/html" title="퍼셉트론(Perceptron)이란?" />
-      <published>2018-11-02T18:00:00+09:00</published>
-      <updated>2018-11-02T18:00:00+09:00</updated>
-      <id>https://KEJdev.github.io/ML-Grammar-1</id>
-      <content type="html" xml:base="https://KEJdev.github.io/ML-Grammar-1">&lt;p&gt;퍼셉트론(Perceptron)이란 무엇인지, 딥러닝의 역사에 대해 알아보겠습니다.&lt;br /&gt;
-아시다시피 “딥러닝” 이라는 분야가 이렇게까지 뜨거워진지는 그리 오래되지는 않았습니다.&lt;br /&gt;
-하지만 딥러닝 분야는 1943년부터 조금씩 조금씩 시작하고 있었답니다.&lt;/p&gt;
-
-&lt;p&gt;그렇다면 이제 퍼셉트론이 무엇인지, 역사가 어떻게 되는지 알아볼까요 ?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;1943년&lt;br /&gt;
-미국의 &lt;strong&gt;신경외과&lt;/strong&gt; 의사인 워렌 맥걸록에 의해서 발단이 되었습니다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;1957년&lt;br /&gt;
-프랑크 로젠 블라크가 퍼셉트론 알고리즘을 보안했다.&lt;br /&gt;
-사람의 뇌의 동작을 전기 스위치 on/off로 흉내낼 수 있다는 이론을 증명했습니다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;perceptron&quot;&gt;&lt;strong&gt;Perceptron?&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;퍼셉트론은 인간의 신경세포 하나를 컴퓨터로 흉내낸 것을 말합니다.&lt;/p&gt;
-
-&lt;p&gt;인간의 신경세포라고해서 어려운 개념이 아니예요. 고등학교 생물시간으로 돌아가볼까요?&lt;br /&gt;
-우리는 고등학교 생물시간에 배운 3가지 용어가 있습니다.&lt;/p&gt;
-
-&lt;center&gt;1. 자극 ( Stimulus )  &lt;/center&gt;
-&lt;center&gt;2. 반응 (Response)&lt;/center&gt;
-&lt;center&gt;3. 역치 (Threshold)&lt;/center&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;center&gt;&quot;특정 자극이 있다면 그 자극이 어느 역치 이상이여야만 세포가 반응한다&quot;&lt;/center&gt;&lt;/strong&gt;&lt;br /&gt;
-혹시 기억 나시나요 ?&lt;br /&gt;
-저 문장을 예를 들어서 이야기 해보겠습니다. &lt;br /&gt;
-짜게 먹는 사람은 자기가 평소에 먹는만큼 음식이 짜지 않으면 싱겁다고 느낍니다. 즉,역치 이하의 자극은 무시하는거죠. 반대로 싱겁게 먹던 사람이 짜게 먹기 시작해서 오랜 시간이 지나면 예전에 먹던 싱거운 음식에 만족을 하지 못하게 됩니다. 즉, 역치가 올라가게 됩니다.&lt;/p&gt;
-
-&lt;p&gt;퍼셉트론의 개념, 이제 잘 아시겠죠? 이제 계속해서 역사를 쭉 살펴볼께요.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1969년&lt;br /&gt;
-이때, “퍼셉트론은 단순 선형분류기에 불과하다.”라고 민스키라는 사람이 지적하게 됩니다. &lt;br /&gt;
-왜 이런 결론이 나왔냐면 xor 분류를 못한다고 단정했기 때문입니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;입력(xor)&lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; x1 &lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; x2 &lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; t (타겟)&lt;/center&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i1&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i2&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i3&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i4&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;이후에, 인공지능의 침체기라고해서 겨울기가 시작되었어요.&lt;br /&gt;
-그러다 중간층을 넣는다라는 해결책(다층 퍼셉트론)을 발견하게 되고 다시 인공지능에게 봄이 오는 시기가 오기 시작했습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt;입력(xor)&lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; x1 &lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; x2 &lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; or 게이트 결과 (중간층) &lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; not and 게이트 결과 &lt;/center&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;center&gt; and &lt;/center&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i1&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i2&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i3&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;i4&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;1970년 중반&lt;br /&gt;
-논문을 하나 발표하게 됩니다. 바로 &lt;strong&gt;역전파&lt;/strong&gt;알고리즘(다층 퍼셉트론)이죠.&lt;br /&gt;
-당시 컴퓨터의 연산으로는 이 이론을 구현하기 어려웠기 때문에 논문으로만 존재했다고 합니다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;1986년&lt;br /&gt;
-은닉층을 갖는 다층 퍼셉트론 + 오류 역전파 학습 알고리즘 구현에 성공했고 덕분에 현재의 인공지능이 있게 되었습니다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;퍼셉트론은 상당히 간단했는데, 이것이 쭉 이어져 인공지능을 만들어 낸것이 신기하지 않나요?&lt;br /&gt;
-다음 포스팅엔 퍼셉트론을 PYTHON으로 간단하게 구현해보도록 하겠습니다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>KEJdev</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="MACHINE-LEARNING" />
-      
-
-      
-        <summary type="html">퍼셉트론(Perceptron)이란 무엇인지, 딥러닝의 역사에 대해 알아보겠습니다. 아시다시피 “딥러닝” 이라는 분야가 이렇게까지 뜨거워진지는 그리 오래되지는 않았습니다. 하지만 딥러닝 분야는 1943년부터 조금씩 조금씩 시작하고 있었답니다.</summary>
       
 
       

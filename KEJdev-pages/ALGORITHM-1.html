@@ -11,7 +11,7 @@
 
 
 
-    <title>PL/SQL이란?</title>
+    <title>두개의 숫자의 합 구하기(PLSQL)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -61,30 +61,30 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
     <link rel="shortcut icon" href="https://KEJdev.github.io/./assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://KEJdev.github.io/PLSQL-Grammar-1" />
+    <link rel="canonical" href="https://KEJdev.github.io/ALGORITHM-1" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="덕복희" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PL/SQL이란?" />
-    <meta property="og:description" content="PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다. PLSQL 이란? PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다. if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다. PL/SQL을 배워야 하는 이유 우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다. 우리가 분석해야할 데이터들은" />
-    <meta property="og:url" content="https://KEJdev.github.io/PLSQL-Grammar-1" />
-    <meta property="og:image" content="https://KEJdev.github.io/../assets/images/plsql_cover1.png" />
+    <meta property="og:title" content="두개의 숫자의 합 구하기(PLSQL)" />
+    <meta property="og:description" content="주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다. PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, PLSQL이 무엇인가? 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만! 안보실꺼 같으니 다시 한번 설명 드리자면, PLSQL은 비절차적" />
+    <meta property="og:url" content="https://KEJdev.github.io/ALGORITHM-1" />
+    <meta property="og:image" content="https://KEJdev.github.io/../assets/images/algorlthm_cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2018-11-04T18:00:00+09:00" />
-    <meta property="article:modified_time" content="2018-11-04T18:00:00+09:00" />
-    <meta property="article:tag" content="Plsql" />
+    <meta property="article:published_time" content="2019-11-26T18:00:00+09:00" />
+    <meta property="article:modified_time" content="2019-11-26T18:00:00+09:00" />
+    <meta property="article:tag" content="Algorithm" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PL/SQL이란?" />
-    <meta name="twitter:description" content="PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다. PLSQL 이란? PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다. if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다. PL/SQL을 배워야 하는 이유 우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다. 우리가 분석해야할 데이터들은" />
+    <meta name="twitter:title" content="두개의 숫자의 합 구하기(PLSQL)" />
+    <meta name="twitter:description" content="주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다. PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, PLSQL이 무엇인가? 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만! 안보실꺼 같으니 다시 한번 설명 드리자면, PLSQL은 비절차적" />
     <meta name="twitter:url" content="https://KEJdev.github.io/" />
-    <meta name="twitter:image" content="https://KEJdev.github.io/../assets/images/plsql_cover1.png" />
+    <meta name="twitter:image" content="https://KEJdev.github.io/../assets/images/algorlthm_cover1.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="덕복희" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Plsql" />
+    <meta name="twitter:data2" content="Algorithm" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -99,18 +99,18 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
         "name": "덕복희",
         "logo": "https://KEJdev.github.io/./assets/images/blog-icon.png"
     },
-    "url": "https://KEJdev.github.io/PLSQL-Grammar-1",
+    "url": "https://KEJdev.github.io/ALGORITHM-1",
     "image": {
         "@type": "ImageObject",
-        "url": "https://KEJdev.github.io/../assets/images/plsql_cover1.png",
+        "url": "https://KEJdev.github.io/../assets/images/algorlthm_cover1.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://KEJdev.github.io/PLSQL-Grammar-1"
+        "@id": "https://KEJdev.github.io/ALGORITHM-1"
     },
-    "description": "PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다. PLSQL 이란? PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다. if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다. PL/SQL을 배워야 하는 이유 우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다. 우리가 분석해야할 데이터들은"
+    "description": "주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다. PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, PLSQL이 무엇인가? 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만! 안보실꺼 같으니 다시 한번 설명 드리자면, PLSQL은 비절차적"
 }
     </script>
     
@@ -123,7 +123,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="PL/SQL이란?" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="두개의 숫자의 합 구하기(PLSQL)" href="/feed.xml" />
 
 
 </head>
@@ -166,113 +166,56 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post tag-plsql ">
+        <article class="post-full post tag-algorlthm ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 4 November 2018"> 4 November 2018</time>
+                    <time class="post-full-meta-date" datetime="26 November 2019">26 November 2019</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/plsql/'>PLSQL</a>
+                               <a href='/tag/algorithm/'>ALGORITHM</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">PL/SQL이란?</h1>
+                <h1 class="post-full-title">두개의 숫자의 합 구하기(PLSQL)</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/../assets/images/plsql_cover1.png)">
+            <figure class="post-full-image" style="background-image: url(/../assets/images/algorlthm_cover1.png)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.<br />
-<br /></p>
+                    <p>주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
+오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.</p>
 
-<blockquote>
-  <h4 id="plsql-이란">PLSQL 이란?</h4>
-</blockquote>
+<p>PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, <strong>PLSQL이 무엇인가?</strong> 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만!
+안보실꺼 같으니 다시 한번 설명 드리자면, PLSQL은 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다.
+if문과 loop문을 사용할 수 있습니다.</p>
 
-<p>PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다.
-if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다.</p>
+<p>그렇다면 가장 기본적인 두 수자의 덧셈을 풀어볼까요 ?</p>
 
-<p><br /></p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">accept</span> <span class="n">p_num1</span> <span class="n">prompt</span> <span class="s1">'첫번째 숫자를 입력하세요 ~ '</span>
+<span class="n">accept</span> <span class="n">p_num2</span> <span class="n">prompt</span> <span class="s1">'두번째 숫자를 입력하세요 ~ '</span>
 
-<blockquote>
-  <h4 id="plsql을-배워야-하는-이유">PL/SQL을 배워야 하는 이유</h4>
-</blockquote>
+<span class="k">declare</span>              
+  <span class="n">v_num1</span> <span class="n">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span><span class="o">=&amp;</span><span class="n">p_num1</span><span class="p">;</span>
+  <span class="n">v_num2</span> <span class="n">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span><span class="o">=&amp;</span><span class="n">p_num2</span><span class="p">;</span>
+  <span class="n">v_num3</span> <span class="n">number</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  
+<span class="k">begin</span> 
+  <span class="n">v_num3</span> <span class="p">:</span><span class="o">=</span> <span class="n">v_num1</span> <span class="o">+</span> <span class="n">v_num2</span><span class="p">;</span>
+  <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">'총합은 : '</span> <span class="o">||</span> <span class="n">v_num3</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
 
-<p>우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다.<br />
-우리가 분석해야할 데이터들은 크게 2가지 타입으로 볼 수 있습니다.</p>
-
-<ul>
-  <li>samll data -&gt; business data</li>
-</ul>
-
-<p>business data를 분석하려면, 알고리즘 사고방식을 갖춰야할 필요가 있습니다. 
-그래서 수학식을 PL/SQL 또는 Python 으로 구현하려고 합니다.</p>
-
-<ul>
-  <li>big data ?<br />
-“ 지금까지 한번도 분석해보지 않은 data”</li>
-</ul>
-
-<p>소셜미디어에 올라오는 data, 트위터, 페이스북, 인스타그램 data는 마케팅에 조금 도움되는 data일뿐 크게 중요하지 않은 data입니다.</p>
-
-<p>우리가 분석해야할 가장 중요한 데이터는 대부분 RDBMS에 저장되어 있습니다. SQL을 사용해서 분석하기에는 노가다를 해야할 일들이 많습니다. 그래서 힘들게 하드코딩을 하지 않고 쉽게 business data를 분석을 하려면 PL/SQL을 사용해야합니다.</p>
-
-<p>PL/SQL을 사용하게 되면 SQL로 보여줄수 있는 분석 결과와 PL/SQL로 보여줄수 있는 분석 결과가 훨신 더 많습니다. SQL로는 DATA에서 정보를 추출해서 보여지는 현상을 증명할 수 있을 뿐이지만, PL/SQL로 데이터 분석을 하게 되면, 회귀 분석을 구현하여 방정식을 도출해내고 결정트리를 이용해 확률 및 엔트로피 등을 구할수 있수 있습니다. 
-<br /></p>
-
-<blockquote>
-  <h4 id="plsql에서의-기본-용어">PL/SQL에서의 기본 용어</h4>
-</blockquote>
-
-<ul>
-  <li>식별자는 v_ename, v_sal 과 같은 변수를 이야기 합니다.</li>
-  <li>구분자는 * / + - 와 같은 연산자를 이야기 합니다.</li>
-  <li>리터럴은 7788, SCOTT 과 같은 문자나 숫자를 이야기 합니다.</li>
-  <li>PL/SQL에서도 주석을 사용할 수 있으며 실행하고 싶지 않은 구문을 실행하지 않고자 할때 사용합니다.</li>
-</ul>
-
-<p><br /></p>
-
-<blockquote>
-  <h4 id="plsql에서의-sql-함수-사용법">PL/SQL에서의 SQL 함수 사용법</h4>
-</blockquote>
-
-<ul>
-  <li>
-    <p>declare 절의 경우
-사용할 수 있는 함수는 단일행 함수 뿐이며, 복수행 함수나 decode 함수 등은 사용할 수 없습니다.</p>
-  </li>
-  <li>
-    <p>begin 실행절의 경우 
-어떠한 함수든 다 사용할 수 있습니다.</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<blockquote>
-  <h4 id="plsql의-기본-block-의-구조">PL/SQL의 기본 block 의 구조</h4>
-</blockquote>
-
-<p>PL/SQL은 선언절, 실행절, 종료절이 있습니다.</p>
-
-<pre><code class="language-plsql">  declare //선언절
-      변수, 상수,예외 등을 선언한다.
-  begin // 실행절 
-      실행할 SQL, IF문 , LOOP 문등을 실행한다.
-  end ; //종료절
-/   &lt;-------------------------PL/SQL 을 종료하겠다. * 주의 : /는 벽에 딱 붙여야 한다.
-</code></pre>
-
-<p>조금 더 자세한 문법 설명은 다음 포스팅부터 알아보겠습니다.</p>
+<p>사실 너무 쉬운거라 알고리즘이라고 하기가 좀 그렇지만, 그래도 간단하게 PLSQL로 숫자의 합을 구하는 문제를 풀어보았습니다. 
+어때요? 간단하죠 ?</p>
 
 
                 </div>
@@ -322,135 +265,9 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
                 
                 
                 
-                    <article class="read-next-card"
-                        
-                            style="background-image: url(/./assets/images/covers.jpg)"
-                        
-                    >
-                        <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; 덕복희 &mdash;</small>
-                            
-                                <h3 class="read-next-card-header-title"><a href="/tag/plsql/">Plsql</a></h3>
-                            
-                        </header>
-                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
-</div>
-                        <div class="read-next-card-content">
-                            <ul>
-                                
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/PLSQL-Grammar-2">PL/SQL의 예외처리(exception)란?</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                            </ul>
-                        </div>
-                        <footer class="read-next-card-footer">
-                            <a href="/tag/plsql/">
-                                
-                                    See all 1 posts  →
-                                
-                            </a>
-                        </footer>
-                    </article>
-                
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/PLSQL-Grammar-2">
-                <div class="post-card-image" style="background-image: url(/../assets/images/plsql_cover1.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/PLSQL-Grammar-2">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Plsql</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">PL/SQL의 예외처리(exception)란?</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <span class="post-card-author">
-                            <a href="/author/KEJdev/">KEJdev</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
@@ -459,22 +276,22 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/ML-Grammar-2">
-                <div class="post-card-image" style="background-image: url(/../assets/images/ML_cover1.png)"></div>
+            <a class="post-card-image-link" href="/PYTHON-Grammar-2">
+                <div class="post-card-image" style="background-image: url(/../assets/images/python_cover1.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/ML-Grammar-2">
+            <a class="post-card-content-link" href="/PYTHON-Grammar-2">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Machine-learning</span>
+                                <span class="post-card-tags">Python</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">단층/다층퍼셉트론(Perceptron) 구현</h2>
+                    <h2 class="post-card-title">Python if문 개념 ①</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -518,7 +335,7 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">PL/SQL이란?</div>
+    <div class="floating-header-title">두개의 숫자의 합 구하기(PLSQL)</div>
     
     <progress class="progress" value="0">
         <div class="progress-container">

@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>두개의 숫자의 합 구하기(PLSQL)</title>
+        
+          <description>&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
+오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://KEJdev.github.io/ALGORITHM-1</link>
+        <guid isPermaLink="true">https://KEJdev.github.io/ALGORITHM-1</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Python if문 개념 ①</title>
         
           <description>&lt;p&gt;Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.&lt;/p&gt;
