@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Python if문 개념 ①</title>
+        
+          <description>&lt;p&gt;Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 28 Nov 2019 18:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/PYTHON-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000/PYTHON-Grammar-2</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>파이썬의 자료형 개념</title>
         
           <description>&lt;p&gt;요즘 핫한 데이터 분석용으로 많이 사용하는 파이썬은 회사나 대학에 파이썬을 많이 사용하고 있습니다.
