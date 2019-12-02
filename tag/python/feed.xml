@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://KEJdev.github.io/tag/python/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://KEJdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-11-29T16:59:30+09:00</updated>
-  <id>https://KEJdev.github.io/tag/python/feed.xml</id>
+  <link href="https://kejdev.github.io/tag/python/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
+  <updated>2019-12-02T15:06:22+09:00</updated>
+  <id>https://kejdev.github.io/tag/python/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Python if문 개념 ①</title>
-      <link href="https://KEJdev.github.io/PYTHON-Grammar-2" rel="alternate" type="text/html" title="Python if문 개념 ①" />
+      <link href="https://kejdev.github.io/PYTHON-Grammar-2" rel="alternate" type="text/html" title="Python if문 개념 ①" />
       <published>2019-11-26T18:00:00+09:00</published>
       <updated>2019-11-26T18:00:00+09:00</updated>
-      <id>https://KEJdev.github.io/PYTHON-Grammar-2</id>
-      <content type="html" xml:base="https://KEJdev.github.io/PYTHON-Grammar-2">&lt;p&gt;Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.&lt;/p&gt;
+      <id>https://kejdev.github.io/PYTHON-Grammar-2</id>
+      <content type="html" xml:base="https://kejdev.github.io/PYTHON-Grammar-2">&lt;p&gt;Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -178,11 +178,11 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
   
     <entry>
       <title type="html">파이썬의 자료형 개념</title>
-      <link href="https://KEJdev.github.io/PYTHON-Grammar-1" rel="alternate" type="text/html" title="파이썬의 자료형 개념" />
+      <link href="https://kejdev.github.io/PYTHON-Grammar-1" rel="alternate" type="text/html" title="파이썬의 자료형 개념" />
       <published>2019-11-26T18:00:00+09:00</published>
       <updated>2019-11-26T18:00:00+09:00</updated>
-      <id>https://KEJdev.github.io/PYTHON-Grammar-1</id>
-      <content type="html" xml:base="https://KEJdev.github.io/PYTHON-Grammar-1">&lt;p&gt;요즘 핫한 데이터 분석용으로 많이 사용하는 파이썬은 회사나 대학에 파이썬을 많이 사용하고 있습니다.
+      <id>https://kejdev.github.io/PYTHON-Grammar-1</id>
+      <content type="html" xml:base="https://kejdev.github.io/PYTHON-Grammar-1">&lt;p&gt;요즘 핫한 데이터 분석용으로 많이 사용하는 파이썬은 회사나 대학에 파이썬을 많이 사용하고 있습니다.
 파이썬이 퇴근을 빨리 하기 위해 만들어진 언어라는 재밌는 썰 알고 계신가요? 그래서 그런지 생각보다 문법이 어렵지 않습니다.&lt;/p&gt;
 
 &lt;p&gt;이번에는 간단하게 파이썬의 자료형 개념에 대해 알아보겠습니다.&lt;/p&gt;

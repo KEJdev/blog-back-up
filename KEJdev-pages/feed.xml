@@ -3,11 +3,156 @@
   <channel>
     <title>덕복희</title>
     <description>If i was rich, i would eat tteokbokki every day.</description>
-    <link>https://KEJdev.github.io//</link>
-    <atom:link href="https://KEJdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Nov 2019 16:59:30 +0900</pubDate>
-    <lastBuildDate>Fri, 29 Nov 2019 16:59:30 +0900</lastBuildDate>
+    <link>https://kejdev.github.io//</link>
+    <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 02 Dec 2019 15:06:22 +0900</pubDate>
+    <lastBuildDate>Mon, 02 Dec 2019 15:06:22 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>정말 쉽게 설명한 역전파(backpropagation)</title>
+        <description>&lt;p&gt;흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
+인공지능은 어떻게 학습하는 것인지, 역전파는(backpropagation)가 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;역전파-backpropagation&quot;&gt;역전파 (backpropagation)&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;역전파는 말이 어려워보이는 것 뿐이지, 생각보다 어려운 개념은 아닙니다.&lt;br /&gt;
+역전파를 이야기 할때는 순전파라는 개념을 알아야 되기 때문에 함께 이야기 하겠습니다. &lt;br /&gt;
+우선 개념 이해를 위해 쉬운 예를 들어보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;우리는 중간고사와 기말고사등과 같은 시험을 잘 보기위해 학교에서나 학원에서 수업을 듣고는 합니다. 이렇게 공부를 하고 우리는 시험을 보게 되는데, 이러한 과정을 &lt;strong&gt;순전파(forwardpropagation)&lt;/strong&gt;라고 합니다. 반대로 역전파는 이러한 우리가 다음 시험을 더 잘보기 위해 오답노트를 작성하여 공부를 다시 하고는 하는데 이 과정을 &lt;strong&gt;역전파(backpropagation)&lt;/strong&gt;라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 실제로 인공지능이 학습하는 부분은 순전파일까요? 역전파일까요?&lt;br /&gt;
+인공지능이 실제로 학습하는 부분은 역전파 부분입니다. 그래서 역전파 부분이 중요하답니다.&lt;/p&gt;
+
+&lt;p&gt;저번 포스팅때 이야기 했던 수치미분! 다들 기억 하시나요 ? 수치 미분을 기울기를 구하여 좋은 학습 결과를 뽑아낼 수 있지만, 매번 다시 계산하면서 기울기를 다시 구하는 방법은 비효울적이고 성능이 느립니다. 그래서 신경망에서 학습 처리할때, 최소화 되는 함수의 경사를 효율적으로 계산하기 위한 방법이 역전파랍니다.&lt;/p&gt;
+
+&lt;p&gt;역전파라는 개념이 없을 경우 아래 그림과 같이 순전파 라는 개념만 있게 됩니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/ml8.png&quot; width=&quot;800&quot; height=&quot;200&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;이렇게 되면 무엇이 문제가 되냐면, 만약 output의 결과가 이상하다면, 다시 처음부터 학습을 해야 합니다. 그렇게 되면 학습시간이나, 컴퓨터 성능이 느리고 비효율적이게 되죠. 그렇기 때문에 역전파라는 개념이 생기게 된거랍니다. output층부터 차례대로 역방향으로 따라 올라가서 각 층에 있는 노드의 오차를 계산하는 겁니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/ml9.png&quot; width=&quot;800&quot; height=&quot;200&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;그렇게 각 노드이 오차만 계산하고 그 오차를 사용해서 함수의 기울기를 계산하는 방식으로 학습 결과에 영향을 주는거죠. 
+즉, 전파된 오차만을 다시 계산해서 가중치를 조정하는 것이 역전파라고 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 이제 , Python으로 직접 구현해보며 개념을 익혀볼까요 ?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;간단한-신경망-구현하기&quot;&gt;간단한 신경망 구현하기.&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;우선 행렬을 입력받아서 결과를 출력하는 forward 함수를 만들어 보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 입력값 &lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 가중치&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 바이어스&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;print를 찍으면 [6 12 18]이 나오는 것을 알 수 있습니다. 간단하죠?  &lt;br /&gt;
+이번에는 역전파 함수를 backward라는이름으로 생성해볼까요?&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 가중치&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 역전파로 들어오는 값&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;backward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# x의 역전파&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;dw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# w(가중치)의 역전파&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# bias의 역전파 (역전파로 들어온 값의 합)&lt;/span&gt;
+                          &lt;span class=&quot;c&quot;&gt;# axis = 0 열을 더한다.&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;생각보다 간단하죠 ? 
+그럼 이번엔 조금 더 나아가서 위에서 만든 forward 함수와 backward 함수를 묶어서 class 로 생성해보겠습니다. 저는 class이름을 Affine 이라고 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Affine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;backward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이제 이렇게 클레스를 만들었으니 affine 클래스를 사용해서 2층짜리 신경망을 구현해보도록 하겠습니다.&lt;br /&gt;
+입력값과 w,b가 아래와 같을때, 순전파 결과 행렬을 출력해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# x.shape : (1,2)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# w1.shape : (2,3)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;클래스는 이미 만들었으니, 결과를 바로 확인해볼까요 ?&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;affine1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Affine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;affine2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Affine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;affine1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;affine2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'출력 행렬:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;출력하면 [93 211]이 나오는 것을 확인 할 수 있습니다. 생각보다 어렵지 않죠 ?&lt;br /&gt;
+그렇다면 이번엔 역전파를 구현해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;affine1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Affine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;affine2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Affine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;affine1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;affine2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;dx1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dw1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;affine2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;affine1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dx:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dw:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'db:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;아래 처럼 결과가 나왔나요?&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/ml10.png&quot; width=&quot;150&quot; height=&quot;100&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;그렇다면 잘나온거예요. 
+어때요? 생각보다 어렵지 않죠? 나중에 활성화 함수나, loss 함수 등 여러가지 추가하면 신경망이 되는거랍니다.&lt;/p&gt;
+
+&lt;p&gt;다음 포스팅에서는 위 클래스를 마져 이용하여, 여러가지 활성화 함수를 추가하여 꽤 그럴듯한 신경망을 만들어보도록 하겠습니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 29 Nov 2019 18:00:00 +0900</pubDate>
+        <link>https://kejdev.github.io//ML-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-6</guid>
+        
+        <category>MACHINE-LEARNING</category>
+        
+        
+      </item>
     
       <item>
         <title>두개의 숫자의 합 구하기(PLSQL)</title>
@@ -40,8 +185,8 @@ if문과 loop문을 사용할 수 있습니다.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//ALGORITHM-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//ALGORITHM-1</guid>
+        <link>https://kejdev.github.io//ALGORITHM-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ALGORITHM-1</guid>
         
         <category>ALGORITHM</category>
         
@@ -165,8 +310,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//PYTHON-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//PYTHON-Grammar-2</guid>
+        <link>https://kejdev.github.io//PYTHON-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-2</guid>
         
         <category>PYTHON</category>
         
@@ -270,8 +415,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//PYTHON-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//PYTHON-Grammar-1</guid>
+        <link>https://kejdev.github.io//PYTHON-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-1</guid>
         
         <category>PYTHON</category>
         
@@ -385,8 +530,8 @@ $2x + 0$ 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 됩니다.&lt;/p
 
 </description>
         <pubDate>Tue, 29 Oct 2019 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//ML-Grammar-5</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//ML-Grammar-5</guid>
+        <link>https://kejdev.github.io//ML-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-5</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -491,8 +636,8 @@ test data도 정규화 작업을 한 후에 knn을 해주세요.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 27 Oct 2019 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//R-Grammar-4</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//R-Grammar-4</guid>
+        <link>https://kejdev.github.io//R-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-4</guid>
         
         <category>R</category>
         
@@ -559,8 +704,8 @@ Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지�
 
 </description>
         <pubDate>Wed, 07 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//ML-Grammar-4</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//ML-Grammar-4</guid>
+        <link>https://kejdev.github.io//ML-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-4</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -721,8 +866,8 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 다음 포스팅에서는 기본 활성화 함수이외 다른 활성화 함수에 대해 다루어 보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 06 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//ML-Grammar-3</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//ML-Grammar-3</guid>
+        <link>https://kejdev.github.io//ML-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-3</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -817,8 +962,8 @@ end;
 다음 포스팅에서는 좀 더 어려운 package하는 방법에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Mon, 05 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//PLSQL-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//PLSQL-Grammar-2</guid>
+        <link>https://kejdev.github.io//PLSQL-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PLSQL-Grammar-2</guid>
         
         <category>PLSQL</category>
         
@@ -913,8 +1058,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
 </description>
         <pubDate>Sun, 04 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//PLSQL-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//PLSQL-Grammar-1</guid>
+        <link>https://kejdev.github.io//PLSQL-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PLSQL-Grammar-1</guid>
         
         <category>PLSQL</category>
         
@@ -1199,8 +1344,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 &lt;p&gt;다음 포스팅에서는 이제 신경망의 활성화 함수에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//ML-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//ML-Grammar-2</guid>
+        <link>https://kejdev.github.io//ML-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-2</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1361,8 +1506,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 다음 포스팅엔 퍼셉트론을 PYTHON으로 간단하게 구현해보도록 하겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 02 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//ML-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//ML-Grammar-1</guid>
+        <link>https://kejdev.github.io//ML-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-1</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1466,8 +1611,8 @@ knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 01 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//R-Grammar-3</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//R-Grammar-3</guid>
+        <link>https://kejdev.github.io//R-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-3</guid>
         
         <category>R</category>
         
@@ -1531,8 +1676,8 @@ knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;h
 
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//R-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//R-Grammar-2</guid>
+        <link>https://kejdev.github.io//R-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-2</guid>
         
         <category>R</category>
         
@@ -1670,8 +1815,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 다음 포스팅부터는 간단하게 R을 이용하여 머신러닝에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//R-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//R-Grammar-1</guid>
+        <link>https://kejdev.github.io//R-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-1</guid>
         
         <category>R</category>
         
@@ -1803,8 +1948,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Wed, 22 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//SQL-Grammar-6</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//SQL-Grammar-6</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-6</guid>
         
         <category>SQL</category>
         
@@ -1965,8 +2110,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Tue, 21 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//SQL-Grammar-5</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//SQL-Grammar-5</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-5</guid>
         
         <category>SQL</category>
         
@@ -2060,8 +2205,8 @@ order by절은 생각보다 어렵지 않죠?
 
 </description>
         <pubDate>Mon, 20 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//SQL-Grammar-4</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//SQL-Grammar-4</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-4</guid>
         
         <category>SQL</category>
         
@@ -2248,8 +2393,8 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
 다음 포스팅에서는 계속해서 데이터 제한 및 정렬에 필요한 기타 비교연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//SQL-Grammar-3</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//SQL-Grammar-3</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-3</guid>
         
         <category>SQL</category>
         
@@ -2464,8 +2609,8 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 다음 포스팅때는 데이터 제한 및 정렬에 관한 함수와 연산자를 사용하여 출력하는 것을 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//SQL-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//SQL-Grammar-2</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-2</guid>
         
         <category>SQL</category>
         
@@ -2603,8 +2748,8 @@ dept 테이블을 검색하는 코드는 아래와 같습니다.&lt;/p&gt;
 &lt;p&gt;다음 포스팅부터는 emp테이블과 nvl 함수와 disinct등에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//SQL-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//SQL-Grammar-1</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-1</guid>
         
         <category>SQL</category>
         
@@ -2754,8 +2899,8 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
 
 </description>
         <pubDate>Wed, 17 Jan 2018 19:00:00 +0900</pubDate>
-        <link>https://KEJdev.github.io//Attentive-Deep-Local-Features</link>
-        <guid isPermaLink="true">https://KEJdev.github.io//Attentive-Deep-Local-Features</guid>
+        <link>https://kejdev.github.io//Attentive-Deep-Local-Features</link>
+        <guid isPermaLink="true">https://kejdev.github.io//Attentive-Deep-Local-Features</guid>
         
         <category>PAPER</category>
         

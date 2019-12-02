@@ -4,7 +4,23 @@
     <title> - Articles</title>
     <description>If i was rich, i would eat tteokbokki every day.</description>
     <link>
-    https://KEJdev.github.io</link>
+    https://kejdev.github.io</link>
+    
+      
+      <item>
+        <title>정말 쉽게 설명한 역전파(backpropagation)</title>
+        
+          <description>&lt;p&gt;흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
+인공지능은 어떻게 학습하는 것인지, 역전파는(backpropagation)가 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 29 Nov 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/ML-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-6</guid>
+      </item>
+      
     
       
       <item>
@@ -17,8 +33,8 @@
         
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/ALGORITHM-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/ALGORITHM-1</guid>
+        https://kejdev.github.io/ALGORITHM-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-1</guid>
       </item>
       
     
@@ -32,8 +48,8 @@
         
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/PYTHON-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/PYTHON-Grammar-2</guid>
+        https://kejdev.github.io/PYTHON-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-2</guid>
       </item>
       
     
@@ -48,8 +64,8 @@
         
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/PYTHON-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/PYTHON-Grammar-1</guid>
+        https://kejdev.github.io/PYTHON-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-1</guid>
       </item>
       
     
@@ -66,8 +82,8 @@
         
         <pubDate>Tue, 29 Oct 2019 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/ML-Grammar-5</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/ML-Grammar-5</guid>
+        https://kejdev.github.io/ML-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-5</guid>
       </item>
       
     
@@ -81,8 +97,8 @@
         
         <pubDate>Sun, 27 Oct 2019 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/R-Grammar-4</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/R-Grammar-4</guid>
+        https://kejdev.github.io/R-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-4</guid>
       </item>
       
     
@@ -97,8 +113,8 @@
         
         <pubDate>Wed, 07 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/ML-Grammar-4</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/ML-Grammar-4</guid>
+        https://kejdev.github.io/ML-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-4</guid>
       </item>
       
     
@@ -113,8 +129,8 @@
         
         <pubDate>Tue, 06 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/ML-Grammar-3</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/ML-Grammar-3</guid>
+        https://kejdev.github.io/ML-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-3</guid>
       </item>
       
     
@@ -129,8 +145,8 @@
         
         <pubDate>Mon, 05 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/PLSQL-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/PLSQL-Grammar-2</guid>
+        https://kejdev.github.io/PLSQL-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PLSQL-Grammar-2</guid>
       </item>
       
     
@@ -145,8 +161,8 @@
         
         <pubDate>Sun, 04 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/PLSQL-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/PLSQL-Grammar-1</guid>
+        https://kejdev.github.io/PLSQL-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PLSQL-Grammar-1</guid>
       </item>
       
     
@@ -160,8 +176,8 @@
         
         <pubDate>Sat, 03 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/ML-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/ML-Grammar-2</guid>
+        https://kejdev.github.io/ML-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-2</guid>
       </item>
       
     
@@ -177,8 +193,8 @@
         
         <pubDate>Fri, 02 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/ML-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/ML-Grammar-1</guid>
+        https://kejdev.github.io/ML-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-1</guid>
       </item>
       
     
@@ -193,8 +209,8 @@
         
         <pubDate>Thu, 01 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/R-Grammar-3</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/R-Grammar-3</guid>
+        https://kejdev.github.io/R-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-3</guid>
       </item>
       
     
@@ -209,8 +225,8 @@ Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중
         
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/R-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/R-Grammar-2</guid>
+        https://kejdev.github.io/R-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-2</guid>
       </item>
       
     
@@ -226,8 +242,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/R-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/R-Grammar-1</guid>
+        https://kejdev.github.io/R-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-1</guid>
       </item>
       
     
@@ -243,8 +259,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Wed, 22 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/SQL-Grammar-6</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/SQL-Grammar-6</guid>
+        https://kejdev.github.io/SQL-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-6</guid>
       </item>
       
     
@@ -259,8 +275,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Tue, 21 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/SQL-Grammar-5</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/SQL-Grammar-5</guid>
+        https://kejdev.github.io/SQL-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-5</guid>
       </item>
       
     
@@ -274,8 +290,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Mon, 20 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/SQL-Grammar-4</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/SQL-Grammar-4</guid>
+        https://kejdev.github.io/SQL-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-4</guid>
       </item>
       
     
@@ -290,8 +306,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Sun, 19 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/SQL-Grammar-3</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/SQL-Grammar-3</guid>
+        https://kejdev.github.io/SQL-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-3</guid>
       </item>
       
     
@@ -306,8 +322,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Sat, 18 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/SQL-Grammar-2</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/SQL-Grammar-2</guid>
+        https://kejdev.github.io/SQL-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-2</guid>
       </item>
       
     
@@ -321,8 +337,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Fri, 17 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/SQL-Grammar-1</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/SQL-Grammar-1</guid>
+        https://kejdev.github.io/SQL-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-1</guid>
       </item>
       
     
@@ -337,8 +353,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Wed, 17 Jan 2018 19:00:00 +0900</pubDate>
         <link>
-        https://KEJdev.github.io/Attentive-Deep-Local-Features</link>
-        <guid isPermaLink="true">https://KEJdev.github.io/Attentive-Deep-Local-Features</guid>
+        https://kejdev.github.io/Attentive-Deep-Local-Features</link>
+        <guid isPermaLink="true">https://kejdev.github.io/Attentive-Deep-Local-Features</guid>
       </item>
       
     
