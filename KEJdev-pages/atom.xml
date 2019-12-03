@@ -23,6 +23,21 @@
     
       
       <item>
+        <title>Python for문 개념 ②</title>
+        
+          <description>&lt;p&gt;if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 다운받으실 수 있습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/PYTHON-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-4</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>having와 데이터 분석 함수 (pivot)</title>
         
           <description>&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다. 
