@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <link href="https://kejdev.github.io/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
   <updated>2019-12-03T16:26:34+09:00</updated>
-  <id>http://localhost:4000/author/KEJdev/feed.xml</id>
+  <id>https://kejdev.github.io/author/KEJdev/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Knn을 이용한 과일 데이터 분류</title>
-      <link href="http://localhost:4000/R-Grammar-5" rel="alternate" type="text/html" title="Knn을 이용한 과일 데이터 분류" />
+      <link href="https://kejdev.github.io/R-Grammar-5" rel="alternate" type="text/html" title="Knn을 이용한 과일 데이터 분류" />
       <published>2019-12-02T18:00:00+09:00</published>
       <updated>2019-12-02T18:00:00+09:00</updated>
-      <id>http://localhost:4000/R-Grammar-5</id>
-      <content type="html" xml:base="http://localhost:4000/R-Grammar-5">&lt;p&gt;오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.&lt;/p&gt;
+      <id>https://kejdev.github.io/R-Grammar-5</id>
+      <content type="html" xml:base="https://kejdev.github.io/R-Grammar-5">&lt;p&gt;오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -121,11 +121,11 @@
   
     <entry>
       <title type="html">having와 데이터 분석 함수 (pivot)</title>
-      <link href="http://localhost:4000/SQL-Grammar-7" rel="alternate" type="text/html" title="having와 데이터 분석 함수 (pivot)" />
+      <link href="https://kejdev.github.io/SQL-Grammar-7" rel="alternate" type="text/html" title="having와 데이터 분석 함수 (pivot)" />
       <published>2019-12-01T18:00:00+09:00</published>
       <updated>2019-12-01T18:00:00+09:00</updated>
-      <id>http://localhost:4000/SQL-Grammar-7</id>
-      <content type="html" xml:base="http://localhost:4000/SQL-Grammar-7">&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다. 
+      <id>https://kejdev.github.io/SQL-Grammar-7</id>
+      <content type="html" xml:base="https://kejdev.github.io/SQL-Grammar-7">&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다. 
 오늘 사용 되는 SQL 테이블은 첫 포스팅에 작성한 emp 테이블을 이용 할 예정입니다. 테이블이 없으신 분들은 &lt;a href=&quot;https://kejdev.github.io/SQL-Grammar-1&quot;&gt;여기&lt;/a&gt;를 클릭하여 테이블을 긁어서 사용하시기를 바랍니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -239,11 +239,11 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
   
     <entry>
       <title type="html">Python for문 개념 ①</title>
-      <link href="http://localhost:4000/PYTHON-Grammar-3" rel="alternate" type="text/html" title="Python for문 개념 ①" />
+      <link href="https://kejdev.github.io/PYTHON-Grammar-3" rel="alternate" type="text/html" title="Python for문 개념 ①" />
       <published>2019-12-01T18:00:00+09:00</published>
       <updated>2019-12-01T18:00:00+09:00</updated>
-      <id>http://localhost:4000/PYTHON-Grammar-3</id>
-      <content type="html" xml:base="http://localhost:4000/PYTHON-Grammar-3">&lt;p&gt;반복문은 어떤 언어라고 할 것도 없이 정말 중요하고, 자주 쓰이는 문법입니다. 특히나 for문은 더욱 더 그렇죠. 그럼 오늘은 간단하게 for문의 기본적인 구조와 별찍기를 해보겠습니다 .&lt;/p&gt;
+      <id>https://kejdev.github.io/PYTHON-Grammar-3</id>
+      <content type="html" xml:base="https://kejdev.github.io/PYTHON-Grammar-3">&lt;p&gt;반복문은 어떤 언어라고 할 것도 없이 정말 중요하고, 자주 쓰이는 문법입니다. 특히나 for문은 더욱 더 그렇죠. 그럼 오늘은 간단하게 for문의 기본적인 구조와 별찍기를 해보겠습니다 .&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -395,11 +395,11 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
   
     <entry>
       <title type="html">정말 쉽게 설명한 역전파(backpropagation)</title>
-      <link href="http://localhost:4000/ML-Grammar-6" rel="alternate" type="text/html" title="정말 쉽게 설명한 역전파(backpropagation)" />
+      <link href="https://kejdev.github.io/ML-Grammar-6" rel="alternate" type="text/html" title="정말 쉽게 설명한 역전파(backpropagation)" />
       <published>2019-11-29T18:00:00+09:00</published>
       <updated>2019-11-29T18:00:00+09:00</updated>
-      <id>http://localhost:4000/ML-Grammar-6</id>
-      <content type="html" xml:base="http://localhost:4000/ML-Grammar-6">&lt;p&gt;흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
+      <id>https://kejdev.github.io/ML-Grammar-6</id>
+      <content type="html" xml:base="https://kejdev.github.io/ML-Grammar-6">&lt;p&gt;흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
 인공지능은 어떻게 학습하는 것인지, 역전파는(backpropagation)가 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -560,11 +560,11 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
   
     <entry>
       <title type="html">두개의 숫자의 합 구하기(PLSQL)</title>
-      <link href="http://localhost:4000/ALGORITHM-1" rel="alternate" type="text/html" title="두개의 숫자의 합 구하기(PLSQL)" />
+      <link href="https://kejdev.github.io/ALGORITHM-1" rel="alternate" type="text/html" title="두개의 숫자의 합 구하기(PLSQL)" />
       <published>2019-11-26T18:00:00+09:00</published>
       <updated>2019-11-26T18:00:00+09:00</updated>
-      <id>http://localhost:4000/ALGORITHM-1</id>
-      <content type="html" xml:base="http://localhost:4000/ALGORITHM-1">&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
+      <id>https://kejdev.github.io/ALGORITHM-1</id>
+      <content type="html" xml:base="https://kejdev.github.io/ALGORITHM-1">&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.&lt;/p&gt;
 
 &lt;p&gt;PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, &lt;strong&gt;PLSQL이 무엇인가?&lt;/strong&gt; 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만!
@@ -619,11 +619,11 @@ if문과 loop문을 사용할 수 있습니다.&lt;/p&gt;
   
     <entry>
       <title type="html">Python if문 개념 ①</title>
-      <link href="http://localhost:4000/PYTHON-Grammar-2" rel="alternate" type="text/html" title="Python if문 개념 ①" />
+      <link href="https://kejdev.github.io/PYTHON-Grammar-2" rel="alternate" type="text/html" title="Python if문 개념 ①" />
       <published>2019-11-26T18:00:00+09:00</published>
       <updated>2019-11-26T18:00:00+09:00</updated>
-      <id>http://localhost:4000/PYTHON-Grammar-2</id>
-      <content type="html" xml:base="http://localhost:4000/PYTHON-Grammar-2">&lt;p&gt;Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.&lt;/p&gt;
+      <id>https://kejdev.github.io/PYTHON-Grammar-2</id>
+      <content type="html" xml:base="https://kejdev.github.io/PYTHON-Grammar-2">&lt;p&gt;Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -764,11 +764,11 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
   
     <entry>
       <title type="html">파이썬의 자료형 개념</title>
-      <link href="http://localhost:4000/PYTHON-Grammar-1" rel="alternate" type="text/html" title="파이썬의 자료형 개념" />
+      <link href="https://kejdev.github.io/PYTHON-Grammar-1" rel="alternate" type="text/html" title="파이썬의 자료형 개념" />
       <published>2019-11-26T18:00:00+09:00</published>
       <updated>2019-11-26T18:00:00+09:00</updated>
-      <id>http://localhost:4000/PYTHON-Grammar-1</id>
-      <content type="html" xml:base="http://localhost:4000/PYTHON-Grammar-1">&lt;p&gt;요즘 핫한 데이터 분석용으로 많이 사용하는 파이썬은 회사나 대학에 파이썬을 많이 사용하고 있습니다.
+      <id>https://kejdev.github.io/PYTHON-Grammar-1</id>
+      <content type="html" xml:base="https://kejdev.github.io/PYTHON-Grammar-1">&lt;p&gt;요즘 핫한 데이터 분석용으로 많이 사용하는 파이썬은 회사나 대학에 파이썬을 많이 사용하고 있습니다.
 파이썬이 퇴근을 빨리 하기 위해 만들어진 언어라는 재밌는 썰 알고 계신가요? 그래서 그런지 생각보다 문법이 어렵지 않습니다.&lt;/p&gt;
 
 &lt;p&gt;이번에는 간단하게 파이썬의 자료형 개념에 대해 알아보겠습니다.&lt;/p&gt;
@@ -889,11 +889,11 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
   
     <entry>
       <title type="html">미분이 필요한 이유</title>
-      <link href="http://localhost:4000/ML-Grammar-5" rel="alternate" type="text/html" title="미분이 필요한 이유" />
+      <link href="https://kejdev.github.io/ML-Grammar-5" rel="alternate" type="text/html" title="미분이 필요한 이유" />
       <published>2019-10-29T18:00:00+09:00</published>
       <updated>2019-10-29T18:00:00+09:00</updated>
-      <id>http://localhost:4000/ML-Grammar-5</id>
-      <content type="html" xml:base="http://localhost:4000/ML-Grammar-5">&lt;p&gt;신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤습니다.&lt;br /&gt;
+      <id>https://kejdev.github.io/ML-Grammar-5</id>
+      <content type="html" xml:base="https://kejdev.github.io/ML-Grammar-5">&lt;p&gt;신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤습니다.&lt;br /&gt;
 우리는 왜 미분을 사용하는 것이며, 미분이 왜 필요한걸까요 ? 오늘은 미분이 필요한 이유와 도함수를 Python 으로 간단하게
 구현해보도록 하겠습니다.  &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -1024,11 +1024,11 @@ $2x + 0$ 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 됩니다.&lt;/p
   
     <entry>
       <title type="html">knn을 이용한 구매여부 분류</title>
-      <link href="http://localhost:4000/R-Grammar-4" rel="alternate" type="text/html" title="knn을 이용한 구매여부 분류" />
+      <link href="https://kejdev.github.io/R-Grammar-4" rel="alternate" type="text/html" title="knn을 이용한 구매여부 분류" />
       <published>2019-10-27T18:00:00+09:00</published>
       <updated>2019-10-27T18:00:00+09:00</updated>
-      <id>http://localhost:4000/R-Grammar-4</id>
-      <content type="html" xml:base="http://localhost:4000/R-Grammar-4">&lt;p&gt;저번에 이어서 계속 계속 knn을 이용한 분류를 해보겠습니다. 이번에는 조금 의미 있는 결과를 가지고 재밌는 결과를 뽑아내보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;에서 데이터를 다운 받아주세요.&lt;/p&gt;
+      <id>https://kejdev.github.io/R-Grammar-4</id>
+      <content type="html" xml:base="https://kejdev.github.io/R-Grammar-4">&lt;p&gt;저번에 이어서 계속 계속 knn을 이용한 분류를 해보겠습니다. 이번에는 조금 의미 있는 결과를 가지고 재밌는 결과를 뽑아내보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;에서 데이터를 다운 받아주세요.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1150,11 +1150,11 @@ test data도 정규화 작업을 한 후에 knn을 해주세요.&lt;/p&gt;
   
     <entry>
       <title type="html">활성화 함수란?(2)</title>
-      <link href="http://localhost:4000/ML-Grammar-4" rel="alternate" type="text/html" title="활성화 함수란?(2)" />
+      <link href="https://kejdev.github.io/ML-Grammar-4" rel="alternate" type="text/html" title="활성화 함수란?(2)" />
       <published>2018-11-07T18:00:00+09:00</published>
       <updated>2018-11-07T18:00:00+09:00</updated>
-      <id>http://localhost:4000/ML-Grammar-4</id>
-      <content type="html" xml:base="http://localhost:4000/ML-Grammar-4">&lt;p&gt;지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. &lt;br /&gt;
+      <id>https://kejdev.github.io/ML-Grammar-4</id>
+      <content type="html" xml:base="https://kejdev.github.io/ML-Grammar-4">&lt;p&gt;지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. &lt;br /&gt;
 전시간에 이야기 했던 활성화 함수 3가지는 가장 기본적인 활성화 함수이며, 흔히 쓰이는 활성화 함수입니다. 그런데 이 활성화 함수 외에도 더 많은 활성화 함수가 있습니다. 오늘은 그 외 나머지 활성화 함수에 대해서 이야기 해보도록 하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;오늘 포스팅할 대부분의 활성화 함수는 Relu함수의 변형 버전이 많습니다. 한번 알아볼까요?&lt;/p&gt;

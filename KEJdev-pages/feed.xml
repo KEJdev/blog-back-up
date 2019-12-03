@@ -3,8 +3,8 @@
   <channel>
     <title>덕복희</title>
     <description>If i was rich, i would eat tteokbokki every day.</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://kejdev.github.io//</link>
+    <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Tue, 03 Dec 2019 16:30:23 +0900</pubDate>
     <lastBuildDate>Tue, 03 Dec 2019 16:30:23 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
@@ -69,8 +69,8 @@
 
 </description>
         <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//R-Grammar-5</link>
-        <guid isPermaLink="true">http://localhost:4000//R-Grammar-5</guid>
+        <link>https://kejdev.github.io//R-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-5</guid>
         
         <category>R</category>
         
@@ -167,8 +167,8 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 
 </description>
         <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//SQL-Grammar-7</link>
-        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-7</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-7</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-7</guid>
         
         <category>SQL</category>
         
@@ -302,8 +302,8 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 다음 포스팅 땐 if문과 for 문을 섞어서 사용하는 것에 대하여 알아보도록 하겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//PYTHON-Grammar-3</link>
-        <guid isPermaLink="true">http://localhost:4000//PYTHON-Grammar-3</guid>
+        <link>https://kejdev.github.io//PYTHON-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-3</guid>
         
         <category>PYTHON</category>
         
@@ -447,8 +447,8 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 
 </description>
         <pubDate>Fri, 29 Nov 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//ML-Grammar-6</link>
-        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-6</guid>
+        <link>https://kejdev.github.io//ML-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-6</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -486,8 +486,8 @@ if문과 loop문을 사용할 수 있습니다.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//ALGORITHM-1</link>
-        <guid isPermaLink="true">http://localhost:4000//ALGORITHM-1</guid>
+        <link>https://kejdev.github.io//ALGORITHM-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ALGORITHM-1</guid>
         
         <category>ALGORITHM</category>
         
@@ -611,8 +611,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//PYTHON-Grammar-2</link>
-        <guid isPermaLink="true">http://localhost:4000//PYTHON-Grammar-2</guid>
+        <link>https://kejdev.github.io//PYTHON-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-2</guid>
         
         <category>PYTHON</category>
         
@@ -716,8 +716,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//PYTHON-Grammar-1</link>
-        <guid isPermaLink="true">http://localhost:4000//PYTHON-Grammar-1</guid>
+        <link>https://kejdev.github.io//PYTHON-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-1</guid>
         
         <category>PYTHON</category>
         
@@ -831,8 +831,8 @@ $2x + 0$ 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 됩니다.&lt;/p
 
 </description>
         <pubDate>Tue, 29 Oct 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//ML-Grammar-5</link>
-        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-5</guid>
+        <link>https://kejdev.github.io//ML-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-5</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -937,8 +937,8 @@ test data도 정규화 작업을 한 후에 knn을 해주세요.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 27 Oct 2019 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//R-Grammar-4</link>
-        <guid isPermaLink="true">http://localhost:4000//R-Grammar-4</guid>
+        <link>https://kejdev.github.io//R-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-4</guid>
         
         <category>R</category>
         
@@ -1005,8 +1005,8 @@ Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지�
 
 </description>
         <pubDate>Wed, 07 Nov 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//ML-Grammar-4</link>
-        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-4</guid>
+        <link>https://kejdev.github.io//ML-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-4</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1167,8 +1167,8 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 다음 포스팅에서는 기본 활성화 함수이외 다른 활성화 함수에 대해 다루어 보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 06 Nov 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//ML-Grammar-3</link>
-        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-3</guid>
+        <link>https://kejdev.github.io//ML-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-3</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1263,8 +1263,8 @@ end;
 다음 포스팅에서는 좀 더 어려운 package하는 방법에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Mon, 05 Nov 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//PLSQL-Grammar-2</link>
-        <guid isPermaLink="true">http://localhost:4000//PLSQL-Grammar-2</guid>
+        <link>https://kejdev.github.io//PLSQL-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PLSQL-Grammar-2</guid>
         
         <category>PLSQL</category>
         
@@ -1359,8 +1359,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
 </description>
         <pubDate>Sun, 04 Nov 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//PLSQL-Grammar-1</link>
-        <guid isPermaLink="true">http://localhost:4000//PLSQL-Grammar-1</guid>
+        <link>https://kejdev.github.io//PLSQL-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//PLSQL-Grammar-1</guid>
         
         <category>PLSQL</category>
         
@@ -1645,8 +1645,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 &lt;p&gt;다음 포스팅에서는 이제 신경망의 활성화 함수에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Nov 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//ML-Grammar-2</link>
-        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-2</guid>
+        <link>https://kejdev.github.io//ML-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-2</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1807,8 +1807,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 다음 포스팅엔 퍼셉트론을 PYTHON으로 간단하게 구현해보도록 하겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 02 Nov 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//ML-Grammar-1</link>
-        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-1</guid>
+        <link>https://kejdev.github.io//ML-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-1</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1912,8 +1912,8 @@ knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 01 Nov 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//R-Grammar-3</link>
-        <guid isPermaLink="true">http://localhost:4000//R-Grammar-3</guid>
+        <link>https://kejdev.github.io//R-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-3</guid>
         
         <category>R</category>
         
@@ -1977,8 +1977,8 @@ knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;h
 
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//R-Grammar-2</link>
-        <guid isPermaLink="true">http://localhost:4000//R-Grammar-2</guid>
+        <link>https://kejdev.github.io//R-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-2</guid>
         
         <category>R</category>
         
@@ -2116,8 +2116,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 다음 포스팅부터는 간단하게 R을 이용하여 머신러닝에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//R-Grammar-1</link>
-        <guid isPermaLink="true">http://localhost:4000//R-Grammar-1</guid>
+        <link>https://kejdev.github.io//R-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-1</guid>
         
         <category>R</category>
         
@@ -2249,8 +2249,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Wed, 22 Aug 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//SQL-Grammar-6</link>
-        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-6</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-6</guid>
         
         <category>SQL</category>
         
@@ -2411,8 +2411,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Tue, 21 Aug 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//SQL-Grammar-5</link>
-        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-5</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-5</guid>
         
         <category>SQL</category>
         
@@ -2506,8 +2506,8 @@ order by절은 생각보다 어렵지 않죠?
 
 </description>
         <pubDate>Mon, 20 Aug 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//SQL-Grammar-4</link>
-        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-4</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-4</guid>
         
         <category>SQL</category>
         
@@ -2694,8 +2694,8 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
 다음 포스팅에서는 계속해서 데이터 제한 및 정렬에 필요한 기타 비교연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Aug 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//SQL-Grammar-3</link>
-        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-3</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-3</guid>
         
         <category>SQL</category>
         
@@ -2910,8 +2910,8 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 다음 포스팅때는 데이터 제한 및 정렬에 관한 함수와 연산자를 사용하여 출력하는 것을 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Aug 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//SQL-Grammar-2</link>
-        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-2</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-2</guid>
         
         <category>SQL</category>
         
@@ -3049,8 +3049,8 @@ dept 테이블을 검색하는 코드는 아래와 같습니다.&lt;/p&gt;
 &lt;p&gt;다음 포스팅부터는 emp테이블과 nvl 함수와 disinct등에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Aug 2018 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000//SQL-Grammar-1</link>
-        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-1</guid>
+        <link>https://kejdev.github.io//SQL-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-1</guid>
         
         <category>SQL</category>
         
@@ -3200,8 +3200,8 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
 
 </description>
         <pubDate>Wed, 17 Jan 2018 19:00:00 +0900</pubDate>
-        <link>http://localhost:4000//Attentive-Deep-Local-Features</link>
-        <guid isPermaLink="true">http://localhost:4000//Attentive-Deep-Local-Features</guid>
+        <link>https://kejdev.github.io//Attentive-Deep-Local-Features</link>
+        <guid isPermaLink="true">https://kejdev.github.io//Attentive-Deep-Local-Features</guid>
         
         <category>PAPER</category>
         
