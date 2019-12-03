@@ -11,7 +11,7 @@
 
 
 
-    <title>SQL 컬럼검색과 별칭 사용하기</title>
+    <title>Knn을 이용한 과일 데이터 분류</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -61,30 +61,30 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
     <link rel="shortcut icon" href="http://localhost:4000/./assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/SQL-Grammar-2" />
+    <link rel="canonical" href="http://localhost:4000/R-Grammar-5" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="덕복희" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="SQL 컬럼검색과 별칭 사용하기" />
-    <meta property="og:description" content="저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다. 이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다. 우선 저번 시간에 만든 EMP과 DEPT 테이블에 있는 컬럼에 대해 알아볼까요? EMP Tabel Column emp table 컬럼은 아래와 같습니다. column 설명 empno 사원번호 ename 사원이름 sql 월급 job 직업" />
-    <meta property="og:url" content="http://localhost:4000/SQL-Grammar-2" />
-    <meta property="og:image" content="http://localhost:4000/../assets/images/SQL_cover1.png" />
+    <meta property="og:title" content="Knn을 이용한 과일 데이터 분류" />
+    <meta property="og:description" content="오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같이 데이터를 만들면 된답니다. food &lt;- data.frame(ingredient = c("apple", "bacon", "banana", "carrot", "celery", "cheese", "cucumber"," />
+    <meta property="og:url" content="http://localhost:4000/R-Grammar-5" />
+    <meta property="og:image" content="http://localhost:4000/../assets/images/R_cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2018-08-18T18:00:00+09:00" />
-    <meta property="article:modified_time" content="2018-08-18T18:00:00+09:00" />
-    <meta property="article:tag" content="Sql" />
+    <meta property="article:published_time" content="2019-12-02T18:00:00+09:00" />
+    <meta property="article:modified_time" content="2019-12-02T18:00:00+09:00" />
+    <meta property="article:tag" content="R" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SQL 컬럼검색과 별칭 사용하기" />
-    <meta name="twitter:description" content="저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다. 이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다. 우선 저번 시간에 만든 EMP과 DEPT 테이블에 있는 컬럼에 대해 알아볼까요? EMP Tabel Column emp table 컬럼은 아래와 같습니다. column 설명 empno 사원번호 ename 사원이름 sql 월급 job 직업" />
+    <meta name="twitter:title" content="Knn을 이용한 과일 데이터 분류" />
+    <meta name="twitter:description" content="오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같이 데이터를 만들면 된답니다. food &lt;- data.frame(ingredient = c("apple", "bacon", "banana", "carrot", "celery", "cheese", "cucumber"," />
     <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/../assets/images/SQL_cover1.png" />
+    <meta name="twitter:image" content="http://localhost:4000/../assets/images/R_cover1.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="덕복희" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Sql" />
+    <meta name="twitter:data2" content="R" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -99,18 +99,18 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
         "name": "덕복희",
         "logo": "http://localhost:4000/./assets/images/blog-icon.png"
     },
-    "url": "http://localhost:4000/SQL-Grammar-2",
+    "url": "http://localhost:4000/R-Grammar-5",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/../assets/images/SQL_cover1.png",
+        "url": "http://localhost:4000/../assets/images/R_cover1.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/SQL-Grammar-2"
+        "@id": "http://localhost:4000/R-Grammar-5"
     },
-    "description": "저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다. 이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다. 우선 저번 시간에 만든 EMP과 DEPT 테이블에 있는 컬럼에 대해 알아볼까요? EMP Tabel Column emp table 컬럼은 아래와 같습니다. column 설명 empno 사원번호 ename 사원이름 sql 월급 job 직업"
+    "description": "오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같이 데이터를 만들면 된답니다. food &lt;- data.frame(ingredient = c("apple", "bacon", "banana", "carrot", "celery", "cheese", "cucumber","
 }
     </script>
     
@@ -123,7 +123,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="SQL 컬럼검색과 별칭 사용하기" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Knn을 이용한 과일 데이터 분류" href="/feed.xml" />
 
 
 </head>
@@ -166,234 +166,86 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post tag-sql ">
+        <article class="post-full post tag-r ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="18 August 2018">18 August 2018</time>
+                    <time class="post-full-meta-date" datetime=" 2 December 2019"> 2 December 2019</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/sql/'>SQL</a>
+                               <a href='/tag/r/'>R</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">SQL 컬럼검색과 별칭 사용하기</h1>
+                <h1 class="post-full-title">Knn을 이용한 과일 데이터 분류</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/../assets/images/SQL_cover1.png)">
+            <figure class="post-full-image" style="background-image: url(/../assets/images/R_cover1.png)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다.<br />
-이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.</p>
+                    <p>오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.</p>
 
-<p>우선 저번 시간에 만든 EMP과 DEPT 테이블에 있는 컬럼에 대해 알아볼까요?</p>
-
-<blockquote>
-  <h4 id="emp-tabel-column">EMP Tabel Column</h4>
-</blockquote>
-
-<p>emp table 컬럼은 아래와 같습니다.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><center>column</center></th>
-      <th style="text-align: center"><center> 설명 </center></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>empno</strong></td>
-      <td style="text-align: center">사원번호</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>ename</strong></td>
-      <td style="text-align: center">사원이름</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>sql</strong></td>
-      <td style="text-align: center">월급</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>job</strong></td>
-      <td style="text-align: center">직업</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>mgr</strong></td>
-      <td style="text-align: center">사원의 관리자</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>hiredate</strong></td>
-      <td style="text-align: center">입사일</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>comm</strong></td>
-      <td style="text-align: center">커미션</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>deptno</strong></td>
-      <td style="text-align: center">부서번호</td>
-    </tr>
-  </tbody>
-</table>
+<p><br /></p>
 
 <blockquote>
-  <h4 id="dept-table-column">DEPT Table Column</h4>
+  <h4 id="dataset">DataSet</h4>
 </blockquote>
 
-<p>dept table 컬럼은 아래와 같습니다.</p>
+<p>데이터는 아래와 같이 데이터를 만들면 된답니다.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><center>column</center></th>
-      <th style="text-align: center"><center> 설명 </center></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>deptno</strong></td>
-      <td style="text-align: center">부서번호</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>dname</strong></td>
-      <td style="text-align: center">부서명</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>loc</strong></td>
-      <td style="text-align: center">부서위치</td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">food</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">ingredient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bacon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"banana"</span><span class="p">,</span><span class="w"> </span><span class="s2">"carrot"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"celery"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cheese"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cucumber"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fish"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"grape"</span><span class="p">,</span><span class="w"> </span><span class="s2">"green bean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lettuce"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"nuts"</span><span class="p">,</span><span class="w"> </span><span class="s2">"orange"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pear"</span><span class="p">,</span><span class="s2">"shrimp"</span><span class="p">),</span><span class="w">
+                   </span><span class="n">sweetness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w">
+                   </span><span class="n">crunchiness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="w">
+                   </span><span class="n">class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="w">
+                             </span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="w">
+                             </span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="w">
+                             </span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
 
-<p>table colunm에 대해 알았으니,<br />
-emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
+<p>출력하면 아래와 같이 출력이 됩니다.</p>
 
-<blockquote>
-  <h4 id="sql-column-search">SQL Column Search</h4>
-</blockquote>
+<center><img src="../assets/images/r3.png" width="330" height="250" /></center>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">empon</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="k">sql</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
+<p>그럼 이제 토마토 데이터를 만들어 보겠습니다. <br />
+토마토 데이터는 아래와 같이 만들어주면 된답니다.</p>
 
-<p>위와 같이 코드를 치면 emp 테이블에서 사원번호와 이름, 월급만 출력이 된답니다.<br />
-그렇다면 이번엔 이름, 직업, 입사일, 부서번호를 출력해볼까요?</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tomato</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">sweetness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">crunchiness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">hiredate</span><span class="p">,</span> <span class="n">deptno</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
+<p>food 에서 2번째 컬럼과 3번째 컬럼을 train 데이터로 사용하겠습니다.</p>
 
-<p>이제 좀 감이 잡히나요 ?
-그렇다면 이름, 월급, 커미션을 출력해볼까요?</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">food</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)]</span><span class="w">
+</span></code></pre></div></div>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">,</span> <span class="n">comm</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
+<center><img src="../assets/images/r4.png" width="180" height="230" /></center>
 
-<p>이제 원하는 컬럼을 잘 출력할 수 있겠죠?<br />
-그렇다면 이번엔 이름과 월급, 커미션 그리고 월급 + 커미션을 출력해볼까요?  <br />
-월급과 커미션을 더한 값을 출력하려면 어떻게 해야댈까요?<br />
-간답합니다. 아래와 같이 작성하시면 됩니다.</p>
+<p>그리고 라벨은 데이터의 마지막 컬럼인 class 입니다. 그래서 아래와 같이 라벨을 따로 변수에 담아주겠습니다.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">,</span> <span class="n">comm</span><span class="p">,</span> <span class="n">sal</span><span class="o">+</span><span class="n">comm</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_label</span><span class="o">&lt;-</span><span class="n">food</span><span class="p">[,</span><span class="m">4</span><span class="p">]</span><span class="w">  
+</span></code></pre></div></div>
 
-<p>그런데 출력하시면 에러가 뜰꺼예요.왜그럴까요? 그 이유는 <strong>null 값 때문</strong>이랍니다. <br />
-그렇다면 여기서 잠깐, <strong>null</strong> 값에 대해 알아볼까요 ?</p>
+<p>간단하죠 ?<br />
+그럼 이제 바로 토마토를 넣어서 knn을 해보겠습니다.</p>
 
-<p><strong>※ null</strong></p>
-<ol>
-  <li>데이터가 없는 상태</li>
-  <li>알 수 없는 값(unknown)</li>
-</ol>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">class</span><span class="p">)</span><span class="w"> 
+</span><span class="n">result1</span><span class="o">&lt;-</span><span class="n">knn</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span><span class="n">tomato</span><span class="w"> </span><span class="p">,</span><span class="n">train_label</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">prob</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
-<p>위와 같은 상태에 있을 때, null 값이라고 합니다.<br />
-그래서 null 대신에 다른 값이 출력되게 하는 <strong>nvl 함수를 사용</strong>해야합니다.<br />
-<strong>nvl</strong>함수는 null 대신 다른 값이 출력되게 하는 함수입니다.</p>
+<center><img src="../assets/images/r5.png" width="100" height="50" /></center>
 
-<p>그럼 이제 nvl 함수를 사용하여 comm에 있는 null값을 0으로 바꾸어 출력을 해볼까요?</p>
+<p>이번 knn은 조금 재밌지 않나요 ? 다음 포스팅에서는 knn을 이용한 동물 분류해보도록 하겠습니다.  <br />
+전체 코드는 <a href="https://github.com/KEJdev/R-Example">여기</a>에서 확인하실 수 있습니다.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">comm</span><span class="p">,</span> <span class="n">nal</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>위와 같이 작성 하면 comm에 있는 null이 0으로 바뀐 것을 확인 할 수 있습니다.<br />
-그러면 아까 풀지못했던 위의 문제를 다시 작성해서 풀어볼까요 ?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">,</span> <span class="n">comm</span><span class="p">,</span> <span class="n">sal</span><span class="o">+</span><span class="n">nvl</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>위와 같이 작성하면 월급과 커미션을 더한 값이 함께 출력 된답니다.<br />
-그렇다면 직업을 출력하는데 <strong>중복을 제거</strong>하고 싶은데 어떻게 해야댈까요?<br />
-중복을 제거하는 것을 배워볼까요 ?</p>
-
-<blockquote>
-  <h4 id="keyword">Keyword</h4>
-</blockquote>
-
-<p>중복을 제거할때는 <strong>distinct</strong> 키워드를 사용하시면 된답니다.<br />
-그럼 직업을 출력하는데 중복을 제거해서 출력해볼까요?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="k">distinct</span> <span class="n">job</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>자 이제 이름과 월급을 연결해서 출력하는 것을 배워볼까요 ?<br />
-이름과 월급을 연결해서 출력하려면 연결연산자를 사용해야 합니다.<br />
-<strong>||</strong> 연결연산자는 두 컬럼의 데이터를 연결해서 출력하는 키워드 입니다.</p>
-
-<p>연결연산자를 알았으니 아름과 월급을 연결해서 출력해볼까요?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="o">||</span> <span class="n">sal</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>연결해서 연락이 잘 되는 것을 확인 하셨나요 ?<br />
-하지만 보기에 불편하니, 예쁘게 문자열과 함께 출력해볼까요 ?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span> <span class="o">||</span> <span class="s1">'의 월급은'</span> <span class="o">||</span> <span class="n">sal</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>예쁘게 출력 된 것을 확인 하셨나요 ?
-이제 컬럼에 대한 <strong>별칭</strong>을 사용하여 출력해볼까요?</p>
-
-<blockquote>
-  <h4 id="별칭">별칭</h4>
-</blockquote>
-
-<p>컬럼별칭을 사용할때는 너무 길게 써서도 안되고, 언더바를 사용하셔도 안된다는 점을 기억해두세요.
-컬럼명을 변경해서 출력할때는 아랴와 같이 하시면 됩니다.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span> <span class="o">||</span> <span class="s1">'의 직업은'</span> <span class="o">||</span> <span class="n">job</span> <span class="o">||</span> <span class="s1">'입니다'</span> <span class="k">as</span> <span class="err">사원</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>그렇다면 별칭을 사용하여 아래와 같이 출력되게 하려면 어떻게 해야댈까요 ?</p>
-
-<center><img src="/../assets/images/as.png" width="420" height="200" /></center>
-
-<p>위와 같이 출력하려면 어떻게 해야댈까요 ?</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="o">||</span><span class="s1">'의 부서번호는 '</span><span class="o">||</span><span class="n">deptno</span><span class="o">||</span><span class="s1">'번 입니다.'</span> <span class="k">as</span> <span class="nv">"사원에 대한 부서번호 정보"</span>
-<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>이렇게 작성하면 별칭을 사용하여 출력할 수 있습니다.<br />
-이제 별칭을 사용하여 잘 출력할 수 있겠죠?</p>
-
-<p>오늘도 이렇게 간단하게 SQL문법을 알아봤습니다. <br />
-다음 포스팅때는 데이터 제한 및 정렬에 관한 함수와 연산자를 사용하여 출력하는 것을 알아보겠습니다.</p>
 
                 </div>
             </section>
@@ -450,7 +302,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; 덕복희 &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/sql/">Sql</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/r/">R</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -460,32 +312,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
                                 
                                 
                                   
-                                
-                                  
                                     
-                                        
-                                        
-                                            <li><a href="/SQL-Grammar-7">having와 데이터 분석 함수 (pivot)</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
                                   
                                 
                                   
@@ -506,7 +333,28 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
                                     
                                         
                                         
-                                            <li><a href="/SQL-Grammar-6">문자함수와 날짜 함수 2</a></li>
+                                            <li><a href="/R-Grammar-4">knn을 이용한 구매여부 분류</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/R-Grammar-3">Knn을 이용한 소개팅 데이터 분류</a></li>
                                         
                                     
                                   
@@ -515,7 +363,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
                                     
                                         
                                         
-                                            <li><a href="/SQL-Grammar-5">문자함수와 날짜 함수 1</a></li>
+                                            <li><a href="/R-Grammar-2">Knn(K-Nearest Neighbors)이란?</a></li>
                                         
                                     
                                   
@@ -528,21 +376,15 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
@@ -550,9 +392,9 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/sql/">
+                            <a href="/tag/r/">
                                 
-                                    See all 6 posts  →
+                                    See all 4 posts  →
                                 
                             </a>
                         </footer>
@@ -562,53 +404,6 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/SQL-Grammar-3">
-                <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/SQL-Grammar-3">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Sql</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">데이터 제한 및 정렬 1</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <span class="post-card-author">
-                            <a href="/author/KEJdev/">KEJdev</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -616,12 +411,12 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/SQL-Grammar-1">
+            <a class="post-card-image-link" href="/SQL-Grammar-7">
                 <div class="post-card-image" style="background-image: url(/../assets/images/SQL_cover1.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/SQL-Grammar-1">
+            <a class="post-card-content-link" href="/SQL-Grammar-7">
                 <header class="post-card-header">
                     
                         
@@ -631,7 +426,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
                         
                     
 
-                    <h2 class="post-card-title">SQL 기본 문법</h2>
+                    <h2 class="post-card-title">having와 데이터 분석 함수 (pivot)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -675,7 +470,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">SQL 컬럼검색과 별칭 사용하기</div>
+    <div class="floating-header-title">Knn을 이용한 과일 데이터 분류</div>
     
     <progress class="progress" value="0">
         <div class="progress-container">

@@ -3,11 +3,177 @@
   <channel>
     <title>덕복희</title>
     <description>If i was rich, i would eat tteokbokki every day.</description>
-    <link>https://kejdev.github.io//</link>
-    <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Dec 2019 16:34:15 +0900</pubDate>
-    <lastBuildDate>Mon, 02 Dec 2019 16:34:15 +0900</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 03 Dec 2019 16:30:23 +0900</pubDate>
+    <lastBuildDate>Tue, 03 Dec 2019 16:30:23 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Knn을 이용한 과일 데이터 분류</title>
+        <description>&lt;p&gt;오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;dataset&quot;&gt;DataSet&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;데이터는 아래와 같이 데이터를 만들면 된답니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ingredient&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bacon&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;carrot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                                  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;celery&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cheese&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cucumber&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fish&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                                  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;green bean&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;lettuce&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                                  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nuts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pear&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;shrimp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sweetness&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crunchiness&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Fruits&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Proteins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Fruits&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Vegetables&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Vegetables&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Proteins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Vegetables&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Proteins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Fruits&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Vegetables&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Vegetables&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Proteins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Fruits&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Fruits&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Proteins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;출력하면 아래와 같이 출력이 됩니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/r3.png&quot; width=&quot;330&quot; height=&quot;250&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;그럼 이제 토마토 데이터를 만들어 보겠습니다. &lt;br /&gt;
+토마토 데이터는 아래와 같이 만들어주면 된답니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tomato&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sweetness&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crunchiness&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;food 에서 2번째 컬럼과 3번째 컬럼을 train 데이터로 사용하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;train_data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/r4.png&quot; width=&quot;180&quot; height=&quot;230&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;그리고 라벨은 데이터의 마지막 컬럼인 class 입니다. 그래서 아래와 같이 라벨을 따로 변수에 담아주겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;train_label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;간단하죠 ?&lt;br /&gt;
+그럼 이제 바로 토마토를 넣어서 knn을 해보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;knn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tomato&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/r5.png&quot; width=&quot;100&quot; height=&quot;50&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;이번 knn은 조금 재밌지 않나요 ? 다음 포스팅에서는 knn을 이용한 동물 분류해보도록 하겠습니다.  &lt;br /&gt;
+전체 코드는 &lt;a href=&quot;https://github.com/KEJdev/R-Example&quot;&gt;여기&lt;/a&gt;에서 확인하실 수 있습니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//R-Grammar-5</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-5</guid>
+        
+        <category>R</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>having와 데이터 분석 함수 (pivot)</title>
+        <description>&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다. 
+오늘 사용 되는 SQL 테이블은 첫 포스팅에 작성한 emp 테이블을 이용 할 예정입니다. 테이블이 없으신 분들은 &lt;a href=&quot;https://kejdev.github.io/SQL-Grammar-1&quot;&gt;여기&lt;/a&gt;를 클릭하여 테이블을 긁어서 사용하시기를 바랍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;having&quot;&gt;having&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;우선 having이 먼지 알기전에 간단하게 출력 하나 먼저 해보겠습니다.&lt;br /&gt;
+emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출력해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이번에는 위 결과를 다시 출력하긴 하는데, 직업별 토탈월급이 5000이상인 것들만 출력 해볼까요 ?
+아마 다들 아래와 같이 작성했을꺼라 생각합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;혹시 출력이 잘되나요 ?&lt;br /&gt;
+만약 출력이 정상적으로 잘 된다면, 컴퓨터에 이상이 있는거니 수리점에 맡겨주세요.&lt;/p&gt;
+
+&lt;p&gt;아마 **오류: ORA-00934: group function is not allowed here (그룹 함수는 허가되지 않는다.) ** 라는 문구를 만나실 수 있습니다. 왜 그럴까요 ?&lt;/p&gt;
+
+&lt;p&gt;그이 유는 where절은 group by함수로 조건을 주는 절로 사용 할 수 없기 때문입니다. 그렇기 때문에 우리는 having 절을 사용합니다. &lt;strong&gt;having&lt;/strong&gt;절은 group 함수에서 사용해서 검색 조건을 주려고 할때 사용하는 함수입니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 직업별 토탈 월급을 출력하려면, having을 사용해서 아래와 같이 출력하면 된답니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;having&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;마지막으로 함수 쓰는 순위와 사용법을 더 익혀보기 위해 group, having과 order by 함수 세개를 사용해서 출력 하나 해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;이번에는 직업, 직업별 토탈월급을 출력하는데, 직업이 SALESMANS은 제외하고 출력하고 토탈월급이 4000이상인 것들만 출력하는데, 직업별 토탈월급이 높은 것부터 출력하려면 어떻게 해야댈까요 ?&lt;/p&gt;
+
+&lt;p&gt;조건이 넘 많은거요 ㅠㅠㅠ?&lt;br /&gt;
+하지만 어렵지않습니다. 출력은 아래와 같이 하면 된답니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'SALESMAN'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;having&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4000&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;결과가 잘 나오는 것을 확인하셨나요 ? 그렇다면 이번엔 pivot함수에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;pivot&quot;&gt;pivot&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이번에도 간단하게 출력하나를 해보도록 하겠습니다. emp 테이블을 사용하여 부서번호, 부서번호을 가로로  출력해볼까요 ?&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&quot;30&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 코드를 조금 더 간단하게 구현하려면 어떻게 해야 댈까요 ? 현재 작성한 예제 테이블은 컬럼이 몇개없다고 쳐도 실제 DB데이블은 어마무시한 양의 데이터를 저장하고 있는데, 컬럼 하나하나를 가로로 출력하기 위해  sum과 decode를 사용하면 너무 비효율적이지 않을까요 ? 이럴때 사용하는 함수가 pivot 함수입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pitvot&lt;/strong&gt;은 회전하다 라는 뜻을 가지고 있습니다. 그래서 가로 세로 회전시킬때 자주 사용하는 함수입니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 위 코드를 조금 더 간결하게 만든다면, 아래와 같이 만들 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deptno&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;코드가 많이 간단해졌네요. DB같은 경우는 쿼리를 어떻게 날리느냐에 따라 속도차이가 심하니까 쿼리는 항상 잘 날려야합니다. 잘 참고 하시고 다음 포스팅에서는 실제 데이터를 이용해서 SQL을 사용해보도록 하겠습니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
+        <link>http://localhost:4000//SQL-Grammar-7</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-7</guid>
+        
+        <category>SQL</category>
+        
+        
+      </item>
     
       <item>
         <title>Python for문 개념 ①</title>
@@ -136,8 +302,8 @@
 다음 포스팅 땐 if문과 for 문을 섞어서 사용하는 것에 대하여 알아보도록 하겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//PYTHON-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-3</guid>
+        <link>http://localhost:4000//PYTHON-Grammar-3</link>
+        <guid isPermaLink="true">http://localhost:4000//PYTHON-Grammar-3</guid>
         
         <category>PYTHON</category>
         
@@ -281,8 +447,8 @@
 
 </description>
         <pubDate>Fri, 29 Nov 2019 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//ML-Grammar-6</link>
-        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-6</guid>
+        <link>http://localhost:4000//ML-Grammar-6</link>
+        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-6</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -320,8 +486,8 @@ if문과 loop문을 사용할 수 있습니다.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//ALGORITHM-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io//ALGORITHM-1</guid>
+        <link>http://localhost:4000//ALGORITHM-1</link>
+        <guid isPermaLink="true">http://localhost:4000//ALGORITHM-1</guid>
         
         <category>ALGORITHM</category>
         
@@ -445,8 +611,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//PYTHON-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-2</guid>
+        <link>http://localhost:4000//PYTHON-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000//PYTHON-Grammar-2</guid>
         
         <category>PYTHON</category>
         
@@ -550,8 +716,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//PYTHON-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io//PYTHON-Grammar-1</guid>
+        <link>http://localhost:4000//PYTHON-Grammar-1</link>
+        <guid isPermaLink="true">http://localhost:4000//PYTHON-Grammar-1</guid>
         
         <category>PYTHON</category>
         
@@ -665,8 +831,8 @@ $2x + 0$ 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 됩니다.&lt;/p
 
 </description>
         <pubDate>Tue, 29 Oct 2019 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//ML-Grammar-5</link>
-        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-5</guid>
+        <link>http://localhost:4000//ML-Grammar-5</link>
+        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-5</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -771,8 +937,8 @@ test data도 정규화 작업을 한 후에 knn을 해주세요.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 27 Oct 2019 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//R-Grammar-4</link>
-        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-4</guid>
+        <link>http://localhost:4000//R-Grammar-4</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-4</guid>
         
         <category>R</category>
         
@@ -839,8 +1005,8 @@ Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지�
 
 </description>
         <pubDate>Wed, 07 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//ML-Grammar-4</link>
-        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-4</guid>
+        <link>http://localhost:4000//ML-Grammar-4</link>
+        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-4</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1001,8 +1167,8 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 다음 포스팅에서는 기본 활성화 함수이외 다른 활성화 함수에 대해 다루어 보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 06 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//ML-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-3</guid>
+        <link>http://localhost:4000//ML-Grammar-3</link>
+        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-3</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1097,8 +1263,8 @@ end;
 다음 포스팅에서는 좀 더 어려운 package하는 방법에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Mon, 05 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//PLSQL-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io//PLSQL-Grammar-2</guid>
+        <link>http://localhost:4000//PLSQL-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000//PLSQL-Grammar-2</guid>
         
         <category>PLSQL</category>
         
@@ -1193,8 +1359,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
 </description>
         <pubDate>Sun, 04 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//PLSQL-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io//PLSQL-Grammar-1</guid>
+        <link>http://localhost:4000//PLSQL-Grammar-1</link>
+        <guid isPermaLink="true">http://localhost:4000//PLSQL-Grammar-1</guid>
         
         <category>PLSQL</category>
         
@@ -1479,8 +1645,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 &lt;p&gt;다음 포스팅에서는 이제 신경망의 활성화 함수에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//ML-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-2</guid>
+        <link>http://localhost:4000//ML-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-2</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1641,8 +1807,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 다음 포스팅엔 퍼셉트론을 PYTHON으로 간단하게 구현해보도록 하겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 02 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//ML-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io//ML-Grammar-1</guid>
+        <link>http://localhost:4000//ML-Grammar-1</link>
+        <guid isPermaLink="true">http://localhost:4000//ML-Grammar-1</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1746,8 +1912,8 @@ knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 01 Nov 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//R-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-3</guid>
+        <link>http://localhost:4000//R-Grammar-3</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-3</guid>
         
         <category>R</category>
         
@@ -1811,8 +1977,8 @@ knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;h
 
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//R-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-2</guid>
+        <link>http://localhost:4000//R-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-2</guid>
         
         <category>R</category>
         
@@ -1950,8 +2116,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 다음 포스팅부터는 간단하게 R을 이용하여 머신러닝에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//R-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-1</guid>
+        <link>http://localhost:4000//R-Grammar-1</link>
+        <guid isPermaLink="true">http://localhost:4000//R-Grammar-1</guid>
         
         <category>R</category>
         
@@ -2083,8 +2249,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Wed, 22 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//SQL-Grammar-6</link>
-        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-6</guid>
+        <link>http://localhost:4000//SQL-Grammar-6</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-6</guid>
         
         <category>SQL</category>
         
@@ -2245,8 +2411,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Tue, 21 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//SQL-Grammar-5</link>
-        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-5</guid>
+        <link>http://localhost:4000//SQL-Grammar-5</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-5</guid>
         
         <category>SQL</category>
         
@@ -2340,8 +2506,8 @@ order by절은 생각보다 어렵지 않죠?
 
 </description>
         <pubDate>Mon, 20 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//SQL-Grammar-4</link>
-        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-4</guid>
+        <link>http://localhost:4000//SQL-Grammar-4</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-4</guid>
         
         <category>SQL</category>
         
@@ -2528,8 +2694,8 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
 다음 포스팅에서는 계속해서 데이터 제한 및 정렬에 필요한 기타 비교연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//SQL-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-3</guid>
+        <link>http://localhost:4000//SQL-Grammar-3</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-3</guid>
         
         <category>SQL</category>
         
@@ -2744,8 +2910,8 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 다음 포스팅때는 데이터 제한 및 정렬에 관한 함수와 연산자를 사용하여 출력하는 것을 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//SQL-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-2</guid>
+        <link>http://localhost:4000//SQL-Grammar-2</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-2</guid>
         
         <category>SQL</category>
         
@@ -2883,8 +3049,8 @@ dept 테이블을 검색하는 코드는 아래와 같습니다.&lt;/p&gt;
 &lt;p&gt;다음 포스팅부터는 emp테이블과 nvl 함수와 disinct등에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Aug 2018 18:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//SQL-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io//SQL-Grammar-1</guid>
+        <link>http://localhost:4000//SQL-Grammar-1</link>
+        <guid isPermaLink="true">http://localhost:4000//SQL-Grammar-1</guid>
         
         <category>SQL</category>
         
@@ -3034,8 +3200,8 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
 
 </description>
         <pubDate>Wed, 17 Jan 2018 19:00:00 +0900</pubDate>
-        <link>https://kejdev.github.io//Attentive-Deep-Local-Features</link>
-        <guid isPermaLink="true">https://kejdev.github.io//Attentive-Deep-Local-Features</guid>
+        <link>http://localhost:4000//Attentive-Deep-Local-Features</link>
+        <guid isPermaLink="true">http://localhost:4000//Attentive-Deep-Local-Features</guid>
         
         <category>PAPER</category>
         
