@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-04T11:03:45+09:00</updated>
+  <updated>2019-12-04T11:32:41+09:00</updated>
   <id>https://kejdev.github.io/author/KEJdev/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Knn을 이용한 동물 분류하기</title>
       <link href="https://kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
-      <published>2019-12-03T18:00:00+09:00</published>
-      <updated>2019-12-03T18:00:00+09:00</updated>
+      <published>2019-12-02T18:00:00+09:00</published>
+      <updated>2019-12-02T18:00:00+09:00</updated>
       <id>https://kejdev.github.io/R-Grammar-6</id>
       <content type="html" xml:base="https://kejdev.github.io/R-Grammar-6">&lt;p&gt;여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 &lt;a href=&quot;http://archive.ics.uci.edu/ml/datasets/zoo&quot;&gt;여기&lt;/a&gt;를 클릭하면 보실 수 있습니다.&lt;/p&gt;
 
@@ -112,7 +112,7 @@
 &lt;center&gt;&lt;img src=&quot;../assets/images/r9.png&quot; width=&quot;340&quot; height=&quot;20&quot; /&gt;&lt;/center&gt;
 
 &lt;p&gt;마지막 2와 출력 결과인 2가 일치하는 결과를 확인할 수 있습니다. &lt;br /&gt;
-다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 &lt;a href=&quot;&quot;&gt;여기&lt;/a&gt;에서 보실 수 있습니다.&lt;/p&gt;</content>
+다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 &lt;a href=&quot;https://github.com/KEJdev/R-Example&quot;&gt;여기&lt;/a&gt;에서 보실 수 있습니다.&lt;/p&gt;</content>
 
       
       

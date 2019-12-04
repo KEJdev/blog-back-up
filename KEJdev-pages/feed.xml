@@ -5,8 +5,8 @@
     <description>If i was rich, i would eat tteokbokki every day.</description>
     <link>https://kejdev.github.io//</link>
     <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Dec 2019 11:03:45 +0900</pubDate>
-    <lastBuildDate>Wed, 04 Dec 2019 11:03:45 +0900</lastBuildDate>
+    <pubDate>Wed, 04 Dec 2019 11:43:27 +0900</pubDate>
+    <lastBuildDate>Wed, 04 Dec 2019 11:43:27 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -86,9 +86,9 @@
 &lt;center&gt;&lt;img src=&quot;../assets/images/r9.png&quot; width=&quot;340&quot; height=&quot;20&quot; /&gt;&lt;/center&gt;
 
 &lt;p&gt;마지막 2와 출력 결과인 2가 일치하는 결과를 확인할 수 있습니다. &lt;br /&gt;
-다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 &lt;a href=&quot;&quot;&gt;여기&lt;/a&gt;에서 보실 수 있습니다.&lt;/p&gt;
+다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 &lt;a href=&quot;https://github.com/KEJdev/R-Example&quot;&gt;여기&lt;/a&gt;에서 보실 수 있습니다.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 03 Dec 2019 18:00:00 +0900</pubDate>
+        <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
         <link>https://kejdev.github.io//R-Grammar-6</link>
         <guid isPermaLink="true">https://kejdev.github.io//R-Grammar-6</guid>
         
