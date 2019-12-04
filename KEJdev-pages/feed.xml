@@ -5,19 +5,21 @@
     <description>If i was rich, i would eat tteokbokki every day.</description>
     <link>https://kejdev.github.io//</link>
     <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Dec 2019 15:19:54 +0900</pubDate>
-    <lastBuildDate>Wed, 04 Dec 2019 15:19:54 +0900</lastBuildDate>
+    <pubDate>Wed, 04 Dec 2019 15:33:44 +0900</pubDate>
+    <lastBuildDate>Wed, 04 Dec 2019 15:33:44 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
         <title>재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)</title>
         <description>&lt;p&gt;계속해서 재귀 알고리즘에 익숙해지기 위해 알고리즘 단골 문제인 팩토리얼과 최대공약수를 풀어보겠습니다. 재귀 함수가 무엇인지는 저번 포스팅에서 설명했으므로 이번에는 자세한 이야기는 생략하겠습니다.&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;h4 id=&quot;factorial&quot;&gt;factorial&lt;/h4&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;10!을 구할껀데, 10!을 풀어서 이야기하면 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 이고 , 계산하면 3,639,800 입니다. 그렇다면 10!를 재귀 함수로 구현하려면 어떻게 하면 될까요 ?&lt;/p&gt;
+&lt;p&gt;10!을 구할껀데, 10!을 풀어서 이야기하면 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 이고 , 계산하면 3,628,800 입니다. 그렇다면 10!를 재귀 함수로 구현하려면 어떻게 하면 될까요 ?&lt;/p&gt;
 
 &lt;p&gt;저번 포스팅 코드를 보고 이해를 잘하셨다면 어렵지 않게 풀 수 있을꺼라 생각합니다.&lt;/p&gt;
 
