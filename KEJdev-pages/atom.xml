@@ -8,13 +8,58 @@
     
       
       <item>
+        <title>재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)</title>
+        
+          <description>&lt;p&gt;계속해서 재귀 알고리즘에 익숙해지기 위해 알고리즘 단골 문제인 팩토리얼과 최대공약수를 풀어보겠습니다. 재귀 함수가 무엇인지는 저번 포스팅에서 설명했으므로 이번에는 자세한 이야기는 생략하겠습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 Dec 2019 20:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/ALGORITHM-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-3</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>재귀 알고리즘으로 구구단 출력하기 (Python)</title>
+        
+          <description>&lt;p&gt;알고리즘 문제를 풀면서 반드시 알아야 할 알고리즘 중 하나는 아마 재귀 알고리즘일거라 생각합니다. 재귀 함수를 사용할 수 있는 곳에서는 재귀 함수를 사용하며 알고리즘을 풀면서 공부를 해야 된답니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 Dec 2019 19:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/ALGORITHM-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-2</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Knn을 이용한 동물 분류하기</title>
         
           <description>&lt;p&gt;여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 &lt;a href=&quot;http://archive.ics.uci.edu/ml/datasets/zoo&quot;&gt;여기&lt;/a&gt;를 클릭하면 보실 수 있습니다.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
+        <pubDate>Tue, 03 Dec 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/R-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-6</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Knn을 이용한 동물 분류하기</title>
+        
+          <description>&lt;p&gt;여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 &lt;a href=&quot;http://archive.ics.uci.edu/ml/datasets/zoo&quot;&gt;여기&lt;/a&gt;를 클릭하면 보실 수 있습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 Dec 2019 18:00:00 +0900</pubDate>
         <link>
         https://kejdev.github.io/R-Grammar-6</link>
         <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-6</guid>
