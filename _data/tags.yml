@@ -18,6 +18,10 @@ MACHINE-LEARNING:
   name: MACHINE-LEARNING
   description: False
   cover: False
+GO:
+  name: GO
+  description: False
+  cover: False
 PAPER:
   name: PAPER
   description: False

@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>GO 언어란?</title>
+        
+          <description>&lt;p&gt;GO언어는 요즘 Docker가 떠오르면서 같이 떠오르는 새로운 언어입니다. &lt;br /&gt;
+또한 구글에서 만든 언어라고 해서 사람들이 더 관심을 가지고 보는 언어죠. GO언어가 어떤 언어인지 알아보겠습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 Dec 2019 22:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/GO-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io/GO-Grammar-1</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)</title>
         
           <description>&lt;p&gt;계속해서 재귀 알고리즘에 익숙해지기 위해 알고리즘 단골 문제인 팩토리얼과 최대공약수를 풀어보겠습니다. 재귀 함수가 무엇인지는 저번 포스팅에서 설명했으므로 이번에는 자세한 이야기는 생략하겠습니다.&lt;/p&gt;
