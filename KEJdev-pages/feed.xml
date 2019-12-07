@@ -5,8 +5,8 @@
     <description>If i was rich, i would eat tteokbokki every day.</description>
     <link>https://kejdev.github.io//</link>
     <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 Dec 2019 23:28:08 +0900</pubDate>
-    <lastBuildDate>Sat, 07 Dec 2019 23:28:08 +0900</lastBuildDate>
+    <pubDate>Sat, 07 Dec 2019 23:34:54 +0900</pubDate>
+    <lastBuildDate>Sat, 07 Dec 2019 23:34:54 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -24,7 +24,7 @@
 
 &lt;p&gt;GOPATH설정 또한 해줘야하는데, 아래와 같이 설정하시면 됩니다.&lt;/p&gt;
 
-&lt;center&gt;&lt;img src=&quot;../assets/images/go2.png&quot; width=&quot;500&quot; height=&quot;350&quot; /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;img src=&quot;../assets/images/go2.png&quot; width=&quot;450&quot; height=&quot;350&quot; /&gt;&lt;/center&gt;
 
 &lt;p&gt;전 gogo라는 폴더를 따로 만들었고 GOROOT 잡은것과 동일하게 gogo폴더로 PATH잡아주면 설정은 끝난답니다.&lt;br /&gt;
 설정을 잘했는지 확인을 해봐야겠지요?&lt;/p&gt;
@@ -32,7 +32,7 @@
 &lt;p&gt;cmd.exe실행 해서 아래와 같이 명령어를 치면 설정했던 경로를 확인 해볼 수 있습니다.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo %GOROOT%
-echo %GOPAPT%
+echo %GOPATH%
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;이제 설치는 끝났습니다. 생각보다 쉽죠 ??&lt;br /&gt;
