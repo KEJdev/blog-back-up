@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/tag/go/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-07T01:16:13+09:00</updated>
+  <updated>2019-12-07T23:27:15+09:00</updated>
   <id>https://kejdev.github.io/tag/go/feed.xml</id>
 
   
@@ -30,6 +30,65 @@
   
   
 
+  
+    <entry>
+      <title type="html">GO 언어 설치하기</title>
+      <link href="https://kejdev.github.io/GO-Grammar-2" rel="alternate" type="text/html" title="GO 언어 설치하기" />
+      <published>2019-12-04T18:00:00+09:00</published>
+      <updated>2019-12-04T18:00:00+09:00</updated>
+      <id>https://kejdev.github.io/GO-Grammar-2</id>
+      <content type="html" xml:base="https://kejdev.github.io/GO-Grammar-2">&lt;p&gt;GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;우선 설치파일 다운해봅시다. &lt;a href=&quot;https://golang.org/dl/&quot;&gt;여기&lt;/a&gt;를 클릭하면 아래와 같은 화면이 나오는데 OS에 맞는 설치파일 다운합니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/go1.png&quot; width=&quot;550&quot; height=&quot;350&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;저는 맥과 윈도우 두가지를 같이 쓰고 있는데, 우선 윈도우랑 맥이랑 그렇게 설치방법이 다르지 않으니 그냥 윈도우로 진행하겠습니다.
+혹시나 GO언어를 설치는 하기 싫지만, 예제나, 코드를 구현하고 싶다면 &lt;a href=&quot;https://play.golang.org/&quot;&gt;여기&lt;/a&gt;에 들어가시면 GO언어를 사용하실 수 있습니다. 이 웹에서 사용 하는 GO 놀이터를 이용하면 설치도 안해도 되면서 항상 최신버전으로 유지하고 있으니 간접적으로 체험하시고 싶거나 간단히 테스트 할때, 사용하시면 유용할 것같네요.&lt;/p&gt;
+
+&lt;p&gt;설치를 끝냈으면 GOROOT를 설정해야합니다. 만약 설치 경로가 C:\Go라면 GOROOT를 설정할 필요가 없습니다. 그렇지 않은 경우에는 따로 설정을 해주셔야 합니다. 따로 설정 할 경우에는 시스템 속성 -&amp;gt; 환경변수 -&amp;gt; ‘새로 만들기(N)’ 선택 후 설정 해주시면 되겠습니다.&lt;/p&gt;
+
+&lt;p&gt;GOPATH설정 또한 해줘야하는데, 아래와 같이 설정하시면 됩니다.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;../assets/images/go2.png&quot; width=&quot;500&quot; height=&quot;350&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;전 gogo라는 폴더를 따로 만들었고 GOROOT 잡은것과 동일하게 gogo폴더로 PATH잡아주면 설정은 끝난답니다.&lt;br /&gt;
+설정을 잘했는지 확인을 해봐야겠지요?&lt;/p&gt;
+
+&lt;p&gt;cmd.exe실행 해서 아래와 같이 명령어를 치면 설정했던 경로를 확인 해볼 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo %GOROOT%
+echo %GOPAPT%
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이제 설치는 끝났습니다. 생각보다 쉽죠 ??&lt;br /&gt;
+다음 포스팅때, 기본 문법과 실행법에 대해 알아보겠습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>KEJdev</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="GO" />
+      
+
+      
+        <summary type="html">GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">GO 언어란?</title>

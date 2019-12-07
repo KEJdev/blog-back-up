@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>GO 언어 설치하기</title>
+        
+          <description>&lt;p&gt;GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 04 Dec 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/GO-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/GO-Grammar-2</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>GO 언어란?</title>
         
           <description>&lt;p&gt;GO언어는 요즘 Docker가 떠오르면서 같이 떠오르는 새로운 언어입니다. &lt;br /&gt;
