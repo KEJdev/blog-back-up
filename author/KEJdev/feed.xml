@@ -2,8 +2,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="kejdev.github.io/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
+  <link href="https://kejdev.github.io/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
   <updated>2019-12-08T16:59:16+09:00</updated>
   <id>kejdev.github.io/author/KEJdev/feed.xml</id>
 
@@ -33,7 +33,7 @@
   
     <entry>
       <title type="html">Python for문 개념 ③ (for ~ continue~braeak)</title>
-      <link href="kejdev.github.io/PYTHON-Grammar-5" rel="alternate" type="text/html" title="Python for문 개념 ③ (for ~ continue~braeak)" />
+      <link href="https://kejdev.github.io/PYTHON-Grammar-5" rel="alternate" type="text/html" title="Python for문 개념 ③ (for ~ continue~braeak)" />
       <published>2019-12-05T19:00:00+09:00</published>
       <updated>2019-12-05T19:00:00+09:00</updated>
       <id>kejdev.github.io/PYTHON-Grammar-5</id>
@@ -115,7 +115,7 @@
   
     <entry>
       <title type="html">GO 언어 구문과 자료형 및 변수</title>
-      <link href="kejdev.github.io/GO-Grammar-3" rel="alternate" type="text/html" title="GO 언어 구문과 자료형 및 변수" />
+      <link href="https://kejdev.github.io/GO-Grammar-3" rel="alternate" type="text/html" title="GO 언어 구문과 자료형 및 변수" />
       <published>2019-12-05T18:00:00+09:00</published>
       <updated>2019-12-05T18:00:00+09:00</updated>
       <id>kejdev.github.io/GO-Grammar-3</id>
@@ -223,7 +223,7 @@
   
     <entry>
       <title type="html">GO 언어 설치하기</title>
-      <link href="kejdev.github.io/GO-Grammar-2" rel="alternate" type="text/html" title="GO 언어 설치하기" />
+      <link href="https://kejdev.github.io/GO-Grammar-2" rel="alternate" type="text/html" title="GO 언어 설치하기" />
       <published>2019-12-04T18:00:00+09:00</published>
       <updated>2019-12-04T18:00:00+09:00</updated>
       <id>kejdev.github.io/GO-Grammar-2</id>
@@ -282,7 +282,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">GO 언어란?</title>
-      <link href="kejdev.github.io/GO-Grammar-1" rel="alternate" type="text/html" title="GO 언어란?" />
+      <link href="https://kejdev.github.io/GO-Grammar-1" rel="alternate" type="text/html" title="GO 언어란?" />
       <published>2019-12-03T22:00:00+09:00</published>
       <updated>2019-12-03T22:00:00+09:00</updated>
       <id>kejdev.github.io/GO-Grammar-1</id>
@@ -347,7 +347,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)</title>
-      <link href="kejdev.github.io/ALGORITHM-3" rel="alternate" type="text/html" title="재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)" />
+      <link href="https://kejdev.github.io/ALGORITHM-3" rel="alternate" type="text/html" title="재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)" />
       <published>2019-12-03T20:00:00+09:00</published>
       <updated>2019-12-03T20:00:00+09:00</updated>
       <id>kejdev.github.io/ALGORITHM-3</id>
@@ -442,7 +442,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">재귀 알고리즘으로 구구단 출력하기 (Python)</title>
-      <link href="kejdev.github.io/ALGORITHM-2" rel="alternate" type="text/html" title="재귀 알고리즘으로 구구단 출력하기 (Python)" />
+      <link href="https://kejdev.github.io/ALGORITHM-2" rel="alternate" type="text/html" title="재귀 알고리즘으로 구구단 출력하기 (Python)" />
       <published>2019-12-03T19:00:00+09:00</published>
       <updated>2019-12-03T19:00:00+09:00</updated>
       <id>kejdev.github.io/ALGORITHM-2</id>
@@ -545,7 +545,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">Knn을 이용한 동물 분류하기</title>
-      <link href="kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
+      <link href="https://kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
       <published>2019-12-03T18:00:00+09:00</published>
       <updated>2019-12-03T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-6</id>
@@ -654,7 +654,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">Knn을 이용한 동물 분류하기</title>
-      <link href="kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
+      <link href="https://kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
       <published>2019-12-03T18:00:00+09:00</published>
       <updated>2019-12-03T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-6</id>
@@ -763,7 +763,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">Knn을 이용한 과일 데이터 분류</title>
-      <link href="kejdev.github.io/R-Grammar-5" rel="alternate" type="text/html" title="Knn을 이용한 과일 데이터 분류" />
+      <link href="https://kejdev.github.io/R-Grammar-5" rel="alternate" type="text/html" title="Knn을 이용한 과일 데이터 분류" />
       <published>2019-12-02T18:00:00+09:00</published>
       <updated>2019-12-02T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-5</id>
@@ -857,7 +857,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">Python for문 개념 ②</title>
-      <link href="kejdev.github.io/PYTHON-Grammar-4" rel="alternate" type="text/html" title="Python for문 개념 ②" />
+      <link href="https://kejdev.github.io/PYTHON-Grammar-4" rel="alternate" type="text/html" title="Python for문 개념 ②" />
       <published>2019-12-02T18:00:00+09:00</published>
       <updated>2019-12-02T18:00:00+09:00</updated>
       <id>kejdev.github.io/PYTHON-Grammar-4</id>

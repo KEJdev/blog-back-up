@@ -2,8 +2,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="kejdev.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
+  <link href="https://kejdev.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
   <updated>2019-12-08T16:59:16+09:00</updated>
   <id>kejdev.github.io/tag/paper/feed.xml</id>
 
@@ -33,7 +33,7 @@
   
     <entry>
       <title type="html">Large-Scale Image Retrieval with Attentive Deep Local Features</title>
-      <link href="kejdev.github.io/Attentive-Deep-Local-Features" rel="alternate" type="text/html" title="Large-Scale Image Retrieval with Attentive Deep Local Features" />
+      <link href="https://kejdev.github.io/Attentive-Deep-Local-Features" rel="alternate" type="text/html" title="Large-Scale Image Retrieval with Attentive Deep Local Features" />
       <published>2018-01-17T19:00:00+09:00</published>
       <updated>2018-01-17T19:00:00+09:00</updated>
       <id>kejdev.github.io/Attentive-Deep-Local-Features</id>

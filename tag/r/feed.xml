@@ -2,8 +2,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="kejdev.github.io/tag/r/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
+  <link href="https://kejdev.github.io/tag/r/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
   <updated>2019-12-08T16:59:16+09:00</updated>
   <id>kejdev.github.io/tag/r/feed.xml</id>
 
@@ -33,7 +33,7 @@
   
     <entry>
       <title type="html">Knn을 이용한 동물 분류하기</title>
-      <link href="kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
+      <link href="https://kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
       <published>2019-12-03T18:00:00+09:00</published>
       <updated>2019-12-03T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-6</id>
@@ -142,7 +142,7 @@
   
     <entry>
       <title type="html">Knn을 이용한 동물 분류하기</title>
-      <link href="kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
+      <link href="https://kejdev.github.io/R-Grammar-6" rel="alternate" type="text/html" title="Knn을 이용한 동물 분류하기" />
       <published>2019-12-03T18:00:00+09:00</published>
       <updated>2019-12-03T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-6</id>
@@ -251,7 +251,7 @@
   
     <entry>
       <title type="html">Knn을 이용한 과일 데이터 분류</title>
-      <link href="kejdev.github.io/R-Grammar-5" rel="alternate" type="text/html" title="Knn을 이용한 과일 데이터 분류" />
+      <link href="https://kejdev.github.io/R-Grammar-5" rel="alternate" type="text/html" title="Knn을 이용한 과일 데이터 분류" />
       <published>2019-12-02T18:00:00+09:00</published>
       <updated>2019-12-02T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-5</id>
@@ -345,7 +345,7 @@
   
     <entry>
       <title type="html">knn을 이용한 구매여부 분류</title>
-      <link href="kejdev.github.io/R-Grammar-4" rel="alternate" type="text/html" title="knn을 이용한 구매여부 분류" />
+      <link href="https://kejdev.github.io/R-Grammar-4" rel="alternate" type="text/html" title="knn을 이용한 구매여부 분류" />
       <published>2019-10-27T18:00:00+09:00</published>
       <updated>2019-10-27T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-4</id>
@@ -471,7 +471,7 @@ test data도 정규화 작업을 한 후에 knn을 해주세요.&lt;/p&gt;
   
     <entry>
       <title type="html">Knn을 이용한 소개팅 데이터 분류</title>
-      <link href="kejdev.github.io/R-Grammar-3" rel="alternate" type="text/html" title="Knn을 이용한 소개팅 데이터 분류" />
+      <link href="https://kejdev.github.io/R-Grammar-3" rel="alternate" type="text/html" title="Knn을 이용한 소개팅 데이터 분류" />
       <published>2018-11-01T18:00:00+09:00</published>
       <updated>2018-11-01T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-3</id>
@@ -596,7 +596,7 @@ knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
   
     <entry>
       <title type="html">Knn(K-Nearest Neighbors)이란?</title>
-      <link href="kejdev.github.io/R-Grammar-2" rel="alternate" type="text/html" title="Knn(K-Nearest Neighbors)이란?" />
+      <link href="https://kejdev.github.io/R-Grammar-2" rel="alternate" type="text/html" title="Knn(K-Nearest Neighbors)이란?" />
       <published>2018-10-30T18:00:00+09:00</published>
       <updated>2018-10-30T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-2</id>
@@ -681,7 +681,7 @@ knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;h
   
     <entry>
       <title type="html">R을 배워야 하는 이유</title>
-      <link href="kejdev.github.io/R-Grammar-1" rel="alternate" type="text/html" title="R을 배워야 하는 이유" />
+      <link href="https://kejdev.github.io/R-Grammar-1" rel="alternate" type="text/html" title="R을 배워야 하는 이유" />
       <published>2018-10-30T18:00:00+09:00</published>
       <updated>2018-10-30T18:00:00+09:00</updated>
       <id>kejdev.github.io/R-Grammar-1</id>

@@ -2,8 +2,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="kejdev.github.io/tag/sql/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
+  <link href="https://kejdev.github.io/tag/sql/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
   <updated>2019-12-08T16:59:16+09:00</updated>
   <id>kejdev.github.io/tag/sql/feed.xml</id>
 
@@ -33,7 +33,7 @@
   
     <entry>
       <title type="html">having와 데이터 분석 함수 (pivot)</title>
-      <link href="kejdev.github.io/SQL-Grammar-7" rel="alternate" type="text/html" title="having와 데이터 분석 함수 (pivot)" />
+      <link href="https://kejdev.github.io/SQL-Grammar-7" rel="alternate" type="text/html" title="having와 데이터 분석 함수 (pivot)" />
       <published>2019-12-01T18:00:00+09:00</published>
       <updated>2019-12-01T18:00:00+09:00</updated>
       <id>kejdev.github.io/SQL-Grammar-7</id>
@@ -151,7 +151,7 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
   
     <entry>
       <title type="html">문자함수와 날짜 함수 2</title>
-      <link href="kejdev.github.io/SQL-Grammar-6" rel="alternate" type="text/html" title="문자함수와 날짜 함수 2" />
+      <link href="https://kejdev.github.io/SQL-Grammar-6" rel="alternate" type="text/html" title="문자함수와 날짜 함수 2" />
       <published>2018-08-22T18:00:00+09:00</published>
       <updated>2018-08-22T18:00:00+09:00</updated>
       <id>kejdev.github.io/SQL-Grammar-6</id>
@@ -304,7 +304,7 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
   
     <entry>
       <title type="html">문자함수와 날짜 함수 1</title>
-      <link href="kejdev.github.io/SQL-Grammar-5" rel="alternate" type="text/html" title="문자함수와 날짜 함수 1" />
+      <link href="https://kejdev.github.io/SQL-Grammar-5" rel="alternate" type="text/html" title="문자함수와 날짜 함수 1" />
       <published>2018-08-21T18:00:00+09:00</published>
       <updated>2018-08-21T18:00:00+09:00</updated>
       <id>kejdev.github.io/SQL-Grammar-5</id>
@@ -486,7 +486,7 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
   
     <entry>
       <title type="html">데이터 제한 및 정렬 2</title>
-      <link href="kejdev.github.io/SQL-Grammar-4" rel="alternate" type="text/html" title="데이터 제한 및 정렬 2" />
+      <link href="https://kejdev.github.io/SQL-Grammar-4" rel="alternate" type="text/html" title="데이터 제한 및 정렬 2" />
       <published>2018-08-20T18:00:00+09:00</published>
       <updated>2018-08-20T18:00:00+09:00</updated>
       <id>kejdev.github.io/SQL-Grammar-4</id>
@@ -601,7 +601,7 @@ order by절은 생각보다 어렵지 않죠?
   
     <entry>
       <title type="html">데이터 제한 및 정렬 1</title>
-      <link href="kejdev.github.io/SQL-Grammar-3" rel="alternate" type="text/html" title="데이터 제한 및 정렬 1" />
+      <link href="https://kejdev.github.io/SQL-Grammar-3" rel="alternate" type="text/html" title="데이터 제한 및 정렬 1" />
       <published>2018-08-19T18:00:00+09:00</published>
       <updated>2018-08-19T18:00:00+09:00</updated>
       <id>kejdev.github.io/SQL-Grammar-3</id>
@@ -810,7 +810,7 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
   
     <entry>
       <title type="html">SQL 컬럼검색과 별칭 사용하기</title>
-      <link href="kejdev.github.io/SQL-Grammar-2" rel="alternate" type="text/html" title="SQL 컬럼검색과 별칭 사용하기" />
+      <link href="https://kejdev.github.io/SQL-Grammar-2" rel="alternate" type="text/html" title="SQL 컬럼검색과 별칭 사용하기" />
       <published>2018-08-18T18:00:00+09:00</published>
       <updated>2018-08-18T18:00:00+09:00</updated>
       <id>kejdev.github.io/SQL-Grammar-2</id>
@@ -1047,7 +1047,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
   
     <entry>
       <title type="html">SQL 기본 문법</title>
-      <link href="kejdev.github.io/SQL-Grammar-1" rel="alternate" type="text/html" title="SQL 기본 문법" />
+      <link href="https://kejdev.github.io/SQL-Grammar-1" rel="alternate" type="text/html" title="SQL 기본 문법" />
       <published>2018-08-17T18:00:00+09:00</published>
       <updated>2018-08-17T18:00:00+09:00</updated>
       <id>kejdev.github.io/SQL-Grammar-1</id>

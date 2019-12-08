@@ -2,8 +2,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="kejdev.github.io/tag/machine-learning/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
+  <link href="https://kejdev.github.io/tag/machine-learning/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
   <updated>2019-12-08T16:59:16+09:00</updated>
   <id>kejdev.github.io/tag/machine-learning/feed.xml</id>
 
@@ -33,7 +33,7 @@
   
     <entry>
       <title type="html">정말 쉽게 설명한 역전파(backpropagation)</title>
-      <link href="kejdev.github.io/ML-Grammar-6" rel="alternate" type="text/html" title="정말 쉽게 설명한 역전파(backpropagation)" />
+      <link href="https://kejdev.github.io/ML-Grammar-6" rel="alternate" type="text/html" title="정말 쉽게 설명한 역전파(backpropagation)" />
       <published>2019-11-29T18:00:00+09:00</published>
       <updated>2019-11-29T18:00:00+09:00</updated>
       <id>kejdev.github.io/ML-Grammar-6</id>
@@ -198,7 +198,7 @@
   
     <entry>
       <title type="html">미분이 필요한 이유</title>
-      <link href="kejdev.github.io/ML-Grammar-5" rel="alternate" type="text/html" title="미분이 필요한 이유" />
+      <link href="https://kejdev.github.io/ML-Grammar-5" rel="alternate" type="text/html" title="미분이 필요한 이유" />
       <published>2019-10-29T18:00:00+09:00</published>
       <updated>2019-10-29T18:00:00+09:00</updated>
       <id>kejdev.github.io/ML-Grammar-5</id>
@@ -333,7 +333,7 @@ $2x + 0$ 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 됩니다.&lt;/p
   
     <entry>
       <title type="html">활성화 함수란?(2)</title>
-      <link href="kejdev.github.io/ML-Grammar-4" rel="alternate" type="text/html" title="활성화 함수란?(2)" />
+      <link href="https://kejdev.github.io/ML-Grammar-4" rel="alternate" type="text/html" title="활성화 함수란?(2)" />
       <published>2018-11-07T18:00:00+09:00</published>
       <updated>2018-11-07T18:00:00+09:00</updated>
       <id>kejdev.github.io/ML-Grammar-4</id>
@@ -421,7 +421,7 @@ Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지�
   
     <entry>
       <title type="html">활성화 함수란?(1)</title>
-      <link href="kejdev.github.io/ML-Grammar-3" rel="alternate" type="text/html" title="활성화 함수란?(1)" />
+      <link href="https://kejdev.github.io/ML-Grammar-3" rel="alternate" type="text/html" title="활성화 함수란?(1)" />
       <published>2018-11-06T18:00:00+09:00</published>
       <updated>2018-11-06T18:00:00+09:00</updated>
       <id>kejdev.github.io/ML-Grammar-3</id>
@@ -604,7 +604,7 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
   
     <entry>
       <title type="html">단층/다층퍼셉트론(Perceptron) 구현</title>
-      <link href="kejdev.github.io/ML-Grammar-2" rel="alternate" type="text/html" title="단층/다층퍼셉트론(Perceptron) 구현" />
+      <link href="https://kejdev.github.io/ML-Grammar-2" rel="alternate" type="text/html" title="단층/다층퍼셉트론(Perceptron) 구현" />
       <published>2018-11-03T18:00:00+09:00</published>
       <updated>2018-11-03T18:00:00+09:00</updated>
       <id>kejdev.github.io/ML-Grammar-2</id>
@@ -911,7 +911,7 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
   
     <entry>
       <title type="html">퍼셉트론(Perceptron)이란?</title>
-      <link href="kejdev.github.io/ML-Grammar-1" rel="alternate" type="text/html" title="퍼셉트론(Perceptron)이란?" />
+      <link href="https://kejdev.github.io/ML-Grammar-1" rel="alternate" type="text/html" title="퍼셉트론(Perceptron)이란?" />
       <published>2018-11-02T18:00:00+09:00</published>
       <updated>2018-11-02T18:00:00+09:00</updated>
       <id>kejdev.github.io/ML-Grammar-1</id>

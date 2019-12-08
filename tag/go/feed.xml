@@ -2,8 +2,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="kejdev.github.io/tag/go/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
+  <link href="https://kejdev.github.io/tag/go/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
   <updated>2019-12-08T16:59:16+09:00</updated>
   <id>kejdev.github.io/tag/go/feed.xml</id>
 
@@ -33,7 +33,7 @@
   
     <entry>
       <title type="html">GO 언어 구문과 자료형 및 변수</title>
-      <link href="kejdev.github.io/GO-Grammar-3" rel="alternate" type="text/html" title="GO 언어 구문과 자료형 및 변수" />
+      <link href="https://kejdev.github.io/GO-Grammar-3" rel="alternate" type="text/html" title="GO 언어 구문과 자료형 및 변수" />
       <published>2019-12-05T18:00:00+09:00</published>
       <updated>2019-12-05T18:00:00+09:00</updated>
       <id>kejdev.github.io/GO-Grammar-3</id>
@@ -141,7 +141,7 @@
   
     <entry>
       <title type="html">GO 언어 설치하기</title>
-      <link href="kejdev.github.io/GO-Grammar-2" rel="alternate" type="text/html" title="GO 언어 설치하기" />
+      <link href="https://kejdev.github.io/GO-Grammar-2" rel="alternate" type="text/html" title="GO 언어 설치하기" />
       <published>2019-12-04T18:00:00+09:00</published>
       <updated>2019-12-04T18:00:00+09:00</updated>
       <id>kejdev.github.io/GO-Grammar-2</id>
@@ -200,7 +200,7 @@ echo %GOPATH%
   
     <entry>
       <title type="html">GO 언어란?</title>
-      <link href="kejdev.github.io/GO-Grammar-1" rel="alternate" type="text/html" title="GO 언어란?" />
+      <link href="https://kejdev.github.io/GO-Grammar-1" rel="alternate" type="text/html" title="GO 언어란?" />
       <published>2019-12-03T22:00:00+09:00</published>
       <updated>2019-12-03T22:00:00+09:00</updated>
       <id>kejdev.github.io/GO-Grammar-1</id>
