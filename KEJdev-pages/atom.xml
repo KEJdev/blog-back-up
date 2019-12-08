@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>GO 언어 구문과 자료형 및 변수</title>
+        
+          <description>&lt;p&gt;GO언어의 구문과 자료형 그리고 변수에 대해 알아보도록 하겠습니다. GO언어는 언어의 장벽이 그렇게 높지 않기 때문에 금방 배우실 수 있습니다. 특히나 C언어를 주로 이용하여 개발을 하셨던 분이거나 익숙하시다면 더욱이 GO언어가 쉽다고 느낄 수 있습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 05 Dec 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/GO-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io/GO-Grammar-3</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>GO 언어 설치하기</title>
         
           <description>&lt;p&gt;GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다.&lt;/p&gt;
