@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://kejdev.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-08T15:22:30+09:00</updated>
-  <id>https://kejdev.github.io/tag/paper/feed.xml</id>
+  <link href="kejdev.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
+  <updated>2019-12-08T16:59:16+09:00</updated>
+  <id>kejdev.github.io/tag/paper/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Large-Scale Image Retrieval with Attentive Deep Local Features</title>
-      <link href="https://kejdev.github.io/Attentive-Deep-Local-Features" rel="alternate" type="text/html" title="Large-Scale Image Retrieval with Attentive Deep Local Features" />
+      <link href="kejdev.github.io/Attentive-Deep-Local-Features" rel="alternate" type="text/html" title="Large-Scale Image Retrieval with Attentive Deep Local Features" />
       <published>2018-01-17T19:00:00+09:00</published>
       <updated>2018-01-17T19:00:00+09:00</updated>
-      <id>https://kejdev.github.io/Attentive-Deep-Local-Features</id>
-      <content type="html" xml:base="https://kejdev.github.io/Attentive-Deep-Local-Features">&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
+      <id>kejdev.github.io/Attentive-Deep-Local-Features</id>
+      <content type="html" xml:base="kejdev.github.io/Attentive-Deep-Local-Features">&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
 &lt;p&gt;Paper URL: https://arxiv.org/pdf/1612.06321.pdf&lt;/p&gt;
 
 &lt;p&gt;이 논문은 CNN 계열의 DELF 라고 부르는 모델을 설명하는 논문입니다.&lt;br /&gt;
