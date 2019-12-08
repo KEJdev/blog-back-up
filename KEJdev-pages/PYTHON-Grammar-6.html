@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Python while문 (while ~ continue ~ break)</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+    
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$'] ],
+    processEscapes: true,
+  }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+    <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="If i was rich, i would eat tteokbokki every day." />
+    <link rel="shortcut icon" href="https://kejdev.github.io//./assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://kejdev.github.io//PYTHON-Grammar-6" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="덕복희" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Python while문 (while ~ continue ~ break)" />
+    <meta property="og:description" content="for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나이며, 문법도 어렵지 않아서 금방 익힐 수 있습니다. while while문 구조는 아래와 같습니다. while 조건문 : 수행할 문장 1 수행할 문장 2 위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다. a=int(input("숫자를 입력하세요 "))" />
+    <meta property="og:url" content="https://kejdev.github.io//PYTHON-Grammar-6" />
+    <meta property="og:image" content="https://kejdev.github.io//../assets/images/python_cover1.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2019-12-05T19:00:00+09:00" />
+    <meta property="article:modified_time" content="2019-12-05T19:00:00+09:00" />
+    <meta property="article:tag" content="Python" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Python while문 (while ~ continue ~ break)" />
+    <meta name="twitter:description" content="for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나이며, 문법도 어렵지 않아서 금방 익힐 수 있습니다. while while문 구조는 아래와 같습니다. while 조건문 : 수행할 문장 1 수행할 문장 2 위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다. a=int(input("숫자를 입력하세요 "))" />
+    <meta name="twitter:url" content="https://kejdev.github.io//" />
+    <meta name="twitter:image" content="https://kejdev.github.io//../assets/images/python_cover1.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="덕복희" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Python" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "덕복희",
+        "logo": "https://kejdev.github.io//./assets/images/blog-icon.png"
+    },
+    "url": "https://kejdev.github.io//PYTHON-Grammar-6",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://kejdev.github.io//../assets/images/python_cover1.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kejdev.github.io//PYTHON-Grammar-6"
+    },
+    "description": "for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나이며, 문법도 어렵지 않아서 금방 익힐 수 있습니다. while while문 구조는 아래와 같습니다. while 조건문 : 수행할 문장 1 수행할 문장 2 위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다. a=int(input("숫자를 입력하세요 "))"
+}
+    </script>
+    
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Python while문 (while ~ continue ~ break)" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    
+    <div class="site-nav-right">
+        
+            <ul class="nav" role="menu">
+    <li class="nav-HOME" role="menuitem"><a href="/">HOME</a></li>
+    <li class="nav-SQL" role="menuitem"><a href="/tag/sql/">SQL</a></li>
+    <li class="nav-PLSQL" role="menuitem"><a href="/tag/plsql/">PLSQL</a></li>
+    <li class="nav-R" role="menuitem"><a href="/tag/r/">R</a></li>
+    <li class="nav-PYTHON" role="menuitem"><a href="/tag/python/">PYTHON</a></li>
+    <li class="nav-MACHINE-LEARNING" role="menuitem"><a href="/tag/machine-learning/">MACHINE-LEARNING</a></li>
+    <li class="nav-go" role="menuitem"><a href="/tag/go/">GO</a></li>
+    <li class="nav-PAPER" role="menuitem"><a href="/tag/paper/">PAPER</a></li>
+    <li class="nav-ALGORITHM" role="menuitem"><a href="/tag/algorithm/">ALGORITHM</a></li>     
+</ul>
+
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-python ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 5 December 2019"> 5 December 2019</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/python/'>PYTHON</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Python while문 (while ~ continue ~ break)</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/../assets/images/python_cover1.png)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나이며, 문법도 어렵지 않아서 금방 익힐 수 있습니다.</p>
+
+<p><br /></p>
+
+<blockquote>
+  <h4 id="while">while</h4>
+</blockquote>
+
+<p>while문 구조는 아래와 같습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while 조건문 : 
+  수행할 문장 1
+  수행할 문장 2
+</code></pre></div></div>
+
+<p>위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"숫자를 입력하세요 "</span><span class="p">))</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>간단하죠?<br />
+이번에는 while loop문으로 log함수를 구현해볼까요?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"진수를 입력하세요 ~ "</span><span class="p">))</span>
+<span class="n">c</span><span class="o">=</span><span class="n">a</span>
+<span class="n">cnt</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"로그 값은 </span><span class="si">%</span><span class="s">i 입니다"</span> <span class="o">%</span><span class="n">cnt</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>조건에 맞으면 while문이 돌아가는 것! 이제 잘 아시겠죠?<br />
+이번에는 간단한 알고리즘을 풀어보도록 할까요?</p>
+
+<p>지겹도록 많이 풀었던 팩토리얼을 while문으로 구현해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"팩토리얼 숫자를 입력하세요 ~ "</span><span class="p">))</span> 
+<span class="n">x</span><span class="o">=</span><span class="n">a</span> 
+    
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">x</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>오늘도 파이썬은 간단하네요.<br />
+다음에는 대입연산자를 이용하는 것에 대해 알아보도록 하겠습니다.</p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/KEJdev">KEJdev</a></h4>
+                                
+                                    <p>If i was rich, I would eat tteokbokki every day.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/KEJdev">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+                
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/./assets/images/covers.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; 덕복희 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/python/">Python</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/PYTHON-Grammar-5">Python for문 개념 ③ (for ~ continue~braeak)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/PYTHON-Grammar-4">Python for문 개념 ②</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/PYTHON-Grammar-3">Python for문 개념 ①</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/python/">
+                                
+                                    See all 5 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/PYTHON-Grammar-5">
+                <div class="post-card-image" style="background-image: url(/../assets/images/python_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/PYTHON-Grammar-5">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Python</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Python for문 개념 ③ (for ~ continue~braeak)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+     
+            
+                <img src="/./assets/images/blog-icon.png" alt="덕복희 icon" />
+            
+            <span>덕복희</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Python while문 (while ~ continue ~ break)</div>
+    
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+        
+        <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5107584879184113",
+            enable_page_level_ads: true
+          });
+        </script>
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/./assets/images/blog-icon.png" alt="덕복희" />
+                
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-148043528-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

@@ -3,11 +3,76 @@
   <channel>
     <title>덕복희</title>
     <description>If i was rich, i would eat tteokbokki every day.</description>
-    <link>kejdev.github.io//</link>
-    <atom:link href="kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Dec 2019 16:59:29 +0900</pubDate>
-    <lastBuildDate>Sun, 08 Dec 2019 16:59:29 +0900</lastBuildDate>
+    <link>https://kejdev.github.io///</link>
+    <atom:link href="https://kejdev.github.io///feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 08 Dec 2019 17:33:18 +0900</pubDate>
+    <lastBuildDate>Sun, 08 Dec 2019 17:33:18 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Python while문 (while ~ continue ~ break)</title>
+        <description>&lt;p&gt;for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나이며, 문법도 어렵지 않아서 금방 익힐 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;while&quot;&gt;while&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;while문 구조는 아래와 같습니다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while 조건문 : 
+  수행할 문장 1
+  수행할 문장 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;숫자를 입력하세요 &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;간단하죠?&lt;br /&gt;
+이번에는 while loop문으로 log함수를 구현해볼까요?&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;진수를 입력하세요 ~ &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;로그 값은 &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;i 입니다&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;조건에 맞으면 while문이 돌아가는 것! 이제 잘 아시겠죠?&lt;br /&gt;
+이번에는 간단한 알고리즘을 풀어보도록 할까요?&lt;/p&gt;
+
+&lt;p&gt;지겹도록 많이 풀었던 팩토리얼을 while문으로 구현해보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;팩토리얼 숫자를 입력하세요 ~ &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; 
+    
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;오늘도 파이썬은 간단하네요.&lt;br /&gt;
+다음에는 대입연산자를 이용하는 것에 대해 알아보도록 하겠습니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 05 Dec 2019 19:00:00 +0900</pubDate>
+        <link>https://kejdev.github.io///PYTHON-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PYTHON-Grammar-6</guid>
+        
+        <category>PYTHON</category>
+        
+        
+      </item>
     
       <item>
         <title>Python for문 개념 ③ (for ~ continue~braeak)</title>
@@ -63,8 +128,8 @@
 
 </description>
         <pubDate>Thu, 05 Dec 2019 19:00:00 +0900</pubDate>
-        <link>kejdev.github.io//PYTHON-Grammar-5</link>
-        <guid isPermaLink="true">kejdev.github.io//PYTHON-Grammar-5</guid>
+        <link>https://kejdev.github.io///PYTHON-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PYTHON-Grammar-5</guid>
         
         <category>PYTHON</category>
         
@@ -151,8 +216,8 @@
 
 </description>
         <pubDate>Thu, 05 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//GO-Grammar-3</link>
-        <guid isPermaLink="true">kejdev.github.io//GO-Grammar-3</guid>
+        <link>https://kejdev.github.io///GO-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io///GO-Grammar-3</guid>
         
         <category>GO</category>
         
@@ -190,8 +255,8 @@ echo %GOPATH%
 
 </description>
         <pubDate>Wed, 04 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//GO-Grammar-2</link>
-        <guid isPermaLink="true">kejdev.github.io//GO-Grammar-2</guid>
+        <link>https://kejdev.github.io///GO-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io///GO-Grammar-2</guid>
         
         <category>GO</category>
         
@@ -235,8 +300,8 @@ echo %GOPATH%
 
 </description>
         <pubDate>Tue, 03 Dec 2019 22:00:00 +0900</pubDate>
-        <link>kejdev.github.io//GO-Grammar-1</link>
-        <guid isPermaLink="true">kejdev.github.io//GO-Grammar-1</guid>
+        <link>https://kejdev.github.io///GO-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io///GO-Grammar-1</guid>
         
         <category>GO</category>
         
@@ -310,8 +375,8 @@ echo %GOPATH%
 
 </description>
         <pubDate>Tue, 03 Dec 2019 20:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ALGORITHM-3</link>
-        <guid isPermaLink="true">kejdev.github.io//ALGORITHM-3</guid>
+        <link>https://kejdev.github.io///ALGORITHM-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ALGORITHM-3</guid>
         
         <category>ALGORITHM</category>
         
@@ -393,8 +458,8 @@ echo %GOPATH%
 
 </description>
         <pubDate>Tue, 03 Dec 2019 19:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ALGORITHM-2</link>
-        <guid isPermaLink="true">kejdev.github.io//ALGORITHM-2</guid>
+        <link>https://kejdev.github.io///ALGORITHM-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ALGORITHM-2</guid>
         
         <category>ALGORITHM</category>
         
@@ -481,8 +546,8 @@ echo %GOPATH%
 다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 &lt;a href=&quot;&quot;&gt;여기&lt;/a&gt;에서 보실 수 있습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//R-Grammar-6</link>
-        <guid isPermaLink="true">kejdev.github.io//R-Grammar-6</guid>
+        <link>https://kejdev.github.io///R-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io///R-Grammar-6</guid>
         
         <category>R</category>
         
@@ -569,8 +634,8 @@ echo %GOPATH%
 다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 &lt;a href=&quot;https://github.com/KEJdev/R-Example&quot;&gt;여기&lt;/a&gt;에서 보실 수 있습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//R-Grammar-6</link>
-        <guid isPermaLink="true">kejdev.github.io//R-Grammar-6</guid>
+        <link>https://kejdev.github.io///R-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io///R-Grammar-6</guid>
         
         <category>R</category>
         
@@ -643,8 +708,8 @@ echo %GOPATH%
 
 </description>
         <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//R-Grammar-5</link>
-        <guid isPermaLink="true">kejdev.github.io//R-Grammar-5</guid>
+        <link>https://kejdev.github.io///R-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io///R-Grammar-5</guid>
         
         <category>R</category>
         
@@ -736,8 +801,8 @@ python에서 if 문을 여러개 사용할때는 &lt;strong&gt;elif&lt;/strong&g
 
 </description>
         <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//PYTHON-Grammar-4</link>
-        <guid isPermaLink="true">kejdev.github.io//PYTHON-Grammar-4</guid>
+        <link>https://kejdev.github.io///PYTHON-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PYTHON-Grammar-4</guid>
         
         <category>PYTHON</category>
         
@@ -834,8 +899,8 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 
 </description>
         <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//SQL-Grammar-7</link>
-        <guid isPermaLink="true">kejdev.github.io//SQL-Grammar-7</guid>
+        <link>https://kejdev.github.io///SQL-Grammar-7</link>
+        <guid isPermaLink="true">https://kejdev.github.io///SQL-Grammar-7</guid>
         
         <category>SQL</category>
         
@@ -969,8 +1034,8 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 다음 포스팅 땐 if문과 for 문을 섞어서 사용하는 것에 대하여 알아보도록 하겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//PYTHON-Grammar-3</link>
-        <guid isPermaLink="true">kejdev.github.io//PYTHON-Grammar-3</guid>
+        <link>https://kejdev.github.io///PYTHON-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PYTHON-Grammar-3</guid>
         
         <category>PYTHON</category>
         
@@ -1114,8 +1179,8 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 
 </description>
         <pubDate>Fri, 29 Nov 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ML-Grammar-6</link>
-        <guid isPermaLink="true">kejdev.github.io//ML-Grammar-6</guid>
+        <link>https://kejdev.github.io///ML-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ML-Grammar-6</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1153,8 +1218,8 @@ if문과 loop문을 사용할 수 있습니다.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ALGORITHM-1</link>
-        <guid isPermaLink="true">kejdev.github.io//ALGORITHM-1</guid>
+        <link>https://kejdev.github.io///ALGORITHM-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ALGORITHM-1</guid>
         
         <category>ALGORITHM</category>
         
@@ -1278,8 +1343,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//PYTHON-Grammar-2</link>
-        <guid isPermaLink="true">kejdev.github.io//PYTHON-Grammar-2</guid>
+        <link>https://kejdev.github.io///PYTHON-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PYTHON-Grammar-2</guid>
         
         <category>PYTHON</category>
         
@@ -1383,8 +1448,8 @@ if문은 그대로 두고 위에 한줄만 추가한다면 함수가 될 수 있
 
 </description>
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//PYTHON-Grammar-1</link>
-        <guid isPermaLink="true">kejdev.github.io//PYTHON-Grammar-1</guid>
+        <link>https://kejdev.github.io///PYTHON-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PYTHON-Grammar-1</guid>
         
         <category>PYTHON</category>
         
@@ -1498,8 +1563,8 @@ $2x + 0$ 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 됩니다.&lt;/p
 
 </description>
         <pubDate>Tue, 29 Oct 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ML-Grammar-5</link>
-        <guid isPermaLink="true">kejdev.github.io//ML-Grammar-5</guid>
+        <link>https://kejdev.github.io///ML-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ML-Grammar-5</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1604,8 +1669,8 @@ test data도 정규화 작업을 한 후에 knn을 해주세요.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 27 Oct 2019 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//R-Grammar-4</link>
-        <guid isPermaLink="true">kejdev.github.io//R-Grammar-4</guid>
+        <link>https://kejdev.github.io///R-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io///R-Grammar-4</guid>
         
         <category>R</category>
         
@@ -1672,8 +1737,8 @@ Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지�
 
 </description>
         <pubDate>Wed, 07 Nov 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ML-Grammar-4</link>
-        <guid isPermaLink="true">kejdev.github.io//ML-Grammar-4</guid>
+        <link>https://kejdev.github.io///ML-Grammar-4</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ML-Grammar-4</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1834,8 +1899,8 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 다음 포스팅에서는 기본 활성화 함수이외 다른 활성화 함수에 대해 다루어 보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 06 Nov 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ML-Grammar-3</link>
-        <guid isPermaLink="true">kejdev.github.io//ML-Grammar-3</guid>
+        <link>https://kejdev.github.io///ML-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ML-Grammar-3</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -1930,8 +1995,8 @@ end;
 다음 포스팅에서는 좀 더 어려운 package하는 방법에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Mon, 05 Nov 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//PLSQL-Grammar-2</link>
-        <guid isPermaLink="true">kejdev.github.io//PLSQL-Grammar-2</guid>
+        <link>https://kejdev.github.io///PLSQL-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PLSQL-Grammar-2</guid>
         
         <category>PLSQL</category>
         
@@ -2026,8 +2091,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
 </description>
         <pubDate>Sun, 04 Nov 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//PLSQL-Grammar-1</link>
-        <guid isPermaLink="true">kejdev.github.io//PLSQL-Grammar-1</guid>
+        <link>https://kejdev.github.io///PLSQL-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io///PLSQL-Grammar-1</guid>
         
         <category>PLSQL</category>
         
@@ -2312,8 +2377,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 &lt;p&gt;다음 포스팅에서는 이제 신경망의 활성화 함수에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Nov 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ML-Grammar-2</link>
-        <guid isPermaLink="true">kejdev.github.io//ML-Grammar-2</guid>
+        <link>https://kejdev.github.io///ML-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ML-Grammar-2</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -2474,8 +2539,8 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 다음 포스팅엔 퍼셉트론을 PYTHON으로 간단하게 구현해보도록 하겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 02 Nov 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//ML-Grammar-1</link>
-        <guid isPermaLink="true">kejdev.github.io//ML-Grammar-1</guid>
+        <link>https://kejdev.github.io///ML-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io///ML-Grammar-1</guid>
         
         <category>MACHINE-LEARNING</category>
         
@@ -2579,8 +2644,8 @@ knn은 생각보다 엄청 간단하다라는 것을 알 수 있죠?&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 01 Nov 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//R-Grammar-3</link>
-        <guid isPermaLink="true">kejdev.github.io//R-Grammar-3</guid>
+        <link>https://kejdev.github.io///R-Grammar-3</link>
+        <guid isPermaLink="true">https://kejdev.github.io///R-Grammar-3</guid>
         
         <category>R</category>
         
@@ -2644,8 +2709,8 @@ knn을 하기 위한 데이터는 제 깃허브에 있으니, &lt;a href=&quot;h
 
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//R-Grammar-2</link>
-        <guid isPermaLink="true">kejdev.github.io//R-Grammar-2</guid>
+        <link>https://kejdev.github.io///R-Grammar-2</link>
+        <guid isPermaLink="true">https://kejdev.github.io///R-Grammar-2</guid>
         
         <category>R</category>
         
@@ -2783,8 +2848,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 다음 포스팅부터는 간단하게 R을 이용하여 머신러닝에 대해 알아보겠습니다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//R-Grammar-1</link>
-        <guid isPermaLink="true">kejdev.github.io//R-Grammar-1</guid>
+        <link>https://kejdev.github.io///R-Grammar-1</link>
+        <guid isPermaLink="true">https://kejdev.github.io///R-Grammar-1</guid>
         
         <category>R</category>
         
@@ -2916,8 +2981,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Wed, 22 Aug 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//SQL-Grammar-6</link>
-        <guid isPermaLink="true">kejdev.github.io//SQL-Grammar-6</guid>
+        <link>https://kejdev.github.io///SQL-Grammar-6</link>
+        <guid isPermaLink="true">https://kejdev.github.io///SQL-Grammar-6</guid>
         
         <category>SQL</category>
         
@@ -3078,103 +3143,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 
 </description>
         <pubDate>Tue, 21 Aug 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//SQL-Grammar-5</link>
-        <guid isPermaLink="true">kejdev.github.io//SQL-Grammar-5</guid>
-        
-        <category>SQL</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>데이터 제한 및 정렬 2</title>
-        <description>&lt;p&gt;저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
-
-&lt;p&gt;우선 여태까지 배워본 것을 생각하며 간단하게 사원번호가 7788, 7902, 7369번인 사원들의 사원번호와 이름을 출력해볼까요 ? 
-출력하는 문법은 두가지로 쓸 수 있는데요.&lt;br /&gt;
-첫번째 방법은 아래와 같이 &lt;strong&gt;or&lt;/strong&gt;을 사용하여 넣는 방법이 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7788&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7902&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7369&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;두번째 방법은 간단하게 &lt;strong&gt;in&lt;/strong&gt;을 사용하는 방법이 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empon&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7788&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7902&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7369&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;두번째 방법처럼 작성하시면 깔끔한 SQL문법을 작성하실 수 있습니다.&lt;br /&gt;
-이번엔 in을 이용한 문법을 좀 더 응용해볼까요?&lt;br /&gt;
-직업이 SALESMAN, ANALYST가 아닌 사원들의 이름과 직업을 출력해볼까요?&lt;br /&gt;
-영어 문법이라고 생각하고 작성하시면 쉽습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'SALESMAN'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ANALYST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 &lt;strong&gt;not in&lt;/strong&gt;을 사용해서 출력하면 됩니다.&lt;br /&gt;
-생각보다 어렵지 않죠 ?&lt;/p&gt;
-
-&lt;p&gt;재밌는 문제를 한번 풀어볼까요?&lt;br /&gt;
-커미션이 null인 사원들의 이름과 커미션을 출력하려면 어떻게 해야댈까요? null은 저번 포스팅에서도 알려드렸듯이, 알 수 없는 값이므로 비교할 수 없습니다. 그렇다면 null만 출력하려면 어떻게 해야댈까요?&lt;/p&gt;
-
-&lt;p&gt;아래와 같이 SQL을 작성하시면 null값을 출력할 수  있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;만약에 아래와 같이 작성하셨다면, 에러를 확인할 수 있을꺼예요.
-에러가 나는 이유는 아까 위에서도 말을 했지만, 알 수 없는 값이므로 비교 할 수 없기 때문에 에러가 난답니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;order-by&quot;&gt;order by&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;이번에는 &lt;strong&gt;order by&lt;/strong&gt;절에 대해 알아볼까요?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;order by&lt;/strong&gt;절은 데이터를 정렬할 때 쓰는 절입니다.&lt;br /&gt;
-&lt;strong&gt;order by&lt;/strong&gt; 다음에 &lt;strong&gt;acsending&lt;/strong&gt;를 쓰면 오름차순으로 정렬됩니다. 생략 시에는 디폴트로 &lt;strong&gt;acs&lt;/strong&gt;가 사용되며, &lt;strong&gt;descending&lt;/strong&gt;을 사용하게 되면 내림차순으로 정렬됩니다.&lt;/p&gt;
-
-&lt;p&gt;우선 간단하게 order by를 사용하여 SQL을 출력해볼까요?&lt;br /&gt;
-이름과 월급을 출력하는데 월급이 낮은 사원부터 출력되게 하려면 어떻게 해야댈까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;asc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 문법을 작성하면 된답니다. 출력이 잘되는 것을 확인하셨나요? 앗 ! 여기서 주의할 점은 order by절은 selete문에서도 &lt;strong&gt;맨 마지막에 사용&lt;/strong&gt;되고, 실행 또한 &lt;strong&gt;맨 마지막에 실행&lt;/strong&gt;된답니다.&lt;/p&gt;
-
-&lt;p&gt;한번 더 order by절을 사용해 출력해볼까요?&lt;br /&gt;
-직업이 SALESMAN인 사원들의 이름과 월급을 출력하는 월급이 높은 사원부터 출력하는 SQL문법을 짜볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'SALESMAN'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sal&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이번엔 높은 사원부터 출력하는 것이기 때문에 &lt;strong&gt;desc&lt;/strong&gt;를 사용했습니다.&lt;br /&gt;
-order by절은 생각보다 어렵지 않죠? 
-오늘도 이렇게 간단하고 쉽게 SQL문법에 대해 알아봤습니다.&lt;/p&gt;
-
-&lt;p&gt;다음 포스팅 때는 문자함수와 날짜 함수에 대해 알아볼께요.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 20 Aug 2018 18:00:00 +0900</pubDate>
-        <link>kejdev.github.io//SQL-Grammar-4</link>
-        <guid isPermaLink="true">kejdev.github.io//SQL-Grammar-4</guid>
+        <link>https://kejdev.github.io///SQL-Grammar-5</link>
+        <guid isPermaLink="true">https://kejdev.github.io///SQL-Grammar-5</guid>
         
         <category>SQL</category>
         
