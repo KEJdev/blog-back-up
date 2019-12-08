@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="kejdev.github.io/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-08T16:59:16+09:00</updated>
-  <id>kejdev.github.io/tag/algorithm/feed.xml</id>
+  <link href="https://kejdev.github.io/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
+  <updated>2019-12-08T22:38:50+09:00</updated>
+  <id>https://kejdev.github.io/tag/algorithm/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)</title>
-      <link href="kejdev.github.io/ALGORITHM-3" rel="alternate" type="text/html" title="재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)" />
+      <link href="https://kejdev.github.io/ALGORITHM-3" rel="alternate" type="text/html" title="재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)" />
       <published>2019-12-03T20:00:00+09:00</published>
       <updated>2019-12-03T20:00:00+09:00</updated>
-      <id>kejdev.github.io/ALGORITHM-3</id>
-      <content type="html" xml:base="kejdev.github.io/ALGORITHM-3">&lt;p&gt;계속해서 재귀 알고리즘에 익숙해지기 위해 알고리즘 단골 문제인 팩토리얼과 최대공약수를 풀어보겠습니다. 재귀 함수가 무엇인지는 저번 포스팅에서 설명했으므로 이번에는 자세한 이야기는 생략하겠습니다.&lt;/p&gt;
+      <id>https://kejdev.github.io/ALGORITHM-3</id>
+      <content type="html" xml:base="https://kejdev.github.io/ALGORITHM-3">&lt;p&gt;계속해서 재귀 알고리즘에 익숙해지기 위해 알고리즘 단골 문제인 팩토리얼과 최대공약수를 풀어보겠습니다. 재귀 함수가 무엇인지는 저번 포스팅에서 설명했으므로 이번에는 자세한 이야기는 생략하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -128,11 +128,11 @@
   
     <entry>
       <title type="html">재귀 알고리즘으로 구구단 출력하기 (Python)</title>
-      <link href="kejdev.github.io/ALGORITHM-2" rel="alternate" type="text/html" title="재귀 알고리즘으로 구구단 출력하기 (Python)" />
+      <link href="https://kejdev.github.io/ALGORITHM-2" rel="alternate" type="text/html" title="재귀 알고리즘으로 구구단 출력하기 (Python)" />
       <published>2019-12-03T19:00:00+09:00</published>
       <updated>2019-12-03T19:00:00+09:00</updated>
-      <id>kejdev.github.io/ALGORITHM-2</id>
-      <content type="html" xml:base="kejdev.github.io/ALGORITHM-2">&lt;p&gt;알고리즘 문제를 풀면서 반드시 알아야 할 알고리즘 중 하나는 아마 재귀 알고리즘일거라 생각합니다. 재귀 함수를 사용할 수 있는 곳에서는 재귀 함수를 사용하며 알고리즘을 풀면서 공부를 해야 된답니다.&lt;/p&gt;
+      <id>https://kejdev.github.io/ALGORITHM-2</id>
+      <content type="html" xml:base="https://kejdev.github.io/ALGORITHM-2">&lt;p&gt;알고리즘 문제를 풀면서 반드시 알아야 할 알고리즘 중 하나는 아마 재귀 알고리즘일거라 생각합니다. 재귀 함수를 사용할 수 있는 곳에서는 재귀 함수를 사용하며 알고리즘을 풀면서 공부를 해야 된답니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -231,11 +231,11 @@
   
     <entry>
       <title type="html">두개의 숫자의 합 구하기(PLSQL)</title>
-      <link href="kejdev.github.io/ALGORITHM-1" rel="alternate" type="text/html" title="두개의 숫자의 합 구하기(PLSQL)" />
+      <link href="https://kejdev.github.io/ALGORITHM-1" rel="alternate" type="text/html" title="두개의 숫자의 합 구하기(PLSQL)" />
       <published>2019-11-26T18:00:00+09:00</published>
       <updated>2019-11-26T18:00:00+09:00</updated>
-      <id>kejdev.github.io/ALGORITHM-1</id>
-      <content type="html" xml:base="kejdev.github.io/ALGORITHM-1">&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
+      <id>https://kejdev.github.io/ALGORITHM-1</id>
+      <content type="html" xml:base="https://kejdev.github.io/ALGORITHM-1">&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.&lt;/p&gt;
 
 &lt;p&gt;PLSQL로 어떻게 알고리즘을 풀 수 있는가? 를 물어보신다면, &lt;strong&gt;PLSQL이 무엇인가?&lt;/strong&gt; 라는 포스팅이 있으니 참고 하라고 말씀드리고 싶습니다만!
