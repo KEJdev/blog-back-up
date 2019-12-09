@@ -15,7 +15,6 @@ author: KEJdev
 use_math: true
 ---  
 
-
 for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나이며, 문법도 어렵지 않아서 금방 익힐 수 있습니다.  
 
 <br>   
