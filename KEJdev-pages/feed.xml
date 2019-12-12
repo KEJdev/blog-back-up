@@ -5,8 +5,8 @@
     <description>If i was rich, i would eat tteokbokki every day.</description>
     <link>https://kejdev.github.io//</link>
     <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 12 Dec 2019 21:51:21 +0900</pubDate>
-    <lastBuildDate>Thu, 12 Dec 2019 21:51:21 +0900</lastBuildDate>
+    <pubDate>Thu, 12 Dec 2019 21:56:48 +0900</pubDate>
+    <lastBuildDate>Thu, 12 Dec 2019 21:56:48 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -469,6 +469,8 @@ echo %GOPATH%
       <item>
         <title>Knn을 이용한 동물 분류하기</title>
         <description>&lt;p&gt;여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 &lt;a href=&quot;http://archive.ics.uci.edu/ml/datasets/zoo&quot;&gt;여기&lt;/a&gt;를 클릭하면 보실 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;dataset&quot;&gt;DataSet&lt;/h4&gt;
