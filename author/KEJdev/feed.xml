@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-09T21:47:45+09:00</updated>
+  <updated>2019-12-12T21:40:52+09:00</updated>
   <id>https://kejdev.github.io/author/KEJdev/feed.xml</id>
 
   
@@ -47,9 +47,9 @@
 
 &lt;p&gt;while문 구조는 아래와 같습니다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while 조건문 : 
-  수행할 문장 1
-  수행할 문장 2
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# while 조건문 : &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   수행할 문장 1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   수행할 문장 2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.&lt;/p&gt;
