@@ -5,8 +5,8 @@
     <description>If i was rich, i would eat tteokbokki every day.</description>
     <link>https://kejdev.github.io//</link>
     <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 12 Dec 2019 21:40:52 +0900</pubDate>
-    <lastBuildDate>Thu, 12 Dec 2019 21:40:52 +0900</lastBuildDate>
+    <pubDate>Thu, 12 Dec 2019 21:51:21 +0900</pubDate>
+    <lastBuildDate>Thu, 12 Dec 2019 21:51:21 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -2868,6 +2868,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다.&lt;br /&gt;
 그러면 오늘도 SQL에 대해 알아보러 갈까요?&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;h4 id=&quot;숫자함수와-날짜함수&quot;&gt;숫자함수와 날짜함수&lt;/h4&gt;
 &lt;/blockquote&gt;
@@ -3000,6 +3002,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         <description>&lt;p&gt;이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.&lt;br /&gt;
 우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;h4 id=&quot;함수를-사용해야-하는-이유&quot;&gt;함수를 사용해야 하는 이유?&lt;/h4&gt;
 &lt;/blockquote&gt;
@@ -3008,6 +3012,8 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
 간단한 이유죠?&lt;/p&gt;
 
 &lt;p&gt;그렇다면 함수의 종류의 대해 알아볼까요 ?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;함수의-종류&quot;&gt;함수의 종류&lt;/h4&gt;

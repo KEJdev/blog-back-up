@@ -69,6 +69,9 @@ from emp
 where comm = null;
 ```  
 
+<br>  
+
+
 > #### order by 
 
 이번에는 **order by**절에 대해 알아볼까요? 
