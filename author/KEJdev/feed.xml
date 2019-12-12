@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/author/KEJdev/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-12T21:51:21+09:00</updated>
+  <updated>2019-12-12T22:17:04+09:00</updated>
   <id>https://kejdev.github.io/author/KEJdev/feed.xml</id>
 
   
@@ -47,10 +47,7 @@
 
 &lt;p&gt;while문 구조는 아래와 같습니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# while 조건문 : &lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#   수행할 문장 1&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#   수행할 문장 2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;center&gt;&lt;img src=&quot;../assets/images/python_a5.png&quot; width=&quot;180&quot; height=&quot;80&quot; /&gt;&lt;/center&gt;
 
 &lt;p&gt;위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.&lt;/p&gt;
 
@@ -635,6 +632,8 @@ echo %GOPATH%
       <updated>2019-12-03T18:00:00+09:00</updated>
       <id>https://kejdev.github.io/R-Grammar-6</id>
       <content type="html" xml:base="https://kejdev.github.io/R-Grammar-6">&lt;p&gt;여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 &lt;a href=&quot;http://archive.ics.uci.edu/ml/datasets/zoo&quot;&gt;여기&lt;/a&gt;를 클릭하면 보실 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;dataset&quot;&gt;DataSet&lt;/h4&gt;

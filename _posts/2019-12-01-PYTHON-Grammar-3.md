@@ -25,11 +25,9 @@ use_math: true
 
 파이썬의 for 문의 기본적인 구조는 아래와 같습니다.  
 
-```python
-# for "변수" in "리스트( 또는 튜플, 문자열 )"
-# 수행할 문장 1
-# 수행할 문장 2
-```
+<center><img src="../assets/images/python_a3.png" width="300" height="80"></center> 
+
+
 
 for문은 리스트나 튜플, 문자열의 첫번째 요소부터 마지막 요소까지 차례로 변수에 대입되어 "수행할 문장1", "수행할 문장2"등이 수행됩니다. 
 
@@ -43,6 +41,7 @@ for문은 리스트나 튜플, 문자열의 첫번째 요소부터 마지막 요
 #        []    ()      {}
 # "실행문"
 ```
+<center><img src="../assets/images/python_a6.png" width="240" height="100"></center> 
 
 예제를 보면서 설명해보겠습니다.  
 숫자 1부터 3까지를 for문을 이용하여 출력해보겠습니다. 

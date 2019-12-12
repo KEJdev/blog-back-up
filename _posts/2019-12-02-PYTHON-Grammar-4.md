@@ -66,16 +66,7 @@ for emp_list in emp_csv:
 그럼 이번엔 if문을 여러개 사용하여 여러가지 조건을 걸어볼까요 ?  
 python에서 if 문을 여러개 사용할때는 **elif**를 사용합니다.  
 
-```python 
-# if "조건1":
-#   # 실행문
-# elif "조건2":
-#   # 실행문
-# elif "조건3":
-#   # 실행문 
-# else: 
-#   # 실행문 
-```
+<center><img src="../assets/images/python_a4.png" width="200" height="240"></center> 
 
 해석하자면 조건이 true이면 실행하고 조건이 flese이면 실행을 하지 않다라는 뜻이고, 마지막 else는 위에 있는 조건 그 무엇도 암것도 걸리는게 없다면 실행하여라 라는 뜻입니다.  
 
@@ -98,14 +89,6 @@ for emp_list in emp_csv:
 ```
 
 역시 파이썬은 코드가 간결하고 좋은 것 같네요. 
-
-
-
-
-
-
-
-
 
 
 
