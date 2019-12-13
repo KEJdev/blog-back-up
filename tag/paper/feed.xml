@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-12T22:17:04+09:00</updated>
+  <updated>2019-12-13T16:59:35+09:00</updated>
   <id>https://kejdev.github.io/tag/paper/feed.xml</id>
 
   
@@ -38,13 +38,14 @@
       <updated>2018-01-17T19:00:00+09:00</updated>
       <id>https://kejdev.github.io/Attentive-Deep-Local-Features</id>
       <content type="html" xml:base="https://kejdev.github.io/Attentive-Deep-Local-Features">&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
-&lt;p&gt;Paper URL: https://arxiv.org/pdf/1612.06321.pdf&lt;/p&gt;
+
+&lt;p&gt;Paper URL: &lt;a href=&quot;https://arxiv.org/pdf/1612.06321.pdf&quot;&gt;https://arxiv.org/pdf/1612.06321.pdf&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;이 논문은 CNN 계열의 DELF 라고 부르는 모델을 설명하는 논문입니다.&lt;br /&gt;
 CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해도 아시죠?&lt;br /&gt;
 혹시 모르니, 나중에 CNN 모델을 더 자세하게 따로 다루겠습니다.&lt;/p&gt;
 
-&lt;p&gt;CNN은 이미지 연구 분야에서 대단한 성과를 이뤘지만 CNN의 단점이 의외로 많답니다. &lt;br /&gt;
+&lt;p&gt;CNN은 이미지 연구 분야에서 대단한 성과를 이뤘지만 CNN의 단점이 의외로 많답니다.
 혹시 대규모의 이미지 검색 시스템에서는 성능이 무척이나 떨어진다는 것을 아시나요?&lt;/p&gt;
 
 &lt;p&gt;실제로 CNN을 이용하여 방대한 이미지를 검색하는 시스템에서는 거의 사용하기 힘들다고 합니다. 그렇다면 CNN을 이용해서 방대한 이미지를 검색하려면 어떻게 해야댈까요 ?&lt;/p&gt;
@@ -60,7 +61,7 @@ CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해�
 
 &lt;p&gt;DELF모델은 아래의 그림과 같은 구조를 가지고 있습니다.&lt;/p&gt;
 
-&lt;center&gt;&lt;img src=&quot;/../assets/images/delf.png&quot; width=&quot;850&quot; height=&quot;500&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;img src=&quot;/../assets/images/delf.png&quot; width=&quot;850&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;모델의 구조에 대해서는 아래에서 천천히 알아볼께요.&lt;/p&gt;
 
@@ -79,11 +80,11 @@ CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해�
 
 &lt;p&gt;아래의 이미지는 데이터의 일부입니다.&lt;/p&gt;
 
-&lt;center&gt;&lt;img src=&quot;/../assets/images/(a)data.png&quot; width=&quot;550&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
-&lt;center&gt;&lt;img src=&quot;/../assets/images/(b)data.png&quot; width=&quot;550&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
-&lt;center&gt;&lt;img src=&quot;/../assets/images/(c)data.png&quot; width=&quot;550&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;img src=&quot;/../assets/images/(a)data.png&quot; width=&quot;550&quot; height=&quot;300&quot; /&gt;
+&lt;img src=&quot;/../assets/images/(b)data.png&quot; width=&quot;550&quot; height=&quot;300&quot; /&gt;
+&lt;img src=&quot;/../assets/images/(c)data.png&quot; width=&quot;550&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ground_truth&quot;&gt;Ground Truth&lt;/a&gt; 정보를 만들기 위해서 &lt;strong&gt;아래의 두가지 feature 정보를 활용&lt;/strong&gt;했습니다. 
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ground_truth&quot;&gt;Ground Truth&lt;/a&gt; 정보를 만들기 위해서 &lt;strong&gt;아래의 두가지 feature 정보를 활용&lt;/strong&gt;했습니다.
 사실 정확한 Ground Truth를 만드는 것이 매우 어렵고 힘든 일입니다. 왜냐하면, GPS 정보가 잘못되어 있을 수 있고, Landmark 데이터가 너무 다양한 각도에서 촬영되어 서로 다른 구조물로 보일 수 있기 때문이예요. 그래서 실측 거리 25km 이내로 한정하여 구하면 적당히 좋은 결과를 얻을 수 있습니다.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -103,7 +104,7 @@ CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해�
 아래의 그림은 맨 처음에 보여드린 DELF의 전체적인 구조입니다. 
 기억나시나요 ?&lt;/p&gt;
 
-&lt;center&gt;&lt;img src=&quot;/../assets/images/delf.png&quot; width=&quot;850&quot; height=&quot;500&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;img src=&quot;/../assets/images/delf.png&quot; width=&quot;850&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;DELF 모델의 기본적인 백본은 ResNet50입니다.&lt;br /&gt;
 ResNet50을 사용한 이유는 &lt;a href=&quot;https://blog.naver.com/PostView.nhn?blogId=laonple&amp;amp;logNo=220958109081&amp;amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F&quot;&gt;FCN&lt;/a&gt; 정보를 활용하기위해서 사용했으며, pretrain 된 net에서 conv4_x를 사용했습니다.&lt;/p&gt;
@@ -112,7 +113,7 @@ ResNet50을 사용한 이유는 &lt;a href=&quot;https://blog.naver.com/PostView
 입력 이미지는 모두 center crop 한 뒤에 250x250으로 rescale 되는데, 여기서 또 244x244 크기로 랜덤 crop을 거칩니다.&lt;br /&gt;
 이 과정에서 object나 patch 레벨에서의 정보는 사용하지 않는다고 합니다.&lt;/p&gt;
 
-&lt;center&gt;&lt;img src=&quot;/../assets/images/models.png&quot; width=&quot;700&quot; height=&quot;500&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;img src=&quot;/../assets/images/models.png&quot; width=&quot;700&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;추출된 feature를 모두 사용하는 것이 아니라 Attention을 이용해서 keypoint만 추출 한다고 합니다.
 keypoint를 추출하는 이유는 시스템 효율화에도 매우 중요하며, 요즘 Attention을 이용해 신경망을 만드는 것이 트렌드이니, 혹시나 Attention을 모르신다면, 이 기회에 알아보는 것도 좋겠습니다.&lt;/p&gt;
@@ -195,7 +196,7 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
       
 
       
-        <summary type="html">Large-Scale Image Retrieval with Attentive Deep Local Features Paper URL: https://arxiv.org/pdf/1612.06321.pdf</summary>
+        <summary type="html">Large-Scale Image Retrieval with Attentive Deep Local Features</summary>
       
 
       

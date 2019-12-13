@@ -16,13 +16,14 @@ use_math: true
 ---  
 
 ### Large-Scale Image Retrieval with Attentive Deep Local Features  
-Paper URL: https://arxiv.org/pdf/1612.06321.pdf 
+
+Paper URL: <https://arxiv.org/pdf/1612.06321.pdf>
 
 이 논문은 CNN 계열의 DELF 라고 부르는 모델을 설명하는 논문입니다.  
 CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해도 아시죠?  
-혹시 모르니, 나중에 CNN 모델을 더 자세하게 따로 다루겠습니다. 
+혹시 모르니, 나중에 CNN 모델을 더 자세하게 따로 다루겠습니다.
 
-CNN은 이미지 연구 분야에서 대단한 성과를 이뤘지만 CNN의 단점이 의외로 많답니다.   
+CNN은 이미지 연구 분야에서 대단한 성과를 이뤘지만 CNN의 단점이 의외로 많답니다.
 혹시 대규모의 이미지 검색 시스템에서는 성능이 무척이나 떨어진다는 것을 아시나요?
 
 실제로 CNN을 이용하여 방대한 이미지를 검색하는 시스템에서는 거의 사용하기 힘들다고 합니다. 그렇다면 CNN을 이용해서 방대한 이미지를 검색하려면 어떻게 해야댈까요 ?  
@@ -34,10 +35,9 @@ CNN은 이미지 연구 분야에서 대단한 성과를 이뤘지만 CNN의 단
 이 논문은 CNN을 활용한 대규모 이미지 검색 시스템을 만드는 것이 목적입니다.  
 논문에서는 CNN기반의 DELF 라는 모델을 만들었습니다.  
 
-
 DELF모델은 아래의 그림과 같은 구조를 가지고 있습니다. 
 
-<center><img src="/../assets/images/delf.png" width="850" height="500"></center>
+<img src="/../assets/images/delf.png" width="850" height="500">
   
 모델의 구조에 대해서는 아래에서 천천히 알아볼께요.  
 
@@ -55,29 +55,27 @@ DELF모델은 아래의 그림과 같은 구조를 가지고 있습니다.
 
 아래의 이미지는 데이터의 일부입니다.  
 
-<center><img src="/../assets/images/(a)data.png" width="550" height="300"></center>
-<center><img src="/../assets/images/(b)data.png" width="550" height="300"></center>
-<center><img src="/../assets/images/(c)data.png" width="550" height="300"></center>
+<img src="/../assets/images/(a)data.png" width="550" height="300">
+<img src="/../assets/images/(b)data.png" width="550" height="300">
+<img src="/../assets/images/(c)data.png" width="550" height="300">
 
-[Ground Truth](https://en.wikipedia.org/wiki/Ground_truth) 정보를 만들기 위해서 **아래의 두가지 feature 정보를 활용**했습니다. 
+[Ground Truth](https://en.wikipedia.org/wiki/Ground_truth) 정보를 만들기 위해서 **아래의 두가지 feature 정보를 활용**했습니다.
 사실 정확한 Ground Truth를 만드는 것이 매우 어렵고 힘든 일입니다. 왜냐하면, GPS 정보가 잘못되어 있을 수 있고, Landmark 데이터가 너무 다양한 각도에서 촬영되어 서로 다른 구조물로 보일 수 있기 때문이예요. 그래서 실측 거리 25km 이내로 한정하여 구하면 적당히 좋은 결과를 얻을 수 있습니다.
 
-
-- Visual feature 
+- Visual feature
 - GPS coordinates
 
+위의 2개의 정보를 활용하여 클러스터를 구축하였고 Query 이미지와 클러스터 거리가 특정 threshold 이내로 들어오면 동일한 이미지라고 판단합니다.
 
-위의 2개의 정보를 활용하여 클러스터를 구축하였고 Query 이미지와 클러스터 거리가 특정 threshold 이내로 들어오면 동일한 이미지라고 판단합니다. 
+-----------
 
------------  
-
-> #### DELF Model   
+> #### DELF Model
 
 이제 DELF 모델에 대해 자세하게 설명하겠습니다.  
 아래의 그림은 맨 처음에 보여드린 DELF의 전체적인 구조입니다. 
 기억나시나요 ?  
 
-<center><img src="/../assets/images/delf.png" width="850" height="500"></center>
+<img src="/../assets/images/delf.png" width="850" height="500">
 
 DELF 모델의 기본적인 백본은 ResNet50입니다.  
 ResNet50을 사용한 이유는 [FCN](https://blog.naver.com/PostView.nhn?blogId=laonple&logNo=220958109081&proxyReferer=https%3A%2F%2Fwww.google.com%2F) 정보를 활용하기위해서 사용했으며, pretrain 된 net에서 conv4_x를 사용했습니다.  
@@ -86,7 +84,7 @@ ResNet50을 사용한 이유는 [FCN](https://blog.naver.com/PostView.nhn?blogId
 입력 이미지는 모두 center crop 한 뒤에 250x250으로 rescale 되는데, 여기서 또 244x244 크기로 랜덤 crop을 거칩니다.  
 이 과정에서 object나 patch 레벨에서의 정보는 사용하지 않는다고 합니다. 
 
-<center><img src="/../assets/images/models.png" width="700" height="500"></center>
+<img src="/../assets/images/models.png" width="700" height="500">
 
 추출된 feature를 모두 사용하는 것이 아니라 Attention을 이용해서 keypoint만 추출 한다고 합니다.
 keypoint를 추출하는 이유는 시스템 효율화에도 매우 중요하며, 요즘 Attention을 이용해 신경망을 만드는 것이 트렌드이니, 혹시나 Attention을 모르신다면, 이 기회에 알아보는 것도 좋겠습니다.  

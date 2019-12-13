@@ -176,7 +176,7 @@
       <item>
         <title>having와 데이터 분석 함수 (pivot)</title>
         
-          <description>&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다. 
+          <description>&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다.
 오늘 사용 되는 SQL 테이블은 첫 포스팅에 작성한 emp 테이블을 이용 할 예정입니다. 테이블이 없으신 분들은 &lt;a href=&quot;https://kejdev.github.io/SQL-Grammar-1&quot;&gt;여기&lt;/a&gt;를 클릭하여 테이블을 긁어서 사용하시기를 바랍니다.&lt;/p&gt;
 
 </description>
@@ -544,7 +544,6 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         <title>Large-Scale Image Retrieval with Attentive Deep Local Features</title>
         
           <description>&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
-&lt;p&gt;Paper URL: https://arxiv.org/pdf/1612.06321.pdf&lt;/p&gt;
 
 </description>
         

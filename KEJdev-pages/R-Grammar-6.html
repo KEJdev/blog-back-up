@@ -193,8 +193,6 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 <a href="https://github.com/KEJdev/DataSet/tree/master/DataSet">여기</a>에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 <a href="http://archive.ics.uci.edu/ml/datasets/zoo">여기</a>를 클릭하면 보실 수 있습니다.</p>
 
-<p><br /></p>
-
 <blockquote>
   <h4 id="dataset">DataSet</h4>
 </blockquote>
@@ -207,7 +205,8 @@ into the {body} of the default.hbs template -->
 </span><span class="n">table</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="m">18</span><span class="p">])</span><span class="w"> </span><span class="c1"># 종류와 건수 보기</span><span class="w">
 </span><span class="nf">round</span><span class="p">(</span><span class="n">prop.table</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="m">18</span><span class="p">])),</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="o">*</span><span class="m">100</span><span class="w"> </span><span class="c1"># 비율 보기 </span><span class="w">
 </span></code></pre></div></div>
-<center><img src="../assets/images/r6.png" width="120" height="50" /></center>
+
+<p><img src="../assets/images/r6.png" width="120" height="50" /></p>
 
 <p>이제 데이터를 정규화하는 작업을 위해 normalize함수를 이번에 만들어보려고 합니다. normalize는 벡터 정규화로써 정규화 방식과 조금 다르지만 knn 알고리즘을 사용할 때 단위를 맞출 수 있는 방법 중 하나입니다. 여기서 TMI로 하나 더 이야기 하자면, <strong>정규화</strong>는 데이터 군 내에서 특정 데이터가 가지는 위치를 볼 때 사용하고 <strong>표준화</strong>는 표준편차를 이용한 식이며 2개 이상의 단위가 다를 때, 대상 데이터를 같은 기준으로 보려고 할 때 주로 사용합니다.</p>
 
@@ -239,7 +238,7 @@ into the {body} of the default.hbs template -->
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">zoo2_n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">lapply</span><span class="p">(</span><span class="n">zoo</span><span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">17</span><span class="p">],</span><span class="w"> </span><span class="n">normalize</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
-<center><img src="../assets/images/r7.png" width="390" height="70" /></center>
+<p><img src="../assets/images/r7.png" width="390" height="70" /></p>
 
 <p><br /></p>
 
@@ -261,11 +260,11 @@ into the {body} of the default.hbs template -->
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">knn</span><span class="p">(</span><span class="n">zoo2_n_train</span><span class="p">,</span><span class="w"> </span><span class="n">zoo2_n_test</span><span class="p">,</span><span class="w"> </span><span class="n">zoo2_train_label</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<center><img src="../assets/images/r8.png" width="180" height="50" /></center>
+<p><img src="../assets/images/r8.png" width="180" height="50" /></p>
 
 <p>원본 데이터를 확인해보도록 하겠습니다.</p>
 
-<center><img src="../assets/images/r9.png" width="340" height="20" /></center>
+<p><img src="../assets/images/r9.png" width="340" height="20" /></p>
 
 <p>마지막 2와 출력 결과인 2가 일치하는 결과를 확인할 수 있습니다. <br />
 다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 <a href="">여기</a>에서 보실 수 있습니다.</p>
