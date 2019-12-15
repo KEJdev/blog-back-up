@@ -68,7 +68,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <meta property="og:site_name" content="덕복희" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Python for문 개념 ②" />
-    <meta property="og:description" content="if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 여기에서 다운받으실 수 있습니다. csv 파일 불러오기 우선 csv 파일을 불러오겠습니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다. import csv file = open("emp2.csv", "r") emp_csv = csv.reader(file) for문과 if문 이제 불러왔으니, for 문을" />
+    <meta property="og:description" content="if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 여기에서 다운받으실 수 있습니다. csv 파일 불러오기 우선 csv 파일을 불러오겠습니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다. import csv file = open("emp2.csv") emp_csv = csv.reader(file) for문과 if문 이제 불러왔으니, for 문을 이용하여" />
     <meta property="og:url" content="https://kejdev.github.io/PYTHON-Grammar-4" />
     <meta property="og:image" content="https://kejdev.github.io/../assets/images/python_cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -78,7 +78,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <meta property="article:tag" content="Python" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Python for문 개념 ②" />
-    <meta name="twitter:description" content="if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 여기에서 다운받으실 수 있습니다. csv 파일 불러오기 우선 csv 파일을 불러오겠습니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다. import csv file = open("emp2.csv", "r") emp_csv = csv.reader(file) for문과 if문 이제 불러왔으니, for 문을" />
+    <meta name="twitter:description" content="if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 여기에서 다운받으실 수 있습니다. csv 파일 불러오기 우선 csv 파일을 불러오겠습니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다. import csv file = open("emp2.csv") emp_csv = csv.reader(file) for문과 if문 이제 불러왔으니, for 문을 이용하여" />
     <meta name="twitter:url" content="https://kejdev.github.io/" />
     <meta name="twitter:image" content="https://kejdev.github.io/../assets/images/python_cover1.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -110,7 +110,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
         "@type": "WebPage",
         "@id": "https://kejdev.github.io/PYTHON-Grammar-4"
     },
-    "description": "if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 여기에서 다운받으실 수 있습니다. csv 파일 불러오기 우선 csv 파일을 불러오겠습니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다. import csv file = open("emp2.csv", "r") emp_csv = csv.reader(file) for문과 if문 이제 불러왔으니, for 문을"
+    "description": "if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 여기에서 다운받으실 수 있습니다. csv 파일 불러오기 우선 csv 파일을 불러오겠습니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다. import csv file = open("emp2.csv") emp_csv = csv.reader(file) for문과 if문 이제 불러왔으니, for 문을 이용하여"
 }
     </script>
     
@@ -203,9 +203,8 @@ into the {body} of the default.hbs template -->
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"emp2.csv"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span>
+<span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"emp2.csv"</span><span class="p">)</span>
 <span class="n">emp_csv</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
-
 </code></pre></div></div>
 <p><br /></p>
 
@@ -229,7 +228,7 @@ for문으로 데이터를 하나씩 읽으면서 input값과 값이 일치한다
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"emp2.csv"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span>
+<span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"emp2.csv"</span><span class="p">)</span>
 <span class="n">emp_csv</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"이름을 입력하세요 "</span><span class="p">)</span>
@@ -248,7 +247,7 @@ python에서 if 문을 여러개 사용할때는 <strong>elif</strong>를 사용
 <p>그렇다면 위 코드 예제를 보고 이름을 입력했을때, 고소득자인지, 저소득자인지를 출력하는 python을 작성해볼까요 ?</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span> 
-<span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"emp2.csv"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+<span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"emp2.csv"</span><span class="p">)</span>
 <span class="n">emp_csv</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
 
 <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s">"이름을 입력하세요 "</span><span class="p">)</span>
@@ -345,8 +344,6 @@ python에서 if 문을 여러개 사용할때는 <strong>elif</strong>를 사용
                                             <li><a href="/PYTHON-Grammar-5">Python for문 개념 ③ (for ~ continue~braeak)</a></li>
                                         
                                     
-                                  
-                                
                                   
                                 
                                   

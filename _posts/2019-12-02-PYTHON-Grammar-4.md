@@ -27,9 +27,8 @@ if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 fo
 ```python
 import csv
 
-file = open("emp2.csv", "r")
+file = open("emp2.csv")
 emp_csv = csv.reader(file)
-
 ```
 <br>  
 
@@ -54,7 +53,7 @@ for문으로 데이터를 하나씩 읽으면서 input값과 값이 일치한다
 ```python 
 import csv
 
-file = open("emp2.csv", "r")
+file = open("emp2.csv")
 emp_csv = csv.reader(file)
 
 a = input("이름을 입력하세요 ")
@@ -74,7 +73,7 @@ python에서 if 문을 여러개 사용할때는 **elif**를 사용합니다.
 
 ```python
 import csv 
-file=open("emp2.csv","r")
+file=open("emp2.csv")
 emp_csv = csv.reader(file)
 
 a=input("이름을 입력하세요 ")

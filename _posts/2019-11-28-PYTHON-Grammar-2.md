@@ -4,7 +4,7 @@ current: post
 cover:  ../assets/images/python_cover1.png
 navigation: True
 title: Python if문 개념 ①
-date: 2019-11-26 09:00:00
+date: 2019-11-26 10:00:00
 tags: [PYTHON]
 sitemap :
   changefreq : daily
