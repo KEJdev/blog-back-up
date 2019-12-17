@@ -30,6 +30,7 @@ import csv
 file = open("emp2.csv")
 emp_csv = csv.reader(file)
 ```
+
 <br>  
 
 > #### for문과 if문  

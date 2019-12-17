@@ -28,7 +28,7 @@ while문 구조는 아래와 같습니다.
 위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.  
 
 ```python
-a= int(input("숫자를 입력하세요 "))
+a = int(input("숫자를 입력하세요 "))
 i = 0
 while i < a:
     i = i+1
@@ -39,7 +39,8 @@ while i < a:
 이번에는 while loop문으로 log함수를 구현해볼까요?  
 
 ```python
-b=int(input("진수를 입력하세요 ~ "))
+a = int(input("밑수를 입력하세요 ~"))
+b = int(input("진수를 입력하세요 ~ "))
 c=a
 cnt=1
 while a < b:
@@ -54,7 +55,7 @@ print("로그 값은 %i 입니다" %cnt)
 지겹도록 많이 풀었던 팩토리얼을 while문으로 구현해보겠습니다.  
 
 ```python
-a = int(input("팩토리얼 숫자를 입력하세요 ~ ")) 
+a = int(input("팩토리얼 숫자를 입력하세요 ~ "))
 x=a 
     
 while x > 1:
