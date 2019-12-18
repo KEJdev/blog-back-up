@@ -68,7 +68,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <meta property="og:site_name" content="덕복희" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Knn을 이용한 과일 데이터 분류" />
-    <meta property="og:description" content="오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같이 데이터를 만들면 된답니다. food &lt;- data.frame(ingredient = c("apple", "bacon", "banana", "carrot", "celery", "cheese", "cucumber"," />
+    <meta property="og:description" content="벌써 knn 분류를 상당히 많이 했습니다. 많이 익숙해지셨나요? 오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같습니다. 과일은 사과, 바나나, 당근, 치즈 등" />
     <meta property="og:url" content="https://kejdev.github.io/R-Grammar-5" />
     <meta property="og:image" content="https://kejdev.github.io/../assets/images/R_cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -78,7 +78,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <meta property="article:tag" content="R" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Knn을 이용한 과일 데이터 분류" />
-    <meta name="twitter:description" content="오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같이 데이터를 만들면 된답니다. food &lt;- data.frame(ingredient = c("apple", "bacon", "banana", "carrot", "celery", "cheese", "cucumber"," />
+    <meta name="twitter:description" content="벌써 knn 분류를 상당히 많이 했습니다. 많이 익숙해지셨나요? 오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같습니다. 과일은 사과, 바나나, 당근, 치즈 등" />
     <meta name="twitter:url" content="https://kejdev.github.io/" />
     <meta name="twitter:image" content="https://kejdev.github.io/../assets/images/R_cover1.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -110,7 +110,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
         "@type": "WebPage",
         "@id": "https://kejdev.github.io/R-Grammar-5"
     },
-    "description": "오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같이 데이터를 만들면 된답니다. food &lt;- data.frame(ingredient = c("apple", "bacon", "banana", "carrot", "celery", "cheese", "cucumber","
+    "description": "벌써 knn 분류를 상당히 많이 했습니다. 많이 익숙해지셨나요? 오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. DataSet 데이터는 아래와 같습니다. 과일은 사과, 바나나, 당근, 치즈 등"
 }
     </script>
     
@@ -191,7 +191,8 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.</p>
+                    <p>벌써 knn 분류를 상당히 많이 했습니다. 많이 익숙해지셨나요?<br />
+오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.</p>
 
 <p><br /></p>
 
@@ -199,7 +200,7 @@ into the {body} of the default.hbs template -->
   <h4 id="dataset">DataSet</h4>
 </blockquote>
 
-<p>데이터는 아래와 같이 데이터를 만들면 된답니다.</p>
+<p>데이터는 아래와 같습니다. 과일은 사과, 바나나, 당근, 치즈 등 작지만 다양한 데이터 입니다.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">food</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">ingredient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bacon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"banana"</span><span class="p">,</span><span class="w"> </span><span class="s2">"carrot"</span><span class="p">,</span><span class="w">
                                   </span><span class="s2">"celery"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cheese"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cucumber"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fish"</span><span class="p">,</span><span class="w">

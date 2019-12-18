@@ -5,7 +5,7 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 paginate: 100 # it will paginate after this number
-language: 'en-uk'
+language: "ko-KR"
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
@@ -19,7 +19,7 @@ logo: ./assets/images/blog-icon.png
 logo_dark: ./assets/images/blog-icon.png
 favicon: ./assets/images/favicon.png
 production_url: https://KEJdev.github.io/
-source_url: https://KEJdev.github.io/
+source_url: https://github.com/KEJdev/KEJdev.github.io/
 CNAME: #add cname for website to be created
 url: https://KEJdev.github.io/
 # Social info
@@ -75,7 +75,7 @@ branch: master
 relative_source: /
 destination: ./KEJdev-pages/
 production_url: https://KEJdev.github.io/
-source_url:  https://KEJdev.github.io/
+source_url:  https://github.com/KEJdev/KEJdev.github.io/
 
 exclude:
   - assets/css
