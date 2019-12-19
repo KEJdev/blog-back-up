@@ -13,7 +13,7 @@ baseurl: /
 
 # Website info
 title: Py귤의 판교 생존기
-description: Development log .. 
+description: developer log ..
 cover: ./assets/images/covers.jpg
 logo: ./assets/images/blog-icon.png
 logo_dark: ./assets/images/blog-icon.png

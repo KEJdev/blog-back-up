@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Py귤의 판교 생존기</title>
-    <description>Developer log ..</description>
+    <description>developer log ..</description>
     <link>https://kejdev.github.io//</link>
     <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Dec 2019 14:01:43 +0900</pubDate>
-    <lastBuildDate>Thu, 19 Dec 2019 14:01:43 +0900</lastBuildDate>
+    <pubDate>Thu, 19 Dec 2019 14:21:24 +0900</pubDate>
+    <lastBuildDate>Thu, 19 Dec 2019 14:21:24 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
