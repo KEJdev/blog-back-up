@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>R에서 R을 배워야 하는 이유와 자료구조</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+    
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$'] ],
+    processEscapes: true,
+  }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+    <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="개발자는 주로 아메리카노를 마시지..." />
+    <link rel="shortcut icon" href="https://kejdev.github.io/./assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://kejdev.github.io/r-Data-structure" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Py귤의 판교 생존기" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="R에서 R을 배워야 하는 이유와 자료구조" />
+    <meta property="og:description" content="R이라는 언어를 들어보신 적 있을꺼예요. R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. 재밌는 이야기 하나를 들려드릴께요. 카카오톡은 2010년 3월에 서비스르르 시작한 이후에 폭발적으로 성장해서 2012년 말에" />
+    <meta property="og:url" content="https://kejdev.github.io/r-Data-structure" />
+    <meta property="og:image" content="https://kejdev.github.io/../assets/images/R_cover1.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2018-10-30T18:00:00+09:00" />
+    <meta property="article:modified_time" content="2018-10-30T18:00:00+09:00" />
+    <meta property="article:tag" content="R" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="R에서 R을 배워야 하는 이유와 자료구조" />
+    <meta name="twitter:description" content="R이라는 언어를 들어보신 적 있을꺼예요. R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. 재밌는 이야기 하나를 들려드릴께요. 카카오톡은 2010년 3월에 서비스르르 시작한 이후에 폭발적으로 성장해서 2012년 말에" />
+    <meta name="twitter:url" content="https://kejdev.github.io/" />
+    <meta name="twitter:image" content="https://kejdev.github.io/../assets/images/R_cover1.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Py귤의 판교 생존기" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="R" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Py귤의 판교 생존기",
+        "logo": "https://kejdev.github.io/./assets/images/blog-icon.png"
+    },
+    "url": "https://kejdev.github.io/r-Data-structure",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://kejdev.github.io/../assets/images/R_cover1.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kejdev.github.io/r-Data-structure"
+    },
+    "description": "R이라는 언어를 들어보신 적 있을꺼예요. R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. 재밌는 이야기 하나를 들려드릴께요. 카카오톡은 2010년 3월에 서비스르르 시작한 이후에 폭발적으로 성장해서 2012년 말에"
+}
+    </script>
+    
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="R에서 R을 배워야 하는 이유와 자료구조" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    
+    <div class="site-nav-right">
+        
+            <ul class="nav" role="menu">
+    <li class="nav-HOME" role="menuitem"><a href="/">HOME</a></li>
+    <li class="nav-SQL" role="menuitem"><a href="/tag/sql/">SQL</a></li>
+    <li class="nav-PLSQL" role="menuitem"><a href="/tag/plsql/">PLSQL</a></li>
+    <li class="nav-R" role="menuitem"><a href="/tag/r/">R</a></li>
+    <li class="nav-PYTHON" role="menuitem"><a href="/tag/python/">PYTHON</a></li>
+    <li class="nav-MACHINE-LEARNING" role="menuitem"><a href="/tag/machine-learning/">MACHINE-LEARNING</a></li>
+    <li class="nav-go" role="menuitem"><a href="/tag/go/">GO</a></li>
+    <li class="nav-PAPER" role="menuitem"><a href="/tag/paper/">PAPER</a></li>
+    <li class="nav-ALGORITHM" role="menuitem"><a href="/tag/algorithm/">ALGORITHM</a></li>     
+</ul>
+
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-r ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="30 October 2018">30 October 2018</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/r/'>R</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">R에서 R을 배워야 하는 이유와 자료구조</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/../assets/images/R_cover1.png)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>R이라는 언어를 들어보신 적 있을꺼예요.<br />
+R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요.<br />
+요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수적이랍니다. <strong>재밌는 이야기</strong> 하나를 들려드릴께요.</p>
+
+<p>카카오톡은 2010년 3월에 서비스르르 시작한 이후에 폭발적으로 성장해서 2012년 말에 8000만명의 가입자를 넘어섰다고 합니다. 하루 평균 43분간 카카오톡을 하고 하루 방문자가 2700만명, 하루 최대 메세지 이용건수가 42억건에 달한다고 합니다.</p>
+
+<p>예전에는 <strong>“문자해”</strong>라는 말이 현재는 <strong>“카톡해”</strong>로 바뀐거를 보면 정말 카카오톡은 성공했다고 볼 수 있습니다.</p>
+
+<p>이런 성공에도 불고하고 마땅한 수익모델이 없어서 2010년에 41억 적자, 2011년 153억 적자였다고 합니다. 카톡 사용자들에 대한 데이터 분석을 하고난 다음부터 2012년에 애니팡의 인기에 힘 입어 흑자라인으로 들어섰다고 합니다.</p>
+
+<p>(소문으로는 개발자 하루 통장에 1억씩 입금할정도였다고 …)</p>
+
+<p>그렇다면 카카오는 카톡 사용자들을 어떻게 분석했을까요 ?<br />
+간단해요.</p>
+
+<ol>
+  <li>누가(성별, 연령)</li>
+  <li>무엇을(게임 아이템)</li>
+  <li>언제(아이템 구매시간)</li>
+  <li>얼마나(아이템 구매빈도)</li>
+  <li>어떻게(결제 방법)</li>
+</ol>
+
+<p><br /></p>
+
+<blockquote>
+  <h4 id="sql과-r의-차이점">SQL과 R의 차이점</h4>
+</blockquote>
+
+<p>R과 SQL의 차이점이 무엇일까요 ?</p>
+
+<ol>
+  <li>아주 긴 SQL코드를 R코드로 단순하게 작성할 수 있다.</li>
+</ol>
+
+<p>예)</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">deptno</span><span class="p">,</span> 
+<span class="k">sum</span><span class="p">(</span><span class="n">decord</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="s1">'SALESMAN'</span><span class="p">,</span><span class="n">sal0</span><span class="p">),</span>
+<span class="k">sum</span><span class="p">(</span><span class="n">decord</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="s1">'ANALYST'</span><span class="p">,</span><span class="n">sal</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">.....</span>
+</code></pre></div></div>
+
+<p>이것을 R로 만들면 ,</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">emp</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"emp.csv"</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">attach</span><span class="p">(</span><span class="n">emp</span><span class="p">)</span><span class="w">
+</span><span class="n">tapply</span><span class="p">(</span><span class="n">sal</span><span class="p">,</span><span class="nf">list</span><span class="p">(</span><span class="n">deptno</span><span class="p">,</span><span class="n">job</span><span class="p">),</span><span class="n">sum</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<ol>
+  <li>데이터를 시각화 할 수 있다.(가장 큰 이유)</li>
+</ol>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pie</span><span class="p">(</span><span class="n">emp</span><span class="o">$</span><span class="n">sal</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<center><img src="/../assets/images/pie1.png" width="150" height="150" /></center>
+
+<p><br /></p>
+
+<blockquote>
+  <h4 id="r이란">R이란?</h4>
+</blockquote>
+
+<p>그렇다면 R이란 무엇일까요?
+뉴질랜드의 aukland 대학의 robert gentlman 과 Ross ihaka 가 1995년에 
+개발한 소프트웨어이고 데이터 분석을 위한 통계 및 그래픽스를 지원하는 무료
+소프트웨어입니다.</p>
+
+<p>그렇다면 대체 R은 왜 사용해야 하는걸까요?</p>
+
+<p><br /></p>
+
+<blockquote>
+  <h4 id="r을-왜-사용해야하는가">R을 왜 사용해야하는가?</h4>
+</blockquote>
+
+<ul>
+  <li>R is free</li>
+  <li>data 분석을 위해 가장 많이 쓰는 통계 플랫폼이다.</li>
+  <li>복잡한 데이터를 다양한 그래프로 표현할 수 있다.</li>
+  <li>분석을 위한 데이터를 쉽게 저장하고 조작할 수 있다.</li>
+  <li>누구든지 유용한 패키지를 생성해서 공유할 수 있고 새로운 기능에 대한 전달이 빠르다.</li>
+  <li>어떤 os에서 설치가 가능하다. 심지어 아이폰에서도 설치가 된다.</li>
+</ul>
+
+<p><br /></p>
+
+<blockquote>
+  <h4 id="r의-자료구조">R의 자료구조</h4>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center>type</center></th>
+      <th style="text-align: center"><center> 설명 </center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>vector</strong></td>
+      <td style="text-align: center">같은 데이터 타입을 갖는 1차원 배열구조</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>matrix</strong></td>
+      <td style="text-align: center">같은 데이터 타입을 갖는 2차원 배열구조</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>array</strong></td>
+      <td style="text-align: center">같은 데이터 타입을 갖는 다차원 배열구조</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>data.frame</strong></td>
+      <td style="text-align: center">각각의 데이터 타입을 갖는 컬럼으로 이루어진 2차원 배열구조</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>list</strong></td>
+      <td style="text-align: center">서로 다른 데이터 구조인 데이터 타입이 중첩된 구조</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>그림으로 설명하면 아래의 그림과 같습니다.</p>
+
+<center><img src="/../assets/images/type.png" width="450" height="350" /></center>
+
+<p>이번엔 간단하게 R을 배워야 하는 이유와 자료구조에 대해 알아봤습니다. <br />
+다음 포스팅부터는 간단하게 R을 이용하여 머신러닝에 대해 알아보겠습니다.</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/KEJdev">KEJdev</a></h4>
+                                
+                                    <p>If i was rich, I would eat tteokbokki every day.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/KEJdev">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+                
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/./assets/images/covers.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Py귤의 판교 생존기 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/r/">R</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/R-K-Nearest-Neighbors-knn5">R에서 K-Nearest Neighbors(Knn)을 이용한 동물 분류하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/R-K-Nearest-Neighbors-knn4">R에서 K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/R-K-Nearest-Neighbors-knn3">R에서 K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/r/">
+                                
+                                    See all 5 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/R-Machine-Learning-knn2">
+                <div class="post-card-image" style="background-image: url(/../assets/images/R_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/R-Machine-Learning-knn2">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">R</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">R에서 K-Nearest Neighbors(Knn)을 이용한 소개팅 데이터 분류</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/R-Machine-Learning-knn">
+                <div class="post-card-image" style="background-image: url(/../assets/images/R_cover1.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/R-Machine-Learning-knn">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">R</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">R에서 머신러닝 알고리즘, Knn(K-Nearest Neighbors)이란?</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <span class="post-card-author">
+                            <a href="/author/KEJdev/">KEJdev</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+     
+            
+                <img src="/./assets/images/blog-icon.png" alt="Py귤의 판교 생존기 icon" />
+            
+            <span>Py귤의 판교 생존기</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">R에서 R을 배워야 하는 이유와 자료구조</div>
+    
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+        
+        <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5107584879184113",
+            enable_page_level_ads: true
+          });
+        </script>
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/./assets/images/blog-icon.png" alt="Py귤의 판교 생존기" />
+                
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-148043528-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

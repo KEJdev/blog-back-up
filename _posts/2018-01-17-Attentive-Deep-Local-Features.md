@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  ../assets/images/paper_cover1.png
 navigation: True
-title: Large-Scale Image Retrieval with Attentive Deep Local Features
+title: 논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features
 date: 2018-01-17 10:00:00
 tags: [PAPER]
 sitemap :

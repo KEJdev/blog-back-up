@@ -2,13 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>If i was rich, i would eat tteokbokki every day.</description>
+    <description>개발자는 주로 아메리카노를 마시지...</description>
     <link>
     https://kejdev.github.io</link>
     
       
       <item>
-        <title>Python while문 (while ~ continue ~ break)</title>
+        <title>Oracle 조인(join) 종류</title>
+        
+          <description>&lt;p&gt;오늘부터는 오라클 조인에 대해 알아보도록 하겠습니다. 오라클 조인문법은 어떻게 쓰느냐에 따라 성능 차이가 많이 나기도 하며, 상당히 자주 사용하기 때문에 꼭 알아두어야 합니다. 우선 오늘은 간단하게 오라클 조인의 종류와 간단한 조인 문법에 대해 알아보도록 하겠습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 11 Dec 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/SQL-Oracle-join-8</link>
+        <guid isPermaLink="true">https://kejdev.github.io/SQL-Oracle-join-8</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Python while loop문을 사용하여 log함수 구현하기</title>
         
           <description>&lt;p&gt;for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나입니다. 문법도 어렵지 않아서 금방 익힐 수 있습니다. while문이 가장 쓰기 편한 문법 중 하나인데, 그 이유는 조건이 참일 때, 실행시킨다던가, 아니면 무한루프로 계속 돌리다가 어느 순간에 멈추는 등 편리하기 때문입니다.&lt;/p&gt;
 
@@ -16,14 +31,14 @@
         
         <pubDate>Thu, 05 Dec 2019 19:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PYTHON-Grammar-6</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-6</guid>
+        https://kejdev.github.io/PYTHON-while-loop</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-while-loop</guid>
       </item>
       
     
       
       <item>
-        <title>Python for문 개념 ③ (for ~ continue~braeak)</title>
+        <title>Python for문에서 if문 안쓰고 특정 블럭만 실행하기 (continue,break)</title>
         
           <description>&lt;p&gt;for문 같은 반복문에서 쓸 수 있는 문법들이 꽤나 많은데요, 오늘은 반복문이 실행되는 동안에 다른 코드 블럭만 실행되게 할 때, 사용하는 문법에 대해 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -31,14 +46,14 @@
         
         <pubDate>Thu, 05 Dec 2019 19:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PYTHON-Grammar-5</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-5</guid>
+        https://kejdev.github.io/PYTHON-for-continue-break</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-for-continue-break</guid>
       </item>
       
     
       
       <item>
-        <title>GO 언어 구문과 자료형 및 변수</title>
+        <title>GO언어의 자료형(func)</title>
         
           <description>&lt;p&gt;GO언어의 구문과 자료형 그리고 변수에 대해 알아보도록 하겠습니다. GO언어는 언어의 장벽이 그렇게 높지 않기 때문에 금방 배우실 수 있습니다. 특히나 C언어를 주로 이용하여 개발을 하셨던 분이거나 익숙하시다면 더욱이 GO언어가 쉽다고 느낄 수 있습니다.&lt;/p&gt;
 
@@ -46,8 +61,8 @@
         
         <pubDate>Thu, 05 Dec 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/GO-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io/GO-Grammar-3</guid>
+        https://kejdev.github.io/GO-Function</link>
+        <guid isPermaLink="true">https://kejdev.github.io/GO-Function</guid>
       </item>
       
     
@@ -61,8 +76,8 @@
         
         <pubDate>Wed, 04 Dec 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/GO-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io/GO-Grammar-2</guid>
+        https://kejdev.github.io/GO-installing</link>
+        <guid isPermaLink="true">https://kejdev.github.io/GO-installing</guid>
       </item>
       
     
@@ -77,8 +92,8 @@
         
         <pubDate>Tue, 03 Dec 2019 22:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/GO-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io/GO-Grammar-1</guid>
+        https://kejdev.github.io/GO</link>
+        <guid isPermaLink="true">https://kejdev.github.io/GO</guid>
       </item>
       
     
@@ -92,14 +107,14 @@
         
         <pubDate>Tue, 03 Dec 2019 20:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ALGORITHM-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-3</guid>
+        https://kejdev.github.io/ALGORITHM-recursive-function-python</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-recursive-function-python</guid>
       </item>
       
     
       
       <item>
-        <title>재귀 알고리즘으로 구구단 출력하기 (Python)</title>
+        <title>재귀 알고리즘으로 구구단 출력하기(Python)</title>
         
           <description>&lt;p&gt;알고리즘 문제를 풀면서 반드시 알아야 할 알고리즘 중 하나는 아마 재귀 알고리즘일거라 생각합니다. 재귀 함수를 사용할 수 있는 곳에서는 재귀 함수를 사용하며 알고리즘을 풀면서 공부를 해야 된답니다.&lt;/p&gt;
 
@@ -107,14 +122,14 @@
         
         <pubDate>Tue, 03 Dec 2019 19:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ALGORITHM-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-2</guid>
+        https://kejdev.github.io/ALGORITHM-python</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-python</guid>
       </item>
       
     
       
       <item>
-        <title>Knn을 이용한 동물 분류하기</title>
+        <title>R에서 K-Nearest Neighbors(Knn)을 이용한 동물 분류하기</title>
         
           <description>&lt;p&gt;여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 &lt;a href=&quot;http://archive.ics.uci.edu/ml/datasets/zoo&quot;&gt;여기&lt;/a&gt;를 클릭하면 보실 수 있습니다.&lt;/p&gt;
 
@@ -122,14 +137,14 @@
         
         <pubDate>Tue, 03 Dec 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/R-Grammar-6</link>
-        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-6</guid>
+        https://kejdev.github.io/R-K-Nearest-Neighbors-knn5</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-K-Nearest-Neighbors-knn5</guid>
       </item>
       
     
       
       <item>
-        <title>Knn을 이용한 과일 데이터 분류</title>
+        <title>R에서 K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류</title>
         
           <description>&lt;p&gt;벌써 knn 분류를 상당히 많이 했습니다. 많이 익숙해지셨나요?&lt;br /&gt;
 오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.&lt;/p&gt;
@@ -138,14 +153,14 @@
         
         <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/R-Grammar-5</link>
-        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-5</guid>
+        https://kejdev.github.io/R-K-Nearest-Neighbors-knn4</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-K-Nearest-Neighbors-knn4</guid>
       </item>
       
     
       
       <item>
-        <title>Python for문 개념 ②</title>
+        <title>Python for문과 if문을 사용해서 파일 읽기</title>
         
           <description>&lt;p&gt;컴퓨터 언어도 “언어” 이기 때문에 계속 사용하면서 익히는 버릇을 길러야 합니다. 그러니, 저번 포스팅때 배운 for문과 if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet/tree/master/DataSet&quot;&gt;여기&lt;/a&gt;에서 다운받으실 수 있습니다. 혹시나 csv파일이 있다면, 굳이 다운은 받지 않으셔도 됩니다.&lt;/p&gt;
 
@@ -153,14 +168,14 @@
         
         <pubDate>Mon, 02 Dec 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PYTHON-Grammar-4</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-4</guid>
+        https://kejdev.github.io/PYTHON-for-if-file-read</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-for-if-file-read</guid>
       </item>
       
     
       
       <item>
-        <title>having와 데이터 분석 함수 (pivot)</title>
+        <title>SQL group 함수에서 검색 조건(having)과 테이블 회전(pivot)</title>
         
           <description>&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다.
 오늘 사용 되는 SQL 테이블은 첫 포스팅에 작성한 emp 테이블을 이용 할 예정입니다. 테이블이 없으신 분들은 &lt;a href=&quot;https://kejdev.github.io/SQL-Grammar-1&quot;&gt;여기&lt;/a&gt;를 클릭하여 테이블을 긁어서 사용하시기를 바랍니다.&lt;/p&gt;
@@ -169,14 +184,14 @@
         
         <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/SQL-Grammar-7</link>
-        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-7</guid>
+        https://kejdev.github.io/oracle-sql-pivot-having</link>
+        <guid isPermaLink="true">https://kejdev.github.io/oracle-sql-pivot-having</guid>
       </item>
       
     
       
       <item>
-        <title>Python for문 개념 ①</title>
+        <title>Python for문을 사용하여 별찍기</title>
         
           <description>&lt;p&gt;반복문은 어떤 언어라고 할 것도 없이 정말 중요하고, 자주 쓰이는 문법입니다. 특히나 for문은 더욱 더 그렇죠. 그럼 오늘은 간단하게 for문의 기본적인 구조와 별찍기를 해보겠습니다 .&lt;/p&gt;
 
@@ -184,14 +199,14 @@
         
         <pubDate>Sun, 01 Dec 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PYTHON-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-3</guid>
+        https://kejdev.github.io/PYTHON-for-Stars-print</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-for-Stars-print</guid>
       </item>
       
     
       
       <item>
-        <title>정말 쉽게 설명한 역전파(backpropagation)</title>
+        <title>신경망이 학습 하는 원리? 역전파(backpropagation)에 대해</title>
         
           <description>&lt;p&gt;흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
 인공지능은 어떻게 학습하는 것인지, 역전파는(backpropagation)가 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
@@ -200,14 +215,14 @@
         
         <pubDate>Fri, 29 Nov 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ML-Grammar-6</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-6</guid>
+        https://kejdev.github.io/ML-Machine-Learning-backpropagation</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Machine-Learning-backpropagation</guid>
       </item>
       
     
       
       <item>
-        <title>두개의 숫자의 합 구하기(PLSQL)</title>
+        <title>PLSQL로 두개의 숫자의 합 구하기</title>
         
           <description>&lt;p&gt;주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 
 오늘은 간단하게 오래전에 습득했지만, 전혀 사용하고 있지 않은 언어인PLSQL을 복습할겸, PLSQL로 간단한 문제를 풀겠습니다.&lt;/p&gt;
@@ -216,14 +231,14 @@
         
         <pubDate>Tue, 26 Nov 2019 19:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ALGORITHM-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-1</guid>
+        https://kejdev.github.io/ALGORITHM-Find-the-sum-of-numbers-plsql</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ALGORITHM-Find-the-sum-of-numbers-plsql</guid>
       </item>
       
     
       
       <item>
-        <title>Python if문 개념 ①</title>
+        <title>Python if문 사용해서 홀짝 출력하기</title>
         
           <description>&lt;p&gt;Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -231,8 +246,8 @@
         
         <pubDate>Tue, 26 Nov 2019 19:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PYTHON-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-2</guid>
+        https://kejdev.github.io/PYTHON-if-odd-numbers</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-if-odd-numbers</guid>
       </item>
       
     
@@ -247,14 +262,14 @@
         
         <pubDate>Tue, 26 Nov 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PYTHON-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-Grammar-1</guid>
+        https://kejdev.github.io/PYTHON-data-type-concept</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PYTHON-data-type-concept</guid>
       </item>
       
     
       
       <item>
-        <title>미분이 필요한 이유</title>
+        <title>머신러닝 신경망에서 미분이 필요한 이유</title>
         
           <description>&lt;p&gt;신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤습니다.&lt;br /&gt;
 우리는 왜 미분을 사용하는 것이며, 미분이 왜 필요한걸까요 ? 오늘은 미분이 필요한 이유와 도함수를 Python 으로 간단하게
@@ -265,14 +280,14 @@
         
         <pubDate>Tue, 29 Oct 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ML-Grammar-5</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-5</guid>
+        https://kejdev.github.io/ML-Machine-Learning-Differential-neural-network</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Machine-Learning-Differential-neural-network</guid>
       </item>
       
     
       
       <item>
-        <title>knn을 이용한 구매여부 분류</title>
+        <title>R에서 K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기</title>
         
           <description>&lt;p&gt;저번에 이어서 계속 계속 knn을 이용한 분류를 해보겠습니다. 이번에는 조금 의미 있는 결과를 가지고 재밌는 결과를 뽑아내보도록 하겠습니다. 데이터는 &lt;a href=&quot;https://github.com/KEJdev/DataSet&quot;&gt;여기&lt;/a&gt;에서 데이터를 다운 받아주세요.&lt;/p&gt;
 
@@ -280,14 +295,14 @@
         
         <pubDate>Sun, 27 Oct 2019 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/R-Grammar-4</link>
-        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-4</guid>
+        https://kejdev.github.io/R-K-Nearest-Neighbors-knn3</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-K-Nearest-Neighbors-knn3</guid>
       </item>
       
     
       
       <item>
-        <title>활성화 함수란?(2)</title>
+        <title>Relu함수에서 변형된 활성화 함수들(leake Relu,Swish)</title>
         
           <description>&lt;p&gt;지난 시간에 이어서 활성화 함수의 종류에 대해 더 알아보도록 하겠습니다. &lt;br /&gt;
 전시간에 이야기 했던 활성화 함수 3가지는 가장 기본적인 활성화 함수이며, 흔히 쓰이는 활성화 함수입니다. 그런데 이 활성화 함수 외에도 더 많은 활성화 함수가 있습니다. 오늘은 그 외 나머지 활성화 함수에 대해서 이야기 해보도록 하겠습니다.&lt;/p&gt;
@@ -296,14 +311,14 @@
         
         <pubDate>Wed, 07 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ML-Grammar-4</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-4</guid>
+        https://kejdev.github.io/ML-Machine-Learning-leake-relu-swish</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Machine-Learning-leake-relu-swish</guid>
       </item>
       
     
       
       <item>
-        <title>활성화 함수란?(1)</title>
+        <title>머신러닝에서 활성화 함수란?(Activation function)</title>
         
           <description>&lt;p&gt;이제 머신러닝을 조금 하시는 분이라면, 혹은 관련 서적을 읽어보신 분이라면 
 활성화 함수가 무엇인지에 대해서는 아마 알고 있거나 감이 잡힐꺼라 생각합니다.&lt;/p&gt;
@@ -312,8 +327,8 @@
         
         <pubDate>Tue, 06 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ML-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-3</guid>
+        https://kejdev.github.io/ML-Machine-Learning-activation-function</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Machine-Learning-activation-function</guid>
       </item>
       
     
@@ -328,8 +343,8 @@
         
         <pubDate>Mon, 05 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PLSQL-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PLSQL-Grammar-2</guid>
+        https://kejdev.github.io/PLSQL-exception</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PLSQL-exception</guid>
       </item>
       
     
@@ -344,14 +359,14 @@
         
         <pubDate>Sun, 04 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/PLSQL-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io/PLSQL-Grammar-1</guid>
+        https://kejdev.github.io/PLSQL</link>
+        <guid isPermaLink="true">https://kejdev.github.io/PLSQL</guid>
       </item>
       
     
       
       <item>
-        <title>단층/다층퍼셉트론(Perceptron) 구현</title>
+        <title>머신러닝에서 단층/다층퍼셉트론(And, XOR Perceptron) 구현하기</title>
         
           <description>&lt;p&gt;퍼셉트론에 대한 개념은 저번 포스팅때 다뤘습니다. 이번에는 퍼셉트론에 대해 좀더 자세히 다뤄보겠습니다. 또한 직접 PYTHON으로 구현해보겠습니다.&lt;/p&gt;
 
@@ -359,8 +374,8 @@
         
         <pubDate>Sat, 03 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ML-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-2</guid>
+        https://kejdev.github.io/ML-Machine-Learning-xor-perceptron</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Machine-Learning-xor-perceptron</guid>
       </item>
       
     
@@ -376,14 +391,14 @@
         
         <pubDate>Fri, 02 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/ML-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io/ML-Grammar-1</guid>
+        https://kejdev.github.io/ML-Machine-Learning-Perceptron</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-Machine-Learning-Perceptron</guid>
       </item>
       
     
       
       <item>
-        <title>Knn을 이용한 소개팅 데이터 분류</title>
+        <title>R에서 K-Nearest Neighbors(Knn)을 이용한 소개팅 데이터 분류</title>
         
           <description>&lt;p&gt;저번시간에 knn의 개념에 대해 알아보았습니다. &lt;br /&gt;
 오늘부터는 knn 분류 예제를 보면서 공부해보도록 하겠습니다.&lt;/p&gt;
@@ -392,30 +407,14 @@
         
         <pubDate>Thu, 01 Nov 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/R-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-3</guid>
+        https://kejdev.github.io/R-Machine-Learning-knn2</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-Machine-Learning-knn2</guid>
       </item>
       
     
       
       <item>
-        <title>Knn(K-Nearest Neighbors)이란?</title>
-        
-          <description>&lt;p&gt;오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.&lt;br /&gt;
-Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
-        <link>
-        https://kejdev.github.io/R-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-2</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>R을 배워야 하는 이유</title>
+        <title>R에서 R을 배워야 하는 이유와 자료구조</title>
         
           <description>&lt;p&gt;R이라는 언어를 들어보신 적 있을꺼예요.&lt;br /&gt;
 R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 이야기는 아래에서 이야기할께요.&lt;br /&gt;
@@ -425,14 +424,30 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/R-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io/R-Grammar-1</guid>
+        https://kejdev.github.io/r-Data-structure</link>
+        <guid isPermaLink="true">https://kejdev.github.io/r-Data-structure</guid>
       </item>
       
     
       
       <item>
-        <title>문자함수와 날짜 함수 2</title>
+        <title>R에서 머신러닝 알고리즘, Knn(K-Nearest Neighbors)이란?</title>
+        
+          <description>&lt;p&gt;오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다.&lt;br /&gt;
+Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 30 Oct 2018 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/R-Machine-Learning-knn</link>
+        <guid isPermaLink="true">https://kejdev.github.io/R-Machine-Learning-knn</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>SQL의 반올림과 비교함수 사용하기(round,between_months)</title>
         
           <description>&lt;p&gt;저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다.&lt;br /&gt;
 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다.&lt;br /&gt;
@@ -442,14 +457,14 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Wed, 22 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/SQL-Grammar-6</link>
-        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-6</guid>
+        https://kejdev.github.io/oracle-sql-round-mod-between</link>
+        <guid isPermaLink="true">https://kejdev.github.io/oracle-sql-round-mod-between</guid>
       </item>
       
     
       
       <item>
-        <title>문자함수와 날짜 함수 1</title>
+        <title>SQL에서 문자 함수 사용하기(Rpad,substr,replace)</title>
         
           <description>&lt;p&gt;이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.&lt;br /&gt;
 우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?&lt;/p&gt;
@@ -458,14 +473,14 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Tue, 21 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/SQL-Grammar-5</link>
-        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-5</guid>
+        https://kejdev.github.io/oracle-sql-Character-function</link>
+        <guid isPermaLink="true">https://kejdev.github.io/oracle-sql-Character-function</guid>
       </item>
       
     
       
       <item>
-        <title>데이터 제한 및 정렬 2</title>
+        <title>SQL에서 테이블 정렬하기(order by)</title>
         
           <description>&lt;p&gt;저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아볼께요.&lt;/p&gt;
 
@@ -473,14 +488,14 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Mon, 20 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/SQL-Grammar-4</link>
-        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-4</guid>
+        https://kejdev.github.io/oracle-sql-order-by</link>
+        <guid isPermaLink="true">https://kejdev.github.io/oracle-sql-order-by</guid>
       </item>
       
     
       
       <item>
-        <title>데이터 제한 및 정렬 1</title>
+        <title>SQL에서 검색 조건 주기(where)</title>
         
           <description>&lt;p&gt;오늘은 SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다.&lt;br /&gt;
 여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말한답니다.&lt;/p&gt;
@@ -489,14 +504,14 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Sun, 19 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/SQL-Grammar-3</link>
-        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-3</guid>
+        https://kejdev.github.io/oracle-sql-search-criteria</link>
+        <guid isPermaLink="true">https://kejdev.github.io/oracle-sql-search-criteria</guid>
       </item>
       
     
       
       <item>
-        <title>SQL 컬럼검색과 별칭 사용하기</title>
+        <title>SQL에서 컬럼검색과 별칭(Keyword)</title>
         
           <description>&lt;p&gt;저번 포스팅 때는 간단하게, SQL 테이블을 블러오는 법을 배웠습니다.&lt;br /&gt;
 이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.&lt;/p&gt;
@@ -505,14 +520,14 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Sat, 18 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/SQL-Grammar-2</link>
-        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-2</guid>
+        https://kejdev.github.io/oracle-sql-colum-search-key</link>
+        <guid isPermaLink="true">https://kejdev.github.io/oracle-sql-colum-search-key</guid>
       </item>
       
     
       
       <item>
-        <title>SQL 기본 문법</title>
+        <title>Oracle SQL이란?</title>
         
           <description>&lt;p&gt;이번 포스팅에서는 가볍게 SQL이 무엇인지, SQL 명령의 종류, 마지막으로 기본 문법에 대해 알아보겠습니다.&lt;/p&gt;
 
@@ -520,14 +535,14 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 더 자세한 
         
         <pubDate>Fri, 17 Aug 2018 18:00:00 +0900</pubDate>
         <link>
-        https://kejdev.github.io/SQL-Grammar-1</link>
-        <guid isPermaLink="true">https://kejdev.github.io/SQL-Grammar-1</guid>
+        https://kejdev.github.io/oracle-sql-grammar</link>
+        <guid isPermaLink="true">https://kejdev.github.io/oracle-sql-grammar</guid>
       </item>
       
     
       
       <item>
-        <title>Large-Scale Image Retrieval with Attentive Deep Local Features</title>
+        <title>논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features</title>
         
           <description>&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
 
