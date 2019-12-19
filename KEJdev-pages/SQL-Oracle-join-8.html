@@ -11,7 +11,7 @@
 
 
 
-    <title>Oracle 조인(join) 종류</title>
+    <title>Oracle 조인(join)의 종류(equi join, 1999 ANSI)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -67,7 +67,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Py귤의 판교 생존기" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Oracle 조인(join) 종류" />
+    <meta property="og:title" content="Oracle 조인(join)의 종류(equi join, 1999 ANSI)" />
     <meta property="og:description" content="오늘부터는 오라클 조인에 대해 알아보도록 하겠습니다. 오라클 조인문법은 어떻게 쓰느냐에 따라 성능 차이가 많이 나기도 하며, 상당히 자주 사용하기 때문에 꼭 알아두어야 합니다. 우선 오늘은 간단하게 오라클 조인의 종류와 간단한 조인 문법에 대해 알아보도록 하겠습니다. Oracle join 이란 ? Oracle이 무엇인지는 아마 잘 알고 계실껍니다. 오라클은 오라클이라는 회사에서 판매하는 제품" />
     <meta property="og:url" content="https://kejdev.github.io/SQL-Oracle-join-8" />
     <meta property="og:image" content="https://kejdev.github.io/../assets/images/SQL_cover1.png" />
@@ -77,7 +77,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <meta property="article:modified_time" content="2019-12-11T18:00:00+09:00" />
     <meta property="article:tag" content="Sql" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Oracle 조인(join) 종류" />
+    <meta name="twitter:title" content="Oracle 조인(join)의 종류(equi join, 1999 ANSI)" />
     <meta name="twitter:description" content="오늘부터는 오라클 조인에 대해 알아보도록 하겠습니다. 오라클 조인문법은 어떻게 쓰느냐에 따라 성능 차이가 많이 나기도 하며, 상당히 자주 사용하기 때문에 꼭 알아두어야 합니다. 우선 오늘은 간단하게 오라클 조인의 종류와 간단한 조인 문법에 대해 알아보도록 하겠습니다. Oracle join 이란 ? Oracle이 무엇인지는 아마 잘 알고 계실껍니다. 오라클은 오라클이라는 회사에서 판매하는 제품" />
     <meta name="twitter:url" content="https://kejdev.github.io/" />
     <meta name="twitter:image" content="https://kejdev.github.io/../assets/images/SQL_cover1.png" />
@@ -123,7 +123,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Oracle 조인(join) 종류" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Oracle 조인(join)의 종류(equi join, 1999 ANSI)" href="/feed.xml" />
 
 
 </head>
@@ -181,7 +181,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Oracle 조인(join) 종류</h1>
+                <h1 class="post-full-title">Oracle 조인(join)의 종류(equi join, 1999 ANSI)</h1>
             </header>
 
             
@@ -200,6 +200,74 @@ into the {body} of the default.hbs template -->
 </blockquote>
 
 <p>Oracle이 무엇인지는 아마 잘 알고 계실껍니다. 오라클은 오라클이라는 회사에서 판매하는 제품 이름입니다. 요즘은 DB제품이 다양하여 꼭 무거운 오라클이 아니더라도 다른 여러 제품을 컨택하여 사용하는 회사들이 많습니다. 여태까지 포스팅 했던 문법들도 전부 Oracle 문법입니다. 그러나 다행이도 DB문법은 다른 회사 제품이더라도 엄청 크게 다르지 않으니, 다른 DB를 사용하고 있어도 큰틀 잡기에는 무리는 없을 것입니다.</p>
+
+<p>Oracle에서 조인(join)이란, 여러 개의 테이블의 컬럼의 결과를 하나의 결과값으로 출력할 떄 사용하는 SQL 문법을 이야기 합니다. 조인 문법은 equi join, non equi join, outer join, self join을 사용하는 오라클 조인 문법과 1999 ANSI 조인 문법이 있습니다.</p>
+
+<hr />
+
+<blockquote>
+  <h4 id="오라클-조인-문법">오라클 조인 문법</h4>
+</blockquote>
+
+<p>오라클 조인 문법에는  equi join, non equi join, outer join, self join이 있다고 위에서 언급했습니다. 생각보다 많아서 어려워 보이지만 어렵지 않습니다. 아래의 표를 참고 한다면 쉽게 이해할 수 있습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center> 종류 </center></th>
+      <th style="text-align: center"><center>Oracle join </center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>equi join</strong></td>
+      <td style="text-align: center"><center>조인하려는 테이블 사이의 연결고리가 = 인 경우의 조인 문법</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>non equi join</strong></td>
+      <td style="text-align: center"><center>조인하려는 테이블 사이의 연결고리가 /= 인 경우의 조인 문법</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>outer join</strong></td>
+      <td style="text-align: center"><center>equi 조인으로는 볼 수 없는 결과를 볼 때 사용하는 조인 문법</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>self join</strong></td>
+      <td style="text-align: center"><center>자기 자신의 테이블과 조인하는 조인 문법</center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>두 번째 조인인 1999 ANSI 문법 종류는 아래와 같습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center> 종류 </center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">on 절을 이용한 join</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">using 절을 이용한  join</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">left/right/full outer join</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">natural join</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">cross join</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이렇게 오라클 조인과 1999 ANSI조인으로 나뉘는 이유는 오라클 조인으로도 조인이 되지 않는 데이터가 있기 때문에 1999 ANSI조인을 사용하여 데이터를 뽑아냅니다.</p>
+
+<p>그렇다면, 다음 포스팅에서는 조인 문법들을 이용해서 예를 들어가며 알아가보도록 하겠습니다.</p>
 
 
                 </div>
@@ -460,7 +528,7 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Oracle 조인(join) 종류</div>
+    <div class="floating-header-title">Oracle 조인(join)의 종류(equi join, 1999 ANSI)</div>
     
     <progress class="progress" value="0">
         <div class="progress-container">
