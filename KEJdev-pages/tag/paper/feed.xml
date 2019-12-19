@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-18T15:34:43+09:00</updated>
+  <updated>2019-12-19T14:01:43+09:00</updated>
   <id>https://kejdev.github.io/tag/paper/feed.xml</id>
 
   
@@ -12,11 +12,11 @@
   
 
   
-    <title type="html">덕복희 | </title>
+    <title type="html">Py귤의 판교 생존기 | </title>
   
 
   
-    <subtitle>If i was rich, i would eat tteokbokki every day.</subtitle>
+    <subtitle>Developer log ..</subtitle>
   
 
   
@@ -32,8 +32,8 @@
 
   
     <entry>
-      <title type="html">Large-Scale Image Retrieval with Attentive Deep Local Features</title>
-      <link href="https://kejdev.github.io/Attentive-Deep-Local-Features" rel="alternate" type="text/html" title="Large-Scale Image Retrieval with Attentive Deep Local Features" />
+      <title type="html">논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features</title>
+      <link href="https://kejdev.github.io/Attentive-Deep-Local-Features" rel="alternate" type="text/html" title="논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features" />
       <published>2018-01-17T19:00:00+09:00</published>
       <updated>2018-01-17T19:00:00+09:00</updated>
       <id>https://kejdev.github.io/Attentive-Deep-Local-Features</id>
