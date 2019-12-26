@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/tag/plsql/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-23T15:28:37+09:00</updated>
+  <updated>2019-12-26T17:15:56+09:00</updated>
   <id>https://kejdev.github.io/tag/plsql/feed.xml</id>
 
   
@@ -40,7 +40,7 @@
       <content type="html" xml:base="https://kejdev.github.io/PLSQL-exception">&lt;p&gt;이번 포스팅에서는 PL/SQL의 예외처리(exception)처리에 대해서 알아볼꼐요.&lt;br /&gt;
 그리고 예외처리를 왜 해야하는지와 종류에 대해 알아보겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;예외처리exception-&quot;&gt;예외처리(exception) ?&lt;/h4&gt;
@@ -50,7 +50,7 @@
 
 &lt;p&gt;또한 비정상장적으로 프로그램이 종료되지 않기 위해서도 사용합니다. Data가 잘못되어서 프로그램이 종료되버린 현상을 막기위해서 프로그램이 종료되는게 아니라 정상적으로 처리가 되고 Data가 잘못되어서 발생하는 에러 메세지만 따로 출력해주겠금 하려고 예외를 쓰기도 합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;예외처리exception-종류-3가지&quot;&gt;예외처리(exception) 종류 3가지&lt;/h4&gt;
@@ -60,7 +60,7 @@
 오라클에서 미리 정의한 예외처리, 오라클에서 미리 정의하지 않은 예외처리, 사용자 정의 에외처리가 있습니다. 
 우리가 알아야 할것은 사용자 정의 예외처리입니다. 사용자 정의 예외처리는 오라클에서 미리 정의한 예외나 오라클에서 미리 정의하지 않는 예외는 둘다 오라클 에러 메세지가 출력될 때, 발생하는 예외인데, 그에 반해 사용자 정의 예외는 오라클에서 에러가 발생하지 않지만 이것은 예외다 라고 사용자가 정의하는 것을 말합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;예외처리exception-사용하기&quot;&gt;예외처리(exception) 사용하기&lt;/h4&gt;
@@ -160,8 +160,9 @@
       <published>2018-11-04T18:00:00+09:00</published>
       <updated>2018-11-04T18:00:00+09:00</updated>
       <id>https://kejdev.github.io/PLSQL</id>
-      <content type="html" xml:base="https://kejdev.github.io/PLSQL">&lt;p&gt;PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+      <content type="html" xml:base="https://kejdev.github.io/PLSQL">&lt;p&gt;PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;plsql-이란&quot;&gt;PLSQL 이란?&lt;/h4&gt;
@@ -170,7 +171,7 @@
 &lt;p&gt;PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다.
 if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;plsql을-배워야-하는-이유&quot;&gt;PL/SQL을 배워야 하는 이유&lt;/h4&gt;
@@ -195,8 +196,9 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
 
 &lt;p&gt;우리가 분석해야할 가장 중요한 데이터는 대부분 RDBMS에 저장되어 있습니다. SQL을 사용해서 분석하기에는 노가다를 해야할 일들이 많습니다. 그래서 힘들게 하드코딩을 하지 않고 쉽게 business data를 분석을 하려면 PL/SQL을 사용해야합니다.&lt;/p&gt;
 
-&lt;p&gt;PL/SQL을 사용하게 되면 SQL로 보여줄수 있는 분석 결과와 PL/SQL로 보여줄수 있는 분석 결과가 훨신 더 많습니다. SQL로는 DATA에서 정보를 추출해서 보여지는 현상을 증명할 수 있을 뿐이지만, PL/SQL로 데이터 분석을 하게 되면, 회귀 분석을 구현하여 방정식을 도출해내고 결정트리를 이용해 확률 및 엔트로피 등을 구할수 있수 있습니다. 
-&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;PL/SQL을 사용하게 되면 SQL로 보여줄수 있는 분석 결과와 PL/SQL로 보여줄수 있는 분석 결과가 훨신 더 많습니다. SQL로는 DATA에서 정보를 추출해서 보여지는 현상을 증명할 수 있을 뿐이지만, PL/SQL로 데이터 분석을 하게 되면, 회귀 분석을 구현하여 방정식을 도출해내고 결정트리를 이용해 확률 및 엔트로피 등을 구할수 있수 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;plsql에서의-기본-용어&quot;&gt;PL/SQL에서의 기본 용어&lt;/h4&gt;
@@ -209,7 +211,7 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
   &lt;li&gt;PL/SQL에서도 주석을 사용할 수 있으며 실행하고 싶지 않은 구문을 실행하지 않고자 할때 사용합니다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;plsql에서의-sql-함수-사용법&quot;&gt;PL/SQL에서의 SQL 함수 사용법&lt;/h4&gt;
@@ -226,7 +228,7 @@ if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 �
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;plsql의-기본-block-의-구조&quot;&gt;PL/SQL의 기본 block 의 구조&lt;/h4&gt;

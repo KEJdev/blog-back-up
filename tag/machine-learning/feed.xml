@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/tag/machine-learning/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-23T15:28:37+09:00</updated>
+  <updated>2019-12-26T17:15:56+09:00</updated>
   <id>https://kejdev.github.io/tag/machine-learning/feed.xml</id>
 
   
@@ -40,7 +40,7 @@
       <content type="html" xml:base="https://kejdev.github.io/ML-Machine-Learning-backpropagation">&lt;p&gt;흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
 인공지능은 어떻게 학습하는 것인지, 역전파는(backpropagation)가 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;역전파-backpropagation&quot;&gt;역전파 (backpropagation)&lt;/h4&gt;
@@ -70,7 +70,7 @@
 
 &lt;p&gt;그럼 이제 , Python으로 직접 구현해보며 개념을 익혀볼까요 ?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;간단한-신경망-구현하기&quot;&gt;간단한 신경망 구현하기.&lt;/h4&gt;
@@ -204,8 +204,9 @@
       <id>https://kejdev.github.io/ML-Machine-Learning-Differential-neural%20network</id>
       <content type="html" xml:base="https://kejdev.github.io/ML-Machine-Learning-Differential-neural-network">&lt;p&gt;신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤습니다.&lt;br /&gt;
 우리는 왜 미분을 사용하는 것이며, 미분이 왜 필요한걸까요 ? 오늘은 미분이 필요한 이유와 도함수를 Python 으로 간단하게
-구현해보도록 하겠습니다.  &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+구현해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;미분이-필요한-이유&quot;&gt;미분이 필요한 이유&lt;/h4&gt;
@@ -232,7 +233,7 @@
 
 &lt;p&gt;그렇다면 이제 수치 미분 함수를 Python으로 작성해볼까요 ?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;수치-미분&quot;&gt;수치 미분&lt;/h4&gt;
@@ -342,7 +343,7 @@ $2x + 0$ 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 됩니다.&lt;/p
 
 &lt;p&gt;오늘 포스팅할 대부분의 활성화 함수는 Relu함수의 변형 버전이 많습니다. 한번 알아볼까요?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;relu-함수에서-변형된-활성화-함수들&quot;&gt;Relu 함수에서 변형된 활성화 함수들&lt;/h4&gt;
@@ -428,8 +429,9 @@ Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지�
       <content type="html" xml:base="https://kejdev.github.io/ML-Machine-Learning-activation-function">&lt;p&gt;이제 머신러닝을 조금 하시는 분이라면, 혹은 관련 서적을 읽어보신 분이라면 
 활성화 함수가 무엇인지에 대해서는 아마 알고 있거나 감이 잡힐꺼라 생각합니다.&lt;/p&gt;
 
-&lt;p&gt;그럼 이번 포스팅에서는 활성화 함수가 무엇인지와 Python으로 간단하게 함수 구현을 해보도록 하겠습니다.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;그럼 이번 포스팅에서는 활성화 함수가 무엇인지와 Python으로 간단하게 함수 구현을 해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;활성화-함수activation-function&quot;&gt;활성화 함수(Activation function)?&lt;/h4&gt;
@@ -438,7 +440,7 @@ Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지�
 &lt;p&gt;활성화 함수란 &lt;strong&gt;신호의 총합을 받아서 다음 신호로 내보낼지 말지를 결정하는 함수&lt;/strong&gt;를 이야기 합니다.&lt;br /&gt;
 활성화 함수에는 사실 시그모이드(Sigmoid)와 렐루(Relu)함수 외에도 많은 활성화 함수들이 있습니다. 그중에서도 가장 기본적인 활성화 함수인 Sigmoid, Relu, Softmax 이 3가지에 대해 알아보겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;시그모이드sigmoid-&quot;&gt;시그모이드(Sigmoid) ?&lt;/h4&gt;
@@ -484,7 +486,8 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 
 &lt;p&gt;위 코드로 그래프를 출력하면 아래와 같이 출력되는 것을 확인 할 수있습니다.&lt;/p&gt;
 &lt;center&gt;&lt;img src=&quot;../assets/images/sigmoid.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;렐루relu_rectifued-linear-unit&quot;&gt;렐루(Relu_Rectifued Linear Unit)?&lt;/h4&gt;
@@ -524,7 +527,7 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 
 &lt;center&gt;&lt;img src=&quot;../assets/images/relu.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;소프트맥스softmax&quot;&gt;소프트맥스(softmax)?&lt;/h4&gt;
@@ -609,6 +612,8 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
       <updated>2018-11-03T18:00:00+09:00</updated>
       <id>https://kejdev.github.io/ML-Machine-Learning-xor-perceptron</id>
       <content type="html" xml:base="https://kejdev.github.io/ML-Machine-Learning-xor-perceptron">&lt;p&gt;퍼셉트론에 대한 개념은 저번 포스팅때 다뤘습니다. 이번에는 퍼셉트론에 대해 좀더 자세히 다뤄보겠습니다. 또한 직접 PYTHON으로 구현해보겠습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;단층-퍼셉트론&quot;&gt;단층 퍼셉트론&lt;/h4&gt;
@@ -821,6 +826,8 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;hr /&gt;
+
 &lt;blockquote&gt;
   &lt;h4 id=&quot;다층-퍼셉트론&quot;&gt;다층 퍼셉트론&lt;/h4&gt;
 &lt;/blockquote&gt;
@@ -921,7 +928,7 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
 
 &lt;p&gt;그렇다면 이제 퍼셉트론이 무엇인지, 역사가 어떻게 되는지 알아볼까요 ?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
@@ -1061,7 +1068,7 @@ vanishing현상은 레이어의 깊이가 깊어질수록 신경망이 죽는 �
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;퍼셉트론은 상당히 간단했는데, 이것이 쭉 이어져 인공지능을 만들어 낸것이 신기하지 않나요?&lt;br /&gt;
 다음 포스팅엔 퍼셉트론을 PYTHON으로 간단하게 구현해보도록 하겠습니다.&lt;/p&gt;</content>

@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>논문요약, Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network</title>
+        
+          <description>&lt;h3 id=&quot;predicting-remaining-useful-life-of-rolling-bearings-based-on-deep-feature-representation-and-long-short-term-memory-neural-network&quot;&gt;Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 17 Dec 2019 19:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/Deep-feature-lstm-rul</link>
+        <guid isPermaLink="true">https://kejdev.github.io/Deep-feature-lstm-rul</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Oracle 조인(join)의 종류(equi join, 1999 ANSI)</title>
         
           <description>&lt;p&gt;오늘부터는 오라클 조인에 대해 알아보도록 하겠습니다. 오라클 조인문법은 어떻게 쓰느냐에 따라 성능 차이가 많이 나기도 하며, 상당히 자주 사용하기 때문에 꼭 알아두어야 합니다. 우선 오늘은 간단하게 오라클 조인의 종류와 간단한 조인 문법에 대해 알아보도록 하겠습니다.&lt;/p&gt;
@@ -273,8 +288,7 @@
         
           <description>&lt;p&gt;신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤습니다.&lt;br /&gt;
 우리는 왜 미분을 사용하는 것이며, 미분이 왜 필요한걸까요 ? 오늘은 미분이 필요한 이유와 도함수를 Python 으로 간단하게
-구현해보도록 하겠습니다.  &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+구현해보도록 하겠습니다.&lt;/p&gt;
 
 </description>
         
@@ -352,8 +366,7 @@
       <item>
         <title>PL/SQL이란?</title>
         
-          <description>&lt;p&gt;PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.&lt;/p&gt;
 
 </description>
         
@@ -542,7 +555,7 @@ Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중
     
       
       <item>
-        <title>논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features</title>
+        <title>논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features</title>
         
           <description>&lt;h3 id=&quot;large-scale-image-retrieval-with-attentive-deep-local-features&quot;&gt;Large-Scale Image Retrieval with Attentive Deep Local Features&lt;/h3&gt;
 

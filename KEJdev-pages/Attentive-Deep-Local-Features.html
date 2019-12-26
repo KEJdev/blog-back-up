@@ -11,7 +11,7 @@
 
 
 
-    <title>논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features</title>
+    <title>논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -67,7 +67,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Py귤의 판교 생존기" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features" />
+    <meta property="og:title" content="논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features" />
     <meta property="og:description" content="Large-Scale Image Retrieval with Attentive Deep Local Features Paper URL: https://arxiv.org/pdf/1612.06321.pdf 이 논문은 CNN 계열의 DELF 라고 부르는 모델을 설명하는 논문입니다. CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해도 아시죠? 혹시 모르니, 나중에 CNN 모델을 더 자세하게 따로 다루겠습니다. CNN은 이미지 연구 분야에서 대단한 성과를 이뤘지만 CNN의 단점이 의외로" />
     <meta property="og:url" content="https://kejdev.github.io/Attentive-Deep-Local-Features" />
     <meta property="og:image" content="https://kejdev.github.io/../assets/images/paper_cover1.png" />
@@ -77,7 +77,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     <meta property="article:modified_time" content="2018-01-17T19:00:00+09:00" />
     <meta property="article:tag" content="Paper" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features" />
+    <meta name="twitter:title" content="논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features" />
     <meta name="twitter:description" content="Large-Scale Image Retrieval with Attentive Deep Local Features Paper URL: https://arxiv.org/pdf/1612.06321.pdf 이 논문은 CNN 계열의 DELF 라고 부르는 모델을 설명하는 논문입니다. CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해도 아시죠? 혹시 모르니, 나중에 CNN 모델을 더 자세하게 따로 다루겠습니다. CNN은 이미지 연구 분야에서 대단한 성과를 이뤘지만 CNN의 단점이 의외로" />
     <meta name="twitter:url" content="https://kejdev.github.io/" />
     <meta name="twitter:image" content="https://kejdev.github.io/../assets/images/paper_cover1.png" />
@@ -116,7 +116,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
 
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features" href="/feed.xml" />
 
 
 </head>
@@ -174,7 +174,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features</h1>
+                <h1 class="post-full-title">논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features</h1>
             </header>
 
             
@@ -231,8 +231,7 @@ CNN( Convolutional Neural Network ) 모델이 무엇인지는 설명을 안해�
 <img src="/../assets/images/(b)data.png" width="550" height="300" />
 <img src="/../assets/images/(c)data.png" width="550" height="300" /></p>
 
-<p><a href="https://en.wikipedia.org/wiki/Ground_truth">Ground Truth</a> 정보를 만들기 위해서 <strong>아래의 두가지 feature 정보를 활용</strong>했습니다.
-사실 정확한 Ground Truth를 만드는 것이 매우 어렵고 힘든 일입니다. 왜냐하면, GPS 정보가 잘못되어 있을 수 있고, Landmark 데이터가 너무 다양한 각도에서 촬영되어 서로 다른 구조물로 보일 수 있기 때문이예요. 그래서 실측 거리 25km 이내로 한정하여 구하면 적당히 좋은 결과를 얻을 수 있습니다.</p>
+<p><a href="https://en.wikipedia.org/wiki/Ground_truth">Ground Truth</a> 정보를 만들기 위해서 <strong>아래의 두가지 feature 정보를 활용</strong>했습니다.</p>
 
 <ul>
   <li>Visual feature</li>
@@ -258,7 +257,7 @@ ResNet50을 사용한 이유는 <a href="https://blog.naver.com/PostView.nhn?blo
 
 <p>우선 논문에서는 image pyramid를 사용하여 여러개의 feature를 추출하였고, Landmark 데이터로 fine-tunnung 과정을 거칩니다. 
 입력 이미지는 모두 center crop 한 뒤에 250x250으로 rescale 되는데, 여기서 또 244x244 크기로 랜덤 crop을 거칩니다.<br />
-이 과정에서 object나 patch 레벨에서의 정보는 사용하지 않는다고 합니다.</p>
+(이 과정에서 object나 patch 레벨에서의 정보는 사용하지 않는다고 합니다.)</p>
 
 <p><img src="/../assets/images/models.png" width="700" height="500" /></p>
 
@@ -292,10 +291,7 @@ keypoint를 추출하는 이유는 시스템 효율화에도 매우 중요하며
   <li>descriptor 를 고정하고 score-function 을 학습.</li>
 </ol>
 
-<p>최대한 성능을 올리기 위해 Attention 을 학습할 때 다양한 scale로 학습한다고 합니다. 
-그래서 일단 center-crop을 수행하고 난 뒤 900x900 으로 rescale 합니다. 그리고 마지막으로 랜덤하게 720x720을 크롭한 뒤 r &lt;= 1 범위의 축적으로 최종 rescale 합니다.</p>
-
-<p>또한 검색 성능을 올리기 위해 최종 dim 을 줄이는데, 먼저 L2 norm을 적용 후 PCA를 돌려 40dim까지 줄입니다. 그리고 다시 L2 norm 하면 끝이 납니다.</p>
+<p>최대한 성능을 올리기 위해 Attention 을 학습할 때 다양한 scale로 학습한다고 합니다. 또한 검색 성능을 올리기 위해 최종 dim 을 줄이는데, 먼저 L2 norm을 적용 후 PCA를 돌려 40dim까지 줄입니다. 그리고 다시 L2 norm 하면 끝이 납니다.</p>
 
 <p>이 논문의 평가방법은 일반적으로 사용하는 mAP( mean average precision ) 에서 약간 바꿔서 사용했습니다. mAP는 모든 쿼리마다 얻어진 결과를 relevance 순으로 정렬한뒤 측정된 ap의 평균값을 의미합니다.</p>
 
@@ -372,6 +368,115 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
                 
                 
                 
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/./assets/images/covers.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Py귤의 판교 생존기 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/paper/">Paper</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/Deep-feature-lstm-rul">논문요약, Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/paper/">
+                                
+                                    See all 1 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
@@ -442,7 +547,7 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features</div>
+    <div class="floating-header-title">논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features</div>
     
     <progress class="progress" value="0">
         <div class="progress-container">

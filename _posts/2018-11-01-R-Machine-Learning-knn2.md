@@ -21,7 +21,8 @@ use_math: true
 knn실습을 위해서 [여기](https://github.com/KEJdev/DataSet)에서 데이터를 다운 받아주세요.  
 R Dataset 폴더에서 like.csv 데이터를 다운 받아주시면 됩니다!  
 
-<br>
+-------
+
 
 
 
@@ -40,9 +41,7 @@ R Dataset 폴더에서 like.csv 데이터를 다운 받아주시면 됩니다!
 반대로 데이터의 양이 많을 경우에는 nomalize() 이란 함수를 사용합니다.  
 **<center> 0 ~ 100 </center>**
 
-<br>
-
-
+-------
 
 > #### 왜 표준화나 정규화를 해야하는가?   
 
@@ -57,7 +56,7 @@ R Dataset 폴더에서 like.csv 데이터를 다운 받아주시면 됩니다!
 
 그럼 이제 knn을 이용하여 간단하게 분류를 해볼까요 ?  
 
-<br>
+-------
 
 
 

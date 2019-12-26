@@ -19,7 +19,8 @@ use_math: true
 활성화 함수가 무엇인지에 대해서는 아마 알고 있거나 감이 잡힐꺼라 생각합니다.   
 
 그럼 이번 포스팅에서는 활성화 함수가 무엇인지와 Python으로 간단하게 함수 구현을 해보도록 하겠습니다.  
-<br>
+
+-------
 
 
 > #### 활성화 함수(Activation function)?  
@@ -27,7 +28,7 @@ use_math: true
 활성화 함수란 **신호의 총합을 받아서 다음 신호로 내보낼지 말지를 결정하는 함수**를 이야기 합니다.  
 활성화 함수에는 사실 시그모이드(Sigmoid)와 렐루(Relu)함수 외에도 많은 활성화 함수들이 있습니다. 그중에서도 가장 기본적인 활성화 함수인 Sigmoid, Relu, Softmax 이 3가지에 대해 알아보겠습니다. 
 
-<br>
+-------
 
 > #### 시그모이드(Sigmoid) ? 
 
@@ -73,7 +74,8 @@ plt.show()
 
 위 코드로 그래프를 출력하면 아래와 같이 출력되는 것을 확인 할 수있습니다.
 <center><img src="../assets/images/sigmoid.png" width="400" height="300"></center>
-<br>
+
+-------
 
 > #### 렐루(Relu_Rectifued Linear Unit)?  
 
@@ -114,7 +116,7 @@ plt.show()
 
 <center><img src="../assets/images/relu.png" width="400" height="300"></center>
 
-<br>
+-------
 
 > #### 소프트맥스(softmax)?    
 

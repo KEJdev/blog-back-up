@@ -19,9 +19,7 @@ use_math: true
 오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. 
 
 
-
-
-<br>  
+-------
 
 
  
@@ -55,8 +53,7 @@ class = c("Fruits","Proteins","Fruits","Vegetables",
 tomato <- data.frame(sweetness = 6, crunchiness = 4)
 ```
 
-<br>  
-
+-------
 
 
 > #### knn 

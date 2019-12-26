@@ -17,8 +17,7 @@ use_math: true
 
 컴퓨터 언어도 "언어" 이기 때문에 계속 사용하면서 익히는 버릇을 길러야 합니다. 그러니, 저번 포스팅때 배운 for문과 if문에 조금 더 익숙해지기 위해 csv파일을 이용하여 if문과 for 문을 같이 사용해보도록 하겠습니다. 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 다운받으실 수 있습니다. 혹시나 csv파일이 있다면, 굳이 다운은 받지 않으셔도 됩니다. 
 
-<br>  
-
+-------
 
 > #### csv 파일 불러오기  
 
@@ -32,7 +31,8 @@ file = open("emp2.csv")
 emp_csv = csv.reader(file)
 ```
 
-<br>  
+-------
+
 
 > #### for문과 if문  
 

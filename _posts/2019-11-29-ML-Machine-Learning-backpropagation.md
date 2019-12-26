@@ -19,8 +19,7 @@ use_math: true
 흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
 인공지능은 어떻게 학습하는 것인지, 역전파는(backpropagation)가 무엇인지 알아보도록 하겠습니다.  
 
-<br>
-
+-------
 
 > #### 역전파 (backpropagation)
 
@@ -52,7 +51,8 @@ use_math: true
 
 그럼 이제 , Python으로 직접 구현해보며 개념을 익혀볼까요 ?  
 
-<br>  
+
+-------
 
 
 

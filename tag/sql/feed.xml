@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kejdev.github.io/tag/sql/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kejdev.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-12-23T15:28:37+09:00</updated>
+  <updated>2019-12-26T17:15:56+09:00</updated>
   <id>https://kejdev.github.io/tag/sql/feed.xml</id>
 
   
@@ -150,6 +150,8 @@
       <content type="html" xml:base="https://kejdev.github.io/oracle-sql-pivot-having">&lt;p&gt;오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다.
 오늘 사용 되는 SQL 테이블은 첫 포스팅에 작성한 emp 테이블을 이용 할 예정입니다. 테이블이 없으신 분들은 &lt;a href=&quot;https://kejdev.github.io/SQL-Grammar-1&quot;&gt;여기&lt;/a&gt;를 클릭하여 테이블을 긁어서 사용하시기를 바랍니다.&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;blockquote&gt;
   &lt;h4 id=&quot;having&quot;&gt;having&lt;/h4&gt;
 &lt;/blockquote&gt;
@@ -203,6 +205,8 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;결과가 잘 나오는 것을 확인하셨나요 ? 그렇다면 이번엔 pivot함수에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;pivot&quot;&gt;pivot&lt;/h4&gt;
@@ -265,7 +269,7 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않답니다. 그래서 날짜 함수는 잘봐두셔야합니다.&lt;br /&gt;
 그러면 오늘도 SQL에 대해 알아보러 갈까요?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;숫자함수와-날짜함수&quot;&gt;숫자함수와 날짜함수&lt;/h4&gt;
@@ -419,7 +423,7 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
       <content type="html" xml:base="https://kejdev.github.io/oracle-sql-Character-function">&lt;p&gt;이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.&lt;br /&gt;
 우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아볼까요?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;함수를-사용해야-하는-이유&quot;&gt;함수를 사용해야 하는 이유?&lt;/h4&gt;
@@ -430,7 +434,7 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 
 &lt;p&gt;그렇다면 함수의 종류의 대해 알아볼까요 ?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;함수의-종류&quot;&gt;함수의 종류&lt;/h4&gt;
@@ -651,7 +655,7 @@ emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출
 &lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;order-by&quot;&gt;order by&lt;/h4&gt;
@@ -724,7 +728,7 @@ order by절은 생각보다 어렵지 않죠?
 
 &lt;p&gt;그럼 저번에 만든 테이블을 이용하여 계속해서 공부해볼까요?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;where&quot;&gt;where&lt;/h4&gt;
@@ -935,7 +939,7 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
 
 &lt;p&gt;우선 저번 시간에 만든 EMP과 DEPT 테이블에 있는 컬럼에 대해 알아볼까요?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;emp-tabel-column&quot;&gt;EMP Tabel Column&lt;/h4&gt;
@@ -986,7 +990,7 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;dept-table-column&quot;&gt;DEPT Table Column&lt;/h4&gt;
@@ -1020,7 +1024,7 @@ m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %
 &lt;p&gt;table colunm에 대해 알았으니,&lt;br /&gt;
 emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;sql-column-search&quot;&gt;SQL Column Search&lt;/h4&gt;
@@ -1083,7 +1087,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 그렇다면 직업을 출력하는데 &lt;strong&gt;중복을 제거&lt;/strong&gt;하고 싶은데 어떻게 해야댈까요?&lt;br /&gt;
 중복을 제거하는 것을 배워볼까요 ?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;keyword&quot;&gt;Keyword&lt;/h4&gt;
@@ -1116,7 +1120,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 &lt;p&gt;예쁘게 출력 된 것을 확인 하셨나요 ?
 이제 컬럼에 대한 &lt;strong&gt;별칭&lt;/strong&gt;을 사용하여 출력해볼까요?&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;별칭&quot;&gt;별칭&lt;/h4&gt;
@@ -1179,7 +1183,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
       <id>https://kejdev.github.io/oracle-sql-grammar</id>
       <content type="html" xml:base="https://kejdev.github.io/oracle-sql-grammar">&lt;p&gt;이번 포스팅에서는 가볍게 SQL이 무엇인지, SQL 명령의 종류, 마지막으로 기본 문법에 대해 알아보겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h3 id=&quot;what-is-sql&quot;&gt;What is SQL?&lt;/h3&gt;
@@ -1187,7 +1191,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 
 &lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;tructure &lt;strong&gt;Q&lt;/strong&gt;uery &lt;strong&gt;L&lt;/strong&gt;anguage는 Database에서 Data를 검색하거나 조작하기 위해 사용하는 언어입니다. Database record를 삽입, 검색, 업데이트 및 삭제하는데 사용할 수 있으며, 이 외에도 Database 최적화 및 유지 관리를 포함하여 많은 작업을 수행할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h3 id=&quot;type-of-sql&quot;&gt;Type of SQL.&lt;/h3&gt;
@@ -1236,7 +1240,7 @@ emp 테이블에서 사원번호와 이름, 월급을 출력해볼까요 ?&lt;/p
 
 &lt;p&gt;&lt;strong&gt;TCL&lt;/strong&gt;은 &lt;strong&gt;T&lt;/strong&gt;ransaction &lt;strong&gt;C&lt;/strong&gt;ontrol &lt;strong&gt;L&lt;/strong&gt;anguage의 약자입니다. 트렌잭션을 제어하는 명령어이며, 명령어는 COMMIT,ROLLBACK, SAVEPOINT가 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;h3 id=&quot;sql-grammar&quot;&gt;SQL Grammar&lt;/h3&gt;

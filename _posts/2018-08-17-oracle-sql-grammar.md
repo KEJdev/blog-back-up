@@ -17,7 +17,7 @@ use_math: true
 
 이번 포스팅에서는 가볍게 SQL이 무엇인지, SQL 명령의 종류, 마지막으로 기본 문법에 대해 알아보겠습니다. 
 
-<br>  
+--------
 
 
 > ### What is SQL?
@@ -25,7 +25,7 @@ use_math: true
  **S**tructure **Q**uery **L**anguage는 Database에서 Data를 검색하거나 조작하기 위해 사용하는 언어입니다. Database record를 삽입, 검색, 업데이트 및 삭제하는데 사용할 수 있으며, 이 외에도 Database 최적화 및 유지 관리를 포함하여 많은 작업을 수행할 수 있습니다.  
 
 
-<br>  
+--------
 
 
 > ### Type of SQL.
@@ -52,7 +52,7 @@ Database에 접근하여 조회, 그룹, 정렬 등을 할 수 있는 기본적�
 **TCL**은 **T**ransaction **C**ontrol **L**anguage의 약자입니다. 트렌잭션을 제어하는 명령어이며, 명령어는 COMMIT,ROLLBACK, SAVEPOINT가 있습니다.
 
 
-<br>  
+--------  
 
 
 > ### SQL Grammar

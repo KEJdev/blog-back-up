@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  ../assets/images/paper_cover1.png
 navigation: True
-title: 논문요약,Large-Scale Image Retrieval with Attentive Deep Local Features
+title: 논문요약, Large-Scale Image Retrieval with Attentive Deep Local Features
 date: 2018-01-17 10:00:00
 tags: [PAPER]
 sitemap :
@@ -59,8 +59,8 @@ DELF모델은 아래의 그림과 같은 구조를 가지고 있습니다.
 <img src="/../assets/images/(b)data.png" width="550" height="300">
 <img src="/../assets/images/(c)data.png" width="550" height="300">
 
-[Ground Truth](https://en.wikipedia.org/wiki/Ground_truth) 정보를 만들기 위해서 **아래의 두가지 feature 정보를 활용**했습니다.
-사실 정확한 Ground Truth를 만드는 것이 매우 어렵고 힘든 일입니다. 왜냐하면, GPS 정보가 잘못되어 있을 수 있고, Landmark 데이터가 너무 다양한 각도에서 촬영되어 서로 다른 구조물로 보일 수 있기 때문이예요. 그래서 실측 거리 25km 이내로 한정하여 구하면 적당히 좋은 결과를 얻을 수 있습니다.
+[Ground Truth](https://en.wikipedia.org/wiki/Ground_truth) 정보를 만들기 위해서 **아래의 두가지 feature 정보를 활용**했습니다. 
+
 
 - Visual feature
 - GPS coordinates
@@ -82,7 +82,7 @@ ResNet50을 사용한 이유는 [FCN](https://blog.naver.com/PostView.nhn?blogId
 
 우선 논문에서는 image pyramid를 사용하여 여러개의 feature를 추출하였고, Landmark 데이터로 fine-tunnung 과정을 거칩니다. 
 입력 이미지는 모두 center crop 한 뒤에 250x250으로 rescale 되는데, 여기서 또 244x244 크기로 랜덤 crop을 거칩니다.  
-이 과정에서 object나 patch 레벨에서의 정보는 사용하지 않는다고 합니다. 
+(이 과정에서 object나 patch 레벨에서의 정보는 사용하지 않는다고 합니다.)
 
 <img src="/../assets/images/models.png" width="700" height="500">
 
@@ -112,10 +112,7 @@ keypoint를 추출하는 이유는 시스템 효율화에도 매우 중요하며
 1. 먼저 descriptor 학습
 2. descriptor 를 고정하고 score-function 을 학습.
 
-최대한 성능을 올리기 위해 Attention 을 학습할 때 다양한 scale로 학습한다고 합니다. 
-그래서 일단 center-crop을 수행하고 난 뒤 900x900 으로 rescale 합니다. 그리고 마지막으로 랜덤하게 720x720을 크롭한 뒤 r &lt;= 1 범위의 축적으로 최종 rescale 합니다.  
-
-또한 검색 성능을 올리기 위해 최종 dim 을 줄이는데, 먼저 L2 norm을 적용 후 PCA를 돌려 40dim까지 줄입니다. 그리고 다시 L2 norm 하면 끝이 납니다.    
+최대한 성능을 올리기 위해 Attention 을 학습할 때 다양한 scale로 학습한다고 합니다. 또한 검색 성능을 올리기 위해 최종 dim 을 줄이는데, 먼저 L2 norm을 적용 후 PCA를 돌려 40dim까지 줄입니다. 그리고 다시 L2 norm 하면 끝이 납니다.    
 
 이 논문의 평가방법은 일반적으로 사용하는 mAP( mean average precision ) 에서 약간 바꿔서 사용했습니다. mAP는 모든 쿼리마다 얻어진 결과를 relevance 순으로 정렬한뒤 측정된 ap의 평균값을 의미합니다.   
 
@@ -136,6 +133,7 @@ $R_{ q }$는 쿼리 q로 얻어진 검색 결과를 의미하며, $R_{ q }^{ TP 
 
 
 --------  
+
 
 기본 CNN을 이용해서 Landmark 데이터 셋을 이용한다면, 좋은 정확도는 절대 뽑지 못할 거라 생각해요.
 
