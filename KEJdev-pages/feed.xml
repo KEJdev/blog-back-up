@@ -5,8 +5,8 @@
     <description>developer log ..</description>
     <link>https://kejdev.github.io//</link>
     <atom:link href="https://kejdev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Dec 2019 10:48:12 +0900</pubDate>
-    <lastBuildDate>Fri, 27 Dec 2019 10:48:12 +0900</lastBuildDate>
+    <pubDate>Fri, 27 Dec 2019 11:16:00 +0900</pubDate>
+    <lastBuildDate>Fri, 27 Dec 2019 11:16:00 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -99,8 +99,9 @@
 
 &lt;blockquote&gt;
   &lt;h4 id=&quot;변수&quot;&gt;변수&lt;/h4&gt;
-  &lt;p&gt;func main()을 살펴보면 &lt;strong&gt;:=&lt;/strong&gt;라는 문자를 볼 수 있는데 함수내에서 짧은 선언을 위해 사용합니다. 월래는 변수를 선언할때, &lt;strong&gt;var&lt;/strong&gt;를 사용합니다. 그래서 a라는 변수에 10이라는 숫자를 넣고 싶다면 아래와 같이 써야하는 것이 맞습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;func main()을 살펴보면 &lt;strong&gt;:=&lt;/strong&gt;라는 문자를 볼 수 있는데 함수내에서 짧은 선언을 위해 사용합니다. 월래는 변수를 선언할때, &lt;strong&gt;var&lt;/strong&gt;를 사용합니다. 그래서 a라는 변수에 10이라는 숫자를 넣고 싶다면 아래와 같이 써야하는 것이 맞습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
