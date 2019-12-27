@@ -11,6 +11,7 @@
     <title>{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="G088Mg8HhOjIWUfBgFy3Fh9wF6PSsLsA9Z0Ay2FLh5o" />
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
@@ -35,10 +36,11 @@
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     {% include head.html %}
-    <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
 </head>
 <body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %}">
     <div class="site-wrapper">
+        <script data-ad-client="ca-pub-5107584879184113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
         {{ content }}
 
