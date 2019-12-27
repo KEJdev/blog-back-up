@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  ../assets/images/go_cover1.png
 navigation: True
-title: Go언어 문자열 반환하는 함수 만들기.
+title: Go언어 문자열 반환하는 함수 만들기
 date: 2019-12-18 09:00:00
 tags: [GO]
 sitemap :

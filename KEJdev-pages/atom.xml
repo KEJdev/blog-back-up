@@ -8,7 +8,23 @@
     
       
       <item>
-        <title>Go언어 문자열 반환하는 함수 만들기.</title>
+        <title>클래스 직접 만들어서 신경망 구현하기(relu,forward,backward)</title>
+        
+          <description>&lt;p&gt;저번 포스팅 때, 순전파와 역전파 원리를 간단하게 보고, class를 만들어봤습니다. 
+이번에는 활성화 함수를 넣어 조금 그럴듯한 신경망을 만들어보도록 하겠습니다. 활성화 함수를 사용하지 않고 열심히 신경망만 깊게 쌓기만 하면 깊게 쌓는 의미도 없을 뿐더라 그냥 단층 신경망이라도 봐도 무방합니다. 그렇기 때문에 꼭 넣어주어야 깊게 쌓는 의미가 있습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 25 Dec 2019 18:00:00 +0900</pubDate>
+        <link>
+        https://kejdev.github.io/ML-relu-class-2layer</link>
+        <guid isPermaLink="true">https://kejdev.github.io/ML-relu-class-2layer</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Go언어 문자열 반환하는 함수 만들기</title>
         
           <description>&lt;p&gt;오늘은 GO언어에서 Package, Exported names, 함수에 대해 알아보도록 하겠습니다. 함수는 Python과 비슷해서 어렵지는 않고, 하면서 같이 패키지나 임포트도 잠시 훝어보는 시간을 가져보겠습니다. GO언어가 깔려 있다면 .go 파일을 만들고, 만약에 블로그 예제와 함께 테스트로 돌려보고 싶다면 &lt;a href=&quot;https://play.golang.org/&quot;&gt;여기&lt;/a&gt;를 눌러 GO놀이터를 이용하여 따라하시면 됩니다.&lt;/p&gt;
 
