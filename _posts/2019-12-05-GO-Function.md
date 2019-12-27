@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  ../assets/images/go_cover1.png
 navigation: True
-title: GO언어의 자료형(func)
+title: GO언어 변수 선언하기
 date: 2019-12-05 09:00:00
 tags: [GO]
 sitemap :
