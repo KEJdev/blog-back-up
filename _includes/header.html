@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <!-- begin header -->
+      <header class="header">
+
+        <div class="logo">
+          <a class="logo__link" href="{{site.baseurl}}/">
+          {%if site.data.settings.logo %}
+            <img class="logo__image" src="{{ site.baseurl }}/images/{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
+          {% else %}
+            {{ site.data.settings.title }}
+          {% endif %}
+          </a>
+        </div>
+
+        <nav class="main-nav">
+
+          <div class="main-nav__box">
+            <div class="nav-icon__close">
+              <i class="ion ion-ios-close-circle-outline"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/SQL/" class="nav__link">SQL</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/PLSQL/" class="nav__link">PLSQL</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/R/" class="nav__link">R</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/PYTHON/" class="nav__link">PYTHON</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/MACHINE-LEARNING/" class="nav__link">MACHINE LEARNING</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/GO/" class="nav__link">GO</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/PAPER/" class="nav__link">PAPER</a>
+              </li>
+              <li class="nav__item">
+                <a href="{{site.baseurl}}/tag/ALGORITHM/" class="nav__link">ALGORITHM</a>
+              </li>
+          </div>
+        </nav>
+
+        <div class="nav-buttons">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu" aria-label="Menu Icon"></i>
+          <i class="nav__icon nav__icon-search ion ion-md-search" aria-label="Search Icon"></i>
+        </div>
+
+        <div class="header__overlay"></div>
+      </header>
+      <!-- end header -->
+    </div>
+  </div>
+</div>

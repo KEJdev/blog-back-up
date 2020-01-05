@@ -1,19 +1,14 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/algorlthm_cover1.png
-navigation: True
-title: 재귀 알고리즘으로 구구단 출력하기(Python)
-date: 2019-12-03 10:00:00
-tags: [ALGORITHM]
+title:  "[ALGORITHM]재귀 알고리즘으로 구구단 출력하기(Python)"
+date:   2019-12-03 09:00:00 +0300
+image:  stack.png
+tags:   ALGORITHM
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-algorlthm'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
 
 
 알고리즘 문제를 풀면서 반드시 알아야 할 알고리즘 중 하나는 아마 재귀 알고리즘일거라 생각합니다. 재귀 함수를 사용할 수 있는 곳에서는 재귀 함수를 사용하며 알고리즘을 풀면서 공부를 해야 된답니다.  
@@ -27,9 +22,8 @@ use_math: true
 
 재귀 함수는 함수내에서 다시 자신을 호출한 후 그 함수가 끝날때까지 함수 호출 이후의 명령문을 수행하지 않습니다. 즉, **"반복문 + 스택구조가 결합된 함수**를 재귀함수라고 볼 수 있습니다. 스택 구조가 결합된 함수에 대해서 조금 더 풀어서 이야기해보도록 하겠습니다. 스택구조가 결합되었다는 의미는 **먼저 들어간 데이터가 가장 마지막에 나오는 구조, 나중에 들어간 데이터가 가장 먼저 나오는 구조(후입선출)** 을 말합니다.   
 
+<center><img src="{{ site.baseurl }}/images/stack.png" ></center>  
 
-<center><img src="../assets/images/stack.png" width="260" height="180"></center>
-<center>스택구조</center>
 
 
 쉬운 예를 들어보겠습니다.  
@@ -77,7 +71,9 @@ def tow_count(n):
 tow_count(10)
 ```
 
-<center><img src="../assets/images/python_a1.png" width="130" height="180"></center>
+<center><img src="{{ site.baseurl }}/images/python_a1.png" ></center>  
+
+
 위와 같이 결과가 나왔을 때, 다시 2 x 1 = 2 ... 로 출력하려면 어떻게 해야댈까요 ?  
 재귀 함수를 이용하면 쉽게 구현할 수 있습니다. 아까 말했던 것 처럼 스택구조가 결합된 함수이기 때문에 먼저 들어간 데이터가 가장 마지막에 나오는 구조라고 했습니다. 그래서  아래와 같이 재귀함수를 구현하여 출력할 수 있습니다. 
 
@@ -90,8 +86,11 @@ def tow_count(n):
 tow_count(10) 
 ```
 
-구구단이 제대로 출력되는 모습을 볼 수 있습니다.  
-<center><img src="../assets/images/python_a2.png" width="120" height="180"></center>
+구구단이 제대로 출력되는 모습을 볼 수 있습니다. 
+
+
+<center><img src="{{ site.baseurl }}/images/python_a2.png" ></center>  
+
 
 즉, 재귀는 숫자를 0까지 계속 waiting 시켰다가 나가는 스택구조를 띄고 있다는 것을 알수 있습니다.  
 

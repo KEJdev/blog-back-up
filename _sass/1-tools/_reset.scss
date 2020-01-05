@@ -1,0 +1,78 @@
+/**
+ * A very simple reset that sits on top of Normalize.css.
+*/
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+fieldset, legend,
+figure,
+hr {
+  margin:  0;
+  padding: 0;
+}
+
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+
+li > {
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+
+}
+
+
+/**
+ * Remove default table spacing.
+ */
+
+table {
+  margin : auto;
+  text-align : center;
+  font-size : 15px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #e3ecf3;
+  padding : 6px 12px;
+}
+
+tbody {
+  font-size : 15px;
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border: 1px solid #e3ecf3;
+  padding : 6px 12px;
+}
+
+tr {
+  font-size : 15px;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  border: 1px solid #e3ecf3;
+  padding : 6px 12px;
+}
+
+thead {
+  font-size : 15px;
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  background-color : #f4f8fb;
+  padding : 6px 12px;
+}
+
+td,th {
+  font-size : 15px;
+  display: table-cell;
+  vertical-align: inherit;
+  border: 1px solid #e3ecf3;
+  padding : 6px 12px;
+}

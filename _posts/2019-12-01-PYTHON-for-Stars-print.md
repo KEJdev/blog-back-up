@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/python_cover1.png
-navigation: True
-title: Python for문을 사용하여 별찍기
-date: 2019-12-01 09:00:00
-tags: [PYTHON]
+title:  "[PYTHON]Python for문을 사용하여 별찍기"
+date:   2019-12-01 09:00:00 +0300
+image:  python_a6.png
+tags:   PYTHON
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-python'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 
 반복문은 어떤 언어라고 할 것도 없이 정말 중요하고, 자주 쓰이는 문법입니다. 특히나 for문은 더욱 더 그렇죠. 그럼 오늘은 간단하게 for문의 기본적인 구조와 별찍기를 해보겠습니다 .
@@ -25,7 +19,9 @@ use_math: true
 
 파이썬의 for 문의 기본적인 구조는 아래와 같습니다.  
 
-<center><img src="../assets/images/python_a3.png" width="300" height="80"></center> 
+
+<center><img src="{{ site.baseurl }}/images/python_a3.png" ></center>  
+
 
 
 
@@ -34,7 +30,8 @@ for문은 리스트나 튜플, 문자열의 첫번째 요소부터 마지막 요
 그래서 조금 더 자세하게 문법을 설명하자면, 아래와 같습니다.  
 
 
-<center><img src="../assets/images/python_a6.png" width="240" height="100"></center> 
+<center><img src="{{ site.baseurl }}/images/python_a6.png" ></center>  
+
 
 예제를 보면서 설명해보겠습니다.  
 숫자 1부터 3까지를 for문을 이용하여 출력해보겠습니다. 
@@ -63,7 +60,8 @@ for i in range(1,11,2): # 1부터 10까지 증가하는데, 2씩 증가시켜라
 
 range는 자주 사용하니, 사용법을 익혀 두는 것이 좋습니다. 그러면 range를 사용하여, 컴공들이 자주 찍는다는 별찍기를 해보도록 하겠습니다. 아래와 같이 별을 찍으려면 어떻게 찍어야 댈까요 ? 
 
-<center><img src="../assets/images/for1.png" width="60" height="80"></center>  
+<center><img src="{{ site.baseurl }}/images/for1.png" ></center>  
+
 
 
 ```python
@@ -83,7 +81,9 @@ for i in range(1,11):
 이런식으로 작성하시면 됩니다.  
 그렇다면 이번에 반대로 별을 찍어볼까요?
 
-<center><img src="../assets/images/for2.png" width="60" height="80"></center> 
+
+<center><img src="{{ site.baseurl }}/images/for2.png" ></center>  
+
 
 이렇게 별을 찍으러면 어떻게 해야댈까요 ? 
 이것도 간단하게 아래와 같이 작성하면 됩니다.  
@@ -99,7 +99,10 @@ for i in range(10,0,-1):
 그럼 이번엔 조금 더 재밌는 for문을 작성해볼까요 ? ★으로 사각형을 만들어보겠습니다.
 단, 이번에는 가로/세로를 입력을 받아서 ★를 출력하되, 중첩 for문을 사용하지 않고 작성해보도록 하겠습니다.  
 
-<center><img src="../assets/images/for3.png" width="60" height="80"></center> 
+
+<center><img src="{{ site.baseurl }}/images/for3.png" ></center>  
+
+
 
 
 ```python

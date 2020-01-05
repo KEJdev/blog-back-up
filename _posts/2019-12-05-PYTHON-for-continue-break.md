@@ -1,20 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/python_cover1.png
-navigation: True
-title: Python for문에서 if문 안쓰고 특정 블럭만 실행하기 (continue,break)
-date: 2019-12-05 10:00:00
-tags: [PYTHON]
+title:  "[PYTHON]for문에서 if문 안쓰고 특정 블럭만 실행하기 (continue,break)"
+date:   2019-12-05 09:00:00 +0300
+image:  python_cover1.png
+tags:   PYTHON
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-python'
-author: KEJdev
-use_math: true
----  
-
+changefreq : daily
+priority : 1.0
+---
 
 for문 같은 반복문에서 쓸 수 있는 문법들이 꽤나 많은데요, 오늘은 반복문이 실행되는 동안에 다른 코드 블럭만 실행되게 할 때, 사용하는 문법에 대해 알아보도록 하겠습니다.  
 

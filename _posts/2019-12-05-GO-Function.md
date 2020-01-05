@@ -1,19 +1,14 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/go_cover1.png
-navigation: True
-title: GO언어 변수 선언하기
-date: 2019-12-05 09:00:00
-tags: [GO]
+title:  "[GO]GO언어 변수 선언하기"
+date:   2019-12-05 09:00:00 +0300
+image:  go3.png
+tags:   GO
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-go'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
 
 GO언어의 구문과 자료형 그리고 변수에 대해 알아보도록 하겠습니다. GO언어는 언어의 장벽이 그렇게 높지 않기 때문에 금방 배우실 수 있습니다. 특히나 C언어를 주로 이용하여 개발을 하셨던 분이거나 익숙하시다면 더욱이 GO언어가 쉽다고 느낄 수 있습니다.  
 
@@ -25,15 +20,20 @@ GO언어의 구문과 자료형 그리고 변수에 대해 알아보도록 하�
 
 GO언어에서 코드블록을 시작하는 중괄호의 위치가 중요한데, 중괄호의 위치는 시작하는 코드와 꼭 같은 줄이여야 합니다. 문장의 끝에 보이지는 않지만 (;)을 붙이기 때문입니다. 그렇기 때문에 같은 줄에 중괄호가 존재하지 않는다면 에러가 난답니다. 예는 아래와 같습니다.  
 
-<center><img src="../assets/images/go3.png" width="400" height="170"></center>
+
+<center><img src="{{ site.baseurl }}/images/go3.png" ></center>  
+
 
 위와 같이 코드를 func main() { 으로 시작하는 것이 올바른 구문입니다. 하지만 아래와 같이 코드를 짜게 된다면 에러가 발생하여 실행이 되지 않으니 주의해야한답니다.  
 
-<center><img src="../assets/images/go4.png" width="400" height="170"></center>
+
+<center><img src="{{ site.baseurl }}/images/go4.png" ></center>  
+
 
 위와 같은 예는 실행이 되지 않습니다. 이렇게까지 맞쳐야 하는 가장 큰 이유는 사람들과의 코드 스타일을 맞추기 위해라고 들었던 것 같습니다. 하지만 이런것이 불편하다면, GO놀이터에선 Format버튼을 누르면 되고 GO를 설치했다면, 코드 실행 전 gofmt -w 파일이름.go 한 줄 적고 실행하면 자동으로 맞춰준답니다. 그렇다면 간단하게 Hello를 출력해볼까요 ? 
 
-<center><img src="../assets/images/go5.png" width="300" height="160"></center>
+
+<center><img src="{{ site.baseurl }}/images/go5.png" ></center>  
 
 
 

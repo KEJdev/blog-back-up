@@ -1,19 +1,15 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/R_cover1.png
-navigation: True
-title: R에서 K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류
-date: 2019-12-02 09:00:00
-tags: [R]
+title:  "[R]K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류"
+date:   2019-12-02 09:00:00 +0300
+image:  python_cover1.png
+tags:   R
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-r'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
+
 
 벌써 knn 분류를 상당히 많이 했습니다. 많이 익숙해지셨나요?  
 오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다. 
@@ -44,7 +40,9 @@ class = c("Fruits","Proteins","Fruits","Vegetables",
 
 출력하면 아래와 같이 출력이 됩니다.  
 
-<center><img src="../assets/images/r3.png" width="330" height="250"></center> 
+
+<center><img src="{{ site.baseurl }}/images/r3.png" ></center>  
+
 
 그럼 이제 토마토 데이터를 만들어 보겠습니다.   
 토마토 데이터는 아래와 같이 만들어주면 된답니다.  
@@ -64,7 +62,10 @@ food 에서 2번째 컬럼과 3번째 컬럼을 train 데이터로 사용하겠�
 train_data <- food[,c(2,3)]
 ```
 
-<center><img src="../assets/images/r4.png" width="180" height="230"></center> 
+
+<center><img src="{{ site.baseurl }}/images/r4.png" ></center>  
+
+
 
 그리고 라벨은 데이터의 마지막 컬럼인 class 입니다. 그래서 아래와 같이 라벨을 따로 변수에 담아주겠습니다.  
 
@@ -81,7 +82,10 @@ library(class)
 result1<-knn(train_data,tomato ,train_label, k=3, prob=TRUE)
 ```
 
-<center><img src="../assets/images/r5.png" width="100" height="50"></center> 
+
+<center><img src="{{ site.baseurl }}/images/r5.png" ></center>  
+
+
 
 이번 knn은 조금 재밌지 않나요 ? 다음 포스팅에서는 knn을 이용한 동물 분류해보도록 하겠습니다.    
 전체 코드는 [여기](https://github.com/KEJdev/R-Example)에서 확인하실 수 있습니다.  

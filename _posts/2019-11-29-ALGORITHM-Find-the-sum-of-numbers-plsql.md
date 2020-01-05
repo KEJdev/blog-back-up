@@ -1,19 +1,15 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/algorlthm_cover1.png
-navigation: True
-title: PLSQL로 두개의 숫자의 합 구하기
-date: 2019-11-26 10:00:00
-tags: [ALGORITHM]
+title:  "[ALGORITHM]PLSQL로 두개의 숫자의 합 구하기"
+date:   2019-11-26 09:00:00 +0300
+image:  algorlthm_cover1.png
+tags:   ALGORITHM
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-algorlthm'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
+
 
 
 주 사용언어는 Python이지만, 복습의 의미로 다양한 언어로 알고리즘을 차근차근 풀어볼까 합니다. 

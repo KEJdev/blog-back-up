@@ -1,19 +1,14 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/paper_cover1.png
-navigation: True
-title: 논문요약, Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network
-date: 2019-12-17 10:00:00
-tags: [PAPER]
+title:  "[PAPER]논문요약, Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network"
+date:   2019-12-17 09:00:00 +0300
+image:  feature.png
+tags:   PAPER
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-paper'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
 
 ### Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network 
 
@@ -39,8 +34,9 @@ Paper URL: <https://journals.sagepub.com/doi/full/10.1177/1687814018817184>
 deep feature 간단하게 말하면 신경망에서 나오는 feature를 이야기 합니다. 아래의 이미지에서 사람의 사진이 신경망을 거치면서 나오는 저 feature들을 이야기 합니다. 
 (이미지 출처는 [여기](ttps://youthassembly.or.kr/bbs/board.php?bo_table=B56&wr_id=30225)를 클릭해주세요.)
 
-<img src="../assets/images/feature.png" width="480">
-<center> edges들이 feature에 해당됨 </center>
+
+<center><img src="{{ site.baseurl }}/images/feature.png" ></center> 
+
 
 <br>
 
@@ -61,7 +57,9 @@ deep feature 간단하게 말하면 신경망에서 나오는 feature를 이야�
 
 논문에서 사용된 데이터는 PHM IEEE 2012 Challenge에서 사용된 데이터입니다. PHM 데이터는 진동 데이터입니다. 진동 데이터를 사용한 이유는 수명이 점점 다해가면서 사용 중인 기계의 진동이 점점 강해진다는 점을 파악하여 만들어진 데이터 입니다. 공장에서는 큰 기계를 주로 사용하는데, 고장이나, 수명을 쉽게 파악하기 위해 진동 센서를 붙여 진동의 세기 등을 보고 파악한다고 합니다. 
 
-<img src="../assets/images/phm_data.png" width="420" height="230">
+<center><img src="{{ site.baseurl }}/images/phm_data.png" ></center> 
+
+
 
 데이터는 위와 같습니다. 베어링 부품의 진동을 수집하였고 수집 상태는 총 3가지로 나눌 수 있으며, 아래와 같습니다.
 
@@ -72,7 +70,10 @@ deep feature 간단하게 말하면 신경망에서 나오는 feature를 이야�
 
 데이터 상세 컬럼은 아래와 같습니다.  
 
-<img src="../assets/images/column.png" width="620" height="80">
+
+<center><img src="{{ site.baseurl }}/images/column.png" ></center> 
+
+
 
 시간, 분, 초 등으로 이루어진 데이터라는 것을 알 수 있으며, 데이터 다운로드는 [여기](https://github.com/wkzs111/phm-ieee-2012-data-challenge-dataset)에서 보실 수 있고 데이터 상세 설명은 PDF로 같이 있으니 참고 하시길 바랍니다. 
 
@@ -83,7 +84,9 @@ deep feature 간단하게 말하면 신경망에서 나오는 feature를 이야�
 
 첫 번째 데이터 전처리 단계에서 원본 데이터를 Hilbert Huang transform(HHT)로 변환합니다. 데이터 변환 후 SVD라고 하여 상관 계수를 구하는 단계를 거치고 데이터를 Input으로 CNN모델에 넣어줍니다.  
 
-<img src="../assets/images/fft.png" width="500" height="400">
+
+<center><img src="{{ site.baseurl }}/images/fft.png" ></center> 
+
 
 HHT는 FFT와는 조금 다르니, 위 이미지(흐릿하지만)를 보고 참고 하세요. (a)가 원본 데이터, (b)가 FFT, (c)가 HHT한 데이터 입니다. 더 선명한 이미지는 논문에 있으니 참고하면 될 것 같습니다. 두 번째 전처리 단계는 CNN에서 학습이 끝나면 바로 전 레이어인, full-connected layer 에서 feature를 PCA로 돌려서 4까지 뽑고 LSTM의 Input으로 넣었습니다. 데이터 전처리는 HHT와 SVD와 PCA 이 세가지를 했고 실제로 만들어서 돌려본 결과 HHT하는데 데이터 양이 많아서 그런지는 모르겠지만 시간이 무척이나 걸렸어요.. 시간을 조금 줄이고 싶으신 분은 사실 FFT만 하셔도 무난한 성능을 얻으실 수 있을 것 같습니다. 
 
@@ -93,7 +96,10 @@ HHT는 FFT와는 조금 다르니, 위 이미지(흐릿하지만)를 보고 참�
 
 이 논문에서 만든 모델 Flowchart는 아래와 같습니다. 
 
-<img src="../assets/images/flow.png" width="350" height="450">
+
+<center><img src="{{ site.baseurl }}/images/flow.png" ></center> 
+
+
 
 
 데이터 전처리 후 CNN Model을 돌리는데, 정확도가 99%가 될때까지 학습을 돌리고, 99%가 되는 순간 마지막 레이어 full-connected layer에서 deep feature extraction을 하게 됩니다. 아마 이 논문에서 가장 중요한 부분이 이 부분 같습니다. 정확도가 높을 때, feature를 뽑는 이유는 제일 좋은 feature를 LSTM Input값으로 넣기 위함이겠죠. 

@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/go_cover1.png
-navigation: True
-title: GO 언어 설치하기
-date: 2019-12-04 09:00:00
-tags: [GO]
+title:  "[GO]GO 언어 설치하기"
+date:   2019-12-04 09:00:00 +0300
+image:  go1.png
+tags:   GO
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-go'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 
 GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다.   
@@ -21,7 +15,8 @@ GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 �
 
 우선 설치파일 다운해봅시다. [여기](https://golang.org/dl/)를 클릭하면 아래와 같은 화면이 나오는데 OS에 맞는 설치파일 다운합니다.  
 
-<center><img src="../assets/images/go1.png" width="550" height="350"></center>
+<center><img src="{{ site.baseurl }}/images/go1.png" ></center>  
+
 
 저는 맥과 윈도우 두가지를 같이 쓰고 있는데, 우선 윈도우랑 맥이랑 그렇게 설치방법이 다르지 않으니 그냥 윈도우로 진행하겠습니다.
 혹시나 GO언어를 설치는 하기 싫지만, 예제나, 코드를 구현하고 싶다면 [여기](https://play.golang.org/)에 들어가시면 GO언어를 사용하실 수 있습니다. 이 웹은 Go놀이터라고 합니다. 설치도 안해도 되면서 항상 최신버전으로 유지하고 있으니 간접적으로 체험하시고 싶거나 간단히 테스트 할때, 사용하시면 유용할 것같네요. 
@@ -32,7 +27,9 @@ GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 �
 GOPATH설정 또한 해줘야하는데, 아래와 같이 설정하시면 됩니다.  
 
 
-<center><img src="../assets/images/go2.png" width="450" height="350"></center>
+
+<center><img src="{{ site.baseurl }}/images/go2.png" ></center>  
+
 
 
 전 gogo라는 폴더를 따로 만들었고 GOROOT 잡은것과 동일하게 gogo폴더로 PATH잡아주면 설정은 끝난답니다.  

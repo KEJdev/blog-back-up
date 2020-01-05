@@ -1,19 +1,14 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/algorlthm_cover1.png
-navigation: True
-title: 재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)
-date: 2019-12-03 11:00:00
-tags: [ALGORITHM]
+title:  "[ALGORITHM]재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)"
+date:   2019-12-03 09:00:00 +0300
+image:  algorlthm_cover1.png
+tags:   ALGORITHM
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-algorlthm'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
 
 
 계속해서 재귀 알고리즘에 익숙해지기 위해 알고리즘 단골 문제인 팩토리얼과 최대공약수를 풀어보겠습니다. 재귀 함수가 무엇인지는 저번 포스팅에서 설명했으므로 이번에는 자세한 이야기는 생략하겠습니다. 

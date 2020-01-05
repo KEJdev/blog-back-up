@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/SQL_cover1.png
-navigation: True
-title: SQL group 함수에서 검색 조건(having)과 테이블 회전(pivot)
-date: 2019-12-01 09:00:00
-tags: [SQL]
+title:  "[SQL]SQL group 함수에서 검색 조건(having)과 테이블 회전(pivot)"
+date:   2019-12-01 09:00:00 +0300
+image:  SQL_cover1.png
+tags:   SQL
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-sql'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다.
 오늘 사용 되는 SQL 테이블은 첫 포스팅에 작성한 emp 테이블을 이용 할 예정입니다. 테이블이 없으신 분들은 [여기](https://kejdev.github.io/SQL-Grammar-1)를 클릭하여 테이블을 긁어서 사용하시기를 바랍니다.

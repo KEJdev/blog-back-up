@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/ML_cover1.png
-navigation: True
-title: 클래스 직접 만들어서 신경망 구현하기(relu,forward,backward)
-date: 2019-12-25 09:00:00
-tags: [MACHINE-LEARNING]
+title:  "[MACHINE-LEARNING] 클래스 직접 만들어서 신경망 구현하기(relu,forward,backward)"
+date:   2019-12-25 09:00:00 +0300
+image:  relu.png
+tags:   MACHINE-LEARNING
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-machine-learning'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 
 저번 포스팅 때, 순전파와 역전파 원리를 간단하게 보고, class를 만들어봤습니다. 
@@ -29,7 +23,8 @@ use_math: true
 
 Relu의 특징은 0이하면 0을 출력하고 0을 넘으면 그냥 그대로 출력하는 비교적 간단하지만 대단히 효율 좋은 활성화 함수이며 그래프로 출력하지만 아래와 같이 출력할 수 있습니다.
 
-<img src="../assets/images/relu.png" width="400" height="300">
+<center><img src="{{ site.baseurl }}/images/relu.png" ></center>  
+
 
 
 그렇기 때문에 함수 구현이나 클래스는 간단하게 아래와 같이 구현할 수 있습니다. 

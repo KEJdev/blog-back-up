@@ -1,20 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/go_cover1.png
-navigation: True
-title: Go언어 문자열 반환하는 함수 만들기
-date: 2019-12-18 09:00:00
-tags: [GO]
+title:  "[GO]Go언어 문자열 반환하는 함수 만들기"
+date:   2019-12-18 09:00:00 +0300
+image:  go_cover1.png
+tags:   GO
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-go'
-author: KEJdev
-use_math: true
----  
-
+changefreq : daily
+priority : 1.0
+---
 
 오늘은 GO언어에서 Package, Exported names, 함수에 대해 알아보도록 하겠습니다. 함수는 Python과 비슷해서 어렵지는 않고, 하면서 같이 패키지나 임포트도 잠시 훝어보는 시간을 가져보겠습니다. GO언어가 깔려 있다면 .go 파일을 만들고, 만약에 블로그 예제와 함께 테스트로 돌려보고 싶다면 [여기](https://play.golang.org/)를 눌러 GO놀이터를 이용하여 따라하시면 됩니다.
 

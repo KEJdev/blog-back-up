@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/R_cover1.png
-navigation: True
-title: R에서 K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기
-date: 2019-10-27 09:00:00
-tags: [R]
+title:  "[R]K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기"
+date:   2019-10-27 09:00:00 +0300
+image:  dataset1.png
+tags:   R
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-r'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 저번에 이어서 계속 계속 knn을 이용한 분류를 해보겠습니다. 이번에는 조금 의미 있는 결과를 가지고 재밌는 결과를 뽑아내보도록 하겠습니다. 데이터는 [여기](https://github.com/KEJdev/DataSet)에서 데이터를 다운 받아주세요.
 
@@ -42,7 +36,10 @@ buy<-read.csv("buy.csv",fileEncoding = "euc-kr")
 
 불러온 데이터는 아래와 같습니다.  
 
-<center><img src="../assets/images/dataset1.png" width="180" height="300"></center>   
+
+<center><img src="{{ site.baseurl }}/images/dataset1.png" ></center>  
+
+
 
 이 데이터에서 scale함수를 이용하여 나이 컬럼을 정규화 해주겠습니다.  
 특정 컬럼을 가져와서 정규화 하려면 아래와 같이 하면 됩니다.  
@@ -51,7 +48,10 @@ buy<-read.csv("buy.csv",fileEncoding = "euc-kr")
 buy$age <- scale(buy$나이)
 ```
 
-<center><img src="../assets/images/dataset2.png" width="240" height="320"></center>   
+
+<center><img src="{{ site.baseurl }}/images/dataset2.png" ></center>  
+
+
 
 뒤에 age컬럼이 추가와 동시에 정규화 된 컬럼이 추가가 된 것을 확인할 수 있습니다.  
 계속해서 월수입도 함께 정규화 시키겠습니다.   
@@ -64,7 +64,9 @@ buy$pay <- scale(buy$월수입)
 
 아까와 똑같이 정규화를 해주세요.  
 
-<center><img src="../assets/images/dataset3.png" width="300" height="320"></center> 
+
+<center><img src="{{ site.baseurl }}/images/dataset3.png" ></center>  
+
 
 위와 같이 컬럼이 또 추가 된 것을 확인 할 수 있습니다.  
 그럼 이제 knn을 이용하여 구매분류를 해볼까요 ?  

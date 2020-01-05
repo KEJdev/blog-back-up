@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/python_cover1.png
-navigation: True
-title: Python while loop문을 사용하여 log함수 구현하기
-date: 2019-12-05 10:00:00
-tags: [PYTHON]
+title:  "[PYTHON]while loop문을 사용하여 log함수 구현하기"
+date:   2019-12-06 09:00:00 +0300
+image:  python_a5.png
+tags:   PYTHON
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-python'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나입니다. 문법도 어렵지 않아서 금방 익힐 수 있습니다. while문이 가장 쓰기 편한 문법 중 하나인데, 그 이유는 조건이 참일 때, 실행시킨다던가, 아니면 무한루프로 계속 돌리다가 어느 순간에 멈추는 등 편리하기 때문입니다. 
 
@@ -23,7 +17,8 @@ for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문�
 
 while문 구조는 아래와 같습니다.  
 
-<center><img src="../assets/images/python_a5.png" width="180" height="80"></center> 
+<center><img src="{{ site.baseurl }}/images/python_a5.png" ></center>  
+
 
 위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.  
 

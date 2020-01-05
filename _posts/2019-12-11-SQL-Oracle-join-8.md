@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/SQL_cover1.png
-navigation: True
-title: Oracle 조인(join)의 종류(equi join, 1999 ANSI)
-date: 2019-12-11 09:00:00
-tags: [SQL]
+title:  "[SQL]Oracle 조인(join)의 종류(equi join, 1999 ANSI)"
+date:   2019-12-11 09:00:00 +0300
+image:  SQL_cover1.png
+tags:   SQL
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-sql'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 오늘부터는 오라클 조인에 대해 알아보도록 하겠습니다. 오라클 조인문법은 어떻게 쓰느냐에 따라 성능 차이가 많이 나기도 하며, 상당히 자주 사용하기 때문에 꼭 알아두어야 합니다. 우선 오늘은 간단하게 오라클 조인의 종류와 간단한 조인 문법에 대해 알아보도록 하겠습니다. 
 

@@ -1,19 +1,14 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/ML_cover1.png
-navigation: True
-title: 신경망이 학습 하는 원리? 역전파(backpropagation)에 대해 
-date: 2019-11-29 09:00:00
-tags: [MACHINE-LEARNING]
+title:  "[MACHINE-LEARNING]신경망이 학습 하는 원리? 역전파(backpropagation)에 대해"
+date:   2019-11-29 09:00:00 +0300
+image:  ml8.png
+tags:   MACHINE-LEARNING
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-machine-learning'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
 
 
 흔히들 역전파, 영어로 하면 backpropagation이라고 하는 용어를 한번쯤은 들어보셨을 거라 생각합니다. 
@@ -36,14 +31,13 @@ use_math: true
  
 역전파라는 개념이 없을 경우 아래 그림과 같이 순전파 라는 개념만 있게 됩니다.  
 
+<center><img src="{{ site.baseurl }}/images/ml8.png" ></center>  
 
-<center><img src="../assets/images/ml8.png" width="800" height="200"></center>   
 
 
 이렇게 되면 무엇이 문제가 되냐면, 만약 output의 결과가 이상하다면, 다시 처음부터 학습을 해야 합니다. 그렇게 되면 학습시간이나, 컴퓨터 성능이 느리고 비효율적이게 되죠. 그렇기 때문에 역전파라는 개념이 생기게 된거랍니다. output층부터 차례대로 역방향으로 따라 올라가서 각 층에 있는 노드의 오차를 계산하는 겁니다. 
 
-
-<center><img src="../assets/images/ml9.png" width="800" height="200"></center>  
+<center><img src="{{ site.baseurl }}/images/ml9.png" ></center>  
 
 
 그렇게 각 노드이 오차만 계산하고 그 오차를 사용해서 함수의 기울기를 계산하는 방식으로 학습 결과에 영향을 주는거죠. 
@@ -154,7 +148,9 @@ print('db:\n',db)
 
 아래 처럼 결과가 나왔나요?  
 
-<center><img src="../assets/images/ml10.png" width="150" height="100"></center>  
+<center><img src="{{ site.baseurl }}/images/ml10.png" ></center>  
+
+
 
 그렇다면 잘나온거예요. 
 어때요? 생각보다 어렵지 않죠? 나중에 활성화 함수나, loss 함수 등 여러가지 추가하면 신경망이 되는거랍니다.  

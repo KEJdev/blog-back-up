@@ -1,19 +1,14 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/python_cover1.png
-navigation: True
-title: Python if문 사용해서 홀짝 출력하기 
-date: 2019-11-26 10:00:00
-tags: [PYTHON]
+title:  "[PYTHON]Python if문 사용해서 홀짝 출력하기 "
+date:   2019-11-26 09:00:00 +0300
+image:  python_cover1.png
+tags:   PYTHON
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-python'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
 
 
 Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.  
@@ -119,7 +114,8 @@ mod(b) # 짝수입니다가 출력됨
 그럼 이번에 재밌는 문제 하나를 풀면서 익혀볼까요?  
 가우스 덧셈 공식은 아래와 같습니다.
 
-<center><img src="../assets/images/if1.png" width="200" height="120"></center>
+<center><img src="{{ site.baseurl }}/images/if1.png" ></center>  
+
 
 이 가우스 덧셈 공식을 이용하여 1부터 10까지 숫자의 합을 출력해볼까요?  
 문법에 조금 익숙해지기 위해 숫자를 입력 받아서 작성해보겠습니다.  

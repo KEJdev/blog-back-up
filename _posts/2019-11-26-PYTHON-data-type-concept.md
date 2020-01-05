@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/python_cover1.png
-navigation: True
-title: 파이썬의 자료형 개념
-date: 2019-11-26 09:00:00
-tags: [PYTHON]
+title:  "[PYTHON]파이썬의 자료형 개념"
+date:   2019-11-26 09:00:00 +0300
+image:  python_cover1.png
+tags:   PYTHON
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-python'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 요즘 핫한 데이터 분석용으로 많이 사용하는 파이썬은 회사나 대학에 파이썬을 많이 사용하고 있습니다.
 파이썬이 퇴근을 빨리 하기 위해 만들어진 언어라는 재밌는 썰 알고 계신가요? 그래서 그런지 생각보다 문법이 어렵지 않습니다.  

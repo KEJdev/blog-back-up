@@ -1,19 +1,15 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/ML_cover1.png
-navigation: True
-title: 머신러닝 신경망에서 미분이 필요한 이유  
-date: 2019-10-29 09:00:00
-tags: [MACHINE-LEARNING]
+title:  "[MACHINE-LEARNING]머신러닝 신경망에서 미분이 필요한 이유"
+date:   2019-10-29 09:00:00 +0300
+image:  and.png
+tags:   MACHINE-LEARNING
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-machine-learning'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
+
+
 
 
 신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤습니다.  
@@ -33,19 +29,25 @@ use_math: true
 함수 $y=f(x)$에 대해서 $x$가 $x_{0}$ 에서 $x_{0}+h$ 로 변화할 때, $y$의 값은 $f(x_{0}+h)$로 변화한다고 할 때, 
 평균 변화율은 아래와 같습니다.  
 
-<center><img src="../assets/images/ml4.png" width="280" height="50"></center>   
+<center><img src="{{ site.baseurl }}/images/ml4.png" ></center>  
 
 
 그림을 보면 h가 서서히 0으로 다가가면 할선은 접선으로 다가갑니다. 
 
-<center><img src="../assets/images/ml3.png" width="400" height="330"></center>   
+
+
+<center><img src="{{ site.baseurl }}/images/ml3.png" ></center>  
+
 
 
 이를 코드로 구현하려면 h가 되었을때가 진정한 미분이라고 할수 있는데, 아까 말했던 것과 같이 컴퓨터로는 진정한 미분을 구현하는 것은 어렵습니다. 왜냐하면 $h$가 0이 될 수 없기 때문입니다. 그래서 $h$를 0.0001로 두고 수치미분을 합니다.  
 
 식은 아래와 같습니다.  
 
-<center><img src="../assets/images/ml5.png" width="200" height="110"></center> 
+<center><img src="{{ site.baseurl }}/images/ml5.png" ></center>  
+
+
+
 
 그렇다면 이제 수치 미분 함수를 Python으로 작성해볼까요 ?
 
@@ -91,7 +93,7 @@ plt.plot(x,y)
 plt.show()
 ```
 
-<center><img src="../assets/images/ml6.png" width="400" height="330"></center>   
+<center><img src="{{ site.baseurl }}/images/ml6.png" ></center>  
 
 여기에 도함수 그래프를 넣어 겹쳐서 보겠습니다.  
 
@@ -121,7 +123,10 @@ plt.plot(x2,y2)
 plt.show()
 ```
 
-<center><img src="../assets/images/ml7.png" width="380" height="280"></center>   
+
+<center><img src="{{ site.baseurl }}/images/ml7.png" ></center>  
+
+
 
 
 그래프가 예쁘게 잘 나오는 것을 확인하셨나요?  

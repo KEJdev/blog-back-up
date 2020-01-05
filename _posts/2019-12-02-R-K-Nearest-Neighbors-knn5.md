@@ -1,19 +1,13 @@
 ---
 layout: post
-current: post
-cover:  ../assets/images/R_cover1.png
-navigation: True
-title: R에서 K-Nearest Neighbors(Knn)을 이용한 동물 분류하기
-date: 2019-12-03 09:00:00
-tags: [R]
+title:  "[R]K-Nearest Neighbors(Knn)을 이용한 동물 분류하기"
+date:   2019-12-03 09:00:00 +0300
+image:  r6.png
+tags:   R
 sitemap :
-  changefreq : daily
-  priority : 1.0
-class: post-template
-subclass: 'post tag-r'
-author: KEJdev
-use_math: true
----  
+changefreq : daily
+priority : 1.0
+---
 
 
 여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 [여기](http://archive.ics.uci.edu/ml/datasets/zoo)를 클릭하면 보실 수 있습니다.     
@@ -32,7 +26,10 @@ zoo<-read.csv("zoo.csv",stringsAsFactors=FALSE, header =F )
 table(zoo[18]) # 종류와 건수 보기
 round(prop.table(table(zoo[18])), 2)*100 # 비율 보기 
 ```
-<center><img src="../assets/images/r6.png" width="120" height="50"></center> 
+
+
+<center><img src="{{ site.baseurl }}/images/r6.png" ></center>  
+
 
 
 이제 데이터를 정규화하는 작업을 위해 normalize함수를 이번에 만들어보려고 합니다. normalize는 벡터 정규화로써 정규화 방식과 조금 다르지만 knn 알고리즘을 사용할 때 단위를 맞출 수 있는 방법 중 하나입니다. 여기서 TMI로 하나 더 이야기 하자면, **정규화**는 데이터 군 내에서 특정 데이터가 가지는 위치를 볼 때 사용하고 **표준화**는 표준편차를 이용한 식이며 2개 이상의 단위가 다를 때, 대상 데이터를 같은 기준으로 보려고 할 때 주로 사용합니다.  
@@ -67,7 +64,9 @@ lapply()와 위에서 만들었던 normalize함수를 사용하면 전제 데이
 zoo2_n <- as.data.frame(lapply(zoo[,2:17], normalize))
 ```
 
-<center><img src="../assets/images/r7.png" width="390" height="70"></center> 
+<center><img src="{{ site.baseurl }}/images/r7.png" ></center>  
+
+
 
 <br>  
 
@@ -90,11 +89,13 @@ zoo2_test_label <- zoo[101,18]
 result <- knn(zoo2_n_train, zoo2_n_test, zoo2_train_label, k=1)
 ```
 
-<center><img src="../assets/images/r8.png" width="180" height="50"></center>
+<center><img src="{{ site.baseurl }}/images/r8.png" ></center>  
+
 
 원본 데이터를 확인해보도록 하겠습니다. 
 
-<center><img src="../assets/images/r9.png" width="340" height="20"></center>
+
+<center><img src="{{ site.baseurl }}/images/r9.png" ></center>  
 
 마지막 2와 출력 결과인 2가 일치하는 결과를 확인할 수 있습니다.   
 다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 [여기](https://github.com/KEJdev/R-Example)에서 보실 수 있습니다.
