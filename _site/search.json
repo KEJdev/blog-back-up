@@ -1,7 +1,7 @@
 [
   
     {
-      "title"    : "[MACHINE-LEARNING] 클래스 직접 만들어서 신경망 구현하기(relu,forward,backward)",
+      "title"    : "[MACHINE-LEARNING]클래스 직접 만들어서 신경망 구현하기(relu,forward,backward)",
       "category" : "",
       "tags"     : "MACHINE-LEARNING",
       "url"      : "/dev/2019/12/25/ML-relu-class-2layer/",
@@ -121,7 +121,7 @@
     } ,
   
     {
-      "title"    : "[PYTHON]Python for문을 사용하여 별찍기",
+      "title"    : "[PYTHON]for문을 사용하여 별찍기",
       "category" : "",
       "tags"     : "PYTHON",
       "url"      : "/dev/2019/12/01/PYTHON-for-Stars-print/",
@@ -177,7 +177,7 @@
     } ,
   
     {
-      "title"    : "[machine learning]퍼셉트론(Perceptron)이란?",
+      "title"    : "[MACHINE-LEARNING]퍼셉트론(Perceptron)이란?",
       "category" : "",
       "tags"     : "MACHINE-LEARNING",
       "url"      : "/dev/2019/11/06/ML-Machine-Learning/",
@@ -195,7 +195,7 @@
     {
       "title"    : "[PL/SQL]PL/SQL의 예외처리(exception)란?",
       "category" : "",
-      "tags"     : "PL/SQL",
+      "tags"     : "PLSQL",
       "url"      : "/dev/2019/11/05/PLSQL-exception/",
       "date"     : "5 Nov, 2019"
     } ,

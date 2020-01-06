@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[PYTHON]Python for문을 사용하여 별찍기"
+title:  "[PYTHON]for문을 사용하여 별찍기"
 date:   2019-12-01 09:00:00 +0300
 image:  python_a6.png
 tags:   PYTHON

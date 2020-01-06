@@ -7,7 +7,7 @@
         <div class="logo">
           <a class="logo__link" href="{{site.baseurl}}/">
           {%if site.data.settings.logo %}
-            <img class="logo__image" src="{{ site.baseurl }}/images/{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
+            <img class="logo__image" src="{{ site.baseurl }}/images/{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}" style="width:50px; height:50px">
           {% else %}
             {{ site.data.settings.title }}
           {% endif %}
@@ -26,29 +26,18 @@
             <ul class="nav__list list-reset">
               <li class="nav__item">
                 <a href="{{site.baseurl}}/" class="nav__link">Home</a>
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/SQL/" class="nav__link">SQL</a>
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/PLSQL/" class="nav__link">PLSQL</a>
               </li>
+              {% for page in site.pages %}
+                {% unless page.name == 'tags.html' or page.name == '404.html' %}
+              {% if page.title %}
               <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/R/" class="nav__link">R</a>
+                <a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
               </li>
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/PYTHON/" class="nav__link">PYTHON</a>
-              </li>
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/MACHINE-LEARNING/" class="nav__link">MACHINE LEARNING</a>
-              </li>
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/GO/" class="nav__link">GO</a>
-              </li>
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/PAPER/" class="nav__link">PAPER</a>
-              </li>
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/tag/ALGORITHM/" class="nav__link">ALGORITHM</a>
-              </li>
+              {% endif %}
+                {% endunless %}
+              {% endfor %}
+            </ul>
+
           </div>
         </nav>
 
