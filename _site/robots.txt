@@ -1,1 +1,1 @@
-Sitemap: https://kejdev.github.io/dev/sitemap.xml
+Sitemap: http://localhost:4000/dev/sitemap.xml
