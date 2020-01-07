@@ -1,0 +1,3 @@
+ User-agent: *
+ Allow: /
+ Sitemap: http://kejdev.github.io/sitemap.xml
