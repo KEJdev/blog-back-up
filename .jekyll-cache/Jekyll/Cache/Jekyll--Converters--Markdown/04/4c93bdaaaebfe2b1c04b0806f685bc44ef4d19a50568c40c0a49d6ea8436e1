@@ -1,0 +1,151 @@
+I"#<p>이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.<br />
+우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아보겠습니다.</p>
+
+<hr />
+
+<blockquote>
+  <h4 id="함수를-사용해야-하는-이유">함수를 사용해야 하는 이유?</h4>
+</blockquote>
+
+<p>간단한 이유인데, SQL에서 함수를 사용해야 하는 이유는 함수를 이용하면 데이터 검색을 더 쉽고 자세하게 구현할 수 있기 때문입니다.</p>
+
+<hr />
+
+<blockquote>
+  <h4 id="함수의-종류">함수의 종류</h4>
+</blockquote>
+
+<p>함수의 종류는 크게 2가지로 볼 수 있습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center></center></th>
+      <th style="text-align: center"><center>함수의 종류</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>단일행 함수</strong></td>
+      <td style="text-align: center"><center>문자, 숫자, 날짜, 변환, 일반</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>복수행 함수</strong></td>
+      <td style="text-align: center"><center>max, min, avg, sum, count</center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>문자 함수의 종류에는 아래와 같습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center></center></th>
+      <th style="text-align: center"><center>문자 함수 </center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>upper</strong></td>
+      <td style="text-align: center">문자를 대문자로 변환하는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>lower</strong></td>
+      <td style="text-align: center">문자를 소문자로 변환하는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>initcap</strong></td>
+      <td style="text-align: center">첫 문자는 대문자로, 나머지는 소문자로 변환하는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>substr</strong></td>
+      <td style="text-align: center">특정 철자만 잘라서 출력하는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Instr</strong></td>
+      <td style="text-align: center">단어에서 철자의 위치를 출력하는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Rpad</strong></td>
+      <td style="text-align: center">특정 철자나 공백을 채워넣는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Pad</strong></td>
+      <td style="text-align: center">특정 철자나 공백을 채워넣는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Length</strong></td>
+      <td style="text-align: center">철자의 개수를 세는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Concat</strong></td>
+      <td style="text-align: center">두 컬럼의 데이터를 연결해서 출력하는 함수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>replace</strong></td>
+      <td style="text-align: center">어떤 특정 절차를 다른 철자로 변경해서 출력하는 함수</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>생각보다 많죠?<br />
+문자 함수를 이용한 기초적인 SQL문법을 작성해볼까요?</p>
+
+<p>이름을 출력하는데 대문자로도 출력하고 소문자로도 출력하고 첫번째 철자는 대문자로 나머지는 소문자로 출력하려면 SQL을 어떻게 짜야댈까요? 아래와 같이 SQL문법을 작성하시면 됩니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">upper</span><span class="p">(</span><span class="n">ename</span><span class="p">),</span> <span class="k">lower</span><span class="p">(</span><span class="n">ename</span><span class="p">),</span> <span class="n">initcap</span><span class="p">(</span><span class="n">ename</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>출력이 잘되는 것을 확인 하셨나요?<br />
+그러면 이번에 조건을 살짝 걸어서 출력해보겠습니다. 이름이 king인 사원의 이름과 월급을 출력하는데 철자를 모두 소문자로 작성해서 검색되게 하려면 어떻게 해야댈까요?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="k">lower</span><span class="p">(</span><span class="n">ename</span><span class="p">)</span> <span class="o">=</span> <span class="s1">'king'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위와 같이 작성하시면 출력이 잘 되는 것을 확인할 수 있습니다.<br />
+그렇다면 이번엔 <strong>substr</strong>(특정 철자만 잘라서 출력하는 함수)사용해볼까요?</p>
+
+<p>이름의 첫 글자가 S로 시작하는 사원의 이름을 출력하려면 어떻게 해야댈까요? 단! like를 사용하지말고 위에서 말한 <strong>substr</strong>함수를 사용해서 SQL을 작성해볼까요?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">substr</span><span class="p">(</span><span class="n">ename</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s1">'S'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위와 같이 작성하셨나요?<br />
+그러면 조금 더 응용해서 SQL문법을 작성해볼까요?<br />
+아래의 SQL로 출력되는 결과를 <strong>initcap</strong>을 사용하지 말고 여태까지 배운  substr, upper, lower, ||를 사용해서 출력되게 해볼까요?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">initcap</span><span class="p">(</span><span class="n">ename</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위의 SQL의 출력 결과를 한번 바꿔볼까요? 
+조금 길기는 하지만 아래와 같이 SQL을 작성하면 된답니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">upper</span><span class="p">(</span><span class="n">substr</span><span class="p">(</span><span class="n">ename</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">||</span> <span class="k">lower</span><span class="p">(</span><span class="n">substr</span><span class="p">(</span><span class="n">ename</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="k">from</span> <span class="n">emp</span>
+</code></pre></div></div>
+
+<p>다음 문자 함수는 <strong>instr</strong>입니다. 단어에서 철자의 위치를 출력하는 함수인데요. 간단하게 사원들의 이름 철자에 ‘M’자의 위치를 출력해볼까요?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">instr</span><span class="p">(</span><span class="n">ename</span><span class="p">,</span><span class="s1">'M'</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>간단하죠 ?<br />
+다음으로 철자의 개수를 세는 함수인 length 함수를 사용하여 사원들의 이름 철자의 개수를 세워볼까요?<br />
+이것도 아까와 마찬가지로 간단하게 아래처럼 작성하면 된답니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="k">length</span><span class="p">(</span><span class="n">ename</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>생각보다 문자함수는 간단하죠?<br />
+다음 포스팅때는 간단하게 숫자 함수와 날짜 함수에 대해 알아볼께요.</p>
+
+:ET

@@ -1,0 +1,112 @@
+I"�<p>저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다.<br />
+숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않습니다. 그래서 날짜 함수는 잘봐두셔야합니다.</p>
+
+<hr />
+
+<blockquote>
+  <h4 id="숫자함수와-날짜함수">숫자함수와 날짜함수</h4>
+</blockquote>
+
+<p>프로그래밍을 조금 해보신 분들은 금방 습득하실 수 있습니다. 숫자함수의 종류는 아래와 같습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center></center></th>
+      <th style="text-align: center"><center>숫자 함수</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>round</strong></td>
+      <td style="text-align: center"><center>반올림하는 함수</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>trunc</strong></td>
+      <td style="text-align: center"><center>반올림하지 않고 버리는 함수</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>mod</strong></td>
+      <td style="text-align: center"><center>나눈 나머지값을 출력하는 함수</center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>날짜 함수의 정류는 아래와 같습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><center></center></th>
+      <th style="text-align: center"><center>날짜 함수</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>between_months</strong></td>
+      <td style="text-align: center"><center>날짜와 날짜 사이의 개월 수를 출력하는 함수</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>add_months</strong></td>
+      <td style="text-align: center"><center>특정 개월 수 후의 날짜를 출력하는 함수</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>next_day</strong></td>
+      <td style="text-align: center"><center> 돌아올 요일의 날짜를 출력하는 함수</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>last_day</strong></td>
+      <td style="text-align: center"><center>그 달의 마지막 날이 언제인지 출력하는 함수</center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>날짜 함수는</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>날짜 - 숫자 = 날짜  
+날짜 + 숫자 = 날짜  
+날짜 - 날짜 = 숫자  
+</code></pre></div></div>
+
+<p>등으로도 사용할수 있습니다. 
+<strong>round</strong>함수를 사용할때는 아래와 같이 작성하실 수 있습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">round</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  
+<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><strong>trunc</strong>함수를 사용할때는 아래와 같이 작성하실 수 있습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">trunc</span><span class="p">(</span><span class="mi">748</span><span class="p">.</span><span class="mi">876</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  
+<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><strong>mod</strong>함수를 사용할때는 아래와 같이 작성하실 수 있습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">mod</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이제 어려운 날짜 함수에 대해 알아보겠습니다. 이름과 입사한 날짜부터 오늘까지 총 몇일 근무했는지를 출력해보겠습니다. 아까 말했던 <strong>-</strong>를 사용하면 된답니다?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">trunc</span><span class="p">(</span><span class="n">sysdate</span><span class="o">-</span><span class="n">hiredate</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>조금 응용해서 이름과 입사한 날짜가 오늘부터 총 몇 달을 근무했는 출력해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">months_between</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="n">hiredate</span><span class="p">)</span>
+<span class="n">months_between</span><span class="p">(</span><span class="err">최신날짜</span><span class="p">,</span><span class="err">입사일</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>마지막으로 오늘부터 100달 뒤에 날짜를 출력해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">add_months</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이렇게 작성하시면 된답니다.<br />
+생각보다 날짜 함수는 꽤 어렵답니다. 날짜함수는 나중에 사용할 곳이 많으니까, 잘 기억해두세요!</p>
+
+:ET

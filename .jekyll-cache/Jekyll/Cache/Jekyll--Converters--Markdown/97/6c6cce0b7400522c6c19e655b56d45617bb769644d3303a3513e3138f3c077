@@ -1,0 +1,161 @@
+I"�1<p>SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다.<br />
+여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말합니다.</p>
+
+<hr />
+
+<blockquote>
+  <h4 id="where">where</h4>
+</blockquote>
+
+<p>SQL에서 검색에 조건을 줄때는 <strong>where</strong>를 사용합니다.<br />
+where를 사용하여 월급이 3000인 사원들의 이름과 월급을 출력해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">sal</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위와 같이 from 다음에 where 조건 절을 사용하시면 됩니다. 
+그럼 다시 직업이 SALESMAN인 사람들의 이름과 직업을 출력해볼까요?<br />
+여기서 알아둬야 할 점은 문자와 날짜의 경우에는 양쪽에 싱글 쿼테이션(‘ ‘)마크를 사용해야 합니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">job</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">job</span> <span class="o">=</span> <span class="s1">'SALESMAN'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이제부터 연산자를 이용해서 조건에 맞는 사원들만 출력해보겠습니다.
+우선 연산자의 종류에 대해 먼저 알아보겠습니다.</p>
+
+<p><strong>※ 연산자 3가지</strong></p>
+<ol>
+  <li>산술 연산자 : * / + -</li>
+  <li>비교 연산자: &gt; , &lt; , &gt;=, &lt;=, =, !=, &lt;&gt;, ^= (같지 않거나)</li>
+  <li>논리 연산자 : and, or, not</li>
+</ol>
+
+<p>위 연산자를 이용해서 월급이 2500 이상인 사원들의 이름과 출력을 해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">sal</span> <span class="o">&gt;=</span> <span class="mi">2500</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이번엔 별칭을 사용해서 연봉이 3600 이상인 사원들의 이름과 연봉을 출력하는데, 컬럼명은 한글로 연봉으로 출력되게 해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="o">*</span><span class="mi">12</span> <span class="k">as</span> <span class="err">연봉</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">sal</span><span class="o">*</span><span class="mi">12</span><span class="o">&gt;=</span><span class="mi">36000</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>그런데 아래와 같이 쓰는 분도 있을텐데요.
+<strong>where 연봉 &gt;= 3600</strong>  이렇게 쓰시면 에러가 뜨게 되는데, 그 이유는 SQL이 실행될 때의 순서때문입니다.<br />
+SQL은 from - where - select 순으로 실행하기 때문에 미리 만든 “연봉” 별칭을 사용할 수 없습니다.</p>
+
+<p>이번에는 두개의 연산자를 이용해서 월급이 1000에서 3000 사이인 사원들의 이름과 월급을 출력해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">sal</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="k">and</span> <span class="n">sal</span> <span class="o">&lt;</span> <span class="mi">3000</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>또는 betwen을 사용하여 조건절을 완성 할 수 있습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span> <span class="p">,</span> <span class="n">sal</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">sal</span> <span class="k">between</span> <span class="mi">1000</span> <span class="k">and</span> <span class="mi">3000</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이번에는 81년 2월 23일에 입사한 사원의 이름과 입사일을 출력해보겠습니다.
+아까 말했던 것 처럼 문자와 날짜는 양쪽에 싱글 쿼테이션 마크를 둘러줘야 합니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">hiredate</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">hiredate</span> <span class="o">=</span> <span class="s1">'81/02/23'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이번엔 between을 사용하여, 1981년도에 입사한 사원들의 입사일을 출력해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span><span class="p">,</span> <span class="n">hiredate</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">hiredate</span> <span class="k">between</span> <span class="s1">'81/01/01'</span> <span class="k">and</span> <span class="s1">'81/12/31'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>다양한 검색 조건을 주기위해 이번에는 이름의 첫 글자가 S로 시작하는 사원들의 이름을 출력해보겠습니다.
+글자에 조건을 주게 되면 <strong>like</strong>와 <strong>%(wild card)</strong>를 사용하며, <strong>%</strong>는 like 연산자를 사용할때만 <strong>wild card</strong>가 됩니다. 이 자리에는 뭐가 와도 관계가 없으며 또한 철자의 개수가 몇 개가 와도 관계 없습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">ename</span> <span class="k">like</span> <span class="s1">'S%'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위 쿼리를 날리면 첫글자가 S인 사원이 나오게 되는데 이번에는 이름의 끝글자가 T로 끝나는 사원들의 이름을 출력해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span> 
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">ename</span> <span class="k">like</span> <span class="s1">'%T'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>그러면 조금 더 머리를 써서 그렇다면 이름의 두번 째 철자가 M인 사원들의 이름을 출력해보겠습니다.</p>
+
+<p><strong>like와 짝궁인 키워드</strong>에 대해 알아야대요.</p>
+<ol>
+  <li>%: 이 자리에 뭐가 와도 관계 없다.</li>
+  <li>_: 이 자리에 뭐가 와도 관계 없지만 한자릿수여야 한다.</li>
+</ol>
+
+<p>위에서도 언급 했듯이 <strong>_</strong>를 사용해서 출력해야 합니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">ename</span> <span class="k">like</span> <span class="s1">'_M%'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이어서 세번째 철자가 L인 사원들의 이름을 출력해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">ename</span> <span class="k">like</span> <span class="s1">'_ _L%'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이번엔 그럴리는 없겠지만, 이름에 %가 들어간 사원의 이름을 출력해보겠습니다.
+기존 테이블에 그런 이름을 가진 사림이 없으므로 기존에 있는 테이블에 data 한 건 추가해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">insert</span> <span class="k">into</span> <span class="n">emp</span> <span class="p">(</span><span class="n">empno</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">)</span>
+<span class="k">values</span> <span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="s1">'A%B'</span><span class="p">,</span> <span class="mi">3400</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>like를 사용할 때, %가 와일드 카드가 아니라 특수문자 %로 인식하게 하려면 아래와 같이 작성해야합니다. 
+(m 바로 다음에 나오는 것은 와일드 카드가 아니라 특수문자 %입니다.)</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">ename</span> <span class="k">like</span> <span class="s1">'_m%%'</span> <span class="k">escape</span> <span class="s1">'m'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>조금 응용해서 두번째 철자와세번째 철자가 %인 사원의 이름을 출력해보겠습니다.
+이번에도 기존에 있는 테이블에 data를 한 개 더 추가해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">insert</span> <span class="k">into</span> <span class="n">emp</span><span class="p">(</span><span class="n">empno</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">)</span>
+<span class="k">values</span> <span class="p">(</span><span class="mi">2919</span><span class="p">,</span> <span class="s1">'A%%B'</span><span class="p">,</span> <span class="mi">4300</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>자 이제 이름에 두번째 철자와 세번째 철자가 %인 사원의 이름을 출력해볼까요?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">ename</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">ename</span> <span class="k">like</span> <span class="s1">'_m%m%%'</span> <span class="k">escape</span> <span class="s1">'m'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이제 like에 익숙해지셨나요? <br />
+마지막으로 이름의 첫번째 철자가 S가 아닌 사원들의 이름을 출력해볼까요?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">selete</span> <span class="n">ename</span>
+<span class="k">from</span> <span class="n">emp</span>
+<span class="k">where</span> <span class="n">ename</span> <span class="k">not</span> <span class="k">like</span> <span class="s1">'S%'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>출력이 잘되는 것을 확인하셨나요?<br />
+이제 like와 연산자에 많이 익숙해졌을꺼라 생각해요! <br />
+다음 포스팅에서는 계속해서 데이터 제한 및 정렬에 필요한 기타 비교연산자와 order by절에 대해 알아볼께요.</p>
+:ET
