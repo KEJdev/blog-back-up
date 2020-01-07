@@ -3,7 +3,7 @@ layout: post
 title:  "[PYTHON]Python if문 사용해서 홀짝 출력하기 "
 date:   2019-11-26 09:00:00 +0300
 image:  python_cover1.png
-tags:   PYTHON
+tags:   python
 sitemap :
 changefreq : daily
 priority : 1.0

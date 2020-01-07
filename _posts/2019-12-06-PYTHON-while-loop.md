@@ -3,7 +3,7 @@ layout: post
 title:  "[PYTHON]while loop문을 사용하여 log함수 구현하기"
 date:   2019-12-06 09:00:00 +0300
 image:  python_a5.png
-tags:   PYTHON
+tags:   python
 sitemap :
 changefreq : daily
 priority : 1.0

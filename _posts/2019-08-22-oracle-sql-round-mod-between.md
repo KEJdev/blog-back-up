@@ -3,7 +3,7 @@ layout: post
 title:  "[SQL]SQL의 반올림과 비교함수 사용하기(round,between_months)"
 date:   2019-08-22 09:00:00 +0300
 image:  SQL_cover1.png
-tags:   SQL
+tags:   sql
 sitemap :
 changefreq : daily
 priority : 1.0

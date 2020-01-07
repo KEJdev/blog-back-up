@@ -3,7 +3,7 @@ layout: post
 title:  "[R]K-Nearest Neighbors(Knn)을 이용한 동물 분류하기"
 date:   2019-12-03 09:00:00 +0300
 image:  r6.png
-tags:   R
+tags:   r
 sitemap :
 changefreq : daily
 priority : 1.0

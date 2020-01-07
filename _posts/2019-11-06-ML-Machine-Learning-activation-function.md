@@ -3,7 +3,7 @@ layout: post
 title:  "[MACHINE-LEARNING]머신러닝에서 활성화 함수란?(Activation function)"
 date:   2019-11-06 09:00:00 +0300
 image:  sigmoid.png
-tags: MACHINE-LEARNING
+tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0

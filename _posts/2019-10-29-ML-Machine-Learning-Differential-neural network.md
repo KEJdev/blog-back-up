@@ -3,7 +3,7 @@ layout: post
 title:  "[MACHINE-LEARNING]머신러닝 신경망에서 미분이 필요한 이유"
 date:   2019-10-29 09:00:00 +0300
 image:  and.png
-tags:   MACHINE-LEARNING
+tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0

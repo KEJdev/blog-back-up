@@ -3,7 +3,7 @@ layout: post
 title:  "[R]K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류"
 date:   2019-12-02 09:00:00 +0300
 image:  python_cover1.png
-tags:   R
+tags:   r
 sitemap :
 changefreq : daily
 priority : 1.0

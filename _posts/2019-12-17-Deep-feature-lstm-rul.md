@@ -3,7 +3,7 @@ layout: post
 title:  "[PAPER]논문요약, Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network"
 date:   2019-12-17 09:00:00 +0300
 image:  feature.png
-tags:   PAPER
+tags:   paper
 sitemap :
 changefreq : daily
 priority : 1.0

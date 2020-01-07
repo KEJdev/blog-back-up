@@ -3,7 +3,7 @@ layout: post
 title:  "[GO]GO 언어 설치하기"
 date:   2019-12-04 09:00:00 +0300
 image:  go1.png
-tags:   GO
+tags:   go
 sitemap :
 changefreq : daily
 priority : 1.0

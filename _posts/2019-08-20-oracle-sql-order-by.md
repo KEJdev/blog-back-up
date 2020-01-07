@@ -3,7 +3,7 @@ layout: post
 title:  "[SQL]SQL에서 테이블 정렬하기(order by)"
 date:   2019-08-20 09:00:00 +0300
 image:  SQL_cover1.png
-tags:   SQL
+tags:   sql
 sitemap :
 changefreq : daily
 priority : 1.0

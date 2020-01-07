@@ -3,7 +3,7 @@ layout: post
 title:  "[MACHINE-LEARNING]Relu함수에서 변형된 활성화 함수들(leake Relu,Swish)"
 date:   2019-11-07 09:00:00 +0300
 image:  at.png
-tags:   MACHINE-LEARNING
+tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0

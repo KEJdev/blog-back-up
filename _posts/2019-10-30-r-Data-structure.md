@@ -3,7 +3,7 @@ layout: post
 title:  "[R]]R을 배워야 하는 이유와 자료구조"
 date:   2019-10-30 09:00:00 +0300
 image:  pie1.png
-tags:   R
+tags:   r
 sitemap :
 changefreq : daily
 priority : 1.0

@@ -3,7 +3,7 @@ layout: post
 title:  "[ALGORITHM]PLSQL로 두개의 숫자의 합 구하기"
 date:   2019-11-26 09:00:00 +0300
 image:  algorlthm_cover1.png
-tags:   ALGORITHM
+tags:   algorithm
 sitemap :
 changefreq : daily
 priority : 1.0

@@ -3,7 +3,7 @@ layout: post
 title:  "[GO]Go언어 문자열 반환하는 함수 만들기"
 date:   2019-12-18 09:00:00 +0300
 image:  go_cover1.png
-tags:   GO
+tags:   go
 sitemap :
 changefreq : daily
 priority : 1.0

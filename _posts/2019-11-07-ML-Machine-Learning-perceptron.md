@@ -3,7 +3,7 @@ layout: post
 title:  "[MACHINE-LEARNING]머신러닝에서 단층/다층퍼셉트론(And, XOR Perceptron) 구현하기"
 date:   2019-11-07 09:00:00 +0300
 image:  and.png
-tags:   MACHINE-LEARNING
+tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0

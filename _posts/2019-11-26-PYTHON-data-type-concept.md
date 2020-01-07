@@ -3,7 +3,7 @@ layout: post
 title:  "[PYTHON]파이썬의 자료형 개념"
 date:   2019-11-26 09:00:00 +0300
 image:  python_cover1.png
-tags:   PYTHON
+tags:   python
 sitemap :
 changefreq : daily
 priority : 1.0

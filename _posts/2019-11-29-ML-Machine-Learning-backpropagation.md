@@ -3,7 +3,7 @@ layout: post
 title:  "[MACHINE-LEARNING]신경망이 학습 하는 원리? 역전파(backpropagation)에 대해"
 date:   2019-11-29 09:00:00 +0300
 image:  ml8.png
-tags:   MACHINE-LEARNING
+tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0

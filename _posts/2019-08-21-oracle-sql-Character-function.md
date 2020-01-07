@@ -3,7 +3,7 @@ layout: post
 title:  "[SQL]SQL에서 문자 함수 사용하기(Rpad,substr,replace)"
 date:   2019-08-21 09:00:00 +0300
 image:  SQL_cover1.png
-tags:   SQL
+tags:   sql
 sitemap :
 changefreq : daily
 priority : 1.0

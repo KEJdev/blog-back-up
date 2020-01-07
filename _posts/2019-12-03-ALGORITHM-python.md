@@ -3,7 +3,7 @@ layout: post
 title:  "[ALGORITHM]재귀 알고리즘으로 구구단 출력하기(Python)"
 date:   2019-12-03 09:00:00 +0300
 image:  stack.png
-tags:   ALGORITHM
+tags:   algorithm
 sitemap :
 changefreq : daily
 priority : 1.0

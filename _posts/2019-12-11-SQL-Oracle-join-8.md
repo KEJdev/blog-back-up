@@ -3,7 +3,7 @@ layout: post
 title:  "[SQL]Oracle 조인(join)의 종류(equi join, 1999 ANSI)"
 date:   2019-12-11 09:00:00 +0300
 image:  SQL_cover1.png
-tags:   SQL
+tags:   sql
 sitemap :
 changefreq : daily
 priority : 1.0

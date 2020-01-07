@@ -3,7 +3,7 @@ layout: post
 title:  "[MACHINE-LEARNING]클래스 직접 만들어서 신경망 구현하기(relu,forward,backward)"
 date:   2019-12-25 09:00:00 +0300
 image:  relu.png
-tags:   MACHINE-LEARNING
+tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0

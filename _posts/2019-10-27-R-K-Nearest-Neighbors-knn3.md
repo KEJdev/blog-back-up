@@ -3,7 +3,7 @@ layout: post
 title:  "[R]K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기"
 date:   2019-10-27 09:00:00 +0300
 image:  dataset1.png
-tags:   R
+tags:   r
 sitemap :
 changefreq : daily
 priority : 1.0

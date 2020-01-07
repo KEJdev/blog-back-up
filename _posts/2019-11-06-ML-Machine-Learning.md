@@ -3,7 +3,7 @@ layout: post
 title:  "[MACHINE-LEARNING]퍼셉트론(Perceptron)이란?"
 date:   2019-11-06 09:00:00 +0300
 image:  ML_cover1.png
-tags:   MACHINE-LEARNING
+tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0

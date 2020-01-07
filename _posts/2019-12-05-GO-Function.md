@@ -3,7 +3,7 @@ layout: post
 title:  "[GO]GO언어 변수 선언하기"
 date:   2019-12-05 09:00:00 +0300
 image:  go3.png
-tags:   GO
+tags:   go
 sitemap :
 changefreq : daily
 priority : 1.0

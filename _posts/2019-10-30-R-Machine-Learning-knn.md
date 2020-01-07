@@ -3,7 +3,7 @@ layout: post
 title:  "[R]머신러닝 알고리즘, Knn(K-Nearest Neighbors)이란?"
 date:   2019-10-30 09:00:00 +0300
 image:  knn.png
-tags: R
+tags:   r
 sitemap :
 changefreq : daily
 priority : 1.0

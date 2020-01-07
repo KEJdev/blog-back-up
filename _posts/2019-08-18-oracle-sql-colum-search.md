@@ -3,7 +3,7 @@ layout: post
 title:  "[SQL]SQL에서 컬럼검색과 별칭(Keyword)"
 date:   2019-08-18 09:00:00 +0300
 image:  SQL_cover1.png
-tags:   SQL
+tags:   sql
 sitemap :
 changefreq : daily
 priority : 1.0
