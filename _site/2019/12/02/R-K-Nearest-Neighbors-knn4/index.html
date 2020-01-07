@@ -17,17 +17,17 @@
   
   <meta property="og:description" content="벌써 knn 분류를 상당히 많이 했습니다. 많이 익숙해지셨나요?오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 ...">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/dev/2019/12/02/R-K-Nearest-Neighbors-knn4/">
-  <meta property="og:image" content="/dev/images/python_cover1.png">
+  <meta property="og:url" content="http://localhost:4000/2019/12/02/R-K-Nearest-Neighbors-knn4/">
+  <meta property="og:image" content="/images/python_cover1.png">
   <meta property="og:image:width" content="420" >
   <meta property="og:image:height" content="420" >
   <meta property="og:image:type" content="image/png">
 
 
 
-  <link rel="canonical" href="http://localhost:4000/dev/2019/12/02/R-K-Nearest-Neighbors-knn4/">
-  <link rel="alternate" type="application/rss+xml" title="" href="/dev/feed.xml">
-  <link rel="shortcut icon" href="/dev/images/../favicon.ico" type="image/png"/>
+  <link rel="canonical" href="http://localhost:4000/2019/12/02/R-K-Nearest-Neighbors-knn4/">
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+  <link rel="shortcut icon" href="/images/../favicon.ico" type="image/png"/>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -62,9 +62,9 @@
       <header class="header">
 
         <div class="logo">
-          <a class="logo__link" href="/dev/">
+          <a class="logo__link" href="/">
           
-            <img class="logo__image" src="/dev/images/../favicon.ico" alt="log" style="width:50px; height:50px">
+            <img class="logo__image" src="/images/../favicon.ico" alt="log" style="width:50px; height:50px">
           
           </a>
         </div>
@@ -80,7 +80,7 @@
 
             <ul class="nav__list list-reset">
               <li class="nav__item">
-                <a href="/dev/" class="nav__link">Home</a>
+                <a href="/" class="nav__link">Home</a>
               </li>
               
                 
@@ -198,7 +198,7 @@
           
           <div class="post__tags">
             
-              <a href="/dev/tag/R" class="post__tags-tag">R</a>
+              <a href="/tag/R" class="post__tags-tag">R</a>
             
           </div>
           
@@ -244,7 +244,7 @@
 
 <p>출력하면 아래와 같이 출력이 됩니다.</p>
 
-<center><img src="/dev/images/r3.png" /></center>
+<center><img src="/images/r3.png" /></center>
 
 <p>그럼 이제 토마토 데이터를 만들어 보겠습니다. <br />
 토마토 데이터는 아래와 같이 만들어주면 된답니다.</p>
@@ -263,7 +263,7 @@
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">food</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)]</span><span class="w">
 </span></code></pre></div></div>
 
-<center><img src="/dev/images/r4.png" /></center>
+<center><img src="/images/r4.png" /></center>
 
 <p>그리고 라벨은 데이터의 마지막 컬럼인 class 입니다. 그래서 아래와 같이 라벨을 따로 변수에 담아주겠습니다.</p>
 
@@ -277,7 +277,7 @@
 </span><span class="n">result1</span><span class="o">&lt;-</span><span class="n">knn</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span><span class="n">tomato</span><span class="w"> </span><span class="p">,</span><span class="n">train_label</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">prob</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<center><img src="/dev/images/r5.png" /></center>
+<center><img src="/images/r5.png" /></center>
 
 <p>이번 knn은 조금 재밌지 않나요 ? 다음 포스팅에서는 knn을 이용한 동물 분류해보도록 하겠습니다.  <br />
 전체 코드는 <a href="https://github.com/KEJdev/R-Example">여기</a>에서 확인하실 수 있습니다.</p>
@@ -328,22 +328,22 @@
 </footer>
 <!-- end footer -->
 
-  <script src="/dev/js/vendors/jquery-3.3.1.min.js"></script>
-<script src="/dev/js/vendors/simple-jekyll-search.min.js"></script>
+  <script src="/js/vendors/jquery-3.3.1.min.js"></script>
+<script src="/js/vendors/simple-jekyll-search.min.js"></script>
 <script>
   SimpleJekyllSearch({
     searchInput: document.getElementById("js-search-input"),
     resultsContainer: document.getElementById("js-results-container"),
-    json: "/dev/search.json",
+    json: "/search.json",
     searchResultTemplate: '<li class="search-results__item"><a class="search-results__link" href="{url}">{title}</a><br> <span class="search-results__date">{date}</span></li>',
     noResultsText: '<li class="no-results">No results found</li>'
   });
 </script>
-<script src="/dev/js/vendors/transition.js"></script>
-<script src="/dev/js/vendors/zoom.min.js"></script>
-<script src="/dev/js/vendors/instafeed.min.js"></script>
-<script src="/dev/js/vendors/jquery.fitvids.js"></script>
-<script src="/dev/js/common.js"></script>
+<script src="/js/vendors/transition.js"></script>
+<script src="/js/vendors/zoom.min.js"></script>
+<script src="/js/vendors/instafeed.min.js"></script>
+<script src="/js/vendors/jquery.fitvids.js"></script>
+<script src="/js/common.js"></script>
 </body>
 
 </html>

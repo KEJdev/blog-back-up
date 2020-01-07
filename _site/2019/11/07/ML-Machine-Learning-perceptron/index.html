@@ -17,17 +17,17 @@
   
   <meta property="og:description" content="퍼셉트론에 대한 개념은 저번 포스팅때 다뤘습니다. 이번에는 퍼셉트론에 대해 좀더 자세히 다뤄보겠습니다. 또한 직접 PYTHON으로 구현해보겠습니다.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/dev/2019/11/07/ML-Machine-Learning-perceptron/">
-  <meta property="og:image" content="/dev/images/and.png">
+  <meta property="og:url" content="http://localhost:4000/2019/11/07/ML-Machine-Learning-perceptron/">
+  <meta property="og:image" content="/images/and.png">
   <meta property="og:image:width" content="420" >
   <meta property="og:image:height" content="420" >
   <meta property="og:image:type" content="image/png">
 
 
 
-  <link rel="canonical" href="http://localhost:4000/dev/2019/11/07/ML-Machine-Learning-perceptron/">
-  <link rel="alternate" type="application/rss+xml" title="" href="/dev/feed.xml">
-  <link rel="shortcut icon" href="/dev/images/../favicon.ico" type="image/png"/>
+  <link rel="canonical" href="http://localhost:4000/2019/11/07/ML-Machine-Learning-perceptron/">
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+  <link rel="shortcut icon" href="/images/../favicon.ico" type="image/png"/>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -62,9 +62,9 @@
       <header class="header">
 
         <div class="logo">
-          <a class="logo__link" href="/dev/">
+          <a class="logo__link" href="/">
           
-            <img class="logo__image" src="/dev/images/../favicon.ico" alt="log" style="width:50px; height:50px">
+            <img class="logo__image" src="/images/../favicon.ico" alt="log" style="width:50px; height:50px">
           
           </a>
         </div>
@@ -80,7 +80,7 @@
 
             <ul class="nav__list list-reset">
               <li class="nav__item">
-                <a href="/dev/" class="nav__link">Home</a>
+                <a href="/" class="nav__link">Home</a>
               </li>
               
                 
@@ -198,7 +198,7 @@
           
           <div class="post__tags">
             
-              <a href="/dev/tag/MACHINE-LEARNING" class="post__tags-tag">MACHINE-LEARNING</a>
+              <a href="/tag/MACHINE-LEARNING" class="post__tags-tag">MACHINE-LEARNING</a>
             
           </div>
           
@@ -228,8 +228,8 @@
 
 <p>우선 AND Perceptron에 대해 알아보겠습니다.</p>
 
-<center><img src="/dev/images/and.png" /></center>
-<center><img src="/dev/images/ml1.png" /></center>
+<center><img src="/images/and.png" /></center>
+<center><img src="/images/ml1.png" /></center>
 
 <p>그림의 원을 뉴런 혹은 노드라고 부릅니다.<br />
 입력 신호가 뉴런에 보내질 때는 각각의 고유한 가중치가 곱해집니다. (x0,x1,x2,w0,w1,w2) <br />
@@ -237,7 +237,7 @@
 
 <p>그렇다면 퍼셉트론의 동작원리를 잠시 수식으로 볼까요 ?</p>
 
-<center><img src="/dev/images/ml2.png" /></center>
+<center><img src="/images/ml2.png" /></center>
 
 <p>퍼셉트론 동작원리는 수식으로 나타내면 위와 같습니다. 퍼셉트론은 복수의 입력 신호 각각에 고유한 가중치를 부여합니다. 가중치는 각 신호가 결과에 주는 영향력을 조절하는 요소로 적용됩니다.</p>
 
@@ -307,7 +307,7 @@
 
 <p>그렇다면 이번엔 OR Perceptron을 구현해볼까요 ?</p>
 
-<center><img src="/dev/images/or.png" /></center>
+<center><img src="/images/or.png" /></center>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">OR_Perceptron</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
     <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
@@ -542,22 +542,22 @@
 </footer>
 <!-- end footer -->
 
-  <script src="/dev/js/vendors/jquery-3.3.1.min.js"></script>
-<script src="/dev/js/vendors/simple-jekyll-search.min.js"></script>
+  <script src="/js/vendors/jquery-3.3.1.min.js"></script>
+<script src="/js/vendors/simple-jekyll-search.min.js"></script>
 <script>
   SimpleJekyllSearch({
     searchInput: document.getElementById("js-search-input"),
     resultsContainer: document.getElementById("js-results-container"),
-    json: "/dev/search.json",
+    json: "/search.json",
     searchResultTemplate: '<li class="search-results__item"><a class="search-results__link" href="{url}">{title}</a><br> <span class="search-results__date">{date}</span></li>',
     noResultsText: '<li class="no-results">No results found</li>'
   });
 </script>
-<script src="/dev/js/vendors/transition.js"></script>
-<script src="/dev/js/vendors/zoom.min.js"></script>
-<script src="/dev/js/vendors/instafeed.min.js"></script>
-<script src="/dev/js/vendors/jquery.fitvids.js"></script>
-<script src="/dev/js/common.js"></script>
+<script src="/js/vendors/transition.js"></script>
+<script src="/js/vendors/zoom.min.js"></script>
+<script src="/js/vendors/instafeed.min.js"></script>
+<script src="/js/vendors/jquery.fitvids.js"></script>
+<script src="/js/common.js"></script>
 </body>
 
 </html>
