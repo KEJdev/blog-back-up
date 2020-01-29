@@ -7,6 +7,7 @@ tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0
+use_math: true
 ---
 
 
@@ -88,7 +89,6 @@ plt.show()
 ```python
 import numpy as np
 import matplotlib.pylab as plt
-
 
 def numerical_diff(f,x):
     h=0.001

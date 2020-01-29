@@ -2,7 +2,9 @@
 <html lang="en">
 
   {% include head.html %}
-
+  {% if page.use_math %}
+    {% include mathjax_support.html %}
+  {% endif %}
 <body>
 
   {% if site.data.settings.google-analytics %}

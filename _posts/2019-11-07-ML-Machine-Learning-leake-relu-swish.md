@@ -7,6 +7,7 @@ tags:   machine-learning
 sitemap :
 changefreq : daily
 priority : 1.0
+use_math: true
 ---
 
 

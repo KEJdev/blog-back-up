@@ -17,7 +17,7 @@
 
   <meta property="og:description" content="">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/tag/r/">
+  <meta property="og:url" content="http://localhost:4000/page/2/">
   <meta property="og:image" content="/images/">
   <meta property="og:image:width" content="420" >
   <meta property="og:image:height" content="420" >
@@ -25,7 +25,7 @@
 
 
 
-  <link rel="canonical" href="http://localhost:4000/tag/r/">
+  <link rel="canonical" href="http://localhost:4000/page/2/">
   <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
   <link rel="shortcut icon" href="/images/../favicon.ico" type="image/png"/>
 
@@ -170,15 +170,41 @@
 
   <!-- begin content -->
   <main class="content" aria-label="Content">
-    <div class="arhive-head">
+    <!-- begin c-hero -->
+<div class="hero">
   <div class="container">
-    <h1 class="archive-title">Tag: <span>r</span></h1>
+    <div class="row">
+      <div class="col col-6 col-t-12 last-item">
+        <div class="hero__content">
+          <h1 class="hero__title">Hello, I’m <strong>Machine Learning Developer.</strong></h1>
+          <p class="hero__subtitle">포스팅은 주로 머신러닝과 R, PYTHON에 대해 쓰고 있습니다. 포스팅 관련 검색은 상단 오른쪽에서 하실 수 있으며, 모든 포스팅에서 사용된 코드는 Github에 있습니다. 오타나 이해가 안되는 부분이 있다면 언제든 메일 주세요.</p>
+        </div>
+      </div>
+      <div class="col col-6 col-t-12">
+        <div class="hero__image">
+          <img src="/images/covers.jpg" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- end hero -->
 
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			
+				<h4 class="lates-title">Latest Posts</h4>
+			
+		</div>
+	</div>
+</div>
 
-
-  
+<div class="container">
+	<div class="row">
+	
+		
+			
 <!-- begin article -->
 <div class="article">
   <div class="container">
@@ -186,7 +212,7 @@
     <div class="article__wrapper">
 
         
-          <a href="/2019/12/03/R-K-Nearest-Neighbors-knn5/" class="article__image" style="background-image: url(/images/r6.png)">
+          <a href="/2019/12/06/PYTHON-while-loop/" class="article__image" style="background-image: url(/images/python_a5.png)">
           </a>
         
 
@@ -195,32 +221,238 @@
           
             <div class="article-tags__box">
               
-                <a href="/tag/r" class="article__tag"> r</a>
+                <a href="/tag/python" class="article__tag"> python</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2019/12/03/R-K-Nearest-Neighbors-knn5/">[R]K-Nearest Neighbors(Knn)을 이용한 동물 분류하기</a>
+            <a href="/2019/12/06/PYTHON-while-loop/">[PYTHON]while loop문을 사용하여 log함수 구현하기</a>
           </h2>
       
-          <p class="article__excerpt">여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 여기에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 여기를 클릭하면 보실 수 있습니다.
+          <p class="article__excerpt">for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나입니다. 문법도 어렵지 않아서 금방 익힐 수 있습니다. while문이 가장 쓰기 편한 문법 중 하나인데, 그 이유는 조건이 참일 때, 실행시킨다던가, 아니면 무한루프로 계속 돌리다가 어느 순간에 멈추는 등 편리하기 때문입니다.
+
+...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2019-12-06T15:00:00+09:00">December 6, 2019</time></span>
+            </div>
+
+            <a href="/2019/12/06/PYTHON-while-loop/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+		
+			
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2019/12/05/PYTHON-for-continue-break/" class="article__image" style="background-image: url(/images/python_cover1.png)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/python" class="article__tag"> python</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2019/12/05/PYTHON-for-continue-break/">[PYTHON]for문에서 if문 안쓰고 특정 블럭만 실행하기(continue,break)</a>
+          </h2>
+      
+          <p class="article__excerpt">for문 같은 반복문에서 쓸 수 있는 문법들이 꽤나 많은데요, 오늘은 반복문이 실행되는 동안에 다른 코드 블럭만 실행되게 할 때, 사용하는 문법에 대해 알아보도록 하겠습니다.
 
 
 
 
-  DataSet
+  continue 문
 
 
-데이터는 동물 종류에 따른 특징들이 있고, 라벨은 포유류, 조류, 파충류, 어류, 양서류...</p>
+continue문은 반복문이 실행되는 동안 특정 코드 블럭을 실행하지 않고 다른 블럭만 실행하게 할 때 사용하는 문법...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2019-12-05T15:00:00+09:00">December 5, 2019</time></span>
+            </div>
+
+            <a href="/2019/12/05/PYTHON-for-continue-break/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+		
+			
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2019/12/05/GO-Function/" class="article__image" style="background-image: url(/images/go3.png)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/go" class="article__tag"> go</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2019/12/05/GO-Function/">[GO]GO언어 변수 선언하기</a>
+          </h2>
+      
+          <p class="article__excerpt">GO언어의 구문과 자료형 그리고 변수에 대해 알아보도록 하겠습니다. GO언어는 언어의 장벽이 그렇게 높지 않기 때문에 금방 배우실 수 있습니다. 특히나 C언어를 주로 이용하여 개발을 하셨던 분이거나 익숙하시다면 더욱이 GO언어가 쉽다고 느낄 수 있습니다.
+
+
+
+
+  GO언어의 구문
+
+
+주석 처리 할때, 한줄 주석은 (//),...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2019-12-05T15:00:00+09:00">December 5, 2019</time></span>
+            </div>
+
+            <a href="/2019/12/05/GO-Function/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+		
+			
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2019/12/04/GO-installing/" class="article__image" style="background-image: url(/images/go1.png)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/go" class="article__tag"> go</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2019/12/04/GO-installing/">[GO]GO 언어 설치하기</a>
+          </h2>
+      
+          <p class="article__excerpt">GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다. 
+우선 설치파일 다운해봅시다. 여기를 클릭하면 아래와 같은 화면이 나오는데 OS에 맞는 설치파일 다운합니다.
+
+
+
+저는 맥과 윈도우 두가지를 같이 쓰고 있는데, 우선 윈도우랑 맥이랑 그렇...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2019-12-04T15:00:00+09:00">December 4, 2019</time></span>
+            </div>
+
+            <a href="/2019/12/04/GO-installing/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+		
+			
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2019/12/03/GO/" class="article__image" style="background-image: url(/images/goicon.png)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/go" class="article__tag"> go</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2019/12/03/GO/">[GO]GO 언어란?</a>
+          </h2>
+      
+          <p class="article__excerpt">GO언어는 요즘 Docker가 떠오르면서 같이 떠오르는 새로운 언어입니다. 
+또한 구글에서 만든 언어라고 해서 사람들이 더 관심을 가지고 보는 언어죠. GO언어가 어떤 언어인지 알아보겠습니다.
+
+
+
+
+  GO
+
+
+
+
+GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생산성 높은 프로그래밍이 가능합니다. GO언어는 문법이...</p>
           
           <div class="article__footer">
             <div class="article__meta">
               <span class="article__date"><time datetime="2019-12-03T15:00:00+09:00">December 3, 2019</time></span>
             </div>
 
-            <a href="/2019/12/03/R-K-Nearest-Neighbors-knn5/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2019/12/03/GO/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -230,266 +462,74 @@
   </div>
 </div>
 <!-- end article -->
-
-  
-<!-- begin article -->
-<div class="article">
+		
+	
+	</div>
+</div>
+<nav class="pagination">
   <div class="container">
+    <div class="pagination__list">
 
-    <div class="article__wrapper">
+      
+      
+      
+        <a class="previous-link" href="/">Prev Posts</a>
+      
+      
+      
+
+      <div class="counter-box">
+        
+          <a href="/">1</a>
+        
+
 
         
-          <a href="/2019/12/02/R-K-Nearest-Neighbors-knn4/" class="article__image" style="background-image: url(/images/python_cover1.png)">
-          </a>
+
+        
+          <span class="active-link">2</span>
+        
         
 
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/r" class="article__tag"> r</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2019/12/02/R-K-Nearest-Neighbors-knn4/">[R]K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류</a>
-          </h2>
-      
-          <p class="article__excerpt">오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.
+        
+          <a class="count-number" href="/page/3/">3</a>
+        
+        
 
+        
+          <a class="count-number" href="/page/4/">4</a>
+        
+        
 
+        
+          <a class="count-number" href="/page/5/">5</a>
+        
+        
 
+        
+          <a class="count-number" href="/page/6/">6</a>
+        
+        
 
-  DataSet
+        
+          <a class="count-number" href="/page/7/">7</a>
+        
+        
 
-
-데이터는 아래와 같습니다. 과일...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2019-12-02T15:00:00+09:00">December 2, 2019</time></span>
-            </div>
-
-            <a href="/2019/12/02/R-K-Nearest-Neighbors-knn4/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
-
+        
+          <a class="count-number" href="/page/8/">8</a>
+        
+        
       </div>
+
       
+      <a class="next-link" href="/page/3/">Next Posts</a>
+      
+
+
+    </div>
   </div>
-</div>
-<!-- end article -->
-
-  
-<!-- begin article -->
-<div class="article">
-  <div class="container">
-
-    <div class="article__wrapper">
-
-        
-          <a href="/2019/11/01/R-Machine-Learning-knn2/" class="article__image" style="background-image: url(/images/R1.png)">
-          </a>
-        
-
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/r" class="article__tag"> r</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2019/11/01/R-Machine-Learning-knn2/">[R]K-Nearest Neighbors(Knn)을 이용한 소개팅 데이터 분류</a>
-          </h2>
-      
-          <p class="article__excerpt">knn 분류 예제를 보면서 공부해보도록 하겠습니다. 포스팅에서 사용된 데이터는 여기에서 데이터를 다운 받아주세요.
-
-
-
-
-  Dataset
-
-
-데이터 설명을 하자면, 소개팅을 수천번하지 않기 때문에 그동안 14번정도 소개팅을 했다고 가정하고 만난 남학생들에 대한 라벨을 호감라벨로 만들었습니다. 14개의 데이터를 knn으로 학...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2019-11-01T15:00:00+09:00">November 1, 2019</time></span>
-            </div>
-
-            <a href="/2019/11/01/R-Machine-Learning-knn2/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-      
-  </div>
-</div>
-<!-- end article -->
-
-  
-<!-- begin article -->
-<div class="article">
-  <div class="container">
-
-    <div class="article__wrapper">
-
-        
-          <a href="/2019/10/30/r-Data-structure/" class="article__image" style="background-image: url(/images/pie1.png)">
-          </a>
-        
-
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/r" class="article__tag"> r</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2019/10/30/r-Data-structure/">[R]R을 배워야 하는 이유와 자료구조</a>
-          </h2>
-      
-          <p class="article__excerpt">R은 데이터 분석할 때 주로 사용하는 언어입니다. 요즘 데이터 분석가 모집 요망을 보면 SQL과 R은 기본적으로 다루는 기술이기 때문에 데이터 분석을 하고 싶어하는 사람에게는 R은 필수입니다. 데이터 분석이 필요한 이유에 대해 사례 하나를 들어보겠습니다.
-
-카카오톡은 2010년 3월에 서비스르르 시작한 이후에 폭발적으로 성장...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2019-10-30T16:00:00+09:00">October 30, 2019</time></span>
-            </div>
-
-            <a href="/2019/10/30/r-Data-structure/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-      
-  </div>
-</div>
-<!-- end article -->
-
-  
-<!-- begin article -->
-<div class="article">
-  <div class="container">
-
-    <div class="article__wrapper">
-
-        
-          <a href="/2019/10/30/R-Machine-Learning-knn/" class="article__image" style="background-image: url(/images/knn.png)">
-          </a>
-        
-
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/r" class="article__tag"> r</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2019/10/30/R-Machine-Learning-knn/">[R]머신러닝 알고리즘, Knn(K-Nearest Neighbors)이란?</a>
-          </h2>
-      
-          <p class="article__excerpt">오늘은 K-Nearest Neighbors(KNN)라는 알고리즘에 대해 알아보려고 합니다. Knn 머신러닝을 공부하면 가장 쉽게 먼저 접하는 알고리즘 중 하나입니다. 이번 포스팅에서는 Knn이 무엇인지, 필요한 이유에 대해 알아보겠습니다.
-
-
-
-
-  knn이란 무엇인가?
-
-
-사회적인 관계를 관찰해본적인 있나요? 대략적으로 비...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2019-10-30T15:00:00+09:00">October 30, 2019</time></span>
-            </div>
-
-            <a href="/2019/10/30/R-Machine-Learning-knn/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-      
-  </div>
-</div>
-<!-- end article -->
-
-  
-<!-- begin article -->
-<div class="article">
-  <div class="container">
-
-    <div class="article__wrapper">
-
-        
-          <a href="/2019/10/27/R-K-Nearest-Neighbors-knn3/" class="article__image" style="background-image: url(/images/dataset1.png)">
-          </a>
-        
-
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/r" class="article__tag"> r</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2019/10/27/R-K-Nearest-Neighbors-knn3/">[R]K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기</a>
-          </h2>
-      
-          <p class="article__excerpt">knn을 사용하여 조금 의미 있는 결과를 가지고 재밌는 결과를 뽑아내보도록 하겠습니다. 데이터는 여기에서 데이터를 다운 받아주세요.
-
-
-
-
-  DataSet
-
-
-이번 데이터를 열어보면 나이, 월수입, 상품 구매여부, 나이가 있습니다. 이 데이터를 이용해, 백화점 또는 소셜커머스 회사에서 데이터 분석을 통해 구매자가 제품을 구...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2019-10-27T15:00:00+09:00">October 27, 2019</time></span>
-            </div>
-
-            <a href="/2019/10/27/R-K-Nearest-Neighbors-knn3/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-      
-  </div>
-</div>
-<!-- end article -->
-
+</nav>
 
   </main>
   <!-- end content -->
