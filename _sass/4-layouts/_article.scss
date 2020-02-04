@@ -7,7 +7,7 @@
   }
 
   .article__image {
-    width: 50%;
+    width: 40%;
     display: block;
     background-position: center;
     background-size: cover;
@@ -27,7 +27,7 @@
 
   .article__content {
     width: 60%;
-    padding: 50px;
+    padding: 30px;
     margin-left: -10%;
     z-index: 1;
     border-radius: 3px;
@@ -43,7 +43,7 @@
 
     .article__title {
       margin-bottom: 20px;
-      font-size: 30px;
+      font-size: 23px;
       
       a {
         color: $dark;
