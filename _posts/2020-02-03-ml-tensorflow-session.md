@@ -2,7 +2,7 @@
 layout: post
 title:  "[Tensorflow]텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)"
 date:   2020-02-03 09:00:00 +0300
-image:  tensorflow1.png
+image:  tensorflow2.png
 tags:   machine-learning
 sitemap : 
 changefreq : daily
@@ -170,3 +170,4 @@ with tf.Session() as sess:  # 세션(하나의 사용자) 생성
             writer = tf.summary.FileWriter('./logs', sess.graph)
             # tensorboard 그래프를 그리는데 사용할 실행 로그를 저장할 폴더 지정
 ```
+
