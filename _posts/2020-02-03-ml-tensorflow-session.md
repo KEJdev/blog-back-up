@@ -34,8 +34,7 @@ import tensorflow as tf
 
 ```python
 sess=tf.Session()                        # 그래프를 실행할 세션을 구성한다. 
-hello=tf.constant('Hello, Tensorflow')   
-
+hello=tf.constant('Hello, Tensorflow')  
 
 # # # # # # # # 모델을 구성하는 부분 ↑
 # # # # # # # # 모델을 실행하는 부분 ↓ 
@@ -54,15 +53,14 @@ import tensorflow as tf
 x=tf.constant(35, name='x')              # x라는 상수값을 만들어 숫자 35 지정
 y=tf.Variable(x+5, name='y')            # y라는 변수를 만들고 방정식 x+5로 정의
 
-model=tf.global_variables_initializer() # global_variables_initializer() 변수 초기화
+model=tf.global_variables_initializer() # 변수 초기화
 
 with tf.Session() as sess:               # 값을 계산하기 위한 세션 생성 (세션 열기)
     sess.run(model)                     # 위에서 초기화한 model을 실행하겠다.
     print(sess.run(y))                    # 변수 y를 실행하며 현재값 출력
 ```
 
-월래는 세션을 연 뒤에는 닫아야는데 with절 후에는 자동으로 닫히기 때문에 그냥 출력합니다.  
-또한 텐서플로우는 빌딩 구조와 실행구조(session)가 분리되어 있습니다. 
+월래는 세션을 연 뒤에는 닫아야는데 with절 후에는 자동으로 닫히기 때문에 그냥 출력합니다. 또한 텐서플로우는 빌딩 구조와 실행구조(session)가 분리되어 있습니다. 
 
 ```python
 # 빌딩 과정
@@ -157,9 +155,13 @@ with tf.Session() as sess:
 import tensorflow as tf
 
 ## 구조(그래프) 선언부
-x = tf.Variable(0, name='x')     # tensorboard 로 그래프를 그리기 위해서는 name 을 지정해 줘야한다.
-y = tf.Variable(0, name='y')     # name 을 지정할 때 이름이 중복되면 안되고, 중복 사용을 위해서는 
-z = tf.multiply(x, y, name='z')  # 다른 옵션을 사용해야 한다.
+x = tf.Variable(0, name='x')     
+# tensorboard 로 그래프를 그리기 위해서는 name 을 지정해 줘야한다.
+
+y = tf.Variable(0, name='y')     
+# name 을 지정할 때 이름이 중복되면 안되고, 중복 사용을 위해서는 
+z = tf.multiply(x, y, name='z')  
+# 다른 옵션을 사용해야 한다.
 
 model = tf.global_variables_initializer()  # 변수(노드)를 위치 및 생성
 merged = tf.summary.merge_all()  # 그래프를 그리는데 사용될 변수(노드)를 취합
@@ -169,7 +171,8 @@ with tf.Session() as sess:  # 세션(하나의 사용자) 생성
     sess.run(model)  # 위에서 생성한 그래프 구조를 실행
     for i in range(2, 10):
         for j in range(1, 10):
-            print(i, ' x ', j, ' = ',sess.run(z,feed_dict={x:i, y:j}))  # 초기화된 변수에 값을 feed
+            print(i, ' x ', j, ' = ',sess.run(z,feed_dict={x:i, y:j}))  
+            # 초기화된 변수에 값을 feed
             writer = tf.summary.FileWriter('./logs', sess.graph)
             # tensorboard 그래프를 그리는데 사용할 실행 로그를 저장할 폴더 지정
 ```
