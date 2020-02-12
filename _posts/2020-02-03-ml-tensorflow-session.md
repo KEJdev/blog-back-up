@@ -78,6 +78,9 @@ print(sess.run(x2))
 sess.close()
 ```
 
+-------
+
+
 > #### Tensorflow 실행 구조 
 
 Tensorflow Session은 fetch와 feed 2가지 방법으로 처리 할 수 있습니다. 
