@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "[Tensorflow]파이썬과 텐서플로우의 차이"
-date:   2020-02-0 09:00:00 +0300
-image:   go_cover1.png
+date:   2020-02-07 09:00:00 +0300
+image:   ML_cover1.png
 tags:   go
 sitemap : 
 changefreq : daily
