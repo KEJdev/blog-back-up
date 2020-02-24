@@ -67,9 +67,7 @@ zoo2_n <- as.data.frame(lapply(zoo[,2:17], normalize))
 <center><img src="{{ site.baseurl }}/images/r7.png" ></center>  
 
 
-
-<br>  
-
+-------
 
 > #### knn  
 
