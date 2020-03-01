@@ -19,14 +19,13 @@ priority : 1.0
 우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다. 
 
 ```r
-knn_fun <- function(){
 library(data.table)
 library(class)
 
 input_table <- readline('csv파일을 입력하세요. ex) emp.csv : ')
 input_header <- readline('컬럼명이 있습니까? ex)T OR F : ')
 input_label_num <- readline('라벨이 위치한 번호을 입력하세요. ex)N (N>=1) : ')
-input_rm_num <- readline('제거할 컬럼 위치의 번호를 입력하세요. ex) n,n,n 
+input_rm_num <- readline('제거할 컬럼 위치의 번호를 입력하세요. ex) n,n,n') 
 ```
 
 그리고 헤더 유무 검사 그리고 셔플 기능과 라벨 위치를 정수형으로 변경하고, 혹시 모를 na 값을 제거가 필요할 것 같으니 작성해보겠습니다.
@@ -98,7 +97,6 @@ k_n <- round(sqrt(nrow(train_data)))
 ###knn 결과 확인
 result <- knn(train = train_data, test = test_data, cl = train_label, k=k_n)
 round(prop.table(table(ifelse(test_label==result,'o','x')))*100,1)
-}
 
 knn_fun()
 ```
