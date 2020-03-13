@@ -46,11 +46,14 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
   .col-#{$i} {
     width: percentage( $i / $columns );
   }
+  .col-8 {
+    width: 80%;
+  }
 }
 
 @for $i from 0 through $columns {
   .push-#{$i} {
-    margin-left: percentage( $i / $columns );
+    margin-left: 10%;
   }
 }
 
