@@ -5,7 +5,7 @@ date:   2019-12-03 09:00:00 +0300
 image:  algorlthm_cover1.png
 tags:   algorithm
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

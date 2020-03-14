@@ -5,7 +5,7 @@ date:   2019-08-21 09:00:00 +0300
 image:  SQL_cover1.png
 tags:   sql
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

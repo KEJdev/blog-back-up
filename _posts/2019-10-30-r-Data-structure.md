@@ -5,7 +5,7 @@ date:   2019-10-30 10:00:00 +0300
 image:  pie1.png
 tags:   r
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

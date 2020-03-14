@@ -5,7 +5,7 @@ date:   2019-12-25 09:00:00 +0300
 image:  relu.png
 tags:   machine-learning
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

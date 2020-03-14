@@ -5,7 +5,7 @@ date:   2019-12-05 09:00:00 +0300
 image:  go3.png
 tags:   go
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

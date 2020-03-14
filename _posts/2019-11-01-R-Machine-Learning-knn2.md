@@ -5,7 +5,7 @@ date:   2019-11-01 09:00:00 +0300
 image:  R1.png
 tags:   r
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

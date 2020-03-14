@@ -5,7 +5,7 @@ date:   2019-11-26 09:00:00 +0300
 image:  python_cover1.png
 tags:   python
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

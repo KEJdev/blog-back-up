@@ -5,7 +5,7 @@ date:   2020-02-10 09:00:00 +0300
 image:  R_cover1.png
 tags:   r
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

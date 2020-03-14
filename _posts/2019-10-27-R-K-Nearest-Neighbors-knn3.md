@@ -5,7 +5,7 @@ date:   2019-10-27 09:00:00 +0300
 image:  dataset1.png
 tags:   r
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

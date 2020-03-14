@@ -5,7 +5,7 @@ date:   2019-12-17 09:00:00 +0300
 image:  feature.png
 tags:   paper
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

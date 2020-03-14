@@ -5,7 +5,7 @@ date:   2019-11-05 09:00:00 +0300
 image:  plsql_cover1.png
 tags:   plsql
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

@@ -5,7 +5,7 @@ date:   2019-11-07 09:00:00 +0300
 image:  at.png
 tags:   machine-learning
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 use_math: true
 ---

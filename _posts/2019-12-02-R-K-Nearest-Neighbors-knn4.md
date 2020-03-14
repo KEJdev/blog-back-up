@@ -5,7 +5,7 @@ date:   2019-12-02 09:00:00 +0300
 image:  r3.png
 tags:   r
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

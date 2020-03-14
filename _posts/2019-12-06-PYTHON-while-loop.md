@@ -5,7 +5,7 @@ date:   2019-12-06 09:00:00 +0300
 image:  python_a5.png
 tags:   python
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

@@ -5,7 +5,7 @@ date:   2020-02-08 09:00:00 +0300
 image:  wisc.png
 tags:   r
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 

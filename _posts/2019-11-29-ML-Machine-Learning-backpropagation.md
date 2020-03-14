@@ -5,7 +5,7 @@ date:   2019-11-29 09:00:00 +0300
 image:  ml8.png
 tags:   machine-learning
 sitemap :
-changefreq : daily
+changefreq : always
 priority : 1.0
 ---
 
