@@ -12,7 +12,7 @@
   <meta property="og:title" content="">
   <meta property="og:description" content="">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/page/7/">
+  <meta property="og:url" content="http://localhost:4000/page/12/">
   <meta property="og:image" content="/images/">
   <meta property="og:image:width" content="420" >
   <meta property="og:image:height" content="420" >
@@ -29,7 +29,7 @@
     gtag('config', 'UA-148043528-1');
   </script>
 
-  <link rel="canonical" href="http://localhost:4000/page/7/">
+  <link rel="canonical" href="http://localhost:4000/page/12/">
   <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
   <link rel="shortcut icon" href="/images/../favicon.ico" type="image/png"/>
 
@@ -250,7 +250,7 @@
     <div class="article__wrapper">
 
         
-          <a href="/2019/12/05/GO-Function/" class="article__image" style="background-image: url(/images/go3.png)">
+          <a href="/2019/08/22/oracle-sql-round-mod-between/" class="article__image" style="background-image: url(/images/SQL_cover1.png)">
           </a>
         
 
@@ -259,32 +259,38 @@
           
             <div class="article-tags__box">
               
-                <a href="/tag/go" class="article__tag"> go</a>
+                <a href="/tag/sql" class="article__tag"> sql</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2019/12/05/GO-Function/">[GO]GO언어 변수 선언하기</a>
+            <a href="/2019/08/22/oracle-sql-round-mod-between/">[SQL]SQL의 반올림과 비교함수 사용하기(round,between_months)</a>
           </h2>
       
-          <p class="article__excerpt">GO언어의 구문과 자료형 그리고 변수에 대해 알아보도록 하겠습니다. GO언어는 언어의 장벽이 그렇게 높지 않기 때문에 금방 배우실 수 있습니다. 특히나 C언어를 주로 이용하여 개발을 하셨던 분이거나 익숙하시다면 더욱이 GO언어가 쉽다고 느낄 수 있습니다.
+          <p class="article__excerpt">저번 포스팅에 이어서 날짜함수와 간단하게 숫자함수에 대해 알아보겠습니다.
+숫자함수는 간단하지만 날짜 함수는 생각보다 간단하지 않습니다. 그래서 날짜 함수는 잘봐두셔야합니다.
 
 
 
 
-  GO언어의 구문
+  숫자함수와 날짜함수
 
 
-주석 처리 할때, 한줄 주석은 (//),...</p>
+프로그래밍을 조금 해보신 분들은 금방 습득하실 수 있습니다. 숫자함수의 종류는 아래와 같습니다.
+
+
+  
+    
+  ...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2019-12-05T15:00:00+09:00">December 5, 2019</time></span>
+              <span class="article__date"><time datetime="2019-08-22T15:00:00+09:00">August 22, 2019</time></span>
             </div>
 
-            <a href="/2019/12/05/GO-Function/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2019/08/22/oracle-sql-round-mod-between/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -303,7 +309,7 @@
     <div class="article__wrapper">
 
         
-          <a href="/2019/12/04/GO-installing/" class="article__image" style="background-image: url(/images/go1.png)">
+          <a href="/2019/08/21/oracle-sql-Character-function/" class="article__image" style="background-image: url(/images/SQL_cover1.png)">
           </a>
         
 
@@ -312,29 +318,33 @@
           
             <div class="article-tags__box">
               
-                <a href="/tag/go" class="article__tag"> go</a>
+                <a href="/tag/sql" class="article__tag"> sql</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2019/12/04/GO-installing/">[GO]GO 언어 설치하기</a>
+            <a href="/2019/08/21/oracle-sql-Character-function/">[SQL]SQL에서 문자 함수 사용하기(Rpad,substr,replace)</a>
           </h2>
       
-          <p class="article__excerpt">GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다. 
-우선 설치파일 다운해봅시다. 여기를 클릭하면 아래와 같은 화면이 나오는데 OS에 맞는 설치파일 다운합니다.
+          <p class="article__excerpt">이번 포스팅 부터는 SQL의 문자 함수와 날짜 함수에 대해 자세하게 배워보겠습니다.
+우선 함수를 왜 사용해야 하는지와 함수의 종류들에 대해 알아보겠습니다.
 
 
 
-저는 맥과 윈도우 두가지를 같이 쓰고 있는데, 우선 윈도우랑 맥이랑 그렇...</p>
+
+  함수를 사용해야 하는 이유?
+
+
+간단한 이유인데, SQL에서 함수를 사용해야 하는 이유는 함수를 이용하면 데이터 검색을 더 쉽고 자세하게 구현할 수 있기 때문입...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2019-12-04T15:00:00+09:00">December 4, 2019</time></span>
+              <span class="article__date"><time datetime="2019-08-21T15:00:00+09:00">August 21, 2019</time></span>
             </div>
 
-            <a href="/2019/12/04/GO-installing/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2019/08/21/oracle-sql-Character-function/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -353,7 +363,7 @@
     <div class="article__wrapper">
 
         
-          <a href="/2019/12/03/GO/" class="article__image" style="background-image: url(/images/goicon.png)">
+          <a href="/2019/08/20/oracle-sql-order-by/" class="article__image" style="background-image: url(/images/SQL_cover1.png)">
           </a>
         
 
@@ -362,35 +372,25 @@
           
             <div class="article-tags__box">
               
-                <a href="/tag/go" class="article__tag"> go</a>
+                <a href="/tag/sql" class="article__tag"> sql</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2019/12/03/GO/">[GO]GO 언어란?</a>
+            <a href="/2019/08/20/oracle-sql-order-by/">[SQL]SQL에서 테이블 정렬하기(order by)</a>
           </h2>
       
-          <p class="article__excerpt">GO언어는 요즘 Docker가 떠오르면서 같이 떠오르는 새로운 언어입니다. 
-또한 구글에서 만든 언어라고 해서 사람들이 더 관심을 가지고 보는 언어죠. GO언어가 어떤 언어인지 알아보겠습니다.
-
-
-
-
-  GO
-
-
-
-
-GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생산성 높은 프로그래밍이 가능합니다. GO언어는 문법이...</p>
+          <p class="article__excerpt">저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아보겠습니다.
+우선 여태까지 배워본 것을 생각하며 간단하게 사원번호가 7788, 7902, 7369번인 사원들의 사원번호와 이름을 출력해보겠습니다. 출력하는 문법은 두가지로 쓸 수 있는데요. 첫번째 방법은 아래와 같이 o...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2019-12-03T15:00:00+09:00">December 3, 2019</time></span>
+              <span class="article__date"><time datetime="2019-08-20T15:00:00+09:00">August 20, 2019</time></span>
             </div>
 
-            <a href="/2019/12/03/GO/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2019/08/20/oracle-sql-order-by/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -409,7 +409,7 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
     <div class="article__wrapper">
 
         
-          <a href="/2019/12/03/ALGORITHM-recursive-function-python/" class="article__image" style="background-image: url(/images/algorlthm_cover1.png)">
+          <a href="/2019/08/18/oracle-sql-search-criteria/" class="article__image" style="background-image: url(/images/SQL_cover1.png)">
           </a>
         
 
@@ -418,32 +418,34 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
           
             <div class="article-tags__box">
               
-                <a href="/tag/algorithm" class="article__tag"> algorithm</a>
+                <a href="/tag/sql" class="article__tag"> sql</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2019/12/03/ALGORITHM-recursive-function-python/">[ALGORITHM]재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)</a>
+            <a href="/2019/08/18/oracle-sql-search-criteria/">[SQL]SQL에서 검색 조건 주기(where)</a>
           </h2>
       
-          <p class="article__excerpt">계속해서 재귀 알고리즘에 익숙해지기 위해 알고리즘 단골 문제인 팩토리얼과 최대공약수를 풀어보겠습니다. 재귀 함수가 무엇인지는 저번 포스팅에서 설명했으므로 이번에는 자세한 이야기는 생략하겠습니다.
+          <p class="article__excerpt">SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다.
+여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말합니다.
 
 
 
 
-  factorial
+  where
 
 
-10!을 구할껀데, 10!을 풀어서 이야기하면 10 * 9 * 8 * 7 * 6 * 5 * 4 * ...</p>
+SQL에서 검색에 조건을 줄때는 where를 사용합니다.
+where를 사용하여 월급이 3000인 사원들의 이름과 월급을 출력해보겠습니다...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2019-12-03T15:00:00+09:00">December 3, 2019</time></span>
+              <span class="article__date"><time datetime="2019-08-18T15:00:00+09:00">August 18, 2019</time></span>
             </div>
 
-            <a href="/2019/12/03/ALGORITHM-recursive-function-python/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2019/08/18/oracle-sql-search-criteria/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -462,7 +464,7 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
     <div class="article__wrapper">
 
         
-          <a href="/2019/12/03/ALGORITHM-python/" class="article__image" style="background-image: url(/images/stack.png)">
+          <a href="/2019/08/18/oracle-sql-colum-search/" class="article__image" style="background-image: url(/images/SQL_cover1.png)">
           </a>
         
 
@@ -471,32 +473,43 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
           
             <div class="article-tags__box">
               
-                <a href="/tag/algorithm" class="article__tag"> algorithm</a>
+                <a href="/tag/sql" class="article__tag"> sql</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2019/12/03/ALGORITHM-python/">[ALGORITHM]재귀 알고리즘으로 구구단 출력하기(Python)</a>
+            <a href="/2019/08/18/oracle-sql-colum-search/">[SQL]SQL에서 컬럼검색과 별칭(Keyword)</a>
           </h2>
       
-          <p class="article__excerpt">알고리즘 문제를 풀면서 반드시 알아야 할 알고리즘 중 하나는 아마 재귀 알고리즘일거라 생각합니다. 재귀 함수를 사용할 수 있는 곳에서는 재귀 함수를 사용하며 알고리즘을 풀면서 공부를 해야 된답니다.
+          <p class="article__excerpt">저번 포스팅 때는 간단하게, SQL 테이블을  법을 배웠습니다.
+이번 포스팅에선 SQL 컬럼 검색과 컬럼 별칭을 사용하는 법에 대해 간단하게 알아보겠습니다.
 
 
 
 
-  재귀 함수
+  EMP Tabel Column
 
 
-재귀 함수는 함수내에서 다시 자신을 호출한 후 그 함수가 끝날때까지 함수 호출 이후의 명령문을 수행하지...</p>
+emp table 컬럼은 아래와 같습니다.
+
+
+  
+    
+      column
+       설명 
+    
+  
+  
+...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2019-12-03T15:00:00+09:00">December 3, 2019</time></span>
+              <span class="article__date"><time datetime="2019-08-18T15:00:00+09:00">August 18, 2019</time></span>
             </div>
 
-            <a href="/2019/12/03/ALGORITHM-python/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2019/08/18/oracle-sql-colum-search/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -517,7 +530,7 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
       
       
       
-        <a class="previous-link" href="/page/6/">Prev Posts</a>
+        <a class="previous-link" href="/page/11/">Prev Posts</a>
       
       
       
@@ -556,7 +569,7 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
         
 
         
-          <span class="active-link">7</span>
+          <a class="count-number" href="/page/7/">7</a>
         
         
 
@@ -581,7 +594,7 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
         
 
         
-          <a class="count-number" href="/page/12/">12</a>
+          <span class="active-link">12</span>
         
         
 
@@ -592,7 +605,7 @@ GO언어는 범용 프로그래밍 언어이며, 깔끔하고 간결하게 생�
       </div>
 
       
-      <a class="next-link" href="/page/8/">Next Posts</a>
+      <a class="next-link" href="/page/13/">Next Posts</a>
       
 
 
