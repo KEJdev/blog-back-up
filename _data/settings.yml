@@ -3,7 +3,7 @@
 title: log
 logo: ../favicon.ico # You can add own logo.
 description: log
-
+timezone: Asia/Seoul 
 
 #-------------------------------
 # Author Settings
@@ -11,7 +11,7 @@ author:
   name: log
   image: covers.jpg
   say-hello: Hello, I’m <strong>Machine Learning Developer.</strong>
-  bio: 포스팅은 주로 머신러닝과 R, PYTHON에 대해 쓰고 있습니다. 포스팅 관련 검색은 상단 오른쪽에서 하실 수 있으며, 모든 포스팅에서 사용된 코드는 Github에 있습니다. 오타나 이해가 안되는 부분이 있다면 언제든 메일 주세요. 
+  bio: 포스팅은 주로 머신러닝과 R, PYTHON에 대해 쓰고 있습니다. 모든 포스팅에서 사용된 코드와 데이터는 Github에 있습니다. 
 
 
 #-------------------------------
