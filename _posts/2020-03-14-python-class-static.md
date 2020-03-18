@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 static method (정적 메소드),"
+title:  "[PYTHON]파이썬 static method (정적 메소드)"
 date:   2020-03-14 09:00:00 +0300
 image:  gun2.png
 tags:   python
