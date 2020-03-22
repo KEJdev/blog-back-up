@@ -6,17 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title></title>
+  
+
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
   
-  <meta name="description" content="">
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/page/3/">
-  <meta property="og:image" content="/images/">
-  <meta property="og:image:width" content="420" >
-  <meta property="og:image:height" content="420" >
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:site_name" content="" />
+  <meta property="og:title" content=""/>
+  
+  <meta property="og:image" content="http://localhost:4000" />
+  <meta property="og:url" content="http://localhost:4000/page/3/" >
+  <meta property="og:type" content="blog" />
+  
+
+  <link rel="canonical" href="http://localhost:4000/page/3/"/>
+  
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -29,7 +41,6 @@
     gtag('config', 'UA-148043528-1');
   </script>
 
-  <link rel="canonical" href="http://localhost:4000/page/3/">
   <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
   <link rel="shortcut icon" href="/images/../favicon.ico" type="image/png"/>
 
@@ -193,6 +204,10 @@
               
                 
               
+                
+              
+                
+              
             </ul>
 
           </div>
@@ -254,7 +269,7 @@
     <div class="article__wrapper">
 
         
-          <a href="/2020/03/12/python-in-winter/" class="article__image" style="background-image: url(/images/in.png)">
+          <a href="/2020/03/14/python_val_pass/" class="article__image" style="background-image: url(/images/pass.png)">
           </a>
         
 
@@ -270,27 +285,31 @@
           </div>
       
           <h2 class="article__title">
-            <a href="/2020/03/12/python-in-winter/">[PYTHON]멤버체크(in)으로 특정 단어 개수 세기</a>
+            <a href="/2020/03/14/python_val_pass/">[PYTHON]파이썬에서 언더바(_)를 사용하는 경우</a>
           </h2>
       
-          <p class="article__excerpt">파이썬에서 특정 단어가 있는지 확인하기 위해 자주 쓰이는 함수 in입니다. 아마 for 사용할때 더 많이 사용해본 적 있을꺼예요. 이 맴버 함수에 대해 자세히 알아보겠습니다.
+          <p class="article__excerpt">파이썬 코드를 가끔 보다보면 _ 같은것을 볼 수 있습니다. 이 언더바(_)는 언제 사용하는 걸까요?
 
 
 
 
-  list안에 있는지 없는지 확인하기
+  언더바(_)를 사용하는 경우
 
 
-in을 사용하여 list안에 특정 숫자나 문자열이 있는지 체크해보겠습니다.
+언더바를 사용하는 경우는 주로 아래의 4가지 경우입니다.
 
-listdata =[1,...</p>
+
+  인터프리터에서 마지막 값을 저장할 때
+  값을 무시하고 싶을 때
+  변수나 함수명에 특별한 의미를 부여하고 싶을 때
+ ...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2020-03-12T18:00:00+09:00">March 12, 2020</time></span>
+              <span class="article__date"><time datetime="2020-03-14T18:00:00+09:00">March 14, 2020</time></span>
             </div>
 
-            <a href="/2020/03/12/python-in-winter/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2020/03/14/python_val_pass/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -309,7 +328,54 @@ listdata =[1,...</p>
     <div class="article__wrapper">
 
         
-          <a href="/2020/03/12/python-bin-oct-hex/" class="article__image" style="background-image: url(/images/bin.png)">
+          <a href="/2020/03/14/ALGORITHM-binary_search/" class="article__image" style="background-image: url(/images/algorlthm_cover1.png)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/algorithm" class="article__tag"> algorithm</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2020/03/14/ALGORITHM-binary_search/">[ALGORITHM]검색 알고리즘? 파이썬으로 이진탐색 구현하기</a>
+          </h2>
+      
+          <p class="article__excerpt">이진 검색 알고리즘(binary search algorithm)은 오름차순으로 정렬된 리스트에서 특정한 값의 위치를 찾는 알고리즘입니다. 처음 중간의 값을 임의의 값으로 선택하여, 그 값과 찾고자 하는 값의 크고 작음을 비교하는 방식입니다.
+
+data = [ 1, 7, 11 , 12, 14 , 23, 33, 47, 51, 6...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2020-03-14T17:00:00+09:00">March 14, 2020</time></span>
+            </div>
+
+            <a href="/2020/03/14/ALGORITHM-binary_search/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+		
+			
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2020/03/14/python-father-child/" class="article__image" style="background-image: url(/images/class.png)">
           </a>
         
 
@@ -325,29 +391,29 @@ listdata =[1,...</p>
           </div>
       
           <h2 class="article__title">
-            <a href="/2020/03/12/python-bin-oct-hex/">[PYTHON]파이썬으로 2진수 8진수 16진수 구하기</a>
+            <a href="/2020/03/14/python-father-child/">[PYTHON]파이썬의 클래스 상속과 super함수</a>
           </h2>
       
-          <p class="article__excerpt">정수형(integer)이란 말 그대로 정수를 뜻하는 자료형을 말합니다.
-
-a = 123 
-b = -123
-c = 0
-
-
-일반 프로그래밍에서 지원하는 정수형 상수의 범위는 -214747367 ~ 2147483647인데 파이썬은 메모리가 허용하는 범위내에서 지원 가능한 수를 사용할 수 있습니다.
+          <p class="article__excerpt">다른 언어와 마찬가지로 파이썬에도 상속 개념이 존재합니다. 클래스 상속을 사용하게 되면 반복적으로 코드를 짜지 않어도 되기 때문에 많이 사용합니다.
 
 
 
 
-  2진수, 8진수, 16...</p>
+  상속
+
+
+상속은 클래스들끼리 기능을 서로에게 물려주는 것이기 때문에 같은 코드를 반복해서 짜지 않아도 됩니다.
+
+
+
+상속을 받기 위해 클래스 두개를 작성하고 자식 클래...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2020-03-12T17:00:00+09:00">March 12, 2020</time></span>
+              <span class="article__date"><time datetime="2020-03-14T16:00:00+09:00">March 14, 2020</time></span>
             </div>
 
-            <a href="/2020/03/12/python-bin-oct-hex/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2020/03/14/python-father-child/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -366,7 +432,7 @@ c = 0
     <div class="article__wrapper">
 
         
-          <a href="/2020/03/12/R-Decision-Tree-rpart/" class="article__image" style="background-image: url(/images/tree1.png)">
+          <a href="/2020/03/14/python-class-static/" class="article__image" style="background-image: url(/images/gun2.png)">
           </a>
         
 
@@ -375,35 +441,37 @@ c = 0
           
             <div class="article-tags__box">
               
-                <a href="/tag/r" class="article__tag"> r</a>
+                <a href="/tag/python" class="article__tag"> python</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2020/03/12/R-Decision-Tree-rpart/">[R]의사 결정트리와(Decision Tree)로 심장질환 데이터 분석하기</a>
+            <a href="/2020/03/14/python-class-static/">[PYTHON]파이썬 static method (정적 메소드)</a>
           </h2>
       
-          <p class="article__excerpt">실제 심장질환 데이터를 분석하여 심장질환에 있어 가장 영향력이 큰 변수를 찾아보도록 하겠습니다. 데이터 상세 설명은 여기에서 볼 수 있으며, 데이터는 여기에서 다운 받을 수 있습니다. 그리고 코드는 여기 GitHub에서 확인 할 수 있습니다.
+          <p class="article__excerpt">정적 메소드를 사용하여 클래스가 같은 메모리를 바라보는 것을 해보도록 하겠습니다.
 
 
 
 
-  DataSet
+  정적 메소드 (static method)
 
 
-데이터 셋 설명은 아래와 같습니다.
+정적 메소드는 self를 매개변수로 받지 않는 메소드를 말하며 여러 인스턴스가 공유해서 사용하는 메소드입니다.
 
+저번에 만든 코드를 이용하여 예를 들어보겠습니다.
 
-  trestb...</p>
+class gun():
+...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2020-03-12T16:00:00+09:00">March 12, 2020</time></span>
+              <span class="article__date"><time datetime="2020-03-14T15:00:00+09:00">March 14, 2020</time></span>
             </div>
 
-            <a href="/2020/03/12/R-Decision-Tree-rpart/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2020/03/14/python-class-static/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -422,7 +490,7 @@ c = 0
     <div class="article__wrapper">
 
         
-          <a href="/2020/03/12/R-Decision-Tree-entropy/" class="article__image" style="background-image: url(/images/tree.png)">
+          <a href="/2020/03/13/python-class/" class="article__image" style="background-image: url(/images/gun.png)">
           </a>
         
 
@@ -431,85 +499,36 @@ c = 0
           
             <div class="article-tags__box">
               
-                <a href="/tag/r" class="article__tag"> r</a>
+                <a href="/tag/python" class="article__tag"> python</a>
               
             </div>
           
           </div>
       
           <h2 class="article__title">
-            <a href="/2020/03/12/R-Decision-Tree-entropy/">[R]의사 결정트리와(Decision Tree)엔트로피(entropy)</a>
+            <a href="/2020/03/13/python-class/">[PYTHON]파이썬 클래스(class)란?</a>
           </h2>
       
-          <p class="article__excerpt">의사 결정트리에 대해 알아볼껀데, 의사 결정트리가 어떤 상황에서 사용되는지 구현하려면 무엇이 필요한지에 대해 알아보겠습니다.
+          <p class="article__excerpt">파이썬에서의 클래스 정의와 구현하는 법에 대해 알아보겠습니다.
 
 
 
 
-  의사 결정트리(Decision Tree)
+  클래스(class))
 
 
-회귀식을 세울 때 중요한 변수(컬럼)들을 선택해야 하는 상황에서 어떠한 컬럼이 중요한지 판단이 안설때, 의사 결정트리를 이용하면 중요한 변수를 골...</p>
+사실 클래스(class)하면 가장 많이 비유로 사용되는 붕어빵 틀과 붕어빵이 있는데, 이 부분은 그냥 패스하고 직접 구현하면서 알아보도록 하겠습니다. 우선 총이라는 클래스를 만들어 보겠습니다.
+
+class gun():
+
+    ...</p>
           
           <div class="article__footer">
             <div class="article__meta">
-              <span class="article__date"><time datetime="2020-03-12T15:00:00+09:00">March 12, 2020</time></span>
+              <span class="article__date"><time datetime="2020-03-13T17:00:00+09:00">March 13, 2020</time></span>
             </div>
 
-            <a href="/2020/03/12/R-Decision-Tree-entropy/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-      
-  </div>
-</div>
-<!-- end article -->
-		
-			
-<!-- begin article -->
-<div class="article">
-  <div class="container">
-
-    <div class="article__wrapper">
-
-        
-          <a href="/2020/02/13/R-NB-Naive-Bayes-auto/" class="article__image" style="background-image: url(/images/R_cover1.png)">
-          </a>
-        
-
-        <div class="article__content ">
-          <div class="article-tags">
-          
-            <div class="article-tags__box">
-              
-                <a href="/tag/r" class="article__tag"> r</a>
-              
-            </div>
-          
-          </div>
-      
-          <h2 class="article__title">
-            <a href="/2020/02/13/R-NB-Naive-Bayes-auto/">[R]나이브 베이즈(Naive Bayes)자동화 스크립트 만들기</a>
-          </h2>
-      
-          <p class="article__excerpt">knn에 이어서 나이브 베이도 자동화 스크립트로 만들어보겠습니다.
-
-
-
-
-  Naive Bayes 자동화 스크립트
-
-
-우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다. 추가로 if문을 돌려서 패키지 설치가 되어 있으면 패스하고 아니면 설치하도록 ...</p>
-          
-          <div class="article__footer">
-            <div class="article__meta">
-              <span class="article__date"><time datetime="2020-02-13T15:00:00+09:00">February 13, 2020</time></span>
-            </div>
-
-            <a href="/2020/02/13/R-NB-Naive-Bayes-auto/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="/2020/03/13/python-class/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
 
         </div>
@@ -531,7 +550,7 @@ c = 0
     </a>
   
   <span class="page_number ">
-    Page: 3 of 14
+    Page: 3 of 15
   </span>
   
     <a href="/page/4" class="next">Next</a>
