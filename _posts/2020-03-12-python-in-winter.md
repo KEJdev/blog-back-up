@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[PYTHON]멤버체크(in)으로 특정 단어 개수 세기"
+title:  "[PYTHON]파이썬 멤버체크(in)으로 특정 단어 개수 세기"
 date:   2020-03-12 12:00:00 +0300
 image:  in.png
 tags:   python

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[SQL]SQL에서 검색 조건 주기(where)"
+title:  "SQL에서 검색 조건 주기(where)"
 date:   2019-08-18 09:00:00 +0300
 image:  SQL_cover1.png
 tags:   sql

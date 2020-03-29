@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[PL/SQL]PL/SQL의 예외처리(exception)란?"
+title:  "PL/SQL의 예외처리(exception)란?"
 date:   2019-11-05 09:00:00 +0300
 image:  plsql_cover1.png
 tags:   plsql

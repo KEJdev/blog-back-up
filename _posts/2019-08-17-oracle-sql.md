@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[SQL]Oracle SQL이란?"
+title:  "Oracle SQL이란?"
 date:   2019-08-17 09:05:55 +0300
 image:  SQL_cover1.png
 tags:   sql

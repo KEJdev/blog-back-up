@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[MACHINE-LEARNING]클래스로 신경망 구현하기(cross_entropy, softmax, Softmax With loss )"
+title:  "[MACHINE-LEARNING]파이썬 클래스로 신경망 구현하기(cross_entropy, softmax, Softmax With loss )"
 date:   2020-01-18 09:00:00 +0300
 image:  softmax.png
 tags:   machine-learning
