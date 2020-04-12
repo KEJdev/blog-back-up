@@ -151,7 +151,6 @@ with tf.Session() as sess:
 그래서 응용하여 구구단을 출력해보자면 아래와 같이 작성 할 수 있습니다. 
 
 ```python
-
 import tensorflow as tf
 
 ## 구조(그래프) 선언부
