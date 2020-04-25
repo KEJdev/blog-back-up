@@ -92,7 +92,6 @@ class Gun():
     @staticmethod
     def print(): #출력하는 기능
         print('{}발 남았습니다.'.format(Gun.bullet))
-
 ```
 
 그리고 아까와 똑같이 만드는데, gun_2에는 총알을 장전하지 않고 총을 쏘게 되면 아래와 같은 결과를 얻을 수 있습니다.

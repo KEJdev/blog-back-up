@@ -41,7 +41,6 @@ def binary_search(in_data, input_num):
             start_num = mid_num + 1
 
     return print('입력하신 {0}이(가) 없습니다.'.format(input_num))
-
 ```
 
 

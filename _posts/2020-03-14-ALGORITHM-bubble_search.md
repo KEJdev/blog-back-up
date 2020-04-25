@@ -30,7 +30,7 @@ def bubble_search(data):
     print(data)
 
 data = [5,4,3,2,1,8,7,10]
-bubble_search(dat
+bubble_search(data)
 ```
 
 

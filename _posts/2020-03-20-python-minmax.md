@@ -60,7 +60,7 @@ Tic Tac Toe으로 결정 과정을 보면 아래 그림과 같습니다.
 상대가 두는 턴(사람)↑
 
 
-<center><img src="{{ site.baseurl }}/images/tic3.png" ></center>
+<center><img src="{{ site.baseurl }}/images/tic4.png" ></center>
 
 내가 두는 턴(컴퓨터)↑
 
