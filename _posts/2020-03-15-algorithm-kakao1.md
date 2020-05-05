@@ -2,8 +2,8 @@
 layout: post
 title:  "[ALGORITHM]2017 카카오 신입 공채 블라인드 시험문제(비밀지도)"
 date:   2020-03-15 09:00:00 +0300
-image:  01.png
-tags:   algorithm
+image:  assets/images/01.png
+tags:   [Algorithm]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -26,7 +26,7 @@ use_math: true
 
 
 
-<center><img src="{{ site.baseurl }}/images/01.png" ></center>
+<center><img src="../assets//images/01.png" ></center>
 
 
 네오가 프로도의 비상금을 손에 넣을 수 있도록, 비밀지도의 암호를 해독하는 작업을 도와줄 프로그램을 작성하라.   

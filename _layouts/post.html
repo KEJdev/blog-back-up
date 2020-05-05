@@ -1,52 +1,67 @@
 ---
 layout: default
+comments: true
 ---
+{% assign author = site.authors[page.author] %}
 <div class="container">
-  <div class="post-title-box">
-    <div class="row">
-      <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
-        <span class="post__date">
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%b %d, %Y'}}</time>
-        </span>
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
+				<div class="{% if page.image %} col-md-6 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<!--<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						{% for category in page.tags %}
+                          <a class="sscroll text-danger" href="{{site.baseurl}}/tags.html#{{ category | downcase }}">{{ category | downcase }}</a><span class="sep">, </span>
+                        {% endfor %}
+                        </span>
+					</p>-->
+					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
+					<div class="d-flex align-items-center">
+                        {% if author.avatar %}
+                        <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="70"/>
+                        {% endif %}
+						
+						<span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-        <h1 class="post-title">{{ page.title | escape }}</h1>
 
-        <div class="post__info">
-          <div class="post__author">
-            <span>By {{site.data.settings.author.name}} </span>
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+						Follow Me 
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+					<!--  Github Repo Star Btn-->
+					<a class="text-gray ml-1" target="_blank" href="https://github.com/KEJdev"><i class="fab fa-github"></i></a>
+					<a class="text-gray ml-1"  background-size: 100px target="_blank" href="https://www.instagram.com/ao_ej125/"><i class="fab fa-instagram"></i></a>					
+					</div>
+						<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
             
-          </div>
-
-          {% if page.tags.size >= 1 %}
-          <div class="post__tags">
-            {% for tag in page.tags %}
-              <a href="{{ site.baseurl }}/tag/{{ tag }}" class="post__tags-tag">{{ tag }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  </div>
-
-
-  <div class="container">
-  <div class="row">
-    <!-- begin post -->
-    <article class="post {{ no-image }} col col-8 col-t-10 col-m-12">
-
-      <div class="post__content">
-        {{ content }}
-      </div>
-      <div class="post__share">
-          
-        </ul>
-      </div>
-
+            <!-- Article -->
+			<article class="article-post">                
+			{{ content }}                
+			</article>
+			
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<div align="center" style="margin: 1em 0;">
 			<ins class="adsbygoogle"
@@ -57,10 +72,17 @@ layout: default
 			<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
-    
-      </article>
-    <!-- end post -->
-    </div>
-  </div>
 
-  
+            <!-- Comments -->
+            {% if page.comments != false %}
+                {% include comments.html %}
+            {% endif %}
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+	

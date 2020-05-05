@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]파이썬의 클래스 상속과 super함수"
 date:   2020-03-14 10:00:00 +0300
-image:  class.png
-tags:   python
+image:  assets/images/class.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -22,7 +22,7 @@ use_math: true
 
 상속은 클래스들끼리 기능을 서로에게 물려주는 것이기 때문에 같은 코드를 반복해서 짜지 않아도 됩니다.
 
-<center><img src="{{ site.baseurl }}/images/class.png" ></center>
+<center><img src="../assets//images/class.png" ></center>
 
 
 상속을 받기 위해 클래스 두개를 작성하고 자식 클래스에 상속시켜보겠습니다.  
@@ -46,7 +46,7 @@ child.base_method()
 코드를 보면 자식 클래스가 아빠 클래스를 상속을 받았는데, 이상태로 출력을 하면 아래와 같은 결과를 얻을 수 있습니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/class2.png" ></center>
+<center><img src="../assets//images/class2.png" ></center>
 
 결과를 보면 알수 있듯이 child class에는 함수를 쓰지 않았지만 클래스를 상속 받았으므로 father의 함수를 사용할 수 있습니다. 
 
@@ -68,12 +68,12 @@ father=father()
 father.message
 ```
 
-<center><img src="{{ site.baseurl }}/images/class3.png" ></center>
+<center><img src="../assets//images/class3.png" ></center>
 
 father는 출력이 잘 되지만, child를 출력하면 에러가 출력됩니다.
 
 
-<center><img src="{{ site.baseurl }}/images/class4.png" ></center>
+<center><img src="../assets//images/class4.png" ></center>
 
 
 이 오류를 해결하기 위해선 우선 class와 변수명 대소문자를 구분하여 작성해야 합니다. 
@@ -127,7 +127,7 @@ class Child(Father):
 다중 상속이란, 두 개 이상의 클래스를 상속 받는 것을 이야기 합니다. 이 경우에는 두 클래스의 모든 속성을 물려받게 됩니다. 이는 하나의 자식 클래스가 두 개 이상의 부모 클래스를 가지는 경우를 이야기 할 수 있습니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/class5.png" ></center>
+<center><img src="../assets//images/class5.png" ></center>
 
 예를 들면 아래와 같습니다. 
 
@@ -156,12 +156,12 @@ class Grandchild(Father1, Father2):
 grandchild=Grandchild()
 ```
 
-<center><img src="{{ site.baseurl }}/images/class7.png" ></center>
+<center><img src="../assets//images/class7.png" ></center>
 
 만약 튼튼한 두팔, 지혜, 지식, 자기 만족도가 높은 삶을 출력한다고 했을 때, 실제로 출력 되는 것을 확인해보면 튼튼한 두팔이 두번 나오는 경우를 확인 할 수 있습니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/class6.png" ></center>
+<center><img src="../assets//images/class6.png" ></center>
 
 이것이 다중 상속시 볼 수 있는 죽음의 다이아몬드 상속입니다. 이를 해결하기 위해서 super 함수를 사용해야 이 문제를 피할 수 있습니다. 
 
@@ -188,6 +188,6 @@ class Grandchild(Father1, Father2):
 ```
 
 
-<center><img src="{{ site.baseurl }}/images/class8.png" ></center>
+<center><img src="../assets//images/class8.png" ></center>
 
 

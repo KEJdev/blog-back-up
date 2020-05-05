@@ -2,8 +2,8 @@
 layout: post
 title:  "[Tensorflow]텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)"
 date:   2020-02-03 09:00:00 +0300
-image:  tensorflow2.png
-tags:   machine-learning
+image:  assets/images/tensorflow2.png
+tags:   [machine-learning]
 sitemap : 
 changefreq : always
 priority : 1.0
@@ -83,7 +83,7 @@ sess.close()
 
 Tensorflow Session은 fetch와 feed 2가지 방법으로 처리 할 수 있습니다. 
 
-<center><img src="{{ site.baseurl }}/images/tensorflow2.png" ></center>
+<center><img src="../assets//images/tensorflow2.png" ></center>
 
 
 fetch는 Tensor에 할당 되어야 실제 Session에서 실행을 할 수 있습니다. 

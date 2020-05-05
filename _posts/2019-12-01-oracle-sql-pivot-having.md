@@ -2,8 +2,8 @@
 layout: post
 title:  "[SQL]SQL group 함수에서 검색 조건(having)과 테이블 회전(pivot)"
 date:   2019-12-01 09:00:00 +0300
-image:  SQL_cover1.png
-tags:   sql
+image:  assets/images/SQL_cover1.png
+tags:   [SQL]
 sitemap :
 changefreq : always
 priority : 1.0

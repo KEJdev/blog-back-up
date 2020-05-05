@@ -1,41 +1,52 @@
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kejdev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# Site
+#description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+url: "https://kejdev.github.io" 
+disqus: 'dev-mandarin'
+disqus_shortname: 'Dev.mandarin'
 
+include: ["_pages"]
+permalink: /:title/
 
-# Build settings
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      avatar: /assets/images/blog-icon.png
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+
+#-------------------------------
+# Google Analytics
+google-analytics: UA-148043528-1 # Add your identifier. For example UA-99631805-1.
+
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-permalink: pretty
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll/tagging
 
-
+# Paginate
 paginate: 10
-paginate_path: "/page/:num"
 
-
-# Pages Path
-defaults:
-  - scope:
-      path: '_pages'
-    values:
-      permalink: /:basename:output_ext
-
-include:
-  - _pages
-
-
-# Tags
-tag_page_dir:         tag
-tag_page_layout:      tag_page
-tag_permalink_style:  pretty
-
-sass:
-  sass_dir: _sass
-  style: compressed
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]

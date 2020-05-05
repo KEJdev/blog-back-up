@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]의사 결정트리와(Decision Tree)엔트로피(entropy)"
 date:   2020-03-12 09:00:00 +0300
-image:  tree.png
-tags:   r
+image:  assets/images/tree.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -23,7 +23,7 @@ use_math: true
 예를 들어 회사 지원자에게 떨어진 이유를 명확히 설명해줘야 하는 경우나 은행에서 대출을 해줄 때, 대출을 해줄지 말지의 여부를 기업 데이터를 보고 결정해야 하는 경우 등이 있습니다. 또 의학면에서는 질병에 대한 진행바탕으로 올바른 처방을 위해 결정해야하는 경우에 사용되기도 합니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/tree.png" ></center>
+<center><img src="../assets//images/tree.png" ></center>
 
 <center>Decision Tree 예시</center>
 
@@ -46,7 +46,7 @@ curve(-x * log2(x) - (1 - x) * log2(1 - x),
       col="red", xlab = "x", ylab = "Entropy", lwd=4)
 ```
 
-<center><img src="{{ site.baseurl }}/images/entro.png" ></center>
+<center><img src="../assets//images/entro.png" ></center>
 
 
 정보획득량은 분할전 엔트로피에서 분할 후 엔트로피를 빼면 정보획득량을 구할 수 있습니다.

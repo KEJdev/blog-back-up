@@ -2,8 +2,8 @@
 layout: post
 title:  "[SQL]SQL에서 문자 함수 사용하기(Rpad,substr,replace)"
 date:   2019-08-21 09:00:00 +0300
-image:  SQL_cover1.png
-tags:   sql
+image:  assets/images/SQL_cover1.png
+tags:   [SQL]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -30,6 +30,7 @@ priority : 1.0
 |**단일행 함수**|<center>문자, 숫자, 날짜, 변환, 일반</center>|
 |**복수행 함수**|<center>max, min, avg, sum, count</center>|  
 
+<br>
 
 문자 함수의 종류에는 아래와 같습니다.  
 
@@ -45,6 +46,9 @@ priority : 1.0
 |**Length**|철자의 개수를 세는 함수|
 |**Concat**|두 컬럼의 데이터를 연결해서 출력하는 함수|
 |**replace**|어떤 특정 절차를 다른 철자로 변경해서 출력하는 함수|  
+
+
+<br>
 
 
 문자 함수를 이용하여 이름을 출력하는데 대문자로도 출력하고 소문자로도 출력하고 첫번째 철자는 대문자로 나머지는 소문자로 출력해보겠습니다. 
@@ -72,7 +76,9 @@ from emp
 where substr(ename,1,1) = 'S';
 ```
 
-조금 더 응용해서 **initcap**을 사용하지 말고 substr, upper, lower, ||를 사용해서 출력해보겠습니다.
+
+조금 더 응용해서 **initcap**을 사용하지 말고 substr, upper, lower를 사용해서 출력해보겠습니다.
+
 
 
 ```sql

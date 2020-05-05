@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]파이썬 for문에서 if문 안쓰고 특정 블럭만 실행하기(continue,break)"
 date:   2019-12-05 09:00:00 +0300
-image:  python_cover1.png
-tags:   python
+image:  assets/images/python_cover1.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0

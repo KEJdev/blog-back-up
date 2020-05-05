@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]나이브 베이즈(Naive Bayes)를 이용한 영화 장르 분류"
 date:   2020-02-12 09:00:00 +0300
-image:  NB2.png
-tags:   r
+image:  assets/images/NB2.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -26,7 +26,7 @@ library(e1071)
 movie <- read.csv("movie.csv", header=T)
 ```
 
-<center><img src="{{ site.baseurl }}/images/NB2.png" ></center>
+<center><img src="../assets//images/NB2.png" ></center>
 
 -------
 
@@ -44,7 +44,7 @@ model <- naiveBayes(movie[1:5], movie$장르, laplace=0)
 result <- predict(model, movie[1:5]) # 장르를 제외한 라벨들로 예측을 해보겠다는 코드
 ```
 
-<center><img src="{{ site.baseurl }}/images/NB3.png" ></center>
+<center><img src="../assets//images/NB3.png" ></center>
 
 
 예측이 일치하는지 확인하는 코드는 아래와 같습니다.
@@ -53,7 +53,7 @@ result <- predict(model, movie[1:5]) # 장르를 제외한 라벨들로 예측�
 movie$result <- result
 ```
 
-<center><img src="{{ site.baseurl }}/images/NB4.png" ></center>
+<center><img src="../assets//images/NB4.png" ></center>
 
 거의 일치함을 알수 있습니다.
 

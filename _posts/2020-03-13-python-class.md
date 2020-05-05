@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]파이썬 클래스(class)란?"
 date:   2020-03-13 11:00:00 +0300
-image:  gun.png
-tags:   python
+image:  assets/images/gun.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -116,5 +116,5 @@ gun.shoot(3)
 gun.print()
 ```
 
-<center><img src="{{ site.baseurl }}/images/gun.png" ></center>
+<center><img src="../assets//images/gun.png" ></center>
 

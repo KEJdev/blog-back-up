@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류"
 date:   2019-12-02 09:00:00 +0300
-image:  r3.png
-tags:   r
+image:  assets/images/r3.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -36,7 +36,7 @@ class = c("Fruits","Proteins","Fruits","Vegetables",
 출력하면 아래와 같이 출력이 됩니다.  
 
 
-<center><img src="{{ site.baseurl }}/images/r3.png" ></center>  
+<center><img src="../assets//images/r3.png" ></center>  
 
 
 그럼 이제 토마토 데이터를 만들어 보겠습니다. 토마토 데이터는 아래와 같이 만들어주면 된답니다.  
@@ -57,7 +57,7 @@ train_data <- food[,c(2,3)]
 ```
 
 
-<center><img src="{{ site.baseurl }}/images/r4.png" ></center>  
+<center><img src="../assets//images/r4.png" ></center>  
 
 
 
@@ -76,7 +76,7 @@ result1<-knn(train_data,tomato ,train_label, k=3, prob=TRUE)
 ```
 
 
-<center><img src="{{ site.baseurl }}/images/r5.png" ></center>  
+<center><img src="../assets//images/r5.png" ></center>  
 
 
 

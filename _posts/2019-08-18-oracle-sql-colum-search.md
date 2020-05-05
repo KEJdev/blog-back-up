@@ -2,8 +2,8 @@
 layout: post
 title:  "SQL에서 컬럼검색과 별칭(Keyword)"
 date:   2019-08-18 09:00:00 +0300
-image:  SQL_cover1.png
-tags:   sql
+image:  assets/images/SQL_cover1.png
+tags:   [SQL]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -33,6 +33,9 @@ emp table 컬럼은 아래와 같습니다.
 |**deptno**|부서번호|
 
 
+<br>
+
+
 --------  
 
 
@@ -45,7 +48,9 @@ dept table 컬럼은 아래와 같습니다.
 |:--------:|:--------:|
 |**deptno**|부서번호|
 |**dname**|부서명|
-|**loc**|부서위치|
+|**loc**|부서위치|   
+
+<br>
 
 table column에 대해 알았으니, emp 테이블에서 사원번호와 이름, 월급을 출력해보겠습니다.
 
@@ -87,8 +92,8 @@ from emp;
 그런데 실제로 출력하면 에러가 출력됩니다. 그 이유는 **null 값 때문**입니다.
 잠깐, **null** 값에 대해 알아보겠습니다.
 
-**<center>1. 데이터가 없는 상태  
-2. 알 수 없는 값(unknown)</center>**
+**<center>1. 데이터가 없는 상태</center>** 
+**<center>2. 알 수 없는 값(unknown)</center>**
 
 위와 같은 상태에 있을 때, null 값이라고 합니다.  
 그래서 null 대신에 다른 값이 출력되게 하는 **nvl 함수를 사용**해야합니다.  
@@ -153,7 +158,7 @@ from emp;
 
 별칭을 사용하여 아래와 같이 출력되게 하려면 어떻게 해야댈까요?
 
-<center><img src="{{ site.baseurl }}/images/as.png" ></center>  
+<center><img src="../assets//images/as.png" ></center>  
 
 
 위 쿼리를 그대로 가져와서 조금만 수정하면 되겠네요.

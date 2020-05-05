@@ -2,8 +2,8 @@
 layout: post
 title:  "[GO]GO 언어 설치하기"
 date:   2019-12-04 09:00:00 +0300
-image:  go1.png
-tags:   go
+image:  assets/images/go1.png
+tags:   [Go]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -13,7 +13,7 @@ priority : 1.0
 GO언어를 설치해보도록 하겠습니다. 생각보다 설치하는 건 어렵지도 않고 여러가지 설정 할 것도 별로 없으니 10분이면 설치할 수 있습니다.   
 우선 설치파일 다운해봅시다. [여기](https://golang.org/dl/)를 클릭하면 아래와 같은 화면이 나오는데 OS에 맞는 설치파일 다운합니다.  
 
-<center><img src="{{ site.baseurl }}/images/go1.png" ></center>  
+<center><img src="../assets//images/go1.png" ></center>  
 
 
 저는 맥과 윈도우 두가지를 같이 쓰고 있는데, 우선 윈도우랑 맥이랑 그렇게 설치방법이 다르지 않으니 그냥 윈도우로 진행하겠습니다.
@@ -26,7 +26,7 @@ GOPATH설정 또한 해줘야하는데, 아래와 같이 설정하시면 됩니�
 
 
 
-<center><img src="{{ site.baseurl }}/images/go2.png" ></center>  
+<center><img src="../assets//images/go2.png" ></center>  
 
 
 

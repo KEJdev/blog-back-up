@@ -2,8 +2,8 @@
 layout: post
 title:  "파이썬에서 간단하게 예외처리하기(try ~ except ~ else)"
 date:   2020-04-19 09:00:00 +0300
-image:  try2.png
-tags:   python
+image:  assets/images/try2.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -34,13 +34,13 @@ print(my_power())
 위와 같이 코드를 작성하고 에러를 출력해보겠습니다.
 
 
-<center><img src="{{ site.baseurl }}/images/try.png" ></center>
+<center><img src="../assets//images/try.png" ></center>
 
  
 여기서 try ~ except를 사용하겠습니다.
 
 
-<center><img src="{{ site.baseurl }}/images/try2.png" ></center>
+<center><img src="../assets//images/try2.png" ></center>
 
 
 ```python

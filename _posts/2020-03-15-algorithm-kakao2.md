@@ -2,8 +2,8 @@
 layout: post
 title:  "[ALGORITHM]2017 카카오 신입 공채 블라인드 시험문제(LRU알고리즘)"
 date:   2020-03-15 10:00:00 +0300
-image:  02.png
-tags:   algorithm
+image:  assets/images/02.png
+tags:   [Algorithm]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -41,7 +41,7 @@ cache miss일 경우 실행시간은 5이다.
 
 * **입출력 예제**  
 
-<center><img src="{{ site.baseurl }}/images/02.png" ></center>
+<center><img src="../assets//images/02.png" ></center>
 
 
 

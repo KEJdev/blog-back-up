@@ -2,8 +2,8 @@
 layout: post
 title:  "[SQL]Oracle 조인(join)의 종류(equi join, 1999 ANSI)"
 date:   2019-12-11 09:00:00 +0300
-image:  SQL_cover1.png
-tags:   sql
+image:  assets/images/SQL_cover1.png
+tags:   [SQL]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -34,6 +34,9 @@ Oracle에서 조인(join)이란, 여러 개의 테이블의 컬럼의 결과를 
 |**outer join**| <center>equi 조인으로는 볼 수 없는 결과를 볼 때 사용하는 조인 문법</center> |
 |**self join**| <center>자기 자신의 테이블과 조인하는 조인 문법</center> |
 
+<br>
+
+
 두 번째 조인인 1999 ANSI 문법 종류는 아래와 같습니다. 
 
 |  <center> 종류 </center> | 
@@ -43,6 +46,8 @@ Oracle에서 조인(join)이란, 여러 개의 테이블의 컬럼의 결과를 
 |left/right/full outer join|
 |natural join|
 |cross join|
+
+<br>
 
 
 이렇게 오라클 조인과 1999 ANSI조인으로 나뉘는 이유는 오라클 조인으로도 조인이 되지 않는 데이터가 있기 때문에 1999 ANSI조인을 사용하여 데이터를 뽑아냅니다.

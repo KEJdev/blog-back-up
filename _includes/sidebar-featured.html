@@ -1,0 +1,15 @@
+<div class="sticky-top sticky-top-offset">
+    <h4 class="font-weight-bold spanborder"><span>Top Post</span></h4>  
+    <ol class="list-featured">				
+        {% for post in site.tags.Top_Post %}                
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="{{site.baseurl}}{{ post.url }}" class="text-dark">{{ post.title }}</a>
+                </h6>
+            </span>
+            </li>                
+        {% endfor %}   
+    </ol>
+</div> 
+

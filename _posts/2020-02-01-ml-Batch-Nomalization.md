@@ -2,8 +2,8 @@
 layout: post
 title:  "[MACHINE-LEARNING]Batch Nomalization 학습 실제 사용할때 주의 할 점"
 date:   2020-02-01 09:00:00 +0300
-image:  batch1.png
-tags:   machine-learning
+image:  assets/images/batch1.png
+tags:   [machine-learning]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -21,11 +21,11 @@ use_math: true
 
 아래의 그림은 학습이 잘 안되는 가중치 분포의 예입니다. 
 
-<img src="{{ site.baseurl }}/images/weight1.png" >
+<img src="../assets//images/weight1.png" >
 
 아래의 그림은 학습이 잘된 경우입니다. 
 
-<img src="{{ site.baseurl }}/images/weight2.png" >
+<img src="../assets//images/weight2.png" >
 
 한 눈에 봐도 고르게 잘 된것을 알 수 있습니다. 
 
@@ -48,7 +48,7 @@ ex) 시험문제가 어려우면 아주 잘하는 학생들과 아주 못하는 
 1 * np.random.randm(10,100)
 ```
 
-<img src="{{ site.baseurl }}/images/weight3.png" >
+<img src="../assets//images/weight3.png" >
 
 **3. 표준편차가 0.01인 정규분포를 사용해 초기값 선정.**
 
@@ -59,14 +59,14 @@ ex) 시험문제가 쉬우면 학생들 점수가 평균에 가깝다.
 0.01 * np.random.randm(10,100)
 ```
 
-<img src="{{ site.baseurl }}/images/weight4.png" >
+<img src="../assets//images/weight4.png" >
 
 **4.Xavier 초기값 선정.**
 
 표준편차가 $√(1/n)$인 (n은 앞층의 노드 수) 정규분포로 초기화하는 방법이 있으며 sigmoid 함수와 짝궁이며 같이 사용됩니다. 
 
 
-<img src="{{ site.baseurl }}/images/weight5.png" >
+<img src="../assets//images/weight5.png" >
 
 
 **5.He 초기값 선정.**
@@ -104,7 +104,7 @@ $$
 왜 층마다 배치 정규화 작업을 해야 할까요?
 그 이유는 신경망은 파라미터(매개변수)가 많기 때문에 학습이 어렵습니다. 특히나 딥러닝 같은 경우는 레이어가 많은데 이 뜻은 가중치가 층마다 다르다 라고 해석 할 수 있습니다. 더욱이 층을 통과할수록 각기 다른 가중치가 쌓이며 가중치의 작은 변화가 가중 되어서 쌓이면 레이어가 많아 질수록 출력되는 값의 변화가 크기 때문입니다. 
 
-<img src="{{ site.baseurl }}/images/batch1.png" >
+<img src="../assets//images/batch1.png" >
 
 즉, 가중치 때문에 입력값에 대한 완전히 다른 출력값이 나옴을 알 수 있습니다.
 

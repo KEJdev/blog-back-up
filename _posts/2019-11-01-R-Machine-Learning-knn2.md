@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]K-Nearest Neighbors(Knn)을 이용한 소개팅 데이터 분류"
 date:   2019-11-01 09:00:00 +0300
-image:  R1.png
-tags:   r
+image:  assets/images/R1.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -51,7 +51,7 @@ like<-read.csv("like.csv", header = T)
 
 출력하면 아래의 데이터가 나오는 것을 확인할 수 있습니다. 
 
-<center><img src="{{ site.baseurl }}/images/R1.png" ></center>  
+<center><img src="../assets//images/R1.png" ></center>  
 
 
 한글 컬럼명이 생각보다 불편한거 같습니다. 컬럼명을 바꿔보겠습니다. 컬럼명은 아래와 같이 입력하면 바꿀 수 있습니다.  
@@ -62,7 +62,7 @@ colnames(like)<- c( "taik" ,"book" ,"travel", "school" ,"tall" ,"skin", "muslce"
   
 출력하면 아래와 같이 컬럼명이 변경되어 나오는 것을 확인할 수 있습니다.  
 
-<center><img src="{{ site.baseurl }}/images/R2.png" ></center>  
+<center><img src="../assets//images/R2.png" ></center>  
  
 
 이제 knn을 이용해서 분류를 하려고 하는데 맨 끝 컬럼에 있는 label과 data를 분리해야합니다. 분리는 아래와 같이 하시면 컬럼을 분리하실 수 있습니다.   

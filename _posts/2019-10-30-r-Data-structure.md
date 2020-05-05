@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]R을 배워야 하는 이유와 자료구조"
 date:   2019-10-30 10:00:00 +0300
-image:  pie1.png
-tags:   r
+image:  assets/images/pie1.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -54,7 +54,7 @@ tapply(sal,list(deptno,job),sum)
 pie(emp$sal)
 ```  
 
-<center><img src="{{ site.baseurl }}/images/pie1.png" ></center>  
+<center><img src="../assets//images/pie1.png" ></center>  
 
 
 -------
@@ -93,5 +93,5 @@ pie(emp$sal)
 
 
 
-<center><img src="{{ site.baseurl }}/images/type.png" ></center>  
+<center><img src="../assets//images/type.png" ></center>  
 

@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]파이썬 if문 사용해서 홀짝 출력하기 "
 date:   2019-11-26 09:00:00 +0300
-image:  python_cover1.png
-tags:   python
+image:  assets/images/python_cover1.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -107,7 +107,7 @@ mod(b) # 짝수입니다가 출력됨
 
 그럼 이번에 재밌는 문제 하나를 풀면서 익혀보겠습니다. 가우스 덧셈 공식은 아래와 같습니다.
 
-<center><img src="{{ site.baseurl }}/images/if1.png" ></center>  
+<center><img src="../assets//images/if1.png" ></center>  
 
 
 이 가우스 덧셈 공식을 이용하여 1부터 10까지 숫자의 합을 출력해보겠습니다. 문법에 조금 익숙해지기 위해 숫자를 입력 받아서 작성해보겠습니다.  

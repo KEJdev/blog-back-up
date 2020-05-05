@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]파이썬에서 지역변수와 전역변수 사용하기"
 date:   2020-03-12 13:00:00 +0300
-image:  pi.png
-tags:   python
+image:  assets/images/pi.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -75,5 +75,5 @@ return sumcircle
 ```
 
 
-<center><img src="{{ site.baseurl }}/images/pi.png" ></center>
+<center><img src="../assets//images/pi.png" ></center>
 

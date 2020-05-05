@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]나이브 베이즈(Naive Bayes)자동화 스크립트 만들기"
 date:   2020-02-13 09:00:00 +0300
-image:  R_cover1.png
-tags:   r
+image:  assets/images/R_cover1.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0

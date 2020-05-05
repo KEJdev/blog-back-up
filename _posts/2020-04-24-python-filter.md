@@ -2,8 +2,8 @@
 layout: post
 title:  "Python 정수 리스트에서 소수만 걸러내기(filter)"
 date:   2020-04-24 09:00:00 +0300
-image:  python_cover1.png
-tags:   python
+image:  assets/images/python_cover1.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0

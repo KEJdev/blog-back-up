@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]의사 결정트리와(Decision Tree)로 심장질환 데이터 분석하기"
 date:   2020-03-12 10:00:00 +0300
-image:  tree1.png
-tags:   r
+image:  assets/images/tree1.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -64,7 +64,7 @@ head(hr)
 a<-information.gain(AHD~., hr[,-1])
 ```
 
-<center><img src="{{ site.baseurl }}/images/tree1.png" ></center>
+<center><img src="../assets//images/tree1.png" ></center>
 
 
 -------
@@ -82,7 +82,7 @@ fancyRpartPlot(tree)
 
 아래와 같은 그래프를 볼 수 있는데, 여기서 이 데이터 분석에 대한 결과를 설명한다고 할때, 어떻게 할 수 있을까요 ?
 
-<center><img src="{{ site.baseurl }}/images/tree2.png" ></center>
+<center><img src="../assets//images/tree2.png" ></center>
 
 
 -------

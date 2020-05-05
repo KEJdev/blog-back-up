@@ -2,8 +2,8 @@
 layout: post
 title:  "[Tensorflow]텐서플로우란?"
 date:   2020-02-02 09:00:00 +0300
-image:  tensorflow1.png
-tags:   machine-learning
+image:  assets/images/tensorflow1.png
+tags:   [machine-learning]
 sitemap : 
 changefreq : always
 priority : 1.0
@@ -28,7 +28,7 @@ use_math: true
 
 **1) 데이터 플로우 그래프를 통한 풍부한 표현력**
 
-<center><img src="{{ site.baseurl }}/images/tensorflow1.png" ></center>
+<center><img src="../assets//images/tensorflow1.png" ></center>
 
 데이터 플로우 그래프(Data Flow Graph)방식을 사용하며, 그래프를 시작하기 위해서 텐서보드라는 것을 사용할 수 있습니다.
 

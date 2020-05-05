@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]파이썬으로 2진수 8진수 16진수 구하기"
 date:   2020-03-12 11:00:00 +0300
-image:  bin.png
-tags:   python
+image:  assets/images/bin.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -66,4 +66,4 @@ for i in range(20):
 # hex : 16진수 
 ```
 
-<center><img src="{{ site.baseurl }}/images/bin.png" ></center>
+<center><img src="../assets//images/bin.png" ></center>

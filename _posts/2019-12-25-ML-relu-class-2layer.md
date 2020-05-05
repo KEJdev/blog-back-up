@@ -2,8 +2,8 @@
 layout: post
 title:  "[MACHINE-LEARNING]파이썬 클래스로 신경망 구현하기(relu,forward,backward)"
 date:   2019-12-25 09:00:00 +0300
-image:  relu.png
-tags:   machine-learning
+image:  assets/images/relu.png
+tags:   [machine-learning]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -23,7 +23,7 @@ priority : 1.0
 
 Relu의 특징은 0이하면 0을 출력하고 0을 넘으면 그냥 그대로 출력하는 비교적 간단하지만 대단히 효율 좋은 활성화 함수이며 그래프로 출력하지만 아래와 같이 출력할 수 있습니다.
 
-<center><img src="{{ site.baseurl }}/images/relu.png" ></center>  
+<center><img src="../assets//images/relu.png" ></center>  
 
 
 

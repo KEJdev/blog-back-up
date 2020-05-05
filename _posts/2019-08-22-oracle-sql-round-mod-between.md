@@ -2,8 +2,8 @@
 layout: post
 title:  "[SQL]SQL의 반올림과 비교함수 사용하기(round,between_months)"
 date:   2019-08-22 09:00:00 +0300
-image:  SQL_cover1.png
-tags:   sql
+image:  assets/images/SQL_cover1.png
+tags:   [SQL]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -26,6 +26,7 @@ priority : 1.0
 |**trunc**|<center>반올림하지 않고 버리는 함수</center>| 
 |**mod**|<center>나눈 나머지값을 출력하는 함수</center>|
 
+<br>
 
 날짜 함수의 정류는 아래와 같습니다.  
 
@@ -35,6 +36,9 @@ priority : 1.0
 |**add_months**|<center>특정 개월 수 후의 날짜를 출력하는 함수</center>| 
 |**next_day**|<center> 돌아올 요일의 날짜를 출력하는 함수</center>|
 |**last_day**|<center>그 달의 마지막 날이 언제인지 출력하는 함수</center>|
+
+<br>
+
 
 날짜 함수는 
 

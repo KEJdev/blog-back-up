@@ -2,8 +2,8 @@
 layout: post
 title:  "[R]의사 결정트리로 독일은행의 대출 채무 이행 여부 분석하기(C5.0 Model)"
 date:   2020-04-24 10:00:00 +0300
-image:  credit4.png
-tags:   r
+image:  assets/images/credit4.png
+tags:   [R]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -19,7 +19,8 @@ use_math: true
 
 데이터 라벨은 default 변수이며, yes는 대출금 미상환, no는 대출금을 상환했다는 뜻입니다.
 
-<center><img src="{{ site.baseurl }}/images/credit.png" ></center>
+
+<center><img src="../assets//images/credit.png" ></center>
 
 
 대부분의 컬럼은 이름에서부터 알 수 있기 때문에 다루진 않고, 알기 어려운 컬럼에 대해 설명을 조금 설명을 하자면 아래와 같습니다.
@@ -48,7 +49,7 @@ prop.table(table(credit$default))
 70%정도가 대출금을 상환했다는 것을 알 수 있습니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/credit2.png" ></center>
+<center><img src="../assets//images/credit2.png" ></center>
 
 
 
@@ -108,7 +109,7 @@ library(gmodels)
 CrossTable(credit_result, credit_test[, 17])
 ```
 
-<center><img src="{{ site.baseurl }}/images/credit3.png" ></center>
+<center><img src="../assets//images/credit3.png" ></center>
 
 
 표를 보면 알 수 있듯이 채무 이행을 안했는데, 채무 이행을 했다고 나온 경우를 볼 수 있습니다. 채무 이행으로 나왔으나 불이행한 사람이 14명이나 있었으므로 정확도를 올리고 오류율 14명을 줄일 수 있도록 모델의 성능을 올려보겠습니다.
@@ -124,7 +125,7 @@ credit_result2 <- predict(credit_model2, credit_test[,-17])
 CrossTable(credit_result2, credit_test[, 17])
 ```
 
-<center><img src="{{ site.baseurl }}/images/credit4.png" ></center>
+<center><img src="../assets//images/credit4.png" ></center>
 
 
 성능이 월등하게 개선되진 않았지만, 결정 트리 하나의 모델로만으로도 성능을 개선할 수 있음을 알 수 있었습니다.
@@ -145,6 +146,6 @@ table(p, credit$default)
 ```
 
 
-<center><img src="{{ site.baseurl }}/images/credit5.png" ></center>
+<center><img src="../assets//images/credit5.png" ></center>
 
 정확도 99.8%까지 올릴 수 있음을 알 수 있습니다. 

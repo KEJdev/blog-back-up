@@ -2,15 +2,15 @@
 layout: post
 title:  "Oracle SQL이란?"
 date:   2019-08-17 09:05:55 +0300
-image:  SQL_cover1.png
-tags:   sql
+image:  assets/images/SQL_cover1.png
+tags:   [SQL]
 sitemap :
 changefreq : always
 priority : 1.0
 ---
 
 
-SQL이 무엇인지, SQL 명령의 종류, 마지막으로 기본 문법에 대해 알아보겠습니다. 
+SQL이 무엇인지, SQL 명령의 종류, 기본 문법에 대해 알아보겠습니다. 
 
 --------
 
@@ -113,7 +113,7 @@ selete * from emp;
 문장을 해석하면, 아래와 같습니다.  
  
 
-<center><img src="{{ site.baseurl }}/images/selete.png" ></center>  
+<center><img src="../assets//images/selete.png" ></center>  
 
 
 dept 테이블을 검색하는 코드는 아래와 같습니다.  

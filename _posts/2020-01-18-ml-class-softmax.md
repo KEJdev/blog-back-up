@@ -2,8 +2,8 @@
 layout: post
 title:  "[MACHINE-LEARNING]파이썬 클래스로 신경망 구현하기(cross_entropy, softmax, Softmax With loss )"
 date:   2020-01-18 09:00:00 +0300
-image:  softmax.png
-tags:   machine-learning
+image:  assets/images/softmax.png
+tags:   [machine-learning]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -238,6 +238,6 @@ dx, dw1, db1 = affine1.backward(relu_dout1)
 print('dx : \n', dx)
 ```
 
-<img src="{{ site.baseurl }}/images/softmax.png" >
+<img src="../assets//images/softmax.png" >
 
 

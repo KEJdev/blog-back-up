@@ -2,8 +2,8 @@
 layout: post
 title:  "[MACHINE-LEARNING]Relu함수에서 변형된 활성화 함수들(leake Relu,Swish)"
 date:   2019-11-07 09:00:00 +0300
-image:  at.png
-tags:   machine-learning
+image:  assets/images/at.png
+tags:   [machine-learning]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -21,7 +21,7 @@ use_math: true
 
 Relu 함수에서 변형된 활성화 함수들은 아래와 같습니다. 물론 여기서 Softplus와 Tanh함수는 변형된 함수는 아니라는 점! 기억해주세요.  
 
-<center><img src="{{ site.baseurl }}/images/at.png" ></center>  
+<center><img src="../assets//images/at.png" ></center>  
 
 
 
@@ -33,7 +33,7 @@ Relu 또한 저번에 말했던 vanishing현상이 생긴답니다. 왜냐하면
 우선 **leake Relu**함수에 대해 알아보겠습니다.  
 
 
-<center><img src="{{ site.baseurl }}/images/leake.png" ></center>  
+<center><img src="../assets//images/leake.png" ></center>  
 
 
 
@@ -42,7 +42,7 @@ leake Relu는 기존의 Relu의 음수 부분에 약간의 기울기를 준 함�
 두번째 활성화 함수는 **P-Relu**입니다.  
 
 
-<center><img src="{{ site.baseurl }}/images/prelu.png" ></center>  
+<center><img src="../assets//images/prelu.png" ></center>  
 
 
 
@@ -54,7 +54,7 @@ ELU 함수는 OOM(Out of memory)를 해결하기 위해 나온 함수입니다. 
 마지막 함수는 비교적 최근에 나온 함수인 **Swish**함수입니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/swish.png" ></center>  
+<center><img src="../assets//images/swish.png" ></center>  
 
 
 2017년 11월 경 구글에서 만든 함수라고 합니다. 가장 효율성이 좋았다고 이야기 합니다.  
@@ -64,7 +64,7 @@ ELU 함수는 OOM(Out of memory)를 해결하기 위해 나온 함수입니다. 
 Relu와 Swish, 이 두가지의 차이점을 분명하게 보여주는 그래프는 아래와 같습니다.  
 
 
-<center><img src="{{ site.baseurl }}/images/des.png" ></center>  
+<center><img src="../assets//images/des.png" ></center>  
 
 
 Relu와 Swish의 차이점이 분명하게 보이네요. Swish 또한 미분으로 인한 계산량이 많다는 단점은 존재하지만, 정확도와 OOM, vanishing현상을 막기 위해 여러가지 연구를 하고 있다는 점을 잘 알아둬야겠네요. 

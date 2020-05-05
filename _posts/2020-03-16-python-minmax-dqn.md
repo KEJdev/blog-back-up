@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]강화학습에서 사용하는 용어와 역사"
 date:   2020-03-16 09:00:00 +0300
-image:  ap1.png
-tags:   python
+image:  assets/images/ap1.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -48,17 +48,17 @@ use_math: true
 어떻게 알파고는 바둑을 학습했을까요 ? 알파고는 총 3단계에 거쳐서 학습을 했다고 알려져 있습니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/ap1.png" ></center>
+<center><img src="../assets//images/ap1.png" ></center>
 
 
 바둑은 19x19이며, 흑백의 착수 순서만 입력해서 신경망을 만들었는데, 다음 수를 예측하는 이 신경망의 정확도가 55.7%가 나왔다고 합니다. 여기서 2단계에 강화학습을 입혔다고 합니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/ap2.png" ></center>
+<center><img src="../assets//images/ap2.png" ></center>
 
 알파고는 강화학습을 통해 스스로 공부하며 깨우치는 학습 능력을 갖추게 되었습니다. 사람이 100만번의 대국을 치를려면 1000년 이상 걸린다고 하는데, 4주동안 한거면 정말 대단한것을 알 수 있습니다. 마지막으로 3단계는 몬테카를로 트리 탐색와 가치망입니다. 
 
-<center><img src="{{ site.baseurl }}/images/ap3.png" ></center>
+<center><img src="../assets//images/ap3.png" ></center>
 
 이 두가지 기법의 장단점을 보완하기 위해 위의 2가지 결과를 50%씩 반영하여 최종 착수 위치를 결정한다고 합니다. 이렇게 보니 강화학습이 정말 대단하고 알파고가 얼마나 똑똑한지 조금은 와닿는 것 같습니다. 
 

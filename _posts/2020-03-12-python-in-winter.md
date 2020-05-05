@@ -2,8 +2,8 @@
 layout: post
 title:  "[PYTHON]파이썬 멤버체크(in)으로 특정 단어 개수 세기"
 date:   2020-03-12 12:00:00 +0300
-image:  in.png
-tags:   python
+image:  assets/images/in.png
+tags:   [Python]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -51,13 +51,13 @@ for winter_list in file:
 ```
 
 
-<center><img src="{{ site.baseurl }}/images/in.png" ></center>
+<center><img src="../assets//images/in.png" ></center>
 
 
 이번엔 라인이 아니라 for문을 중첩시켜 겨울왕국의 단어들만 출력해보겠습니다. 
 
 
-<center><img src="{{ site.baseurl }}/images/in2.png" ></center>
+<center><img src="../assets//images/in2.png" ></center>
 
 ```python
 file=open("winter.txt","r")
@@ -69,7 +69,7 @@ for winter_list in file:
 ```
 
 
-<center><img src="{{ site.baseurl }}/images/in3.png" ></center>
+<center><img src="../assets//images/in3.png" ></center>
 
 여기서 count 함수를 사용해서 elsa가 나오면 1씩 카운트 해보면 아래와 같이 쓸수 있습니다.
 

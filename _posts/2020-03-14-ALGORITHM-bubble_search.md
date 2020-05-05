@@ -2,8 +2,8 @@
 layout: post
 title:  "[ALGORITHM]파이썬으로 버블정렬 알고리즘 구현하기"
 date:   2020-03-14 13:00:00 +0300
-image:  bubble.png
-tags:   algorithm
+image:  assets/images/bubble.png
+tags:   [Algorithm]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -12,7 +12,7 @@ use_math: true
 
 버블정렬은 두 인접한 원소를 검사하여 정렬하는 방법입니다. 
 
-<center><img src="{{ site.baseurl }}/images/bubble.png" ></center>
+<center><img src="../assets//images/bubble.png" ></center>
 
 <center>위키백과 예제</center>
 
