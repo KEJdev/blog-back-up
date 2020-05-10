@@ -66,8 +66,17 @@ comments: true
                 {% include comments.html %}
             {% endif %}
 
-			</div>
 		</div>
+
+		{% for post in site.posts %} 
+		{% for post in (1..5) %}
+		   {% if post.tags contains "Python" %}
+				 <li> <a href="{{site.baseurl}}{{ post.url }}" class="text-dark">{{ post.title }}</a> </li>
+		   {% endif %}      
+		{% endfor %}   
+  
+		{% endfor %}  
+
 			
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<div align="center" style="margin: 1em 0;">
