@@ -101,11 +101,7 @@ nrow(news_df)-nrow(news_df2)
 
 > #### Keyword
 
-파일을 저장 후 데이터를 따로 전처리를 끝내고 나면 아래와 같이 사회관련 뉴스 부분을 정리 할 수있습니다. 
-
-<center><img src="../assets/images/keyword1.png" ></center>
-
-여기서 가장 많은 키워드는 아무래도 ..... 검찰과 경찰이겠죠?
+파일을 저장 후 데이터를 따로 전처리를 끝내고 나면 아래와 같이 사회관련 뉴스 부분을 정리 할 수 있는데, 여기서 가장 많은 키워드는 아무래도 ..... 검찰과 경찰이겠죠?
 
 <center><img src="../assets/images/keyword2.png" ></center>
 
