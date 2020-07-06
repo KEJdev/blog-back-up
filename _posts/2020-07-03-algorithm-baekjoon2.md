@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "백준 1330번, 두 수 비교하기(if) "
-date:   2020-07-02 11:00:00 +0300
+date:   2020-07-03 11:00:00 +0300
 image:  assets/images/baekjoon2.png
 tags:   [Algorithm]
 sitemap :
