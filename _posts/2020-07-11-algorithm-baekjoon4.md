@@ -2,7 +2,7 @@
 layout: post
 title:  "백준 10869번, 사칙연산 "
 date:   2020-07-11 11:00:00 +0300
-image:  assets/images/baekjoon3.png
+image:  assets/images/baekjoon4.png
 tags:   [Algorithm]
 sitemap :
 changefreq : always
