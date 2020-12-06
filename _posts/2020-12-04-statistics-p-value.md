@@ -48,3 +48,36 @@ P-value는 결과가 통계적으로 유의할 때, 대립가설에 대한 도�
 P-value는 두 집단간에 차이가 있는지 없는지 정도로만 알려주기 때문에 주의 해야한다. 
 
 
+> #### Python code
+
+보스턴 데이터를 사용해서 P-value를 구현해볼까한다.
+
+
+```python
+import statsmodels.formula.api as smf
+from sklearn.datasets import load_boston
+
+boston = load_boston()
+boston_data = pd.DataFrame(boston.data, columns=boston.feature_names)
+boston_data['MEDV'] = boston.target
+
+res = smf.ols(formula='MEDV ~CRIM + ZN + CHAS + NOX + RM + AGE + DIS + RAD + TAX + PTRATIO + B + LSTAT', data=boston_data).fit()
+print(res.summary())
+```
+
+statsmodels 라이브러리를 이용해서 쉽게 P-value를 구할 수 있다. 
+
+<center><img src="../assets/images/p-value5.png" ></center>
+
+이 테이블은 독립 변수에 대한 모든 통계를 표시한다. 일단 중요한 건 아니니 전부 넘기고 P-value만 보도록 하자.
+위에서도 귀무가설과 대립가설에 대해 이야기 했지만, 회귀모델에서 P-value 값이 무엇을 의미하는지를 정리하면 아래와 같이 정리할 수 있다.  
+
+* 귀무가설 : 독립변숙 종속변수에 대해 유의한 영향을 미치지 않는다.
+* 대립가설 : 독립변수는 종속변수에 중요한 영향을 미친다. 
+
+통상적으로 0.05이하인 경우 통계적으로 유의하다라고 판단한다. 그런데, 표에서 AGE 값이 0.95다. 이뜻은 AGE 변수는 Target에 영향을 주는 변수라고 볼 수 없다. 
+
+여기서 해당 변수를 제거하고 다시 OLS모델을 만들면 R-squared가 올라가는 것을 알 수 있는데, 더 성능이 좋은 모델을 만들어짐을 볼 수 있다. 
+
+이렇게 P-value의 도움으로 더 적은 변수로 간단하게 모델을 만들 수 있다. 
+
