@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "P-value? 정확하게 알고 쓰자(with Python)"
+title:  "P-value란? (with Python)"
 date:   2020-12-04 09:00:00 +0300
 image:  assets/images/p-value2.png
 tags:   [statistics]
