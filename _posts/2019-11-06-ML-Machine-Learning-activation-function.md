@@ -26,7 +26,7 @@ use_math: true
 
 시그모이드 함수는 0에서 1사이의 실수를 출력하는 함수를 이야기 합니다. 
 
-<center>$$ h(x)=  \frac { 1 }{ 1+exp(-x) } $$<center>
+<center>$$ h(x)=  \frac { 1 }{ 1+exp(-x) } $$</center>
 
 시그모이드 함수는 위와 같습니다.  
 시그모이드는 자연 상수인 $exp$을 사용하는데, 덕분에 나중에는 vanishing 현상을 일으키고는 합니다.  
