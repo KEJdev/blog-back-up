@@ -1,9 +1,13 @@
+.*
+!.github
+
+# jekyll cache
 _site
-.sass-cache
-.jekyll-metadata
+vendor
+
+# rubygem
+*.gem
+
+# npm dependencies
 node_modules
-Gemfile.lock
-.jekyll-cache
-.editorconfig
-.gitattributes
-jekyll-theme-chirpy.gemspec
+package-lock.json
