@@ -3,8 +3,11 @@ layout: post
 title:  "파이썬 컨벤션에 대해 알아보자"
 date:   2020-12-12 09:00:00 +0300
 image:  assets/images/python_style_guide.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python,문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -18,7 +21,7 @@ use_math: true
 
 -------
 
-> #### PEP8 -- tyle Guide for Python Code
+### PEP8 -- tyle Guide for Python Code
 
 파이썬 창시자가 만든 파이썬 스타일 가이드이다. 중요하기 때문에 무조건 읽어봐야 한다. 하지만 난 읽지 않았기 때문에 같이 함께 보도록 하자. 
 

@@ -3,8 +3,11 @@ layout: post
 title:  "SQL에서 검색 조건 주기(where)"
 date:   2019-08-18 09:00:00 +0300
 image:  assets/images/SQL_cover1.png
-tags:   [SQL]
+categories:  [DB,SQL]
+tags : [DB, Oracle, SQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -14,7 +17,7 @@ SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다. �
 
 --------
 
-> #### where 
+### where 
 
 SQL에서 검색에 조건을 줄때는 **where**를 사용합니다.  
 where를 사용하여 월급이 3000인 사원들의 이름과 월급을 출력해보겠습니다.

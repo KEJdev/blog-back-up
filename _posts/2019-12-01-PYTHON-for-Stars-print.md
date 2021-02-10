@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 for문을 사용하여 별찍기"
+title:  "파이썬 for문을 사용하여 별찍기"
 date:   2019-12-01 09:00:00 +0300
 image:  assets/images/python_a6.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python, 문법, 별찍기]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +18,7 @@ priority : 1.0
 -------
 
 
-> #### for
+### for
 
 파이썬의 for 문의 기본적인 구조는 아래와 같습니다.  
 

@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬의 자료형 개념"
+title:  "파이썬의 자료형 개념"
 date:   2019-11-26 09:00:00 +0300
 image:  assets/images/python_cover1.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -18,7 +21,7 @@ priority : 1.0
 -------
 
 
-> #### 자료형 개념과 종류 
+### 자료형 개념과 종류 
 
 파이썬의 자료형이란? 프로그래밍을 할 때 쓰이는 숫자, 문자열 등 자료 형태로 사용하는 모든 것을 말합니다. 
 자료형 종류에는 숫자, 문자, 리스트, 튜플, 딕셔너리, 집합 자료형이 있으며, 숫자 자료형은 정수형과 실수형이 있습니다.   

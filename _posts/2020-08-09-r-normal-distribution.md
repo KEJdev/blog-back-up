@@ -3,8 +3,11 @@ layout: post
 title:  "정규분포에 대해 알아보자"
 date:   2020-08-09 09:00:00 +0300
 image:  assets/images/plot1.png
-tags:   [R]
-sitemap : 
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
+sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -16,7 +19,7 @@ use_math: true
 
 ------------
 
-> #### 정규분포
+### 정규분포
 
 정규분포는 평균에서 멀어질수록 데이터 분포가 감소하여 종모양의 형태를 띈다. 그리고 정규분포 그래프를 3등분하면, 평균 근처의 비율이 68%정도 된다. 
 

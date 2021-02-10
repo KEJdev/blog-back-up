@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]의사 결정트리와(Decision Tree)엔트로피(entropy)"
+title:  "의사 결정트리와(Decision Tree)엔트로피(entropy)"
 date:   2020-03-12 09:00:00 +0300
 image:  assets/images/tree.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### 의사 결정트리(Decision Tree)
+### 의사 결정트리(Decision Tree)
 
 
 회귀식을 세울 때 중요한 변수(컬럼)들을 선택해야 하는 상황에서 어떠한 컬럼이 중요한지 판단이 안설때, 의사 결정트리를 이용하면 중요한 변수를 골라낼 수 있습니다. 
@@ -28,7 +31,7 @@ use_math: true
 <center>Decision Tree 예시</center>
 
 
-> #### 엔트로피(entropy)와 정보획득량 
+### 엔트로피(entropy)와 정보획득량 
 
 
 의사 결정트리를 이야기 하다가 왜 갑자기 엔트로피 이야기가 나올까요 ?   

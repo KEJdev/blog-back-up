@@ -3,8 +3,11 @@ layout: post
 title:  "[R]의사 결정트리로 독일은행의 대출 채무 이행 여부 분석하기(C5.0 Model)"
 date:   2020-04-24 10:00:00 +0300
 image:  assets/images/credit4.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### DataSet 
+### DataSet 
 
 데이터 라벨은 default 변수이며, yes는 대출금 미상환, no는 대출금을 상환했다는 뜻입니다.
 
@@ -80,7 +83,7 @@ credit_test <- credit[train_index==2, ]
 -------
 
 
-> #### C5.0 Model
+### C5.0 Model
 
 
 의사 결정 알고리즘 중 C5.0 이라는 알고리즘을 적용하여 예측 모델을 생성해보겠습니다. 
@@ -116,7 +119,7 @@ CrossTable(credit_result, credit_test[, 17])
 
 -------
 
-> #### 앙상블
+### 앙상블
 
 
 ```r

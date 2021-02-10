@@ -3,8 +3,11 @@ layout: post
 title:  "헤드라인 뉴스 키워드으로 바라본 한국 경제 흐름"
 date:   2020-05-12 21:00:00 +0300
 image:  assets/images/keyword1-1.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### Keyword
+### Keyword
 
 사회와 마찬가지로 경제도 표를 만들면 아래와 같습니다. 우선 경제하면 가장 많이 떠오르는 것이 부동산이 아닐까 싶습니다.
 

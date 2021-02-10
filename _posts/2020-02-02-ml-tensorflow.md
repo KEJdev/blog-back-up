@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "[Tensorflow]텐서플로우란?"
+title:  "텐서플로우란?"
 date:   2020-02-02 09:00:00 +0300
 image:  assets/images/tensorflow1.png
-tags:   [machine-learning]
-sitemap : 
+categories:  [Machine Learning, Machine Learning-Python]
+sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -20,7 +22,7 @@ use_math: true
 
 ---------
 
-> #### Tensorflow 
+### Tensorflow 
 
 텐서플로우는 딥러닝을 위해 구글에서 만든 오픈소스 라이브러리입니다. 간단하게 Tensorflow의 특징을 살펴보면 2가지 정도 있다고 보면 됩니다. 
 
@@ -38,7 +40,7 @@ use_math: true
 
 ---------
 
-> #### Tensorflow 용어
+### Tensorflow 용어
 
 사실 특별히 용어라고 할 것까지는 없지만 한번 정리를 해보자면, 아래와 같은 용어가 있습니다. 
 
@@ -52,7 +54,7 @@ use_math: true
 
 ---------
 
-> #### Tensorflow 설치 
+### Tensorflow 설치 
 
 Tensorflow 설치는 간단하며, 아래와 같다. 
 

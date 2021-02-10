@@ -3,8 +3,11 @@ layout: post
 title:  "P-value란? (with Python)"
 date:   2020-12-04 09:00:00 +0300
 image:  assets/images/p-value2.png
-tags:   [statistics]
+categories:  [Machine Learning, Statistics]
+tags : [Python, 통계]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -16,7 +19,7 @@ P-value에 대해 알기전에 귀무가설, 대립가설에 대해 알아야한
 
 -------
 
-> #### What is P-value? 
+### What is P-value? 
 
 아래와 같은 정규 분포가 있다고 하자.
 
@@ -25,7 +28,7 @@ P-value에 대해 알기전에 귀무가설, 대립가설에 대해 알아야한
 
 P-value는 귀무 가설(null hypothesis)이 맞다는 전제 하에, 표본에서 실제로 관측된 통계치와 '같거나 더 극단적인' 통계치가 관측될 확률을 말한다. 예시로 아래의 그림처럼 빨간색 점 오른쪽에 있는 값(극단)을 가져올 확률이라고 생각하면 편하다.
 
-> #### 귀무가설, 대립가설과 P-value와의 관계
+### 귀무가설, 대립가설과 P-value와의 관계
 
 <center><img src="../assets/images/p-value2.png" ></center>
 
@@ -47,7 +50,7 @@ P-value는 귀무 가설(null hypothesis)이 맞다는 전제 하에, 표본에�
 * P-value가 작다면 귀무가설을 잘 따르고 있지 않다. 
 
 
-> #### P-value에 대한 잘못된 해석
+### P-value에 대한 잘못된 해석
 
 가끔 P-value에 대한 해석을 잘못하는 사람들이 있다. 일반적으로 많이 하는 실수에 대한 일부를 이야기 해볼까한다. 
 
@@ -58,7 +61,7 @@ P-value는 결과가 통계적으로 유의할 때, 전체 의사 결정과정�
 P-value는 두 집단간에 차이가 있는지 없는지 정도로만 알려주기 때문에 주의 해야한다. 
 
 
-> #### Python code
+### Python code
 
 보스턴 데이터를 사용해서 P-value를 구현해볼까한다.
 

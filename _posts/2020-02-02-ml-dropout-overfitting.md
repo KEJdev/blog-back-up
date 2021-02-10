@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[MACHINE-LEARNING]오버피팅 억제를 위한 방법! Dropout!"
+title:  "오버피팅 억제를 위한 방법! Dropout!"
 date:   2020-02-01 09:00:00 +0300
 image:  assets/images/Dropout.png
-tags:   [machine-learning]
-sitemap : 
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [ML,Python, 신경망]
+sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ use_math: true
 
 --------
 
-> #### Dropout
+### Dropout
 
 Dropout은 오버피팅을 억제하기 위해 뉴런을 임의로 삭제하면서 학습하는 방법입니다. 
 

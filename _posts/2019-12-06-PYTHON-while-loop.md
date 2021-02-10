@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 while loop문을 사용하여 log함수 구현하기"
+title:  "파이썬 while loop문을 사용하여 log함수 구현하기"
 date:   2019-12-06 09:00:00 +0300
 image:  assets/images/python_a5.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python, 문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -13,7 +16,7 @@ for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문�
 
 -------
 
-> #### while   
+### while   
 
 while문 구조는 아래와 같습니다.  
 

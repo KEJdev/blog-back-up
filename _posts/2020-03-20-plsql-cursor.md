@@ -3,8 +3,11 @@ layout: post
 title:  "PLSQL에서 커서(cursor)가 필요한 이유.(메모리에 데이터 올리기)"
 date:   2020-03-20 09:00:00 +0300
 image:  assets/images/plsql_cover1.png
-tags:   [PLSQL]
+categories:  [DB,PLSQL]
+tags : [DB, Oracle, PLSQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ use_math: true
 
 --------
 
-> #### 커서(cursor)
+### 커서(cursor)
 
 커서는 4단계로 볼 수 있습니다. 커서선언, 커서오픈, 커서패치, 커서닫기가 있습니다.  
 커서는 메모리에 올릴 데이터를 결정하고 메모리에 올린 데이터를 한건씩 가져올때 사용합니다. 커서의 진행 단계는 아래와 같습니다.

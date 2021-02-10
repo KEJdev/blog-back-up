@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬에서 언더바(_)를 사용하는 경우"
+title:  "파이썬에서 언더바(_)를 사용하는 경우"
 date:   2020-03-14 12:00:00 +0300
 image:  assets/images/pass.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python, 문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ use_math: true
 
 ---------
 
-> #### 언더바(_)를 사용하는 경우
+### 언더바(_)를 사용하는 경우
 
 언더바를 사용하는 경우는 주로 아래의 4가지 경우입니다.
 

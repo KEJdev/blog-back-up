@@ -3,8 +3,11 @@ layout: post
 title:  "파이썬에서의 클래스 생성자와 소멸자"
 date:   2020-05-20 09:00:00 +0300
 image:  assets/images/init.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python,문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -16,7 +19,7 @@ use_math: true
 
 
 
-> #### init 
+### init 
 
 위에서 생성자가 무엇인지 이야기를 했는데, 생성자는 왜 사용하는 걸까요?  
 생성자는 객체를 초기화 할 때, 자주 사용합니다. 
@@ -34,7 +37,7 @@ print(obj.var)      # ‘안녕하세요’가 출력됨
 ---------
 
 
-> #### del 
+### del 
 
 def __init__으로 객체를 생성했으므로 이번엔 객체를 __del__를 사용하여 소멸시켜보겠습니다.
 

@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]간단한 K-Nearest Neighbors(Knn)자동화 스크립트 만들기"
+title:  "간단한 K-Nearest Neighbors(Knn)자동화 스크립트 만들기"
 date:   2020-02-10 09:00:00 +0300
 image:  assets/images/R_cover1.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -14,7 +17,7 @@ priority : 1.0
 
 -------
 
-> #### knn 자동화 스크립트 
+### knn 자동화 스크립트 
 
 우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다. 
 

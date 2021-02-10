@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 if문 사용해서 홀짝 출력하기 "
+title:  "파이썬 if문 사용해서 홀짝 출력하기 "
 date:   2019-11-26 09:00:00 +0300
 image:  assets/images/python_cover1.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python, 문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -17,7 +20,7 @@ Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 
 -------
 
 
-> #### if문   
+### if문   
 
 문법은 역시 예를 들면서 봐야 빠릅니다. x와 y를 비교하여 x가 크면 "x가 y보다 크거나 깉습니다"를 출력하고 그것이 아니라면 "x가 y보다 작습니다" 라는 문구를 출력해보겠습니다. Python은 다른 문법과 다르게 사람의 언어와 비슷하다고 했지요? 아래의 예를 보면 더 쉽게 이해실 수 있을꺼예요.
 

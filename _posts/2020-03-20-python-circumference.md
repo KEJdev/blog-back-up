@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬으로 원주율 구하기(몬테카를로)"
+title:  "파이썬으로 원주율 구하기(몬테카를로)"
 date:   2020-03-20 12:00:00 +0300
 image:  assets/images/cir.png
-tags:   [Python,Top_Post]
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [Python, ML, 강화학습]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### 원주율  
+### 원주율  
 
 가로 길이가 2인 사각형에 내접하는 반지름 길이가 1인 원의 넓이를 몬테카를로 알고리즘으로 구해보겠습니다.
 

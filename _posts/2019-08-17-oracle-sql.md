@@ -3,8 +3,11 @@ layout: post
 title:  "Oracle SQL이란?"
 date:   2019-08-17 09:05:55 +0300
 image:  assets/images/SQL_cover1.png
-tags:   [SQL]
+categories:  [DB, SQL]
+tags : [DB, Oracle, SQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +18,7 @@ SQL이 무엇인지, SQL 명령의 종류, 기본 문법에 대해 알아보겠�
 --------
 
 
-> ### What is SQL?
+### What is SQL?
 
  **S**tructure **Q**uery **L**anguage는 Database에서 Data를 검색하거나 조작하기 위해 사용하는 언어입니다. Database record를 삽입, 검색, 업데이트 및 삭제하는데 사용할 수 있으며, 이 외에도 Database 최적화 및 유지 관리를 포함하여 많은 작업을 수행할 수 있습니다.  
 
@@ -23,7 +26,7 @@ SQL이 무엇인지, SQL 명령의 종류, 기본 문법에 대해 알아보겠�
 --------
 
 
-> ### Type of SQL
+### Type of SQL
 
 SQL의 종류에는 아래와 같이 크게 5가지가 있습니다.  
   
@@ -48,10 +51,10 @@ Database에 접근하여 조회, 그룹, 정렬 등을 할 수 있는 기본적�
 **TCL**은 **T**ransaction **C**ontrol **L**anguage의 약자입니다. 트렌잭션을 제어하는 명령어이며, 명령어는 COMMIT,ROLLBACK, SAVEPOINT가 있습니다.
 
 
---------  
+--------
 
 
-> ### SQL Grammar
+### SQL Grammar
 
 아래의 코드는 앞으로 포스팅에서 사용되는 SQL emp, dept table입니다.  
 

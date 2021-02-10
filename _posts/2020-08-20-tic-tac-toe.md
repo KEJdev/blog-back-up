@@ -3,8 +3,11 @@ layout: post
 title:  "강화학습으로 tic tac toe 학습 시키기전 필요 요소"
 date:   2020-08-20 09:00:00 +0300
 image:  assets/images/tic-tac-toe.png
-tags:   [Python]
-sitemap : 
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [Python,ML, 강화학습]
+sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -20,7 +23,7 @@ use_math: true
 
 ---------------
 
-> #### 지도학습과 강화학습의 차이
+### 지도학습과 강화학습의 차이
 
 강화학습으로 tic tac toe를 만들기 전에 우선 지도학습과 강화학습의 차이 정도는 알고 가자. 사실 위에서 TMI로 많이 이야기 했지만.. 어쨋든 한번은 짚고 넘어가야 댈듯하다.  
 
@@ -29,7 +32,7 @@ use_math: true
 
 -------------
 
-> #### 강화학습에 필요한 요소
+### 강화학습에 필요한 요소
 
 
 강화학습에 필요한 요소를 정리하려고 한다. TMI로 **순차적으로 행동을 계속 결정해야하는 문제를 수학적으로 표현한 것을 MDP( Markov Dicision Process )**라고 한다. 아무튼 강화학습에 필요한 요소는 다음과 같다.

@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "[MACHINE-LEARNING]퍼셉트론(Perceptron)이란?"
+title:  "퍼셉트론(Perceptron)이란?"
 date:   2019-11-06 09:00:00 +0300
 image:  assets/images/ML_cover1.png
-tags:   [machine-learning]
+categories:  [Machine Learning, Machine Learning]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -18,7 +20,7 @@ priority : 1.0
 
 
 
-> #### History  
+### History  
 
 - 1943년  
 미국의 **신경외과** 의사인 워렌 맥걸록에 의해서 발단이 되었습니다.   

@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]K-Nearest Neighbors(Knn)을 이용하여 유방암 분류하기"
+title:  "K-Nearest Neighbors(Knn)을 이용하여 유방암 분류하기"
 date:   2020-02-08 09:00:00 +0300
 image:  assets/images/wisc.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -14,7 +17,7 @@ priority : 1.0
 
 -------
 
-> #### DataSet
+### DataSet
 
 우선 데이터를 load 해보겠습니다.
 
@@ -33,7 +36,7 @@ round(prop.table(table(wbcd$diagnosis)),1)*100
 
 -------
 
-> #### normalize 
+### normalize 
 
 저번에 만든 정규화 함수를 이용하여 정규화 작업을 하겠습니다. 
 
@@ -63,7 +66,7 @@ wbcd_test_label <-wbcd[470:569,2]
 
 -------
 
-> #### knn
+### knn
 
 knn을 아래와 같이 돌려줍니다.
 

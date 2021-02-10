@@ -3,8 +3,11 @@ layout: post
 title:  "백준 1330번, 두 수 비교하기(if) "
 date:   2020-07-03 11:00:00 +0300
 image:  assets/images/baekjoon2.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -18,7 +21,7 @@ use_math: true
 
 ----------
 
-> #### 백준 1330번 
+### 백준 1330번 
 
 문제는 아래와 같이 간단하게 두 수를 비교하는 것이다.
 

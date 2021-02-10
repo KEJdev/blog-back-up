@@ -3,7 +3,8 @@ layout: post
 title:  "파이썬에서 간단하게 예외처리하기(try ~ except ~ else)"
 date:   2020-04-19 09:00:00 +0300
 image:  assets/images/try2.png
-tags:   [Python]
+categories:  [Python]
+tags : [Python, 문법]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -15,7 +16,7 @@ use_math: true
 
 -------
 
-> #### 예외처리 (try ~ except ~ else)
+### 예외처리 (try ~ except ~ else)
 
 에러가 나면 보통 프로그램이 종료되기 때문에 큰 문제가 발생하게 됩니다. 예를들면 API를 구현했는데, 어떠한 이유로 에러가 나서 종료가 된다면 큰 문제가 될 수 밖에 없습니다. 그래서 보통 예외처리를 하게 되는데, 예외처리를 하게 된다면 에러가 나는 부분을 제외하고 나머지 프로그램은 정상 작동하기 때문에 문제가 발생되지 않습니다. 
 

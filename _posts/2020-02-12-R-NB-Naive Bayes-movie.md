@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]나이브 베이즈(Naive Bayes)를 이용한 영화 장르 분류"
+title:  "나이브 베이즈(Naive Bayes)를 이용한 영화 장르 분류"
 date:   2020-02-12 09:00:00 +0300
 image:  assets/images/NB2.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ use_math: true
 
 -------
 
-> #### DataSet
+### DataSet
 
 데이터는 선호하는 영화장르 데이터를 사용했으며, 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 다운받아 보실 수 있습니다. 물론 포스팅에서 사용된 코드는 제 Github에서 전부 보실 수 있습니다.
 
@@ -30,7 +33,7 @@ movie <- read.csv("movie.csv", header=T)
 
 -------
 
-> #### Naive Bayes
+### Naive Bayes
 
 나이브 베이즈는 아래와 같이 한줄이면, 모델이 완성됩니다. knn과 마찬가지로 그리 어렵지도 않으며 간단합니다.
 

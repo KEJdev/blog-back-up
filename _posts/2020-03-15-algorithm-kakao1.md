@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[ALGORITHM]2017 카카오 신입 공채 블라인드 시험문제(비밀지도)"
+title:  "2017 카카오 신입 공채 블라인드 시험문제(비밀지도)"
 date:   2020-03-15 09:00:00 +0300
 image:  assets/images/01.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 ---------
 
-> #### 비밀지도(난이도 하)
+### 비밀지도(난이도 하)
 
 네오는 평소 프로도가 비상금을 숨겨놓는 장소를 알려줄 비밀지도를 손에 넣었다. 그런데 이 비밀지도는 숫자로 암호화되어 있어 위치를 확인하기 위해서는 암호를 해독해야 한다. 다행히 지도 암호를 해독할 방법을 적어놓은 메모도 함께 발견했다.
 

@@ -3,8 +3,11 @@ layout: post
 title:  "회귀로 삼성전자와 현대자동차 주식 수익률 분석하기"
 date:   2020-06-14 09:00:00 +0300
 image:  assets/images/s_stock.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -17,7 +20,7 @@ use_math: true
 ---------
 
 
-> #### plot
+### plot
 
 우선 그레프를 그릴껀데, plot 그래프를 그리기 쉽게 모든 데이터를 merge를 한다.
 
@@ -70,7 +73,7 @@ abline(h_model, col='brown')
 ---------
 
 
-> #### 데이터 분석 
+### 데이터 분석 
 
 10년치 데이터를 가지고 그래프를 그리면 아래와 같이 그릴 수 있고, 기울기를 보면 현대는 1.06, 삼성은 1.02임을 알 수 있다. 
 

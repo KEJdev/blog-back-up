@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬으로 2진수 8진수 16진수 구하기"
+title:  "파이썬으로 2진수 8진수 16진수 구하기"
 date:   2020-03-12 11:00:00 +0300
 image:  assets/images/bin.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python ]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -24,7 +27,7 @@ c = 0
 --------
 
 
-> #### 2진수, 8진수, 16진수를 사용하는 이유 
+### 2진수, 8진수, 16진수를 사용하는 이유 
 
 1. 컴퓨터가 2진수를 사용하는 이유는 무엇일까요 ?
 
@@ -54,7 +57,7 @@ c = 0
 
 --------
 
-> #### 2진수, 8진수, 16진수 출력하기
+### 2진수, 8진수, 16진수 출력하기
 
 
 ```python

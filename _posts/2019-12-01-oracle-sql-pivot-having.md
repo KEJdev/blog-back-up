@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[SQL]SQL group 함수에서 검색 조건(having)과 테이블 회전(pivot)"
+title:  "SQL group 함수에서 검색 조건(having)과 테이블 회전(pivot)"
 date:   2019-12-01 09:00:00 +0300
 image:  assets/images/SQL_cover1.png
-tags:   [SQL]
+categories:  [DB,SQL]
+tags : [DB, Oracle, SQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -14,7 +17,7 @@ priority : 1.0
 
 -------
 
-> #### having  
+### having  
 
 우선 having이 먼지 알기전에 간단하게 출력 하나 먼저 해보겠습니다.  
 emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출력해보도록 하겠습니다.  
@@ -65,7 +68,7 @@ order by sum(sal) desc;
 
 -------
 
-> #### pivot  
+### pivot  
 
 emp 테이블을 사용하여 부서번호, 부서번호을 가로로  출력해보겠습니다.
 

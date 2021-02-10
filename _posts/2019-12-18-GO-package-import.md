@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "[GO]Go언어 문자열 반환하는 함수 만들기"
+title:  "Go언어 문자열 반환하는 함수 만들기"
 date:   2019-12-18 09:00:00 +0300
 image:  assets/images/go_cover1.png
-tags:   [Go]
+categories:  [Program Language , Go]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +17,7 @@ priority : 1.0
 --------------
 
 
-> #### 패키지(Package)
+### 패키지(Package)
 
 GO언어의 모든 프로그램은 패키지로 구성되어 있습니다. 또한 main 패키지에서부터 실행을 시작하며, 패키지 이름은 디렉토리 경로의 마지막 이름을 사용하는 것이 규칙입니다. 예를 들어서 "path/filepath"를 사용한다면 패키지명은 filepath입니다. 
 
@@ -34,7 +36,7 @@ func main(){
 --------------
 
 
-> #### 임포트(Imports)
+### 임포트(Imports)
 
 Go언어에서는 여러개의 "Package"를 소괄호로 감싸서 import를 표현합니다. 그래서 아래와 같이 import문장을 여러번 사용 할 수 있습니다. 
 
@@ -57,7 +59,7 @@ func main() {
 --------------
 
 
-> #### 익스포트(Exported names)
+### 익스포트(Exported names)
 
 
 패키지를 Import 하면 패키지가 외부로 export한 것들(메서드나 변수, 상수등)에 접근 할 수 있습니다. Go언어에서는 첫 문자가 대문자로 시작하면 그 패키지를 사용하는 곳에서 접근 할 수 있는 exported name이 됩니다. 예를 들어 Foo와 FOO는 외부에서 참조할 수 있지만 foo는 참조 할 수 없습니다. 
@@ -66,7 +68,7 @@ func main() {
 --------------
 
 
-> #### 함수(function)
+### 함수(function)
 
 함수에 관해서는 사실 저번 포스팅에서도 잠깐 다룬적이 있습니다. 하지만 오늘은 조금 더 깊게 들어가보도록 하겠습니다. GO의 함수는 다음과 같은 규칙을 같습니다.  
 
@@ -99,7 +101,7 @@ func main() {
 --------
 
 
-> #### 변수 
+### 변수 
 
 
 func main()을 살펴보면 **:=**라는 문자를 볼 수 있는데 함수내에서 짧은 선언을 위해 사용합니다. 월래는 변수를 선언할때, **var**를 사용합니다. 그래서 a라는 변수에 10이라는 숫자를 넣고 싶다면 아래와 같이 써야하는 것이 맞습니다.  

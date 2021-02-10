@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]K-Nearest Neighbors(Knn)을 이용한 소개팅 데이터 분류"
+title:  "K-Nearest Neighbors(Knn)을 이용한 소개팅 데이터 분류"
 date:   2019-11-01 09:00:00 +0300
 image:  assets/images/R1.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, etc]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -13,7 +16,7 @@ knn 분류 예제를 보면서 공부해보도록 하겠습니다. 포스팅에�
 
 -------
 
-> ####  Dataset  
+###  Dataset  
 
 데이터 설명을 하자면, 소개팅을 수천번하지 않기 때문에 그동안 14번정도 소개팅을 했다고 가정하고 만난 남학생들에 대한 라벨을 호감라벨로 만들었습니다. 14개의 데이터를 knn으로 학습시켜서 예측 모델을 생성하고, 새로 만나게 될 남학생에 대한 데이터로 이 학생의 호감 라벨을 예측해보려고 합니다.  
 
@@ -28,7 +31,7 @@ knn 분류 예제를 보면서 공부해보도록 하겠습니다. 포스팅에�
 
 -------
 
-> #### 왜 표준화나 정규화를 해야하는가? 
+### 왜 표준화나 정규화를 해야하는가? 
 
 어떤 데이터는 cm이고 어떤 데이터는 kg이면 결과가 제대로 나올수가 없습니다. 그래서 cm이던 kg이던 0~100 사이의 데이터로 일관되게 만드는 작업이 필요합니다. 정규화 공식을 쉽게 보면 아래와 같습니다.  
 
@@ -41,7 +44,7 @@ knn 분류 예제를 보면서 공부해보도록 하겠습니다. 포스팅에�
 -------
 
 
-> #### knn Example
+### knn Example
 
 R에서 csv파일을 불러올때는 아래와 같이 하면 불러올 수 있습니다.  
 

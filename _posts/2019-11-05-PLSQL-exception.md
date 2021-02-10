@@ -3,8 +3,11 @@ layout: post
 title:  "PL/SQL의 예외처리(exception)란?"
 date:   2019-11-05 09:00:00 +0300
 image:  assets/images/plsql_cover1.png
-tags:   [PLSQL]
+categories:  [DB, PLSQL]
+tags : [DB, Oracle, PLSQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -16,7 +19,7 @@ priority : 1.0
 -------
 
 
-> #### 예외처리(exception) ?   
+### 예외처리(exception) ?   
 
 에외처리는 오라클에 에러가 났을 때, 엔드유져(프로그램 사용자)의 눈높이를 맞추기위해 사용하는 문법입니다. 예를들어 홈플러스 계산원이 컴퓨터 프로그램 화면에 고객번호를 입력하고 해당고객정보를 보려고 했는데, 오라클 에러메세지가 화면에 "ORA-0001 Data not found ...." 이런식으로 나온다면 사용자의 경우 알 수 없습니다. 그렇기 때문에 "해당 고객은 존재하지 않습니다."와 같이 에러 메세지를 바꿔주어야 합니다.  
 
@@ -26,7 +29,7 @@ priority : 1.0
 -------
 
 
-> #### 예외처리(exception) 종류 3가지 
+### 예외처리(exception) 종류 3가지 
 
 PL/SQL의 예외처리에는 3가지의 종류가 있습니다. 오라클에서 미리 정의한 예외처리, 오라클에서 미리 정의하지 않은 예외처리, 사용자 정의 에외처리가 있습니다. 
 
@@ -36,7 +39,7 @@ PL/SQL의 예외처리에는 3가지의 종류가 있습니다. 오라클에서 
 
 
 
-> #### 예외처리(exception) 사용하기 
+### 예외처리(exception) 사용하기 
 
 PL/SQL을 이용하여 사원번호를 입력하면 해당 사원의 월급이 출력 해보겠습니다. 
 

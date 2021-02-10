@@ -3,8 +3,11 @@ layout: post
 title:  "Python 정수 리스트에서 소수만 걸러내기(filter)"
 date:   2020-04-24 09:00:00 +0300
 image:  assets/images/python_cover1.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python,문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -16,7 +19,7 @@ use_math: true
 
 -------
 
-> #### filter
+### filter
 
 기본적으로 내장되어 있는 모듈이기 때문에 따로 불러 올 필요는 없습니다. filter를 이용하면 소수를 걸러낼 수 있다고 했는데, 소수는 두개의 수로 못나눈 것을 이야기합니다. 대표적으로 7이 소수가 될 수 있습니다. 소수의 반대는 합성수라고 이야기 할 수 있는데, 합성수의 예로는 6이 있습니다. (2*3=6)
 

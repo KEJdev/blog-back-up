@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기"
+title:  "K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기"
 date:   2019-10-27 09:00:00 +0300
 image:  assets/images/dataset1.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, etc]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -14,7 +17,7 @@ knn을 사용하여 조금 의미 있는 결과를 가지고 재밌는 결과를
 
 -------
 
-> #### DataSet  
+### DataSet  
 
 이번 데이터를 열어보면 나이, 월수입, 상품 구매여부, 나이가 있습니다. 이 데이터를 이용해, 백화점 또는 소셜커머스 회사에서 데이터 분석을 통해 구매자가 제품을 구매할 고객인지 아닌지를 알아내려고 한다고 가정해보고 knn을 이용하여 문제를 풀어보도록 하겠습니다.  
 
@@ -22,7 +25,7 @@ knn을 사용하여 조금 의미 있는 결과를 가지고 재밌는 결과를
 -------
 
 
-> #### nomalize (정규화)
+### nomalize (정규화)
 
 우선 데이터를 불러옵시다.  
 
@@ -33,7 +36,7 @@ buy<-read.csv("buy.csv",fileEncoding = "euc-kr")
 뒤에 붙어 있는 Encoding은 따로 환경설정해서 해주셨다면 안하셔도 됩니다. 저 같은 경우 현재 맥북을 사용하고 있어서 뒤에 Encoding처리를 따로 해주었습니다. 불러온 데이터는 아래와 같습니다.  
 
 
-<center><img src="../assets//images/dataset1.png" ></center>  
+<center><img src="../assets/images/dataset1.png" ></center>  
 
 
 
@@ -44,7 +47,7 @@ buy$age <- scale(buy$나이)
 ```
 
 
-<center><img src="../assets//images/dataset2.png" ></center>  
+<center><img src="../assets/images/dataset2.png" ></center>  
 
 
 
@@ -64,7 +67,7 @@ buy$pay <- scale(buy$월수입)
 
 -------
 
-> #### knn 구매여부 분류하기   
+### knn 구매여부 분류하기   
  
 
 

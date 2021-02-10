@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류"
+title:  "K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류"
 date:   2019-12-02 09:00:00 +0300
 image:  assets/images/r3.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +18,7 @@ priority : 1.0
 -------
 
 
-> #### DataSet 
+### DataSet 
 
 데이터는 아래와 같습니다. 과일은 사과, 바나나, 당근, 치즈 등 작지만 다양한 데이터 입니다.
 
@@ -48,7 +51,7 @@ tomato <- data.frame(sweetness = 6, crunchiness = 4)
 -------
 
 
-> #### knn 
+### knn 
 
 food 에서 2번째 컬럼과 3번째 컬럼을 train 데이터로 사용하겠습니다. 
 

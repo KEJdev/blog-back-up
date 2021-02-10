@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[Tensorflow]파이썬과 텐서플로우의 차이"
+title:  "파이썬과 텐서플로우의 차이"
 date:   2020-02-07 09:00:00 +0300
 image:  assets/images/ML_cover1.png
-tags:   [machine-learning]
-sitemap : 
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [ML,Python, 신경망]
+sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### Python ? Tensorflow
+### Python ? Tensorflow
 
 우선 간단하게 1에서 5까지의 숫자를 출력해보도록 하겠습니다. 
 

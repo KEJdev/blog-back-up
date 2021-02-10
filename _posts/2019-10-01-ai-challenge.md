@@ -3,8 +3,11 @@ layout: post
 title:  "인공지능 R&D 그랜드 챌린지 대회 나간 후기"
 date:   2019-10-01 09:00:00 +0300
 image:  assets/images/etc_ai.png
-tags:   [etc]
+categories:  [ETC, Daily]
+tags : [etc]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true

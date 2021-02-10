@@ -3,8 +3,11 @@ layout: post
 title:  "스마트폰 만족감에 영향을 주는 것이 무엇일까?(다중회귀)"
 date:   2020-09-17 09:00:00 +0300
 image:  assets/images/linear4.png
-tags:   [R]
-sitemap : 
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
+sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -19,7 +22,7 @@ use_math: true
 --------------
 
 
-> #### 스마트폰 만족감에 영향을 주는 것
+### 스마트폰 만족감에 영향을 주는 것
 
 이번에 스마트폰 만족감에 영향을 주는 것이라는 주제로 다중 회귀 분석을 하려고 합니다. 위에서 말했듯이 집값에 영향을 주는 요소가 여러개인데, 마찬가지로 스마트폰 만족감을 주는 것도 여러가지 이기 때문에 다중 회귀 분석을 하는 것이다.   
 

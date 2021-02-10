@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[ALGORITHM]파이썬으로 탐욕 알고리즘 구현하기(동전)"
+title:  "파이썬으로 탐욕 알고리즘 구현하기(동전)"
 date:   2020-03-14 14:00:00 +0300
 image:  assets/images/algorlthm_cover1.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true

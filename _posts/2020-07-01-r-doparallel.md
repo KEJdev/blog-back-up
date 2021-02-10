@@ -3,8 +3,11 @@ layout: post
 title:  "R에서 병렬처리하는 방법"
 date:   2020-07-01 09:00:00 +0300
 image:  assets/images/hadoop.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -22,7 +25,7 @@ use_math: true
 ---------
 
 
-> #### Hadoop
+### Hadoop
 
 
 여기서 TMI는 이름을 뭘로 할까 고민하다가 더그커팅의 아이가 노란 코키리 장난감을 가지고 놀면서 그냥 Hadoop이라고 하는걸 듣고 하둡이라고 이름을 지었다고 한다. 
@@ -39,7 +42,7 @@ use_math: true
 -----------
 
 
-> #### snow함수를 이용한 병렬처리
+### snow함수를 이용한 병렬처리
 
 병렬처리는 여러가지 방법으로 할 수 있는데, 아래는 snow를 이용한 병렬처리 예제이다. 
 
@@ -71,7 +74,7 @@ ClusterEval‎는 snow 에서 함수 선언할때 사용하는 함수이다.
 -----------
 
 
-> #### foreach함수를 이용한 병렬처리
+### foreach함수를 이용한 병렬처리
 
 또 다른 패키지인 foreach를 사용하여 병렬처리를 해볼까한다.
 
@@ -89,7 +92,7 @@ system.time(l4 <- foreach(i = 1:4, .combine = 'c') %do% rnorm(25000000))
 -----------
 
 
-> #### doParallel함수를 이용한 병렬처리
+### doParallel함수를 이용한 병렬처리
 
 마지막으로 doParallel를 사용하여 병렬처리 하는 방법은 아래와 같다. 
 

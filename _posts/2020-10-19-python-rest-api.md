@@ -3,8 +3,11 @@ layout: post
 title:  "파이썬 REST API을 만들어보자"
 date:   2020-10-19 09:00:00 +0300
 image:  assets/images/api.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python,문법, API]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -17,7 +20,7 @@ use_math: true
 
 -------
 
-> #### REST API 
+### REST API 
 
 우선 API를 만들기전에 API로 만들어야 할 함수를 간단하게 두개 만들것이다. 나는 Study.py 라는 파일을 생성하여 아래와 같은 함수를 만들었다. 
 

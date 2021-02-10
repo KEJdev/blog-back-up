@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[ALGORITHM]파이썬으로 버블정렬 알고리즘 구현하기"
+title:  "파이썬으로 버블정렬 알고리즘 구현하기"
 date:   2020-03-14 13:00:00 +0300
 image:  assets/images/bubble.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true

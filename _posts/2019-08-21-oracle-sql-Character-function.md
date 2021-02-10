@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[SQL]SQL에서 문자 함수 사용하기(Rpad,substr,replace)"
+title:  "SQL에서 문자 함수 사용하기(Rpad,substr,replace)"
 date:   2019-08-21 09:00:00 +0300
 image:  assets/images/SQL_cover1.png
-tags:   [SQL]
+categories:  [DB,SQL]
+tags : [DB, Oracle, SQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -14,14 +17,14 @@ priority : 1.0
 
 --------
 
-> #### 함수를 사용해야 하는 이유?  
+### 함수를 사용해야 하는 이유?  
 
 간단한 이유인데, SQL에서 함수를 사용해야 하는 이유는 함수를 이용하면 데이터 검색을 더 쉽고 자세하게 구현할 수 있기 때문입니다.  
 
 --------
 
 
-> #### 함수의 종류  
+### 함수의 종류  
 
 함수의 종류는 크게 2가지로 볼 수 있습니다.  
 

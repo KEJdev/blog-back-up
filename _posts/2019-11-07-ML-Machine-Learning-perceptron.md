@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[MACHINE-LEARNING]머신러닝에서 단층/다층퍼셉트론(And, XOR Perceptron) 구현하기"
+title:  "머신러닝에서 단층/다층퍼셉트론(And, XOR Perceptron) 구현하기"
 date:   2019-11-07 09:00:00 +0300
 image:  assets/images/and.png
-tags:   [machine-learning]
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [ML,Python, 신경망]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +18,7 @@ priority : 1.0
 
 -------
 
-> #### 단층 퍼셉트론  
+### 단층 퍼셉트론  
 
 우선 AND Perceptron에 대해 알아보겠습니다. 
 
@@ -140,7 +143,7 @@ Not And Perceptron은 위와 같으며 결과는 아래와 같습니다.
 
 -------
 
-> #### 다층 퍼셉트론  
+### 다층 퍼셉트론  
 
 다층 퍼셉트론은 단층퍼셉트론 연산에 중간층을 끼어넣은 것을 말합니다. 함수로 생성해보겠습니다. 
 
@@ -165,7 +168,7 @@ for xs1 in inputData:
 ------
 
 
-> #### 단층 신경망 ? 다층 신경망 ?  
+### 단층 신경망 ? 다층 신경망 ?  
 
 그렇다면 단층 신경망과 다층 신경망의 차이점이 무엇을까요 ?  
 
@@ -181,7 +184,7 @@ for xs1 in inputData:
 ------
 
 
-> #### 퍼셉트론 ? 신경망 ? 
+### 퍼셉트론 ? 신경망 ? 
 
 - 퍼셉트론은 원하는 결과를 출력하도록 사람이 직접 가중치를 정해줘야 합니다.  
 - 신경망은 가중치 매개변수의 적잘한 값을 기계가 데이터로부터 학습해서 자동으로 알아냅니다.  

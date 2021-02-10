@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬의 클래스 상속과 super함수"
+title:  "파이썬의 클래스 상속과 super함수"
 date:   2020-03-14 10:00:00 +0300
 image:  assets/images/class.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python, 문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -17,7 +20,7 @@ use_math: true
 --------
 
 
-> #### 상속
+### 상속
 
 
 상속은 클래스들끼리 기능을 서로에게 물려주는 것이기 때문에 같은 코드를 반복해서 짜지 않아도 됩니다.
@@ -118,7 +121,7 @@ class Child(Father):
 -------- 
 
 
-> #### 다중 상속, 죽음의 다이아몬드
+### 다중 상속, 죽음의 다이아몬드
 
 상속에 가장 큰 문제점은 다중 상속 시에 나타나는 죽음의 다이아몬드 때문입니다. 
 

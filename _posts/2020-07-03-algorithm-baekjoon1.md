@@ -3,8 +3,11 @@ layout: post
 title:  "백준 2557번, Hello World!를 출력하자 "
 date:   2020-07-03 10:00:00 +0300
 image:  assets/images/baekjoon1.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -17,7 +20,7 @@ use_math: true
 
 ----------
 
-> #### 백준 2557번
+### 백준 2557번
 
 사실 문제가 너무 간단해서 포스팅 안하려고 했다.  
 근데 처음 시도했을때, 틀렸습니다와 컴파일 에러 뜨길래 보니까 언어 선택을 잘못하거나"Hello World!"에서 ! 안붙여서 에러가 났다...

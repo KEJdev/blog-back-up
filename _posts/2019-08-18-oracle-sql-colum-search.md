@@ -3,8 +3,11 @@ layout: post
 title:  "SQL에서 컬럼검색과 별칭(Keyword)"
 date:   2019-08-18 09:00:00 +0300
 image:  assets/images/SQL_cover1.png
-tags:   [SQL]
+categories:  [DB,SQL]
+tags : [DB, Oracle, SQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -17,7 +20,7 @@ priority : 1.0
 --------
 
 
-> #### EMP Tabel Column  
+### EMP Tabel Column  
 
 emp table 컬럼은 아래와 같습니다.
 
@@ -40,7 +43,7 @@ emp table 컬럼은 아래와 같습니다.
 
 
 
-> #### DEPT Table Column  
+### DEPT Table Column  
 
 dept table 컬럼은 아래와 같습니다.  
 
@@ -57,7 +60,7 @@ table column에 대해 알았으니, emp 테이블에서 사원번호와 이름,
 --------
 
 
-> #### SQL column Search 
+### SQL column Search 
 
 ```sql
 selete empon, ename, sql
@@ -117,7 +120,7 @@ from emp;
 --------
 
 
-> #### Keyword  
+### Keyword  
 
 중복을 제거할때는 **distinct** 키워드를 사용해야합니다. 
 
@@ -146,7 +149,7 @@ from emp;
 -------- 
 
 
-> #### 별칭
+### 별칭
 
 컬럼별칭을 사용할때는 너무 길게 써서도 안되고, 언더바를 사용하셔도 안된다는 점을 기억해두세요.
 컬럼명을 변경해서 출력할때는 아랴와 같이 하시면 됩니다.  

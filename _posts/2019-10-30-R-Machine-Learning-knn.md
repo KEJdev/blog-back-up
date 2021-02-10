@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]머신러닝 알고리즘, Knn(K-Nearest Neighbors)이란?"
+title:  "머신러닝 알고리즘, Knn(K-Nearest Neighbors)이란?"
 date:   2019-10-30 09:00:00 +0300
 image:  assets/images/knn.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -14,7 +17,7 @@ priority : 1.0
 
 -------
 
-> #### knn이란 무엇인가?  
+### knn이란 무엇인가?  
 
 사회적인 관계를 관찰해본적인 있나요? 대략적으로 비슷한 사람끼리 모이는 성질이 있다고 합니다. 그래서 비슷한 취향의 사람들끼리 모여서 동회회를 만들거나 비슷한 부류의 계층의 사람들끼리 친분을 맺기도 합니다.  
 
@@ -25,14 +28,14 @@ priority : 1.0
 
 -------
 
-> #### knn이 필요한 이유
+### knn이 필요한 이유
 
 유방암의 데이터를 가지고 있다고 가정을 했을때, 유방암의 종양의 크기에 대한 데이터(반지름, 둘레, 면적 등)만을 가지고 이 종양이 악성인지, 양성인지 예측할 수 있습니다. 그렇다면 환자에 대한 치료 스케줄에 큰 영향을 미칠 수 있습니다.
 
 -------
 
 
-> #### knn 분류 이해
+### knn 분류 이해
 
 knn은 어떤 라벨을 정의할 때, 그 데이터의 주변 반경 ε(입실론)안의 데이터들의 라벨들을 조사하여 다수결로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.  
 

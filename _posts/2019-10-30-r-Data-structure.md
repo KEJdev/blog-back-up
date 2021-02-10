@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]R을 배워야 하는 이유와 자료구조"
+title:  "R을 배워야 하는 이유와 자료구조"
 date:   2019-10-30 10:00:00 +0300
 image:  assets/images/pie1.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, etc]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -27,7 +30,7 @@ R은 데이터 분석할 때 주로 사용하는 언어입니다. 요즘 데이�
 -------
 
 
-> #### SQL과 R의 차이점  
+### SQL과 R의 차이점  
 
 R과 SQL의 차이점이 무엇일까요 ?  
 
@@ -60,14 +63,14 @@ pie(emp$sal)
 -------
 
 
-> #### R이란?  
+### R이란?  
 
 뉴질랜드의 aukland 대학의 robert gentlman 과 Ross ihaka 가 1995년에 개발한 소프트웨어이고 데이터 분석을 위한 통계 및 그래픽스를 지원하는 무료 소프트웨어입니다.  
 
 
 -------
 
-> #### R을 왜 사용해야하는가?  
+### R을 왜 사용해야하는가?  
 
 * R is free  
 * data 분석을 위해 가장 많이 쓰는 통계 플랫폼이다.
@@ -79,7 +82,7 @@ pie(emp$sal)
 
 -------
 
-> #### R의 자료구조
+### R의 자료구조
 
 |<center>type</center>|<center> 설명 </center>| 
 |:--------:|:--------:|

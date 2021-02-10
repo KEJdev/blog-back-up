@@ -3,8 +3,11 @@ layout: post
 title:  "min/max 알고리즘이란?"
 date:   2020-03-20 13:00:00 +0300
 image:  assets/images/minmax.png
-tags:   [Python]
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [Python, ML, 강화학습]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### min/max 알고리즘  
+### min/max 알고리즘  
 
 
 <center><img src="../assets//images/minmax.png" ></center>

@@ -3,8 +3,11 @@ layout: post
 title:  "백준 10871번, x보다 작은 수 출력하기"
 date:   2020-07-10 11:00:00 +0300
 image:  assets/images/baekjoon3.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -16,7 +19,7 @@ BAEKJOON 10871번 문제를 풀어보았다. for문만 사용할 줄 안다면, 
 
 ----------
 
-> #### 백준 10871번 
+### 백준 10871번 
 
 문제는 아래와 같다.
 

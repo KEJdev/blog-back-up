@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]의사 결정트리와(Decision Tree)로 심장질환 데이터 분석하기"
+title:  "의사 결정트리와(Decision Tree)로 심장질환 데이터 분석하기"
 date:   2020-03-12 10:00:00 +0300
 image:  assets/images/tree1.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### DataSet 
+### DataSet 
 
 데이터 셋 설명은 아래와 같습니다.
 
@@ -39,7 +42,7 @@ use_math: true
 -------
 
 
-> #### 정보획득량 
+### 정보획득량 
 
 
 우선 예쁜 시각화를 그리기 위해서 시각화 그래프 패키지를 설치하겠습니다
@@ -70,7 +73,7 @@ a<-information.gain(AHD~., hr[,-1])
 -------
 
 
-> #### 의사 결정나무(Decision Tree)
+### 의사 결정나무(Decision Tree)
 
 위에서 깐 패키지를 이용하면 예쁜 의사 결정나무 트리를 구할 수 있습니다.
 
@@ -88,7 +91,7 @@ fancyRpartPlot(tree)
 -------
 
 
-> #### 데이터 분석에 대한 결과 
+### 데이터 분석에 대한 결과 
 
 데이터 분석은 분석 결과를 잘 설명하는 것도 중요합니다. 그렇기 때문에 데이터를 시각화나 분석을 한 후에, 사람들에게 잘 설명할 수 있도록 글을 쓰는 연습을 충분히 해야합니다. 
 

@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[ALGORITHM]재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)"
+title:  "재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)"
 date:   2019-12-03 09:00:00 +0300
 image:  assets/images/algorlthm_cover1.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘 ,Python, 문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -16,7 +19,7 @@ priority : 1.0
 -------
 
 
-> #### factorial  
+### factorial  
 
 10!을 구할껀데, 10!을 풀어서 이야기하면 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 이고 , 계산하면 3,628,800 입니다. 구현하면 아래와 같습니다.
 

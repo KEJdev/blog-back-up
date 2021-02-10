@@ -3,8 +3,11 @@ layout: post
 title:  "이름없는 한줄짜리 함수(Lambda)"
 date:   2020-07-02 09:00:00 +0300
 image:  assets/images/lambda.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python,문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -17,7 +20,7 @@ use_math: true
 ---------
 
 
-> #### Lambda
+### Lambda
 
 람다식은 아래와 같다.
 

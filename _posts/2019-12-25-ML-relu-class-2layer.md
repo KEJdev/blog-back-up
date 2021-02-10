@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[MACHINE-LEARNING]파이썬 클래스로 신경망 구현하기(relu,forward,backward)"
+title:  "파이썬 클래스로 신경망 구현하기(relu,forward,backward)"
 date:   2019-12-25 09:00:00 +0300
 image:  assets/images/relu.png
-tags:   [machine-learning]
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [ML,Python, 신경망]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -17,7 +20,7 @@ priority : 1.0
 
 ------------
 
-> #### Relu Class 만들기.
+### Relu Class 만들기.
 
 저번 포스팅에서 만들었던 Affine class는 냅두고 Relu(렐루) 클래스를 한번 만들어 보겠습니다. Relu 함수는 예전 포스팅에서 한번 다루었는데 혹시나 약간 개념이 헷갈리거나 다른 활성화 함수에 대해 알고 싶다면 [여기](https://kejdev.github.io/ML-Machine-Learning-activation-function)를 눌러 참고해주세요.  
 

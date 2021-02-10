@@ -3,7 +3,8 @@ layout: post
 title:  "파이썬에서 에러가 발생해도 특정 코드는 무조건 실행되게 하기 (try ~ except ~ finally)"
 date:   2020-04-19 10:00:00 +0300
 image:  assets/images/try3.png
-tags:   [Python]
+categories:  [Python]
+tags : [Python,문법]
 sitemap :
 changefreq : always
 priority : 1.0
@@ -16,7 +17,7 @@ use_math: true
 
 -------
 
-> #### 예외처리 (try ~ except ~ finally)
+### 예외처리 (try ~ except ~ finally)
 
 try ~ except ~ finally문법은 아래와 같습니다. try ~ except과 별반 다를 것이 없고 그냥 한줄만 추가하면 되는거라 복잡하지는 않습니다. 
 

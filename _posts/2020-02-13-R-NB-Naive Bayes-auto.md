@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]나이브 베이즈(Naive Bayes)자동화 스크립트 만들기"
+title:  "나이브 베이즈(Naive Bayes)자동화 스크립트 만들기"
 date:   2020-02-13 09:00:00 +0300
 image:  assets/images/R_cover1.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ knn에 이어서 나이브 베이도 자동화 스크립트로 만들어보겠�
 
 -------
 
-> #### Naive Bayes 자동화 스크립트 
+### Naive Bayes 자동화 스크립트 
 
 우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다. 추가로 if문을 돌려서 패키지 설치가 되어 있으면 패스하고 아니면 설치하도록 하겠습니다.
 

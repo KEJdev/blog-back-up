@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 for문과 if문을 사용해서 파일 읽기"
+title:  "파이썬 for문과 if문을 사용해서 파일 읽기"
 date:   2019-12-02 09:00:00 +0300
 image:  assets/images/python_a4.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [문법,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +18,7 @@ priority : 1.0
 
 -------
 
-> #### csv 파일 불러오기  
+### csv 파일 불러오기  
 
 우선 csv 파일을 불러오겠습니다. 만약에 같은 경로에 있는 파일이 아니라면, "../" 이런식으로 Path를 잡아주시면 된답니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다.  
 
@@ -30,7 +33,7 @@ emp_csv = csv.reader(file)
 -------
 
 
-> #### for문과 if문  
+### for문과 if문  
 
 
 이제 불러왔으니, for 문을 이용하여 SCOTT인 사원의 월급을 출력해겠습니다.

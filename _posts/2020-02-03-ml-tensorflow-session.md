@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "[Tensorflow]텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)"
+title:  "텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)"
 date:   2020-02-03 09:00:00 +0300
 image:  assets/images/tensorflow2.png
-tags:   [machine-learning]
-sitemap : 
+categories:  [Machine Learning,Machine Learning-Python]
+sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -16,7 +18,7 @@ use_math: true
 
 ---------
 
-> #### Tensorflow 기본 구조
+### Tensorflow 기본 구조
 
 우선 텐서플로우가 설치가 안되어 있다면 아래와 같이 설치 해주세요. 
 
@@ -79,7 +81,7 @@ sess.close()
 -------
 
 
-> #### Tensorflow 실행 구조 
+### Tensorflow 실행 구조 
 
 Tensorflow Session은 fetch와 feed 2가지 방법으로 처리 할 수 있습니다. 
 

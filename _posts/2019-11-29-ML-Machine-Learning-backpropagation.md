@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[MACHINE-LEARNING]신경망이 학습 하는 원리? 역전파(backpropagation)에 대해"
+title:  "신경망이 학습 하는 원리? 역전파(backpropagation)에 대해"
 date:   2019-11-29 09:00:00 +0300
 image:  assets/images/ml8.png
-tags:   [machine-learning]
+categories:  [Machine Learning, Machine Learning-Python]
+tags : [ML,Python, 신경망]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +18,7 @@ priority : 1.0
 
 -------
 
-> #### 역전파 (backpropagation)
+### 역전파 (backpropagation)
 
 역전파는 말이 어려워보이는 것 뿐이지, 생각보다 어려운 개념은 아닙니다. 역전파를 이야기 할때는 순전파라는 개념을 알아야 되기 때문에 함께 이야기 하겠습니다.우선 개념 이해를 위해 쉬운 예를 들어보도록 하겠습니다.  
 
@@ -43,7 +46,7 @@ priority : 1.0
 
 -------
 
-> #### 간단한 신경망 구현하기.
+### 간단한 신경망 구현하기.
 
 우선 행렬을 입력받아서 결과를 출력하는 forward 함수를 만들어 보겠습니다.
  

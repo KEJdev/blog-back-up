@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[R]K-Nearest Neighbors(Knn)을 이용한 동물 분류하기"
+title:  "K-Nearest Neighbors(Knn)을 이용한 동물 분류하기"
 date:   2019-12-03 09:00:00 +0300
 image:  assets/images/r6.png
-tags:   [R]
+categories:  [Machine Learning, Machine Learning-R]
+tags : [R, ML]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -15,7 +18,7 @@ priority : 1.0
 
 -------
 
-> #### DataSet    
+### DataSet    
 
 데이터는 동물 종류에 따른 특징들이 있고, 라벨은 포유류, 조류, 파충류, 어류, 양서류, 곤충류, 갑각류 총 7가지가 있습니다.   
 
@@ -37,7 +40,7 @@ round(prop.table(table(zoo[18])), 2)*100 # 비율 보기
 -------
 
 
-> #### normalize  
+### normalize  
 
 우선 normalize 함수를 만들어보도록 하겠습니다.  
 
@@ -69,7 +72,7 @@ zoo2_n <- as.data.frame(lapply(zoo[,2:17], normalize))
 
 -------
 
-> #### knn  
+### knn  
 
 이제 train과 test 데이터 라벨을 변수로 생성 하겠습니다.  
 

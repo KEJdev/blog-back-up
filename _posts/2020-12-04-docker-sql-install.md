@@ -3,8 +3,11 @@ layout: post
 title:  "도커로 오라클을 사용해보자."
 date:   2020-12-04 09:00:00 +0300
 image:  assets/images/docker3.png
-tags:   [etc]
+categories:  [ETC, etc]
+tags : [DB, Oracle, Docker]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -16,7 +19,7 @@ use_math: true
 
 -------
 
-> #### Docker Oracle 
+### Docker Oracle 
 
 Docker Hub에 가면 Oracle 11g 이미지를 [다운](https://hub.docker.com/r/jaspeen/oracle-11g)받아 사용할 수 있다. 
 

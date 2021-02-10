@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 모듈(import)사용하기"
+title:  "파이썬 모듈(import)사용하기"
 date:   2020-03-13 09:00:00 +0300
 image:  assets/images/import.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python,문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ use_math: true
 
 --------
 
-> #### 모듈(import) 이란?
+### 모듈(import) 이란?
 
 이미 만들어져 있고 안정성이 검증된 함수들을 성격에 맞게 하나의 파일로 묶어놓은 것들을 모듈이라고 합니다. 외부의 모듈을 사용하려면 이 모듈을 먼저 코드로 가져와서 자유롭게 사용할 수 있도록 해야하는데 이런일을 파이썬에서는 모듈을 import라고 합니다. 
 
@@ -38,7 +41,7 @@ time.sleep(5)
 --------
 
 
-> #### 메인 모듈과 하위 모듈
+### 메인 모듈과 하위 모듈
 
 __name__(내장 전역변수)를 이용하면 지금 쓰고 있는 모듈이 하위 모듈인지를 확인 할 수 있습니다. 메인 모듈의 경우 __name__를 사용하면 main이라고 나오며 하위모듈의 경우 __name__을 이용하여 출력을 하면 모듈명이 출력됩니다. 
 

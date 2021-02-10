@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 패키지(package)란?"
+title:  "파이썬 패키지(package)란?"
 date:   2020-03-13 10:00:00 +0300
 image:  assets/images/package.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python, 문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ use_math: true
 
 --------
 
-> #### 패키지(package) 
+### 패키지(package) 
 
 우리가 음악 파일을 저장할때도 장르별로 폴더를 만들어서 별도로 저장하듯이 파이썬 모둘도 음악처럼 갯수가 많아지면 폴더(모듈 꾸러미) 별로 관리를 해야 관리가 편해지는데 이 폴더(디렉토리)가 패키지입니다. 
 
@@ -35,7 +38,7 @@ print(my_loc.cal_test3.plus(10,7)) #함수를 실행
 
 --------
 
-> #### site-package
+### site-package
 
 site-packages란, 파이썬의 기본 라이브러리 패키지외에 추가적인 패키지를 설치하는 디렉토리입니다. 이 디렉토리에 여러가지 소프트웨어가 사용할 공통 모듈을 넣어두면 **물리적인 장소에 구애받지 않고 모듈이 접근하여 반입**할 수 있습니다. 즉, 모듈을 site-packages에 넣어두면 무조건 실행할 수 있습니다. 
 

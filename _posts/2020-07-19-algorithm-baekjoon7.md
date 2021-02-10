@@ -3,8 +3,11 @@ layout: post
 title:  "백준 10951번 while문으로 A+B를 출력하자(EOF) "
 date:   2020-07-19 11:00:00 +0300
 image:  assets/images/baekjoon7.png
-tags:   [Algorithm]
+categories:  [Program Language , Algorithm]
+tags : [알고리즘,Python]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -14,7 +17,7 @@ use_math: true
 
 ----------
 
-> #### 백준 10951번 
+### 백준 10951번 
 
 문제는 아래와 같다.
 

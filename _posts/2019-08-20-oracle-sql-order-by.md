@@ -3,8 +3,11 @@ layout: post
 title:  "SQL에서 테이블 정렬하기(order by)"
 date:   2019-08-20 09:00:00 +0300
 image:  assets/images/SQL_cover1.png
-tags:   [SQL]
+categories:  [DB,SQL]
+tags : [DB, Oracle, SQL]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 ---
@@ -55,7 +58,7 @@ where comm = null;
 --------
 
 
-> #### order by 
+### order by 
 
 **order by**절은 데이터를 정렬할 때 쓰는 절입니다. **order by** 다음에 **ascending**를 쓰면 오름차순으로 정렬됩니다. 생략 시에는 디폴트로 **asc**가 사용되며, **descending**을 사용하게 되면 내림차순으로 정렬됩니다.  
 

@@ -3,8 +3,11 @@ layout: post
 title:  "2021 AI 개발자 로드맵"
 date:   2021-01-03 09:00:00 +0300
 image:  assets/images/0-2.png
-tags:   [etc]
+categories:  [ETC, etc]
+tags : [etc]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,45 +18,45 @@ use_math: true
 
 ----------
 
-> #### Introduction
+### Introduction
 
 <p align="center">
       <img src="../assets/images/intro.svg"/>
 </p>
 
 
-> #### Fundamentals
+### Fundamentals
 
 <p align="center">
       <img src="../assets/images/fundamentals.svg"/>
 </p>
 
-> #### Data Science Roadmap
+### Data Science Roadmap
 
 <p align="center">
       <img src="../assets/images/datascience.svg"/>
 </p>
 
-> #### Machine Learning Roadmap
+### Machine Learning Roadmap
 
 <p align="center">
       <img src="../assets/images/machine_learning.svg"/>
 </p>
 
 
-> #### Deep Learning Roadmap
+### Deep Learning Roadmap
 
 <p align="center">
       <img src="../assets/images/deep_learning.svg"/>
 </p>
 
-> #### Data Engineer Roadmap
+### Data Engineer Roadmap
 
 <p align="center">
       <img src="../assets/images/data_engineer.svg"/>
 </p>
 
-> #### Big Data Engineer Roadmap
+### Big Data Engineer Roadmap
 
 <p align="center">
       <img src="../assets/images/big_data_engineer.svg"/>

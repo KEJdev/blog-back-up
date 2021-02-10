@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "[PYTHON]파이썬 static method (정적 메소드)"
+title:  "파이썬 static method (정적 메소드)"
 date:   2020-03-14 09:00:00 +0300
 image:  assets/images/gun2.png
-tags:   [Python]
+categories:  [Program Language , Python]
+tags : [Python, 문법]
 sitemap :
+math: true
+mermaid: true
 changefreq : always
 priority : 1.0
 use_math: true
@@ -15,7 +18,7 @@ use_math: true
 
 -------
 
-> #### 정적 메소드 (static method)
+### 정적 메소드 (static method)
 
 정적 메소드는 self를 매개변수로 받지 않는 메소드를 말하며 여러 인스턴스가 공유해서 사용하는 메소드입니다.
 
