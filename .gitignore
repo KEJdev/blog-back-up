@@ -6,8 +6,8 @@ Gemfile.lock
 .jekyll-cache
 .editorconfig
 .gitattributes
-.nojekyll
-.travis.yml
-_config.yml
+*.nojekyll
+.yml
+*.yml
 google9a4925596022fd91.html
 jekyll-theme-chirpy.gemspec
