@@ -2,33 +2,28 @@
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: Chirpy                          # the main title
+title: 김감귤                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
-
-description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+tagline: 귤도 좋고, 고양이도 좋아하는 개발자    # it will display as the sub-title
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'http://kejdev.github.io'
 
-author: your_full_name                  # change to your full name
+author: KEJdev                  # change to your full name
 
 github:
-  username: github_username             # change to your github username
+username: kejdev             # change to your github username
 
-twitter:
-  username: twitter_username            # change to your twitter username
+instagram:
+  username: ao_ej125            # change to your twitter username
 
 social:
-  name: your_full_name                  # it will shows as the copyright owner in Footer
+  name: kejdev                  # it will shows as the copyright owner in Footer
   email: example@doamin.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://www.instagram.com/ao_ej125      # change to your twitter homepage
+    - https://github.com/kejdev       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -39,13 +34,13 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
 # change below value to '/projectname'.
-baseurl: ''
+baseurl: '/'
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Shanghai
 
 google_analytics:
-  id: ''          # Fill with your Google Analytics ID
+  id: 'UA-148043528-1'          # Fill with your Google Analytics ID
   pv:
     # The Google Analytics pageviews switch.
     # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
@@ -55,10 +50,9 @@ google_analytics:
     proxy_endpoint: ''
     cache: false  # pv data local cache, good for the users from GFW area.
 
-disqus: 
-comments: true  # boolean type, the global switch for posts comments.
-shortname: 'dev-mandarin'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
+disqus:
+  comments: true  # boolean type, the global switch for posts comments.
+  shortname: 'dev-mandarin'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # Prefer color scheme setting.
 #
@@ -86,6 +80,7 @@ avatar: ../assets/img/favicons/mycat.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
+encoding: UTF-8
 
 paginate: 10
 
@@ -183,8 +178,9 @@ compress_html:
 
 exclude:
   - vendor
-  - Gemfile.lock
   - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-chirpy.gemspec
   - tools
   - docs
   - README.md
