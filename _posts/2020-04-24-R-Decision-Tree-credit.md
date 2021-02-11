@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  의사 결정트리로 독일은행의 대출 채무 이행 여부 분석하기(C5.0 Model)
 date:   2020-04-24 10:00:00 +0300
-image:  assets/images/credit4.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

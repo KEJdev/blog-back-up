@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  헤드라인 뉴스 키워드으로 바라본 한국 경제 흐름
 date:   2020-05-12 21:00:00 +0300
-image:  assets/images/keyword1-1.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

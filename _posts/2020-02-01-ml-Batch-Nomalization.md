@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  Batch Nomalization 학습 실제 사용할때 주의 할 점
 date:   2020-02-01 09:00:00 +0300
-image:  assets/images/batch1.png
 categories:  [Machine Learning, Machine Learning-Python]
 tags : [ML,Python, 신경망]
 sitemap :

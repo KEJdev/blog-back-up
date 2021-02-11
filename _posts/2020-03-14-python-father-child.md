@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬의 클래스 상속과 super함수
 date:   2020-03-14 10:00:00 +0300
-image:  assets/images/class.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

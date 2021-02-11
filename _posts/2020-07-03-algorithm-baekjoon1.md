@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  백준 2557번, Hello World!를 출력하자 
 date:   2020-07-03 10:00:00 +0300
-image:  assets/images/baekjoon1.png
 categories:  [Program Language , Algorithm]
 tags : [알고리즘,Python]
 sitemap :

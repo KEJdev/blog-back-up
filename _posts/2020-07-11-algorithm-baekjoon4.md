@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  백준 10869번, 사칙연산 
 date:   2020-07-11 11:00:00 +0300
-image:  assets/images/baekjoon4.png
 categories:  [Program Language , Algorithm]
 tags : [알고리즘,Python]
 sitemap :

@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬 멤버체크(in)으로 특정 단어 개수 세기
 date:   2020-03-12 12:00:00 +0300
-image:  assets/images/in.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

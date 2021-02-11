@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬 static method (정적 메소드)
 date:   2020-03-14 09:00:00 +0300
-image:  assets/images/gun2.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

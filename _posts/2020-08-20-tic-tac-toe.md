@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  강화학습으로 tic tac toe 학습 시키기전 필요 요소
 date:   2020-08-20 09:00:00 +0300
-image:  assets/images/tic-tac-toe.png
 categories:  [Machine Learning, Machine Learning-Python]
 tags : [Python,ML, 강화학습]
 sitemap :

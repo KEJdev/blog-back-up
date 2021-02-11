@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  PLSQL로 두개의 숫자의 합 구하기
 date:   2019-11-26 09:00:00 +0300
-image:  assets/images/algorlthm_cover1.png
 categories:  [Program Language , Algorithm]
 tags : [알고리즘,Python]
 sitemap :

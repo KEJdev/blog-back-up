@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬에서 에러가 발생해도 특정 코드는 무조건 실행되게 하기 (try ~ except ~ finally)
 date:   2020-04-19 10:00:00 +0300
-image:  assets/images/try3.png
 categories:  [Python]
 tags : [Python,문법]
 sitemap :

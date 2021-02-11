@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  신경망이 학습 하는 원리? 역전파(backpropagation)에 대해
 date:   2019-11-29 09:00:00 +0300
-image:  assets/images/ml8.png
 categories:  [Machine Learning, Machine Learning-Python]
 tags : [ML,Python, 신경망]
 sitemap :

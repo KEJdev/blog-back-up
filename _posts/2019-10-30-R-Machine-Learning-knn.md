@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  머신러닝 알고리즘, Knn(K-Nearest Neighbors)이란?
 date:   2019-10-30 09:00:00 +0300
-image:  assets/images/knn.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

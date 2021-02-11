@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  R에서 병렬처리하는 방법
 date:   2020-07-01 09:00:00 +0300
-image:  assets/images/hadoop.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

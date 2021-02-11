@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  미디어 트렌드 분석?헤드라인 뉴스 키워드 분석(사회)
 date:   2020-05-10 09:00:00 +0300
-image:  assets/images/keyword4.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

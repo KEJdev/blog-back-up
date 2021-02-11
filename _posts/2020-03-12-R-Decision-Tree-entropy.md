@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  의사 결정트리와(Decision Tree)엔트로피(entropy)
 date:   2020-03-12 09:00:00 +0300
-image:  assets/images/tree.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

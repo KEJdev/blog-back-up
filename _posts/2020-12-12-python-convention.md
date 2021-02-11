@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬 컨벤션에 대해 알아보자
 date:   2020-12-12 09:00:00 +0300
-image:  assets/images/python_style_guide.png
 categories:  [Program Language , Python]
 tags : [Python,문법]
 sitemap :

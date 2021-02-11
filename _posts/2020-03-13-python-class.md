@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬 클래스(class)란?
 date:   2020-03-13 11:00:00 +0300
-image:  assets/images/gun.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

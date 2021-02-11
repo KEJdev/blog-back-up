@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬에서의 클래스 생성자와 소멸자
 date:   2020-05-20 09:00:00 +0300
-image:  assets/images/init.png
 categories:  [Program Language , Python]
 tags : [Python,문법]
 sitemap :

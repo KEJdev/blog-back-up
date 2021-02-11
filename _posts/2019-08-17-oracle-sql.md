@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  Oracle SQL이란?
 date:   2019-08-17 09:05:55 +0300
-image:  assets/images/SQL_cover1.png
 categories:  [DB, SQL]
 tags : [DB, Oracle, SQL]
 sitemap :

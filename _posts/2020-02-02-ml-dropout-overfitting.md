@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  오버피팅 억제를 위한 방법! Dropout!
 date:   2020-02-01 09:00:00 +0300
-image:  assets/images/Dropout.png
 categories:  [Machine Learning, Machine Learning-Python]
 tags : [ML,Python, 신경망]
 sitemap :

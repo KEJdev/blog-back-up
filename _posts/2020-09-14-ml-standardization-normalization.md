@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  표준화(Standardization)와 정규화(Normalization)의 차이
 date:   2020-09-14 09:00:00 +0300
-image:  assets/images/ML_cover1.png
 categories:  [Machine Learning, Statistics]
 sitemap :
 math: true

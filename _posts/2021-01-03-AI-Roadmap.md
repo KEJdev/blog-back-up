@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  2021 AI 개발자 로드맵
 date:   2021-01-03 09:00:00 +0300
-image:  assets/images/0-2.png
 categories:  [ETC, etc]
 tags : [etc]
 sitemap :

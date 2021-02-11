@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  PLSQL에서 예외처리(exception)하기
 date:   2020-03-20 10:00:00 +0300
-image:  assets/images/plsql_cover1.png
 categories:  [DB,PLSQL]
 tags : [DB, Oracle, PLSQL]
 sitemap :

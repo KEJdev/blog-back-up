@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬에서 지역변수와 전역변수 사용하기
 date:   2020-03-12 13:00:00 +0300
-image:  assets/images/pi.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

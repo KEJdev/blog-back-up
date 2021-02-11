@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  검색 알고리즘? 파이썬으로 이진탐색 구현하기
 date:   2020-03-14 11:00:00 +0300
-image:  assets/images/algorlthm_cover1.png
 categories:  [Algorithm,Top_Post]
 sitemap :
 changefreq : always

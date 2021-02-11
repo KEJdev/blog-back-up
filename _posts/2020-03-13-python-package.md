@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬 패키지(package)란?
 date:   2020-03-13 10:00:00 +0300
-image:  assets/images/package.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

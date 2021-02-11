@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  고유값(eigen value)과 고유벡터(eigen vector), 왜 중요한가?
 date:   2021-01-04 09:00:00 +0300
-image:  assets/images/eigen02.jpg
 categories:  [Machine Learning, Statistics]
 tags : [통계]
 sitemap :

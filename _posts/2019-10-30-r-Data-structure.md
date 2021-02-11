@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  R을 배워야 하는 이유와 자료구조
 date:   2019-10-30 10:00:00 +0300
-image:  assets/images/pie1.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, etc]
 sitemap :

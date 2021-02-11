@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  2017 카카오 신입 공채 블라인드 시험문제(비밀지도)
 date:   2020-03-15 09:00:00 +0300
-image:  assets/images/01.png
 categories:  [Program Language , Algorithm]
 tags : [알고리즘,Python]
 sitemap :

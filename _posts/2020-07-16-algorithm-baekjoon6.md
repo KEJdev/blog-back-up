@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  백준 10171번 고양이를 출력하자 
 date:   2020-07-16 11:00:00 +0300
-image:  assets/images/baekjoon6.png
 categories:  [Program Language , Algorithm]
 tags : [알고리즘,Python]
 sitemap :

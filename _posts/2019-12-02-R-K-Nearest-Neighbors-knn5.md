@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  K-Nearest Neighbors(Knn)을 이용한 동물 분류하기
 date:   2019-12-03 09:00:00 +0300
-image:  assets/images/r6.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

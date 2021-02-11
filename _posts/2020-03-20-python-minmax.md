@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  min/max 알고리즘이란?
 date:   2020-03-20 13:00:00 +0300
-image:  assets/images/minmax.png
 categories:  [Machine Learning, Machine Learning-Python]
 tags : [Python, ML, 강화학습]
 sitemap :

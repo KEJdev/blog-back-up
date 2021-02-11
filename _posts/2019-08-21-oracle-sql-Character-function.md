@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  SQL에서 문자 함수 사용하기(Rpad,substr,replace)
 date:   2019-08-21 09:00:00 +0300
-image:  assets/images/SQL_cover1.png
 categories:  [DB,SQL]
 tags : [DB, Oracle, SQL]
 sitemap :

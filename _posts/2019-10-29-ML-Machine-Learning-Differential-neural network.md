@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  머신러닝 신경망에서 미분이 필요한 이유
 date:   2019-10-29 09:00:00 +0300
-image:  assets/images/and.png
 categories:  [Machine Learning, Machine Learning-Python]
 tags : [ML,Python]
 sitemap :

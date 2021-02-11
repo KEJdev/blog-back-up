@@ -1,8 +1,6 @@
 ---
-layout: post
-title:  "파이썬에서 간단하게 예외처리하기(try ~ except ~ else)"
+title:  파이썬에서 간단하게 예외처리하기(try ~ except ~ else)
 date:   2020-04-19 09:00:00 +0300
-image:  assets/images/try2.png
 categories:  [Python]
 tags : [Python, 문법]
 sitemap :

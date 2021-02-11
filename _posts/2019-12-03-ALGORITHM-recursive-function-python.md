@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  재귀 알고리즘으로 팩토리얼과 최대공약수 구하기 (Python)
 date:   2019-12-03 09:00:00 +0300
-image:  assets/images/algorlthm_cover1.png
 categories:  [Program Language , Algorithm]
 tags : [알고리즘 ,Python, 문법]
 sitemap :

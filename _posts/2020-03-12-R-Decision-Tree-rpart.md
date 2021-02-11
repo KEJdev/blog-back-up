@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  의사 결정트리와(Decision Tree)로 심장질환 데이터 분석하기
 date:   2020-03-12 10:00:00 +0300
-image:  assets/images/tree1.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

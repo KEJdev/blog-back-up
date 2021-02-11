@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬 while loop문을 사용하여 log함수 구현하기
 date:   2019-12-06 09:00:00 +0300
-image:  assets/images/python_a5.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

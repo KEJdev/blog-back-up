@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  정규분포에 대해 알아보자
 date:   2020-08-09 09:00:00 +0300
-image:  assets/images/plot1.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

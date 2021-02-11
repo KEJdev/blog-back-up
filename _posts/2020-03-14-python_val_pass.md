@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  파이썬에서 언더바(_)를 사용하는 경우
 date:   2020-03-14 12:00:00 +0300
-image:  assets/images/pass.png
 categories:  [Program Language , Python]
 tags : [Python, 문법]
 sitemap :

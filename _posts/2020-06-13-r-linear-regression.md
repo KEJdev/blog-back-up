@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  단순 선형회귀? 회귀란 ?
 date:   2020-06-13 09:00:00 +0300
-image:  assets/images/linear.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

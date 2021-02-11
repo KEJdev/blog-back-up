@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  회귀로 삼성전자와 현대자동차 주식 수익률 분석하기
 date:   2020-06-14 09:00:00 +0300
-image:  assets/images/s_stock.png
 categories:  [Machine Learning, Machine Learning-R]
 tags : [R, ML]
 sitemap :

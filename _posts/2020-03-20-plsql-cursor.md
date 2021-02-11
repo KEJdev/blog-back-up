@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  PLSQL에서 커서(cursor)가 필요한 이유.(메모리에 데이터 올리기)
 date:   2020-03-20 09:00:00 +0300
-image:  assets/images/plsql_cover1.png
 categories:  [DB,PLSQL]
 tags : [DB, Oracle, PLSQL]
 sitemap :

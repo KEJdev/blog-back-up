@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  강화학습에서 사용하는 용어와 역사
 date:   2020-03-16 09:00:00 +0300
-image:  assets/images/ap1.png
 categories:  [Machine Learning, Machine Learning-Python]
 tags : [Python, ML, 강화학습]
 sitemap :

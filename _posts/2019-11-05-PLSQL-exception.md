@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  PL/SQL의 예외처리(exception)란?
 date:   2019-11-05 09:00:00 +0300
-image:  assets/images/plsql_cover1.png
 categories:  [DB, PLSQL]
 tags : [DB, Oracle, PLSQL]
 sitemap :
