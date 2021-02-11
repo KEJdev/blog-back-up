@@ -1,4 +1,4 @@
-name: 'Automatic build'
+name: 'kejdev'
 on:
   push:
     branches:
