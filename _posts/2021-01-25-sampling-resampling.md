@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "샘플링과 리샘플링의 차이는 무엇일까?"
+title:  샘플링과 리샘플링의 차이는 무엇일까?
 date:   2021-01-25 09:00:00 +0300
 image:  assets/images/k-fold.jpg
 categories:  [Machine Learning, Statistics]

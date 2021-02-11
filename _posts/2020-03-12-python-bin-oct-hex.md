@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬으로 2진수 8진수 16진수 구하기"
+title:  파이썬으로 2진수 8진수 16진수 구하기
 date:   2020-03-12 11:00:00 +0300
 image:  assets/images/bin.png
 categories:  [Program Language , Python]

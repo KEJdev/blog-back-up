@@ -7,7 +7,7 @@ title: 김감귤                          # the main title
 tagline: 귤도 좋고, 고양이도 좋아하는 개발자    # it will display as the sub-title
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://kejdev.github.io'
+url: 'http://kejdev.github.io'
 
 author: KEJdev                  # change to your full name
 
@@ -80,6 +80,7 @@ avatar: ../assets/img/favicons/mycat.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
+encoding: UTF-8
 
 paginate: 10
 

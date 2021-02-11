@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬 for문과 if문을 사용해서 파일 읽기"
+title:  파이썬 for문과 if문을 사용해서 파일 읽기
 date:   2019-12-02 09:00:00 +0300
 image:  assets/images/python_a4.png
 categories:  [Program Language , Python]

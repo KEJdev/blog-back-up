@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SQL의 반올림과 비교함수 사용하기(round,between_months)"
+title:  SQL의 반올림과 비교함수 사용하기(round,between_months)
 date:   2019-08-22 09:00:00 +0300
 image:  assets/images/SQL_cover1.png
 categories:  [DB,SQL]

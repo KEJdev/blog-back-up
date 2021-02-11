@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "머신러닝에서 활성화 함수란?(Activation function)"
+title:  머신러닝에서 활성화 함수란?(Activation function)
 date:   2019-11-06 09:00:00 +0300
 image:  assets/images/sigmoid.png
 categories:  [Machine Learning, Machine Learning-Python]

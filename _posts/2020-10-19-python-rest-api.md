@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬 REST API을 만들어보자"
+title:  파이썬 REST API을 만들어보자
 date:   2020-10-19 09:00:00 +0300
 image:  assets/images/api.png
 categories:  [Program Language , Python]

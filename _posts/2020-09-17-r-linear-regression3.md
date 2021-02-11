@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "스마트폰 만족감에 영향을 주는 것이 무엇일까?(다중회귀)"
+title:  스마트폰 만족감에 영향을 주는 것이 무엇일까?(다중회귀)
 date:   2020-09-17 09:00:00 +0300
 image:  assets/images/linear4.png
 categories:  [Machine Learning, Machine Learning-R]

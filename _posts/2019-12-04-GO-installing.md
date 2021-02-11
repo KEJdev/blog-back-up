@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GO 언어 설치하기"
+title:  GO 언어 설치하기
 date:   2019-12-04 09:00:00 +0300
 image:  assets/images/go1.png
 categories:  [Program Language , Go]

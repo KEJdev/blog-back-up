@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "K-Nearest Neighbors(Knn)을 이용하여 유방암 분류하기"
+title:  K-Nearest Neighbors(Knn)을 이용하여 유방암 분류하기
 date:   2020-02-08 09:00:00 +0300
 image:  assets/images/wisc.png
 categories:  [Machine Learning, Machine Learning-R]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬 if문 사용해서 홀짝 출력하기 "
+title:  파이썬 if문 사용해서 홀짝 출력하기 
 date:   2019-11-26 09:00:00 +0300
 image:  assets/images/python_cover1.png
 categories:  [Program Language , Python]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "백준 2588번, 빈 칸에 들어갈 수는? (곱셈) "
+title:  백준 2588번, 빈 칸에 들어갈 수는? (곱셈) 
 date:   2020-07-15 11:00:00 +0300
 image:  assets/images/baekjoon5.png
 categories:  [Program Language , Algorithm]

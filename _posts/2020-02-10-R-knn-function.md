@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "간단한 K-Nearest Neighbors(Knn)자동화 스크립트 만들기"
+title:  간단한 K-Nearest Neighbors(Knn)자동화 스크립트 만들기
 date:   2020-02-10 09:00:00 +0300
 image:  assets/images/R_cover1.png
 categories:  [Machine Learning, Machine Learning-R]

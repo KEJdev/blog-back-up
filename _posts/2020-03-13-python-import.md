@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬 모듈(import)사용하기"
+title:  파이썬 모듈(import)사용하기
 date:   2020-03-13 09:00:00 +0300
 image:  assets/images/import.png
 categories:  [Program Language , Python]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "텐서플로우란?"
+title:  텐서플로우란?
 date:   2020-02-02 09:00:00 +0300
 image:  assets/images/tensorflow1.png
 categories:  [Machine Learning, Machine Learning-Python]

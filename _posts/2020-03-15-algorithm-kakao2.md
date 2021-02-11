@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2017 카카오 신입 공채 블라인드 시험문제(LRU알고리즘)"
+title:  2017 카카오 신입 공채 블라인드 시험문제(LRU알고리즘)
 date:   2020-03-15 10:00:00 +0300
 image:  assets/images/02.png
 categories:  [Program Language , Algorithm]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기"
+title:  K-Nearest Neighbors(Knn)을 이용한 구매여부 분류하기
 date:   2019-10-27 09:00:00 +0300
 image:  assets/images/dataset1.png
 categories:  [Machine Learning, Machine Learning-R]

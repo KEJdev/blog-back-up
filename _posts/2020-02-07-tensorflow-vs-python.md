@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬과 텐서플로우의 차이"
+title:  파이썬과 텐서플로우의 차이
 date:   2020-02-07 09:00:00 +0300
 image:  assets/images/ML_cover1.png
 categories:  [Machine Learning, Machine Learning-Python]

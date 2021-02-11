@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Go에서 Pointer 사용하기. "
+title:  Go에서 Pointer 사용하기
 date:   2020-07-30 09:00:00 +0300
 image:  assets/images/go_cover1.png
 categories:  [Program Language , Go]

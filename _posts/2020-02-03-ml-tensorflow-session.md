@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)"
+title:  텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)
 date:   2020-02-03 09:00:00 +0300
 image:  assets/images/tensorflow2.png
 categories:  [Machine Learning,Machine Learning-Python]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "머신러닝에서 단층/다층퍼셉트론(And, XOR Perceptron) 구현하기"
+title:  머신러닝에서 단층/다층퍼셉트론(And, XOR Perceptron) 구현하기
 date:   2019-11-07 09:00:00 +0300
 image:  assets/images/and.png
 categories:  [Machine Learning, Machine Learning-Python]

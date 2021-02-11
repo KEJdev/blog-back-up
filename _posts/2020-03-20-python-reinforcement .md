@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "강화학습에서의 몬테카를로 알고리즘이란?"
+title:  강화학습에서의 몬테카를로 알고리즘이란?
 date:   2020-03-20 11:00:00 +0300
 image:  assets/images/tic.png
 categories:  [Machine Learning, Machine Learning-Python]

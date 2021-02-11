@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "나이브 베이즈(Naive Bayes) 확률로 인한 데이터 분류(조건부확률과 베이즈 정리)"
+title:  나이브 베이즈(Naive Bayes) 확률로 인한 데이터 분류(조건부확률과 베이즈 정리)
 date:   2020-02-11 09:00:00 +0300
 image:  assets/images/NB1.png
 categories:  [Machine Learning, Machine Learning-R]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "백준 10951번 while문으로 A+B를 출력하자(EOF) "
+title:  백준 10951번 while문으로 A+B를 출력하자(EOF) 
 date:   2020-07-19 11:00:00 +0300
 image:  assets/images/baekjoon7.png
 categories:  [Program Language , Algorithm]

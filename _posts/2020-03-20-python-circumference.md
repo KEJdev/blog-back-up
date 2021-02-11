@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬으로 원주율 구하기(몬테카를로)"
+title:  파이썬으로 원주율 구하기(몬테카를로)
 date:   2020-03-20 12:00:00 +0300
 image:  assets/images/cir.png
 categories:  [Machine Learning, Machine Learning-Python]

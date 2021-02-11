@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "퍼셉트론(Perceptron)이란?"
+title:  퍼셉트론(Perceptron)이란?
 date:   2019-11-06 09:00:00 +0300
 image:  assets/images/ML_cover1.png
 categories:  [Machine Learning, Machine Learning]

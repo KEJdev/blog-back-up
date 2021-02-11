@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "나이브 베이즈(Naive Bayes)를 이용한 영화 장르 분류"
+title:  나이브 베이즈(Naive Bayes)를 이용한 영화 장르 분류
 date:   2020-02-12 09:00:00 +0300
 image:  assets/images/NB2.png
 categories:  [Machine Learning, Machine Learning-R]

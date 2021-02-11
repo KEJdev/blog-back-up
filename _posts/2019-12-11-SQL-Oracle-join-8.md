@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Oracle 조인(join)의 종류(equi join, 1999 ANSI)"
+title:  Oracle 조인(join)의 종류(equi join, 1999 ANSI)
 date:   2019-12-11 09:00:00 +0300
 image:  assets/images/SQL_cover1.png
 categories:  [DB,SQL]

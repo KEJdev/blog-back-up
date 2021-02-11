@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GO언어 변수 선언하기"
+title:  GO언어 변수 선언하기
 date:   2019-12-05 09:00:00 +0300
 image:  assets/images/go3.png
 categories:  [Program Language , Algorithm]

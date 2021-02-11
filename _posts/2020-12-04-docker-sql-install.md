@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "도커로 오라클을 사용해보자."
+title:  도커로 오라클을 사용해보자
 date:   2020-12-04 09:00:00 +0300
 image:  assets/images/docker3.png
 categories:  [ETC, etc]

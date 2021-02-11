@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류"
+title:  K-Nearest Neighbors(Knn)을 이용한 과일 데이터 분류
 date:   2019-12-02 09:00:00 +0300
 image:  assets/images/r3.png
 categories:  [Machine Learning, Machine Learning-R]

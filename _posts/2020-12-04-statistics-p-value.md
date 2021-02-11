@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "P-value란? (with Python)"
+title:  P-value란? (with Python)
 date:   2020-12-04 09:00:00 +0300
 image:  assets/images/p-value2.png
 categories:  [Machine Learning, Statistics]

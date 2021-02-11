@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "이름없는 한줄짜리 함수(Lambda)"
+title:  이름없는 한줄짜리 함수(Lambda)
 date:   2020-07-02 09:00:00 +0300
 image:  assets/images/lambda.png
 categories:  [Program Language , Python]
