@@ -1,3 +1,4 @@
+# hidden files
 .*
 !.github
 
@@ -7,9 +8,9 @@ vendor
 
 # rubygem
 *.gem
+# yard docs
+doc
 
 # npm dependencies
 node_modules
 package-lock.json
-
-

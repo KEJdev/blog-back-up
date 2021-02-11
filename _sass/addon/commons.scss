@@ -2,8 +2,6 @@
   The common styles
 */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;900&display=swap');
-@CHARSET "UTF-8"; 
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); 
 
 @mixin mode-toggle($dark-mode: false) {
   @if $dark-mode {
@@ -50,10 +48,9 @@ html[mode=dark] {
 body {
   line-height: 1.75rem;
   background: var(--body-bg);
-  font-size: 0.9rem;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Nanum Barun Gothic', sans-serif;
+  font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
 }
 
 /* --- Typography --- */
@@ -61,7 +58,7 @@ body {
 h1 {
   @extend %heading;
 
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 h2 {
@@ -69,7 +66,7 @@ h2 {
   @extend %section;
   @extend %anchor;
 
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 h3 {
@@ -109,7 +106,7 @@ a {
 }
 
 img {
-  max-width: 70%;
+  max-width: 100%;
 }
 
 blockquote {
@@ -311,7 +308,6 @@ footer {
 
   > table {
     min-width: 100%;
-    margin: 0 auto;
     overflow-x: auto;
     border-spacing: 0;
 
@@ -367,7 +363,7 @@ footer {
   word-wrap: break-word;
 
   img[data-src] {
-    margin: 2rem 0;
+    margin: 0.5rem 0;
   }
 
   @mixin img-caption {
@@ -429,7 +425,7 @@ footer {
   p {
     @include img(true);
 
-    font-size: 1rem;
+    font-size: 1.08rem;
   }
 
   ul {
@@ -609,7 +605,7 @@ $sidebar-display: "sidebar-display";
     &:hover {
       @include no-text-decoration;
 
-      color: #ffc107;
+      color: #fff;
     }
   }
 
@@ -623,7 +619,7 @@ $sidebar-display: "sidebar-display";
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
-      border: 2px solid #f7f6f6;
+      border: 2px solid #b6b6b6;
       overflow: hidden;
       transform: translateZ(0); // fixed the zoom in Safari
       -webkit-transition: border-color 0.35s ease-in-out;
@@ -650,13 +646,13 @@ $sidebar-display: "sidebar-display";
   .site-title {
     a {
       font-weight: 900;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       letter-spacing: 0.5px;
     }
   }
 
   .site-subtitle {
-    font-size: 70%;
+    font-size: 95%;
     color: #828282;
     line-height: 1.2rem;
     word-spacing: 1px;
@@ -680,12 +676,12 @@ $sidebar-display: "sidebar-display";
     height: $tab-height;
     &:hover {
       .nav-link {
-        color: #2a408e;
+        color: #f8f9facf;
       }
     }
     &.active {
       .nav-link {
-        color: #2a408e;;
+        color: #fcfcfc;
       }
     }
   }
@@ -1324,7 +1320,7 @@ $sidebar-display: "sidebar-display";
   }
 
   .site-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-left: 0 !important;
   }
 
@@ -1415,7 +1411,7 @@ $sidebar-display: "sidebar-display";
   }
 
   .post-content p {
-    font-size: 0.9rem;
+    font-size: 1.03rem;
   }
 
   footer > div.d-felx {
@@ -1517,7 +1513,7 @@ $sidebar-display: "sidebar-display";
         @extend %profile-ml;
 
         a {
-          font-size: 1.1rem;
+          font-size: 1.7rem;
           letter-spacing: 1px;
         }
       }

@@ -34,9 +34,8 @@
 }
 
 %heading {
-  font-weight: 700;
-  color: #324a66;
-  font-family: 'Nanum Barun Gothic', sans-serif;
+  font-weight: 400;
+  font-family: 'Lato', 'Microsoft Yahei', sans-serif;
 }
 
 %section {
@@ -57,7 +56,7 @@
   text-decoration: none;
 }
 
-@mixin sidebar-links($color: rgba(0, 0, 0, 0.9)) {
+@mixin sidebar-links($color: rgba(255, 255, 255, 0.5)) {
   color: $color;
   transition: color 0.35s ease-in-out;
   user-select: none;
