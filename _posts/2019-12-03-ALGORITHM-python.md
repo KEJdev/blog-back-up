@@ -22,7 +22,7 @@ priority : 1.0
 
 재귀 함수는 함수내에서 다시 자신을 호출한 후 그 함수가 끝날때까지 함수 호출 이후의 명령문을 수행하지 않습니다. 즉, **"반복문 + 스택구조가 결합된 함수**를 재귀함수라고 볼 수 있습니다. 스택 구조가 결합된 함수에 대해서 조금 더 풀어서 이야기해보도록 하겠습니다. 스택구조가 결합되었다는 의미는 **먼저 들어간 데이터가 가장 마지막에 나오는 구조, 나중에 들어간 데이터가 가장 먼저 나오는 구조(후입선출)** 을 말합니다.   
 
-<center><img src="../assets//images/stack.png" ></center>  
+<center><img src="../../assets//images/stack.png" ></center>  
 
 
 
@@ -69,7 +69,7 @@ def tow_count(n):
 tow_count(10)
 ```
 
-<center><img src="../assets//images/python_a1.png" ></center>  
+<center><img src="../../assets//images/python_a1.png" ></center>  
 
 
 위와 같이 결과가 나왔을 때, 다시 2 x 1 = 2 ... 로 출력하려면 어떻게 해야댈까요 ?  
@@ -87,7 +87,7 @@ tow_count(10)
 구구단이 제대로 출력되는 모습을 볼 수 있습니다. 
 
 
-<center><img src="../assets//images/python_a2.png" ></center>  
+<center><img src="../../assets//images/python_a2.png" ></center>  
 
 
 즉, 재귀는 숫자를 0까지 계속 waiting 시켰다가 나가는 스택구조를 띄고 있다는 것을 알수 있습니다.  

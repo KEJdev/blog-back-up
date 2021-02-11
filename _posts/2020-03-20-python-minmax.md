@@ -19,7 +19,7 @@ use_math: true
 ### min/max 알고리즘  
 
 
-<center><img src="../assets//images/minmax.png" ></center>
+<center><img src="../../assets//images/minmax.png" ></center>
 
 min/max 알고리즘에서 max는 나를 뜻하는 것이고 min는 적을 이야기 합니다.
 탐색전에 트리는 맨 아래 단계만 의미있는 수를 가지며, 탐색이 진행되면서 하위에서 상위로 값을 찾아 올라가게 되는데 이때 상위 노드에서 선택되는 값은 현 단계가 **max이면 아래에서 최대값을, 현 단계에서 min이면 아래에서 최소값**을 선택하게 됩니다. 
@@ -50,18 +50,18 @@ min/max 알고리즘에서 max는 나를 뜻하는 것이고 min는 적을 이�
 
 Tic Tac Toe으로 결정 과정을 보면 아래 그림과 같습니다. 
 
-<center><img src="../assets//images/tic2.png" ></center>
+<center><img src="../../assets//images/tic2.png" ></center>
 
 
 상대방 수는 가장 작은 수를 올리고 내 수는 가장 큰 수를 올립니다. 
 
 
-<center><img src="../assets//images/tic3.png" ></center>
+<center><img src="../../assets//images/tic3.png" ></center>
 
 상대가 두는 턴(사람)↑
 
 
-<center><img src="../assets//images/tic4.png" ></center>
+<center><img src="../../assets//images/tic4.png" ></center>
 
 내가 두는 턴(컴퓨터)↑
 

@@ -33,7 +33,7 @@ reg(y=multi_hg$만족감, x=multi_hg[1:3])
 
 컬럼은 아래와 같이 외관, 편의성, 유용성으로 나눌 수 있다. 여기서 interceot는 절편이다.
 
-<center><img src="../assets/images/linear4.png" ></center>
+<center><img src="../../assets/images/linear4.png" ></center>
 
 스마트폰 만족감에 가장 큰 영향을 미치는 것은 가장 기울기가 큰 것을 구하면 알 수 있다. 그렇기 때문에 위의 결과를 보면 기울기가 가장 높은 것은 외관이라는 것을 알 수 있다.  
 
@@ -46,5 +46,5 @@ lm(만족감~외관+편의성+유용성, data=multi_hg)
 
 위 코드를 작성하면, 아래와 같이 결과가 똑같이 나온다.
 
-<center><img src="../assets/images/linear5.png" ></center>
+<center><img src="../../assets/images/linear5.png" ></center>
 

@@ -21,7 +21,7 @@ BAEKJOON 10869번 문제를 풀어보았다. 간단하게 print에 사칙연산 
 
 문제는 아래와 같다.
 
-<center><img src="../assets/images/baekjoon4.png" ></center>
+<center><img src="../../assets/images/baekjoon4.png" ></center>
 
 **Answer:**
 

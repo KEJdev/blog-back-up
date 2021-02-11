@@ -52,4 +52,4 @@ obj = MyClass()
 del obj 
 ```
 
-<center><img src="../assets/images/init.png" ></center>
+<center><img src="../../assets/images/init.png" ></center>

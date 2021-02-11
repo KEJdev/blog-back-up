@@ -29,13 +29,13 @@ priority : 1.0
  
 역전파라는 개념이 없을 경우 아래 그림과 같이 순전파 라는 개념만 있게 됩니다.  
 
-<center><img src="../assets//images/ml8.png" ></center>  
+<center><img src="../../assets//images/ml8.png" ></center>  
 
 
 
 이렇게 되면 무엇이 문제가 되냐면, 만약 output의 결과가 이상하다면, 다시 처음부터 학습을 해야 합니다. 그렇게 되면 학습시간이나, 컴퓨터 성능이 느리고 비효율적이게 되죠. 그렇기 때문에 역전파라는 개념이 생기게 된거랍니다. output층부터 차례대로 역방향으로 따라 올라가서 각 층에 있는 노드의 오차를 계산하는 겁니다. 
 
-<center><img src="../assets//images/ml9.png" ></center>  
+<center><img src="../../assets//images/ml9.png" ></center>  
 
 
 그렇게 각 노드이 오차만 계산하고 그 오차를 사용해서 함수의 기울기를 계산하는 방식으로 학습 결과에 영향을 주는거죠. 
@@ -139,7 +139,7 @@ print('db:\n',db)
 
 
 
-<center><img src="../assets//images/ml10.png" ></center>  
+<center><img src="../../assets//images/ml10.png" ></center>  
 
 
 생각보다 어렵지 않네요. 여기서 나중에 활성화 함수나, loss 함수 등 여러가지 추가하면 신경망이 되는데, 그 부분은 담 포스팅에서 다루겠습니다.

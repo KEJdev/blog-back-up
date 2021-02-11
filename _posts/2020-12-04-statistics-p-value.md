@@ -22,19 +22,19 @@ P-value에 대해 알기전에 귀무가설, 대립가설에 대해 알아야한
 아래와 같은 정규 분포가 있다고 하자.
 
 
-<center><img src="../assets/images/p-value.png" ></center>
+<center><img src="../../assets/images/p-value.png" ></center>
 
 P-value는 귀무 가설(null hypothesis)이 맞다는 전제 하에, 표본에서 실제로 관측된 통계치와 '같거나 더 극단적인' 통계치가 관측될 확률을 말한다. 예시로 아래의 그림처럼 빨간색 점 오른쪽에 있는 값(극단)을 가져올 확률이라고 생각하면 편하다.
 
 ### 귀무가설, 대립가설과 P-value와의 관계
 
-<center><img src="../assets/images/p-value2.png" ></center>
+<center><img src="../../assets/images/p-value2.png" ></center>
 
 내가 여기서 빨간점보다 더 오른쪽 값을 가져오게 되었다고 해보자. 모집단 평균이 100이라고 했을때, 내가 가져온 데이터의 평균은 100보다 클 것이다. 
 
 아래의 그림처럼 다른 정규분포가 있다면 다른 분포에 속할 가능성이 높다고 이야기 할 수 있다.   
 
-<center><img src="../assets/images/p-value4.png" ></center>
+<center><img src="../../assets/images/p-value4.png" ></center>
 
 조금 더 쉽게 예를 들어 보자.
 
@@ -78,7 +78,7 @@ print(res.summary())
 
 statsmodels 라이브러리를 이용해서 쉽게 P-value를 구할 수 있다. 
 
-<center><img src="../assets/images/p-value5.png" ></center>
+<center><img src="../../assets/images/p-value5.png" ></center>
 
 이 테이블은 독립 변수에 대한 모든 통계를 표시한다. 일단 중요한 건 아니니 전부 넘기고 P-value만 보도록 하자.
 위에서도 귀무가설과 대립가설에 대해 이야기 했지만, 회귀모델에서 P-value 값이 무엇을 의미하는지를 정리하면 아래와 같이 정리할 수 있다.  

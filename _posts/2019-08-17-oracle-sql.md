@@ -114,7 +114,7 @@ selete * from emp;
 문장을 해석하면, 아래와 같습니다.  
  
 
-<center><img src="../assets//images/selete.png" ></center>  
+<center><img src="../../assets//images/selete.png" ></center>  
 
 
 dept 테이블을 검색하는 코드는 아래와 같습니다.  

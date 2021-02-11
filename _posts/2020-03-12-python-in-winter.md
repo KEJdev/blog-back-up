@@ -52,13 +52,13 @@ for winter_list in file:
 ```
 
 
-<center><img src="../assets//images/in.png" ></center>
+<center><img src="../../assets//images/in.png" ></center>
 
 
 이번엔 라인이 아니라 for문을 중첩시켜 겨울왕국의 단어들만 출력해보겠습니다. 
 
 
-<center><img src="../assets//images/in2.png" ></center>
+<center><img src="../../assets//images/in2.png" ></center>
 
 ```python
 file=open("winter.txt","r")
@@ -70,7 +70,7 @@ for winter_list in file:
 ```
 
 
-<center><img src="../assets//images/in3.png" ></center>
+<center><img src="../../assets//images/in3.png" ></center>
 
 여기서 count 함수를 사용해서 elsa가 나오면 1씩 카운트 해보면 아래와 같이 쓸수 있습니다.
 

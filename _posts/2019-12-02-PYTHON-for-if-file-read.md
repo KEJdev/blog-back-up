@@ -18,7 +18,7 @@ priority : 1.0
 
 ### csv 파일 불러오기  
 
-우선 csv 파일을 불러오겠습니다. 만약에 같은 경로에 있는 파일이 아니라면, "../" 이런식으로 Path를 잡아주시면 된답니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다.  
+우선 csv 파일을 불러오겠습니다. 만약에 같은 경로에 있는 파일이 아니라면, "../../" 이런식으로 Path를 잡아주시면 된답니다. python에서 csv 파일 읽은 모듈이 따로 있어서 코드가 길지 않습니다.  
 
 
 ```python
@@ -61,7 +61,7 @@ for emp_list in emp_csv:
 그럼 이번엔 if문을 여러개 사용하여 여러가지 조건을 걸어보겠습니다. python에서 if 문을 여러개 사용할때는 **elif**를 사용합니다.  
 
 
-<center><img src="../assets//images/python_a4.png" ></center>  
+<center><img src="../../assets//images/python_a4.png" ></center>  
 
 해석하자면 조건이 true이면 실행하고 조건이 flese이면 실행을 하지 않다라는 뜻이고, 마지막 else는 위에 있는 조건 그 무엇도 암것도 걸리는게 없다면 실행하여라 라는 뜻입니다.  
 

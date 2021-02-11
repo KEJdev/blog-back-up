@@ -13,7 +13,7 @@ use_math: true
 
 버블정렬은 두 인접한 원소를 검사하여 정렬하는 방법입니다. 
 
-<center><img src="../assets//images/bubble.png" ></center>
+<center><img src="../../assets//images/bubble.png" ></center>
 
 <center>위키백과 예제</center>
 

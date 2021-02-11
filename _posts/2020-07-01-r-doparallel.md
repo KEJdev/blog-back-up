@@ -31,7 +31,7 @@ use_math: true
 아무튼 병렬처리는 여러대의 노드를 묶어서 마치 하나의 서버처럼 보이게하고 여러 노드의 자원을 이용해서 데이터를 처리하기 때문에 처리하는 속도가 아주 빠르다는 장점이 있다.
 
 
-<center><img src="../assets/images/hadoop.png" ></center>
+<center><img src="../../assets/images/hadoop.png" ></center>
 
 
 

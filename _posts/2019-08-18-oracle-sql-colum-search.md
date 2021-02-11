@@ -159,7 +159,7 @@ from emp;
 
 별칭을 사용하여 아래와 같이 출력되게 하려면 어떻게 해야댈까요?
 
-<center><img src="../assets//images/as.png" ></center>  
+<center><img src="../../assets//images/as.png" ></center>  
 
 
 위 쿼리를 그대로 가져와서 조금만 수정하면 되겠네요.

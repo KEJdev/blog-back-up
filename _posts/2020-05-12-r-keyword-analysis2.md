@@ -20,28 +20,28 @@ use_math: true
 
 사회와 마찬가지로 경제도 표를 만들면 아래와 같습니다. 우선 경제하면 가장 많이 떠오르는 것이 부동산이 아닐까 싶습니다.
 
-<center><img src="../assets/images/keyword1-1.png" ></center>
+<center><img src="../../assets/images/keyword1-1.png" ></center>
 
 역시나 부동산이나 재건축이 가장 많이 눈에 띄는 것이 보입니다. 2005년 국세청 키워드가 보이는데, 아마 종부제 시행으로 인해 많은 헤드라인을 장식했던 키워드 인것 같습니다. 
 
 경제하면 기업들이 빼놓을 수 없는데, 아래와 같이 예전에 비해서는 갈수록 기업의 이름이 언급되는 걸로 보아 이제는 한국을 대표하는 기업이라고도 볼 수 있겠네요.
 
-<center><img src="../assets/images/keyword3-1.png" ></center>
+<center><img src="../../assets/images/keyword3-1.png" ></center>
 
 
 이번에는 직접적으로 한국에 영향을 끼쳤던 것이 무엇인지 알아보겠습니다. 아래와 같이 FTA, 광우병, 갤럭시 등을 볼 수가 있습니다. 
 
-<center><img src="../assets/images/keyword2-1.png" ></center>
+<center><img src="../../assets/images/keyword2-1.png" ></center>
 
 
 FTA나 광우병때는 제가 어려서(?) 뭔지 잘 몰랐었는데, 지금 보니 참 아이러니 했네요. 금융이나 기름값으로도 많은 문제가 있었던 해가 보이기도 하고 갤럭시 휴대폰이 터져서 문제가 되었던 2016년도 보입니다.   
 
-<center><img src="../assets/images/keyword4-1.png" ></center>
+<center><img src="../../assets/images/keyword4-1.png" ></center>
 
 
 경제 불황은 국제 부분과 함께 보면 좋겠지만, 우선 우리나라만 놓고 보면 2009년 이후로 경제 불황 키워드가 보이기 시작합니다. 실제 통계청에서도 경기 성장률 관련 지표를 찾아서 볼 수 있으며 아래와 같습니다. 
 
-<center><img src="../assets/images/keyword4-3.png" ></center>
+<center><img src="../../assets/images/keyword4-3.png" ></center>
 
 2008년 이후로 글로벌 금융 위기와 유럽 재정위기의 여파로 인해 세계 경기가 침체됨에 따라 한국의 성장률도 3%내외로 하락했고 장기적으로 성장률이 하락했다고 합니다. 일반적으로 보이는 현상이라고는 하는데, 그래도 이런 경제 침체는 없으면 좋겠습니다. 
 

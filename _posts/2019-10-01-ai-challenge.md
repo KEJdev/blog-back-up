@@ -27,7 +27,7 @@ use_math: true
 대회가 열리는 그 순간까지 참가자들의 많은 욕을 들었던 것 같다. 
 
 
-<center><img src="../assets/images/etc_ai.png" ></center>
+<center><img src="../../assets/images/etc_ai.png" ></center>
 
  
 도커 이야기를 앞에서 했던 이유는 제출 형식이 도커파일이였는데, 도커를 사용할 줄 모르는 사람들이 많은 항의를 했기 때문이다. 아무튼 그덕에 나도 도커기술을 어떨결에 습득하게 되었는데, 지금은 업무때문에 자주 사용하게 되서 괜찮지만, 그 당시에는 너무 힘들었던 기억이 난다. 

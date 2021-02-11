@@ -19,45 +19,45 @@ use_math: true
 ### Introduction
 
 <p align="center">
-      <img src="../assets/images/intro.svg"/>
+      <img src="../../assets/images/intro.svg"/>
 </p>
 
 
 ### Fundamentals
 
 <p align="center">
-      <img src="../assets/images/fundamentals.svg"/>
+      <img src="../../assets/images/fundamentals.svg"/>
 </p>
 
 ### Data Science Roadmap
 
 <p align="center">
-      <img src="../assets/images/datascience.svg"/>
+      <img src="../../assets/images/datascience.svg"/>
 </p>
 
 ### Machine Learning Roadmap
 
 <p align="center">
-      <img src="../assets/images/machine_learning.svg"/>
+      <img src="../../assets/images/machine_learning.svg"/>
 </p>
 
 
 ### Deep Learning Roadmap
 
 <p align="center">
-      <img src="../assets/images/deep_learning.svg"/>
+      <img src="../../assets/images/deep_learning.svg"/>
 </p>
 
 ### Data Engineer Roadmap
 
 <p align="center">
-      <img src="../assets/images/data_engineer.svg"/>
+      <img src="../../assets/images/data_engineer.svg"/>
 </p>
 
 ### Big Data Engineer Roadmap
 
 <p align="center">
-      <img src="../assets/images/big_data_engineer.svg"/>
+      <img src="../../assets/images/big_data_engineer.svg"/>
 </p>
 
 

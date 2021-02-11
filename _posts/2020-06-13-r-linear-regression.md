@@ -30,19 +30,19 @@ use_math: true
 1986년 1월 28일 미국의 스페이서 셔틀 챌린저호의 승무원 7명이 사망했다. 우주 왕복선이 발사 도중에 폭파해서 사망을 했기 때문이다. 폭파에 대한 원인 분석을 했는데 그 원인이 **발사 온도에 대한 o형 링의 파손** 때문이라고 한다. 그렇다면 식을 대입해 풀어본다면 아래와 같다. 
 
 
-<center><img src="../assets/images/linear.png" ></center>
+<center><img src="../../assets/images/linear.png" ></center>
 
 
 여기서 a와 b를 구해야는데, 최적의 a(기울기)와 b(절편)을 결정하기 위해 정규 최소 제곱으로 알려진 추정 기법을 사용할 수 있다. 실제 값와 예측값 사이의 수직 직선인 오차(잔차)를 제곱해서 구한 총합을 알아야 한다.
 
 
-<center><img src="../assets/images/linear2.png" ></center>
+<center><img src="../../assets/images/linear2.png" ></center>
 
 
 사실 식을 깔끔하게 정리하면 아래와 같다.
 
 
-<center><img src="../assets/images/linear3.png" ></center>
+<center><img src="../../assets/images/linear3.png" ></center>
 
 결국 기울기와 절편을 R을 이용해서 구하면 아래와 같다.
 

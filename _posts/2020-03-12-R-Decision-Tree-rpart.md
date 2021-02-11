@@ -65,7 +65,7 @@ head(hr)
 a<-information.gain(AHD~., hr[,-1])
 ```
 
-<center><img src="../assets//images/tree1.png" ></center>
+<center><img src="../../assets//images/tree1.png" ></center>
 
 
 -------
@@ -83,7 +83,7 @@ fancyRpartPlot(tree)
 
 아래와 같은 그래프를 볼 수 있는데, 여기서 이 데이터 분석에 대한 결과를 설명한다고 할때, 어떻게 할 수 있을까요 ?
 
-<center><img src="../assets//images/tree2.png" ></center>
+<center><img src="../../assets//images/tree2.png" ></center>
 
 
 -------

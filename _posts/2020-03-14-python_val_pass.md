@@ -29,22 +29,22 @@ use_math: true
 우선 첫번째, 인터프리터에서 마지막 값을 저장 할때 사용하는데, 아래와 같이 사용할 수 있습니다. 
 
 
-<center><img src="../assets//images/pass.png" ></center>
+<center><img src="../../assets//images/pass.png" ></center>
 
 
 그래서 이런 출력도 가능합니다. 
 
 
-<center><img src="../assets//images/pass2.png" ></center>
+<center><img src="../../assets//images/pass2.png" ></center>
 
 두번째는 값을 무시하고 싶을 때 사용하는데, for 문을 사용할 때 가장 많이 사용됩니다. 
 
-<center><img src="../assets//images/pass3.png" ></center>
+<center><img src="../../assets//images/pass3.png" ></center>
 
 2를 무시하고 값이 출력되는 것을 알 수 있으며, for 문을 사용하면 아래와 같이 사용할 수있습니다.
 
 
-<center><img src="../assets//images/pass_for.png" ></center>
+<center><img src="../../assets//images/pass_for.png" ></center>
 
 
 세번짼 변수나 함수명에 특별한 의미를 부여하고 싶을 때 사용합니다. 패키지를 만들기 위해 폴더 안에 _init_ 파일 만들때 사용합니다. 또한 함수명에 언더바를 붙이는 것에 따라 두가지 의미를 가지 수 있습니다.
@@ -77,4 +77,4 @@ dec_base= 1_000_000
 print(dec_base)
 ```
 
-<center><img src="../assets//images/pass4.png" ></center>
+<center><img src="../../assets//images/pass4.png" ></center>

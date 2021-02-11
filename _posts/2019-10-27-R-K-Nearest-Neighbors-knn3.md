@@ -34,7 +34,7 @@ buy<-read.csv("buy.csv",fileEncoding = "euc-kr")
 뒤에 붙어 있는 Encoding은 따로 환경설정해서 해주셨다면 안하셔도 됩니다. 저 같은 경우 현재 맥북을 사용하고 있어서 뒤에 Encoding처리를 따로 해주었습니다. 불러온 데이터는 아래와 같습니다.  
 
 
-<center><img src="../assets/images/dataset1.png" ></center>  
+<center><img src="../../assets/images/dataset1.png" ></center>  
 
 
 
@@ -45,7 +45,7 @@ buy$age <- scale(buy$나이)
 ```
 
 
-<center><img src="../assets/images/dataset2.png" ></center>  
+<center><img src="../../assets/images/dataset2.png" ></center>  
 
 
 
@@ -58,7 +58,7 @@ buy$pay <- scale(buy$월수입)
 아까와 똑같이 정규화를 해주세요.  
 
 
-<center><img src="../assets//images/dataset3.png" ></center>  
+<center><img src="../../assets//images/dataset3.png" ></center>  
 
 
 위와 같이 컬럼이 또 추가 된 것을 확인 할 수 있습니다. 그럼 이제 knn을 이용하여 구매분류를 해보겠습니다.

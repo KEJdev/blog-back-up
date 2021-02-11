@@ -55,7 +55,7 @@ tapply(sal,list(deptno,job),sum)
 pie(emp$sal)
 ```  
 
-<center><img src="../assets//images/pie1.png" ></center>  
+<center><img src="../../assets//images/pie1.png" ></center>  
 
 
 -------
@@ -94,5 +94,5 @@ pie(emp$sal)
 
 
 
-<center><img src="../assets//images/type.png" ></center>  
+<center><img src="../../assets//images/type.png" ></center>  
 

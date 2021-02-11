@@ -28,14 +28,14 @@ use_math: true
 예를 들어보겠습니다.  
 함수 $$y=f(x)$$에 대해서 $$x$$가 $$x_{0}$$ 에서 $$x_{0}+h$$ 로 변화할 때, $$y$$의 값은 $$f(x_{0}+h)$$로 변화한다고 할 때, 평균 변화율은 아래와 같습니다.  
 
-<center><img src="../assets//images/ml4.png" ></center>  
+<center><img src="../../assets//images/ml4.png" ></center>  
 
 
 그림을 보면 h가 서서히 0으로 다가가면 할선은 접선으로 다가갑니다. 
 
 
 
-<center><img src="../assets//images/ml3.png" ></center>  
+<center><img src="../../assets//images/ml3.png" ></center>  
 
 
 
@@ -43,7 +43,7 @@ use_math: true
 
 식은 아래와 같습니다.  
 
-<center><img src="../assets//images/ml5.png" ></center>  
+<center><img src="../../assets//images/ml5.png" ></center>  
 
 
 -------
@@ -83,7 +83,7 @@ plt.plot(x,y)
 plt.show()
 ```
 
-<center><img src="../assets//images/ml6.png" ></center>  
+<center><img src="../../assets//images/ml6.png" ></center>  
 
 여기에 도함수 그래프를 넣어 겹쳐서 보겠습니다.  
 
@@ -113,7 +113,7 @@ plt.show()
 ```
 
 
-<center><img src="../assets//images/ml7.png" ></center>  
+<center><img src="../../assets//images/ml7.png" ></center>  
 
 
 

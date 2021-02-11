@@ -94,7 +94,7 @@ def get_same():
 
 갑자기 코드가 길어져서 아마 놀랬을 것이다. 그래서 아래의 그림을 준비했다.
 
-<center><img src="../assets/images/api.png" ></center>
+<center><img src="../../assets/images/api.png" ></center>
 
 아마 위에 있는 코드를 보자마자 @app.route에 주소를 적고 아래 함수를 볼때, 첫번째 궁금증이 피어난다. **add 함수에 넣어야 할 매개변수를 어디에 있는가.** Study.py에 있는 add 함수에는 a,b라는 매개변수를 받아 서로 더하고 나서 리턴하는 구조인데, get_add() 함수는 그렇지 않다. **함수 안에서 데이터를 처리**하기 때문에 함수 생성시 , 직접 매개변수를 작성하지 않는다.
 
@@ -105,7 +105,7 @@ The method is not allowed for the requested URL." 를 볼 수 있을것이다. �
 
 여기서부터 실제 만든 API를 테스트하고 확인하려면 간단하게 [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=ko)이라는 툴을 이용하면 된다. 설치도 사용법도 무척이나 간단하다. 
 
-<center><img src="../assets/images/api2.png" ></center>
+<center><img src="../../assets/images/api2.png" ></center>
 
 위처럼 똑같이 세팅해주면 postman으로 API결과를 확인 할 수 있다. add와 마찬가지로 same도 테스트 하면 결과를 확인 할 수있다. 
 

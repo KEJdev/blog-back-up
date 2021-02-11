@@ -24,7 +24,7 @@ use_math: true
 문제는 아래와 같이 간단하게 두 수를 비교하는 것이다.
 
 
-<center><img src="../assets/images/baekjoon2.png" ></center>
+<center><img src="../../assets/images/baekjoon2.png" ></center>
 
 
 **Answer:**

@@ -117,5 +117,5 @@ gun.shoot(3)
 gun.print()
 ```
 
-<center><img src="../assets//images/gun.png" ></center>
+<center><img src="../../assets//images/gun.png" ></center>
 

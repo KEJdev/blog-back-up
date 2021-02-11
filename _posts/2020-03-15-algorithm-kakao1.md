@@ -27,7 +27,7 @@ use_math: true
 
 
 
-<center><img src="../assets//images/01.png" ></center>
+<center><img src="../../assets//images/01.png" ></center>
 
 
 네오가 프로도의 비상금을 손에 넣을 수 있도록, 비밀지도의 암호를 해독하는 작업을 도와줄 프로그램을 작성하라.   

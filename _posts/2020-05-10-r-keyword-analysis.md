@@ -104,15 +104,15 @@ nrow(news_df)-nrow(news_df2)
 
 파일을 저장 후 데이터를 따로 전처리를 끝내고 나면 아래와 같이 사회관련 뉴스 부분을 정리 할 수 있는데, 여기서 가장 많은 키워드는 아무래도 ..... 검찰과 경찰이겠죠?
 
-<center><img src="../assets/images/keyword2.png" ></center>
+<center><img src="../../assets/images/keyword2.png" ></center>
 
 그리고 주기적으로 보이는 키워드는 아무래도 날씨와 관련 있는 재해 부분 키워드 입니다. 
 
-<center><img src="../assets/images/keyword3.png" ></center>
+<center><img src="../../assets/images/keyword3.png" ></center>
 
 저 부분을 제외하면 중요해 보이는 키워드는 아래와 같습니다. 
 
-<center><img src="../assets/images/keyword4.png" ></center>
+<center><img src="../../assets/images/keyword4.png" ></center>
 
 잠깐만 봐도 해당 키워드들은 한 해를 떠들썩하게 했던 사건사고 키워드라는 것을 알 수 있습니다. 잊으면 안되는 2003년도 대구지하철 참사부터 2009년 신종플루 2010년 김길태, 천안함 사건, 2014년 세월호 등 많은 중요 키워드를 보고 한국 사회에서 일어난 모든 흐름을 알 수 있습니다. 
 

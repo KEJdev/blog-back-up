@@ -19,7 +19,7 @@ use_math: true
 
 문제는 아래와 같다.
 
-<center><img src="../assets/images/baekjoon7.png" ></center>
+<center><img src="../../assets/images/baekjoon7.png" ></center>
 
 **Answer:**
 

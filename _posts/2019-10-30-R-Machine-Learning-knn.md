@@ -38,7 +38,7 @@ priority : 1.0
 knn은 어떤 라벨을 정의할 때, 그 데이터의 주변 반경 ε(입실론)안의 데이터들의 라벨들을 조사하여 다수결로 k개 이상이면 가장 많은 라벨로 정의 하는 것을 knn 분류라고 합니다.  
 
 
-<center><img src="../assets//images/knn.png" ></center>  
+<center><img src="../../assets//images/knn.png" ></center>  
 
 **<center>knn 분류 예시</center>**
 

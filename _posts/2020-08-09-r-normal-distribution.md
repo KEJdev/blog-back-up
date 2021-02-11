@@ -29,7 +29,7 @@ plot(x, dnorm(x, mean=0, sd=1), type='l', main="정규분포 그래프")
 
 dnorm은 y축이며, mean 평균값, sd는 표준편차이다. type = 'l'은 직선을 뜻한다. 
 
-<center><img src="../assets/images/plot1.png" ></center>
+<center><img src="../../assets/images/plot1.png" ></center>
 
 정규분포 그래프를 보면 데이터가 오른쪽으로 비대칭인지, 왼쪽으로 비대칭인지를 확인할 수 있다. 
 
@@ -38,7 +38,7 @@ dnorm은 y축이며, mean 평균값, sd는 표준편차이다. type = 'l'은 직
 
 아래의 데이터를 넣고 어느쪽으로 편향되어 있는지 정규분포를 그려서 확인해볼까한다.
 
-<center><img src="../assets/images/plot2.png" ></center>
+<center><img src="../../assets/images/plot2.png" ></center>
 
 ```r
 x175 <-c(rep(1, 4), rep(2,6), rep(3,4), rep(4,4), rep(5,3), rep(6, 2), rep(7,1), rep(8,1))
@@ -51,7 +51,7 @@ plot(x175, dnorm(x175, mean=mean(x175), sd=sd(x175)), ylab='y', type='l', main="
 
 여기서 왜도와 첨도를 구하면 아래와 같이 구할 수 있다. 
 
-<center><img src="../assets/images/plot3.png" ></center>
+<center><img src="../../assets/images/plot3.png" ></center>
 
 
 ```r
@@ -64,4 +64,4 @@ skewness(x175)
 kurtosis(x175)
 ```
 
-<center><img src="../assets/images/plot4.png" ></center>
+<center><img src="../../assets/images/plot4.png" ></center>

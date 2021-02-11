@@ -83,7 +83,7 @@ sess.close()
 
 Tensorflow Session은 fetch와 feed 2가지 방법으로 처리 할 수 있습니다. 
 
-<center><img src="../assets//images/tensorflow2.png" ></center>
+<center><img src="../../assets//images/tensorflow2.png" ></center>
 
 
 fetch는 Tensor에 할당 되어야 실제 Session에서 실행을 할 수 있습니다. 

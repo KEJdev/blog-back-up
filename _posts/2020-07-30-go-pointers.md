@@ -43,4 +43,4 @@ func main() {
 
 결과 : 
 
-<center><img src="../assets/images/go6.png" ></center>
+<center><img src="../../assets/images/go6.png" ></center>

@@ -29,11 +29,11 @@ time.sleep(5)
 
 또는 아래와 같이 사용할 수 있습니다. 
 
-<center><img src="../assets//images/import.png" ></center>
+<center><img src="../../assets//images/import.png" ></center>
 
 같은 위치에 test3.py 라는 이름으로 아래의 코드를 생성하면 사용할 수 있습니다. 
 
-<center><img src="../assets//images/import2.png" ></center>
+<center><img src="../../assets//images/import2.png" ></center>
 
 
 --------
@@ -44,5 +44,5 @@ time.sleep(5)
 __name__(내장 전역변수)를 이용하면 지금 쓰고 있는 모듈이 하위 모듈인지를 확인 할 수 있습니다. 메인 모듈의 경우 __name__를 사용하면 main이라고 나오며 하위모듈의 경우 __name__을 이용하여 출력을 하면 모듈명이 출력됩니다. 
 
 
-<center><img src="../assets//images/import3.png" ></center>
+<center><img src="../../assets//images/import3.png" ></center>
 

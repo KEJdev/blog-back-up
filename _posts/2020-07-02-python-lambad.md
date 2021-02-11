@@ -22,7 +22,7 @@ use_math: true
 
 람다식은 아래와 같다.
 
-<center><img src="../assets/images/lambda.png" ></center>
+<center><img src="../../assets/images/lambda.png" ></center>
 
 그래서 위의 식을 이용해서 간단하게 덧셈 함수를 만들면 이렇게 할 수 있다.
 

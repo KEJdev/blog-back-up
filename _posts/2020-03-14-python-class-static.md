@@ -66,7 +66,7 @@ gun_2.print()
 
 여기서 gun_1과 gun_2는 서로 별개의 총입니다. 같은 클래스로 만들었지만 별개의 총이죠. 실제로 print를 찍어 확인해보면 메모리 주소가 다른 것을 확인 할 수 있습니다. 
 
-<center><img src="../assets//images/gun2.png" ></center>
+<center><img src="../../assets//images/gun2.png" ></center>
 
 그런데, 여기서 static method를 사용해서 클래스를 다시 만들면 아래와 같습니다.
 
@@ -97,10 +97,10 @@ class Gun():
 
 그리고 아까와 똑같이 만드는데, gun_2에는 총알을 장전하지 않고 총을 쏘게 되면 아래와 같은 결과를 얻을 수 있습니다.
 
-<center><img src="../assets//images/gun3.png" ></center>
+<center><img src="../../assets//images/gun3.png" ></center>
 
 결과를 보면 다른 총이지만 장전된 총알을 공유하는 것을 알 수 있습니다. 즉 , gun_2는 장전은 하지 않았지만 발포가 가능합니다. 월래라면 에러가 나야 하지만 메모리를 공유하기 때문인데 총알을 공유하는 것입니다.
 
-<center><img src="../assets//images/gun4.png" ></center>
+<center><img src="../../assets//images/gun4.png" ></center>
 
 print을 찍어보면 메모리를 같음을 알 수 있습니다.

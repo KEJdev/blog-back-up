@@ -42,7 +42,7 @@ cache miss일 경우 실행시간은 5이다.
 
 * **입출력 예제**  
 
-<center><img src="../assets//images/02.png" ></center>
+<center><img src="../../assets//images/02.png" ></center>
 
 
 

@@ -23,7 +23,7 @@ priority : 1.0
 wisc<-read.csv("wisc_bc_data.csv",stringsAsFactors=FALSE, header = F)
 ```
 
-<center><img src="../assets//images/wisc.png" ></center>  
+<center><img src="../../assets//images/wisc.png" ></center>  
 
 데이터에서 diagnosis는 라벨이며, B는 양성이고, M이 악성입니다. 전체 라벨에 대해 분포를 보면, 총 569명중에서 1/3이 악성이고 2/3이 양성임을 알 수 있습니다.
 
@@ -48,7 +48,7 @@ summary(wbcd_n) # 정규화가 잘 되었는지 확인
                 # 0 ~ 1 사이에 있는지 / min 과 max
 ```
 
-<center><img src="../assets//images/wisc2.png" ></center>
+<center><img src="../../assets//images/wisc2.png" ></center>
 
 그리고 전체 데이터에서 훈련 데이터와 학습 데이터를 나누는 작업을 하고 knn으로 돌려주겠습니다.
 
@@ -91,5 +91,5 @@ CrossTable(x=wbcd[470:569,2], y=result1, prop.chisq = FALSE )
 
 이원 교차표를 보면 악성인데, 양성으로 오진한 결과 때문에 정확도가 떨어짐을 알 수 있습니다. 
 
-<center><img src="../assets//images/wisc3.png" ></center>
+<center><img src="../../assets//images/wisc3.png" ></center>
 

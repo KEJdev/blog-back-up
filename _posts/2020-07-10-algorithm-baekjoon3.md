@@ -21,7 +21,7 @@ BAEKJOON 10871번 문제를 풀어보았다. for문만 사용할 줄 안다면, 
 
 문제는 아래와 같다.
 
-<center><img src="../assets/images/baekjoon3.png" ></center>
+<center><img src="../../assets/images/baekjoon3.png" ></center>
 
 **Answer:**
 

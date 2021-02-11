@@ -18,7 +18,7 @@ for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문�
 
 while문 구조는 아래와 같습니다.  
 
-<center><img src="../assets//images/python_a5.png" ></center>  
+<center><img src="../../assets//images/python_a5.png" ></center>  
 
 
 위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.  

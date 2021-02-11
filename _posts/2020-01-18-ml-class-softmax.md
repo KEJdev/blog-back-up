@@ -239,6 +239,6 @@ dx, dw1, db1 = affine1.backward(relu_dout1)
 print('dx : \n', dx)
 ```
 
-<img src="../assets//images/softmax.png" >
+<img src="../../assets//images/softmax.png" >
 
 

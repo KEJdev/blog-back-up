@@ -20,7 +20,7 @@ use_math: true
 try ~ except ~ finally문법은 아래와 같습니다. try ~ except과 별반 다를 것이 없고 그냥 한줄만 추가하면 되는거라 복잡하지는 않습니다. 
 
 
-<center><img src="../assets//images/try3.png" ></center>
+<center><img src="../../assets//images/try3.png" ></center>
 
 
 ```python

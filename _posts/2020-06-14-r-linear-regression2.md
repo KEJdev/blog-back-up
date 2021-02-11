@@ -36,7 +36,7 @@ head로 데이터를 보면 아래와 같이 볼 수 있다.
 head(all_data)
 ```
 
-<center><img src="../assets/images/all_data.png" ></center>
+<center><img src="../../assets/images/all_data.png" ></center>
 
 
 그래프는 아래와 같고, x축은 코스피 등락 비율, y축은 삼성 수익율 등락 비율이다.
@@ -46,7 +46,7 @@ attach(all_data)
 plot(k_rate, s_rate, col='blue')
 ```
 
-<center><img src="../assets/images/s_stock2.png" ></center>
+<center><img src="../../assets/images/s_stock2.png" ></center>
 
 여기서 회귀 직선을 그으면 아래와 같은 그림을 볼 수 있다.
 
@@ -55,7 +55,7 @@ s_model <- lm(s_rate~k_rate, all_data)
 abline(s_model, col='red
 ```
 
-<center><img src="../assets/images/s_stock3.png" ></center>
+<center><img src="../../assets/images/s_stock3.png" ></center>
 
 현대도 삼성과 마찬가지로 그래프를 그리면 아래와 같다.
 
@@ -65,7 +65,7 @@ h_model <- lm(h_rate~k_rate, all_data)
 abline(h_model, col='brown')
 ```
 
-<center><img src="../assets/images/h_stock.png" ></center>
+<center><img src="../../assets/images/h_stock.png" ></center>
 
 
 ---------
@@ -75,15 +75,15 @@ abline(h_model, col='brown')
 
 10년치 데이터를 가지고 그래프를 그리면 아래와 같이 그릴 수 있고, 기울기를 보면 현대는 1.06, 삼성은 1.02임을 알 수 있다. 
 
-<center><img src="../assets/images/10Ydata.png"></center>
+<center><img src="../../assets/images/10Ydata.png"></center>
 
 전체적으로 봣을때는 비슷비슷 한거 같다. 그렇다면 상관 계수를 한번 살펴보자. 처음 데이터를 가지고 상관 계수를 구하면 아래와 같다.
 
-<center><img src="../assets/images/cor.png" ></center>
+<center><img src="../../assets/images/cor.png" ></center>
 
 그리고 10년치 데이터를 사용하여 상관 계수를 구하면 아래와 같다.
 
-<center><img src="../assets/images/cor2.png" ></center>
+<center><img src="../../assets/images/cor2.png" ></center>
 
 
 그렇다면 상관계수와 기울기를 가지고 어떤 결론을 낼 수 있을까? 

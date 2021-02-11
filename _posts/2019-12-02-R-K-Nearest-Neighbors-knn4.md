@@ -37,7 +37,7 @@ class = c("Fruits","Proteins","Fruits","Vegetables",
 출력하면 아래와 같이 출력이 됩니다.  
 
 
-<center><img src="../assets//images/r3.png" ></center>  
+<center><img src="../../assets//images/r3.png" ></center>  
 
 
 그럼 이제 토마토 데이터를 만들어 보겠습니다. 토마토 데이터는 아래와 같이 만들어주면 된답니다.  
@@ -58,7 +58,7 @@ train_data <- food[,c(2,3)]
 ```
 
 
-<center><img src="../assets//images/r4.png" ></center>  
+<center><img src="../../assets//images/r4.png" ></center>  
 
 
 
@@ -77,7 +77,7 @@ result1<-knn(train_data,tomato ,train_label, k=3, prob=TRUE)
 ```
 
 
-<center><img src="../assets//images/r5.png" ></center>  
+<center><img src="../../assets//images/r5.png" ></center>  
 
 
 

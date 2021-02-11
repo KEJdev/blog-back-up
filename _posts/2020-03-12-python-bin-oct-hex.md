@@ -67,4 +67,4 @@ for i in range(20):
 # hex : 16진수 
 ```
 
-<center><img src="../assets//images/bin.png" ></center>
+<center><img src="../../assets//images/bin.png" ></center>

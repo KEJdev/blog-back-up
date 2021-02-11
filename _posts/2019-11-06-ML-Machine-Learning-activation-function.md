@@ -64,7 +64,7 @@ plt.show()
 
 위 코드로 그래프를 출력하면 아래와 같이 출력되는 것을 확인 할 수있습니다.
 
-<center><img src="../assets//images/sigmoid.png" ></center>  
+<center><img src="../../assets//images/sigmoid.png" ></center>  
 
 
 -------
@@ -103,7 +103,7 @@ plt.ylim(-0.1, 1.1 )
 plt.show()
 ```
 
-<center><img src="../assets//images/relu.png" ></center>  
+<center><img src="../../assets//images/relu.png" ></center>  
 
 
 -------

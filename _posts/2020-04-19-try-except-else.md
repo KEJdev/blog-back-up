@@ -33,13 +33,13 @@ print(my_power())
 위와 같이 코드를 작성하고 에러를 출력해보겠습니다.
 
 
-<center><img src="../assets//images/try.png" ></center>
+<center><img src="../../assets//images/try.png" ></center>
 
  
 여기서 try ~ except를 사용하겠습니다.
 
 
-<center><img src="../assets//images/try2.png" ></center>
+<center><img src="../../assets//images/try2.png" ></center>
 
 
 ```python

@@ -21,7 +21,7 @@ BAEKJOON 2588번 문제는 빈 칸에 들어갈 수를 출력하는 문제이다
 
 문제는 아래와 같다.
 
-<center><img src="../assets/images/baekjoon5.png" ></center>
+<center><img src="../../assets/images/baekjoon5.png" ></center>
 
 **Answer:**
 

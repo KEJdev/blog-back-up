@@ -76,5 +76,5 @@ return sumcircle
 ```
 
 
-<center><img src="../assets//images/pi.png" ></center>
+<center><img src="../../assets//images/pi.png" ></center>
 

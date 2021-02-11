@@ -21,8 +21,8 @@ priority : 1.0
 우선 AND Perceptron에 대해 알아보겠습니다. 
 
 
-<center><img src="../assets//images/and.png" ></center>  
-<center><img src="../assets//images/ml1.png" ></center>  
+<center><img src="../../assets//images/and.png" ></center>  
+<center><img src="../../assets//images/ml1.png" ></center>  
 
 
 그림의 원을 뉴런 혹은 노드라고 부릅니다.  
@@ -31,7 +31,7 @@ priority : 1.0
 
 그렇다면 퍼셉트론의 동작원리를 잠시 수식으로 보겠습니다.
 
-<center><img src="../assets//images/ml2.png" ></center>  
+<center><img src="../../assets//images/ml2.png" ></center>  
 
 
 퍼셉트론 동작원리는 수식으로 나타내면 위와 같습니다. 퍼셉트론은 복수의 입력 신호 각각에 고유한 가중치를 부여합니다. 가중치는 각 신호가 결과에 주는 영향력을 조절하는 요소로 적용됩니다.  
@@ -71,7 +71,7 @@ for xs1 in inputData:
 w는 가중치고, b는 bias라고 합니다. bias란 뉴런이 얼마나 활성화 하느냐를 조정하는 매개변수입니다. 
 그렇다면 이번엔 OR Perceptron을 구현해보겠습니다.
 
-<center><img src="../assets//images/or.png" ></center>  
+<center><img src="../../assets//images/or.png" ></center>  
 
 ```python
 def OR_Perceptron(x1, x2):

@@ -28,7 +28,7 @@ use_math: true
 
 **1) 데이터 플로우 그래프를 통한 풍부한 표현력**
 
-<center><img src="../assets//images/tensorflow1.png" ></center>
+<center><img src="../../assets//images/tensorflow1.png" ></center>
 
 데이터 플로우 그래프(Data Flow Graph)방식을 사용하며, 그래프를 시작하기 위해서 텐서보드라는 것을 사용할 수 있습니다.
 

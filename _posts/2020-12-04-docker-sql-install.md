@@ -25,7 +25,7 @@ Docker Hub에 가면 Oracle 11g 이미지를 [다운](https://hub.docker.com/r/j
 docker pull jaspeen/oracle-11g
 ```
 
-<center><img src="../assets/images/docker.png" ></center>
+<center><img src="../../assets/images/docker.png" ></center>
 
 이미지를 다운 받았으면, 실행을 해보자. 
 
@@ -33,7 +33,7 @@ docker pull jaspeen/oracle-11g
 docker run --name oracle11g -d -p 1521:1521 jaspeen/oracle-xe-11g
 ```
 
-<center><img src="../assets/images/docker2.png" ></center>
+<center><img src="../../assets/images/docker2.png" ></center>
 
 간단하게 SQL문을 쓰는게 목적이라면, 아래와 같이 적자.
 
@@ -45,15 +45,15 @@ docker exec -it oracle11g sqlplus
 참고로 user name과 password는 system / oracle 이다. 
 
 
-<center><img src="../assets/images/docker3.png" ></center>
+<center><img src="../../assets/images/docker3.png" ></center>
 
 그런데, 이렇게 쓸수는 없기에... SQL Developer를 다운받아 사용하였다.
  
-<center><img src="../assets/images/docker5.png" ></center>
+<center><img src="../../assets/images/docker5.png" ></center>
 
 접속 정보는 위와 같다. 
 
-<center><img src="../assets/images/docker4.png" ></center>
+<center><img src="../../assets/images/docker4.png" ></center>
 
 이제 집에서도 편하게 SQL공부 할 수 있다. 
 

@@ -27,7 +27,7 @@ use_math: true
 문제를 잘 읽고 풀어야 하는 알고리즘에서 그냥 Hello World 출력하는거네~ 하고 문제 제대로 안보고 그냥 코드를 돌린 나의 한심함을 표하며 글을 올린다. 
 
 
-<center><img src="../assets/images/baekjoon1.png" ></center>
+<center><img src="../../assets/images/baekjoon1.png" ></center>
 
 
 **Answer:**

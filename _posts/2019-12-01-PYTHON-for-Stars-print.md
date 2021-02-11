@@ -21,7 +21,7 @@ priority : 1.0
 파이썬의 for 문의 기본적인 구조는 아래와 같습니다.  
 
 
-<center><img src="../assets//images/python_a3.png" ></center>  
+<center><img src="../../assets//images/python_a3.png" ></center>  
 
 
 
@@ -30,7 +30,7 @@ for문은 리스트나 튜플, 문자열의 첫번째 요소부터 마지막 요
 그래서 조금 더 자세하게 문법을 설명하자면, 아래와 같습니다.  
 
 
-<center><img src="../assets//images/python_a6.png" ></center>  
+<center><img src="../../assets//images/python_a6.png" ></center>  
 
  
 숫자 1부터 3까지를 for문을 이용하여 출력해보겠습니다. 
@@ -57,7 +57,7 @@ for i in range(1,11,2): # 1부터 10까지 증가하는데, 2씩 증가시켜라
 
 range는 자주 사용하니, 사용법을 익혀 두는 것이 좋습니다. 그러면 range를 사용하여, 컴공들이 자주 찍는다는 별찍기를 해보도록 하겠습니다. 
 
-<center><img src="../assets//images/for1.png" ></center>  
+<center><img src="../../assets//images/for1.png" ></center>  
 
 
 
@@ -78,7 +78,7 @@ for i in range(1,11):
 이번에 반대로 별을 찍어볼까요?
 
 
-<center><img src="../assets//images/for2.png" ></center>  
+<center><img src="../../assets//images/for2.png" ></center>  
 
 
 이렇게 별을 찍어보겠습니다. 
@@ -94,7 +94,7 @@ for i in range(10,0,-1):
 단, 이번에는 가로/세로를 입력을 받아서 ★를 출력하되, 중첩 for문을 사용하지 않고 작성해보도록 하겠습니다.  
 
 
-<center><img src="../assets//images/for3.png" ></center>  
+<center><img src="../../assets//images/for3.png" ></center>  
 
 
 
