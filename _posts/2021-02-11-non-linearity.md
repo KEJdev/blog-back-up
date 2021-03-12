@@ -12,7 +12,7 @@ use_math: true
 ---
 
 
-예전 포스팅에 [미분이 필요한 이유](http://127.0.0.1:4000/posts/ML-Machine-Learning-Differential-neural-network/)에 대해서 정말 잠깐 이야기 했었는데, 블로그 정리하면서 보니 설명이 매우 부족한거 같아 좀 더 정리할 겸 이렇게 글을 쓰게 되었다. 
+예전 포스팅에 [미분이 필요한 이유](http://kejdev.github.io/posts/ML-Machine-Learning-Differential-neural-network/)에 대해서 정말 잠깐 이야기 했었는데, 블로그 정리하면서 보니 설명이 매우 부족한거 같아 좀 더 정리할 겸 이렇게 글을 쓰게 되었다. 
 
 
 ### 다항식 
