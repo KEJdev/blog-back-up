@@ -40,7 +40,7 @@ for i in (1,2,3):
   print(i)
 ```
 
-자열도 for문으로 돌려보겠습니다.  
+문자열도 for문으로 돌려보겠습니다.  
 
 ```python
 for i in 'i like tteokbokki':
