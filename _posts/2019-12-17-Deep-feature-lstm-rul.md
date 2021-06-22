@@ -1,12 +1,14 @@
 ---
-title:  논문요약, Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network
+title:  (논문요약) Predicting remaining useful life of rolling bearings based on deep feature representation and long short-term memory neural network
 date:   2019-12-17 09:00:00 +0300
 categories:  [Machine Learning,  paper]
 sitemap :
+tags : [논문]
 math: true
 mermaid: true
 changefreq : always
 priority : 1.0
+use_math: true
 ---
 
 
@@ -32,7 +34,6 @@ Paper URL: <https://journals.sagepub.com/doi/full/10.1177/1687814018817184>
 ### Deep feature 
 
 deep feature 간단하게 말하면 신경망에서 나오는 feature를 이야기 합니다. 아래의 이미지에서 사람의 사진이 신경망을 거치면서 나오는 저 feature들을 이야기 합니다. 
-(이미지 출처는 [여기](ttps://youthassembly.or.kr/bbs/board.php?bo_table=B56&wr_id=30225)를 클릭해주세요.)
 
 
 <center><img src="../../assets//images/feature.png" ></center> 
