@@ -12,7 +12,7 @@ use_math: true
 ---
 
 
-실제 심장질환 데이터를 분석하여 심장질환에 있어 가장 영향력이 큰 변수를 찾아보도록 하겠습니다. 데이터 상세 설명은 [여기](https://rpubs.com/mbbrigitte/HeartDisease)에서 볼 수 있으며, 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 다운 받을 수 있습니다. 그리고 코드는 [여기](https://github.com/KEJdev/R-Example) GitHub에서 확인 할 수 있습니다. 
+실제 심장질환 데이터를 분석하여 심장질환에 있어 가장 영향력이 큰 변수를 찾아보도록 하겠습니다. 데이터 상세 설명은 [여기](https://rpubs.com/mbbrigitte/HeartDisease)에서 볼 수 있으며, 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 다운 받을 수 있습니다. 그리고 코드는 [여기](https://github.com/KEJdev/R-Study/blob/master/Decision%20Tree/Tree_%EC%8B%AC%EC%9E%A5%EC%A7%88%ED%99%98%20%EB%B6%84%EC%84%9D.R) GitHub에서 확인 할 수 있습니다. 
 
 -------
 

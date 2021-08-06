@@ -97,4 +97,4 @@ result <- knn(zoo2_n_train, zoo2_n_test, zoo2_train_label, k=1)
 <center><img src="../../assets//images/r9.png" ></center>  
 
 마지막 2와 출력 결과인 2가 일치하는 결과를 확인할 수 있습니다.   
-다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 [여기](https://github.com/KEJdev/R-Example)에서 보실 수 있습니다.
+다음 포스팅에는 유방암 데이터를 이용하여 악성인지 양성인지 분류해보고 조금 더 깊게 들어가기 위해 이원교차표와 적절한 k값을 찾는 방법에 대해 알아보겠습니다. 전체 코드는 [여기](https://github.com/KEJdev/R-Study/blob/master/K-Nearest%20Neighbors/knn_%EB%8F%99%EB%AC%BC%20%EB%B6%84%EB%A5%98.R)에서 보실 수 있습니다.

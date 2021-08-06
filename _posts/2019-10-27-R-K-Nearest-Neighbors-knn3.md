@@ -88,7 +88,7 @@ result <-(test_data, test_data, train_label , k=5, prob =TRUE)
 
  
 출력하면 "구매"라는 결과를 볼 수 있습니다.  
-knn는 과일 분류를 해보겠습니다. 주제는 토마토가 야채인지, 과일인지에 대해 분류를 해보겠습니다. 포스팅 한 코드는 [여기](https://github.com/KEJdev/R-Example)에서 전체 코드를 볼 수 있습니다.  
+knn는 과일 분류를 해보겠습니다. 주제는 토마토가 야채인지, 과일인지에 대해 분류를 해보겠습니다. 포스팅 한 코드는 [여기](https://github.com/KEJdev/R-Study/blob/master/K-Nearest%20Neighbors/knn_%EA%B5%AC%EB%A7%A4%EC%97%AC%EB%B6%80%20%EB%B6%84%EB%A5%98.R)에서 전체 코드를 볼 수 있습니다.  
 
 
 

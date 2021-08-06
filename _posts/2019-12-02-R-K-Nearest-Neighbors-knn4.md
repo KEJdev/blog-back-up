@@ -82,7 +82,7 @@ result1<-knn(train_data,tomato ,train_label, k=3, prob=TRUE)
 
 
 이번 knn은 조금 재밌지 않나요 ? 다음 포스팅에서는 knn을 이용한 동물 분류해보도록 하겠습니다.    
-전체 코드는 [여기](https://github.com/KEJdev/R-Example)에서 확인하실 수 있습니다.  
+전체 코드는 [여기](https://github.com/KEJdev/R-Study/blob/master/K-Nearest%20Neighbors/knn_%EA%B3%BC%EC%9D%BC%20%EB%B6%84%EB%A5%98.R)에서 확인하실 수 있습니다.  
 
 
 
