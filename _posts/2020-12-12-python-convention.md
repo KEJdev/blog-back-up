@@ -137,7 +137,7 @@ bar = (0, )
 
 **7. Docstrings**
 
-public 모듈, 함수, 클래스, 함수에 대해서는 Docstrings을 사용하도록 하자. 무든 역활을 하는지에 대해 작성하는 것이 좋으며 def문장 바로 아래줄에 작성하자.
+public 모듈, 함수, 클래스, 함수에 대해서는 Docstrings을 사용하도록 하자. 무슨 역활을 하는지에 대해 작성하는 것이 좋으며 def문장 바로 아래줄에 작성하자.
 
 ```python 
 # 한줄 Docstrings
