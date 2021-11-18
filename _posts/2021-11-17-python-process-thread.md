@@ -27,6 +27,9 @@ use_math: true
 
 * 병렬성(Parallelism) :프로세스 하나에 코어 여러개가 달려서 각각 동시에 작업들을 수행하는 것을 말한다. CPU의 속도가 발열과 같은 물리적 제약에 직면하여 예전만큼 빠르게 발전하지 못하자, 그 대안으로 여러 코어를 여러개 달려서 작업을 분담ㅁ할 수 있도록 만든 것이다.
 
+
+<center><img src="../../assets/images/process.jpeg" ></center> 
+
 ----------
 ### 스레드 (Thread)  
 
