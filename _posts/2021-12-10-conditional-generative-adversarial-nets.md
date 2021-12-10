@@ -11,6 +11,8 @@ priority : 1.0
 use_math: true
 ---
 
+Paper URL: [Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.1784) 
+
 해당 논문은 Conditional GAN이라는 논문을 소개하고 있다.  간단하게 y라는 데이터를 추가하므로써 내가 원하는 데이터를 생성하는 것이 이 논문의 핵심이다.
 
 기존의 GAN은 데이터가 생성되는데에 통제권이 없었다. 이뜻은 무엇일까? 
