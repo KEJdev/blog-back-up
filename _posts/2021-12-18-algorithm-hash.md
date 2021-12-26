@@ -1,5 +1,5 @@
 ---
-title:  해시(Hash)에 대한 알아보자.
+title:  해시(Hash)에 대해 알아보자.
 date:   2021-12-18 09:00:00 +0300
 categories:  [Program Language , python]
 tags : [Python]
