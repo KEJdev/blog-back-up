@@ -1,5 +1,5 @@
 ---
-title:  오픈 API를 사용하기
+title: 간단하게 오픈 API 사용하기
 date:   2022-02-15 09:00:00 +0300
 categories:  [Program Language , python]
 tags : [Python]
