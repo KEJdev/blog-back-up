@@ -2,6 +2,15 @@
   Styles for Tab Tags
 */
 
+
+@font-face {
+  font-family: 'Cafe24Ohsquareair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .tag {
   border-radius: 0.7em;
   padding: 6px 8px 7px;
@@ -13,6 +22,6 @@
   span {
     margin-left: 0.6em;
     font-size: 0.7em;
-    font-family: 'Nanum Barun Gothic', sans-serif;
+    font-family: 'Cafe24Ohsquareair','Nanum Barun Gothic', sans-serif;
   }
 }

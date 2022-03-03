@@ -1,9 +1,17 @@
 /*
   The common styles
 */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;900&display=swap');
-@CHARSET "UTF-8"; 
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+// @import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;900&display=swap');
+// @CHARSET "UTF-8"; 
+// @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+
+@font-face {
+  font-family: 'Cafe24Ohsquareair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @mixin mode-toggle($dark-mode: false) {
   @if $dark-mode {
@@ -53,7 +61,7 @@ body {
   font-size: 0.9rem;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Nanum Barun Gothic', sans-serif;
+  font-family: 'Cafe24Ohsquareair','Nanum Barun Gothic', sans-serif;
 }
 
 /* --- Typography --- */
@@ -974,7 +982,7 @@ $sidebar-display: "sidebar-display";
   display: none;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: sans-serif;
+  font-family: 'Cafe24Ohsquareair', sans-serif;
   color: var(--topbar-text-color);
   text-align: center;
   width: 70%;
