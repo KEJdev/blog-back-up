@@ -7,7 +7,6 @@
   a:hover {
     text-decoration: none;
   }
-
   .page-item {
     .page-link {
       color: var(--btn-patinator-text-color);
@@ -23,7 +22,7 @@
       align-items: center;
       border-radius: 50%;
       border: 1px solid var(--btn-paginator-border-color);
-      font-family: 'Cafe24Ohsquareair','Nanum Barun Gothic', sans-serif;
+      font-family: 'EliceDigitalBaeum_Bold','Nanum Barun Gothic', sans-serif;
       background-color: var(--button-bg);
       &:hover {
         background-color: var(--btn-paginator-hover-color);

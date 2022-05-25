@@ -6,9 +6,9 @@
 // @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); 
 
 @font-face {
-  font-family: 'Cafe24Ohsquareair';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
-  font-weight: normal;
+  font-family: 'EliceDigitalBaeum_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -58,10 +58,10 @@ html[mode=dark] {
 body {
   line-height: 1.75rem;
   background: var(--body-bg);
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Cafe24Ohsquareair','Nanum Barun Gothic', sans-serif;
+  font-family: 'EliceDigitalBaeum_Bold','Nanum Barun Gothic', sans-serif;
 }
 
 /* --- Typography --- */
@@ -982,7 +982,7 @@ $sidebar-display: "sidebar-display";
   display: none;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Cafe24Ohsquareair', sans-serif;
+  font-family: 'EliceDigitalBaeum_Bold', sans-serif;
   color: var(--topbar-text-color);
   text-align: center;
   width: 70%;
@@ -1423,7 +1423,7 @@ $sidebar-display: "sidebar-display";
   }
 
   .post-content p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   footer > div.d-felx {
