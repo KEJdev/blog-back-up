@@ -1,5 +1,5 @@
 ---
-title:  백준 - 브루트포스(Brute Force) 에 대해 알아보자.
+title:  백준 - 브루트포스(Brute Force) 단계별 문제 풀이(Python).
 date:   2022-05-31 09:00:00 +0300
 categories:  [Program Language , Algorithm]
 tags : [알고리즘,Python]
