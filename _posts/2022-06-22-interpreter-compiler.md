@@ -16,10 +16,10 @@ use_math: true
 
 오늘은 그 책을 보면서 파이썬에 대해서 전체적으로 이야기 해볼까한다.  
 
+[위키백과](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC) 참고.
 ```
 인터프리터식, 객체지향적, 동적 타이핑(dynamically typed) 대화형 언어이다.    
 ```
-<center>[위키백과](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC)</center>
 
 인터프리터는 무엇이고 객체지향과 동적 타이핑은 무엇일까 ?
 
