@@ -47,7 +47,7 @@ use_math: true
 
 -------
 
-### 절차 지향과 객체 지향 프로그래밍 차이
+### 절차 지향과 객체 지향 프로그래밍 
 
 절차 지향과 객체 지향 개념은 서로 반대 개념이 아니다.  
 둘다 명령형 프로그램의 하위 개념이기에 공유하는 것이 많다.  
@@ -59,6 +59,22 @@ use_math: true
 * 객체지향 프로그래밍  
     * 자료구조와 함수를 먼저 설계하고 그 후에 실행 순서와 흐름을 설계 
     (객체간의 관계에 초점)
+
+-------  
+
+### 관점 지향 프로그래밍(Aspect Oriented Programming)
+
+<center><img src="../../assets/images/AOP2.png" ></center> 
+
+관점지향 프로그래밍의 핵심은 공통 모듈을 분리시켜 해당 소스코드가 외부의 다른 클래스에서 존재하는 것이다. 참고로 객체지향을 보조하는 역활이기 때문에 객체지향 코드위에서 이루어진다.  
+
+객체지향은 객채(Object)라는 개념을 활용함으로써 큰 프로그램을 모듈 단위로 축소시켜 작성할 수 있게 했지만, 프로그램의 크기가 엄청나게 커지면서 모듈 안에서마저 중복되는 코드가 생기게 된다.  
+
+이렇게 모듈 안에서 중복코드가 생기게 되는 것을 횡단 관심사(Crosscutting-Concerns) 라고 한다. 그 중에 자주 언급되는 것은 트랜잭션, 로깅, 성능 분석 등이 있다.  
+
+<center><img src="../../assets/images/AOP.png" ></center> 
+
+횡단 관심사들은 여러 모듈들을 말 그대로 횡단하면서 존재하게 되며 AOP를 이해함에 있어서 매우 중요한 개념이며, AOP를 통해 중복 코드 제거, 효율적인 유지복수, 높은 생산성, 재활용성 극대화 등의 이점을 얻을 수 있다. 
 
 ------
 
@@ -142,6 +158,12 @@ totalLength = lineLengths.reduce(lambda a, b: a + b)
 코드를 보면 별도의 변수의 선언 없이 함수들의 조합만으로 원하는 결과를 얻을 수 있다. 또한 리스트 컴프리헨션을 이용해 새로운 리스트를 선언 없이 리스트 값을 필터링 한다는 등이 있다.  
 
 
+---------   
+**reference**    
+[https://velog.io/@gillog](https://velog.io/@gillog/AOP%EA%B4%80%EC%A0%90-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
+[https://hoi5088.medium.com/](https://hoi5088.medium.com/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84-%EC%A0%88%EC%B0%A8-%EC%A7%80%ED%96%A5-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-a5160a1e39e4)  
+[https://docs.python.org/3/howto/functional.html](https://docs.python.org/3/howto/functional.html)  
+[https://jinwoo1990.github.io/dev-wiki/python-concept-1/](https://jinwoo1990.github.io/dev-wiki/python-concept-1/)
 
 
 
