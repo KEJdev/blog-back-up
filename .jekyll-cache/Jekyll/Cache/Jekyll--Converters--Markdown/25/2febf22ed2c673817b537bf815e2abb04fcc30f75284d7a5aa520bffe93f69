@@ -1,0 +1,41 @@
+I"<p>오랜만에 PL/SQL에 관한 포스팅을 쓰네요. 오늘은 PLSQL에서 커서(cursor)라는 것에 대해 알아보겠습니다.</p>
+
+<h2 id="커서cursor">커서(cursor)</h2>
+
+<p>커서는 4단계로 볼 수 있습니다. 커서선언, 커서오픈, 커서패치, 커서닫기가 있습니다.<br />
+커서는 메모리에 올릴 데이터를 결정하고 메모리에 올린 데이터를 한건씩 가져올때 사용합니다. 커서의 진행 단계는 아래와 같습니다.</p>
+
+<p><strong>1. 커서선언: 메모리에 올랄 데이터를 결정</strong><br />
+<strong>2. 커서오픈: 메모리에 올린 데이터를 쓰기 위해 메모리를 여는 단계</strong><br />
+<strong>3. 커서패치: 메모리에 올린 데이터를 한건씩 가져오는 작업</strong><br />
+<strong>4. 커서닫기:  메모리 닫기 Close</strong></p>
+
+<p>위 절차대로 사용해야하며 아래와 같이 사용 하실 수 있습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">accept</span> <span class="n">p_ename</span> <span class="n">prompt</span> <span class="s1">' 이름을 입력하세요 ~   '</span> 
+<span class="k">declare</span> 
+    <span class="n">v_ename</span> <span class="n">emp</span><span class="p">.</span><span class="n">ename</span><span class="o">%</span><span class="k">type</span> <span class="p">:</span><span class="o">=</span> <span class="k">upper</span><span class="p">(</span><span class="s1">'&amp;p_ename'</span><span class="p">);</span>
+    <span class="n">v_sal</span> <span class="n">emp</span><span class="p">.</span><span class="n">sal</span><span class="o">%</span><span class="k">type</span><span class="p">;</span>
+    <span class="n">v_job</span> <span class="n">emp</span><span class="p">.</span><span class="n">job</span><span class="o">%</span><span class="k">type</span><span class="p">;</span>
+    
+    <span class="k">cursor</span> <span class="n">emp_cursor</span> <span class="k">is</span> 
+    <span class="k">select</span> <span class="n">ename</span> <span class="p">,</span><span class="n">sal</span> <span class="p">,</span><span class="n">job</span>
+    <span class="k">from</span> <span class="n">emp</span> 
+    <span class="k">where</span> <span class="n">job</span> <span class="o">=</span> <span class="n">v_job</span><span class="p">;</span>  <span class="c1">---- 커서 선언 </span>
+    
+<span class="k">begin</span> 
+    <span class="k">open</span> <span class="n">emp_cursor</span><span class="p">;</span>   <span class="c1">----- 커서 열기 </span>
+    
+    <span class="n">loop</span> 
+    <span class="k">fetch</span> <span class="n">emp_cursor</span> <span class="k">into</span> <span class="n">v_ename</span> <span class="p">,</span> <span class="n">v_sal</span><span class="p">,</span> <span class="n">v_job</span> <span class="p">;</span>  <span class="c1">----- 커서 패치 </span>
+    <span class="n">exit</span> <span class="k">when</span> <span class="n">emp_cursor</span><span class="o">%</span><span class="n">notfound</span><span class="p">;</span>  
+    <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">v_ename</span> <span class="o">||</span><span class="s1">' '</span> <span class="o">||</span><span class="n">v_sal</span> <span class="o">||</span> <span class="s1">' '</span><span class="o">||</span> <span class="n">v_job</span><span class="p">);</span>
+    <span class="k">end</span> <span class="n">loop</span><span class="p">;</span>    <span class="c1">---------- 커서 문 닫음 </span>
+    
+    <span class="k">Close</span> <span class="n">emp_cursor</span><span class="p">;</span>
+    
+<span class="k">end</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
+
+:ET

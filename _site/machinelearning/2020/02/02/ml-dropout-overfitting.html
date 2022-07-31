@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" />
+		<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+    equationNumbers: {
+        autoNumber: "AMS"
+    }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$', '$'] ],
+    processEscapes: true,
+    }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+	</head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			오버피팅 억제를 위한 방법! Dropout!
+		</div>
+		<time class="post-date dt-published" datetime="2020-02-02T14:00:00+08:00" itemprop="datePublished">2020/02/02
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>오버피팅을 억제하기 위한 방법으로 Dropout에 대해 알아보도록 하겠습니다. 오버피팅은 학습을 시키면서 흔히 접할 수 있는 문제이며, 풀어야 할 문제 중 하나 입니다. 오늘은 이러한 오버피팅에 대한 문제를 바로 잡을 수 있는 방법 중 가장 간단한 방법에 대해 알아보겠습니다.</p>
+
+<h2 id="dropout">Dropout</h2>
+
+<p>Dropout은 오버피팅을 억제하기 위해 뉴런을 임의로 삭제하면서 학습하는 방법입니다.</p>
+
+<p><img src="/public/img/Dropout.png" alt="Dropout" width="70%" height="70%" class="center" /></p>
+
+<p>신경망 전체를 학습시키지 않고 일부 노드만 무작위로 골라 학습 시키는 방법입니다. 학습하는 중간중간 일정 비율로 노드들을 무작위로 골라 출력을 0으로 만들어 신경망의 출력을 계산하는 방법입니다. Dropout을 적용하면 학습되는 노드와 가중치들이 매번 달라지기 때문에 신경망이 과적합에 빠지는 것을 예방할 수 있습니다.</p>
+
+<p>Dropout의 개념을 쉬운 예를 들어서 애기하면, 전문가가 많으면 오히려 오답이 나올 수 있으며, 사공이 많으면 배가 산으로 간다. 라는 속담을 생각하면 조금 더 쉽게 이해 할 수 있습니다.</p>
+
+<p>여기서 사공이 많으면 배가 산으로 가기 때문에 몇 명의 전문가만 선별하여 반복적으로 같은 결과가 나오면 그것을 답으로 선택하겠다. 라고 하는 것이 <strong>앙상블</strong>이라고 하는 학습 방법이 있는데, Dropout과 자주 사용 되는 학습 방식입니다.</p>
+
+<p><img src="/public/img/Dropout2.png" alt="Dropout2" width="70%" height="70%" class="center" /></p>
+
+<p>예를 들어 위와 같은 결과를 내는 신경망이 있다고 할 때, 드롭아웃(Dropout)을 적용하게 되면 아래 그림과 같을 수 있습니다.</p>
+
+<p><img src="/public/img/Dropout3.png" alt="Dropout3" width="70%" height="70%" class="center" /></p>
+
+<p>Dropout은 신호를 보내지 않기 때문에 이런 결과를 얻을 수 있습니다.</p>
+
+<p><img src="/public/img/Dropout4.png" alt="Dropout4" width="70%" height="70%" class="center" /></p>
+
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

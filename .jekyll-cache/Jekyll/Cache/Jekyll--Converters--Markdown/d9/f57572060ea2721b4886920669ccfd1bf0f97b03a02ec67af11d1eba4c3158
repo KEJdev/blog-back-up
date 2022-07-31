@@ -1,0 +1,46 @@
+I"]<p>워드 클라우드나 특정 데이터를 수집하기 위해 자주 사용되는 웹 스크롤링에 대해 한번 알아보겠습니다. 보통 웹 스크롤링 할때는 a태그에 있는 것을 긁어서 사용합니다. 저는 오늘 특정 신문사에서 기사를 긁어오는 것을 한번 해보겠습니다.</p>
+
+<h2 id="h사-웹-스크롤링-기사-제목만-스크롤링">H사 웹 스크롤링 (기사 제목만 스크롤링)</h2>
+
+<p>신문사 홈페이지로 들어가서 찾고자 하는 것을 검색한 후 url을 가져오겠습니다.</p>
+
+<p><img src="/public/img/web1.png" alt="web1" width="100%" height="100%" class="center" /></p>
+
+<p>여기서 알아야 할 점은 주소가 위 그림처럼 뜨지만, 주소를 메모장에 복붙하면 아래처럼 암호화 된 주소가 보여집니다. 그렇기 때문에 직접 URL를 건들어서 웹 스크롤링을 하기는 힘들다는 점을 알아두셔야합니다. 
+이제 여기서 우리가 해야 댈것은 페이지 번호를 확인하고 나서 for문을 돌려서 웹 스크롤링 할 예정입니다. 우선 F12를 눌러 기사 제목을 클릭해서 기사 제목을 확인해보겠습니다.</p>
+
+<p><img src="/public/img/web2.png" alt="web2" width="100%" height="100%" class="center" /></p>
+
+<p>F12를 누른 후 ctrl+ shift+c를 누른 후 기사 제목을 클릭하고 dt 태그 밑에 있는 a태그에서 링크와 기사 제목이 있는지를 확인합니다. 우리는 기사 제목을 스크롤링 해야하므로 a태그를 스크롤링해야합니다.</p>
+
+<p>확인했으면 이제 페이지 번호를 확인하기 위해서 다음 페이지로 넘어갑니다.</p>
+
+<p><img src="/public/img/web3.png" alt="web3" width="100%" height="100%" class="center" /></p>
+
+<p>주소를 보면 pageseq 라는 것이 생기면서 URL주소가 바뀌는 것을 확인할 수 있습니다. 그럼 이제 준비는 끝났습니다. 페이지 번호가 들어간 URL과 기사 제목이 어디에 위치 했는지를 확인했으니 웹 스크롤링을 할수 있겠네요.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>  <span class="c1"># 웹 스크롤링을 위한 모듈
+</span>
+<span class="k">def</span> <span class="nf">fetch_list_url</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">list_url</span> <span class="o">=</span> <span class="s">"http://search.hani.co.kr/Search?command=query&amp;keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&amp;media=news&amp;submedia=&amp;sort=d&amp;period=all&amp;datefrom=2000.01.01&amp;dateto=2020.03.22&amp;pageseq="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">list_url</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>  
+    
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'dt'</span><span class="p">):</span> <span class="c1"># dt 태그 밑에 있는
+</span>            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">link</span><span class="p">:</span> <span class="c1"># a 태그를 가져오기
+</span>                <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">))</span>  <span class="c1"># 기사 URL
+</span>                <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get_text</span><span class="p">(</span><span class="s">'href'</span><span class="p">))</span> <span class="c1"># 기사 제목
+</span>
+<span class="n">fetch_list_url</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>웹 스크롤링이 잘되는 것을 확인할 수있습니다.</p>
+
+<p><img src="/public/img/web4.png" alt="web4" width="80%" height="80%" class="center" /></p>
+
+<p>다음 포스팅에서는 신문사 기사 내용도 스크롤링하고 저장하는 것을 해보겠습니다.</p>
+:ET

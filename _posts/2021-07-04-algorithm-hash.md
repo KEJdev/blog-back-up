@@ -1,14 +1,8 @@
 ---
-title:  프로그래머스 - 전화번호 목록
-date:   2021-07-04 09:00:00 +0300
-categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
+layout: post
+title: 프로그래머스 - 전화번호 목록
+date: 2021-07-04 09:00:00 +0300
+category : Algorithm
 ---
 
 

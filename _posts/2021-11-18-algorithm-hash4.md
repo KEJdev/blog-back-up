@@ -1,16 +1,9 @@
 ---
-title:  프로그래머스 - 베스트 앨범
-date:   2021-11-18 09:00:00 +0300
-categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
+layout: post
+title: 프로그래머스 - 베스트 앨범
+date: 2021-11-18 09:00:00 +0300
+category : Algorithm
 ---
-
 
 링크 : [프로그래머스 - 베스트 앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)   
 

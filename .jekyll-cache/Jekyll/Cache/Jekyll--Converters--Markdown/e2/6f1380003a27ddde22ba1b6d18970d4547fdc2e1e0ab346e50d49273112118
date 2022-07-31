@@ -1,0 +1,78 @@
+I"�<p>이번엔 Go에서 if문을 사용해보겠습니다. <br />
+Go가 설치되어 있지 않지만 실행을 해보고 싶다면, <a href="https://tour.golang.org/methods/20">여기</a>를 클릭해주세요.</p>
+
+<h2 id="go-if">Go if</h2>
+
+<p>if문 또한C와 Java와 비슷합니다. 조건 표현을 위해 ()는 사용하지 않습니다. 하지만 반드시 실행문을 위한 {}는 반드시 작성해야합니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+	<span class="s">"fmt"</span>
+	<span class="s">"math"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="kt">float64</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="m">0</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s">"i"</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprint</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="p">}</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="m">2</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="m">4</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>for처럼 if에서도 조건문 앞에 짧은 문장을 실행할 수 있습니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+	<span class="s">"fmt"</span>
+	<span class="s">"math"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">lim</span> <span class="kt">float64</span><span class="p">)</span> <span class="kt">float64</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="n">v</span> <span class="o">:=</span> <span class="n">math</span><span class="o">.</span><span class="n">Pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">lim</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">v</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">lim</span>
+<span class="p">}</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span>
+		<span class="n">pow</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">10</span><span class="p">),</span>
+		<span class="n">pow</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">20</span><span class="p">),</span>
+	<span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>짧은 실행문을 통해 선언된 변수는 if안쪽 범위(scope)에서만 사용할 수 있습니다.</p>
+
+<h3 id="if-else">if else</h3>
+
+<p>if에서도 짧은 명령문을 통해 선언된 변수는 else 블럭 안에서도 사용할 수 있습니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+	<span class="s">"fmt"</span>
+	<span class="s">"math"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">lim</span> <span class="kt">float64</span><span class="p">)</span> <span class="kt">float64</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="n">v</span> <span class="o">:=</span> <span class="n">math</span><span class="o">.</span><span class="n">Pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">lim</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">v</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%g &gt;= %g</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">lim</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="c">// can't use v here, though</span>
+	<span class="k">return</span> <span class="n">lim</span>
+<span class="p">}</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">10</span><span class="p">),</span>
+		<span class="n">pow</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">20</span><span class="p">),</span>
+	<span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

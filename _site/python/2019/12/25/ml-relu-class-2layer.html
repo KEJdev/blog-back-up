@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			파이썬 클래스로 신경망 구현하기(relu,forward,backward)
+		</div>
+		<time class="post-date dt-published" datetime="2019-12-25T14:00:00+08:00" itemprop="datePublished">2019/12/25
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>저번 포스팅 때, 순전파와 역전파 원리를 간단하게 보고, class를 만들어봤습니다. 
+이번에는 활성화 함수를 넣어 조금 그럴듯한 신경망을 만들어보도록 하겠습니다. 활성화 함수를 사용하지 않고 열심히 신경망만 깊게 쌓기만 하면 깊게 쌓는 의미도 없을 뿐더라 그냥 단층 신경망이라도 봐도 무방합니다. 그렇기 때문에 꼭 넣어주어야 깊게 쌓는 의미가 있습니다.</p>
+
+<h2 id="relu-class-만들기">Relu Class 만들기.</h2>
+
+<p>저번 포스팅에서 만들었던 Affine class는 냅두고 Relu(렐루) 클래스를 한번 만들어 보겠습니다. Relu 함수는 예전 포스팅에서 한번 다루었는데 혹시나 약간 개념이 헷갈리거나 다른 활성화 함수에 대해 알고 싶다면 <a href="https://kejdev.github.io/ML-Machine-Learning-activation-function">여기</a>를 눌러 참고해주세요.</p>
+
+<p>Relu의 특징은 0이하면 0을 출력하고 0을 넘으면 그냥 그대로 출력하는 비교적 간단하지만 대단히 효율 좋은 활성화 함수이며 그래프로 출력하지만 아래와 같이 출력할 수 있습니다.</p>
+
+<p><img src="/public/img/relu.png" alt="relu" width="70%" height="70%" class="center" /></p>
+
+<p>그렇기 때문에 함수 구현이나 클래스는 간단하게 아래와 같이 구현할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Relu</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="bp">None</span>
+      
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>    
+      <span class="n">out</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> 
+      <span class="k">return</span> <span class="n">out</span>
+
+  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">dout</span><span class="p">):</span>
+      <span class="n">dout</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">dx</span> <span class="o">=</span> <span class="n">dout</span> 
+      <span class="k">return</span> <span class="n">dx</span> 
+</code></pre></div></div>
+
+<p>저번에 만든 순전파와 역전파 클래스를 합쳐서 전체 코드를 보면 아래와 같습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 활성화 함수 
+</span><span class="k">class</span> <span class="nc">Relu</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="bp">None</span>
+      
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>    
+      <span class="n">out</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> 
+      <span class="k">return</span> <span class="n">out</span>
+
+  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">dout</span><span class="p">):</span>
+      <span class="n">dout</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">dx</span> <span class="o">=</span> <span class="n">dout</span> 
+      <span class="k">return</span> <span class="n">dx</span> 
+
+<span class="c1"># 순전파 역전파
+</span><span class="k">class</span> <span class="nc">Affine</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+      <span class="bp">self</span><span class="p">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">w</span> 
+      <span class="bp">self</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span> 
+      
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+      <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="bp">self</span><span class="p">.</span><span class="n">w</span><span class="p">)</span><span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">b</span>
+      <span class="k">return</span> <span class="n">out</span>
+      
+  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">out</span><span class="p">):</span>
+      <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="bp">self</span><span class="p">.</span><span class="n">w</span><span class="p">.</span><span class="n">T</span><span class="p">)</span>
+      <span class="n">dw</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">T</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+      <span class="n">db</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> 
+      <span class="k">return</span> <span class="n">dx</span><span class="p">,</span><span class="n">dw</span><span class="p">,</span><span class="n">db</span>
+</code></pre></div></div>
+
+<p>위 클래스를 이용하여 2층짜리 순전파 신경망을 만들어보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># input
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+
+<span class="c1"># 가중치와 바이어스
+</span><span class="n">w1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+<span class="n">w2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># 객체화
+</span><span class="n">affine1</span><span class="o">=</span><span class="n">Affine</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span><span class="n">b1</span><span class="p">)</span>
+<span class="n">affine2</span><span class="o">=</span><span class="n">Affine</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span><span class="n">b2</span><span class="p">)</span>
+<span class="n">relu1</span><span class="o">=</span><span class="n">Relu</span><span class="p">()</span>
+<span class="n">relu2</span><span class="o">=</span><span class="n">Relu</span><span class="p">()</span>
+
+<span class="c1"># 순전파
+</span><span class="n">y1</span><span class="o">=</span><span class="n">affine1</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">out1</span><span class="o">=</span><span class="n">relu1</span><span class="p">.</span><span class="n">forword</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+<span class="n">y2</span><span class="o">=</span><span class="n">affine2</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+<span class="n">out2</span><span class="o">=</span><span class="n">relu2</span><span class="p">.</span><span class="n">forword</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">out2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>순전파를 만들었으니 이번에는 역전파룰 구현해야겠지요? 이미 class안에 함수가 있으니 그대로 불러오면 되겠네요.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># input
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+
+<span class="c1"># 가중치와 바이어스
+</span><span class="n">w2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># 객체화
+</span><span class="n">affine1</span><span class="o">=</span><span class="n">Affine</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span><span class="n">b1</span><span class="p">)</span>
+<span class="n">affine2</span><span class="o">=</span><span class="n">Affine</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span><span class="n">b2</span><span class="p">)</span>
+<span class="n">relu1</span><span class="o">=</span><span class="n">Relu</span><span class="p">()</span>
+<span class="n">relu2</span><span class="o">=</span><span class="n">Relu</span><span class="p">()</span>
+
+<span class="c1"># 순전파
+</span><span class="n">y1</span><span class="o">=</span><span class="n">affine1</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">out1</span><span class="o">=</span><span class="n">relu1</span><span class="p">.</span><span class="n">forword</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+<span class="n">y2</span><span class="o">=</span><span class="n">affine2</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+<span class="n">out2</span><span class="o">=</span><span class="n">relu2</span><span class="p">.</span><span class="n">forword</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+
+<span class="c1"># 역전파 
+</span><span class="n">dy</span><span class="o">=</span><span class="n">relu2</span><span class="p">.</span><span class="n">backword</span><span class="p">(</span><span class="n">out2</span><span class="p">)</span>
+<span class="n">dx1</span><span class="p">,</span><span class="n">dw1</span><span class="p">,</span><span class="n">db1</span><span class="o">=</span><span class="n">affine2</span><span class="p">.</span><span class="n">backward</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span><span class="n">dy</span><span class="p">)</span>
+<span class="n">dx1</span><span class="o">=</span><span class="n">relu1</span><span class="p">.</span><span class="n">backword</span><span class="p">(</span><span class="n">dx1</span><span class="p">)</span>
+<span class="n">dx</span><span class="p">,</span><span class="n">dw</span><span class="p">,</span><span class="n">db</span><span class="o">=</span><span class="n">affine1</span><span class="p">.</span><span class="n">backward</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dx1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'dx:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="n">dx</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'dw:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="n">dw</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'db:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="n">db</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>잘 출력되는 것을 확인 할 수 있습니다. 다음 포스팅때는 계속 해서 다른 활성화 함수도 구현해보도록 하겠습니다.</p>
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

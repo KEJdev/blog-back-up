@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" />
+		<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+    equationNumbers: {
+        autoNumber: "AMS"
+    }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$', '$'] ],
+    processEscapes: true,
+    }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+	</head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			Python 정수 리스트에서 소수만 걸러내기(filter)
+		</div>
+		<time class="post-date dt-published" datetime="2020-04-24T14:00:00+08:00" itemprop="datePublished">2020/04/24
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>파이썬에서 간혹 리스트에 소수만을 걸러 내고 싶을때, 사용되는 filter 함수입니다. 
+이름에서부터 느껴지듯 뭔가 걸러내기 위해 사용되는 함수라는 것을 알 수 있습니다.</p>
+
+<h2 id="filter">filter</h2>
+
+<p>기본적으로 내장되어 있는 모듈이기 때문에 따로 불러 올 필요는 없습니다. filter를 이용하면 소수를 걸러낼 수 있다고 했는데, 소수는 두개의 수로 못나눈 것을 이야기합니다. 대표적으로 7이 소수가 될 수 있습니다. 소수의 반대는 합성수라고 이야기 할 수 있는데, 합성수의 예로는 6이 있습니다. (2*3=6)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">getPrime</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">listdata</span> <span class="o">=</span> <span class="p">[</span><span class="mi">117</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">1113</span><span class="p">,</span> <span class="mi">11113</span><span class="p">,</span> <span class="mi">11119</span><span class="p">]</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">getPrime</span><span class="p">,</span> <span class="n">listdata</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">ret</span><span class="p">))</span>            <span class="c1"># [11113, 11119] 가 출력됨
+</span></code></pre></div></div>
+
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

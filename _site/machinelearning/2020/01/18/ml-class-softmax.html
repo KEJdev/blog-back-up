@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" />
+		<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+    equationNumbers: {
+        autoNumber: "AMS"
+    }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$', '$'] ],
+    processEscapes: true,
+    }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+	</head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			파이썬 클래스로 신경망 구현하기(cross_entropy, softmax, Softmax With loss )
+		</div>
+		<time class="post-date dt-published" datetime="2020-01-18T14:00:00+08:00" itemprop="datePublished">2020/01/18
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>저번 포스팅에서는 forward와 backward 그리고 활성화 함수인 Relu함수를 클래스로 구현해보았습니다. 이번에는 cross entropy와 softmax도 함께 구현해보도록 하겠습니다.</p>
+
+<h2 id="cross-entropy-와-softmax">cross entropy 와 softmax</h2>
+
+<p>보통 신경망에서 분류할 때, softmax를 사용하며, softmax는 신경망의 출력층 마지막에서 사용합니다. softmax와 함께 오차 함수로 cross entropy함수를 사용하는데, cross entropy error는 줄여서 CEE라고도 쓸 수 있습니다. 식은 아래와 같습니다.</p>
+<center>$E\quad =-\sum _{ k }{ { t }_{ k } } { log\, y }_{ k }\quad$</center>
+
+<p>y_k는 신경망에서 나오는 출력 값이며 0에서 1사이의 값이 나옵니다. t_k는 정답 레이블이며, 정답이 아닌 나머지 t_k가 0이며, log는 밑이 e인 자연로그입니다. cross entropy를 Python으로 작성할 때 아주 작은 값을 더해줘야 하는데, 그 이유는 y가 0인 경우 -inf값을 예방하기 위해서 입니다.</p>
+
+<p>파이썬으로 구현하면 아래와 같이 구현할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">crossEntropyError</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>그러나 위와 같이 구현하게 된다면, y가 0되버리는 경우에 -inf값이 나올 수 있으므로 아주 작은 값을 더해줘야 합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">crossEntropyError</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-7</span> <span class="c1">#아주 작은 값 (y가 0인 경우 -inf 값을 예방)
+</span>    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">delta</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>그래서 cross entropy를 구현할 때는 위와 같이 아주 작은 값을 y에 더해줘야 합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">crossEntropyError</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-7</span> 
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">delta</span><span class="p">))</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1"># label = 5
+</span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"-- 정답인 경우 --"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"CEE :"</span><span class="p">,</span> <span class="n">crossEntropyError</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"-- 오류인 경우 --"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"CEE :"</span><span class="p">,</span> <span class="n">crossEntropyError</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>softmax는 아래와 같이 파이썬으로 구현할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  
+    <span class="n">exp_a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">sum_exp_a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">exp_a</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">exp_a</span> <span class="o">/</span> <span class="n">sum_exp_a</span>
+    <span class="k">return</span> <span class="n">y</span>
+</code></pre></div></div>
+
+<h2 id="softmax-with-loss-클래스-만들기">Softmax With loss 클래스 만들기</h2>
+
+<p>클래스 이름은 원하는 걸로 하셔도 되지만, 저는 명확한 구분을 위해 이렇게 짓겠습니다. 위에서 softmax와 cross entropy 함수 두개 다 구현했기 때문에, 추가 할 함수는 없으며 loss함수에 대해 forward와 backward를 사용하여 클래스만 구현하면 Softmax With loss 클래스를 만들 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">cross_entropy_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-7</span>  
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="n">y</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 추가한 부분
+</span>    <span class="n">exp_a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">sum_exp_a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">exp_a</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">exp_a</span> <span class="o">/</span> <span class="n">sum_exp_a</span>
+
+    <span class="k">return</span> <span class="n">y</span>
+
+<span class="k">class</span> <span class="nc">SoftmaxWithloss</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">loss</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">t</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">cross_entropy_error</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">loss</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">t</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">t</span><span class="p">)</span> <span class="o">/</span> <span class="n">batch_size</span>
+
+    <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div></div>
+
+<p>여기까지 구했다면 아래와 같이 2층짜리 신경망을 쉽게 만들어볼 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">cross_entropy_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-7</span> 
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="n">y</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  
+    <span class="n">exp_a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">sum_exp_a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">exp_a</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">exp_a</span> <span class="o">/</span> <span class="n">sum_exp_a</span>
+
+    <span class="k">return</span> <span class="n">y</span>
+
+
+<span class="k">class</span> <span class="nc">Affine</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">W</span> <span class="o">=</span> <span class="n">W</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">dW</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">db</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">b</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">W</span><span class="p">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">dx</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">dW</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">db</span>
+
+
+<span class="k">class</span> <span class="nc">Relu</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># 설명 : x 값이 0 이하면 True 크면  False; True, False 를 가지는 numpy 배열
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">out</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 설명 : mask 가 Ture 인 곳은 x 의 원소 값이 0, False 인 곳은 그대로 출력
+</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dout</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">dout</span>
+        <span class="k">return</span> <span class="n">dx</span>
+
+<span class="k">class</span> <span class="nc">SoftmaxWithloss</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">loss</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">t</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">cross_entropy_error</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">loss</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">t</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">t</span><span class="p">)</span> <span class="o">/</span> <span class="n">batch_size</span>
+
+        <span class="k">return</span> <span class="n">dx</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">w1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">w2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># 순전파
+</span><span class="n">affine1</span> <span class="o">=</span> <span class="n">Affine</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+<span class="n">affine2</span> <span class="o">=</span> <span class="n">Affine</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+<span class="n">relu1</span> <span class="o">=</span> <span class="n">Relu</span><span class="p">()</span>
+<span class="n">relu2</span> <span class="o">=</span> <span class="n">Relu</span><span class="p">()</span>
+
+<span class="c1"># 은닉 1층
+</span><span class="n">out1</span> <span class="o">=</span> <span class="n">affine1</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">relu_out1</span> <span class="o">=</span> <span class="n">relu1</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">out1</span><span class="p">)</span>
+
+<span class="c1"># 은닉 2층
+</span><span class="n">out2</span> <span class="o">=</span> <span class="n">affine2</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">relu_out1</span><span class="p">)</span>
+<span class="n">relu_out2</span> <span class="o">=</span> <span class="n">relu2</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">out2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'out : </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">relu_out2</span><span class="p">)</span>
+
+<span class="c1"># softmax
+</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">softmaxWithloss</span> <span class="o">=</span> <span class="n">SoftmaxWithloss</span><span class="p">()</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">softmaxWithloss</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">relu_out2</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="c1"># 역전파
+</span><span class="n">dout</span> <span class="o">=</span> <span class="n">softmaxWithloss</span><span class="p">.</span><span class="n">backward</span><span class="p">()</span>
+<span class="c1"># dout = relu_out2
+</span><span class="k">print</span><span class="p">(</span><span class="s">'dout : </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">dout</span><span class="p">)</span>
+
+<span class="c1"># 은닉 2층
+# relu 통과
+</span><span class="n">relu_dout</span> <span class="o">=</span> <span class="n">relu2</span><span class="p">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dout</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'relu_dout : </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">relu_dout</span><span class="p">)</span>
+
+<span class="c1"># affine 통과
+</span><span class="n">dout1</span><span class="p">,</span> <span class="n">dw2</span><span class="p">,</span> <span class="n">db2</span> <span class="o">=</span> <span class="n">affine2</span><span class="p">.</span><span class="n">backward</span><span class="p">(</span><span class="n">relu_dout</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'dout1 : </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">dout1</span><span class="p">)</span>
+
+<span class="c1"># 은닉 1층
+</span><span class="n">relu_dout1</span> <span class="o">=</span> <span class="n">relu1</span><span class="p">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dout1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'relu_dout1 : </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">relu_dout1</span><span class="p">)</span>
+<span class="n">dx</span><span class="p">,</span> <span class="n">dw1</span><span class="p">,</span> <span class="n">db1</span> <span class="o">=</span> <span class="n">affine1</span><span class="p">.</span><span class="n">backward</span><span class="p">(</span><span class="n">relu_dout1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'dx : </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/softmax.png" alt="softmax" width="70%" height="70%" class="center" /></p>
+
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

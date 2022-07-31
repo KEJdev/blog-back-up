@@ -1,0 +1,117 @@
+I"�H<p>저번에 중앙일보와 한계례 신문사를 저번에 웹 스크롤링하는 것을 했습니다. 두번정도 해보니까 이제 슬슬 감이 잡히지 않던가요 ? 링크랑 기사내용 태그만 확인하면 스크롤링 되는 것을 확인 했으니, 이번엔 그냥 전체 신문사에서 선택해서 스크롤링하는 스크립트를 짜볼까합니다.</p>
+
+<h2 id="웹-스크롤링-함수-구현">웹 스크롤링 함수 구현</h2>
+
+<p>우선 자신의 컴퓨터 user-agent를 확인해야합니다. <a href="https://www.whoishostingthis.com/tools/user-agent/">여기</a>를 눌러 자신의 agent를 꼭 확인합니다.</p>
+
+<p>우리는 메인 함수와 서브 함수 두가지를 우선 만들어야 합니다. 메인 함수는 스크롤링한 text를 리턴하는 함수를 만들고, 서브 함수는 두 가지 정도를 만들려고 합니다. 서브 함수는 기사 상세 url과 기사 text를 리스트를 append시키는 함수, 그리고 url를 입력받아 html로 변환하고 beautiful soup에서 사용할수 있도록 설정하는 함수를 만들겠습니다.</p>
+
+<p>우선 서브 함수로 url를 받아서 html로 변화하는 함수를 만들겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span> <span class="k">as</span> <span class="n">rq</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'User-Agent'</span><span class="p">:</span> <span class="s">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'</span><span class="p">,}</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">rq</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">rq</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>그리고 기사 url과 기사 text를 리스트에 담는 함수를 작성합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">news_fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">start</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="n">tag</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>그리고 메인 함수인 스크롤링한 text를 리턴하는 함수를 작성합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fetch_list_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">result</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">start</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="n">tag</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'link ='</span> <span class="p">,</span><span class="n">link</span><span class="p">[</span><span class="s">'href'</span><span class="p">],</span> <span class="n">link</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span>
+        <span class="n">news_fetch</span><span class="p">(</span><span class="n">link</span><span class="p">[</span><span class="s">'href'</span><span class="p">],</span> <span class="n">tag</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이제 가장 중요한 url링크와 기사 내용을 스크롤링해야 할 태그 부분을 가져옵니다.</p>
+
+<p><img src="/public/img/web9.png" alt="web9" width="100%" height="100%" class="center" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">url_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'http://search.daum.net/search?w=news&amp;q={search}&amp;spacing=0&amp;p={page}&amp;cp=16ZHEMAarrmZlVrZG3&amp;cpname=%EB%94%94%EC%A7%80%ED%84%B8%ED%83%80%EC%9E%84%EC%8A%A4'</span><span class="p">,</span> <span class="p">[</span><span class="s">"#clusterResultUL &gt; li &gt; div.wrap_cont &gt; div &gt; div &gt; a"</span><span class="p">,</span> <span class="s">"#resizeContents &gt; div"</span><span class="p">]]</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/web10.png" alt="web10" width="100%" height="100%" class="center" /></p>
+
+<p>여기서 이제 주소 끝 부분에 ‘디지털 타임즈’가 아니라 각종 신문사를 넣어 링크를 여러개 만들어 전체 신문사를 스크롤링 스크립트를 작성하려고 합니다.</p>
+
+<h2 id="전체-신문사-기사-스크롤링">전체 신문사 기사 스크롤링</h2>
+
+<p>신문사를 선택해서 스크롤링 하는 최종 코드는 아래와 같습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span> <span class="k">as</span> <span class="n">rq</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span><span class="p">,</span> <span class="n">STOPWORDS</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'User-Agent'</span><span class="p">:</span> <span class="s">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'</span><span class="p">,}</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">rq</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">rq</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">fetch_list_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">result</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">start</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="n">tag</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'link ='</span><span class="p">,</span> <span class="n">link</span><span class="p">[</span><span class="s">'href'</span><span class="p">],</span> <span class="n">link</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span>
+        <span class="n">news_fetch</span><span class="p">(</span><span class="n">link</span><span class="p">[</span><span class="s">'href'</span><span class="p">],</span> <span class="n">tag</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">news_fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">start</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="n">tag</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">search_text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"검색어를 입력하세요 : "</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\\</span><span class="s">x'</span><span class="p">,</span> <span class="s">'%'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">numbers_to_strings</span><span class="p">():</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'1 : 전자신문 </span><span class="se">\n</span><span class="s">2 : 디지털 타임즈 </span><span class="se">\n</span><span class="s">3 : 경향신문 </span><span class="se">\n</span><span class="s">4 : 중앙일보 </span><span class="se">\n</span><span class="s">5 : 동아일보 </span><span class="se">\n</span><span class="s">6 : 조선일보</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">switcher</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s">'http://search.daum.net/search?w=news&amp;q={search}&amp;spacing=0&amp;p={page}&amp;cp=16yGc-mR1Rz5JT4-UZ&amp;cpname=%EC%A0%84%EC%9E%90%EC%8B%A0%EB%AC%B8&amp;DA=PGD'</span><span class="p">,</span> <span class="p">[</span><span class="s">"#clusterResultUL &gt; li &gt; div.wrap_cont &gt; div &gt; div &gt; a"</span><span class="p">,</span> <span class="s">"#articleBody &gt; p"</span><span class="p">]],</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="p">[</span><span class="s">'http://search.daum.net/search?w=news&amp;q={search}&amp;spacing=0&amp;p={page}&amp;cp=16ZHEMAarrmZlVrZG3&amp;cpname=%EB%94%94%EC%A7%80%ED%84%B8%ED%83%80%EC%9E%84%EC%8A%A4'</span><span class="p">,</span> <span class="p">[</span><span class="s">"#clusterResultUL &gt; li &gt; div.wrap_cont &gt; div &gt; div &gt; a"</span><span class="p">,</span> <span class="s">"#resizeContents &gt; div"</span><span class="p">]],</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="p">[</span><span class="s">'http://search.daum.net/search?w=news&amp;q={search}&amp;spacing=0&amp;p={page}&amp;cp=16bfGN9mQcFhOx4F5l&amp;cpname=%EA%B2%BD%ED%96%A5%EC%8B%A0%EB%AC%B8'</span><span class="p">,</span> <span class="p">[</span><span class="s">"#clusterResultUL &gt; li &gt; div.wrap_cont &gt; div &gt; div &gt; a"</span><span class="p">,</span> <span class="s">"#container &gt; div.main_container &gt; div.art_cont &gt; div.art_body &gt; p"</span><span class="p">]],</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="p">[</span><span class="s">'http://search.daum.net/search?nil_suggest=btn&amp;w=news&amp;cluster=y&amp;q={search}&amp;cp=16nfco03BTHhdjCcTS&amp;cpname=%EC%A4%91%EC%95%99%EC%9D%BC%EB%B3%B4&amp;p={page}'</span><span class="p">,[</span><span class="s">"#clusterResultUL &gt; li &gt; div.wrap_cont &gt; div.cont_inner &gt; div &gt; a "</span> <span class="p">,</span><span class="s">"#article_body"</span><span class="p">]],</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="p">[</span><span class="s">'http://search.daum.net/search?w=news&amp;nil_search=btn&amp;enc=utf8&amp;cluster=y&amp;cluster_page=1&amp;q=AI&amp;cp=16Et2OLVVtHab8gcjE&amp;cpname={search}&amp;DA=PGD&amp;p={page}'</span><span class="p">,[</span><span class="s">"#clusterResultUL &gt; li &gt; div.wrap_cont &gt; div.cont_inner &gt; div &gt; a "</span> <span class="p">,</span> <span class="s">"div.article_txt "</span><span class="p">]],</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="p">[</span><span class="s">'http://search.daum.net/search?w=news&amp;nil_search=btn&amp;enc=utf8&amp;cluster=y&amp;cluster_page=1&amp;q=AI&amp;cp=16EeZKAuilXKH5dzIt&amp;cpname={search}&amp;p={page}'</span><span class="p">,[</span><span class="s">"#clusterResultUL &gt; li &gt; div.wrap_cont &gt; div.cont_inner &gt; div &gt; a "</span><span class="p">,</span><span class="s">"div.par"</span><span class="p">]]</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">switcher</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s">"nothing"</span><span class="p">)</span>
+
+<span class="n">url_list</span> <span class="o">=</span> <span class="n">numbers_to_strings</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">url</span><span class="p">,</span> <span class="n">tag</span> <span class="o">=</span> <span class="n">url_list</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nb">format</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="n">search_text</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">i</span><span class="p">),</span> <span class="n">url_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fetch_list_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
+    
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data3.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'UTF-8'</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/web11.png" alt="web11" width="100%" height="100%" class="center" /></p>
+
+<p>여기서 알아둬야 할 점은, 신문사 같은 경우는 웹 스크롤링하는 사람이 꽤 있다고 들어서 신문사들도 태그나 URL를 바꾸는 경우도 있다고 합니다. 그래서 현재 작성된 코드가 지금은 돌아가더라도 시간이 지난 뒤에는 안돌아갈 수 있으니 이 부분을 꼭 참고하셔서 작성하셔야합니다.</p>
+
+:ET

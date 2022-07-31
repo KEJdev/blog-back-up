@@ -1,0 +1,150 @@
+I"5H<p>언어를 새로 배우거나 무언가를 새로 배울 때, 우리는 가장 먼저 Hello, world! 를 가장 먼저 찍어냅니다. Tensorflow 을 포스팅 하는 기념으로 Hello, Tensorflow!를 찍어보겠습니다.</p>
+
+<h2 id="tensorflow-기본-구조">Tensorflow 기본 구조</h2>
+
+<p>우선 텐서플로우가 설치가 안되어 있다면 아래와 같이 설치 해주세요.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">tensorflow</span> 
+</code></pre></div></div>
+
+<p>설치가 되었다면 모듈을 가져와서 tf를 호출합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span> 
+</code></pre></div></div>
+
+<p>그리고 그래프를 실행할 세션을 구성합니다. (참고로 포스팅에서 사용하는 tf는 1.x 버전입니다.)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span>                        <span class="c1"># 그래프를 실행할 세션을 구성한다. 
+</span><span class="n">hello</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="s">'Hello, Tensorflow'</span><span class="p">)</span>  
+
+<span class="c1"># # # # # # # # 모델을 구성하는 부분 ↑
+# # # # # # # # 모델을 실행하는 부분 ↓ 
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">hello</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">hello</span><span class="p">),</span><span class="n">encoding</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>위에서 변수를 정의 햇으나 실행은 정의한 시점에서 실행되는 것이 아니고 Session 객체와 run 메소드를 사용할 때 계산되어 실행됩니다.<br />
+이번에는 간단하게 덧셈을 출력해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span> 
+<span class="n">x</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'x'</span><span class="p">)</span>              <span class="c1"># x라는 상수값을 만들어 숫자 35 지정
+</span><span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'y'</span><span class="p">)</span>            <span class="c1"># y라는 변수를 만들고 방정식 x+5로 정의
+</span>
+<span class="n">model</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">()</span> <span class="c1"># 변수 초기화
+</span>
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>               <span class="c1"># 값을 계산하기 위한 세션 생성 (세션 열기)
+</span>    <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>                     <span class="c1"># 위에서 초기화한 model을 실행하겠다.
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>                    <span class="c1"># 변수 y를 실행하며 현재값 출력
+</span></code></pre></div></div>
+
+<p>월래는 세션을 연 뒤에는 닫아야는데 with절 후에는 자동으로 닫히기 때문에 그냥 출력합니다. 또한 텐서플로우는 빌딩 구조와 실행구조(session)가 분리되어 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 빌딩 과정
+</span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>  
+<span class="n">x2</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># -1 ~ 1 사이의 숫자 중 10개를 랜덤으로 출력 
+</span>
+<span class="n">g</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">get_default_graph</span><span class="p">()</span>
+<span class="k">print</span><span class="p">([</span><span class="n">op</span><span class="p">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">g</span><span class="p">.</span><span class="n">get_operations</span><span class="p">()])</span>
+
+<span class="c1"># 실행 과정
+</span><span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
+<span class="n">sess</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="tensorflow-실행-구조">Tensorflow 실행 구조</h2>
+
+<p>Tensorflow Session은 fetch와 feed 2가지 방법으로 처리 할 수 있습니다.</p>
+
+<p><img src="/public/img/tensorflow2.png" alt="tensorflow2" width="70%" height="70%" class="center" /></p>
+
+<p>fetch는 Tensor에 할당 되어야 실제 Session에서 실행을 할 수 있습니다.</p>
+
+<ul>
+  <li>한개 실행할 때</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">c</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">sess</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+<span class="n">sess</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="c1"># 또는
+</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">).</span><span class="nb">eval</span><span class="p">())</span>
+</code></pre></div></div>
+
+<ul>
+  <li>여러 개 실행할 때</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="n">input1</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
+<span class="n">input2</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="n">input3</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+
+<span class="c1"># fetch 여러 개 되는 부분
+</span>
+<span class="n">intermed</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">input2</span><span class="p">,</span><span class="n">input3</span><span class="p">)</span>
+<span class="n">mul</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">input1</span><span class="p">,</span><span class="n">input3</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">result</span><span class="o">=</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">([</span><span class="n">mul</span><span class="p">,</span><span class="n">intermed</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>feed 같은 경우는 Session에서 반드시 feed_dict로 처리 값을 할당해주어야 합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="s">"float"</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="s">"float"</span><span class="p">)</span>
+
+<span class="n">y</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">z</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">3</span><span class="p">}))</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">4</span><span class="p">}))</span>
+</code></pre></div></div>
+
+<p>그래서 응용하여 구구단을 출력해보자면 아래와 같이 작성 할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="c1">## 구조(그래프) 선언부
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'x'</span><span class="p">)</span>     
+<span class="c1"># tensorboard 로 그래프를 그리기 위해서는 name 을 지정해 줘야한다.
+</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'y'</span><span class="p">)</span>     
+<span class="c1"># name 을 지정할 때 이름이 중복되면 안되고, 중복 사용을 위해서는 
+</span><span class="n">z</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'z'</span><span class="p">)</span>  
+<span class="c1"># 다른 옵션을 사용해야 한다.
+</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>  <span class="c1"># 변수(노드)를 위치 및 생성
+</span><span class="n">merged</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">merge_all</span><span class="p">()</span>  <span class="c1"># 그래프를 그리는데 사용될 변수(노드)를 취합
+</span>
+<span class="c1">## 선언한 구조(그래프) 실행부
+</span><span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>  <span class="c1"># 세션(하나의 사용자) 생성
+</span>    <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>  <span class="c1"># 위에서 생성한 그래프 구조를 실행
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s">' x '</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s">' = '</span><span class="p">,</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">i</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="n">j</span><span class="p">}))</span>  
+            <span class="c1"># 초기화된 변수에 값을 feed
+</span>            <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s">'./logs'</span><span class="p">,</span> <span class="n">sess</span><span class="p">.</span><span class="n">graph</span><span class="p">)</span>
+            <span class="c1"># tensorboard 그래프를 그리는데 사용할 실행 로그를 저장할 폴더 지정
+</span></code></pre></div></div>
+
+:ET

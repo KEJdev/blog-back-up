@@ -1,0 +1,56 @@
+I"&<p>PL/SQL이란 무엇인지, 기본 block 구조와 변수 사용법에 대해 간단하게 알아보겠습니다.</p>
+
+<h2 id="plsql-이란">PLSQL 이란?</h2>
+
+<p>PLSQL이란 비절차적 언어인 SQL + 프로그래밍(if,loop)를 이야기합니다. 즉, 절차적 언어로 만드는 프로그래밍입니다. if문과 loop문을 사용할 수 있으며, 반복되는 단순한 업무를 자동화 할 수 있습니다.</p>
+
+<h2 id="plsql을-배워야-하는-이유">PL/SQL을 배워야 하는 이유</h2>
+
+<p>우선 PL/SQL은 수많은 단순작업을 자동화하기 위해서 사용합니다. 우리가 분석해야할 데이터들은 크게 2가지 타입으로 볼 수 있습니다.</p>
+
+<ul>
+  <li>samll data -&gt; business data</li>
+</ul>
+
+<p>business data를 분석하려면, 알고리즘 사고방식을 갖춰야할 필요가 있습니다. 그래서 수학식을 PL/SQL 또는 Python 으로 구현하려고 합니다.</p>
+
+<ul>
+  <li>big data ? “ 지금까지 한번도 분석해보지 않은 data”</li>
+</ul>
+
+<p>소셜미디어에 올라오는 data, 트위터, 페이스북, 인스타그램 data는 마케팅에 조금 도움되는 data일뿐 크게 중요하지 않은 data입니다.</p>
+
+<p>우리가 분석해야할 가장 중요한 데이터는 대부분 RDBMS에 저장되어 있습니다. SQL을 사용해서 분석하기에는 노가다를 해야할 일들이 많습니다. 그래서 힘들게 하드코딩을 하지 않고 쉽게 business data를 분석을 하려면 PL/SQL을 사용해야합니다.</p>
+
+<p>PL/SQL을 사용하게 되면 SQL로 보여줄수 있는 분석 결과와 PL/SQL로 보여줄수 있는 분석 결과가 훨신 더 많습니다. SQL로는 DATA에서 정보를 추출해서 보여지는 현상을 증명할 수 있을 뿐이지만, PL/SQL로 데이터 분석을 하게 되면, 회귀 분석을 구현하여 방정식을 도출해내고 결정트리를 이용해 확률 및 엔트로피 등을 구할수 있수 있습니다.</p>
+
+<h2 id="plsql에서의-기본-용어">PL/SQL에서의 기본 용어</h2>
+
+<ul>
+  <li>식별자는 v_ename, v_sal 과 같은 변수를 이야기 합니다.</li>
+  <li>구분자는 * / + - 와 같은 연산자를 이야기 합니다.</li>
+  <li>리터럴은 7788, SCOTT 과 같은 문자나 숫자를 이야기 합니다.</li>
+  <li>PL/SQL에서도 주석을 사용할 수 있으며 실행하고 싶지 않은 구문을 실행하지 않고자 할때 사용합니다.</li>
+</ul>
+
+<h2 id="plsql에서의-sql-함수-사용법">PL/SQL에서의 SQL 함수 사용법</h2>
+
+<ul>
+  <li>declare 절의 경우
+사용할 수 있는 함수는 단일행 함수 뿐이며, 복수행 함수나 decode 함수 등은 사용할 수 없습니다.</li>
+  <li>begin 실행절의 경우 어떠한 함수든 다 사용할 수 있습니다.</li>
+</ul>
+
+<h2 id="plsql의-기본-block-의-구조">PL/SQL의 기본 block 의 구조</h2>
+
+<p>PL/SQL은 선언절, 실행절, 종료절이 있습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">declare</span> <span class="c1">-- 선언절</span>
+      <span class="c1">-- 변수, 상수,예외 등을 선언한다.</span>
+  <span class="k">begin</span> <span class="c1">-- 실행절 </span>
+      <span class="c1">-- 실행할 SQL, IF문 , LOOP 문등을 실행한다.</span>
+  <span class="k">end</span> <span class="p">;</span> <span class="c1">-- 종료절</span>
+<span class="o">/</span>   <span class="c1">-------------------------PL/SQL 을 종료하겠다. * 주의 : /는 벽에 딱 붙여야 한다.</span>
+</code></pre></div></div>
+
+:ET

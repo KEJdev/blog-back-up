@@ -1,0 +1,54 @@
+I"<p>파이썬에서 예외처리는 프로그램에서 에러가 발생 했을 때, 에러를 핸들링하는 기능을 이야기합니다.</p>
+
+<h2 id="예외처리-try--except--else">예외처리 (try ~ except ~ else)</h2>
+
+<p>에러가 나면 보통 프로그램이 종료되기 때문에 큰 문제가 발생하게 됩니다. 예를들면 API를 구현했는데, 어떠한 이유로 에러가 나서 종료가 된다면 큰 문제가 될 수 밖에 없습니다. 그래서 보통 예외처리를 하게 되는데, 예외처리를 하게 된다면 에러가 나는 부분을 제외하고 나머지 프로그램은 정상 작동하기 때문에 문제가 발생되지 않습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_power</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s">" 분자 숫자를 입력하세요 "</span> <span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s">" 분모 숫자를 입력하세요 "</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">my_power</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>위와 같이 코드를 작성하고 에러를 출력해보겠습니다.</p>
+
+<p><img src="/public/img/try.png" alt="try" width="70%" height="70%" class="center" /></p>
+
+<p>여기서 try ~ except를 사용하겠습니다.</p>
+
+<p><img src="/public/img/try2.png" alt="try2" width="50%" height="50%" class="center" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_power</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'분자 숫자를 입력하세요 ~ '</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'분모 숫자를 입력하세요 ~ '</span><span class="p">)</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">' 0 으로 나눌 수 없습니다. '</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'나눈 값을 잘 추출했습니다.'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">z</span>
+	
+<span class="k">print</span><span class="p">(</span><span class="n">my_power</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>여기서 복수개의 except절을 사용하여 예외처리를 여러 개 나열해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_power</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'분자 숫자를 입력하세요 ~ '</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'분모 숫자를 입력하세요 ~ '</span><span class="p">)</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">z</span>
+        <span class="k">except</span> <span class="nb">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">' 0 으로 나눌 수 없습니다.'</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">' 다른 예외 상황입니다. '</span><span class="p">)</span>
+			
+<span class="k">print</span><span class="p">(</span><span class="n">my_power</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>이렇게 되면 에러로 인한 비정상 종료를 막을 수 있기 때문에 코드를 작성할때, 꼭 사용해야 합니다.</p>
+:ET

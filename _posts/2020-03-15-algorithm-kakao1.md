@@ -1,22 +1,14 @@
 ---
+layout: post
 title:  2017 카카오 신입 공채 블라인드 시험문제(비밀지도)
-date:   2020-03-15 09:00:00 +0300
-categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
----
-
+date: 2020-03-15 09:00:00 +0300
+category : Algorithm
+use_math : true
+---   
 
 옛날 카카오 블라인드 알고리즘 문제를 한번 오랜만에 풀어볼까합니다. 
 
----------
-
-### 비밀지도(난이도 하)
+## 비밀지도(난이도 하)
 
 네오는 평소 프로도가 비상금을 숨겨놓는 장소를 알려줄 비밀지도를 손에 넣었다. 그런데 이 비밀지도는 숫자로 암호화되어 있어 위치를 확인하기 위해서는 암호를 해독해야 한다. 다행히 지도 암호를 해독할 방법을 적어놓은 메모도 함께 발견했다.
 
@@ -25,10 +17,7 @@ use_math: true
 “지도 1”과 “지도 2”는 각각 정수 배열로 암호화되어 있다.
 암호화된 배열은 지도의 각 가로줄에서 벽 부분을 1, 공백 부분을 0으로 부호화했을 때 얻어지는 이진수에 해당하는 값의 배열이다.
 
-
-
-<center><img src="../../assets//images/01.png" ></center>
-
+![01](/public/img/01.png){: width="40%" height="40%" }{: .center}
 
 네오가 프로도의 비상금을 손에 넣을 수 있도록, 비밀지도의 암호를 해독하는 작업을 도와줄 프로그램을 작성하라.   
 

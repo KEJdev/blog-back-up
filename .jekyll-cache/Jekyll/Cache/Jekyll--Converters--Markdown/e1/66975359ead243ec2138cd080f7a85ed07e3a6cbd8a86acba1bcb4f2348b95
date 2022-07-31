@@ -1,0 +1,59 @@
+I""<p>파이썬 코드를 가끔 보다보면 _ 같은것을 볼 수 있습니다. 이 언더바(_)는 언제 사용하는 걸까요?</p>
+
+<h2 id="언더바_를-사용하는-경우">언더바(_)를 사용하는 경우</h2>
+
+<p>언더바를 사용하는 경우는 주로 아래의 4가지 경우입니다.</p>
+
+<ol>
+  <li>인터프리터에서 마지막 값을 저장할 때</li>
+  <li>값을 무시하고 싶을 때</li>
+  <li>변수나 함수명에 특별한 의미를 부여하고 싶을 때</li>
+  <li>숫자 또는 문자값의 자릿수 구분을 위한 구분자로써 사용할 때</li>
+</ol>
+
+<p>우선 첫번째, 인터프리터에서 마지막 값을 저장 할때 사용하는데, 아래와 같이 사용할 수 있습니다.</p>
+
+<p><img src="/public/img/pass.png" alt="pass" width="20%" height="20%" class="center" /></p>
+
+<p>그래서 이런 출력도 가능합니다.</p>
+
+<p><img src="/public/img/pass2.png" alt="pass2" width="20%" height="20%" class="center" /></p>
+
+<p>두번째는 값을 무시하고 싶을 때 사용하는데, for 문을 사용할 때 가장 많이 사용됩니다.</p>
+
+<p><img src="/public/img/pass3.png" alt="pass3" width="20%" height="20%" class="center" /></p>
+
+<p>2를 무시하고 값이 출력되는 것을 알 수 있으며, for 문을 사용하면 아래와 같이 사용할 수있습니다.</p>
+
+<p><img src="/public/img/pass_for.png" alt="pass_for" width="20%" height="20%" class="center" /></p>
+
+<p>세번짼 변수나 함수명에 특별한 의미를 부여하고 싶을 때 사용합니다. 패키지를 만들기 위해 폴더 안에 <em>init</em> 파일 만들때 사용합니다. 또한 함수명에 언더바를 붙이는 것에 따라 두가지 의미를 가지 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Message</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">msg</span><span class="o">=</span><span class="n">msg</span>
+        
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">return</span> <span class="s">"Message: %s"</span> <span class="o">%</span><span class="bp">self</span><span class="p">.</span><span class="n">msg</span>
+</code></pre></div></div>
+
+<ol>
+  <li>‘_‘이 앞에 붙으면 외부 사용자는 사용하지말라는 권유의 문법입니다.</li>
+  <li>‘__‘이 앞에 붙으면 private이 되어 외부에서 사용할 수 없고, 다른 클래스에서 사용하거나 override 할 수 없습니다.</li>
+</ol>
+
+<p>__를 붙인 함수와 안붙인 함수는 두가지 차이점을 가지고 있습니다.</p>
+
+<ol>
+  <li>이 클래스 파일을 다른 파일에 import 할 때, __가 붙은 함수는 import가 되지 않습니다.</li>
+  <li>클래스를 인스턴스화 하고 함수를 호출할때, 객체명만 사용하고 함수이름을 쓰지 않아도 실행을 할 수 있습니다.</li>
+</ol>
+
+<p>마지막으로 언더바는 숙자 또는 문자값의 자릿수 구분을 위한 구분자로써 사용할 수 있는데, 아래와 같이 사용할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dec_base</span><span class="o">=</span> <span class="mi">1_000_000</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">dec_base</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/pass4.png" alt="pass4" width="30%" height="30%" class="center" /></p>
+:ET

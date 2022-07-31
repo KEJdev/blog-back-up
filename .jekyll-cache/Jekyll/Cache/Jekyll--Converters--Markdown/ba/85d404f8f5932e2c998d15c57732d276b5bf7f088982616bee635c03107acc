@@ -1,0 +1,86 @@
+I"8<p>이제 knn알고리즘이 무엇인지나, 코드짜는 것에 익숙해졌는데, 앞으로 다양한 데이터를 만나더라도 손쉽게 스크립트 하나로 knn을 돌리기 위해 간단하게 만들어보겠습니다.</p>
+
+<h2 id="knn-자동화-스크립트">knn 자동화 스크립트</h2>
+
+<p>우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">class</span><span class="p">)</span><span class="w">
+
+</span><span class="n">input_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'csv파일을 입력하세요. ex) emp.csv : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_header</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'컬럼명이 있습니까? ex)T OR F : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_label_num</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'라벨이 위치한 번호을 입력하세요. ex)N (N&gt;=1) : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_rm_num</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'제거할 컬럼 위치의 번호를 입력하세요. ex) n,n,n'</span><span class="p">)</span><span class="w"> 
+</span></code></pre></div></div>
+
+<p>그리고 헤더 유무 검사 그리고 셔플 기능과 라벨 위치를 정수형으로 변경하고, 혹시 모를 na 값을 제거가 필요할 것 같으니 작성해보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 셔플 기능 추가</span><span class="w">
+</span><span class="n">table_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_name</span><span class="p">[</span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">table_name</span><span class="p">)),</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+</span><span class="c1">### na값 제거</span><span class="w">
+</span><span class="n">table_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">na.omit</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">### 라벨 위치를 정수형으로 변경(추후 사용을 위해)</span><span class="w">
+</span><span class="n">input_label_num</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.integer</span><span class="p">(</span><span class="n">input_label_num</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 가장 중요한 컬럼제거와 라벨을 factor로 변경하는 것, 그리고 라벨을 가장 마지막 컬럼으로 이동하는 것을 작성해보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 제거할 컬럼 제거</span><span class="w">
+</span><span class="n">split_num</span><span class="o">&lt;-</span><span class="n">strsplit</span><span class="p">(</span><span class="n">input_rm_num</span><span class="p">,</span><span class="w"> </span><span class="s1">','</span><span class="p">)</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">split_num</span><span class="p">){</span><span class="w">
+</span><span class="n">table_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_name</span><span class="p">[,</span><span class="o">-</span><span class="nf">as.integer</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">### 라벨 위치보다 앞에 위치한 컬럼들의 갯수를 카운트함</span><span class="w">
+</span><span class="n">cnt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span><span class="n">split_num</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unlist</span><span class="p">(</span><span class="n">split_num</span><span class="p">)</span><span class="w">
+</span><span class="n">cnt</span><span class="o">&lt;-</span><span class="nf">sum</span><span class="p">(</span><span class="n">ifelse</span><span class="p">(</span><span class="nf">as.integer</span><span class="p">(</span><span class="n">split_num</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">input_label_num</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">### 컬럼을 제거하고 실제 라벨 위치</span><span class="w">
+</span><span class="n">label_loc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">input_label_num</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cnt</span><span class="w">
+
+</span><span class="c1">### 라벨을 factor로 변경</span><span class="w">
+</span><span class="n">label_tmp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">table_name</span><span class="p">[,</span><span class="n">label_loc</span><span class="p">])</span><span class="w">
+
+</span><span class="c1">### 라벨을 가장 마지막 컬럼으로 이동</span><span class="w">
+</span><span class="n">table2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_name</span><span class="p">[,</span><span class="o">-</span><span class="n">label_loc</span><span class="p">]</span><span class="w">
+</span><span class="n">table2</span><span class="o">$</span><span class="n">label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">label_tmp</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 가장 중요한 데이터를 정규화 해주는 함수와 데이터 나눠보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 정규화 함수</span><span class="w">
+</span><span class="n">normalize</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="w">
+</span><span class="nf">return</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="nf">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nf">min</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">### 정규화 데이터 삽입</span><span class="w">
+</span><span class="n">table2</span><span class="p">[,</span><span class="m">1</span><span class="o">:</span><span class="p">(</span><span class="n">ncol</span><span class="p">(</span><span class="n">table2</span><span class="p">)</span><span class="m">-1</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">lapply</span><span class="p">(</span><span class="n">table2</span><span class="p">[,</span><span class="m">1</span><span class="o">:</span><span class="p">(</span><span class="n">ncol</span><span class="p">(</span><span class="n">table2</span><span class="p">)</span><span class="m">-1</span><span class="p">)],</span><span class="n">normalize</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">### 데이터 나누기</span><span class="w">
+</span><span class="n">mm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">table2</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="o">/</span><span class="m">3</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">### 데이터 설정</span><span class="w">
+</span><span class="n">train_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table2</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="n">mm</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="p">(</span><span class="n">ncol</span><span class="p">(</span><span class="n">table2</span><span class="p">)</span><span class="m">-1</span><span class="p">)]</span><span class="w">
+</span><span class="n">test_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table2</span><span class="p">[(</span><span class="n">mm</span><span class="m">+1</span><span class="p">)</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">table2</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="p">(</span><span class="n">ncol</span><span class="p">(</span><span class="n">table2</span><span class="p">)</span><span class="m">-1</span><span class="p">)]</span><span class="w">
+
+</span><span class="n">train_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table2</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="n">mm</span><span class="p">,</span><span class="s1">'label'</span><span class="p">]</span><span class="w">
+</span><span class="n">test_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table2</span><span class="p">[(</span><span class="n">mm</span><span class="m">+1</span><span class="p">)</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">table2</span><span class="p">),</span><span class="s1">'label'</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 마지막으로 k값을 훈련 데이터 건수의 제곱근으로 취하고 knn결과를 확인해보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### k값을 훈련데이터 건수의 제곱근으로 취하는 방법</span><span class="w">
+</span><span class="n">k_n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">train_data</span><span class="p">)))</span><span class="w">
+
+</span><span class="c1">###knn 결과 확인</span><span class="w">
+</span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">knn</span><span class="p">(</span><span class="n">train</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train_data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test_data</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train_label</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="n">k_n</span><span class="p">)</span><span class="w">
+</span><span class="nf">round</span><span class="p">(</span><span class="n">prop.table</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">ifelse</span><span class="p">(</span><span class="n">test_label</span><span class="o">==</span><span class="n">result</span><span class="p">,</span><span class="s1">'o'</span><span class="p">,</span><span class="s1">'x'</span><span class="p">)))</span><span class="o">*</span><span class="m">100</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="n">knn_fun</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이러면 간단하게 knn 자동화 스크립트가 완성되네요. 복잡하게 만든게 아니고 간단한 데이터에서 사용하려고 만든 것이기 때문에 아마 복잡한 데이터에서는 돌아가지 않을수 있지만, 그래도 공부하면서 간단하게 돌려보기엔 좋을 것 같습니다. 다음엔 나이브 베이지 분류에 대해 알아보겠습니다. 전체 코드는 Github에 있습니다.</p>
+:ET

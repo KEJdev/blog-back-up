@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			논문 리뷰 - Conditional Generative Adversarial Nets
+		</div>
+		<time class="post-date dt-published" datetime="2021-12-10T14:00:00+08:00" itemprop="datePublished">2021/12/10
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>Paper URL: <a href="https://arxiv.org/abs/1411.1784">Conditional Generative Adversarial Nets</a></p>
+
+<p>해당 논문은 Conditional GAN이라는 논문을 소개하고 있다.  간단하게 y라는 데이터를 추가하므로써 내가 원하는 데이터를 생성하는 것이 이 논문의 핵심이다.</p>
+
+<p>기존의 GAN은 데이터가 생성되는데에 통제권이 없었다. 이뜻은 무엇일까? 
+MNIST dataset을 기준으로 잡고 이야기 하자면, 내가 숫자 7 이미지를 원한다고 해서 모델이 7 이미지를 만들어주지 않는다는 이야기다.</p>
+
+<p><img src="/public/img/cGAN.png" alt="cGAN" width="90%" height="90%" class="center" /></p>
+
+<p>그렇다면 왜, GAN은 왜 우리가 원하는데로 이미지를 생성해주지 않는걸까?
+그 이유는 GAN은 라벨의 정보를 가지고 학습하는 것이라, 데이터 분포를 학습하기 때문이다.</p>
+
+<p><img src="/public/img/cGAN(1).png" alt="cGAN(1)" width="70%" height="70%" class="center" /></p>
+
+<p>즉, 라벨에 대해 잘 모르지만서도 1을 1답게 하는 데이터 분포를 학습하기 때문이다.</p>
+
+<p>그렇다면, 우리가 원하는 데이터를 만들어주는 GAN을 만들려고 하면 어떻게 해야댈까?
+라벨에 대해 잘 모르는 같으니, y라는 특정한 정보 y(라벨)을 넣어준다면, 분포와 함께 우리가 원하는데로 만들어 주지 않을까? 
+이렇게 데이터를 우리가 원하는데로 제어하는 모델을 conditional GAN 이라고 한다.</p>
+
+<p><img src="/public/img/cGAN(2).png" alt="cGAN(2)" width="70%" height="70%" class="center" /></p>
+
+<p>요점은 아래와 같다.</p>
+
+<ol>
+  <li>Discriminator 조건을 토대로 생성된 이미지에 대해 진짜인가, 가짜인가를 판별하고 있다.</li>
+  <li>Generator는 y에 의해 조건을 토대로 이미지를 생성하고 있다.</li>
+</ol>
+
+<p>수식은 GAN이랑 크게 다르지 않다.</p>
+
+<p><img src="/public/img/cGAN(4).png" alt="cGAN(4)" width="70%" height="70%" class="center" /></p>
+
+<p>논문에서는 MNIST data에 대해 조건 y를 one-hot encoding 시킨 class label을 사용했으며 결과는 아래와 같다. 예쁘게 순서대로 나열된 결과를 볼 수 있다.</p>
+
+<p><img src="/public/img/cGAN(3).png" alt="cGAN(3)" width="70%" height="70%" class="center" /></p>
+
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+I"q5<p>다른 언어와 마찬가지로 파이썬에도 상속 개념이 존재합니다. 클래스 상속을 사용하게 되면 반복적으로 코드를 짜지 않어도 되기 때문에 많이 사용합니다.</p>
+
+<h2 id="상속">상속</h2>
+
+<p>상속은 클래스들끼리 기능을 서로에게 물려주는 것이기 때문에 같은 코드를 반복해서 짜지 않아도 됩니다.</p>
+
+<p><img src="/public/img/class.png" alt="class" width="40%" height="40%" class="center" /></p>
+
+<p>상속을 받기 위해 클래스 두개를 작성하고 자식 클래스에 상속시켜보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">father</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">base_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"hello~"</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">child</span><span class="p">(</span><span class="n">father</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">father</span><span class="o">=</span><span class="n">father</span><span class="p">()</span>
+<span class="n">father</span><span class="p">.</span><span class="n">base_method</span><span class="p">()</span>
+<span class="n">child</span><span class="o">=</span><span class="n">child</span><span class="p">()</span>
+<span class="n">child</span><span class="p">.</span><span class="n">base_method</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>코드를 보면 자식 클래스가 아빠 클래스를 상속을 받았는데, 이상태로 출력을 하면 아래와 같은 결과를 얻을 수 있습니다.</p>
+
+<p><img src="/public/img/class2.png" alt="class2" width="40%" height="40%" class="center" /></p>
+
+<p>결과를 보면 알수 있듯이 child class에는 함수를 쓰지 않았지만 클래스를 상속 받았으므로 father의 함수를 사용할 수 있습니다.</p>
+
+<p>그러면 여기서 father에 속성이 하나 더 생긴다면 child는 어떻게 될까요 ?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">father</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"hello~"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">message</span><span class="o">=</span><span class="s">"Good Morning"</span>
+        
+<span class="k">class</span> <span class="nc">child</span><span class="p">(</span><span class="n">father</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">father</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">"hello~~ I am Child"</span><span class="p">)</span>
+
+<span class="n">father</span><span class="o">=</span><span class="n">father</span><span class="p">()</span>
+<span class="n">father</span><span class="p">.</span><span class="n">message</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/class3.png" alt="class3" width="40%" height="40%" class="center" /></p>
+
+<p>father는 출력이 잘 되지만, child를 출력하면 에러가 출력됩니다.</p>
+
+<p><img src="/public/img/class4.png" alt="class4" width="40%" height="40%" class="center" /></p>
+
+<p>이 오류를 해결하기 위해선 우선 class와 변수명 대소문자를 구분하여 작성해야 합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Father</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"hello~"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">message</span><span class="o">=</span><span class="s">"Good Morning"</span>
+        
+<span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Father</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Father</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="c1"># 추가된 부분
+</span>                <span class="c1"># Father의 __init__을 실행하겠다는 명령어
+</span>        <span class="k">print</span> <span class="p">(</span><span class="s">"hello~~ I am Child"</span><span class="p">)</span>
+
+<span class="n">father1</span><span class="o">=</span><span class="n">Father</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">father1</span><span class="p">.</span><span class="n">message</span><span class="p">)</span>
+
+<span class="n">child1</span><span class="o">=</span><span class="n">Child</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">child1</span><span class="p">.</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>그러나 파이썬은 암묵적인것을 싫어하고 명시적인 것을 좋아하는 성격이 있는데 위와 같이 father.<strong>init</strong>(self)라고 해도 되지만 파이썬의 내장 함수 중 super()를 사용하여 아래와 같이 사용할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Father</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"hello~"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">message</span><span class="o">=</span><span class="s">"Good Morning"</span>
+        
+<span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Father</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#Father.__init__(self) #추가된 부분
+</span>        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span> <span class="c1">#super()
+</span>        <span class="k">print</span> <span class="p">(</span><span class="s">"hello~~ I am Child"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>사실 super를 사용하는 것을 권장하는데, 그 이유는 상속시에 나타나는 가장 큰 문제점을 해결할 수 있기 때문입니다.</p>
+
+<h2 id="다중-상속-죽음의-다이아몬드">다중 상속, 죽음의 다이아몬드</h2>
+
+<p>상속에 가장 큰 문제점은 다중 상속 시에 나타나는 죽음의 다이아몬드 때문입니다.</p>
+
+<ul>
+  <li>다중 상속</li>
+</ul>
+
+<p>다중 상속이란, 두 개 이상의 클래스를 상속 받는 것을 이야기 합니다. 이 경우에는 두 클래스의 모든 속성을 물려받게 됩니다. 이는 하나의 자식 클래스가 두 개 이상의 부모 클래스를 가지는 경우를 이야기 할 수 있습니다.</p>
+
+<p><img src="/public/img/class5.png" alt="class5" width="40%" height="40%" class="center" /></p>
+
+<p>예를 들면 아래와 같습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Grandfather</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'튼튼한 두팔'</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Father1</span><span class="p">(</span><span class="n">Grandfather</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Grandfather</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'지식'</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Father2</span><span class="p">(</span><span class="n">Grandfather</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Grandfather</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'지혜'</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Grandchild</span><span class="p">(</span><span class="n">Father1</span><span class="p">,</span> <span class="n">Father2</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Father1</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">Father2</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'자기 만족도가 높은 삶'</span><span class="p">)</span>
+        
+<span class="n">grandchild</span><span class="o">=</span><span class="n">Grandchild</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/class7.png" alt="class7" width="40%" height="40%" class="center" /></p>
+
+<p>만약 튼튼한 두팔, 지혜, 지식, 자기 만족도가 높은 삶을 출력한다고 했을 때, 실제로 출력 되는 것을 확인해보면 튼튼한 두팔이 두번 나오는 경우를 확인 할 수 있습니다.</p>
+
+<p><img src="/public/img/class6.png" alt="class6" width="40%" height="40%" class="center" /></p>
+
+<p>이것이 다중 상속시 볼 수 있는 죽음의 다이아몬드 상속입니다. 이를 해결하기 위해서 super 함수를 사용해야 이 문제를 피할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Grandfather</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'튼튼한 두팔'</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Father1</span><span class="p">(</span><span class="n">Grandfather</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'지식'</span><span class="p">)</span> 
+        
+<span class="k">class</span> <span class="nc">Father2</span><span class="p">(</span><span class="n">Grandfather</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'지혜'</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Grandchild</span><span class="p">(</span><span class="n">Father1</span><span class="p">,</span> <span class="n">Father2</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'자기 만족도가 높은 삶'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/class8.png" alt="class8" width="40%" height="40%" class="center" /></p>
+
+:ET

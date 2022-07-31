@@ -1,0 +1,36 @@
+I"D<p>오늘은 몬테카를로 알고리즘으로 파이썬 원주율을 구해보려고 합니다.</p>
+
+<h2 id="원주율">원주율</h2>
+
+<p>가로 길이가 2인 사각형에 내접하는 반지름 길이가 1인 원의 넓이를 몬테카를로 알고리즘으로 구해보겠습니다.</p>
+
+<p><img src="/public/img/cir2.png" alt="cir2" width="50%" height="50%" class="center" /></p>
+
+<p>원에 무작위로 점을 찍어서 원 안에 들어가는 점의 개수와 사각형 안에 찍히는 전체 점의 개수를 비교합니다. 예를 들면 10개의 점을 무작위로 찍었을 때, 원 안에 찍히는 점의 개수가 7개 라면? 이런식으로 비교하는 거죠.</p>
+
+<p>그래서 100개의 점을 무작위로 찍었을 때, 1000, 10000, … 1억개의 점을 무작위로 찍었을 때, 찍는 점의 수가 많아 질수록 실제 원의 넓이에 가까워 집니다.</p>
+
+<p><img src="/public/img/cir3.png" alt="cir3" width="100%" height="100%" class="center" /></p>
+
+<p>만약에 100개의 점을 찍었을 때, 이 중 80개의 점이 부채꼴의 내부에 찍혔다면, 아래와 같이 계산 할 수 있습니다.</p>
+
+<p><img src="/public/img/cir4.png" alt="cir4" width="100%" height="100%" class="center" /></p>
+
+<p>코드로 구현하면 아래와 같이 구현 할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'랜덤을 반복할 횟수는 ? '</span><span class="p">))</span>
+
+<span class="n">cnt</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">cnt</span><span class="o">+=</span><span class="mi">1</span>
+<span class="k">print</span><span class="p">((</span><span class="n">cnt</span><span class="o">/</span><span class="n">num</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>몬테카를로 원주율을 구하기 위해선 랜덤으로 점을 찍어야 하기 때문에 랜덤으로 점을 막 찍고 부채꼴 안에 있는 점의 갯수가 몇개인지 count만 하면 되기 때문에 코드가 간단합니다.</p>
+
+<p><img src="/public/img/cir.png" alt="cir" width="50%" height="50%" class="center" /></p>
+
+:ET

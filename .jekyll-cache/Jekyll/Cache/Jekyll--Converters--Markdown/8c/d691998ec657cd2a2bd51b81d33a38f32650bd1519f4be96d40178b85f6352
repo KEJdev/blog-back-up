@@ -1,0 +1,58 @@
+I"<p>포스팅에서 사용된 데이터는 <a href="https://github.com/KEJdev/DataSet">여기</a>에서 데이터를 다운 받을 수 있다.</p>
+
+<h2 id="dataset">Dataset</h2>
+
+<p>데이터 설명을 하자면, 소개팅을 수천번하지 않기 때문에 그동안 14번정도 소개팅을 했다고 가정하고 만난 남학생들에 대한 라벨을 호감라벨로 만들었다. 14개의 데이터를 knn으로 학습시켜서 예측 모델을 생성하고, 새로 만나게 될 남학생에 대한 데이터로 이 학생의 호감 라벨을 예측해보려고 한다.</p>
+
+<p>머신러닝을 할 때는 필수적으로 데이터 전처리라고 하는 Input 데이터를 알고리즘에 맞게 잘 정재하는 작업이 필요하다. 이것을 표준화 또는 정규화 작업이라고도 한다.</p>
+
+<p>데이터 양이 작을 경우에는 scale() 이란 함수를 사용한다.<br />
+<strong><center> 음수 ~ 양수 </center></strong></p>
+
+<p>반대로 데이터의 양이 많을 경우에는 nomalize() 이란 함수를 사용한다.<br />
+<strong><center> 0 ~ 100 </center></strong></p>
+
+<h2 id="왜-표준화나-정규화를-해야하는가">왜 표준화나 정규화를 해야하는가?</h2>
+
+<p>어떤 데이터는 cm이고 어떤 데이터는 kg이면 결과가 제대로 나올수가 없다. 그래서 cm이던 kg이던 0~100 사이의 데이터로 일관되게 만드는 작업이 필요하다.</p>
+
+<h2 id="knn-example">knn Example</h2>
+
+<p>R에서 csv파일을 불러올때는 아래와 같이 하면 불러올 수 있다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">like</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"like.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>출력하면 아래의 데이터가 나오는 것을 확인할 수 있다.</p>
+
+<p><img src="/public/img/R1.png" alt="R1" width="70%" height="70%" class="center" /></p>
+
+<p>한글 컬럼명이 생각보다 불편한거 같아서 컬럼명을 바꿔보았다. 컬럼명은 아래와 같이 입력하면 바꿀 수 있다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colnames</span><span class="p">(</span><span class="n">like</span><span class="p">)</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="w"> </span><span class="s2">"taik"</span><span class="w"> </span><span class="p">,</span><span class="s2">"book"</span><span class="w"> </span><span class="p">,</span><span class="s2">"travel"</span><span class="p">,</span><span class="w"> </span><span class="s2">"school"</span><span class="w"> </span><span class="p">,</span><span class="s2">"tall"</span><span class="w"> </span><span class="p">,</span><span class="s2">"skin"</span><span class="p">,</span><span class="w"> </span><span class="s2">"muslce"</span><span class="w"> </span><span class="p">,</span><span class="s2">"label"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>출력하면 아래와 같이 컬럼명이 변경되어 나오는 것을 확인할 수 있다.</p>
+
+<p><img src="/public/img/R2.png" alt="R2" width="70%" height="70%" class="center" /></p>
+
+<p>이제 knn을 이용해서 분류를 하려고 하는데 맨 끝 컬럼에 있는 label과 data를 분리해야한다. 분리는 아래와 같이 하시면 컬럼을 분리하실 수 있다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data</span><span class="o">&lt;-</span><span class="n">like</span><span class="p">[,</span><span class="m">-8</span><span class="p">]</span><span class="w">
+</span><span class="n">train_label</span><span class="o">&lt;-</span><span class="n">like</span><span class="p">[,</span><span class="m">8</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>[,-8]은 8번째 컬럼을 제외하고 라는 뜻이고, [,8]는 8번째 컬럼만 이라는 뜻이다. 이제 진짜 knn을 사용해서 분류를 하려고 하는데 간단하게 test 데이터를 만들고 분류를 해보았다. 여기서 test data는 위에서 언급했듯이 새로 만나게 될 사람에 대한 호감 라벨을 알아보기 위한 데이터다. 데이터를 생성을 위해 아래의 코드를 넣어 데이터를 생성하자.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test.data</span><span class="o">&lt;-</span><span class="n">data.frame</span><span class="p">(</span><span class="n">talk</span><span class="o">=</span><span class="m">70</span><span class="p">,</span><span class="w"> </span><span class="n">book</span><span class="o">=</span><span class="m">50</span><span class="p">,</span><span class="n">travel</span><span class="o">=</span><span class="m">30</span><span class="p">,</span><span class="n">school</span><span class="o">=</span><span class="m">70</span><span class="p">,</span><span class="w"> </span><span class="n">tall</span><span class="o">=</span><span class="m">70</span><span class="p">,</span><span class="w"> </span><span class="n">skin</span><span class="o">=</span><span class="m">40</span><span class="p">,</span><span class="n">muslce</span><span class="o">=</span><span class="m">50</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>데이터를 넣었으면, 이제 knn분류를 해보았다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">class</span><span class="p">)</span><span class="w">
+</span><span class="n">result</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">knn</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span><span class="w"> </span><span class="n">test.data</span><span class="p">,</span><span class="w"> </span><span class="n">train_label</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">prob</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 출력하면 3타입이라는 결과를 얻을 수 있다. 그렇다면 위의 모델을 다시 생성하는데, k값을 다르게 했을때, 호감 라벨이 어떻게 변화하는지 확인해보자.</p>
+
+:ET

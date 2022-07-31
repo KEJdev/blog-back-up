@@ -1,0 +1,22 @@
+I"<p>에외처리에도 여러가지 방법이 있는데, 이번에는 실행한 코드가 정상적으로 작동을 하든, 에러가 나던 무조건 실행되는 블록을 추가해보는 것을 해보겠습니다.</p>
+
+<h2 id="예외처리-try--except--finally">예외처리 (try ~ except ~ finally)</h2>
+
+<p>try ~ except ~ finally문법은 아래와 같습니다. try ~ except과 별반 다를 것이 없고 그냥 한줄만 추가하면 되는거라 복잡하지는 않습니다.</p>
+
+<p><img src="/public/img/try3.png" alt="try3" width="40%" height="40%" class="center" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_power</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'분자 숫자를 입력하세요 ~ '</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'분모 숫자를 입력하세요 ~ '</span><span class="p">)</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">' 0 으로 나눌 수 없습니다. '</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'저는 무조건 실행할꺼라구요! 아.시.겠.어.요.?'</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">my_power</span><span class="p">())</span>
+</code></pre></div></div>
+
+:ET

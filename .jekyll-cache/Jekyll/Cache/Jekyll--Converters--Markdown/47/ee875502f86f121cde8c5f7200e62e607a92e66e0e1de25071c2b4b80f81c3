@@ -1,0 +1,40 @@
+I"c<p>for문과 if문은 가장 흔하고 많이 쓰이는 문법이지만, while문도 자주 쓰이는 문법 중 하나입니다. 문법도 어렵지 않아서 금방 익힐 수 있습니다. while문이 가장 쓰기 편한 문법 중 하나인데, 그 이유는 조건이 참일 때, 실행시킨다던가, 아니면 무한루프로 계속 돌리다가 어느 순간에 멈추는 등 편리하기 때문입니다.</p>
+
+<h2 id="while">while</h2>
+
+<p>while문 구조는 아래와 같습니다.</p>
+
+<p><img src="/public/img/python_a5.png" alt="python_a5" width="20%" height="20%" class="center" /></p>
+
+<p>위 구조대로 간단하게 숫자 하나를 입력 받아서 입력받은 숫자까지 출력하는 것을 하나 출력해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"숫자를 입력하세요 "</span><span class="p">))</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이번에는 while loop문으로 log함수를 구현해볼까요?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"밑수를 입력하세요 ~"</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"진수를 입력하세요 ~ "</span><span class="p">))</span>
+<span class="n">c</span><span class="o">=</span><span class="n">a</span>
+<span class="n">cnt</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"로그 값은 %i 입니다"</span> <span class="o">%</span><span class="n">cnt</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이번에는 간단한 알고리즘을 풀어보도록 하겠습니다. 지겹도록 많이 풀었던 팩토리얼을 while문으로 구현해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"팩토리얼 숫자를 입력하세요 ~ "</span><span class="p">))</span>
+<span class="n">x</span><span class="o">=</span><span class="n">a</span> 
+    
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">x</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

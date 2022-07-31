@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			의사 결정트리와(Decision Tree)엔트로피(entropy)
+		</div>
+		<time class="post-date dt-published" datetime="2020-03-12T16:00:00+08:00" itemprop="datePublished">2020/03/12
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>의사 결정트리에 대해 알아볼껀데, 의사 결정트리가 어떤 상황에서 사용되는지 구현하려면 무엇이 필요한지에 대해 알아보겠습니다.</p>
+
+<h2 id="의사-결정트리decision-tree">의사 결정트리(Decision Tree)</h2>
+
+<p>회귀식을 세울 때 중요한 변수(컬럼)들을 선택해야 하는 상황에서 어떠한 컬럼이 중요한지 판단이 안설때, 의사 결정트리를 이용하면 중요한 변수를 골라낼 수 있습니다.</p>
+
+<p>예를 들어 회사 지원자에게 떨어진 이유를 명확히 설명해줘야 하는 경우나 은행에서 대출을 해줄 때, 대출을 해줄지 말지의 여부를 기업 데이터를 보고 결정해야 하는 경우 등이 있습니다. 또 의학면에서는 질병에 대한 진행바탕으로 올바른 처방을 위해 결정해야하는 경우에 사용되기도 합니다.</p>
+
+<p><img src="/public/img/tree.png" alt="tree" width="80%" height="80%" class="center" /></p>
+<center>Decision Tree 예시</center>
+
+<h2 id="엔트로피entropy와-정보획득량">엔트로피(entropy)와 정보획득량</h2>
+
+<p>의사 결정트리를 이야기 하다가 왜 갑자기 엔트로피 이야기가 나올까요 ? <br />
+결정트리를 만들 때, 가장 먼저 해야할 일은 <strong>중요한 변수(컬럼)</strong>을 찾는 것입니다. 즉, 정보획득량이 높은 변수를 찾아야하는데, 그때 엔트로피 함수를 사용합니다.</p>
+
+<ul>
+  <li>
+    <p>엔트로피(entropy) 함수</p>
+
+    <p>엔트로피는 <strong>“데이터의 불확실성이 얼마나 되는가?”</strong>를 알수 잇는 지표입니다. 즉, <strong>엔트로피 지수가 높다는 것은 불확실성이 높다</strong>는 것을 알 수 있습니다.</p>
+  </li>
+  <li>
+    <p>엔트로피 그래프</p>
+  </li>
+</ul>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">curve</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">),</span><span class="n">col</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Entropy"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/entro.png" alt="entro" width="30%" height="30%" class="center" /></p>
+
+<p>정보획득량은 분할전 엔트로피에서 분할 후 엔트로피를 빼면 정보획득량을 구할 수 있습니다.</p>
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

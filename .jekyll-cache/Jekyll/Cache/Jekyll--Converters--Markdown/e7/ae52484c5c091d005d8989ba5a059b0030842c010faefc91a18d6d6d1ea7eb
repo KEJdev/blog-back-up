@@ -1,0 +1,27 @@
+I"�<p>탐욕 알고리즘은 당장 눈앞의 이익만 추구하는 것을 이야기 하며, 먼 미래를 내다 보지 않고 지금 당장의 최선이 무엇인가를 판단하는 알고리즘입니다.</p>
+
+<p>그럼 탐욕 알고리즘을 이용하여 금액과 화폐가 주어졌을 때 가장 적은 화폐로 지불하는 것을 구현해도록 하겠습니다.</p>
+
+<p>예를 들어 액수를 362 라고 입력하고 화폐단위를 1,50,100 이라고 입력했을 때 결과 값이 100원 3개, 50원 1개, 1원 12개의 값이 나와야 합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">coinGreedy</span><span class="p">():</span> 
+    <span class="n">money</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'액수입력 : '</span><span class="p">))</span>
+    <span class="n">cash_type</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s">'화폐단위를 입력하세요 : '</span><span class="p">).</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)]</span>
+    <span class="n">cash_type</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">cash_type</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">coin</span><span class="o">=</span><span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">cash_type</span><span class="p">:</span>
+        <span class="n">cnt</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">while</span> <span class="n">money</span> <span class="o">&gt;=</span> <span class="n">i</span><span class="p">:</span>
+            <span class="n">money</span><span class="o">=</span><span class="n">money</span><span class="o">-</span><span class="n">i</span>
+            <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">coin</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">cnt</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">coin</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'{0}원 : {1}개'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">coin</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+    
+<span class="n">coinGreedy</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>구현하면 위와 같이 구현할 수 있고 탐욕스럽게 잘 나오고 있는 것을 알 수 있습니다.</p>
+
+:ET

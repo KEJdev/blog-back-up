@@ -1,0 +1,31 @@
+I"
+<p>간단하게 두 수 비교하는 백준 알고리즘을 풀어보았다.<br />
+사실 if문 배우면서 누구나 한번쯤은 해본거라 사실 고민할거리도 되지 않았다 …..</p>
+
+<h2 id="백준-1330번">백준 1330번</h2>
+
+<p>문제는 아래와 같이 간단하게 두 수를 비교하는 것이다.</p>
+
+<p><img src="/public/img/baekjoon2.png" alt="baekjoon2" width="100%" height="100%" class="center" /></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"&gt;"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"&lt;"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"=="</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>그런데 문제 다 풀고 나서 숏코딩 코드를 보았는데, 정말 많이 놀랬다.</p>
+
+<p><strong>숏코딩:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+<span class="k">print</span><span class="p">([</span><span class="s">'&gt;&lt;'</span><span class="p">[</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">],</span><span class="s">'=='</span><span class="p">][</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>내가 진짜 공부를 안하고 놀기만 했구나라는 사실에 대해 알게 되었다.</p>
+:ET

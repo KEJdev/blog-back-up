@@ -1,0 +1,65 @@
+I"�<p>정수형(integer)이란 <strong>말 그대로 정수를 뜻하는 자료형</strong>을 말합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span> 
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">123</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<p>일반 프로그래밍에서 지원하는 정수형 상수의 범위는 -214747367 ~ 2147483647인데 <strong>파이썬은 메모리가 허용하는 범위내에서 지원 가능한 수를 사용</strong>할 수 있습니다.</p>
+
+<h2 id="2진수-8진수-16진수를-사용하는-이유">2진수, 8진수, 16진수를 사용하는 이유</h2>
+
+<ol>
+  <li>
+    <p>컴퓨터가 2진수를 사용하는 이유는 무엇일까요 ?<br />
+ 전기적 신호로 의미를 전달할 수 있는 가장 간단한 방법이기 때문입니다. 컴퓨터가 의미를 구분할 수 있는 최소 단위가 on/off이기 때문에 컴퓨터는 2진수 0,1를 사용합니다.</p>
+  </li>
+  <li>
+    <p>컴퓨터 회로들은 2진수로 되어 있는데, 왜 16진수를 사용하는 걸까?<br />
+ 2진수를 컴퓨터에게 0과 1로 단순하게 처리할 수 있어서 속도를 높여주지만 조그만 숫자도 매우 길어질 수 있습니다.</p>
+  </li>
+</ol>
+
+<ul>
+  <li>2진수 : 0 ~ 1을 나타낼 수 있음</li>
+  <li>8진수 : 0 ~ 7을 나타낼 수 있음</li>
+  <li>16진수 : 0 ~ 15을 나타낼 수 있음</li>
+</ul>
+
+<p>8진수는 0 ~ 7로 나타낼 수 있는데, 그 중 가장 큰 숫자 7의 2진수는 무엇일까요?</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">8</th>
+      <th style="text-align: center">4</th>
+      <th style="text-align: center">2</th>
+      <th style="text-align: center">1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>0111로 표현할 수 있는데, 즉 비트 3개로 표현할수 있습니다. 작은 숫자임에도 매우 길어질 수 있음을 볼 수 있습니다.</p>
+
+<p>여기서 추가적으로 알아두면 좋은 것은 8진수는 리눅스 권한(chmod 777) 줄 때 주로 사용하며, 16진수는 rgb컬러 코드( #ff00ff )에서 주로 사용한다는 것을 알아두면 좋습니다. 간혹 모르는 분들이 계시는 것 같더라구요.</p>
+
+<h2 id="2진수-8진수-16진수-출력하기">2진수, 8진수, 16진수 출력하기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="nb">oct</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="nb">hex</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+<span class="c1"># bin : 2진수 
+# oct : 8진수 
+# hex : 16진수 
+</span></code></pre></div></div>
+
+<p><img src="/public/img/bin.png" alt="bin" width="30%" height="30%" class="center" /></p>
+:ET

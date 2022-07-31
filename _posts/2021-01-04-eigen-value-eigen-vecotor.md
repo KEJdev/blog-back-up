@@ -1,29 +1,20 @@
 ---
-title:  고유값(eigen value)과 고유벡터(eigen vector), 왜 중요한가?
-date:   2021-01-04 09:00:00 +0300
-categories:  [Machine Learning, Statistics]
-tags : [통계]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
----
+layout: post
+title: 고유값(eigen value)과 고유벡터(eigen vector), 왜 중요한가?
+date: 2021-01-04 09:00:00 +0300
+category : MachineLearning
+use_math : true
+---   
 
-
-고유값과 고유벡터에 대해서 많이 들어봤을 것이다. 그만큼 무척 중요하다고 모두들 이야기한다. 이번에 새롭게 공부하기 시작하면서 고유값과 고유벡터가 무엇인지, 왜 중요한지에 대해 정리해보려고 한다.
-
----------  
+고유값과 고유벡터에 대해서 많이 들어봤을 것이다. 그만큼 무척 중요하다고 모두들 이야기한다. 이번에 새롭게 공부하기 시작하면서 고유값과 고유벡터가 무엇인지, 왜 중요한지에 대해 정리해보려고 한다. 
 
 ## 고유값, 고유벡터란?  
 
 대부분 벡터 x에 어떤 행렬 A를 곱하게 되면 벡터의 크기와 방향이 바뀌게 된다. 그러나 **정방행렬에 정방행렬의 고유벡터를 곱하면 고유벡터의 방향이 바뀌지 않는다** 더 간단히 말하면 벡터x가 행렬 A의 고유벡터라면 바뀌지 않는다.
 
-<center><img src="../../assets/images/eigen01.jpg"  ></center>
+![eigen01](/public/img/eigen01.jpg){: width="50%" height="50%" }{: .center}
 
 월래 정방행렬 A는 임의의 벡터 x과의 행렬연산으로 x의 위치나 방향을 전환 시키는 역활을 하는데, 이때 **어떤 특정 벡터들은 A에 곱해져도 위치나 방향이 바뀌어도 월래 자신과 평행하거나 동일한 값**을 갖는다. 이러한 벡터들을 **고유벡터**라고 이야기 한다.  **변화된 벡터 x의 크기를 나타내는 특정 상수는 람다(λ)로 표현하며 고유값이라고 이야기 한다.**  
-
 
 ## 왜 중요한가 ?
 

@@ -1,0 +1,66 @@
+I"�<p>단순 선형회귀를 이용해서 이번에 코스피 지수 수익율과 삼성, 현대자동차 주식 수익율의 상관 괸계를 간단하게 분석해볼까 한다. 데이터는 한국 거래소에서 다운 받을 수 있다.</p>
+
+<h2 id="plot">plot</h2>
+
+<p>우선 그레프를 그릴껀데, plot 그래프를 그리기 쉽게 모든 데이터를 merge를 한다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">k_index</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"K_index.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span><span class="n">s_stock</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"S_stock.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span><span class="n">h_stock</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"H_stock.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+
+</span><span class="n">all_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">k_index</span><span class="p">,</span><span class="w"> </span><span class="n">s_stock</span><span class="p">),</span><span class="w"> </span><span class="n">h_stock</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>head로 데이터를 보면 아래와 같이 볼 수 있다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">head</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/all_data.png" alt="all_data" width="50%" height="50%" class="center" /></p>
+
+<p>그래프는 아래와 같고, x축은 코스피 등락 비율, y축은 삼성 수익율 등락 비율이다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">attach</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">k_rate</span><span class="p">,</span><span class="w"> </span><span class="n">s_rate</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/s_stock2.png" alt="s_stock2" width="50%" height="50%" class="center" /></p>
+
+<p>여기서 회귀 직선을 그으면 아래와 같은 그림을 볼 수 있다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">s_rate</span><span class="o">~</span><span class="n">k_rate</span><span class="p">,</span><span class="w"> </span><span class="n">all_data</span><span class="p">)</span><span class="w">
+</span><span class="n">abline</span><span class="p">(</span><span class="n">s_model</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="err">'</span><span class="n">red</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/s_stock3.png" alt="s_stock3" width="50%" height="50%" class="center" /></p>
+
+<p>현대도 삼성과 마찬가지로 그래프를 그리면 아래와 같다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">k_rate</span><span class="p">,</span><span class="w"> </span><span class="n">h_rate</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s1">'purple'</span><span class="p">)</span><span class="w">
+</span><span class="n">h_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">h_rate</span><span class="o">~</span><span class="n">k_rate</span><span class="p">,</span><span class="w"> </span><span class="n">all_data</span><span class="p">)</span><span class="w">
+</span><span class="n">abline</span><span class="p">(</span><span class="n">h_model</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s1">'brown'</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/h_stock.png" alt="h_stock" width="50%" height="50%" class="center" /></p>
+
+<h2 id="데이터-분석">데이터 분석</h2>
+
+<p>10년치 데이터를 가지고 그래프를 그리면 아래와 같이 그릴 수 있고, 기울기를 보면 현대는 1.06, 삼성은 1.02임을 알 수 있다.</p>
+
+<p><img src="/public/img/10Ydata.png" alt="10Ydata" width="50%" height="50%" class="center" /></p>
+
+<p>전체적으로 봣을때는 비슷비슷 한거 같다. 그렇다면 상관 계수를 한번 살펴보자. 처음 데이터를 가지고 상관 계수를 구하면 아래와 같다.</p>
+
+<p><img src="/public/img/cor.png" alt="cor" width="50%" height="50%" class="center" /></p>
+
+<p>그리고 10년치 데이터를 사용하여 상관 계수를 구하면 아래와 같다.</p>
+
+<p><img src="/public/img/cor2.png" alt="cor2" width="50%" height="50%" class="center" /></p>
+
+<p>그렇다면 상관계수와 기울기를 가지고 어떤 결론을 낼 수 있을까?</p>
+
+<p>이 작업에 <strong>베타</strong>라는 것을 구하는데 베타는 <strong>시장과의 상관성</strong>을 말한다. 시장과의 상관성이란 시장을 움직이는 것에 따라 얼마나 탄력적으로 움직이는지를 말한다. <strong>기울기</strong>가 낮을수록 뚝심이 강해 시장과 상관없이 움직이는 주식이고, 기울기가 높을수록 탄력적으로 움직이는 주식이다. 수익률이 낮더라도 안전하게 벌고 있다면 기울기가 낮은 것을 선택해야 하며, 위험성이 높아도 수익률이 높은 것을 하려면 기울기가 높은 것을 선택해야 한다. <strong>상관계수</strong>는 시장과 얼마나 비슷하게 움직이냐는 것을 찾는 것이다. 현업에서는 0.65에서 0.70위부터 가치 있다고 판단하고 투자 분석을 한다고 한다.</p>
+
+<p>현재 주식 투자를 하지는 않겠지만, 아무튼 재밌는 데이터였다.</p>
+
+:ET

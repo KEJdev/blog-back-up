@@ -1,22 +1,14 @@
 ---
-title:  텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)
-date:   2020-02-03 09:00:00 +0300
-categories:  [Machine Learning,Machine Learning-Python]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
----
-
+layout: post
+title: 텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)
+date: 2020-02-03 09:00:00 +0300
+category : MachineLearning
+use_math : true
+---  
 
 언어를 새로 배우거나 무언가를 새로 배울 때, 우리는 가장 먼저 Hello, world! 를 가장 먼저 찍어냅니다. Tensorflow 을 포스팅 하는 기념으로 Hello, Tensorflow!를 찍어보겠습니다. 
 
-
----------
-
-### Tensorflow 기본 구조
+## Tensorflow 기본 구조
 
 우선 텐서플로우가 설치가 안되어 있다면 아래와 같이 설치 해주세요. 
 
@@ -43,8 +35,7 @@ print(sess.run(hello))
 print(str(sess.run(hello),encoding="utf-8"))
 ```
 
-위에서 변수를 정의 햇으나 실행은 정의한 시점에서 실행되는 것이 아니고 Session 객체와 run 메소드를 사용할 때 계산되어 실행됩니다. 
-
+위에서 변수를 정의 햇으나 실행은 정의한 시점에서 실행되는 것이 아니고 Session 객체와 run 메소드를 사용할 때 계산되어 실행됩니다.  
 이번에는 간단하게 덧셈을 출력해보겠습니다. 
 
 
@@ -76,15 +67,11 @@ print(sess.run(x2))
 sess.close()
 ```
 
--------
-
-
-### Tensorflow 실행 구조 
+## Tensorflow 실행 구조 
 
 Tensorflow Session은 fetch와 feed 2가지 방법으로 처리 할 수 있습니다. 
 
-<center><img src="../../assets//images/tensorflow2.png" ></center>
-
+![tensorflow2](/public/img/tensorflow2.png){: width="70%" height="70%" }{: .center}
 
 fetch는 Tensor에 할당 되어야 실제 Session에서 실행을 할 수 있습니다. 
 

@@ -1,0 +1,23 @@
+I"><p>BAEKJOON 10871번 문제를 풀어보았다. for문만 사용할 줄 안다면, 푸는데는 2분도 채 걸리지 않을것이다.</p>
+
+<h2 id="백준-10871번">백준 10871번</h2>
+
+<p>문제는 아래와 같다.</p>
+
+<p><img src="/public/img/baekjoon3.png" alt="baekjoon3" width="100%" height="100%" class="center" /></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)))</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">:</span>
+        <span class="n">num</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+<span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">num</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">" "</span><span class="p">)</span>
+</code></pre></div></div>
+
+:ET

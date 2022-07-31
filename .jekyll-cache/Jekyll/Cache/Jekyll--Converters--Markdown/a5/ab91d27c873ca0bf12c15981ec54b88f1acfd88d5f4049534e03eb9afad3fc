@@ -1,0 +1,23 @@
+I"�
+<p>링크 : <a href="https://programmers.co.kr/learn/courses/30/lessons/42576">프로그래머스 - 완주하지 못한 선수</a></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="n">completion</span><span class="p">):</span>
+    <span class="n">find_val</span><span class="p">,</span> <span class="n">find_val2</span> <span class="o">=</span> <span class="p">{},{}</span>
+
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">i</span>  <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span><span class="n">completion</span><span class="p">):</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">find_val</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">find_val</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">find_val2</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">find_val2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+    
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">find_val</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">find_val</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">!=</span> <span class="n">find_val2</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="n">answer</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
+            <span class="n">answer</span> <span class="o">=</span> <span class="n">key</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,52 @@
+I"�<p>요즘 파이썬 기초부터 다시 공부 중인데, 우연히 재귀함수 관련 영상을 보게 되었고 그에 대에 대한 내용을 정리해볼까 한다.</p>
+
+<h2 id="재귀함수">재귀함수</h2>
+
+<p>재귀함수는 자신을 재참조하는 함수를 뜻한다. 쉬운 예를 들면 인셉션이랑 비슷하다고 보면 될것 같다. ( 꿈에서 꿈을 꾸는 것과 같은 .. )</p>
+
+<h2 id="재귀함수-장점">재귀함수 장점</h2>
+
+<p>재귀함수를 사용하게 되면, 코드를 효율적으로 짤 수 있다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3,[4,5],6,7]
+</code></pre></div></div>
+
+<p>위와 같은 배열을 나열한다고 했을 때, 반복문을 두번 쓰면 전부 꺼낼 수 있지만, 아래와 같은 상황이라면 조금 이야기가 달라진다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3,[4,5],6,7,[8,9,10],[[11,12]],[13,[14,[15]]]...]
+</code></pre></div></div>
+
+<p>이럴때 재귀함수를 쓰게 되면 효율적으로 코드를 짤 수 있다. 새로운 배열이 나올때마다 다시 함수를 불러오는 형식으로 말이다.</p>
+
+<p>그렇다면 <strong>재귀함수의 장점으로 코드를 효율적</strong>으로 짠다고 한다면, 단점은 무엇을까 ?</p>
+
+<h2 id="재귀함수-단점">재귀함수 단점</h2>
+
+<p><strong>단점으로는 성능 문제</strong>가 있다. 재귀함수는 호출할때마다 메모리의 스택이 쌓인다. 메소드 위에 또 메소드가 올라가는 식으로 말이다. 결국에 메모리 부족으로 인한 에러가 발생하게 된다.</p>
+
+<p>또한 <strong>속도면에서도 재귀함수는 jump가 잦아서 반복문보다 느리다.</strong></p>
+
+<h2 id="단점-극복하기">단점 극복하기</h2>
+
+<p>그렇다면 재귀함수의 단점을 어떻게 커버할 수 있을까?</p>
+
+<p>재귀함수의 단점을 극복하기 위해 “꼬리 재귀 최적화(Tail call optimization)”이라는 기능이 나오기 시작했다.</p>
+
+<p>꼬리재귀는 재귀함수를 선형 알고리즘으로 만들어서 실행하면 스택이 넘치는 일이 일어나지 않게 해준다.</p>
+
+<p>꼬리재귀는 아래와 같이 사용할 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="o">//</span> <span class="p">...</span> 
+    <span class="k">return</span> <span class="n">test</span>
+</code></pre></div></div>
+
+<p>위와 같이 자신 자체를 return 하면 꼬리재귀이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="o">//</span> <span class="p">...</span> 
+    <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">test</span>
+</code></pre></div></div>
+
+<p>그러나 위와 같이 return 할때 다른 것(?)들이 섞여 리턴하게 되면 꼬리 재귀가 불가하니, 이부분에 유의하자.</p>
+:ET

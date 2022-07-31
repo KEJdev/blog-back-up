@@ -1,24 +1,16 @@
 ---
-title:  파이썬에서 언더바(_)를 사용하는 경우
-date:   2020-03-14 12:00:00 +0300
-categories:  [Program Language , Python]
-tags : [Python, 문법]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
----
+layout: post
+title: 파이썬에서 언더바(_)를 사용하는 경우
+date: 2020-03-14 14:00:00 +0300
+category : Python
+use_math : true
+---   
 
 파이썬 코드를 가끔 보다보면 _ 같은것을 볼 수 있습니다. 이 언더바(_)는 언제 사용하는 걸까요? 
 
----------
-
-### 언더바(_)를 사용하는 경우
+## 언더바(_)를 사용하는 경우
 
 언더바를 사용하는 경우는 주로 아래의 4가지 경우입니다.
-
 
 1. 인터프리터에서 마지막 값을 저장할 때
 2. 값을 무시하고 싶을 때
@@ -28,24 +20,19 @@ use_math: true
 
 우선 첫번째, 인터프리터에서 마지막 값을 저장 할때 사용하는데, 아래와 같이 사용할 수 있습니다. 
 
-
-<center><img src="../../assets//images/pass.png" ></center>
-
+![pass](/public/img/pass.png){: width="20%" height="20%" }{: .center}
 
 그래서 이런 출력도 가능합니다. 
 
-
-<center><img src="../../assets//images/pass2.png" ></center>
+![pass2](/public/img/pass2.png){: width="20%" height="20%" }{: .center}
 
 두번째는 값을 무시하고 싶을 때 사용하는데, for 문을 사용할 때 가장 많이 사용됩니다. 
 
-<center><img src="../../assets//images/pass3.png" ></center>
+![pass3](/public/img/pass3.png){: width="20%" height="20%" }{: .center}
 
 2를 무시하고 값이 출력되는 것을 알 수 있으며, for 문을 사용하면 아래와 같이 사용할 수있습니다.
 
-
-<center><img src="../../assets//images/pass_for.png" ></center>
-
+![pass_for](/public/img/pass_for.png){: width="20%" height="20%" }{: .center}
 
 세번짼 변수나 함수명에 특별한 의미를 부여하고 싶을 때 사용합니다. 패키지를 만들기 위해 폴더 안에 _init_ 파일 만들때 사용합니다. 또한 함수명에 언더바를 붙이는 것에 따라 두가지 의미를 가지 수 있습니다.
 
@@ -75,6 +62,6 @@ __를 붙인 함수와 안붙인 함수는 두가지 차이점을 가지고 있�
 ```python
 dec_base= 1_000_000 
 print(dec_base)
-```
+```  
 
-<center><img src="../../assets//images/pass4.png" ></center>
+![pass4](/public/img/pass4.png){: width="30%" height="30%" }{: .center}

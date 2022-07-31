@@ -1,0 +1,17 @@
+I"~<p>아마 2년만에 알고리즘에 손대는 것 같다. 취업하고 나서는 알고리즘에 손도 안대서 그런지 오랜만에 문제 풀려고 하니까 안풀어지더라. 그래서  백준 알고리즘을 하나씩 풀어볼까 한다.</p>
+
+<h2 id="백준-2557번">백준 2557번</h2>
+
+<p>사실 문제가 너무 간단해서 포스팅 안하려고 했다.<br />
+근데 처음 시도했을때, 틀렸습니다와 컴파일 에러 뜨길래 보니까 언어 선택을 잘못하거나”Hello World!”에서 ! 안붙여서 에러가 났다…</p>
+
+<p>문제를 잘 읽고 풀어야 하는 알고리즘에서 그냥 Hello World 출력하는거네~ 하고 문제 제대로 안보고 그냥 코드를 돌린 나의 한심함을 표하며 글을 올린다.</p>
+
+<p><img src="/public/img/baekjoon1.png" alt="baekjoon1" width="100%" height="100%" class="center" /></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+:ET

@@ -1,16 +1,9 @@
 ---
-title:  프로그래머스 - 완주하지 못한 선수
-date:   2021-09-07 09:00:00 +0300
-categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
+layout: post
+title: 프로그래머스 - 완주하지 못한 선수
+date: 2021-09-07 09:00:00 +0300
+category : Algorithm
 ---
-
 
 링크 : [프로그래머스 - 완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576)   
 

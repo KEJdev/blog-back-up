@@ -1,0 +1,97 @@
+I"�<p><strong>Paper URL : <a href="https://arxiv.org/pdf/1802.06955.pdf">https://arxiv.org/pdf/1802.06955.pdf</a></strong></p>
+
+<p>이번 논문에서 제안하는 모델은 두가지이며, RU-Net과 R2U-Net이라는 모델이다.<br />
+RU-Net은 U-Net 기반의 RCNN(Recurrent Convolutional Neural Network), R2U-Net은 U-Net 기반의 RRCNN(Recurrent Residual Convolution Neural Network)이다.</p>
+
+<p>논문에서는 Recurrent와 RCNN 아키텍처를 사용하므로써, 보다 효율적인 모델이라고 말하며, U-Net과 동일한 수의 네트워크 매개변수를 갖지만 성능이 더 우수하다고 한다.</p>
+
+<h2 id="요약">요약</h2>
+
+<ol>
+  <li>기존의 U-Net구조에 Recurrent와 RCNN 아키텍처를 사용했다.</li>
+  <li>RU-Net과 R2U-Net은 U-Net과 동일한 수의 네트워크 매개변수를 갖지만 성능이 더 우수하다.</li>
+  <li>망막 혈관 분할, 피부암, 폐 분할 데이터에서 민감도, 특이도, 정확도, AUC 의 결과를 보았을 때, 높은 성능을 보였다.</li>
+</ol>
+
+<h2 id="ru-net-and-r2u-net-architectures">RU-NET AND R2U-NET ARCHITECTURES</h2>
+
+<p>우선 네가지의 block 대해 알아보자.</p>
+
+<p><img src="/public/img/R2U-Net_2.png" alt="R2U-Net_2" width="70%" height="70%" class="center" /></p>
+
+<p>a : U-Net의 block<br />
+b : RU-Net의 block<br />
+c : Residual convolutional block<br />
+b : R2U-Net의 block</p>
+
+<p>모델에서 제안한 모델의 block은 b와 d 이며, a와 c는 기존 모델들의 block이다.</p>
+
+<ul>
+  <li>
+    <p><strong>(a) U-Net의 block</strong></p>
+
+    <p>전체적인 U-Net 구조는 아래와 같고 구조를 뜯어서 살펴보면,</p>
+
+    <p><img src="/public/img/R2U-Net-4.png" alt="R2U-Net-4" width="70%" height="70%" class="center" /></p>
+
+    <p>conv Layer + ReLu가 두개가 한 block이고, 이것이 반복되는 것을 알 수 있다. 이것이 U-Net의 기본 block이다.</p>
+  </li>
+  <li>
+    <p><strong>(b) RU-Net의 block</strong></p>
+
+    <p>RU-Net의 block은 위에 보이는 U-Net block에 Recurrent를 합쳐서 만든 구조인데, 여러 conv 연산이 하나의 커널 가중치를 공유해 여러번 반복해서 연산하는 구조다.</p>
+
+    <p><img src="/public/img/R2U-Net_5.png" alt="R2U-Net_5" width="70%" height="70%" class="center" /></p>
+
+    <p>현재 층의 출력을 다시 입력으로 받아 흐르는 구도이기 때문에, 적은 파라미터를 갖고도 더 좋은 성능을 낼 수 있다고 한다.</p>
+  </li>
+  <li>
+    <p><strong>(c) Residual convolutional block</strong></p>
+
+    <p>Residual Block은 정말 유명한데, 잔차 학습이라고도 불린다.</p>
+
+    <p><img src="/public/img/R2U-Net_3.png" alt="R2U-Net_3" width="70%" height="70%" class="center" /></p>
+
+    <p>그림을 보면 알 수 있듯, weight layer들을 통과한 \(F(x)\) 와 통과하지 않는 \(x\)를 합하는 구조이며, 이 block들이 쌓이면 Residual Network(ResNet) 이라는 모델이 만들어진다.</p>
+  </li>
+  <li>
+    <p><strong>(d) R2U-Net의 block</strong></p>
+
+    <p>R2U-Net는 b + c 의 block을 합친 구조이다.</p>
+  </li>
+</ul>
+
+<p>논문 모델의 최종 아키텍처는 아래 그림과 같다.</p>
+
+<p><img src="/public/img/R2U-Net_1.png" alt="R2U-Net_1" width="70%" height="70%" class="center" /></p>
+
+<h2 id="experimental-setup-and-results">EXPERIMENTAL SETUP AND RESULTS</h2>
+
+<ul>
+  <li>
+    <p><strong>혈관 분할</strong></p>
+
+    <p>망막 혈관 segmentation을 위해 DRIVE, STARE 및 CHASH_DB1 세 가지 데이터를 사용하였고, 높은 정확도를 보였다.</p>
+
+    <p><img src="/public/img/R2U-Net_6.png" alt="R2U-Net_6" width="70%" height="70%" class="center" />
+  <img src="/public/img/R2U-Net_7.png" alt="R2U-Net_7" width="70%" height="70%" class="center" /></p>
+
+    <p>모델 별로 보자면 아래 그래프와 같다.</p>
+
+    <p><img src="/public/img/R2U-Net_8.png" alt="R2U-Net_8" width="70%" height="70%" class="center" /></p>
+  </li>
+  <li>
+    <p><strong>피부암 분할</strong></p>
+
+    <p><img src="/public/img/R2U-Net_9.png" alt="AOR2U-Net_9" width="70%" height="70%" class="center" />
+  <img src="/public/img/R2U-Net_10.png" alt="R2U-Net_10" width="70%" height="70%" class="center" /></p>
+  </li>
+  <li>
+    <p><strong>폐 분할</strong></p>
+
+    <p><img src="/public/img/R2U-Net_11.png" alt="R2U-Net_11" width="70%" height="70%" class="center" />
+  <img src="/public/img/R2U-Net_12.png" alt="R2U-Net_12" width="70%" height="70%" class="center" /></p>
+  </li>
+</ul>
+
+:ET

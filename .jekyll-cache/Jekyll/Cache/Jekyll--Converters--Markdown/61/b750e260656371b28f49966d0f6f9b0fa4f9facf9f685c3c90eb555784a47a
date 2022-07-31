@@ -1,0 +1,64 @@
+I"�<p>k-means는 우선 비지도 학습에 속한다. 비지도 학습은 대체로 라벨이 없기 때문에 입력 데이터의 특징을 가지고 자동으로 분류한다. k-means는 그중에서 간단하고 자주 쓰이는 편에 속한다.</p>
+
+<h2 id="k-means">k-means</h2>
+
+<p>위에서도 말했듯, 요약하면 k-means는 각 문서들 속에 들어있는 데이터 분석을 통해 유사하거나 관계가 높은 항목들끼리 집합을 만들고 싶을 때, 사용하는 알고리즘이다.</p>
+
+<p><img src="/public/img/k-means.png" alt="k-means" width="70%" height="70%" class="center" /></p>
+
+<p>그림을 설명해보자면 아래와 같다.</p>
+
+<ol>
+  <li>처음에 중심값을 선택. (랜덤하게 중심값을 선택)</li>
+  <li>클러스터 할당: k개 (그림 속에서는 2개)의 중심값과 각 개별 거리를 측정한다.</li>
+  <li>가장 가까운 클러스터에 해당 데이터를 분류한다.</li>
+  <li>새 중심값 선택 : 클러스터마다 새로운 중심값을 계산한다.</li>
+  <li>범위 확인 : 선택된 중심값이 변화가 어느정도 없다면 멈춘다. 
+  -&gt; 만약 있다면 (1)번부터 반복</li>
+</ol>
+
+<h2 id="k-means-단점">k-means 단점</h2>
+
+<p>k-means의 단점으로는 이상치(노이즈)에 민감하다는 점이 있다.</p>
+
+<p><img src="/public/img/k-means2.png" alt="k-means2" width="70%" height="70%" class="center" /></p>
+
+<p>노이즈 데이터를 잘 처리해주지 않으면 이상치 값과 그렇지 않은 값으로 뷴류한다. 
+정리하면, k-means의 한계점을 뽑자면 아래와 같다.</p>
+
+<ol>
+  <li>k값 입력 파라미터를 직접 지정해야한다.</li>
+  <li>이상치에 민감하다.</li>
+</ol>
+
+<h2 id="k-means-예제">k-means 예제</h2>
+
+<p>기본 데이터 셋을 간단하게 만든다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">row</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"A"</span><span class="p">,</span><span class="s2">"B"</span><span class="p">,</span><span class="s2">"C"</span><span class="p">,</span><span class="s2">"D"</span><span class="p">,</span><span class="s2">"E"</span><span class="p">,</span><span class="s2">"F"</span><span class="p">,</span><span class="s2">"G"</span><span class="p">,</span><span class="s2">"H"</span><span class="p">,</span><span class="s2">"I"</span><span class="p">,</span><span class="s2">"J"</span><span class="p">)</span><span class="w">
+</span><span class="n">col</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"X"</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">)</span><span class="w">
+</span><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">dimnames</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/k-means3.png" alt="k-means3" width="10%" height="10%" class="center" /></p>
+
+<p>위에서 만든 데이터 셋을 plot 그래프로 그려서 확인하면 아래와 같다.</p>
+
+<p><img src="/public/img/k-means4.png" alt="k-means4" width="50%" height="50%" class="center" /></p>
+
+<p>k-mean 패키지 설치 후, 분류하면 아래와 같다.
+<img src="/public/img/k-means5.png" alt="k-means5" width="50%" height="50%" class="center" />
+<img src="/public/img/k-means6.png" alt="k-means6" width="30%" height="30%" class="center" /></p>
+
+<p>원래 데이터와 겹쳐서 함께 시각화하면 아래와 같다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="n">km</span><span class="o">$</span><span class="n">centers</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">km</span><span class="o">$</span><span class="n">centers</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="n">bg</span><span class="o">=</span><span class="n">km</span><span class="o">$</span><span class="n">centers</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="o">=</span><span class="nf">range</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="o">=</span><span class="nf">range</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">))</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">new</span><span class="o">=</span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">km</span><span class="o">$</span><span class="n">cluster</span><span class="m">+1</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="o">=</span><span class="nf">range</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="o">=</span><span class="nf">range</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/k-means7.png" alt="k-means7" width="50%" height="50%" class="center" /></p>
+
+<p>그렇게 어렵지 않게 데이터를 군집화 시킬 수 있기 때문에 간단하게 많이들 돌려보는 편이다. 또한 간단한거 치고는 유용하기 때문에 데이터 분석할때 사용하기 용이하다.</p>
+:ET

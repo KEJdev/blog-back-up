@@ -1,0 +1,20 @@
+I"*	<p>파이썬에서 간혹 리스트에 소수만을 걸러 내고 싶을때, 사용되는 filter 함수입니다. 
+이름에서부터 느껴지듯 뭔가 걸러내기 위해 사용되는 함수라는 것을 알 수 있습니다.</p>
+
+<h2 id="filter">filter</h2>
+
+<p>기본적으로 내장되어 있는 모듈이기 때문에 따로 불러 올 필요는 없습니다. filter를 이용하면 소수를 걸러낼 수 있다고 했는데, 소수는 두개의 수로 못나눈 것을 이야기합니다. 대표적으로 7이 소수가 될 수 있습니다. 소수의 반대는 합성수라고 이야기 할 수 있는데, 합성수의 예로는 6이 있습니다. (2*3=6)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">getPrime</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">listdata</span> <span class="o">=</span> <span class="p">[</span><span class="mi">117</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">1113</span><span class="p">,</span> <span class="mi">11113</span><span class="p">,</span> <span class="mi">11119</span><span class="p">]</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">getPrime</span><span class="p">,</span> <span class="n">listdata</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">ret</span><span class="p">))</span>            <span class="c1"># [11113, 11119] 가 출력됨
+</span></code></pre></div></div>
+
+:ET

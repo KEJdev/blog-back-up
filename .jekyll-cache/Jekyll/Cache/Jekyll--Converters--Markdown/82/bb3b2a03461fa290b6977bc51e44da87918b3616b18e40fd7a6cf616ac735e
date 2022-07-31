@@ -1,0 +1,35 @@
+I"
+<p>함수나, 클래스를 만들때 보통은 함수에 이름을 붙여서 사용한다. 그러나 함수를 재사용하지 않으려고 하는 경우에 Lambda 함수를 사용한다.</p>
+
+<h2 id="lambda">Lambda</h2>
+
+<p>람다식은 아래와 같다.</p>
+
+<p><img src="/public/img/lambda.png" alt="lambda" width="30%" height="30%" class="center" /></p>
+
+<p>그래서 위의 식을 이용해서 간단하게 덧셈 함수를 만들면 이렇게 할 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+               <span class="c1">#매개변수  :  #실행문
+</span><span class="n">ret</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>    <span class="c1"># 4가 출력됨
+</span></code></pre></div></div>
+
+<p>람다는 간단하지만, 처음 사용할땐 어려울 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">funcs</span> <span class="o">=</span> <span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="s">'.pptx'</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="s">'.docx'</span><span class="p">]</span>
+<span class="n">ret1</span> <span class="o">=</span> <span class="n">funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="s">'Intro'</span><span class="p">)</span>
+<span class="n">ret2</span> <span class="o">=</span> <span class="n">funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="s">'Report'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ret1</span><span class="p">)</span>   <span class="c1"># intro.pptx가 출력됨
+</span><span class="k">print</span><span class="p">(</span><span class="n">ret2</span><span class="p">)</span>   <span class="c1"># Report.docx가 출력됨
+</span></code></pre></div></div>
+
+<p>이번엔 람다식을 이용해 key를 부르면 아래와 같이 간단하게 작성할 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Mary'</span><span class="p">:</span><span class="mi">10999</span><span class="p">,</span> <span class="s">'Sams'</span><span class="p">:</span><span class="mi">2111</span><span class="p">,</span> <span class="s">'Aimy'</span><span class="p">:</span><span class="mi">9778</span><span class="p">,</span> <span class="s">'Tom'</span><span class="p">:</span><span class="mi">20245</span><span class="p">,</span> <span class="s">'Michale'</span><span class="p">:</span><span class="mi">27115</span><span class="p">,</span>
+          <span class="s">'Bob'</span><span class="p">:</span><span class="mi">5887</span><span class="p">,</span> <span class="s">'Kelly'</span><span class="p">:</span><span class="mi">7855</span><span class="p">}</span>
+<span class="n">ret3</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                              <span class="c1">#0번째 요소(key)를 불러오는 함수식
+</span><span class="k">print</span><span class="p">(</span><span class="n">ret3</span><span class="p">)</span>
+</code></pre></div></div>
+:ET
