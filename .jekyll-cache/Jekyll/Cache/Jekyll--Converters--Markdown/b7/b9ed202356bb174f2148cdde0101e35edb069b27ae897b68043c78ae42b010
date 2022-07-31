@@ -1,0 +1,14 @@
+I"�<p>내 방식대로 <a href="https://programmers.co.kr/learn/courses/30/lessons/42578">프로그래머스 - 위장</a>을 풀었다. 풀고나면 항상 다른 사람 풀이를 꼼꼼히 보는데, 다들 해시에 대해 이해를 잘하신거 같다.. 대단해…</p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">clothes</span><span class="p">):</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">collections</span><span class="p">.</span><span class="n">Counter</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">clothes</span><span class="p">).</span><span class="n">values</span><span class="p">()).</span><span class="n">values</span><span class="p">():</span>
+        <span class="n">answer</span> <span class="o">*=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">answer</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+:ET

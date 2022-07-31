@@ -1,0 +1,13 @@
+I"�<p>백준 10171번의 고양이를 출력하자 문제는 너무나 귀여운 것 같다..</p>
+
+<h2 id="백준-10171번">백준 10171번</h2>
+
+<p>문제는 아래와 같다.</p>
+
+<p><img src="/public/img/baekjoon6.png" alt="baekjoon6" width="100%" height="100%" class="center" /></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"\    /</span><span class="se">\\\n</span><span class="s"> )  ( ')</span><span class="se">\n</span><span class="s">(  /  )</span><span class="se">\n</span><span class="s"> \(__)|"</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

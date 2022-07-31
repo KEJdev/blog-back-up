@@ -1,0 +1,17 @@
+I"�<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42577">프로그래머스 - 전화번호 목록</a>을 풀었는데, 다들 어쩜 그렇게 잘푸는걸까 …. 내가 푼 답이 부끄러워지는 순간..★</p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">phone_book</span><span class="p">):</span>
+    <span class="n">book</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">collections</span><span class="p">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">phone_book</span><span class="p">).</span><span class="n">keys</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">book</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">].</span><span class="n">startswith</span><span class="p">(</span><span class="n">book</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="n">answer</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">answer</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+:ET

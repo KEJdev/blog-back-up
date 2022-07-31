@@ -1,0 +1,34 @@
+I"�<p>파이썬에서의 클래스 생성자와 소멸자에 관해 알아보겠습니다. 생성자는 이름에서 알 수 있듯이 객체가 만들어질 때 호출되는 함수를 생성자라고 이야기 하며, 객체가 사라질 때 호출되는 함수를 소멸자라고 이야기합니다.</p>
+
+<h2 id="init">init</h2>
+
+<p>위에서 생성자가 무엇인지 이야기를 했는데, 생성자는 왜 사용하는 걸까요?<br />
+생성자는 객체를 초기화 할 때, 자주 사용합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">var</span> <span class="o">=</span> <span class="s">'안녕하세요!'</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'MyClass 인스턴스 객체가 생성되었습니다'</span><span class="p">)</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>   <span class="c1"># ‘MyClass 인스턴스 객체가 생성되었습니다’가 출력됨
+</span><span class="k">print</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">var</span><span class="p">)</span>      <span class="c1"># ‘안녕하세요’가 출력됨
+</span></code></pre></div></div>
+
+<h2 id="del">del</h2>
+
+<p>def __init__으로 객체를 생성했으므로 이번엔 객체를 __del__를 사용하여 소멸시켜보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">var</span> <span class="o">=</span> <span class="s">'안녕하세요!'</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'MyClass 인스턴스 객체가 생성되었습니다'</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'MyClass 인스턴스 객체가 메모리에서 제거됩니다'</span><span class="p">)</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">obj</span> 
+</code></pre></div></div>
+
+<p><img src="/public/img/init.png" alt="init" width="50%" height="50%" class="center" /></p>
+:ET

@@ -1,0 +1,167 @@
+I"SG<p><strong>링크 : <a href="https://www.acmicpc.net/step/22">브루트 포스 문제집</a></strong></p>
+
+<p>앞으로 꾸준하게 알고리즘을 풀려고 한다.<br />
+최근 여러 일이 겹치다보니, ‘자기계발을 꾸준히 해야겠다!’는 생각이 많이 들어서 최대한 1일 1알고리즘을 해보려고 한다. 물론 어려운 문제 만나면 그게 안될 수 있겠지만, 한번  풀어봐야지!</p>
+
+<p>5월 29일~31일동안 백준에 있는 단계별 - 브루트 포스 문제집 풀었다. <br />
+총 5문제였고 시간이 약간 걸렸던 문제는 ‘체스판 다시 칠하기’ 였다. <br />
+문제 이해하는데 좀 걸렸던 것 같다.</p>
+
+<h2 id="브루트-포스">브루트 포스</h2>
+
+<p>브루트 포스는 <strong>모든 경우의 수를 무식하게 탐색</strong> 하는 것을 말한다.<br />
+데이터 전체를 탐색하기 때문에 완전 탐색, 전체 탐색이라고도 불린다.</p>
+
+<ul>
+  <li>장점
+    <ol>
+      <li>모든 경우의 수를 다 검색하기 때문에 (이론상)정확도 100%를 보장함.</li>
+      <li>알고리즘 구현하기 쉽다.</li>
+    </ol>
+  </li>
+  <li>단점
+    <ol>
+      <li>문제의 복잡도(Complexity)에 매우 민감하다.</li>
+      <li>실행 시간이 오래 걸리고 메모리 효율면에서 비효율적이다.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>브루트 포스 종류에는 순차탐색, 백트래킹, DFS, BFS가 있다.</p>
+
+<h2 id="백준---블랙잭-2798번">백준 - <a href="https://www.acmicpc.net/problem/2798">블랙잭 (2798번)</a></h2>
+
+<h3 id="문제-요약">문제 요약</h3>
+<p>N장의 카드에 써져 있는 숫자가 주어졌을 때, M을 넘지 않으면서 M에 최대한 가까운 카드 3장의 합을 구해 출력하시오.</p>
+
+<h4 id="내-풀이">내 풀이</h4>
+<p>입력 받은 수를 반복문으로 수의 합을 M에서 빼고, 음수가 아닐 경우에는 리스트에 담고, 마지막에 MAX을 출력한다.</p>
+
+<h4 id="answer">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">k_cnt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)))</span>
+<span class="n">k_num</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)))</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">k_num</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">k_num</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>        
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_num</span><span class="p">)):</span>
+            <span class="n">k_sum</span> <span class="o">=</span> <span class="n">k_cnt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">k_num</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">k_num</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">k_num</span><span class="p">[</span><span class="n">j</span><span class="p">]]:</span>
+                <span class="n">k_sum</span><span class="o">-=</span><span class="p">(</span><span class="n">k_num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">k_num</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">k_num</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">k_sum</span> <span class="o">&gt;=</span> <span class="mi">0</span>  <span class="p">:</span>
+                    <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">k_sum</span><span class="p">)</span>
+<span class="n">k_sum</span> <span class="o">=</span> <span class="n">k_cnt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">k_sum</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="백준---분해합-2231번">백준 - <a href="https://www.acmicpc.net/problem/2231">분해합 (2231번)</a></h2>
+
+<h3 id="문제-요약-1">문제 요약</h3>
+<p>자연수 N이 주어졌을 때, N의 가장 작은 생성자를 구해내는 프로그램을 작성하시오.</p>
+
+<h4 id="내-풀이-1">내 풀이</h4>
+<p>1부터 N까지 반복문을 통해 구한 분해값이 주어진 생성자랑 같으면 그 값을 출력한다.</p>
+
+<h4 id="answer-1">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="n">ck</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">+</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">num</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">ck</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">break</span>
+<span class="k">if</span> <span class="n">ck</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="백준---덩치-7568번">백준 - <a href="https://www.acmicpc.net/problem/7568">덩치 (7568번)</a></h2>
+
+<h3 id="문제-요약-2">문제 요약</h3>
+<p>각각 (x, y), (p, q)라고 할 때 x &gt; p 그리고 y &gt; q 이라면 우리는 A의 덩치가 B의 덩치보다 “더 크다”고 말한다. 학생 N명의 몸무게와 키가 담긴 입력을 읽어서 각 사람의 덩치 등수를 계산하여 출력해야 한다. 단, 서로 다른 덩치끼리 크기를 정할 수 없는 경우도 있다</p>
+
+<h4 id="내-풀이-2">내 풀이</h4>
+<p>모든 경우의 수로 덩치가 큰 사람을 세면 된다.</p>
+
+<h4 id="answer-2">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">" "</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="백준---체스판-다시-칠하기-1018번">백준 - <a href="https://www.acmicpc.net/problem/1018">체스판 다시 칠하기 (1018번)</a></h2>
+
+<h3 id="문제-요약-3">문제 요약</h3>
+<p>MN개의 단위 정사각형으로 나누어져 있는 M×N 크기의 보드를 8×8 크기의 체스판으로 만들려고 한다. 
+  체스판은 검은색, 흰색 번갈아 칠해졌다. 
+  체스판을 색칠하는 경우는 두 가지인데, 하나는 맨 왼쪽 위 칸이 흰색인 경우, 하나는 검은색인 경우이다.<br />
+  보드가 체스판처럼 칠해져 있다는 보장이 없어서, 아무대나 골라서 8x8로 잘랐을 경우, 다시 칠해야 하는 정사각형의 최소 개수를 구하는 프로그램을 작성하시오.</p>
+
+<h4 id="내-풀이-3">내 풀이</h4>
+<p>행렬의 값에 따라 경우의 수를 나누어 흰색이라면 검은색으로 바꿔야 하는 수를 증가시키고,
+검은색이라면 흰색으로 바꿔야 하는 수를 증가 시키고 둘 중에 가장 작은 값을 출력 리스트에 담고 마지막에 출력함.</p>
+
+<h4 id="answer-3"><strong>Answer:</strong></h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">N</span><span class="p">,</span><span class="n">M</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+<span class="n">board</span><span class="p">,</span> <span class="n">temp</span> <span class="o">=</span> <span class="p">[],[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">board</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">7</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">-</span><span class="mi">7</span><span class="p">):</span>
+        <span class="n">b</span><span class="p">,</span><span class="n">w</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span> 
+        <span class="k">for</span> <span class="n">i_a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">k_a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">8</span><span class="p">):</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">i_a</span><span class="o">+</span><span class="n">k_a</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i_a</span><span class="p">][</span><span class="n">k_a</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'W'</span><span class="p">:</span>
+                        <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">w</span><span class="o">+=</span><span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i_a</span><span class="p">][</span><span class="n">k_a</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'B'</span><span class="p">:</span>
+                        <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">w</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">w</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="백준---영화-감독-숌-1436번">백준 - <a href="https://www.acmicpc.net/problem/1436">영화 감독 숌 (1436번)</a></h2>
+
+<h3 id="문제-요약-4">문제 요약</h3>
+<p>종말의 숫자란 어떤 수에 6이 적어도 3개이상 연속으로 들어가는 수를 말한다. 종말의 숫자란 어떤 수에 6이 적어도 3개이상 연속으로 들어가는 수를 말한다.
+숌은 첫 번째 영화의 제목은 세상의 종말 666, 두 번째 영화의 제목은 세상의 종말 1666 이렇게 이름을 지을 것이다. 일반화해서 생각하면, N번째 영화의 제목은 세상의 종말 (N번째로 작은 종말의 숫자) 와 같다. 숌이 만든 N번째 영화의 제목에 들어간 숫자를 출력하는 프로그램을 작성하시오. 숌은 이 시리즈를 항상 차례대로 만들고, 다른 영화는 만들지 않는다.</p>
+
+<h4 id="내-풀이-4">내 풀이</h4>
+<p>반복문으로 1부터 수를 증가시키면서 666이 나올 때마다 +1 씩 증가 시킴. N번째와 증가 시킨 값이 같아지면 break 문으로 탈출함.</p>
+
+<h4 id="answer-4">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">temp</span><span class="p">,</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">cnt</span> <span class="o">&lt;=</span> <span class="n">num</span><span class="p">:</span>
+    <span class="n">temp</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="s">'666'</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="k">if</span> <span class="n">cnt</span> <span class="o">==</span> <span class="n">num</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+        <span class="k">break</span>
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,59 @@
+I"�<p>파이썬에서 특정 단어가 있는지 확인하기 위해 자주 쓰이는 함수 in입니다. 아마 for 사용할때 더 많이 사용해본 적 있을꺼예요. 이 맴버 함수에 대해 자세히 알아보겠습니다.</p>
+
+<h2 id="list안에-있는지-없는지-확인하기">list안에 있는지 없는지 확인하기</h2>
+
+<p>in을 사용하여 list안에 특정 숫자나 문자열이 있는지 체크해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">listdata</span> <span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">ret1</span> <span class="o">=</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">listdata</span>    <span class="c1"># False
+</span><span class="n">ret2</span> <span class="o">=</span> <span class="mi">4</span> <span class="ow">in</span> <span class="n">listdata</span>    <span class="c1"># True
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ret1</span><span class="p">);</span> <span class="k">print</span><span class="p">(</span><span class="n">ret2</span><span class="p">)</span>
+
+<span class="n">strdata</span> <span class="o">=</span> <span class="s">'abcde'</span>
+<span class="n">ret3</span> <span class="o">=</span> <span class="s">'c'</span> <span class="ow">in</span> <span class="n">strdata</span>    <span class="c1"># True
+</span><span class="n">ret4</span> <span class="o">=</span> <span class="s">'1'</span> <span class="ow">in</span> <span class="n">strdata</span>    <span class="c1"># False
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ret3</span><span class="p">);</span> <span class="k">print</span><span class="p">(</span><span class="n">ret4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="텍스트txt에서-특정-단어-및-라인-출력하기">텍스트(.txt)에서 특정 단어 및 라인 출력하기</h2>
+
+<p>겨울왕국 데이터를 사용하여 겨울왕국에서 elsa가 몇번 나오는지 확인하기 위해 우선 한라인씩 list변수에 담아보겠습니다. 겨울왕국 데이터는 <a href="https://github.com/KEJdev/DataSet/tree/master/DataSet">여기</a>에서 다운 받으실 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"winter.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">winter_list</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">winter_list</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/in.png" alt="in" width="40%" height="40%" class="center" /></p>
+
+<p>이번엔 라인이 아니라 for문을 중첩시켜 겨울왕국의 단어들만 출력해보겠습니다.</p>
+
+<p><img src="/public/img/in2.png" alt="in2" width="80%" height="80%" class="center" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"winter.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">winter_list</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">winter_list</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/in3.png" alt="in3" width="10%" height="10%" class="center" /></p>
+
+<p>여기서 count 함수를 사용해서 elsa가 나오면 1씩 카운트 해보면 아래와 같이 쓸수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"winter.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+<span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">winter_list</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">winter_list</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="n">count</span><span class="p">(</span><span class="s">'elsa'</span><span class="p">)</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">c</span> 
+	    
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

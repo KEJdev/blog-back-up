@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-31T17:34:19+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eunji Kim</title><subtitle>양념치킨 좋아하는 개발자</subtitle><entry><title type="html">파이썬 for-else 사용하기</title><link href="http://localhost:4000/python/2022/07/12/python-for-else.html" rel="alternate" type="text/html" title="파이썬 for-else 사용하기" /><published>2022-07-12T14:00:00+08:00</published><updated>2022-07-12T14:00:00+08:00</updated><id>http://localhost:4000/python/2022/07/12/python-for-else</id><content type="html" xml:base="http://localhost:4000/python/2022/07/12/python-for-else.html"><![CDATA[<p><code class="highlighter-rouge">if</code>문에 <code class="highlighter-rouge">else</code>문이 있는데, <code class="highlighter-rouge">else</code>는 <code class="highlighter-rouge">for</code>문에도 있다.<br />
+친숙하지 않겠지만, 사용법을 이해하면 유용하게 사용할 수 있다.</p>
+
+<h2 id="for-else">for-else</h2>
+<p>보통 for문은 아래와 같이 사용한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s">'equals'</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s">'*'</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">break</span>           
+</code></pre></div></div>
+
+<p>위 코드는 공식 문서에서 가져온 간단한 예시고, 소수를 찾는 코드이다. <br />
+여기서 <code class="highlighter-rouge">else</code>를 사용하면 아래와 같이 출력이 해볼 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s">'equals'</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s">'*'</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s">'is a prime number'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">else</code>는 루프가 정상적으로 완료되면 실행되며, 이것은 어떠한 break문도 만나지 않았다는 것을 말한다. 루프를 실행하고 각 아이템을 검색하는 것이 일반적인 구조인데, 루프를 종료시키는 시나리오에는 두가지가 있다. <br />
+첫번째는 아이템을 발견하고 break를 만나 루프를 빠져나오거나, 두번째는 루프를 끝까지 도는 것이다. 이때 어떤 것이 루프를 종료시키는 원인인지 궁금할 때, 위 코드처럼 루프가 끝나면 플래스를 확인하는 방법으로 사용할 수있다.</p>]]></content><author><name></name></author><category term="Python" /><summary type="html"><![CDATA[if문에 else문이 있는데, else는 for문에도 있다. 친숙하지 않겠지만, 사용법을 이해하면 유용하게 사용할 수 있다.]]></summary></entry><entry><title type="html">에러 - Anconda 가상환경 구축 후, env name 사라짐</title><link href="http://localhost:4000/error/2022/07/03/conda-env-name-missing.html" rel="alternate" type="text/html" title="에러 - Anconda 가상환경 구축 후, env name 사라짐" /><published>2022-07-03T14:00:00+08:00</published><updated>2022-07-03T14:00:00+08:00</updated><id>http://localhost:4000/error/2022/07/03/conda-env-name-missing</id><content type="html" xml:base="http://localhost:4000/error/2022/07/03/conda-env-name-missing.html"><![CDATA[<h2 id="문제점">문제점</h2>
+
+<p>평소 keras만 쓰다가, 갑자기 pytorch를 써야되서 conda 환경 하나 팠다.<br />
+그리고 몇칠 후, 다른 환경으로 가려고 평소 쓰던 환경으로 <code class="highlighter-rouge">conda activate [env name]</code>을 쳤는데, 안된다?</p>
+
+<p>급히  <code class="highlighter-rouge">conda env list</code> 명령어로 확인하니, 이름이 사라진 것을 보게 되었다.</p>
+
+<p><img src="/public/img/env-name-missing.png" alt="env_img" width="70%" height="70%" class="center" /></p>
+
+<p>진짜 가상환경 이름만 사라져서 당황스럽다.<br />
+확인해보니, <code class="highlighter-rouge">[env name]</code> 을 적는 부분에 직접 경로를 입력해주니까 해당 환경으로 들어가진다.</p>
+
+<h2 id="해결-방안">해결 방안</h2>
+
+<p>Stackoverflow에서는 conda update 하라고 했는데, <br />
+나는 소용없었고, <code class="highlighter-rouge">conda config --add envs_dirs &lt;path to envs&gt;</code> 명령어로 해결하였다.</p>
+
+<p><img src="/public/img/env-name-missing2.png" alt="env_img" width="70%" height="70%" class="center" /></p>
+
+<p>좀더 찾아보니, 가끔 conda에서 업데이트나 여러 환경을 만들다가 발생할 수 있는 문제라고 한다.</p>]]></content><author><name></name></author><category term="Error" /><summary type="html"><![CDATA[문제점]]></summary></entry><entry><title type="html">프로그래밍의 패러다임에 대해 알아보자.</title><link href="http://localhost:4000/python/2022/06/23/multi-paradigm-languages.html" rel="alternate" type="text/html" title="프로그래밍의 패러다임에 대해 알아보자." /><published>2022-06-23T14:00:00+08:00</published><updated>2022-06-23T14:00:00+08:00</updated><id>http://localhost:4000/python/2022/06/23/multi-paradigm-languages</id><content type="html" xml:base="http://localhost:4000/python/2022/06/23/multi-paradigm-languages.html"><![CDATA[<p>이전 포스팅에서 파이썬은 ‘멀티 패러다임’ 이라고 말했다.<br />
+오늘은 그에 대해 조금 더 자세히 이야기 해볼까한다.</p>
+
+<h2 id="프로그래밍-패러다임">프로그래밍 패러다임</h2>
+
+<p>프로그래밍의 패러다임이란, 개발자가 코드를 짤 때, 어떤 관점을 가지고 짜느냐에 결정적인 역활을 한다.<br />
+크게 선언형과 명령형으로 나눌 수 있고, 이 안에는 객체 지향과 절차 지향, 함수형 프로그래밍이 포함되어 있다.</p>
+
+<ul>
+  <li>명령형 프로그래밍 : 절차 지향 프로그래밍, 객체 지향 프로그래밍</li>
+  <li>선언형 프로그래밍 :  함수형 프로그래밍</li>
+</ul>
+
+<h3 id="프로그래밍-패러다임의-특징">프로그래밍 패러다임의 특징</h3>
+
+<ul>
+  <li>명령형 프로그래밍 : 알고리즘을 명시하고 목표는 명시하지 않음.</li>
+  <li>선언형 프로그래밍 : 알고리즘을 명시하지 않고 목표만 명시함.</li>
+</ul>
+
+<p>사람이 횡단보도를 건너는 프로그래밍을 짠다고 가정한다면 아래와 같이 볼 수 있다.</p>
+
+<ul>
+  <li>명령형 프로그래밍 : 횡단보도까지 약 5m이동하고, 초록불 일 때까지 기다렸다가 초록불이면 약 10m 앞으로 이동한다</li>
+  <li>선언형 프로그래밍 : 초록불이 되면 길을 건넌다.</li>
+</ul>
+
+<p>이렇게 명령형은 사람이 걸어가는 과정(how)의 알고리즘을 명시하지만, 프로그램의 목적은 명시하지 않는다. 반대로 선언형은 초록불이 되면 길을 건넌다라는 목표만(what)을 명시한다.</p>
+
+<h2 id="절차-지향과-객체-지향-프로그래밍">절차 지향과 객체 지향 프로그래밍</h2>
+
+<p>절차 지향과 객체 지향 개념은 서로 반대 개념이 아니다.<br />
+둘다 명령형 프로그램의 하위 개념이기에 공유하는 것이 많다.</p>
+
+<ul>
+  <li>절차지향 프로그래밍
+    <ul>
+      <li>프로그램의 순서와 흐름을 중점으로 필요한 자료구조와 함수를 설계<br />
+  (데이터 중심으로 절차적으로 실행에 초점)</li>
+    </ul>
+  </li>
+  <li>객체지향 프로그래밍
+    <ul>
+      <li>자료구조와 함수를 먼저 설계하고 그 후에 실행 순서와 흐름을 설계 
+  (객체간의 관계에 초점)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="관점-지향-프로그래밍aspect-oriented-programming">관점 지향 프로그래밍(Aspect Oriented Programming)</h2>
+
+<p><img src="/public/img/AOP2.png" alt="AOP2" width="70%" height="70%" class="center" /></p>
+
+<p>관점지향 프로그래밍의 핵심은 공통 모듈을 분리시켜 해당 소스코드가 외부의 다른 클래스에서 존재하는 것이다. 참고로 객체지향을 보조하는 역활이기 때문에 객체지향 코드위에서 이루어진다.</p>
+
+<p>객체지향은 객채(Object)라는 개념을 활용함으로써 큰 프로그램을 모듈 단위로 축소시켜 작성할 수 있게 했지만, 프로그램의 크기가 엄청나게 커지면서 모듈 안에서마저 중복되는 코드가 생기게 된다.</p>
+
+<p>이렇게 모듈 안에서 중복코드가 생기게 되는 것을 횡단 관심사(Crosscutting-Concerns) 라고 한다. 그 중에 자주 언급되는 것은 트랜잭션, 로깅, 성능 분석 등이 있다.</p>
+
+<p><img src="/public/img/AOP.png" alt="AOP" width="70%" height="70%" class="center" /></p>
+
+<p>횡단 관심사들은 여러 모듈들을 말 그대로 횡단하면서 존재하게 되며 AOP를 이해함에 있어서 매우 중요한 개념이며, AOP를 통해 중복 코드 제거, 효율적인 유지복수, 높은 생산성, 재활용성 극대화 등의 이점을 얻을 수 있다.</p>
+
+<h2 id="함수형-프로그래밍">함수형 프로그래밍</h2>
+
+<p>쉽게 말하면 함수형 프로그래밍은 변수 사용을 최소화함으로써 오류를 줄이는 프로그래밍이다.<br />
+정의는 자료 처리를 수학적 함수의 계산으로 취급하고, 상태와 가변 데이터를 멀리하는 프로그래밍 패러다임 중 하나이다.</p>
+
+<p>왜 변수 사용을 최소화 해야하는 걸까 ?</p>
+
+<p>변수는 프로그램에서 개발자가 메인 메모리 공간에 올려놓은 값인데, 값이 대입되면 바뀔 수 없는 상수와 달리 변수는 언제든 값을 변경할 수 있다. 적절히 사용하면 좋겠지만, 여러 스레드가 돌아가면 변수는 오류의 원인으로 작용할 가능성이 크다.</p>
+
+<p>함수형 프로그래밍은 외부에 따로 상태 값을 두지 않고 내부에서 연쇄적으로 기능을 사용해서 결과를 연산하기 때문에 외부 요소의 영향을 받지 않고 안전한 코드를 작성 할 수 있다.</p>
+
+<h3 id="함수형-프로그래밍의-특징">함수형 프로그래밍의 특징</h3>
+
+<p>함수형 프로그래밍에는 5가지의 특성이 있다.</p>
+
+<ol>
+  <li>순수 함수 (Pure function) <br />
+ 함수형 프로그래밍에서는 일반적인 함수의 조합이 아니라 순수함수의 조합이다.
+    <ul>
+      <li>동일한 입력에는 항상 같은 값을 반환해야 한다.</li>
+      <li>함수의 출력(return)은 그 함수의 입력(input)에만 의존한다.</li>
+      <li>함수의 실행은 프로그램의 실행에 영향을 미치지 않아야 한다. (return만 수행한다는 의미)</li>
+    </ul>
+  </li>
+  <li>고차 함수 (Higher-Order Functions)
+    <ul>
+      <li>함수를 인자(argument)로 받는다.</li>
+      <li>함수의 리턴값으로 함수를 사용할 수 있다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>불변성(Immutability)<br />
+ 변하지 않는 성질을 말한다.<br />
+ 불변성을 지키기 위해서는 데이터 변경이 필요할 경우 원본을 유지한 채 복사본을 만들어 작업해야한다.</p>
+  </li>
+  <li>1급 객체(First-Class Object) 
+ 1급 객체란 함수를 값으로 다루는 것을 이야기한다.<br />
+ 특징으로는 다음과 같은 것들이 가능한 객체를 의미한다.
+    <ul>
+      <li>변수나 데이터 구조 안에 담을 수 있다.</li>
+      <li>파라미터로 전달 할 수 있다.</li>
+      <li>반환값으로 사용할 수 있다.</li>
+      <li>할당에 사용된 이름과 무관하게 고유한 구별이 가능하다.</li>
+    </ul>
+
+    <p>참고로 순수 함수들과는 다르다는 것을 인지해야한다.</p>
+  </li>
+  <li>익명 함수(Anonymous function)<br />
+ 이름 없는 함수를 말하며 람다식으로 표현되는 함수 구현을 말한다.</li>
+</ol>
+
+<h3 id="파이썬은-멀티패러다임-언어">파이썬은 멀티패러다임 언어</h3>
+
+<p>파이썬은 절차지향, 객체지향, 함수형 프로그래밍을 지원하는 멀티패러다임 언어이다. 예시를 통해 알아보자.</p>
+
+<h3 id="절차-지향---jupyter-notebook">절차 지향 - Jupyter Notebook</h3>
+
+<p>절차 지향은 위에서도 언급했듯 데이터를 중심으로 순차적으로 코드를 구현하는 프로그래밍 방식이다.<br />
+Jupyter Notebook을 이용하여 데이터 분석을 하는데, 이것은 절차지향적 방식이라고도 볼 수 있다. 주피터의 경우 셀 단위로 전처리, 모델링, 시각화 코드를 순차적으로 작성하고 실행시켜 결과를 확인하기 때문이다.</p>
+
+<h3 id="객체-지향---ml-model-django">객체 지향 - ML Model, Django</h3>
+
+<p>객체 지향은 추상화된 클래스와 이에 대한 속성과 행위를 정의하고 이를 중심으로 개발하는 프로그래밍 방식이다.</p>
+
+<p>머신러닝 모델은 대부분 클래스로 정의 되어 있고, fit(), predict()로 훈련과 예측을 할 수 있도록 모델이 구현되어 있다. 머신러닝 개발자들은 모델 객체를 선언하고 활용하는 법만 알면 따로 모델을 구현할 필요 없이 머신러닝 모델을 활용할 수 있다.</p>
+
+<p>또한 Django 역시 파이썬 객체지향 프로그래밍의 대표적인 예시이다.<br />
+야놀자 같은 사이트를 만든다고 가정할 때, 사용자, 방, 예약, 리뷰 등의 개념을 객체로 구성하고 이를 관리하기 위한 데이터 모델이나 화면에 표시하기 위한 뷰를 만들어 웹 사이트를 만들게 된다.</p>
+
+<h3 id="함수형---pyspark">함수형 - PySpark</h3>
+
+<p>데이터 분석에서 함수형 프로그래밍의 특징은 thread-safe하고 병렬계산을 가능하게 하기 때문에 대용량 데이터를 다룰 때 활용된다.</p>
+
+<p>예시 코드는 아래와 같다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">textFile</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">)</span>
+<span class="n">lineLengths</span> <span class="o">=</span> <span class="n">lines</span><span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="n">totalLength</span> <span class="o">=</span> <span class="n">lineLengths</span><span class="p">.</span><span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>코드를 보면 별도의 변수의 선언 없이 함수들의 조합만으로 원하는 결과를 얻을 수 있다. 또한 리스트 컴프리헨션을 이용해 새로운 리스트를 선언 없이 리스트 값을 필터링 한다는 등이 있다.</p>
+
+<h3 id="관점지향---decorator">관점지향 - Decorator</h3>
+
+<p>관점지향 프로그래밍의 경우 decorator를 잘 사용하는 것이라 보면 된다.</p>
+
+<hr />
+<p><strong>reference</strong>  <br />
+<a href="https://velog.io/@gillog/AOP%EA%B4%80%EC%A0%90-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">https://velog.io/@gillog</a>
+<a href="https://hoi5088.medium.com/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84-%EC%A0%88%EC%B0%A8-%EC%A7%80%ED%96%A5-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-a5160a1e39e4">https://hoi5088.medium.com/</a><br />
+<a href="https://docs.python.org/3/howto/functional.html">https://docs.python.org/3/howto/functional.html</a><br />
+<a href="https://jinwoo1990.github.io/dev-wiki/python-concept-1/">https://jinwoo1990.github.io/dev-wiki/python-concept-1/</a></p>]]></content><author><name></name></author><category term="Python" /><summary type="html"><![CDATA[이전 포스팅에서 파이썬은 ‘멀티 패러다임’ 이라고 말했다. 오늘은 그에 대해 조금 더 자세히 이야기 해볼까한다.]]></summary></entry><entry><title type="html">파이썬의 특징에 대해 자세히 알아보자.</title><link href="http://localhost:4000/python/2022/06/22/interpreter-compiler.html" rel="alternate" type="text/html" title="파이썬의 특징에 대해 자세히 알아보자." /><published>2022-06-22T14:00:00+08:00</published><updated>2022-06-22T14:00:00+08:00</updated><id>http://localhost:4000/python/2022/06/22/interpreter-compiler</id><content type="html" xml:base="http://localhost:4000/python/2022/06/22/interpreter-compiler.html"><![CDATA[<p>최근 내가 자주 즐겨보는 개발자 유튜버분이 책을 한 권 내셨는데, 난 그분의 팬이라 아묻따 바로 책 구입했다.<br />
+역시나, 책은 알차다.</p>
+
+<p>오늘은 그 책을 보면서 파이썬에 대해서 전체적으로 이야기 해볼까한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>인터프리터식, 객체지향적, 동적 타이핑(dynamically typed) 대화형 언어이다.    
+</code></pre></div></div>
+
+<p>인터프리터는 무엇이고 객체지향과 동적 타이핑은 무엇일까 ?</p>
+
+<h2 id="인터프리터interpreter와-컴파일compiler">인터프리터(Interpreter)와 컴파일(Compiler)</h2>
+
+<p><img src="/public/img/compiler.png" alt="compiler" width="30%" height="30%" class="center" /></p>
+
+<p>컴파일과 인터프리터는 간단하게 말하면 내가 작성한 코드가 컴퓨터가 읽을 수 있는 ‘기계어로 번역하는 과정’에서 어떤 방식으로 번역하는 것인지를 분류한거라고 볼 수 있다.</p>
+
+<ul>
+  <li>
+    <p>컴파일 언어의 경우 프로그래밍이 마친 뒤 코드 전체를 미리 기계어로 번역(컴파일)한 다음에 실행 파일을 생성해서 실행하는 언어이다.</p>
+  </li>
+  <li>
+    <p>인터프리터의 경우 작성된 코드를 한 줄 한줄 읽으면서 기계어로 번역하면서 실행되는 언어이다.</p>
+  </li>
+</ul>
+
+<p>위 글을 읽고 눈치 챈 사람도 있겠지만, 인터프리터의 경우 컴파일 과정이 없기 때문에 따라서 컴파일 에러 또한 없다.</p>
+
+<p><img src="/public/img/compiler2.png" alt="compiler2" width="70%" height="70%" class="center" /></p>
+
+<p>컴파일 언어와 인터프리터 언어의 가장 큰 차이는 속도다.</p>
+
+<ul>
+  <li>컴파일 언어의 단점으로  컴파일이라는 과정 때문에 개발 시간은 늘어나지만, 장점으로는 오류로부터 비교적 안전하고 프로그램 실행 속도가 빠르다.</li>
+  <li>인터프리터의 경우 장점으로 빠른 개발이 가능하지만, 단점으로는 실행 속도가 느리다.</li>
+</ul>
+
+<p>대표적인 컴파일 언어와 인터프리터 언어는 아래 표와 같다.</p>
+
+<ul>
+  <li>컴파일 언어 :C , C++, Java , 타입 스크립트, 코틀린, 스위프트, 스칼라, GO, 러스트</li>
+  <li>인터프리터 언어 : 자바스크립트, 파이썬, 루비, PHP, 펄, R</li>
+</ul>
+
+<h2 id="객체지향과-절차지향-프로그래밍">객체지향과 절차지향 프로그래밍</h2>
+
+<p>이제 파이썬이 인터프리터 언어라는 것을 알았다. <br />
+그렇다면 객체지향적이라는 뜻은 무엇을까?</p>
+
+<p>먼저 객체지향과 절차지향 프로그래밍에 대해 알아보자.<br />
+절차와 객체지향 프로그래밍은 소스코드를 어디서부터 읽느냐에 따라 나눌 수 있다.</p>
+
+<ul>
+  <li>절차지향 프로그래밍<br />
+소스코드를 위에서부터 차례대로 읽는 방법을 절차지향 프로그래밍이라고 이야기한다.<br />
+소스코드를 순차적으로 실행하기 때문에 소스코드의 순서가 굉장히 중요하다.</li>
+</ul>
+
+<p>예를 들어 쿠키를 만든다고 해보자.<br />
+쿠키 반죽을 만들고, 토핑을 뿌리고, 쿠키를 굽고, 쿠키를 포장한다.</p>
+
+<p>이 과정은 분리가 되면 안되고, 순서가 틀려서도 안된다. <br />
+절차지향 프로그래밍 역시 이와 같으며, 컴퓨터의 처리 구조와 비슷하다.</p>
+
+<p>장점으로는 실행 속도가 빠르다는 점이 있지만, 단점으로는 모든 구성 요소가 연결되어 있기 때문에 사소한 문제 하나만 생겨도 프로그램 전체가 돌아가지 않는다. 또한 실행 순서가 바뀌게 된다면 전혀 다른 결과를 볼 수 있다.</p>
+
+<p>대표적인 절차 지향 언어로는 C언어이다.<br />
+이런 단점을 보완하기 위해 나온 개념이 객체지향이며, 대표적인 객체지향 언어가 C++이다.</p>
+
+<ul>
+  <li>객체지향 프로그래밍<br />
+프로그램을 다수의 객체로 만들고 이 객체끼리 서로 상호 작용하는 방법을 말한다. 
+객체지향에서는 각 객체의 역활이 나누어져있고, 사용하고자 하는 부분에서 각 객체가 따로 동작한다.</li>
+</ul>
+
+<p><img src="/public/img/OPP.png" alt="OPP" width="70%" height="70%" class="center" /></p>
+
+<p>객체지향의 장점으로는 객체 하나에 대해 문제가 생겨도 해당 객체만 수정하면 되기 때문에 유지보수나 생산성이 좋지만, 단점으로는 설계할 때 시간이 많이 걸리며 절치지향보다 처리속도가 느리다. 또한 객체지향 언어는 대체로 난이도가 높다.</p>
+
+<p>그러면 왜 파이썬을 객체지향적 언어라고 하는걸까?<br />
+사실 파이썬은 ‘절차’를 지향할 수 있고 ‘객체’를 지향할 수 있다.</p>
+
+<p>파이썬은 멀티패러다임 언어이기 때문에 방식에 따라 다르게 사용할 수있다.</p>
+
+<p>절차지향 언어인 C를보면 함수(function)기능은 사용할 수 있지만, Class처럼 변수와 함수를 집합으로 활용하는 개념이 없다. 여기서 Class가 중요한 이유는 객체를 만드는 설계도이기 때문이다.</p>
+
+<p>따라서 파이썬에서의 Class 기능이 파이썬을 객체지향 언어라고 부르는 대표적인 이유이다.</p>
+
+<h2 id="동적-타이핑dynamically-typed">동적 타이핑(dynamically typed)</h2>
+
+<p>동적 타이핑은 코드를 작성하는데 있어서 컴퓨터적 구조를 생략한 것을 이야기한다.<br />
+변수를 지정할 때, 변수의 데이터 타입 등을 명시하지 않아도 컴퓨터가 알아서 해석하는 것을 말하며, 실행속도가 느리다.</p>
+
+<p>반대로 정적 타이핑은 컴퓨터적 구조를 명시해야한다. <br />
+변수를 지정할 때, int, str타입인지를 반드시 직접 명시해줘야하며, 컴퓨터가 해야할 일을 덜어주기 때문에 동적 타이핑에 비해 실행속도가 무척 빠르다.</p>
+
+<h2 id="파이썬의-특징">파이썬의 특징</h2>
+
+<ol>
+  <li>인터프리터 언어이다.</li>
+  <li>동적 타이핑 대화형 언어이다.</li>
+  <li>간단하고 쉬운 문법.</li>
+  <li>메모리 자동 관리( Garbage Collection)</li>
+  <li>높은 확장성</li>
+  <li>무료</li>
+</ol>
+
+<h2 id="파이썬-사용-분야">파이썬 사용 분야</h2>
+
+<p>파이썬으로 할 수 있는 것은 굉장히 많다.</p>
+
+<ol>
+  <li>인공지능 개발</li>
+  <li>통계 및 분석</li>
+  <li>웹 애플리케이션</li>
+  <li>핀테크 및 블록체인</li>
+  <li>게임 제작</li>
+  <li>임베디드 시스템의 응용 프로그램 제작</li>
+  <li>업무 자동화</li>
+</ol>
+
+<hr />
+
+<ul>
+  <li>이미지 출처<br />
+<a href="http://soen.kr/lecture/ccpp/cpp1/1-1-3.htm">http://soen.kr/lecture/ccpp/cpp1/1-1-3.htm</a><br />
+<a href="https://velog.io/@daon9apples/%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%96%B8%EC%96%B4%EC%99%80-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EC%96%B8%EC%96%B4-%EB%82%98%EC%97%B4-%EB%B0%8F-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%84%A4%EB%AA%85">https://velog.io/@daon9apples/</a><br />
+<a href="https://velog.io/@qnddj-kjh/Java-%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5">https://velog.io/@qnddj-kjh/Java-%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5</a></li>
+</ul>]]></content><author><name></name></author><category term="Python" /><summary type="html"><![CDATA[최근 내가 자주 즐겨보는 개발자 유튜버분이 책을 한 권 내셨는데, 난 그분의 팬이라 아묻따 바로 책 구입했다. 역시나, 책은 알차다.]]></summary></entry><entry><title type="html">백준 - 브루트포스(Brute Force) 단계별 문제 풀이(Python).</title><link href="http://localhost:4000/algorithm/2022/05/31/algorithm-bruteforce.html" rel="alternate" type="text/html" title="백준 - 브루트포스(Brute Force) 단계별 문제 풀이(Python)." /><published>2022-05-31T14:00:00+08:00</published><updated>2022-05-31T14:00:00+08:00</updated><id>http://localhost:4000/algorithm/2022/05/31/algorithm-bruteforce</id><content type="html" xml:base="http://localhost:4000/algorithm/2022/05/31/algorithm-bruteforce.html"><![CDATA[<p><strong>링크 : <a href="https://www.acmicpc.net/step/22">브루트 포스 문제집</a></strong></p>
+
+<p>앞으로 꾸준하게 알고리즘을 풀려고 한다.<br />
+최근 여러 일이 겹치다보니, ‘자기계발을 꾸준히 해야겠다!’는 생각이 많이 들어서 최대한 1일 1알고리즘을 해보려고 한다. 물론 어려운 문제 만나면 그게 안될 수 있겠지만, 한번  풀어봐야지!</p>
+
+<p>5월 29일~31일동안 백준에 있는 단계별 - 브루트 포스 문제집 풀었다. <br />
+총 5문제였고 시간이 약간 걸렸던 문제는 ‘체스판 다시 칠하기’ 였다. <br />
+문제 이해하는데 좀 걸렸던 것 같다.</p>
+
+<h2 id="브루트-포스">브루트 포스</h2>
+
+<p>브루트 포스는 <strong>모든 경우의 수를 무식하게 탐색</strong> 하는 것을 말한다.<br />
+데이터 전체를 탐색하기 때문에 완전 탐색, 전체 탐색이라고도 불린다.</p>
+
+<ul>
+  <li>장점
+    <ol>
+      <li>모든 경우의 수를 다 검색하기 때문에 (이론상)정확도 100%를 보장함.</li>
+      <li>알고리즘 구현하기 쉽다.</li>
+    </ol>
+  </li>
+  <li>단점
+    <ol>
+      <li>문제의 복잡도(Complexity)에 매우 민감하다.</li>
+      <li>실행 시간이 오래 걸리고 메모리 효율면에서 비효율적이다.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>브루트 포스 종류에는 순차탐색, 백트래킹, DFS, BFS가 있다.</p>
+
+<h2 id="백준---블랙잭-2798번">백준 - <a href="https://www.acmicpc.net/problem/2798">블랙잭 (2798번)</a></h2>
+
+<h3 id="문제-요약">문제 요약</h3>
+<p>N장의 카드에 써져 있는 숫자가 주어졌을 때, M을 넘지 않으면서 M에 최대한 가까운 카드 3장의 합을 구해 출력하시오.</p>
+
+<h4 id="내-풀이">내 풀이</h4>
+<p>입력 받은 수를 반복문으로 수의 합을 M에서 빼고, 음수가 아닐 경우에는 리스트에 담고, 마지막에 MAX을 출력한다.</p>
+
+<h4 id="answer">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">k_cnt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)))</span>
+<span class="n">k_num</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)))</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">k_num</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">k_num</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>        
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_num</span><span class="p">)):</span>
+            <span class="n">k_sum</span> <span class="o">=</span> <span class="n">k_cnt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">k_num</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">k_num</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">k_num</span><span class="p">[</span><span class="n">j</span><span class="p">]]:</span>
+                <span class="n">k_sum</span><span class="o">-=</span><span class="p">(</span><span class="n">k_num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">k_num</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">k_num</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">k_sum</span> <span class="o">&gt;=</span> <span class="mi">0</span>  <span class="p">:</span>
+                    <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">k_sum</span><span class="p">)</span>
+<span class="n">k_sum</span> <span class="o">=</span> <span class="n">k_cnt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">k_sum</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="백준---분해합-2231번">백준 - <a href="https://www.acmicpc.net/problem/2231">분해합 (2231번)</a></h2>
+
+<h3 id="문제-요약-1">문제 요약</h3>
+<p>자연수 N이 주어졌을 때, N의 가장 작은 생성자를 구해내는 프로그램을 작성하시오.</p>
+
+<h4 id="내-풀이-1">내 풀이</h4>
+<p>1부터 N까지 반복문을 통해 구한 분해값이 주어진 생성자랑 같으면 그 값을 출력한다.</p>
+
+<h4 id="answer-1">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="n">ck</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">+</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">num</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">ck</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">break</span>
+<span class="k">if</span> <span class="n">ck</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="백준---덩치-7568번">백준 - <a href="https://www.acmicpc.net/problem/7568">덩치 (7568번)</a></h2>
+
+<h3 id="문제-요약-2">문제 요약</h3>
+<p>각각 (x, y), (p, q)라고 할 때 x &gt; p 그리고 y &gt; q 이라면 우리는 A의 덩치가 B의 덩치보다 “더 크다”고 말한다. 학생 N명의 몸무게와 키가 담긴 입력을 읽어서 각 사람의 덩치 등수를 계산하여 출력해야 한다. 단, 서로 다른 덩치끼리 크기를 정할 수 없는 경우도 있다</p>
+
+<h4 id="내-풀이-2">내 풀이</h4>
+<p>모든 경우의 수로 덩치가 큰 사람을 세면 된다.</p>
+
+<h4 id="answer-2">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">" "</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="백준---체스판-다시-칠하기-1018번">백준 - <a href="https://www.acmicpc.net/problem/1018">체스판 다시 칠하기 (1018번)</a></h2>
+
+<h3 id="문제-요약-3">문제 요약</h3>
+<p>MN개의 단위 정사각형으로 나누어져 있는 M×N 크기의 보드를 8×8 크기의 체스판으로 만들려고 한다. 
+  체스판은 검은색, 흰색 번갈아 칠해졌다. 
+  체스판을 색칠하는 경우는 두 가지인데, 하나는 맨 왼쪽 위 칸이 흰색인 경우, 하나는 검은색인 경우이다.<br />
+  보드가 체스판처럼 칠해져 있다는 보장이 없어서, 아무대나 골라서 8x8로 잘랐을 경우, 다시 칠해야 하는 정사각형의 최소 개수를 구하는 프로그램을 작성하시오.</p>
+
+<h4 id="내-풀이-3">내 풀이</h4>
+<p>행렬의 값에 따라 경우의 수를 나누어 흰색이라면 검은색으로 바꿔야 하는 수를 증가시키고,
+검은색이라면 흰색으로 바꿔야 하는 수를 증가 시키고 둘 중에 가장 작은 값을 출력 리스트에 담고 마지막에 출력함.</p>
+
+<h4 id="answer-3"><strong>Answer:</strong></h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">N</span><span class="p">,</span><span class="n">M</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+<span class="n">board</span><span class="p">,</span> <span class="n">temp</span> <span class="o">=</span> <span class="p">[],[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">board</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">7</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">-</span><span class="mi">7</span><span class="p">):</span>
+        <span class="n">b</span><span class="p">,</span><span class="n">w</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span> 
+        <span class="k">for</span> <span class="n">i_a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">k_a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">8</span><span class="p">):</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">i_a</span><span class="o">+</span><span class="n">k_a</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i_a</span><span class="p">][</span><span class="n">k_a</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'W'</span><span class="p">:</span>
+                        <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">w</span><span class="o">+=</span><span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i_a</span><span class="p">][</span><span class="n">k_a</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'B'</span><span class="p">:</span>
+                        <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">w</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">w</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="백준---영화-감독-숌-1436번">백준 - <a href="https://www.acmicpc.net/problem/1436">영화 감독 숌 (1436번)</a></h2>
+
+<h3 id="문제-요약-4">문제 요약</h3>
+<p>종말의 숫자란 어떤 수에 6이 적어도 3개이상 연속으로 들어가는 수를 말한다. 종말의 숫자란 어떤 수에 6이 적어도 3개이상 연속으로 들어가는 수를 말한다.
+숌은 첫 번째 영화의 제목은 세상의 종말 666, 두 번째 영화의 제목은 세상의 종말 1666 이렇게 이름을 지을 것이다. 일반화해서 생각하면, N번째 영화의 제목은 세상의 종말 (N번째로 작은 종말의 숫자) 와 같다. 숌이 만든 N번째 영화의 제목에 들어간 숫자를 출력하는 프로그램을 작성하시오. 숌은 이 시리즈를 항상 차례대로 만들고, 다른 영화는 만들지 않는다.</p>
+
+<h4 id="내-풀이-4">내 풀이</h4>
+<p>반복문으로 1부터 수를 증가시키면서 666이 나올 때마다 +1 씩 증가 시킴. N번째와 증가 시킨 값이 같아지면 break 문으로 탈출함.</p>
+
+<h4 id="answer-4">Answer:</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">temp</span><span class="p">,</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">cnt</span> <span class="o">&lt;=</span> <span class="n">num</span><span class="p">:</span>
+    <span class="n">temp</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="s">'666'</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="k">if</span> <span class="n">cnt</span> <span class="o">==</span> <span class="n">num</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+        <span class="k">break</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="Algorithm" /><summary type="html"><![CDATA[링크 : 브루트 포스 문제집]]></summary></entry><entry><title type="html">논문리뷰 - Recurrent Residual Convolutional Neural Network based on U-Net (R2U-Net) for Medical Image Segmentation</title><link href="http://localhost:4000/paper/2022/02/28/R2U-Net.html" rel="alternate" type="text/html" title="논문리뷰 - Recurrent Residual Convolutional Neural Network based on U-Net (R2U-Net) for Medical Image Segmentation" /><published>2022-02-28T14:00:00+08:00</published><updated>2022-02-28T14:00:00+08:00</updated><id>http://localhost:4000/paper/2022/02/28/R2U-Net</id><content type="html" xml:base="http://localhost:4000/paper/2022/02/28/R2U-Net.html"><![CDATA[<p><strong>Paper URL : <a href="https://arxiv.org/pdf/1802.06955.pdf">https://arxiv.org/pdf/1802.06955.pdf</a></strong></p>
+
+<p>이번 논문에서 제안하는 모델은 두가지이며, RU-Net과 R2U-Net이라는 모델이다.<br />
+RU-Net은 U-Net 기반의 RCNN(Recurrent Convolutional Neural Network), R2U-Net은 U-Net 기반의 RRCNN(Recurrent Residual Convolution Neural Network)이다.</p>
+
+<p>논문에서는 Recurrent와 RCNN 아키텍처를 사용하므로써, 보다 효율적인 모델이라고 말하며, U-Net과 동일한 수의 네트워크 매개변수를 갖지만 성능이 더 우수하다고 한다.</p>
+
+<h2 id="요약">요약</h2>
+
+<ol>
+  <li>기존의 U-Net구조에 Recurrent와 RCNN 아키텍처를 사용했다.</li>
+  <li>RU-Net과 R2U-Net은 U-Net과 동일한 수의 네트워크 매개변수를 갖지만 성능이 더 우수하다.</li>
+  <li>망막 혈관 분할, 피부암, 폐 분할 데이터에서 민감도, 특이도, 정확도, AUC 의 결과를 보았을 때, 높은 성능을 보였다.</li>
+</ol>
+
+<h2 id="ru-net-and-r2u-net-architectures">RU-NET AND R2U-NET ARCHITECTURES</h2>
+
+<p>우선 네가지의 block 대해 알아보자.</p>
+
+<p><img src="/public/img/R2U-Net_2.png" alt="R2U-Net_2" width="70%" height="70%" class="center" /></p>
+
+<p>a : U-Net의 block<br />
+b : RU-Net의 block<br />
+c : Residual convolutional block<br />
+b : R2U-Net의 block</p>
+
+<p>모델에서 제안한 모델의 block은 b와 d 이며, a와 c는 기존 모델들의 block이다.</p>
+
+<ul>
+  <li>
+    <p><strong>(a) U-Net의 block</strong></p>
+
+    <p>전체적인 U-Net 구조는 아래와 같고 구조를 뜯어서 살펴보면,</p>
+
+    <p><img src="/public/img/R2U-Net-4.png" alt="R2U-Net-4" width="70%" height="70%" class="center" /></p>
+
+    <p>conv Layer + ReLu가 두개가 한 block이고, 이것이 반복되는 것을 알 수 있다. 이것이 U-Net의 기본 block이다.</p>
+  </li>
+  <li>
+    <p><strong>(b) RU-Net의 block</strong></p>
+
+    <p>RU-Net의 block은 위에 보이는 U-Net block에 Recurrent를 합쳐서 만든 구조인데, 여러 conv 연산이 하나의 커널 가중치를 공유해 여러번 반복해서 연산하는 구조다.</p>
+
+    <p><img src="/public/img/R2U-Net_5.png" alt="R2U-Net_5" width="70%" height="70%" class="center" /></p>
+
+    <p>현재 층의 출력을 다시 입력으로 받아 흐르는 구도이기 때문에, 적은 파라미터를 갖고도 더 좋은 성능을 낼 수 있다고 한다.</p>
+  </li>
+  <li>
+    <p><strong>(c) Residual convolutional block</strong></p>
+
+    <p>Residual Block은 정말 유명한데, 잔차 학습이라고도 불린다.</p>
+
+    <p><img src="/public/img/R2U-Net_3.png" alt="R2U-Net_3" width="70%" height="70%" class="center" /></p>
+
+    <p>그림을 보면 알 수 있듯, weight layer들을 통과한 \(F(x)\) 와 통과하지 않는 \(x\)를 합하는 구조이며, 이 block들이 쌓이면 Residual Network(ResNet) 이라는 모델이 만들어진다.</p>
+  </li>
+  <li>
+    <p><strong>(d) R2U-Net의 block</strong></p>
+
+    <p>R2U-Net는 b + c 의 block을 합친 구조이다.</p>
+  </li>
+</ul>
+
+<p>논문 모델의 최종 아키텍처는 아래 그림과 같다.</p>
+
+<p><img src="/public/img/R2U-Net_1.png" alt="R2U-Net_1" width="70%" height="70%" class="center" /></p>
+
+<h2 id="experimental-setup-and-results">EXPERIMENTAL SETUP AND RESULTS</h2>
+
+<ul>
+  <li>
+    <p><strong>혈관 분할</strong></p>
+
+    <p>망막 혈관 segmentation을 위해 DRIVE, STARE 및 CHASH_DB1 세 가지 데이터를 사용하였고, 높은 정확도를 보였다.</p>
+
+    <p><img src="/public/img/R2U-Net_6.png" alt="R2U-Net_6" width="70%" height="70%" class="center" />
+  <img src="/public/img/R2U-Net_7.png" alt="R2U-Net_7" width="70%" height="70%" class="center" /></p>
+
+    <p>모델 별로 보자면 아래 그래프와 같다.</p>
+
+    <p><img src="/public/img/R2U-Net_8.png" alt="R2U-Net_8" width="70%" height="70%" class="center" /></p>
+  </li>
+  <li>
+    <p><strong>피부암 분할</strong></p>
+
+    <p><img src="/public/img/R2U-Net_9.png" alt="AOR2U-Net_9" width="70%" height="70%" class="center" />
+  <img src="/public/img/R2U-Net_10.png" alt="R2U-Net_10" width="70%" height="70%" class="center" /></p>
+  </li>
+  <li>
+    <p><strong>폐 분할</strong></p>
+
+    <p><img src="/public/img/R2U-Net_11.png" alt="R2U-Net_11" width="70%" height="70%" class="center" />
+  <img src="/public/img/R2U-Net_12.png" alt="R2U-Net_12" width="70%" height="70%" class="center" /></p>
+  </li>
+</ul>]]></content><author><name></name></author><category term="paper" /><summary type="html"><![CDATA[Paper URL : https://arxiv.org/pdf/1802.06955.pdf]]></summary></entry><entry><title type="html">논문 리뷰 - 3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation</title><link href="http://localhost:4000/paper/2022/02/20/U-Net(3D).html" rel="alternate" type="text/html" title="논문 리뷰 - 3D U-Net Learning Dense Volumetric Segmentation from Sparse Annotation" /><published>2022-02-20T14:00:00+08:00</published><updated>2022-02-20T14:00:00+08:00</updated><id>http://localhost:4000/paper/2022/02/20/U-Net(3D)</id><content type="html" xml:base="http://localhost:4000/paper/2022/02/20/U-Net(3D).html"><![CDATA[<p>Paper URL : <a href="https://arxiv.org/pdf/1606.06650v1.pdf">https://arxiv.org/pdf/1606.06650v1.pdf</a></p>
+
+<p>보통 3D 데이터 셋을 이용해 모델을 만들고자 했을 때, 3D데이터를 잘게 슬라이스하여 2D 데이터로 만들어 사용한다고 한다.</p>
+
+<p>대부분의 경우 잘 작동하겠지만, 많은 3D 데이터 세트에 대해서는 이상적인 선택은 아닐 것이다. 그래서 3D 데이터를 사용할 때의 모델 데이터 단위가 2D가 아닌 3D단위를 사용하는 것이 좋다. 그래서 기존의 U-Net(2D)의 구조에서 3D로 바꾼 것이 해당 논문의 핵심이다.</p>
+
+<h2 id="요약">요약</h2>
+
+<ol>
+  <li>이전에 제시된 U-Net 2D연산을 3D로 확장시켰다.</li>
+  <li>3D U-Net은 3D volumes을 input으로 받으며, 3D convolutions, 3D max pooling, batch normalization(BN) 을 사용한다.</li>
+</ol>
+
+<h2 id="3d-u-net-architecture">3D U-Net Architecture</h2>
+
+<p>Architecture 자체는 이전 U-Net에서 구조에서 크게 바뀌지 않았다.</p>
+
+<p><img src="/public/img/3d-u-net_1.png" alt="3d-u-net_1" width="70%" height="70%" class="center" /></p>
+<center>기존의 2D U-Net 아키텍처</center>
+
+<p><img src="/public/img/3d-u-net_2.png" alt="3d-u-net_2" width="70%" height="70%" class="center" /></p>
+<center>3D U-Net 아키텍처</center>
+
+<ul>
+  <li>왼쪽 Layer에는 각 2개의 3x3x3 convolutions, ReLU, strides, max pooling 2x2x2,</li>
+  <li>오른쪽 Layer에는 각 2개의 2x2x2 up-convolutio, 3x3x3 convolutions, ReLu</li>
+  <li>마지막 Layer에서는 1x1x1 convolutions은 출력 채널 수를 labels 수인 3으로 줄임.</li>
+  <li>참고로 각 ReLu전에 batch normalization(BN) 사용.</li>
+</ul>
+
+<p>그리고 그림을 보면, input shape이 output shape보다 작은데, 그 이유는 이미지를 한번에 넣지 않고 patch 단위로 넣었기 때문이다.</p>
+
+<h2 id="결과">결과</h2>
+
+<p>3D U-Net은 2가지 방법으로 사용 될 수 있다.</p>
+
+<p><img src="/public/img/3d-u-net_1.png" alt="3d-u-net_1" width="70%" height="70%" class="center" /></p>
+<center><img src="../../assets/images/3d-u-net_1.png" /></center>
+
+<p>a) Semi-automated segmentation: 몇 개의 단면만 annotate이 달린 데이터를 가지고 dense segmentation을 예측.<br />
+b) Fullyautomated segmentation: annotate이 전부 달린 데이터를 학습 후, non-annotate 데이터 예측.</p>
+
+<p><img src="/public/img/3d-u-net_3.png" alt="3d-u-net_3" width="70%" height="70%" class="center" /></p>
+
+<p>첫 번째 테이블을 보면 3개의 subset에 대해 3D+BN이 성능이 좋은 것을 알 수 있고, 두번째 테이블은 Semi-automated 학습에 사용되는 annotate 달린 단면(slices)의 개수가 많을수록 더 IoU가 높아진다.</p>
+
+<p><img src="/public/img/3d-u-net_4.png" alt="3d-u-net_4" width="70%" height="70%" class="center" /></p>
+
+<p>Fullyautomated segmentation에서도 2D+BN 보다 3D+BN를 사용하는 것이 좋다고 한다.</p>]]></content><author><name></name></author><category term="paper" /><summary type="html"><![CDATA[Paper URL : https://arxiv.org/pdf/1606.06650v1.pdf]]></summary></entry><entry><title type="html">논문 리뷰 - Image-to-Image Translation with Conditional Adversarial Networks</title><link href="http://localhost:4000/paper/2022/02/15/pix2pix.html" rel="alternate" type="text/html" title="논문 리뷰 - Image-to-Image Translation with Conditional Adversarial Networks" /><published>2022-02-15T15:00:00+08:00</published><updated>2022-02-15T15:00:00+08:00</updated><id>http://localhost:4000/paper/2022/02/15/pix2pix</id><content type="html" xml:base="http://localhost:4000/paper/2022/02/15/pix2pix.html"><![CDATA[<p><strong>Paper URL : <a href="https://arxiv.org/pdf/1611.07004.pdf">https://arxiv.org/pdf/1611.07004.pdf</a></strong></p>
+
+<p>Pix2Pix논문에 대해 리뷰 해볼까한다. 2018년도에 나온 논문이고 상당히 유명한 모델이다. 
+이번 논문 리뷰에서는 GAN에 대한 기본 개념은 어느정도 있다고 생각하고 글을 썼으니, 혹시나 헷갈리는 부분이 있다면 다시 한번 보고 오기를 바란다.</p>
+
+<h2 id="요약">요약</h2>
+
+<ol>
+  <li>다양한 image-to-image translation task를 수행하는 general-purpose GAN을 제안했다.
+    <ul>
+      <li>네트워크 구조나, 목적 함수에 변경 없이 다양한 이미지 변환 task를 수행할 수 있다.</li>
+      <li>저자들은 이를 ‘모델이 데이터에 적응하는 loss를 학습한다’ 라고 표현하고 있다.</li>
+    </ul>
+  </li>
+  <li>convolutional conditional GAN을 backbone으로 하였고, 목적함수에 L1 loss 추가하였다.
+    <ul>
+      <li>구체적으로 generator는 U-Net구조, discriminator는 patchGAN을 사용하였다.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>이미지 변환에 대한 과거 연구들은 모두 task마다 별도로 세분화된 모델/기술을 사용하여 문제를 해결하였다.</p>
+
+<p><img src="/public/img/pix2pix_1.png" alt="pix2pix_1" width="70%" height="70%" class="center" /></p>
+
+<p>논문의 저자들은 <strong>이미지 변환이라는게 결국 from pixels to pixels 라는 하나의 공통된 세팅하에 수행된다는 사실에 주목</strong>하였다. 그래서 모든 이미지 변환 task들을 해결할 수 있는 common framework를 제안하는 것을 목적으로 연구했다.</p>
+
+<p><strong>automatic image-to-image translation</strong> : 어떤 한 장면에 대한 representation을 다른 representation으로 바꾸어 표현하는 task.</p>
+
+<h2 id="objective">Objective</h2>
+
+<p>저자들은 이전 연구인 GAN의 main objective에서 L2 distance등의 전통적인 loss를 추가하는 것이 이로움을 확인하였다. (아래 그림 수식(1))</p>
+
+<p><img src="/public/img/pix2pix_2.png" alt="pix2pix_2" width="70%" height="70%" class="center" /></p>
+
+<p>특히 generator가 ground truth output에 pixel단위로 더 비슷해지게 만드는 효과가 있는데, L2보다 L1이 결과가 덜 blurring해서 저자들은 L1 distance를 사용했다고 한다.</p>
+
+<p><img src="/public/img/pix2pix_3.png" alt="pix2pix_3" width="70%" height="70%" class="center" /></p>
+
+<p>그 결과 생성 이미지의 결과가 완전 deterministic해졌다.(동일한 Input을 넣으면 항상 동일한 Output이 나옴). 저자들은 여기에 약간의 stochastic을 추가하기 위해 dropout을 train/test time 모두에 작동하도록 세팅하였다. 하지만 큰 랜덤성은 확보하지 못했다는 limitation이 남아있다.</p>
+
+<h2 id="model">Model</h2>
+
+<ul>
+  <li>
+    <p><strong>Generator</strong></p>
+
+    <p>저자들은 Encoder-decoder 네트워크를 토대로 level별로 처리된 feature들의 정보를 효율적으로 이용할 수 있도록 connection을 추가한 U-Net구조를 generator의 아키텍쳐로 사용하였다.</p>
+
+    <p><img src="/public/img/pix2pix_4.png" alt="pix2pix_4" width="70%" height="70%" class="center" /></p>
+  </li>
+  <li>
+    <p><strong>Discriminator</strong></p>
+
+    <p>L2와 L1 Loss는 계산될때, 모든 픽셀값들에 대해 averaging되기 때문에, image generation시 high-level 특성을 잘 살리지 못하고 blurry한 결과를 줄 수 있다. </p>
+
+    <p><strong>그러나</strong>, L2, L1 손실들은 low-level 특성은 정확하게 잘 포착해낼 수 있다</p>
+
+    <p>따라서 discriminator의 구조를 고려할 때, 저자들은 high-level structure를 잘 살려낼 수 있도록 하는 모델을 선택할 필요가 있었고, PatchGAN의 discriminator를 사용하게 되었다.</p>
+  </li>
+  <li>
+    <p><strong>Optimization &amp; inference</strong>
+  <img src="/public/img/pix2pix_5.png" alt="pix2pix_5" width="70%" height="70%" class="center" /></p>
+
+    <p>최적화 시키기 위해 모델은 discriminator 한번, generator 한번 번갈아 학습하였고, 
+  $log(1-D(x,G(x,z))$를 최소화하는 대신 $logD(x,G(x,z))$를 최대화하는 방향으로 학습하였다.
+  $D$를 최적화하는 동안 목적함수를 2로 나눠서 G와 비교한 상대적 학습률을 조금 늦췄으며, 파라미터는 Adam, lr=0.0002, beta1=0.5, beta2=0.999이다. 특이하게, inference시에도 train시와 동일하게 적용되도록 dropout이나 bn등이 train mode로 작동하게 하였다.</p>
+  </li>
+  <li>
+    <p><strong>Conclusion</strong> 
+  <img src="/public/img/pix2pix_6-1.png" alt="pix2pix_6-1" width="70%" height="70%" class="center" /></p>
+
+    <p>결과물만 확인해보면 질적인 실험결과는 cGAN이 세그멘테이션을 잘 수행함을 보여주고 있다.</p>
+
+    <p><img src="/public/img/pix2pix_6.png" alt="pix2pix_6" width="70%" height="70%" class="center" /></p>
+
+    <p>그러나 양적인 실험결과는 오히려 단순히 노말 GAN+L1 Loss를 사용하는 편이 정확도 등의 측면에서는 더 나음을 보여준다.</p>
+  </li>
+</ul>]]></content><author><name></name></author><category term="paper" /><summary type="html"><![CDATA[Paper URL : https://arxiv.org/pdf/1611.07004.pdf]]></summary></entry><entry><title type="html">간단하게 오픈 API 사용하기</title><link href="http://localhost:4000/python/2022/02/15/python-open-api.html" rel="alternate" type="text/html" title="간단하게 오픈 API 사용하기" /><published>2022-02-15T14:00:00+08:00</published><updated>2022-02-15T14:00:00+08:00</updated><id>http://localhost:4000/python/2022/02/15/python-open-api</id><content type="html" xml:base="http://localhost:4000/python/2022/02/15/python-open-api.html"><![CDATA[<p>회사 그만두고 잠시, 다른 회사 노가다 업무 하나 맡아서 했었는데, 그에 대한 일이다. 
+내가 맡았던 업무는 각종 병원 관련 데이터를 긁어모으는 일이였는데, 생각보다 너무 노가다!
+크롤링을 하면 직접하는 것보다 빠르겠지만, 한국인의 성격을 생각하면 느리게만 느껴진다! 
+그래서 오픈 API를 찾아보니 있어서 그걸로 대체해서 사용했다.</p>
+
+<p>우선 오픈 API를 사용하려면 <a href="https://www.data.go.kr/index.do">공공데이터포털</a>에 로그인을 해야한다.</p>
+
+<p><img src="/public/img/open_api_1.png" alt="open_api_1" width="90%" height="90%" class="center" /></p>
+
+<p>그리고 찾고자 하는 것을 검색해서 사용하고자 하는 API를 찾으면 된다.</p>
+
+<p><img src="/public/img/open_api_2.png" alt="open_api_2" width="90%" height="90%" class="center" /></p>
+
+<p>API를 사용하려면 활용 신청을 해야는데, 오픈 API는 따로 심사를 하지 않고, 활용 신청 후 바로 사용이 가능하다.</p>
+
+<p><img src="/public/img/open_api_3.png" alt="open_api_3" width="90%" height="90%" class="center" /></p>
+
+<p>신청 후에 마이페이지 들어가서 확인해보면 아래와 같은 개발 계정을 볼 수 있다. 여기서 아래 인증키 두개 중에서 decoding 인증키만 복사한다.</p>
+
+<p><img src="/public/img/open_api_4.png" alt="open_api_4" width="90%" height="90%" class="center" /></p>
+
+<p>그리고 아래로 내리면 인증키 설정하는 부분에 복사한 키를 넣는다.</p>
+
+<p><img src="/public/img/open_api_5.png" alt="open_api_5" width="90%" height="90%" class="center" /></p>
+
+<p>설정 완료되면 바로 API 테스트를 할 수 있다.</p>
+
+<p><img src="/public/img/open_api_6.png" alt="open_api_6" width="90%" height="90%" class="center" /></p>
+
+<p>key - b_no에 검색하고자 하는 사업자 번호를 넣어서 테스트 해본다.</p>
+
+<p><img src="/public/img/open_api_7.png" alt="open_api_7" width="90%" height="90%" class="center" /></p>
+
+<p>그럼 아래와 같이 리턴 값을 받을 수 있다.</p>
+
+<p><img src="/public/img/open_api_8.png" alt="open_api_8" width="90%" height="90%" class="center" /></p>
+
+<p>이제 여기서 Python으로 실행해보기 위해 Curl을 복사한다. 복사 후 <a href="https://curlconverter.com/">링크</a>를 눌러 Json으로 변환 시키자!</p>
+
+<p><img src="/public/img/open_api_9.png" alt="open_api_9" width="90%" height="90%" class="center" /></p>
+
+<p>json으로 변환이 끝나면 파이참에 붙여넣기를 해보자. 
+그럼 아래와 같이 결과를 볼 수 있다. 그리고 검색하고자 하는 번호를 josn_data에 넣고 돌리면 끝난다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'accept'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">,</span>
+    <span class="s">'Authorization'</span><span class="p">:</span> <span class="p">[</span><span class="n">본인의</span> <span class="n">인증키</span><span class="p">],</span>
+    <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s">'serviceKey'</span><span class="p">,</span> <span class="p">[</span><span class="n">본인의</span> <span class="n">인증키</span><span class="p">]),</span>
+<span class="p">)</span>
+
+<span class="n">json_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'b_no'</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">'1082122133'</span><span class="p">,</span>
+        <span class="s">'1081296521'</span><span class="p">,</span>
+        <span class="s">'1010158608'</span><span class="p">,</span>
+        <span class="s">'1010201835'</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.odcloud.kr/api/nts-businessman/v1/status'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json_data</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">()[</span><span class="s">"data"</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+    <span class="n">pprint</span><span class="p">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="s">'b_stt'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>아래와 같이 결과를 확인 할 수있다.</p>
+
+<p><img src="/public/img/open_api_10.png" alt="open_api_10" width="30%" height="30%" class="center" /></p>
+
+<p>아무래도 크롤링 보다 훨씬 빠른데, 1회 호출시 최대 100개씩 받을 수 있기 때문에 빠르고 편리하다.</p>]]></content><author><name></name></author><category term="Python" /><summary type="html"><![CDATA[회사 그만두고 잠시, 다른 회사 노가다 업무 하나 맡아서 했었는데, 그에 대한 일이다. 내가 맡았던 업무는 각종 병원 관련 데이터를 긁어모으는 일이였는데, 생각보다 너무 노가다! 크롤링을 하면 직접하는 것보다 빠르겠지만, 한국인의 성격을 생각하면 느리게만 느껴진다! 그래서 오픈 API를 찾아보니 있어서 그걸로 대체해서 사용했다.]]></summary></entry><entry><title type="html">해시(Hash)에 대해 알아보자.</title><link href="http://localhost:4000/algorithm/2021/12/18/algorithm-hash.html" rel="alternate" type="text/html" title="해시(Hash)에 대해 알아보자." /><published>2021-12-18T14:00:00+08:00</published><updated>2021-12-18T14:00:00+08:00</updated><id>http://localhost:4000/algorithm/2021/12/18/algorithm-hash</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/12/18/algorithm-hash.html"><![CDATA[<p>해시 테이블, 해시 맵, 해시함수등 … 많이 들어봤을텐데 이번에 간단하게 정리 해볼까한다.</p>
+
+<p>📖 해시 테이블(Hash Table)을 특징을 정리하자면, 아래와 같이 정리 할 수 있다.</p>
+
+<ol>
+  <li>임의의 크기를 가진 데이터(Key)를 고정된 크기의 데이터(Value)로 변화시켜 저장.</li>
+  <li><strong>키에 대한 해시값을 사용</strong>하여 값을 저장하고 Key-Value 쌍의 갯수에 따라 크기가 증가.</li>
+  <li>해시값 자체를 index로 사용하기 때문에 평균 시간복잡도가 O(1)로 매우 빠름.</li>
+</ol>
+
+<p>🖍 해시 테이블과 비슷한 것으로 해시 맵이 있는데, 처음에는 같은 용어인줄 알고 헷갈렸는데, <strong>동기화 지원 여부에 대해 차이가 있다</strong>는 걸 알게되었다.</p>
+
+<blockquote>
+  <p>해시 테이블은 동기화를 고려해야대는 상황에서(병렬 처리할 때) 쓰이고, 해시 맵의 경우는 동기화를 고려하지 않아도 되는 상황(병렬 처리 하지 않을 때)에서 주로 쓰인다.</p>
+</blockquote>
+
+<p>📖 해시 함수(hash function)을 특징을 정리하자면, 아래와 같이 정리 할 수 있다.</p>
+
+<ol>
+  <li>입력값의 길이가 달라도 출력값은 언제나 고정된 길이로 반환.</li>
+  <li>동일한 값이 입력되면 언제나 동일한 출력값을 보장.</li>
+  <li>출력된 결과 값을 토대로 입력 값을 유추할 수 없음.</li>
+</ol>
+
+<p><img src="/public/img/hash12.png" alt="hash12" width="70%" height="70%" class="center" /></p>
+
+<p>❗️해시는 언제 사용될까?</p>
+
+<p>리스트를 사용할 수 없을 때 사용한다. 리스트는 숫자 인덱스를 이용하여 접근하는데, 숫자가 아닌 다른 값을 사용하려고 할 때 사용할 수 있다. 또한 빠른 접근과 집계가 필요할 때 사용한다.</p>
+
+<p>해시는 간단하게 아래와 같이 만들어볼 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'name'</span><span class="p">:</span><span class="s">'뚜뚜'</span><span class="p">,</span>
+    <span class="s">'breed'</span><span class="p">:</span> <span class="s">'아메숏'</span><span class="p">,</span>
+    <span class="s">'age'</span> <span class="p">:</span> <span class="mf">2.5</span>
+<span class="p">}</span>
+
+<span class="c1"># {'name': '뚜뚜', 'breed': '아메숏', 'age': 2.5}
+</span></code></pre></div></div>
+
+<p>여기서 value에는 무엇이든 넣을 수 있다는 걸 기억하자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 이렇게 함수를 만들어 함수를 넣을 수 있고, 어떤 객체든 전부 가능하다.
+</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="n">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'name'</span><span class="p">:</span><span class="s">'뚜뚜'</span><span class="p">,</span>
+    <span class="s">'breed'</span><span class="p">:</span> <span class="s">'아메숏'</span><span class="p">,</span>
+    <span class="s">'age'</span> <span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="s">'fun'</span> <span class="p">:</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># {'name': '뚜뚜', 'breed': '아메숏', 'age': 2.5, 'fun': 4}
+</span></code></pre></div></div>
+<p>반대로 key에도 무엇이든 넣을 수 있다. ( 리스트 같은건 빼고 )</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'name'</span><span class="p">:</span><span class="s">'뚜뚜'</span><span class="p">,</span>
+    <span class="s">'breed'</span><span class="p">:</span> <span class="s">'아메숏'</span><span class="p">,</span>
+    <span class="s">'age'</span> <span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="s">'fun'</span> <span class="p">:</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+    <span class="mi">1</span> <span class="p">:</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">23</span><span class="p">),</span>
+    <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">234</span><span class="p">)</span> <span class="p">:</span> <span class="s">'덧셈'</span>
+<span class="p">}</span>
+
+<span class="c1"># {'name': '뚜뚜', 'breed': '아메숏', 'age': 2.5, 'fun': 4, 1: 24, 235: '덧셈'}
+</span></code></pre></div></div>]]></content><author><name></name></author><category term="Algorithm" /><summary type="html"><![CDATA[해시 테이블, 해시 맵, 해시함수등 … 많이 들어봤을텐데 이번에 간단하게 정리 해볼까한다.]]></summary></entry></feed>

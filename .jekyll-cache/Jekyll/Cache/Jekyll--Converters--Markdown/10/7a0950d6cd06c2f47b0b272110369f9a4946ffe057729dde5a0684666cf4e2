@@ -1,0 +1,30 @@
+I"=<p>이전에 Go for문에 대해서 알아봤는데 for문과 비슷하게 조건문만 표시하면 C언에서 while을 사용하듯이 사용할 수 있습니다. 오늘은 이 while문에 대해 알아보겠습니다. Go가 설치되어 있지 않지만 실행을 해보고 싶다면, <a href="https://tour.golang.org/methods/20">여기</a>를 클릭해주세요.</p>
+
+<h2 id="go-while">Go while</h2>
+
+<p>Go에서 while은 for문 처럼 조건문만 표시하면 사용 할 수 있습니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">sum</span> <span class="o">:=</span> <span class="m">1</span>
+	<span class="k">for</span> <span class="n">sum</span> <span class="o">&lt;</span> <span class="m">1000</span> <span class="p">{</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="n">sum</span>
+	<span class="p">}</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>또한 for에서 조건문을 생략하면 무한 루프를 간단하게 표현할 수 있습니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="p">{</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,97 @@
+I"�9<p>미디어는 한국 사회의 흐름을 압축적으로 담고 있는 Snapshot입니다. 지난 19년, 가장 대표적이고 강력한 미디어, <strong>헤드라인 뉴스</strong>로 한국 사회를 되돌아 볼까합니다.</p>
+
+<p>이번 포스팅은 사회 부분을 다뤄보겠습니다. SBS뉴스 사회 부분의 헤드라인 부분을 다 크롤링하여 문장을 단어별로 나눈 후 count 하였습니다.</p>
+
+<h2 id="web-crawling">Web Crawling</h2>
+
+<p>R을 이용하여 크롤링을 하려고 할때 아래와 같은 라이브러리가 필요합니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 필요 패키지 설치</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">gsubfn</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">XML</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>크롤링 함수는 아래와 같이 URL을 입력받아 긁어오도록 하였습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SBSnews</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">url</span><span class="p">){</span><span class="w">
+  </span><span class="n">doc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">htmlTreeParse</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">useInternalNodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">trim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span><span class="w"> 
+  </span><span class="n">rootNode</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">xmlRoot</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span><span class="w">
+</span><span class="o">-</span><span class="w">
+  </span><span class="n">xmlName</span><span class="p">(</span><span class="n">rootNode</span><span class="p">)</span><span class="w">
+  </span><span class="nf">names</span><span class="p">(</span><span class="n">rootNode</span><span class="p">)</span><span class="w">
+
+  </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">xpathSApply</span><span class="p">(</span><span class="n">rootNode</span><span class="p">,</span><span class="w"> </span><span class="s2">"//strong[@class='spml_tit']"</span><span class="p">,</span><span class="w"> </span><span class="n">xmlValue</span><span class="p">)</span><span class="w">
+  </span><span class="n">print</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>크롤링 기간은 아래와 같이 정하겠습니다. 저는 1년씩 하나씩 긁어서 1년 단위로 정리하겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">urlbase</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://news.sbs.co.kr/news/programMain.do?prog_cd=R1&amp;broad_date="</span><span class="w">
+</span><span class="n">Start</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"2018/01/01"</span><span class="p">)</span><span class="w">
+</span><span class="n">yyyy</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">substr</span><span class="p">(</span><span class="n">Start</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+</span><span class="n">End</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"2018/12/31"</span><span class="p">)</span><span class="w">
+</span><span class="n">list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Start</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">End</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> 
+</span><span class="n">list2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s2">"%Y%m%d"</span><span class="p">)</span><span class="w">
+</span><span class="n">urlfinal</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_c</span><span class="p">(</span><span class="n">urlbase</span><span class="p">,</span><span class="n">list2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 for문으로 Crawling 해줍니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1">## 초기화</span><span class="w">
+</span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.character</span><span class="p">()</span><span class="w">
+
+</span><span class="k">for</span><span class="p">(</span><span class="n">url</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">urlfinal</span><span class="p">){</span><span class="w"> 
+  </span><span class="n">print</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="w">
+  </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">SBSnews</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="w">
+  </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>크롤링한 데이터를 저장하기 전에 1차적으로 간단하게 전처리 해주고 파일을 저장합니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fulltitle</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"[\r\t\n]"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> 
+
+</span><span class="n">news_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">substr</span><span class="p">(</span><span class="n">fulltitle</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w">
+                      </span><span class="n">fulltitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fulltitle</span><span class="p">,</span><span class="w">
+                      </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w"> 
+</span><span class="n">str</span><span class="p">(</span><span class="n">news_df</span><span class="p">)</span><span class="w">
+
+</span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">news_df</span><span class="o">$</span><span class="n">category</span><span class="o">==</span><span class="s2">"스포"</span><span class="p">))</span><span class="w"> </span><span class="c1"># Category가 "스포" -&gt; "스포츠"로 변경</span><span class="w">
+
+</span><span class="k">for</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">idx</span><span class="p">){</span><span class="w">
+  </span><span class="n">news_df</span><span class="o">$</span><span class="n">category</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"스포츠"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">news_df</span><span class="o">$</span><span class="n">title</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">substring</span><span class="p">(</span><span class="n">news_df</span><span class="o">$</span><span class="n">fulltitle</span><span class="p">,</span><span class="m">3</span><span class="p">)</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">idx</span><span class="p">){</span><span class="w">
+  </span><span class="n">news_df</span><span class="o">$</span><span class="n">title</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">substring</span><span class="p">(</span><span class="n">news_df</span><span class="o">$</span><span class="n">fulltitle</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="m">4</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">news_df2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">news_df</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="n">grepl</span><span class="p">(</span><span class="s2">"*클로징*"</span><span class="p">,</span><span class="w"> </span><span class="n">news_df</span><span class="o">$</span><span class="n">title</span><span class="p">))</span><span class="w"> 
+</span><span class="n">news_df2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">news_df2</span><span class="p">,</span><span class="n">news_df2</span><span class="o">$</span><span class="n">title</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">"오늘의 주요뉴스"</span><span class="p">)</span><span class="w">
+</span><span class="n">rownames</span><span class="p">(</span><span class="n">news_df2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">news_df2</span><span class="p">)</span><span class="w"> 
+</span><span class="n">nrow</span><span class="p">(</span><span class="n">news_df</span><span class="p">)</span><span class="o">-</span><span class="n">nrow</span><span class="p">(</span><span class="n">news_df2</span><span class="p">)</span><span class="w"> 
+</span></code></pre></div></div>
+
+<h2 id="keyword">Keyword</h2>
+
+<p>파일을 저장 후 데이터를 따로 전처리를 끝내고 나면 아래와 같이 사회관련 뉴스 부분을 정리 할 수 있는데, 여기서 가장 많은 키워드는 아무래도 ….. 검찰과 경찰이겠죠?</p>
+
+<p><img src="/public/img/keyword2.png" alt="keyword2" width="100%" height="100%" class="center" /></p>
+
+<p>그리고 주기적으로 보이는 키워드는 아무래도 날씨와 관련 있는 재해 부분 키워드 입니다.</p>
+
+<p><img src="/public/img/keyword3.png" alt="keyword3" width="100%" height="100%" class="center" /></p>
+
+<p>저 부분을 제외하면 중요해 보이는 키워드는 아래와 같습니다.</p>
+
+<p><img src="/public/img/keyword4.png" alt="keyword4" width="100%" height="100%" class="center" /></p>
+
+<p>잠깐만 봐도 해당 키워드들은 한 해를 떠들썩하게 했던 사건사고 키워드라는 것을 알 수 있습니다. 잊으면 안되는 2003년도 대구지하철 참사부터 2009년 신종플루 2010년 김길태, 천안함 사건, 2014년 세월호 등 많은 중요 키워드를 보고 한국 사회에서 일어난 모든 흐름을 알 수 있습니다.</p>
+
+<p>다음에는 경제 관련해서 얼마나 많은 일이 있었는지에 대해 알아보겠습니다.</p>
+:ET

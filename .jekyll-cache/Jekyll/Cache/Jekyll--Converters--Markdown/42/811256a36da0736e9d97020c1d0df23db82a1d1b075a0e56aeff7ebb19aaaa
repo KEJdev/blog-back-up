@@ -1,0 +1,22 @@
+I"<h2 id="문제점">문제점</h2>
+
+<p>평소 keras만 쓰다가, 갑자기 pytorch를 써야되서 conda 환경 하나 팠다.<br />
+그리고 몇칠 후, 다른 환경으로 가려고 평소 쓰던 환경으로 <code class="highlighter-rouge">conda activate [env name]</code>을 쳤는데, 안된다?</p>
+
+<p>급히  <code class="highlighter-rouge">conda env list</code> 명령어로 확인하니, 이름이 사라진 것을 보게 되었다.</p>
+
+<p><img src="/public/img/env-name-missing.png" alt="env_img" width="70%" height="70%" class="center" /></p>
+
+<p>진짜 가상환경 이름만 사라져서 당황스럽다.<br />
+확인해보니, <code class="highlighter-rouge">[env name]</code> 을 적는 부분에 직접 경로를 입력해주니까 해당 환경으로 들어가진다.</p>
+
+<h2 id="해결-방안">해결 방안</h2>
+
+<p>Stackoverflow에서는 conda update 하라고 했는데, <br />
+나는 소용없었고, <code class="highlighter-rouge">conda config --add envs_dirs &lt;path to envs&gt;</code> 명령어로 해결하였다.</p>
+
+<p><img src="/public/img/env-name-missing2.png" alt="env_img" width="70%" height="70%" class="center" /></p>
+
+<p>좀더 찾아보니, 가끔 conda에서 업데이트나 여러 환경을 만들다가 발생할 수 있는 문제라고 한다.</p>
+
+:ET

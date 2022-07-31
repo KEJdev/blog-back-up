@@ -1,0 +1,60 @@
+I"�&<p>knn에 이어서 나이브 베이도 자동화 스크립트로 만들어보겠습니다.</p>
+
+<h2 id="naive-bayes-자동화-스크립트">Naive Bayes 자동화 스크립트</h2>
+
+<p>우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다. 추가로 if문을 돌려서 패키지 설치가 되어 있으면 패스하고 아니면 설치하도록 하겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">setdiff</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">installed.packages</span><span class="p">())))</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">install.packages</span><span class="p">(</span><span class="n">setdiff</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">installed.packages</span><span class="p">())))</span><span class="w">  
+</span><span class="p">}</span><span class="w">
+    
+</span><span class="n">library</span><span class="p">(</span><span class="n">tm</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">gmodels</span><span class="p">)</span><span class="w">
+
+</span><span class="n">input_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'csv파일을 입력하세요. ex) emp.csv : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_header</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'컬럼명이 있습니까? ex)T OR F : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'라벨 컬럼의 번호를 입력하세요. ex)N (N&gt;=1) : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_laplace</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'라플라스를 입력하세요. ex)n (0&lt;n&lt;1) : '</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 헤더 유무 검사를 하겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 해더 유무 검사</span><span class="w">
+</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input_header</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'T'</span><span class="p">){</span><span class="w">
+</span><span class="n">table_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">input_table</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">T</span><span class="p">)</span><span class="w">  
+</span><span class="p">}</span><span class="w">
+</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="n">table_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">input_table</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이제 거의 다 끝났네요. 마지막으로 factor로 변환하고 라벨 번호와 라플라스 값을 숫자화 합니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">ncol</span><span class="p">(</span><span class="n">table_name</span><span class="p">)){</span><span class="w">
+</span><span class="n">table_name</span><span class="p">[,</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">table_name</span><span class="p">[,</span><span class="n">i</span><span class="p">])</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">### 라벨 번호, 라플라스 값 숫자화</span><span class="w">
+</span><span class="n">input_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.integer</span><span class="p">(</span><span class="n">input_label</span><span class="p">)</span><span class="w">
+</span><span class="n">input_laplace</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">input_laplace</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 데이터를 나누고 나이브 베이즈합니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">train_cnt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="m">0.75</span><span class="o">*</span><span class="nf">dim</span><span class="p">(</span><span class="n">table_name</span><span class="p">[</span><span class="m">1</span><span class="p">]))</span><span class="w">
+</span><span class="n">train_index</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">dim</span><span class="p">(</span><span class="n">table_name</span><span class="p">)[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">train_cnt</span><span class="p">,</span><span class="n">replace</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+
+</span><span class="n">train_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_name</span><span class="p">[</span><span class="n">train_index</span><span class="p">,]</span><span class="w">
+</span><span class="n">test_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_name</span><span class="p">[</span><span class="o">-</span><span class="n">train_index</span><span class="p">,]</span><span class="w">
+
+</span><span class="n">table_name</span><span class="p">[,</span><span class="n">input_label</span><span class="p">]</span><span class="w">
+
+</span><span class="n">model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">naiveBayes</span><span class="p">(</span><span class="n">train_data</span><span class="p">[,</span><span class="n">input_label</span><span class="p">]</span><span class="o">~</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span><span class="w"> </span><span class="n">laplace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input_laplace</span><span class="p">)</span><span class="w">
+</span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">test_data</span><span class="p">[,</span><span class="o">-</span><span class="n">input_label</span><span class="p">])</span><span class="w">
+
+</span><span class="n">CrossTable</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">test_data</span><span class="p">[,</span><span class="n">input_label</span><span class="p">])</span><span class="w">
+</span></code></pre></div></div>
+
+<p>knn보다 더 간단하게 나이브 베이즈 자동화 스크립트가 완성 됫네요.</p>
+:ET

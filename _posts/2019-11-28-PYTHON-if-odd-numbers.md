@@ -1,24 +1,13 @@
 ---
-title:  파이썬 if문 사용해서 홀짝 출력하기 
-date:   2019-11-26 09:00:00 +0300
-categories:  [Program Language , Python]
-tags : [Python, 문법]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
+layout: post
+title: 파이썬 if문 사용해서 홀짝 출력하기 
+date: 2019-11-28 09:00:00 +0300
+category : Python
 ---
-
-
 
 Python의 if문 개념에 대해 알아보겠습니다. Python 이라는 언어 자체가 사람의 언어와 비슷하기 때문에 문법을 금방 습득 하실 수 있습니다. 그럼 이제 예제와 함께 알아보도록 하겠습니다.  
 
-
--------
-
-
-### if문   
+## if문   
 
 문법은 역시 예를 들면서 봐야 빠릅니다. x와 y를 비교하여 x가 크면 "x가 y보다 크거나 깉습니다"를 출력하고 그것이 아니라면 "x가 y보다 작습니다" 라는 문구를 출력해보겠습니다. Python은 다른 문법과 다르게 사람의 언어와 비슷하다고 했지요? 아래의 예를 보면 더 쉽게 이해실 수 있을꺼예요.
 
@@ -108,8 +97,7 @@ mod(b) # 짝수입니다가 출력됨
 
 그럼 이번에 재밌는 문제 하나를 풀면서 익혀보겠습니다. 가우스 덧셈 공식은 아래와 같습니다.
 
-<center><img src="../../assets//images/if1.png" ></center>  
-
+![if1](/public/img/if1.png){: width="70%" height="70%" }{: .center}
 
 이 가우스 덧셈 공식을 이용하여 1부터 10까지 숫자의 합을 출력해보겠습니다. 문법에 조금 익숙해지기 위해 숫자를 입력 받아서 작성해보겠습니다.  
 

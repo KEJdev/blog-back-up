@@ -1,24 +1,16 @@
 ---
-title:  파이썬 REST API을 만들어보자
-date:   2020-10-19 09:00:00 +0300
-categories:  [Program Language , Python]
-tags : [Python,문법, API]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
----
-
+layout: post
+title: 파이썬 REST API을 만들어보자
+date: 2020-10-19 09:00:00 +0300
+category : Python
+use_math : true
+---   
 
 회사에서 머신러닝 개발자로 일하고 있지만, 1년 내내 머신러닝 모델을 만들거나 논문만 읽거나 그러지는 않는다. 나름대로 Python API 나, 자바 컨트롤러 정도는 만들면서 다른 업무도 도와주거나, 데이터 분석도 하는 편이다.  
 
 그중에서 입사 초에 Python API 하나를 못 만들어서 정말 고생했던 것을 이번 포스팅에서 풀어볼까 한다. 이번 포스팅에서는 Python API를 만들면서 테스트 하는 것을 중점으로 포스팅 할 것이다.
 
--------
-
-### REST API 
+## REST API 
 
 우선 API를 만들기전에 API로 만들어야 할 함수를 간단하게 두개 만들것이다. 나는 Study.py 라는 파일을 생성하여 아래와 같은 함수를 만들었다. 
 
@@ -58,8 +50,6 @@ flask run --host=0.0.0.0
 
 
 이제 "http://127.0.0.1:5000/" 주소로 들어가서 확인 하면 This is Test API ! 라는 문구를 볼 수 있다.   
-
-
 여기서 아까 만들었던 add 함수와 same 함수를 API로 만들어보자.
 
 ```python
@@ -94,7 +84,7 @@ def get_same():
 
 갑자기 코드가 길어져서 아마 놀랬을 것이다. 그래서 아래의 그림을 준비했다.
 
-<center><img src="../../assets/images/api.png" ></center>
+![api](/public/img/api.png){: width="100%" height="100%" }{: .center}
 
 코드를 보자마자 @app.route에 주소를 적고 아래 함수를 보자.   
 **add 함수에 넣어야 할 매개변수를 어디에 있는가?** Study.py에 있는 add 함수에는 a,b라는 매개변수를 받아 서로 더하고 나서 리턴하는 구조인데, get_add() 함수는 그렇지 않다. **함수 안에서 데이터를 처리**하기 때문에 함수 생성시 , 직접 매개변수를 작성하지 않는다.
@@ -106,7 +96,7 @@ The method is not allowed for the requested URL." 를 볼 수 있을것이다. �
 
 여기서부터 실제 만든 API를 테스트하고 확인하려면 간단하게 [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=ko)이라는 툴을 이용하면 된다. 설치도 사용법도 무척이나 간단하다. 
 
-<center><img src="../../assets/images/api2.png" ></center>
+![api2](/public/img/api2.png){: width="100%" height="100%" }{: .center}
 
 위처럼 똑같이 세팅해주면 postman으로 API결과를 확인 할 수 있다. add와 마찬가지로 same도 테스트 하면 결과를 확인 할 수있다. 
 

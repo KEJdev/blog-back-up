@@ -1,32 +1,20 @@
 ---
-title:  파이썬 클래스로 신경망 구현하기(relu,forward,backward)
-date:   2019-12-25 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-Python]
-tags : [ML,Python, 신경망]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
+layout: post
+title: 파이썬 클래스로 신경망 구현하기(relu,forward,backward)
+date: 2019-12-25 09:00:00 +0300
+category : Python
 ---
-
 
 저번 포스팅 때, 순전파와 역전파 원리를 간단하게 보고, class를 만들어봤습니다. 
 이번에는 활성화 함수를 넣어 조금 그럴듯한 신경망을 만들어보도록 하겠습니다. 활성화 함수를 사용하지 않고 열심히 신경망만 깊게 쌓기만 하면 깊게 쌓는 의미도 없을 뿐더라 그냥 단층 신경망이라도 봐도 무방합니다. 그렇기 때문에 꼭 넣어주어야 깊게 쌓는 의미가 있습니다.  
 
-
-
-------------
-
-### Relu Class 만들기.
+## Relu Class 만들기.
 
 저번 포스팅에서 만들었던 Affine class는 냅두고 Relu(렐루) 클래스를 한번 만들어 보겠습니다. Relu 함수는 예전 포스팅에서 한번 다루었는데 혹시나 약간 개념이 헷갈리거나 다른 활성화 함수에 대해 알고 싶다면 [여기](https://kejdev.github.io/ML-Machine-Learning-activation-function)를 눌러 참고해주세요.  
 
 Relu의 특징은 0이하면 0을 출력하고 0을 넘으면 그냥 그대로 출력하는 비교적 간단하지만 대단히 효율 좋은 활성화 함수이며 그래프로 출력하지만 아래와 같이 출력할 수 있습니다.
 
-<center><img src="../../assets//images/relu.png" ></center>  
-
-
+![relu](/public/img/relu.png){: width="70%" height="70%" }{: .center}
 
 그렇기 때문에 함수 구현이나 클래스는 간단하게 아래와 같이 구현할 수 있습니다. 
 

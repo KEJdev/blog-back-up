@@ -1,15 +1,10 @@
 ---
-title:  논문 리뷰 - Conditional Generative Adversarial Nets
-date:   2021-12-10 09:00:00 +0300
-categories:  [Machine Learning,  paper]
-sitemap :
-tags : [논문]
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
+layout: post
+title: 논문 리뷰 - Conditional Generative Adversarial Nets
+date: 2021-12-10 09:00:00 +0300
+category : paper
 ---
+
 
 Paper URL: [Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.1784) 
 
@@ -18,12 +13,12 @@ Paper URL: [Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.
 기존의 GAN은 데이터가 생성되는데에 통제권이 없었다. 이뜻은 무엇일까? 
 MNIST dataset을 기준으로 잡고 이야기 하자면, 내가 숫자 7 이미지를 원한다고 해서 모델이 7 이미지를 만들어주지 않는다는 이야기다. 
 
-<center><img src="../../assets/images/cGAN.png" ></center> 
+![cGAN](/public/img/cGAN.png){: width="90%" height="90%" }{: .center}
 
 그렇다면 왜, GAN은 왜 우리가 원하는데로 이미지를 생성해주지 않는걸까?
 그 이유는 GAN은 라벨의 정보를 가지고 학습하는 것이라, 데이터 분포를 학습하기 때문이다. 
 
-<center><img src="../../assets/images/cGAN(1).png" ></center> 
+![cGAN(1)](/public/img/cGAN(1).png){: width="70%" height="70%" }{: .center}
 
 즉, 라벨에 대해 잘 모르지만서도 1을 1답게 하는 데이터 분포를 학습하기 때문이다. 
 
@@ -31,7 +26,7 @@ MNIST dataset을 기준으로 잡고 이야기 하자면, 내가 숫자 7 이미
 라벨에 대해 잘 모르는 같으니, y라는 특정한 정보 y(라벨)을 넣어준다면, 분포와 함께 우리가 원하는데로 만들어 주지 않을까? 
 이렇게 데이터를 우리가 원하는데로 제어하는 모델을 conditional GAN 이라고 한다.
 
-<center><img src="../../assets/images/cGAN(2).png" ></center> 
+![cGAN(2)](/public/img/cGAN(2).png){: width="70%" height="70%" }{: .center}
 
 요점은 아래와 같다. 
 
@@ -40,9 +35,9 @@ MNIST dataset을 기준으로 잡고 이야기 하자면, 내가 숫자 7 이미
 
 수식은 GAN이랑 크게 다르지 않다.
 
-
-<center><img src="../../assets/images/cGAN(4).png" ></center> 
+![cGAN(4)](/public/img/cGAN(4).png){: width="70%" height="70%" }{: .center}
 
 논문에서는 MNIST data에 대해 조건 y를 one-hot encoding 시킨 class label을 사용했으며 결과는 아래와 같다. 예쁘게 순서대로 나열된 결과를 볼 수 있다. 
 
-<center><img src="../../assets/images/cGAN(3).png" ></center> 
+![cGAN(3)](/public/img/cGAN(3).png){: width="70%" height="70%" }{: .center}
+

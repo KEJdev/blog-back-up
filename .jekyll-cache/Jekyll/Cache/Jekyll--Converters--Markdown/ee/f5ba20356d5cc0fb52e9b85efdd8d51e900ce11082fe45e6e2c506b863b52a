@@ -1,0 +1,157 @@
+I"O*<p>이전 포스팅에서 파이썬은 ‘멀티 패러다임’ 이라고 말했다.<br />
+오늘은 그에 대해 조금 더 자세히 이야기 해볼까한다.</p>
+
+<h2 id="프로그래밍-패러다임">프로그래밍 패러다임</h2>
+
+<p>프로그래밍의 패러다임이란, 개발자가 코드를 짤 때, 어떤 관점을 가지고 짜느냐에 결정적인 역활을 한다.<br />
+크게 선언형과 명령형으로 나눌 수 있고, 이 안에는 객체 지향과 절차 지향, 함수형 프로그래밍이 포함되어 있다.</p>
+
+<ul>
+  <li>명령형 프로그래밍 : 절차 지향 프로그래밍, 객체 지향 프로그래밍</li>
+  <li>선언형 프로그래밍 :  함수형 프로그래밍</li>
+</ul>
+
+<h3 id="프로그래밍-패러다임의-특징">프로그래밍 패러다임의 특징</h3>
+
+<ul>
+  <li>명령형 프로그래밍 : 알고리즘을 명시하고 목표는 명시하지 않음.</li>
+  <li>선언형 프로그래밍 : 알고리즘을 명시하지 않고 목표만 명시함.</li>
+</ul>
+
+<p>사람이 횡단보도를 건너는 프로그래밍을 짠다고 가정한다면 아래와 같이 볼 수 있다.</p>
+
+<ul>
+  <li>명령형 프로그래밍 : 횡단보도까지 약 5m이동하고, 초록불 일 때까지 기다렸다가 초록불이면 약 10m 앞으로 이동한다</li>
+  <li>선언형 프로그래밍 : 초록불이 되면 길을 건넌다.</li>
+</ul>
+
+<p>이렇게 명령형은 사람이 걸어가는 과정(how)의 알고리즘을 명시하지만, 프로그램의 목적은 명시하지 않는다. 반대로 선언형은 초록불이 되면 길을 건넌다라는 목표만(what)을 명시한다.</p>
+
+<h2 id="절차-지향과-객체-지향-프로그래밍">절차 지향과 객체 지향 프로그래밍</h2>
+
+<p>절차 지향과 객체 지향 개념은 서로 반대 개념이 아니다.<br />
+둘다 명령형 프로그램의 하위 개념이기에 공유하는 것이 많다.</p>
+
+<ul>
+  <li>절차지향 프로그래밍
+    <ul>
+      <li>프로그램의 순서와 흐름을 중점으로 필요한 자료구조와 함수를 설계<br />
+  (데이터 중심으로 절차적으로 실행에 초점)</li>
+    </ul>
+  </li>
+  <li>객체지향 프로그래밍
+    <ul>
+      <li>자료구조와 함수를 먼저 설계하고 그 후에 실행 순서와 흐름을 설계 
+  (객체간의 관계에 초점)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="관점-지향-프로그래밍aspect-oriented-programming">관점 지향 프로그래밍(Aspect Oriented Programming)</h2>
+
+<p><img src="/public/img/AOP2.png" alt="AOP2" width="70%" height="70%" class="center" /></p>
+
+<p>관점지향 프로그래밍의 핵심은 공통 모듈을 분리시켜 해당 소스코드가 외부의 다른 클래스에서 존재하는 것이다. 참고로 객체지향을 보조하는 역활이기 때문에 객체지향 코드위에서 이루어진다.</p>
+
+<p>객체지향은 객채(Object)라는 개념을 활용함으로써 큰 프로그램을 모듈 단위로 축소시켜 작성할 수 있게 했지만, 프로그램의 크기가 엄청나게 커지면서 모듈 안에서마저 중복되는 코드가 생기게 된다.</p>
+
+<p>이렇게 모듈 안에서 중복코드가 생기게 되는 것을 횡단 관심사(Crosscutting-Concerns) 라고 한다. 그 중에 자주 언급되는 것은 트랜잭션, 로깅, 성능 분석 등이 있다.</p>
+
+<p><img src="/public/img/AOP.png" alt="AOP" width="70%" height="70%" class="center" /></p>
+
+<p>횡단 관심사들은 여러 모듈들을 말 그대로 횡단하면서 존재하게 되며 AOP를 이해함에 있어서 매우 중요한 개념이며, AOP를 통해 중복 코드 제거, 효율적인 유지복수, 높은 생산성, 재활용성 극대화 등의 이점을 얻을 수 있다.</p>
+
+<h2 id="함수형-프로그래밍">함수형 프로그래밍</h2>
+
+<p>쉽게 말하면 함수형 프로그래밍은 변수 사용을 최소화함으로써 오류를 줄이는 프로그래밍이다.<br />
+정의는 자료 처리를 수학적 함수의 계산으로 취급하고, 상태와 가변 데이터를 멀리하는 프로그래밍 패러다임 중 하나이다.</p>
+
+<p>왜 변수 사용을 최소화 해야하는 걸까 ?</p>
+
+<p>변수는 프로그램에서 개발자가 메인 메모리 공간에 올려놓은 값인데, 값이 대입되면 바뀔 수 없는 상수와 달리 변수는 언제든 값을 변경할 수 있다. 적절히 사용하면 좋겠지만, 여러 스레드가 돌아가면 변수는 오류의 원인으로 작용할 가능성이 크다.</p>
+
+<p>함수형 프로그래밍은 외부에 따로 상태 값을 두지 않고 내부에서 연쇄적으로 기능을 사용해서 결과를 연산하기 때문에 외부 요소의 영향을 받지 않고 안전한 코드를 작성 할 수 있다.</p>
+
+<h3 id="함수형-프로그래밍의-특징">함수형 프로그래밍의 특징</h3>
+
+<p>함수형 프로그래밍에는 5가지의 특성이 있다.</p>
+
+<ol>
+  <li>순수 함수 (Pure function) <br />
+ 함수형 프로그래밍에서는 일반적인 함수의 조합이 아니라 순수함수의 조합이다.
+    <ul>
+      <li>동일한 입력에는 항상 같은 값을 반환해야 한다.</li>
+      <li>함수의 출력(return)은 그 함수의 입력(input)에만 의존한다.</li>
+      <li>함수의 실행은 프로그램의 실행에 영향을 미치지 않아야 한다. (return만 수행한다는 의미)</li>
+    </ul>
+  </li>
+  <li>고차 함수 (Higher-Order Functions)
+    <ul>
+      <li>함수를 인자(argument)로 받는다.</li>
+      <li>함수의 리턴값으로 함수를 사용할 수 있다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>불변성(Immutability)<br />
+ 변하지 않는 성질을 말한다.<br />
+ 불변성을 지키기 위해서는 데이터 변경이 필요할 경우 원본을 유지한 채 복사본을 만들어 작업해야한다.</p>
+  </li>
+  <li>1급 객체(First-Class Object) 
+ 1급 객체란 함수를 값으로 다루는 것을 이야기한다.<br />
+ 특징으로는 다음과 같은 것들이 가능한 객체를 의미한다.
+    <ul>
+      <li>변수나 데이터 구조 안에 담을 수 있다.</li>
+      <li>파라미터로 전달 할 수 있다.</li>
+      <li>반환값으로 사용할 수 있다.</li>
+      <li>할당에 사용된 이름과 무관하게 고유한 구별이 가능하다.</li>
+    </ul>
+
+    <p>참고로 순수 함수들과는 다르다는 것을 인지해야한다.</p>
+  </li>
+  <li>익명 함수(Anonymous function)<br />
+ 이름 없는 함수를 말하며 람다식으로 표현되는 함수 구현을 말한다.</li>
+</ol>
+
+<h3 id="파이썬은-멀티패러다임-언어">파이썬은 멀티패러다임 언어</h3>
+
+<p>파이썬은 절차지향, 객체지향, 함수형 프로그래밍을 지원하는 멀티패러다임 언어이다. 예시를 통해 알아보자.</p>
+
+<h3 id="절차-지향---jupyter-notebook">절차 지향 - Jupyter Notebook</h3>
+
+<p>절차 지향은 위에서도 언급했듯 데이터를 중심으로 순차적으로 코드를 구현하는 프로그래밍 방식이다.<br />
+Jupyter Notebook을 이용하여 데이터 분석을 하는데, 이것은 절차지향적 방식이라고도 볼 수 있다. 주피터의 경우 셀 단위로 전처리, 모델링, 시각화 코드를 순차적으로 작성하고 실행시켜 결과를 확인하기 때문이다.</p>
+
+<h3 id="객체-지향---ml-model-django">객체 지향 - ML Model, Django</h3>
+
+<p>객체 지향은 추상화된 클래스와 이에 대한 속성과 행위를 정의하고 이를 중심으로 개발하는 프로그래밍 방식이다.</p>
+
+<p>머신러닝 모델은 대부분 클래스로 정의 되어 있고, fit(), predict()로 훈련과 예측을 할 수 있도록 모델이 구현되어 있다. 머신러닝 개발자들은 모델 객체를 선언하고 활용하는 법만 알면 따로 모델을 구현할 필요 없이 머신러닝 모델을 활용할 수 있다.</p>
+
+<p>또한 Django 역시 파이썬 객체지향 프로그래밍의 대표적인 예시이다.<br />
+야놀자 같은 사이트를 만든다고 가정할 때, 사용자, 방, 예약, 리뷰 등의 개념을 객체로 구성하고 이를 관리하기 위한 데이터 모델이나 화면에 표시하기 위한 뷰를 만들어 웹 사이트를 만들게 된다.</p>
+
+<h3 id="함수형---pyspark">함수형 - PySpark</h3>
+
+<p>데이터 분석에서 함수형 프로그래밍의 특징은 thread-safe하고 병렬계산을 가능하게 하기 때문에 대용량 데이터를 다룰 때 활용된다.</p>
+
+<p>예시 코드는 아래와 같다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">textFile</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">)</span>
+<span class="n">lineLengths</span> <span class="o">=</span> <span class="n">lines</span><span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="n">totalLength</span> <span class="o">=</span> <span class="n">lineLengths</span><span class="p">.</span><span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>코드를 보면 별도의 변수의 선언 없이 함수들의 조합만으로 원하는 결과를 얻을 수 있다. 또한 리스트 컴프리헨션을 이용해 새로운 리스트를 선언 없이 리스트 값을 필터링 한다는 등이 있다.</p>
+
+<h3 id="관점지향---decorator">관점지향 - Decorator</h3>
+
+<p>관점지향 프로그래밍의 경우 decorator를 잘 사용하는 것이라 보면 된다.</p>
+
+<hr />
+<p><strong>reference</strong>  <br />
+<a href="https://velog.io/@gillog/AOP%EA%B4%80%EC%A0%90-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">https://velog.io/@gillog</a>
+<a href="https://hoi5088.medium.com/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84-%EC%A0%88%EC%B0%A8-%EC%A7%80%ED%96%A5-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-a5160a1e39e4">https://hoi5088.medium.com/</a><br />
+<a href="https://docs.python.org/3/howto/functional.html">https://docs.python.org/3/howto/functional.html</a><br />
+<a href="https://jinwoo1990.github.io/dev-wiki/python-concept-1/">https://jinwoo1990.github.io/dev-wiki/python-concept-1/</a></p>
+
+:ET

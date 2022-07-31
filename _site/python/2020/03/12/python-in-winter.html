@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			파이썬 멤버체크(in)으로 특정 단어 개수 세기
+		</div>
+		<time class="post-date dt-published" datetime="2020-03-12T16:00:00+08:00" itemprop="datePublished">2020/03/12
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>파이썬에서 특정 단어가 있는지 확인하기 위해 자주 쓰이는 함수 in입니다. 아마 for 사용할때 더 많이 사용해본 적 있을꺼예요. 이 맴버 함수에 대해 자세히 알아보겠습니다.</p>
+
+<h2 id="list안에-있는지-없는지-확인하기">list안에 있는지 없는지 확인하기</h2>
+
+<p>in을 사용하여 list안에 특정 숫자나 문자열이 있는지 체크해보겠습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">listdata</span> <span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">ret1</span> <span class="o">=</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">listdata</span>    <span class="c1"># False
+</span><span class="n">ret2</span> <span class="o">=</span> <span class="mi">4</span> <span class="ow">in</span> <span class="n">listdata</span>    <span class="c1"># True
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ret1</span><span class="p">);</span> <span class="k">print</span><span class="p">(</span><span class="n">ret2</span><span class="p">)</span>
+
+<span class="n">strdata</span> <span class="o">=</span> <span class="s">'abcde'</span>
+<span class="n">ret3</span> <span class="o">=</span> <span class="s">'c'</span> <span class="ow">in</span> <span class="n">strdata</span>    <span class="c1"># True
+</span><span class="n">ret4</span> <span class="o">=</span> <span class="s">'1'</span> <span class="ow">in</span> <span class="n">strdata</span>    <span class="c1"># False
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ret3</span><span class="p">);</span> <span class="k">print</span><span class="p">(</span><span class="n">ret4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="텍스트txt에서-특정-단어-및-라인-출력하기">텍스트(.txt)에서 특정 단어 및 라인 출력하기</h2>
+
+<p>겨울왕국 데이터를 사용하여 겨울왕국에서 elsa가 몇번 나오는지 확인하기 위해 우선 한라인씩 list변수에 담아보겠습니다. 겨울왕국 데이터는 <a href="https://github.com/KEJdev/DataSet/tree/master/DataSet">여기</a>에서 다운 받으실 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"winter.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">winter_list</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">winter_list</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/in.png" alt="in" width="40%" height="40%" class="center" /></p>
+
+<p>이번엔 라인이 아니라 for문을 중첩시켜 겨울왕국의 단어들만 출력해보겠습니다.</p>
+
+<p><img src="/public/img/in2.png" alt="in2" width="80%" height="80%" class="center" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"winter.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">winter_list</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">winter_list</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/in3.png" alt="in3" width="10%" height="10%" class="center" /></p>
+
+<p>여기서 count 함수를 사용해서 elsa가 나오면 1씩 카운트 해보면 아래와 같이 쓸수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s">"winter.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+<span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">winter_list</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">winter_list</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="n">count</span><span class="p">(</span><span class="s">'elsa'</span><span class="p">)</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">c</span> 
+	    
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</code></pre></div></div>
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

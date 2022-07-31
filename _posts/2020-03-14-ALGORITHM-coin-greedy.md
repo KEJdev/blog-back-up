@@ -1,15 +1,10 @@
 ---
-title:  파이썬으로 탐욕 알고리즘 구현하기(동전)
-date:   2020-03-14 14:00:00 +0300
-categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
----
+layout: post
+title: 파이썬으로 탐욕 알고리즘 구현하기(동전)
+date: 2020-03-14 14:00:00 +0300
+category : Algorithm
+use_math : true
+---  
 
 탐욕 알고리즘은 당장 눈앞의 이익만 추구하는 것을 이야기 하며, 먼 미래를 내다 보지 않고 지금 당장의 최선이 무엇인가를 판단하는 알고리즘입니다. 
 

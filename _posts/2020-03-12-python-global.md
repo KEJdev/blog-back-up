@@ -1,24 +1,13 @@
 ---
-title:  파이썬에서 지역변수와 전역변수 사용하기
-date:   2020-03-12 13:00:00 +0300
-categories:  [Program Language , Python]
-tags : [Python, 문법]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
+layout: post
+title: 파이썬에서 지역변수와 전역변수 사용하기
+date: 2020-03-12 11:00:00 +0300
+category : Python
 ---
 
 이번에 파이썬에서 지역변수와 전역변수를 사용하는 것에 대해 배워보겠습니다. 
 
-
---------
-
-
-### 지역변수와 전역변수 
-
+## 지역변수와 전역변수 
 
 **변수는 자신이 생성된 범위(코드 블럭)안에서만 유효**합니다. 함수안에서 만든 변수는 함수 안에서만 살아 있다가 함수 코드의 실행이 종료되면 그 생명을 다합니다. 이것을 **지역변수**라고 합니다. 
 
@@ -75,6 +64,4 @@ def sum_circle(radius1, radius2):
 return sumcircle
 ```
 
-
-<center><img src="../../assets//images/pi.png" ></center>
-
+![pi](/public/img/pi.png){: width="50%" height="50%" }{: .center}

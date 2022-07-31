@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			해시(Hash)에 대해 알아보자.
+		</div>
+		<time class="post-date dt-published" datetime="2021-12-18T14:00:00+08:00" itemprop="datePublished">2021/12/18
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>해시 테이블, 해시 맵, 해시함수등 … 많이 들어봤을텐데 이번에 간단하게 정리 해볼까한다.</p>
+
+<p>📖 해시 테이블(Hash Table)을 특징을 정리하자면, 아래와 같이 정리 할 수 있다.</p>
+
+<ol>
+  <li>임의의 크기를 가진 데이터(Key)를 고정된 크기의 데이터(Value)로 변화시켜 저장.</li>
+  <li><strong>키에 대한 해시값을 사용</strong>하여 값을 저장하고 Key-Value 쌍의 갯수에 따라 크기가 증가.</li>
+  <li>해시값 자체를 index로 사용하기 때문에 평균 시간복잡도가 O(1)로 매우 빠름.</li>
+</ol>
+
+<p>🖍 해시 테이블과 비슷한 것으로 해시 맵이 있는데, 처음에는 같은 용어인줄 알고 헷갈렸는데, <strong>동기화 지원 여부에 대해 차이가 있다</strong>는 걸 알게되었다.</p>
+
+<blockquote>
+  <p>해시 테이블은 동기화를 고려해야대는 상황에서(병렬 처리할 때) 쓰이고, 해시 맵의 경우는 동기화를 고려하지 않아도 되는 상황(병렬 처리 하지 않을 때)에서 주로 쓰인다.</p>
+</blockquote>
+
+<p>📖 해시 함수(hash function)을 특징을 정리하자면, 아래와 같이 정리 할 수 있다.</p>
+
+<ol>
+  <li>입력값의 길이가 달라도 출력값은 언제나 고정된 길이로 반환.</li>
+  <li>동일한 값이 입력되면 언제나 동일한 출력값을 보장.</li>
+  <li>출력된 결과 값을 토대로 입력 값을 유추할 수 없음.</li>
+</ol>
+
+<p><img src="/public/img/hash12.png" alt="hash12" width="70%" height="70%" class="center" /></p>
+
+<p>❗️해시는 언제 사용될까?</p>
+
+<p>리스트를 사용할 수 없을 때 사용한다. 리스트는 숫자 인덱스를 이용하여 접근하는데, 숫자가 아닌 다른 값을 사용하려고 할 때 사용할 수 있다. 또한 빠른 접근과 집계가 필요할 때 사용한다.</p>
+
+<p>해시는 간단하게 아래와 같이 만들어볼 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'name'</span><span class="p">:</span><span class="s">'뚜뚜'</span><span class="p">,</span>
+    <span class="s">'breed'</span><span class="p">:</span> <span class="s">'아메숏'</span><span class="p">,</span>
+    <span class="s">'age'</span> <span class="p">:</span> <span class="mf">2.5</span>
+<span class="p">}</span>
+
+<span class="c1"># {'name': '뚜뚜', 'breed': '아메숏', 'age': 2.5}
+</span></code></pre></div></div>
+
+<p>여기서 value에는 무엇이든 넣을 수 있다는 걸 기억하자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 이렇게 함수를 만들어 함수를 넣을 수 있고, 어떤 객체든 전부 가능하다.
+</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="n">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'name'</span><span class="p">:</span><span class="s">'뚜뚜'</span><span class="p">,</span>
+    <span class="s">'breed'</span><span class="p">:</span> <span class="s">'아메숏'</span><span class="p">,</span>
+    <span class="s">'age'</span> <span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="s">'fun'</span> <span class="p">:</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># {'name': '뚜뚜', 'breed': '아메숏', 'age': 2.5, 'fun': 4}
+</span></code></pre></div></div>
+<p>반대로 key에도 무엇이든 넣을 수 있다. ( 리스트 같은건 빼고 )</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'name'</span><span class="p">:</span><span class="s">'뚜뚜'</span><span class="p">,</span>
+    <span class="s">'breed'</span><span class="p">:</span> <span class="s">'아메숏'</span><span class="p">,</span>
+    <span class="s">'age'</span> <span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="s">'fun'</span> <span class="p">:</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+    <span class="mi">1</span> <span class="p">:</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">23</span><span class="p">),</span>
+    <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">234</span><span class="p">)</span> <span class="p">:</span> <span class="s">'덧셈'</span>
+<span class="p">}</span>
+
+<span class="c1"># {'name': '뚜뚜', 'breed': '아메숏', 'age': 2.5, 'fun': 4, 1: 24, 235: '덧셈'}
+</span></code></pre></div></div>
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

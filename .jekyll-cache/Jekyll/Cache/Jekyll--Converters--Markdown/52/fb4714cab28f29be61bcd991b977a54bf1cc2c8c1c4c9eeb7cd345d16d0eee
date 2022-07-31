@@ -1,0 +1,82 @@
+I"i"<p>신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤다.<br />
+우리는 왜 미분을 사용하는 것인지, 미분이 필요한 이유와 도함수를 Python 으로 간단하게 구현해보도록 하겠다.</p>
+
+<h2 id="미분이-필요한-이유">미분이 필요한 이유</h2>
+
+<p>미분이 필요한 이유는 <strong>기존의 가중치를 갱신하기 위해서 사용</strong>한다.<br />
+하지만 진정한 미분은 컴퓨터로 구현하기 어렵기 때문에 중앙 차분 오차가 발생한다. 그래서 컴퓨터로 미분을 구현하기 위해서는 수치 미분을 사용해야한다.</p>
+
+<p>함수 y=f(x)에 대해서 x가 x_{0} 에서 x_{0}+h 로 변화할 때, y의 값은 f(x_{0}+h)로 변화한다고 할 때, 평균 변화율은 아래와 같다</p>
+
+<p><img src="/public/img/ml4.png" alt="ml4" width="40%" height="40%" class="center" /></p>
+
+<p>그림을 보면 h가 서서히 0으로 다가가면 할선은 접선으로 다가간다.</p>
+
+<p><img src="/public/img/ml3.png" alt="ml3" width="70%" height="70%" class="center" /></p>
+
+<p>이를 코드로 구현하려면 h가 되었을때가 진정한 미분이라고 할수 있는데, 아까 말했던 것과 같이 컴퓨터로는 진정한 미분을 구현하는 것은 어렵다.<br />
+h가 0이 될 수 없기 때문이며, 그래서 h를 0.0001로 두고 수치미분을 한다.</p>
+
+<p><img src="/public/img/ml5.png" alt="ml5" width="30%" height="30%" class="center" /></p>
+
+<h2 id="수치-미분">수치 미분</h2>
+
+<p>함수 이름은 numerical_diff 라고 짓었다. 위의 공식을 보고 그대로 만들면 되기 때문에 간단하게 함수를 구현할 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">numerical_diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">h</span><span class="o">=</span><span class="mf">0.001</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">h</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>위의 미분 함수를 이용하여 f(x)=x^2 + 4^2 함수를 미분하고 x=4에서의 미분계수(기울기)를 구하면, 2x + 0 상수는 도함수가 되면 0이 되고, 2*4 = 8 이 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">samplefunc1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">numerical_diff</span><span class="p">(</span><span class="n">samplefunc1</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>결과 값을 출력하면 8이 나오지 않고 근사치가 나오는 것은 수치미분이기 때문에 중앙 차분 오차가 발생하기 때문이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="k">def</span> <span class="nf">samplefunc1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="n">samplefunc1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/ml6.png" alt="ml6" width="70%" height="70%" class="center" /></p>
+
+<p>여기에 도함수 그래프를 넣어 겹쳐서 보려고 한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="k">def</span> <span class="nf">numerical_diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">h</span><span class="o">=</span><span class="mf">0.001</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">h</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">samplefunc1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">afterfunc</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">numerical_diff</span><span class="p">(</span><span class="n">samplefunc1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">x</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> 
+<span class="n">y1</span> <span class="o">=</span> <span class="n">samplefunc1</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span>
+
+<span class="n">x2</span><span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> 
+<span class="n">y2</span> <span class="o">=</span> <span class="n">afterfunc</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/public/img/ml7.png" alt="ml7" width="70%" height="70%" class="center" /></p>
+:ET

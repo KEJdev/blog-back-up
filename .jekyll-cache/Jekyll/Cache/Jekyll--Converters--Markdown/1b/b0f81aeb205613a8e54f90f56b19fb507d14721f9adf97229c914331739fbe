@@ -1,0 +1,18 @@
+I"�<p>이번 문제는 간단하게 예외처리만 하면 되는 문제인데, 문제에 EOF라고 명시가 되어 있지 않아서 조금 해맸다. 나중에 EOF라는 것를 밖에 링크 누를때 확인하고 나서야 풀 수 있었다…ㅠㅠ</p>
+
+<h2 id="백준-10951번">백준 10951번</h2>
+
+<p>문제는 아래와 같다.</p>
+
+<p><img src="/public/img/baekjoon7.png" alt="baekjoon7" width="100%" height="100%" class="center" /></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="k">try</span> <span class="p">:</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">EOFError</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre></div></div>
+:ET

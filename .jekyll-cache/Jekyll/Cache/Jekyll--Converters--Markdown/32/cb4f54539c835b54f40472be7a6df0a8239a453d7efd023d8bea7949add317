@@ -1,0 +1,32 @@
+I"<p>이진 검색 알고리즘(binary search algorithm)은 오름차순으로 정렬된 리스트에서 특정한 값의 위치를 찾는 알고리즘입니다. 처음 중간의 값을 임의의 값으로 선택하여, 그 값과 찾고자 하는 값의 크고 작음을 비교하는 방식입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span> <span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span> <span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">672</span><span class="p">,</span> <span class="mi">871</span> 
+</code></pre></div></div>
+
+<p>위와 같은 데이터가 있을 때, 이진 탐색을 구현하면 아래와 같습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">in_data</span><span class="p">,</span> <span class="n">input_num</span><span class="p">):</span>
+    
+    <span class="n">in_data</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">in_data</span><span class="p">)</span>
+    <span class="n">start_num</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">end_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">in_data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">start_num</span> <span class="o">&lt;=</span> <span class="n">end_num</span><span class="p">:</span>
+
+        <span class="n">mid_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">start_num</span> <span class="o">+</span> <span class="n">end_num</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">in_data</span><span class="p">[</span><span class="n">mid_num</span><span class="p">]</span> <span class="o">==</span> <span class="n">input_num</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">print</span><span class="p">(</span><span class="s">'입력하신 {0}이(가) 있습니다.'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">input_num</span><span class="p">))</span>
+
+        <span class="k">elif</span> <span class="n">in_data</span><span class="p">[</span><span class="n">mid_num</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">input_num</span><span class="p">:</span>
+            <span class="n">end_num</span> <span class="o">=</span> <span class="n">mid_num</span> <span class="o">-</span> <span class="mi">1</span>
+
+        <span class="k">elif</span> <span class="n">in_data</span><span class="p">[</span><span class="n">mid_num</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">input_num</span><span class="p">:</span>
+            <span class="n">start_num</span> <span class="o">=</span> <span class="n">mid_num</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="k">print</span><span class="p">(</span><span class="s">'입력하신 {0}이(가) 없습니다.'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">input_num</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>데이터의 중간의 값을 선택하고 값의 크고 작음을 비교하는 방식이기 때문에 if문을 사용하면 간단히 구현할 수 있습니다.</p>
+
+:ET

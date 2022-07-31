@@ -1,0 +1,126 @@
+I"�@<p>지난 포스팅에서 기사 제목만을 스크롤링하는 것을 했는데, 이번에는 조금 더 나아가서 기사 내용까지 스크롤링해보도록 하겠습니다.</p>
+
+<h2 id="h사-웹-스크롤링-기사-내용-스크롤링">H사 웹 스크롤링 (기사 내용 스크롤링)</h2>
+
+<p>기사 내용을 스크롤링하기 위해 기사를 클릭 후 저번과 마찬가지로 F12를 눌러 기사 내용을 클릭합니다.</p>
+
+<p><img src="/public/img/web5.png" alt="web5" width="100%" height="100%" class="center" /></p>
+
+<p>그럼 기사 내용이 div 태그에 text 클래스에 기사 내용이 있음을 확인할 수 있습니다. 여기서 기사 내용만을 클릭하면 언제 올라온 기사인지 모르니 기사 날짜도 함께 스크롤링합니다. 기사 날짜는 p 태그에 data-time 클래스가 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">fetch_list_url</span><span class="p">():</span>
+
+    <span class="c1"># 현재 기사 URL
+</span>    <span class="n">list_url</span> <span class="o">=</span> <span class="s">"http://www.hani.co.kr/arti/economy/marketing/933198.html
+
+    url = urllib.request.Request(list_url)
+    res = urllib.request.urlopen(url).read().decode("</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="s">")
+    #print(res)  # 위의 두가지 작업을 거치면 위의 url 의 html 문서를 res 변수에 담을수 있게 된다.
+
+    soup = BeautifulSoup(res, "</span><span class="n">html</span><span class="p">.</span><span class="n">parser</span><span class="s">")  
+    params1 =[]
+    params2 =[]
+
+    for link1,link2 in zip(soup.find_all('p', class_="</span><span class="n">date</span><span class="o">-</span><span class="n">time</span><span class="s">"),soup.find_all('div', class_="</span><span class="n">text</span><span class="s">")):
+        params1.append( link1.get_text() )
+        params2.append( link2.get_text() )
+    
+    for i1,i2 in zip(params1,params2):
+        print(i1.strip(),end=' ')
+        print(i2.strip())
+
+fetch_list_url()
+</span></code></pre></div></div>
+
+<p>그럼 여기서 현재 기사 URL만 스크롤링하지 않고 아래의 두가지 조건을 만족하는 웹 스크롤링을 작성해보겠습니다.</p>
+
+<ul>
+  <li><strong>1. 인공지능으로 검색한 페이지의 기사 URL을 가져오는 코드</strong></li>
+  <li><strong>2. 그 상세 URL로 기사 날짜와 기사 내용을 검색하는 코드</strong></li>
+</ul>
+
+<p>저번 포스팅에서 사용한 코드와 오늘 작성한 코드를 합치면 간단하게 만들 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">fetch_list_url</span><span class="p">():</span>
+    <span class="n">params</span><span class="o">=</span><span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+        <span class="n">list_url</span> <span class="o">=</span> <span class="s">"http://search.hani.co.kr/Search?command=query&amp;keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&amp;media=news&amp;submedia=&amp;sort=d&amp;period=all&amp;datefrom=2000.01.01&amp;dateto=2020.03.22&amp;pageseq="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">list_url</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="s">"html.parser"</span><span class="p">)</span>  
+        
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'dt'</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">link</span><span class="p">:</span>
+                <span class="n">params</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">params</span>
+
+<span class="k">def</span> <span class="nf">fetch_list_url2</span><span class="p">():</span>
+
+    <span class="n">list_url</span> <span class="o">=</span> <span class="n">fetch_list_url</span><span class="p">()</span>  <span class="c1"># 리스트를 한번에 받아오기
+</span>    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_url</span><span class="p">)):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">list_url</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+        
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>  
+        
+        <span class="n">params1</span> <span class="o">=</span><span class="p">[]</span>
+        <span class="n">params2</span> <span class="o">=</span><span class="p">[]</span>
+    
+        <span class="k">for</span> <span class="n">link1</span><span class="p">,</span><span class="n">link2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'p'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">"date-time"</span><span class="p">),</span><span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">"text"</span><span class="p">)):</span>
+            <span class="n">params1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span> <span class="n">link1</span><span class="p">.</span><span class="n">get_text</span><span class="p">()</span> <span class="p">)</span>
+            <span class="n">params2</span><span class="p">.</span><span class="n">append</span><span class="p">(</span> <span class="n">link2</span><span class="p">.</span><span class="n">get_text</span><span class="p">()</span> <span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">i1</span><span class="p">,</span><span class="n">i2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">params1</span><span class="p">,</span><span class="n">params2</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i1</span><span class="p">.</span><span class="n">strip</span><span class="p">(),</span><span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i2</span><span class="p">.</span><span class="n">strip</span><span class="p">())</span>
+	  
+<span class="k">print</span><span class="p">(</span><span class="n">fetch_list_url2</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>추가로 여기서 스크롤링한 기사를 메모장에 저장하고 난 최종 코드는 아래와 같이 작성할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">fetch_list_url</span><span class="p">():</span>
+    <span class="n">txt_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+        <span class="n">list_url</span> <span class="o">=</span> <span class="s">"http://search.hani.co.kr/Search?command=query&amp;keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&amp;media=news&amp;submedia=&amp;sort=d&amp;period=all&amp;datefrom=2000.01.01&amp;dateto=2020.03.22&amp;pageseq="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">list_url</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+    
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>  
+        <span class="n">article_title_url</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'dt'</span><span class="p">)</span>  
+
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">article_title_url</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">link</span><span class="p">:</span> 
+                <span class="n">article_list_url</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">)</span>
+                <span class="n">article_url</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">article_list_url</span><span class="p">)</span>
+                <span class="n">article_res</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">article_url</span><span class="p">).</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>             
+
+                <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">article_res</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+                <span class="n">article_content</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">"text"</span><span class="p">)</span>
+                <span class="n">article_date</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'p'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">"date-time"</span><span class="p">)</span>              
+
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">article_date</span><span class="p">,</span><span class="n">article_content</span><span class="p">):</span>
+                    <span class="n">txt_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get_text</span><span class="p">(</span><span class="s">' '</span><span class="p">,</span> <span class="n">strip</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span><span class="o">+</span><span class="s">' '</span><span class="p">)</span>
+                    <span class="n">txt_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">get_text</span><span class="p">(</span><span class="s">' '</span><span class="p">,</span> <span class="n">strip</span> <span class="o">=</span> <span class="bp">True</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="s">' '</span><span class="p">)</span><span class="o">+</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">txt_list</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.txt'</span><span class="p">,</span><span class="s">'w'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">fetch_list_url</span><span class="p">())</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>다음 포스팅에서는 검색어를 입력하면 자동으로 스크롤링하게 해보겠습니다.</p>
+:ET

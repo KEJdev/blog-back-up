@@ -1,0 +1,56 @@
+I"�<p>오늘은 GO 반복문과 조건문에 대해 배워보도록 하겠습니다. 예전 포스팅에서 한번 언급 하긴 했었는데 GO에서 반복문은 for문 밖에 없다고 이야기 했었습니다. 오늘은 그 for문에 대해 알아보도록 하겠습니다. Go가 설치되어 있지 않지만 실행을 해보고 싶다면, <a href="https://tour.golang.org/methods/20">여기</a>를 클릭해주세요.</p>
+
+<h2 id="go-반복문for문">Go 반복문(for문)</h2>
+
+<p>Go 언어는 반복문이 for문 밖에 없으며 기본적인 for반복문은 c와 java와 거의 유사합니다. 다른점이 있다면 소괄호가 필요하지 않다는 점뿐입니다. 하지만 실행문을 위한 중괄호 {}는 필요합니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">(){</span>
+    <span class="n">sum</span> <span class="o">:=</span> <span class="m">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="p">}</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>for문을 사용하여 1부터 10까지 더하는 함수 하나를 만들어보면 위와 같이 만들 수 있습니다. c와 java의 for문과 별다른 차이가 없기 때문에 사실 어렵지는 않지만 혹시 모르니 주석을 달아 설명을 하자면 아래와 같습니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">(){</span>
+    <span class="c">//sum 이라는 변수 생성 </span>
+    <span class="n">sum</span> <span class="o">:=</span> <span class="m">0</span>
+
+    <span class="c">// for문 시작</span>
+    <span class="c">// 처음에 i는 0이라고 지정</span>
+    <span class="c">// i가 10이 될때까지 반복문이 돌아감</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="c">// sum 이라는 변수에 계속 i를 더함 1+2+3+4+...</span>
+    <span class="p">}</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>또한 C와 java처럼 향상된 for문을 사용할 수 있습니다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">sum</span> <span class="o">:=</span> <span class="m">1</span>
+	<span class="k">for</span> <span class="n">sum</span> <span class="o">&lt;</span> <span class="m">1000</span> <span class="p">{</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="n">sum</span>
+	<span class="p">}</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,70 @@
+I"-&<p>오늘은 knn을 사용하여 유방암 분류를 해볼까합니다. 데이터는 데이터는 <a href="https://github.com/KEJdev/DataSet/tree/master/DataSet">여기</a>에서 볼 수 있으며 전체 코드 역시 GitHub에서 보실 수 있습니다. 월래 오늘 적절한 k값을 알아내는 것에 관려하여 포스팅을 할 예정이였으나, R에서 knn 관련 데이터 예제로 가장 많이 사용하는 것중에서 하나만 집고 넘어가는 것도 나쁘지 않고 해서 오늘은 유방암 데이터를 가지고 분류를 해보도록 하겠습니다.</p>
+
+<h2 id="dataset">DataSet</h2>
+
+<p>우선 데이터를 load 해보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wisc</span><span class="o">&lt;-</span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"wisc_bc_data.csv"</span><span class="p">,</span><span class="n">stringsAsFactors</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/wisc.png" alt="wisc" width="50%" height="50%" class="center" /></p>
+
+<p>데이터에서 diagnosis는 라벨이며, B는 양성이고, M이 악성입니다. 전체 라벨에 대해 분포를 보면, 총 569명중에서 1/3이 악성이고 2/3이 양성임을 알 수 있습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wbcd</span><span class="o">$</span><span class="n">diagnosis</span><span class="w"> </span><span class="o">&lt;-</span><span class="n">factor</span><span class="p">(</span><span class="n">wbcd</span><span class="o">$</span><span class="n">diagnosis</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="s2">"M"</span><span class="p">),</span><span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"Benign"</span><span class="p">,</span><span class="s2">"maliganant"</span><span class="p">))</span><span class="w">
+</span><span class="nf">round</span><span class="p">(</span><span class="n">prop.table</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">wbcd</span><span class="o">$</span><span class="n">diagnosis</span><span class="p">)),</span><span class="m">1</span><span class="p">)</span><span class="o">*</span><span class="m">100</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="normalize">Normalize</h2>
+
+<p>저번에 만든 정규화 함수를 이용하여 정규화 작업을 하겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">normalize</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="w">
+    </span><span class="nf">return</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="nf">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nf">min</span><span class="p">(</span><span class="n">x</span><span class="p">)))}</span><span class="w">
+
+</span><span class="n">wbcd_n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">lapply</span><span class="p">(</span><span class="n">wbcd</span><span class="p">[,</span><span class="m">3</span><span class="o">:</span><span class="m">31</span><span class="p">],</span><span class="w"> </span><span class="n">normalize</span><span class="p">))</span><span class="w">
+
+</span><span class="n">summary</span><span class="p">(</span><span class="n">wbcd_n</span><span class="p">)</span><span class="w"> </span><span class="c1"># 정규화가 잘 되었는지 확인</span><span class="w">
+                </span><span class="c1"># 0 ~ 1 사이에 있는지 / min 과 max</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/wisc2.png" alt="wisc2" width="70%" height="70%" class="center" /></p>
+
+<p>그리고 전체 데이터에서 훈련 데이터와 학습 데이터를 나누는 작업을 하고 knn으로 돌려주겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nrow</span><span class="p">(</span><span class="n">wbcd_n</span><span class="p">)</span><span class="w"> </span><span class="c1"># 건수를 확인하는 함수 .  </span><span class="w">
+
+</span><span class="n">wbcd_train</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">wbcd_n</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">469</span><span class="p">,]</span><span class="w">
+</span><span class="n">wbcd_test</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">wbcd_n</span><span class="p">[</span><span class="m">470</span><span class="o">:</span><span class="m">569</span><span class="p">,]</span><span class="w">
+
+</span><span class="n">wbcd_train_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">wbcd</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">469</span><span class="p">,</span><span class="m">2</span><span class="p">]</span><span class="w">
+</span><span class="n">wbcd_test_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="n">wbcd</span><span class="p">[</span><span class="m">470</span><span class="o">:</span><span class="m">569</span><span class="p">,</span><span class="m">2</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="knn">Knn</h2>
+
+<p>knn을 아래와 같이 돌려줍니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">class</span><span class="p">)</span><span class="w">
+
+</span><span class="n">result1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">knn</span><span class="p">(</span><span class="n">wbcd_train</span><span class="p">,</span><span class="w"> </span><span class="n">wbcd_test</span><span class="p">,</span><span class="w"> </span><span class="n">wbcd_train_label</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="m">21</span><span class="p">)</span><span class="w">  
+
+</span><span class="c1">## 실제 라벨과 테스트 라벨과 비교를 해본다 .</span><span class="w">
+</span><span class="n">data.frame</span><span class="p">(</span><span class="n">wbcd</span><span class="p">[</span><span class="m">470</span><span class="o">:</span><span class="m">569</span><span class="p">,</span><span class="m">2</span><span class="p">],</span><span class="n">result1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>모델의 정확도는 아래와 같이 구할 수 있습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prop.table</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">ifelse</span><span class="p">(</span><span class="n">wbcd</span><span class="p">[</span><span class="m">470</span><span class="o">:</span><span class="m">569</span><span class="p">,</span><span class="m">2</span><span class="p">]</span><span class="o">==</span><span class="n">result1</span><span class="p">,</span><span class="s2">"o"</span><span class="p">,</span><span class="s1">'x'</span><span class="p">)))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그럼 정확도가 대략 97%정도임을 알 수 있습니다. 여기서 그냥 끝내기는 조금 아쉬우니 이원 교차표를 그려서 자세하게 모델에 대해 보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">CrossTable</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">wbcd</span><span class="p">[</span><span class="m">470</span><span class="o">:</span><span class="m">569</span><span class="p">,</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">result1</span><span class="p">,</span><span class="w"> </span><span class="n">prop.chisq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이원 교차표를 보면 악성인데, 양성으로 오진한 결과 때문에 정확도가 떨어짐을 알 수 있습니다.</p>
+
+<p><img src="/public/img/wisc3.png" alt="wisc3" width="50%" height="50%" class="center" /></p>
+
+:ET

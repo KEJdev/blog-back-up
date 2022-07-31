@@ -1,0 +1,80 @@
+I"�<p>회사 그만두고 잠시, 다른 회사 노가다 업무 하나 맡아서 했었는데, 그에 대한 일이다. 
+내가 맡았던 업무는 각종 병원 관련 데이터를 긁어모으는 일이였는데, 생각보다 너무 노가다!
+크롤링을 하면 직접하는 것보다 빠르겠지만, 한국인의 성격을 생각하면 느리게만 느껴진다! 
+그래서 오픈 API를 찾아보니 있어서 그걸로 대체해서 사용했다.</p>
+
+<p>우선 오픈 API를 사용하려면 <a href="https://www.data.go.kr/index.do">공공데이터포털</a>에 로그인을 해야한다.</p>
+
+<p><img src="/public/img/open_api_1.png" alt="open_api_1" width="90%" height="90%" class="center" /></p>
+
+<p>그리고 찾고자 하는 것을 검색해서 사용하고자 하는 API를 찾으면 된다.</p>
+
+<p><img src="/public/img/open_api_2.png" alt="open_api_2" width="90%" height="90%" class="center" /></p>
+
+<p>API를 사용하려면 활용 신청을 해야는데, 오픈 API는 따로 심사를 하지 않고, 활용 신청 후 바로 사용이 가능하다.</p>
+
+<p><img src="/public/img/open_api_3.png" alt="open_api_3" width="90%" height="90%" class="center" /></p>
+
+<p>신청 후에 마이페이지 들어가서 확인해보면 아래와 같은 개발 계정을 볼 수 있다. 여기서 아래 인증키 두개 중에서 decoding 인증키만 복사한다.</p>
+
+<p><img src="/public/img/open_api_4.png" alt="open_api_4" width="90%" height="90%" class="center" /></p>
+
+<p>그리고 아래로 내리면 인증키 설정하는 부분에 복사한 키를 넣는다.</p>
+
+<p><img src="/public/img/open_api_5.png" alt="open_api_5" width="90%" height="90%" class="center" /></p>
+
+<p>설정 완료되면 바로 API 테스트를 할 수 있다.</p>
+
+<p><img src="/public/img/open_api_6.png" alt="open_api_6" width="90%" height="90%" class="center" /></p>
+
+<p>key - b_no에 검색하고자 하는 사업자 번호를 넣어서 테스트 해본다.</p>
+
+<p><img src="/public/img/open_api_7.png" alt="open_api_7" width="90%" height="90%" class="center" /></p>
+
+<p>그럼 아래와 같이 리턴 값을 받을 수 있다.</p>
+
+<p><img src="/public/img/open_api_8.png" alt="open_api_8" width="90%" height="90%" class="center" /></p>
+
+<p>이제 여기서 Python으로 실행해보기 위해 Curl을 복사한다. 복사 후 <a href="https://curlconverter.com/">링크</a>를 눌러 Json으로 변환 시키자!</p>
+
+<p><img src="/public/img/open_api_9.png" alt="open_api_9" width="90%" height="90%" class="center" /></p>
+
+<p>json으로 변환이 끝나면 파이참에 붙여넣기를 해보자. 
+그럼 아래와 같이 결과를 볼 수 있다. 그리고 검색하고자 하는 번호를 josn_data에 넣고 돌리면 끝난다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'accept'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">,</span>
+    <span class="s">'Authorization'</span><span class="p">:</span> <span class="p">[</span><span class="n">본인의</span> <span class="n">인증키</span><span class="p">],</span>
+    <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s">'serviceKey'</span><span class="p">,</span> <span class="p">[</span><span class="n">본인의</span> <span class="n">인증키</span><span class="p">]),</span>
+<span class="p">)</span>
+
+<span class="n">json_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'b_no'</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">'1082122133'</span><span class="p">,</span>
+        <span class="s">'1081296521'</span><span class="p">,</span>
+        <span class="s">'1010158608'</span><span class="p">,</span>
+        <span class="s">'1010201835'</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.odcloud.kr/api/nts-businessman/v1/status'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json_data</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">()[</span><span class="s">"data"</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+    <span class="n">pprint</span><span class="p">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="s">'b_stt'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>아래와 같이 결과를 확인 할 수있다.</p>
+
+<p><img src="/public/img/open_api_10.png" alt="open_api_10" width="30%" height="30%" class="center" /></p>
+
+<p>아무래도 크롤링 보다 훨씬 빠른데, 1회 호출시 최대 100개씩 받을 수 있기 때문에 빠르고 편리하다.</p>
+
+:ET

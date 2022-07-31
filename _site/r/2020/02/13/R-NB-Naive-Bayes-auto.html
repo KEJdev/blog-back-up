@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="/public/img/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eunji Kim" />
+		<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+    equationNumbers: {
+        autoNumber: "AMS"
+    }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$', '$'] ],
+    processEscapes: true,
+    }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+	</head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Eunji Kim</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/">Eunji Kim</a>
+	</div>
+	<p class="lead">양념치킨 좋아하는 개발자</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Tags</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#ETC">
+				<span class="name">ETC</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#R">
+				<span class="name">R</span>
+				<span class="badge">22</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#MachineLearning">
+				<span class="name">MachineLearning</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#PLSQL">
+				<span class="name">PLSQL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Python">
+				<span class="name">Python</span>
+				<span class="badge">35</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">21</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Go">
+				<span class="name">Go</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Oracle">
+				<span class="name">Oracle</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#paper">
+				<span class="name">paper</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Docker">
+				<span class="name">Docker</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#CS">
+				<span class="name">CS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Error">
+				<span class="name">Error</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content-wrapper">
+			<div class="content">
+				<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			나이브 베이즈(Naive Bayes)자동화 스크립트 만들기
+		</div>
+		<time class="post-date dt-published" datetime="2020-02-13T14:00:00+08:00" itemprop="datePublished">2020/02/13
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>knn에 이어서 나이브 베이도 자동화 스크립트로 만들어보겠습니다.</p>
+
+<h2 id="naive-bayes-자동화-스크립트">Naive Bayes 자동화 스크립트</h2>
+
+<p>우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다. 추가로 if문을 돌려서 패키지 설치가 되어 있으면 패스하고 아니면 설치하도록 하겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">setdiff</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">installed.packages</span><span class="p">())))</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">install.packages</span><span class="p">(</span><span class="n">setdiff</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">installed.packages</span><span class="p">())))</span><span class="w">  
+</span><span class="p">}</span><span class="w">
+    
+</span><span class="n">library</span><span class="p">(</span><span class="n">tm</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">gmodels</span><span class="p">)</span><span class="w">
+
+</span><span class="n">input_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'csv파일을 입력하세요. ex) emp.csv : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_header</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'컬럼명이 있습니까? ex)T OR F : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'라벨 컬럼의 번호를 입력하세요. ex)N (N&gt;=1) : '</span><span class="p">)</span><span class="w">
+</span><span class="n">input_laplace</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readline</span><span class="p">(</span><span class="s1">'라플라스를 입력하세요. ex)n (0&lt;n&lt;1) : '</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 헤더 유무 검사를 하겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 해더 유무 검사</span><span class="w">
+</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input_header</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'T'</span><span class="p">){</span><span class="w">
+</span><span class="n">table_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">input_table</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">T</span><span class="p">)</span><span class="w">  
+</span><span class="p">}</span><span class="w">
+</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="n">table_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">input_table</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이제 거의 다 끝났네요. 마지막으로 factor로 변환하고 라벨 번호와 라플라스 값을 숫자화 합니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">ncol</span><span class="p">(</span><span class="n">table_name</span><span class="p">)){</span><span class="w">
+</span><span class="n">table_name</span><span class="p">[,</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">table_name</span><span class="p">[,</span><span class="n">i</span><span class="p">])</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">### 라벨 번호, 라플라스 값 숫자화</span><span class="w">
+</span><span class="n">input_label</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.integer</span><span class="p">(</span><span class="n">input_label</span><span class="p">)</span><span class="w">
+</span><span class="n">input_laplace</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">input_laplace</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 데이터를 나누고 나이브 베이즈합니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">train_cnt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="m">0.75</span><span class="o">*</span><span class="nf">dim</span><span class="p">(</span><span class="n">table_name</span><span class="p">[</span><span class="m">1</span><span class="p">]))</span><span class="w">
+</span><span class="n">train_index</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">dim</span><span class="p">(</span><span class="n">table_name</span><span class="p">)[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">train_cnt</span><span class="p">,</span><span class="n">replace</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+
+</span><span class="n">train_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_name</span><span class="p">[</span><span class="n">train_index</span><span class="p">,]</span><span class="w">
+</span><span class="n">test_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_name</span><span class="p">[</span><span class="o">-</span><span class="n">train_index</span><span class="p">,]</span><span class="w">
+
+</span><span class="n">table_name</span><span class="p">[,</span><span class="n">input_label</span><span class="p">]</span><span class="w">
+
+</span><span class="n">model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">naiveBayes</span><span class="p">(</span><span class="n">train_data</span><span class="p">[,</span><span class="n">input_label</span><span class="p">]</span><span class="o">~</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span><span class="w"> </span><span class="n">laplace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input_laplace</span><span class="p">)</span><span class="w">
+</span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">test_data</span><span class="p">[,</span><span class="o">-</span><span class="n">input_label</span><span class="p">])</span><span class="w">
+
+</span><span class="n">CrossTable</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">test_data</span><span class="p">[,</span><span class="n">input_label</span><span class="p">])</span><span class="w">
+</span></code></pre></div></div>
+
+<p>knn보다 더 간단하게 나이브 베이즈 자동화 스크립트가 완성 됫네요.</p>
+
+	</div>
+</article>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

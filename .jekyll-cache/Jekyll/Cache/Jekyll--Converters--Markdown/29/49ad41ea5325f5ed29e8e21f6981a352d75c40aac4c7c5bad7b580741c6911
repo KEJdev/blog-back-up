@@ -1,0 +1,30 @@
+I""<p>GO는 설치되어 있지 않지만 실행을 해보고 싶다면, <a href="https://tour.golang.org/methods/20">여기</a>에서 간단하게 돌려 볼 수 있다.</p>
+
+<h2 id="go-pointers">Go Pointers</h2>
+
+<p>Go에는 포인터가 있지만 포인터 연산은 불가능하다. 구조체 변수는 구조체 포인터를 이용해 접근 할 수 있다. 포인터를 이용하는 간접적인 접근은 실제 구조체에도 영향을 미친다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+	<span class="s">"fmt"</span>
+<span class="p">)</span>
+
+<span class="k">type</span> <span class="n">Vertex</span> <span class="k">struct</span> <span class="p">{</span>
+	<span class="n">x</span> <span class="kt">int</span>
+	<span class="n">y</span> <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">p</span> <span class="o">:=</span> <span class="n">Vertex</span><span class="p">{</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">}</span>
+	<span class="n">q</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">p</span>
+	<span class="n">q</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="m">1e9</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>결과 :</p>
+
+<p><img src="/public/img/go6.png" alt="go6" width="20%" height="20%" class="center" /></p>
+:ET

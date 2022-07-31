@@ -1,0 +1,71 @@
+I"�<p>이번 포스팅에서는 PL/SQL의 예외처리(exception)처리에 대해서 알아보겠습니다. 그리고 예외처리를 왜 해야하는지와 종류에 대해 알아보겠습니다.</p>
+
+<h2 id="예외처리exception-">예외처리(exception) ?</h2>
+
+<p>에외처리는 오라클에 에러가 났을 때, 엔드유져(프로그램 사용자)의 눈높이를 맞추기위해 사용하는 문법입니다. 예를들어 홈플러스 계산원이 컴퓨터 프로그램 화면에 고객번호를 입력하고 해당고객정보를 보려고 했는데, 오라클 에러메세지가 화면에 “ORA-0001 Data not found ….” 이런식으로 나온다면 사용자의 경우 알 수 없습니다. 그렇기 때문에 “해당 고객은 존재하지 않습니다.”와 같이 에러 메세지를 바꿔주어야 합니다.</p>
+
+<p>또한 비정상장적으로 프로그램이 종료되지 않기 위해서도 사용합니다. Data가 잘못되어서 프로그램이 종료되버린 현상을 막기위해서 프로그램이 종료되는게 아니라 정상적으로 처리가 되고 Data가 잘못되어서 발생하는 에러 메세지만 따로 출력해주겠금 하려고 예외를 쓰기도 합니다.</p>
+
+<h2 id="예외처리exception-종류-3가지">예외처리(exception) 종류 3가지</h2>
+
+<p>PL/SQL의 예외처리에는 3가지의 종류가 있습니다. 오라클에서 미리 정의한 예외처리, 오라클에서 미리 정의하지 않은 예외처리, 사용자 정의 에외처리가 있습니다.</p>
+
+<p>우리가 알아야 할것은 사용자 정의 예외처리입니다. 사용자 정의 예외처리는 오라클에서 미리 정의한 예외나 오라클에서 미리 정의하지 않는 예외는 둘다 오라클 에러 메세지가 출력될 때, 발생하는 예외인데, 그에 반해 사용자 정의 예외는 오라클에서 에러가 발생하지 않지만 이것은 예외다 라고 사용자가 정의하는 것을 말합니다.</p>
+
+<h2 id="예외처리exception-사용하기">예외처리(exception) 사용하기</h2>
+
+<p>PL/SQL을 이용하여 사원번호를 입력하면 해당 사원의 월급이 출력 해보겠습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">accept</span> <span class="n">p_empno</span> <span class="n">prompt</span> <span class="s1">' 사원번호?  : '</span>
+<span class="k">declare</span>
+  <span class="n">v_empno</span> <span class="n">emp</span><span class="p">.</span><span class="n">empno</span><span class="o">%</span><span class="k">type</span> <span class="p">:</span><span class="o">=</span> <span class="o">&amp;</span><span class="n">p_empno</span><span class="p">;</span>
+  <span class="n">v_sal</span>  <span class="n">emp</span><span class="p">.</span><span class="n">sal</span><span class="o">%</span><span class="k">type</span><span class="p">;</span>
+<span class="k">begin</span>
+  <span class="k">select</span> <span class="n">sal</span> <span class="k">into</span> <span class="n">v_sal</span>
+    <span class="k">from</span> <span class="n">emp</span>
+    <span class="k">where</span> <span class="n">empno</span> <span class="o">=</span> <span class="n">v_empno</span><span class="p">;</span>
+  <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">v_sal</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
+
+<p>위와 같이 입력하면 출력이 되는데, 저 코드에서 예외처리를 해보겠습니다. 예외처리를 할때에는 begin절에 exception~ 을 넣으면 됩니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">accept</span> <span class="n">p_empno</span> <span class="n">prompt</span> <span class="s1">' 사원번호?  : '</span>
+<span class="k">declare</span>
+  <span class="n">v_empno</span> <span class="n">emp</span><span class="p">.</span><span class="n">empno</span><span class="o">%</span><span class="k">type</span> <span class="p">:</span><span class="o">=</span> <span class="o">&amp;</span><span class="n">p_empno</span><span class="p">;</span>
+  <span class="n">v_sal</span>  <span class="n">emp</span><span class="p">.</span><span class="n">sal</span><span class="o">%</span><span class="k">type</span><span class="p">;</span>
+<span class="k">begin</span>
+  <span class="k">select</span> <span class="n">sal</span> <span class="k">into</span> <span class="n">v_sal</span>
+    <span class="k">from</span> <span class="n">emp</span>
+    <span class="k">where</span> <span class="n">empno</span> <span class="o">=</span> <span class="n">v_empno</span><span class="p">;</span>
+  <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">v_sal</span><span class="p">);</span>
+	
+  <span class="n">exception</span>
+    <span class="k">when</span> <span class="n">no_data_found</span> <span class="k">then</span>
+      <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">'없는 사원입니다.'</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
+
+<p>위의 코드는 실행절에 넣는 예외처리였습니다. 그렇다면 declare절에도 예외처리를 할 수 있을까요?  물론 가능합니다. declare 절에서 예외처리를 사용할 경우는 보통 먼저 체크해야할 부분이 있을 때 사용합니다. 예를 들어 월급을 물어보고 월급을 입력하지 않고 enter를 치면 ‘월급을 반드시 입력해야 합니다’ 라는 메세지를 출력하는 경우에 declare절에 사용 할 수 있습니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">accept</span> <span class="n">p_empno</span> <span class="n">prompt</span> <span class="s1">' 사원번호를 입력하세요 : '</span>
+<span class="n">accept</span> <span class="n">p_ename</span> <span class="n">prompt</span> <span class="s1">' 이름을 입력하세요 : '</span>
+<span class="n">accept</span> <span class="n">p_sal</span> <span class="n">prompt</span> <span class="s1">' 월급을 입력하세요  : '</span>
+<span class="k">declare</span>
+  <span class="n">e_sal_nl</span> <span class="n">exception</span><span class="p">;</span>
+  <span class="n">pragma</span> <span class="n">exception_init</span><span class="p">(</span> <span class="n">e_sal_nl</span><span class="p">,</span> <span class="o">-</span><span class="mi">01400</span> <span class="p">)</span> <span class="p">;</span>
+<span class="k">begin</span>
+  <span class="k">insert</span> <span class="k">into</span> <span class="n">emp</span><span class="p">(</span><span class="n">empno</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">)</span>
+  <span class="k">values</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p_empno</span><span class="p">,</span> <span class="s1">'&amp;p_ename'</span><span class="p">,</span> <span class="s1">'&amp;p_sal'</span><span class="p">);</span>
+<span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="k">SQL</span><span class="o">%</span><span class="n">rowcount</span> <span class="o">||</span> <span class="s1">' 건이 입력되었다. '</span><span class="p">);</span>
+
+<span class="n">exception</span>
+  <span class="k">when</span> <span class="n">e_sal_nl</span> <span class="k">then</span>
+    <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span> <span class="p">(</span> <span class="s1">'월급을 반드시 입력해야 합니다.'</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
+
+:ET

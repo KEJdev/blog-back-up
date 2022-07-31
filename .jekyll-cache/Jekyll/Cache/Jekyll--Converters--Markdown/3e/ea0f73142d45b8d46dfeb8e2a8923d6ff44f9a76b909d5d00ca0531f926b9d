@@ -1,0 +1,52 @@
+I"!<p>오늘은 조금 재미있는 데이터를 가져와봤습니다. 토마토가 야채인지, 과일인지, 단백질인지를 knn을 통하여 분류해서 알아내는 작업을 해보겠습니다. 이번 포스팅에서 사용 되는 데이터는 아래에서 데이터를 직접 만들어서 작성 할 거라서, 따로 다운 받으실 필요는 없습니다.</p>
+
+<h2 id="dataset">DataSet</h2>
+
+<p>데이터는 아래와 같습니다. 과일은 사과, 바나나, 당근, 치즈 등 작지만 다양한 데이터 입니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">food</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">ingredient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bacon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"banana"</span><span class="p">,</span><span class="w"> </span><span class="s2">"carrot"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"celery"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cheese"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cucumber"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fish"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"grape"</span><span class="p">,</span><span class="w"> </span><span class="s2">"green bean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lettuce"</span><span class="p">,</span><span class="w">
+                                  </span><span class="s2">"nuts"</span><span class="p">,</span><span class="w"> </span><span class="s2">"orange"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pear"</span><span class="p">,</span><span class="s2">"shrimp"</span><span class="p">),</span><span class="w">
+</span><span class="n">sweetness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w">
+</span><span class="n">crunchiness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="w">
+</span><span class="n">class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"Vegetables"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">,</span><span class="s2">"Fruits"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"Fruits"</span><span class="p">,</span><span class="s2">"Proteins"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>출력하면 아래와 같이 출력이 됩니다.</p>
+
+<p><img src="/public/img/r3.png" alt="r3" width="30%" height="30%" class="center" /></p>
+
+<p>그럼 이제 토마토 데이터를 만들어 보겠습니다. 토마토 데이터는 아래와 같이 만들어주면 된답니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tomato</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">sweetness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">crunchiness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="knn">knn</h2>
+
+<p>food 에서 2번째 컬럼과 3번째 컬럼을 train 데이터로 사용하겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">food</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)]</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/r4.png" alt="r4" width="20%" height="20%" class="center" /></p>
+
+<p>그리고 라벨은 데이터의 마지막 컬럼인 class 입니다. 그래서 아래와 같이 라벨을 따로 변수에 담아주겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_label</span><span class="o">&lt;-</span><span class="n">food</span><span class="p">[,</span><span class="m">4</span><span class="p">]</span><span class="w">  
+</span></code></pre></div></div>
+
+<p>그럼 이제 바로 토마토를 넣어서 knn을 해보겠습니다.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">class</span><span class="p">)</span><span class="w"> 
+</span><span class="n">result1</span><span class="o">&lt;-</span><span class="n">knn</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span><span class="n">tomato</span><span class="w"> </span><span class="p">,</span><span class="n">train_label</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">prob</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/public/img/r5.png" alt="r5" width="20%" height="20%" class="center" /></p>
+
+<p>전체 코드는 <a href="https://github.com/KEJdev/R-Study/blob/master/K-Nearest%20Neighbors/knn_%EA%B3%BC%EC%9D%BC%20%EB%B6%84%EB%A5%98.R">여기</a>에서 확인하실 수 있습니다.</p>
+:ET

@@ -1,0 +1,35 @@
+I"<p>링크 : <a href="https://programmers.co.kr/learn/courses/30/lessons/42579">프로그래머스 - 베스트 앨범</a></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">genres</span><span class="p">,</span> <span class="n">plays</span><span class="p">):</span>
+    <span class="n">temp</span><span class="p">,</span><span class="n">temp_index</span> <span class="o">=</span> <span class="p">{},{}</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">val</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">plays</span><span class="p">,</span> <span class="n">genres</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">temp</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+            <span class="n">temp</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">temp</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">val</span><span class="p">]</span>
+
+    <span class="n">sort_temp</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">temp</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sort_temp</span><span class="p">:</span>
+        <span class="n">df_val</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sort_temp</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sort_temp</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">sort_temp</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_val</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">genres</span><span class="p">):</span>
+        <span class="n">temp_index</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ele</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">genres</span><span class="p">)</span> <span class="k">if</span> <span class="n">ele</span> <span class="o">==</span> <span class="n">key</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sort_temp</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">sort_temp</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">temp_index</span><span class="p">[</span><span class="n">k</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sort_temp</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">sort_temp</span><span class="p">[</span><span class="n">k</span><span class="p">])):</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ele</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="k">if</span> <span class="n">ele</span> <span class="o">==</span> <span class="n">v1</span><span class="p">]</span>
+                <span class="n">answer</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">answer</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">plays</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="n">v1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+:ET

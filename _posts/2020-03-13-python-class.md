@@ -1,21 +1,14 @@
 ---
-title:  파이썬 클래스(class)란?
-date:   2020-03-13 11:00:00 +0300
-categories:  [Program Language , Python]
-tags : [Python, 문법]
-sitemap :
-math: true
-mermaid: true
-changefreq : always
-priority : 1.0
-use_math: true
+layout: post
+title: 파이썬 클래스(class)란?
+date: 2020-03-13 11:00:00 +0300
+category : Python
+use_math : true
 ---
 
 파이썬에서의 클래스 정의와 구현하는 법에 대해 알아보겠습니다. 
 
---------
-
-### 클래스(class)) 
+## 클래스(class)
 
 사실 클래스(class)하면 가장 많이 비유로 사용되는 붕어빵 틀과 붕어빵이 있는데, 이 부분은 그냥 패스하고 직접 구현하면서 알아보도록 하겠습니다. 우선 총이라는 클래스를 만들어 보겠습니다.
 
@@ -117,5 +110,5 @@ gun.shoot(3)
 gun.print()
 ```
 
-<center><img src="../../assets//images/gun.png" ></center>
+![gun](/public/img/gun.png){: width="30%" height="30%" }{: .center}
 
