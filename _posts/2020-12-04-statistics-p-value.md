@@ -1,8 +1,7 @@
 ---
 title:  P-value란? (with Python)
 date:   2020-12-04 09:00:00 +0300
-categories:  [Machine Learning, Statistics]
-tags : [Python, 통계]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -15,18 +14,16 @@ P-value에 대해 알기전에 귀무가설, 대립가설에 대해 알아야한
 
 간단하게 말하면 어떠한 두 가지 현상 사이에 관계가 없다라고 이야기하는 일반적인 가설이다. 대립가설은 귀무가설과 반대로 내가 믿는 것, 실험이나 연구를 통해 입증하려고 하는 주장을 말한다. 이제 귀무가설, 대립가설에 대해 알았으니 P-value에 대해 알아보자.
 
--------
 
-### What is P-value? 
+## What is P-value? 
 
 아래와 같은 정규 분포가 있다고 하자.
-
 
 <center><img src="../../assets/images/p-value.png" ></center>
 
 P-value는 귀무 가설(null hypothesis)이 맞다는 전제 하에, 표본에서 실제로 관측된 통계치와 '같거나 더 극단적인' 통계치가 관측될 확률을 말한다. 예시로 아래의 그림처럼 빨간색 점 오른쪽에 있는 값(극단)을 가져올 확률이라고 생각하면 편하다.
 
-### 귀무가설, 대립가설과 P-value와의 관계
+## 귀무가설, 대립가설과 P-value와의 관계
 
 <center><img src="../../assets/images/p-value2.png" ></center>
 
@@ -47,8 +44,7 @@ P-value는 귀무 가설(null hypothesis)이 맞다는 전제 하에, 표본에�
 * P-value가 높다면 귀무가설을 잘 따르고 있다 
 * P-value가 작다면 귀무가설을 잘 따르고 있지 않다. 
 
-
-### P-value에 대한 잘못된 해석
+## P-value에 대한 잘못된 해석
 
 가끔 P-value에 대한 해석을 잘못하는 사람들이 있다. 일반적으로 많이 하는 실수에 대한 일부를 이야기 해볼까한다. 
 
@@ -58,8 +54,7 @@ P-value는 결과가 통계적으로 유의할 때, 전체 의사 결정과정�
 
 P-value는 두 집단간에 차이가 있는지 없는지 정도로만 알려주기 때문에 주의 해야한다. 
 
-
-### Python code
+## Python code
 
 보스턴 데이터를 사용해서 P-value를 구현해볼까한다.
 
@@ -91,4 +86,3 @@ statsmodels 라이브러리를 이용해서 쉽게 P-value를 구할 수 있다.
 여기서 해당 변수를 제거하고 다시 OLS모델을 만들면 R-squared가 올라가는 것을 알 수 있는데, 더 성능이 좋은 모델을 만들어짐을 볼 수 있다. 
 
 이렇게 P-value의 도움으로 더 적은 변수로 간단하게 모델을 만들 수 있다. 
-

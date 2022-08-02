@@ -1,7 +1,7 @@
 ---
 title:  의사 결정트리와(Decision Tree)로 심장질환 데이터 분석하기
 date:   2020-03-12 10:00:00 +0300
-categories:  [Machine Learning, Machine Learning-R]
+categories:  [Machine Learning, ML]
 tags : [R, ML]
 sitemap :
 math: true
@@ -11,12 +11,10 @@ priority : 1.0
 use_math: true
 ---
 
-
 실제 심장질환 데이터를 분석하여 심장질환에 있어 가장 영향력이 큰 변수를 찾아보도록 하겠습니다. 데이터 상세 설명은 [여기](https://rpubs.com/mbbrigitte/HeartDisease)에서 볼 수 있으며, 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 다운 받을 수 있습니다. 그리고 코드는 [여기](https://github.com/KEJdev/R-Study/blob/master/Decision%20Tree/Tree_%EC%8B%AC%EC%9E%A5%EC%A7%88%ED%99%98%20%EB%B6%84%EC%84%9D.R) GitHub에서 확인 할 수 있습니다. 
 
--------
 
-### DataSet 
+## DataSet 
 
 데이터 셋 설명은 아래와 같습니다.
 
@@ -36,11 +34,7 @@ use_math: true
 
 이 데이터에서 대부분 피검사와 운동검사를 통해 얻어진 데이터이고, 정보획득량은 thal(지중해성 빈혈)이 가장 높으나 우라나라에서는 희귀병이므로 이 외의 요소인 이 외의 요소인 가슴통증과 oldpeak(운동부하의 ST 선) 등이 심장질환 판단에 중요한 변수가 되겠습니다.
 
-
--------
-
-
-### 정보획득량 
+## 정보획득량 
 
 
 우선 예쁜 시각화를 그리기 위해서 시각화 그래프 패키지를 설치하겠습니다
@@ -67,11 +61,7 @@ a<-information.gain(AHD~., hr[,-1])
 
 <center><img src="../../assets//images/tree1.png" ></center>
 
-
--------
-
-
-### 의사 결정나무(Decision Tree)
+## 의사 결정나무(Decision Tree)
 
 위에서 깐 패키지를 이용하면 예쁜 의사 결정나무 트리를 구할 수 있습니다.
 
@@ -85,11 +75,7 @@ fancyRpartPlot(tree)
 
 <center><img src="../../assets//images/tree2.png" ></center>
 
-
--------
-
-
-### 데이터 분석에 대한 결과 
+## 데이터 분석에 대한 결과 
 
 데이터 분석은 분석 결과를 잘 설명하는 것도 중요합니다. 그렇기 때문에 데이터를 시각화나 분석을 한 후에, 사람들에게 잘 설명할 수 있도록 글을 쓰는 연습을 충분히 해야합니다. 
 

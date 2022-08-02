@@ -1,7 +1,7 @@
 ---
 title:  텐서플로우란?
 date:   2020-02-02 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-Python]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -18,9 +18,7 @@ use_math: true
 
 이 글 쓴 시점에서는 현재 텐서플로우는 2.0이 나와 있는 상황입니다. 2.0버전이랑 1.x 버전이랑은 문법 차이가 꽤 나기도 하고, 성능 차이도 있다고 합니다. 지금은 1.x 버전에 관하여 포스팅 하고는 있지만 조만간 2.0에 대해서도 포스팅을 해야겠네요.
 
----------
-
-### Tensorflow 
+## Tensorflow 
 
 텐서플로우는 딥러닝을 위해 구글에서 만든 오픈소스 라이브러리입니다. 간단하게 Tensorflow의 특징을 살펴보면 2가지 정도 있다고 보면 됩니다. 
 
@@ -36,9 +34,7 @@ use_math: true
 
 특별한 코드 수정 없이 CPU나 GPU를 사용하여 학습을 시킬 수 있습니다. 
 
----------
-
-### Tensorflow 용어
+## Tensorflow 용어
 
 사실 특별히 용어라고 할 것까지는 없지만 한번 정리를 해보자면, 아래와 같은 용어가 있습니다. 
 
@@ -50,9 +46,7 @@ use_math: true
 |**세션 (Session)**|그래프를 실행하기 위해서는 세션 객체가 필요하다. 세션은 오퍼레이션의 실행 환경을 캡슐화 한것이다.|
 |**변수 (Variables)**|그래프 실행 시 파라미터를 저장하고 갱신하는데 사용한다. 메모리상에서 텐서를 저장하는 버퍼 역활을 한다.|
 
----------
-
-### Tensorflow 설치 
+## Tensorflow 설치 
 
 Tensorflow 설치는 간단하며, 아래와 같다. 
 

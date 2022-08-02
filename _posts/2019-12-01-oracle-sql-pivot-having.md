@@ -2,7 +2,6 @@
 title:  SQL group 함수에서 검색 조건(having)과 테이블 회전(pivot)
 date:   2019-12-01 09:00:00 +0300
 categories:  [DB,SQL]
-tags : [DB, Oracle, SQL]
 sitemap :
 math: true
 mermaid: true
@@ -13,9 +12,7 @@ priority : 1.0
 오랜만에 찾아온 SQL입니다. 오늘은 데이터 분석 함수로 자주 사용 되는 pivot 함수에 대해 알아보겠습니다.
 오늘 사용 되는 SQL 테이블은 첫 포스팅에 작성한 emp 테이블을 이용 할 예정입니다. 테이블이 없으신 분들은 [여기](https://kejdev.github.io/SQL-Grammar-1)를 클릭하여 테이블을 긁어서 사용하시기를 바랍니다.
 
--------
-
-### having  
+## having  
 
 우선 having이 먼지 알기전에 간단하게 출력 하나 먼저 해보겠습니다.  
 emp 테이블에서 직업과 직업별 토탈 월급을 간단하게 먼저 출력해보도록 하겠습니다.  
@@ -63,10 +60,7 @@ group by job
 having sum(sal) >=4000
 order by sum(sal) desc;
 ```
-
--------
-
-### pivot  
+## pivot  
 
 emp 테이블을 사용하여 부서번호, 부서번호을 가로로  출력해보겠습니다.
 

@@ -2,7 +2,6 @@
 title:  파이썬으로 버블정렬 알고리즘 구현하기
 date:   2020-03-14 13:00:00 +0300
 categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
 sitemap :
 math: true
 mermaid: true
@@ -16,7 +15,6 @@ use_math: true
 <center><img src="../../assets//images/bubble.png" ></center>
 
 <center>위키백과 예제</center>
-
 
 파이썬으로 구현하자면 아래와 같이 구현할 수 있습니다.
 
@@ -33,7 +31,6 @@ def bubble_search(data):
 data = [5,4,3,2,1,8,7,10]
 bubble_search(data)
 ```
-
 
 여기서 버블 정렬을 재귀 함수로 구현한다면 아래와 같이 구현할 수 있습니다.
 
@@ -52,7 +49,3 @@ data = [5,4,3,2,1,8,7,10]
 print(data)
 print(bubble_search(data))
 ```
-
-
-
-

@@ -2,7 +2,6 @@
 title:  파이썬 static method (정적 메소드)
 date:   2020-03-14 09:00:00 +0300
 categories:  [Program Language , Python]
-tags : [Python, 문법]
 sitemap :
 math: true
 mermaid: true
@@ -13,10 +12,7 @@ use_math: true
 
 정적 메소드를 사용하여 클래스가 같은 메모리를 바라보는 것을 해보도록 하겠습니다.
 
-
--------
-
-### 정적 메소드 (static method)
+## 정적 메소드 (static method)
 
 정적 메소드는 self를 매개변수로 받지 않는 메소드를 말하며 여러 인스턴스가 공유해서 사용하는 메소드입니다.
 
@@ -69,7 +65,6 @@ gun_2.print()
 <center><img src="../../assets//images/gun2.png" ></center>
 
 그런데, 여기서 static method를 사용해서 클래스를 다시 만들면 아래와 같습니다.
-
 
 ```python
 class Gun():

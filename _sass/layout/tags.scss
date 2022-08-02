@@ -3,12 +3,6 @@
 */
 
 
-@font-face {
-  font-family: 'EliceDigitalBaeum_Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
 
 .tag {
   border-radius: 0.7em;
@@ -21,6 +15,6 @@
   span {
     margin-left: 0.6em;
     font-size: 0.7em;
-    font-family: 'EliceDigitalBaeum_Bold','Nanum Barun Gothic', sans-serif;
+    font-family:Georgia, "Malgun Gothic", serif;
   }
 }

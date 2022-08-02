@@ -2,7 +2,6 @@
 title:  이름없는 한줄짜리 함수(Lambda)
 date:   2020-07-02 09:00:00 +0300
 categories:  [Program Language , Python]
-tags : [Python,문법]
 sitemap :
 math: true
 mermaid: true
@@ -11,12 +10,7 @@ priority : 1.0
 use_math: true
 --- 
 
-
 함수나, 클래스를 만들때 보통은 함수에 이름을 붙여서 사용한다. 그러나 함수를 재사용하지 않으려고 하는 경우에 Lambda 함수를 사용한다. 
-
-
----------
-
 
 ### Lambda
 
@@ -25,7 +19,6 @@ use_math: true
 <center><img src="../../assets/images/lambda.png" ></center>
 
 그래서 위의 식을 이용해서 간단하게 덧셈 함수를 만들면 이렇게 할 수 있다.
-
 
 ```python
 add = lambda x, y: x+y

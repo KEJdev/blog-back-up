@@ -10,29 +10,19 @@ changefreq : always
 priority : 1.0
 ---
 
-
 반복문은 어떤 언어라고 할 것도 없이 정말 중요하고, 자주 쓰이는 문법입니다. 특히나 for문은 더욱 더 그렇죠. 그럼 오늘은 간단하게 for문의 기본적인 구조와 별찍기를 해보겠습니다 .
 
--------
-
-
-### for
+## for
 
 파이썬의 for 문의 기본적인 구조는 아래와 같습니다.  
 
-
 <center><img src="../../assets//images/python_a3.png" ></center>  
-
-
-
 
 for문은 리스트나 튜플, 문자열의 첫번째 요소부터 마지막 요소까지 차례로 변수에 대입되어 "수행할 문장1", "수행할 문장2"등이 수행됩니다. 
 그래서 조금 더 자세하게 문법을 설명하자면, 아래와 같습니다.  
 
-
 <center><img src="../../assets//images/python_a6.png" ></center>  
 
- 
 숫자 1부터 3까지를 for문을 이용하여 출력해보겠습니다. 
 
 ```python
@@ -59,8 +49,6 @@ for i in range(1,11,2): # 1부터 10까지 증가하는데, 2씩 증가시켜라
 
 <center><img src="../../assets//images/for1.png" ></center>  
 
-
-
 ```python
 a=str("★")
 
@@ -77,9 +65,7 @@ for i in range(1,11):
 
 이번에 반대로 별을 찍어볼까요?
 
-
 <center><img src="../../assets//images/for2.png" ></center>  
-
 
 이렇게 별을 찍어보겠습니다. 
 
@@ -93,11 +79,7 @@ for i in range(10,0,-1):
 이번엔 조금 더 응용해서 ★으로 사각형을 만들어보겠습니다.
 단, 이번에는 가로/세로를 입력을 받아서 ★를 출력하되, 중첩 for문을 사용하지 않고 작성해보도록 하겠습니다.  
 
-
 <center><img src="../../assets//images/for3.png" ></center>  
-
-
-
 
 ```python
 a=int(input("가로의 숫자를 입력하세요 "))

@@ -1,7 +1,7 @@
 ---
 title:  텐서플로우 사용하기, Hello, Tensorflow! (실행 구조와 구구단 출력)
 date:   2020-02-03 09:00:00 +0300
-categories:  [Machine Learning,Machine Learning-Python]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -10,13 +10,9 @@ priority : 1.0
 use_math: true
 ---
 
-
 언어를 새로 배우거나 무언가를 새로 배울 때, 우리는 가장 먼저 Hello, world! 를 가장 먼저 찍어냅니다. Tensorflow 을 포스팅 하는 기념으로 Hello, Tensorflow!를 찍어보겠습니다. 
 
-
----------
-
-### Tensorflow 기본 구조
+## Tensorflow 기본 구조
 
 우선 텐서플로우가 설치가 안되어 있다면 아래와 같이 설치 해주세요. 
 
@@ -76,10 +72,7 @@ print(sess.run(x2))
 sess.close()
 ```
 
--------
-
-
-### Tensorflow 실행 구조 
+## Tensorflow 실행 구조 
 
 Tensorflow Session은 fetch와 feed 2가지 방법으로 처리 할 수 있습니다. 
 
@@ -110,9 +103,7 @@ with tf.Session() as sess:
     print(tf.add(1,2).eval())
 ```
 
-
 * 여러 개 실행할 때
-
 
 ```python
 import tensorflow as tf
@@ -175,4 +166,3 @@ with tf.Session() as sess:  # 세션(하나의 사용자) 생성
             writer = tf.summary.FileWriter('./logs', sess.graph)
             # tensorboard 그래프를 그리는데 사용할 실행 로그를 저장할 폴더 지정
 ```
-

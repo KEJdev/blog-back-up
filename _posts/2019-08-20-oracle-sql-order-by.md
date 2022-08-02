@@ -2,14 +2,12 @@
 title:  SQL에서 테이블 정렬하기(order by)
 date:   2019-08-20 09:00:00 +0300
 categories:  [DB,SQL]
-tags : [DB, Oracle, SQL]
 sitemap :
 math: true
 mermaid: true
 changefreq : always
 priority : 1.0
 ---
-
 
 저번 포스팅에 이어서 계속해서 SQL의 데이터 제한 및 정렬에 필요한 연산자와 order by절에 대해 알아보겠습니다.
 우선 여태까지 배워본 것을 생각하며 간단하게 사원번호가 7788, 7902, 7369번인 사원들의 사원번호와 이름을 출력해보겠습니다. 출력하는 문법은 두가지로 쓸 수 있는데요. 첫번째 방법은 아래와 같이 **or**을 사용하여 넣는 방법이 있습니다.  
@@ -53,10 +51,7 @@ from emp
 where comm = null;
 ```  
 
---------
-
-
-### order by 
+## order by 
 
 **order by**절은 데이터를 정렬할 때 쓰는 절입니다. **order by** 다음에 **ascending**를 쓰면 오름차순으로 정렬됩니다. 생략 시에는 디폴트로 **asc**가 사용되며, **descending**을 사용하게 되면 내림차순으로 정렬됩니다.  
 
@@ -76,7 +71,3 @@ from emp
 where job = 'SALESMAN'
 order by sal desc; 
 ```
-
-
-
-

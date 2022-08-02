@@ -155,7 +155,7 @@ div {
 }
 
 div[class^='language-']::before {
-  content: attr(lang);
+  // content: attr(lang);
   position: absolute;
   right: 1.8rem;
   margin-top: 3px;
@@ -165,8 +165,8 @@ div[class^='language-']::before {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  div[class^='language-']::before {
-    right: 3.1rem;
-  }
-}
+// @media (min-width: 768px) {
+//   div[class^='language-']::before {
+//     right: 3.1rem;
+//   }
+// }

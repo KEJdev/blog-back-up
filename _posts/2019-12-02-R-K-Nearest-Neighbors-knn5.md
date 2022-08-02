@@ -1,8 +1,7 @@
 ---
 title:  K-Nearest Neighbors(Knn)을 이용한 동물 분류하기
 date:   2019-12-03 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-R]
-tags : [R, ML]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -10,13 +9,9 @@ changefreq : always
 priority : 1.0
 ---
 
-
 여태까지 작은 데이터로 분류했으니 이번엔 약간 조금 더 큰 데이터를 이용해보도록 하겠습니다. 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 zoo.csv를 다운 받아주세요. 제가 사용한 데이터의 원문은 [여기](http://archive.ics.uci.edu/ml/datasets/zoo)를 클릭하면 보실 수 있습니다.     
 
-
--------
-
-### DataSet    
+## DataSet    
 
 데이터는 동물 종류에 따른 특징들이 있고, 라벨은 포유류, 조류, 파충류, 어류, 양서류, 곤충류, 갑각류 총 7가지가 있습니다.   
 
@@ -28,17 +23,11 @@ table(zoo[18]) # 종류와 건수 보기
 round(prop.table(table(zoo[18])), 2)*100 # 비율 보기 
 ```
 
-
 <center><img src="../../assets//images/r6.png" ></center>  
-
-
 
 이제 데이터를 정규화하는 작업을 위해 normalize함수를 이번에 만들어보려고 합니다. normalize는 벡터 정규화로써 정규화 방식과 조금 다르지만 knn 알고리즘을 사용할 때 단위를 맞출 수 있는 방법 중 하나입니다. 여기서 TMI로 하나 더 이야기 하자면, **정규화**는 데이터 군 내에서 특정 데이터가 가지는 위치를 볼 때 사용하고 **표준화**는 표준편차를 이용한 식이며 2개 이상의 단위가 다를 때, 대상 데이터를 같은 기준으로 보려고 할 때 주로 사용합니다.  
 
--------
-
-
-### normalize  
+## normalize  
 
 우선 normalize 함수를 만들어보도록 하겠습니다.  
 
@@ -67,10 +56,7 @@ zoo2_n <- as.data.frame(lapply(zoo[,2:17], normalize))
 
 <center><img src="../../assets//images/r7.png" ></center>  
 
-
--------
-
-### knn  
+## knn  
 
 이제 train과 test 데이터 라벨을 변수로 생성 하겠습니다.  
 
@@ -87,12 +73,9 @@ zoo2_test_label <- zoo[101,18]
 ```r
 result <- knn(zoo2_n_train, zoo2_n_test, zoo2_train_label, k=1)
 ```
-
 <center><img src="../../assets//images/r8.png" ></center>  
 
-
 원본 데이터를 확인해보도록 하겠습니다. 
-
 
 <center><img src="../../assets//images/r9.png" ></center>  
 

@@ -1,8 +1,7 @@
 ---
 title:  해시(Hash)에 대해 알아보자.
 date:   2021-12-18 09:00:00 +0300
-categories:  [Program Language , python]
-tags : [Python]
+categories:  [Program Language , Python]
 sitemap :
 math: true
 mermaid: true
@@ -11,10 +10,7 @@ priority : 1.0
 use_math: true
 ---
 
-
 해시 테이블, 해시 맵, 해시함수등 ... 많이 들어봤을텐데 이번에 간단하게 정리 해볼까한다. 
-
-----
 
 📖 해시 테이블(Hash Table)을 특징을 정리하자면, 아래와 같이 정리 할 수 있다.
 
@@ -38,9 +34,6 @@ use_math: true
 ❗️해시는 언제 사용될까?
 
 리스트를 사용할 수 없을 때 사용한다. 리스트는 숫자 인덱스를 이용하여 접근하는데, 숫자가 아닌 다른 값을 사용하려고 할 때 사용할 수 있다. 또한 빠른 접근과 집계가 필요할 때 사용한다. 
-
-
--------
 
 해시는 간단하게 아래와 같이 만들어볼 수 있다. 
 

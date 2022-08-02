@@ -11,9 +11,7 @@ priority : 1.0
 use_math: true
 ---
 
-
 링크 : [프로그래머스 - 베스트 앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)   
-
 
 **Answer:**
 

@@ -1,8 +1,7 @@
 ---
 title:  간단한 K-Nearest Neighbors(Knn)자동화 스크립트 만들기
 date:   2020-02-10 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-R]
-tags : [R, ML]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -10,12 +9,9 @@ changefreq : always
 priority : 1.0
 ---
 
-
 이제 knn알고리즘이 무엇인지나, 코드짜는 것에 익숙해졌는데, 앞으로 다양한 데이터를 만나더라도 손쉽게 스크립트 하나로 knn을 돌리기 위해 간단하게 만들어보겠습니다. 
 
--------
-
-### knn 자동화 스크립트 
+## knn 자동화 스크립트 
 
 우선 파일명을 입력 받고, 컬러명이 있는지에 관한 유무와 라벨이 위치한 번호 마지막으로 제거할 컬럼의 위치를 입력 받아보겠습니다. 
 

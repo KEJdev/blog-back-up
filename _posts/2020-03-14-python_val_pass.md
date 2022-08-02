@@ -2,7 +2,6 @@
 title:  파이썬에서 언더바(_)를 사용하는 경우
 date:   2020-03-14 12:00:00 +0300
 categories:  [Program Language , Python]
-tags : [Python, 문법]
 sitemap :
 math: true
 mermaid: true
@@ -13,9 +12,7 @@ use_math: true
 
 파이썬 코드를 가끔 보다보면 _ 같은것을 볼 수 있습니다. 이 언더바(_)는 언제 사용하는 걸까요? 
 
----------
-
-### 언더바(_)를 사용하는 경우
+## 언더바(_)를 사용하는 경우
 
 언더바를 사용하는 경우는 주로 아래의 4가지 경우입니다.
 
@@ -25,15 +22,11 @@ use_math: true
 3. 변수나 함수명에 특별한 의미를 부여하고 싶을 때
 4. 숫자 또는 문자값의 자릿수 구분을 위한 구분자로써 사용할 때
 
-
 우선 첫번째, 인터프리터에서 마지막 값을 저장 할때 사용하는데, 아래와 같이 사용할 수 있습니다. 
-
 
 <center><img src="../../assets//images/pass.png" ></center>
 
-
 그래서 이런 출력도 가능합니다. 
-
 
 <center><img src="../../assets//images/pass2.png" ></center>
 
@@ -43,9 +36,7 @@ use_math: true
 
 2를 무시하고 값이 출력되는 것을 알 수 있으며, for 문을 사용하면 아래와 같이 사용할 수있습니다.
 
-
 <center><img src="../../assets//images/pass_for.png" ></center>
-
 
 세번짼 변수나 함수명에 특별한 의미를 부여하고 싶을 때 사용합니다. 패키지를 만들기 위해 폴더 안에 _init_ 파일 만들때 사용합니다. 또한 함수명에 언더바를 붙이는 것에 따라 두가지 의미를 가지 수 있습니다.
 

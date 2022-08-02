@@ -2,7 +2,6 @@
 title:  프로그래머스 - 위장
 date:   2021-08-14 09:00:00 +0300
 categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
 sitemap :
 math: true
 mermaid: true
@@ -10,7 +9,6 @@ changefreq : always
 priority : 1.0
 use_math: true
 ---
-
 
 내 방식대로 [프로그래머스 - 위장](https://programmers.co.kr/learn/courses/30/lessons/42578)을 풀었다. 풀고나면 항상 다른 사람 풀이를 꼼꼼히 보는데, 다들 해시에 대해 이해를 잘하신거 같다.. 대단해...
 

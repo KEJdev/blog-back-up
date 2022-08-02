@@ -2,7 +2,6 @@
 title:  파이썬으로 탐욕 알고리즘 구현하기(동전)
 date:   2020-03-14 14:00:00 +0300
 categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
 sitemap :
 math: true
 mermaid: true
@@ -37,9 +36,3 @@ coinGreedy()
 ```
  
 구현하면 위와 같이 구현할 수 있고 탐욕스럽게 잘 나오고 있는 것을 알 수 있습니다. 
-
-
-
-
-
-

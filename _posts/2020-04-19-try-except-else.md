@@ -1,24 +1,18 @@
 ---
 title:  파이썬에서 간단하게 예외처리하기(try ~ except ~ else)
 date:   2020-04-19 09:00:00 +0300
-categories:  [Python]
-tags : [Python, 문법]
+categories:  [Program Language, Python]
 sitemap :
 changefreq : always
 priority : 1.0
 use_math: true
 ---
 
-
 파이썬에서 예외처리는 프로그램에서 에러가 발생 했을 때, 에러를 핸들링하는 기능을 이야기합니다.
 
--------
-
-### 예외처리 (try ~ except ~ else)
+## 예외처리 (try ~ except ~ else)
 
 에러가 나면 보통 프로그램이 종료되기 때문에 큰 문제가 발생하게 됩니다. 예를들면 API를 구현했는데, 어떠한 이유로 에러가 나서 종료가 된다면 큰 문제가 될 수 밖에 없습니다. 그래서 보통 예외처리를 하게 되는데, 예외처리를 하게 된다면 에러가 나는 부분을 제외하고 나머지 프로그램은 정상 작동하기 때문에 문제가 발생되지 않습니다. 
-
-
 
 ```python
 def my_power():
@@ -29,18 +23,13 @@ def my_power():
 print(my_power())
 ```
 
-
 위와 같이 코드를 작성하고 에러를 출력해보겠습니다.
-
 
 <center><img src="../../assets//images/try.png" ></center>
 
- 
 여기서 try ~ except를 사용하겠습니다.
 
-
 <center><img src="../../assets//images/try2.png" ></center>
-
 
 ```python
 def my_power():

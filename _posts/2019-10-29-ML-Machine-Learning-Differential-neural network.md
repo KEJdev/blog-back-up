@@ -1,8 +1,7 @@
 ---
 title:  머신러닝 신경망에서 미분이 필요한 이유
 date:   2019-10-29 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-Python]
-tags : [ML,Python]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -11,16 +10,9 @@ priority : 1.0
 use_math: true
 ---
 
-
-
-
 신경망이라는 것을 접하면서 미분, 기울기와 같은 말을 몇번 들어봤습니다.우리는 왜 미분을 사용하는 것인지, 미분이 필요한 이유와 도함수를 Python 으로 간단하게 구현해보도록 하겠습니다.
 
-
--------
-
-
-### 미분이 필요한 이유  
+## 미분이 필요한 이유  
 
 미분이 필요한 이유는 **기존의 가중치를 갱신하기 위해서 사용**합니다.  
 하지만 진정한 미분은 컴퓨터로 구현하기 어렵기 때문에 중앙 차분 오차가 발생합니다. 그래서 컴퓨터로 미분을 구현하기 위해서는 수치 미분을 사용해야 합니다.  
@@ -30,14 +22,9 @@ use_math: true
 
 <center><img src="../../assets//images/ml4.png" ></center>  
 
-
 그림을 보면 h가 서서히 0으로 다가가면 할선은 접선으로 다가갑니다. 
 
-
-
 <center><img src="../../assets//images/ml3.png" ></center>  
-
-
 
 이를 코드로 구현하려면 h가 되었을때가 진정한 미분이라고 할수 있는데, 아까 말했던 것과 같이 컴퓨터로는 진정한 미분을 구현하는 것은 어렵습니다. $$h$$가 0이 될 수 없기 때문이며, 그래서 $$h$$를 0.0001로 두고 수치미분을 합니다.  
 
@@ -45,11 +32,7 @@ use_math: true
 
 <center><img src="../../assets//images/ml5.png" ></center>  
 
-
--------
-
-
-### 수치 미분
+## 수치 미분
 
 함수 이름은 numerical_diff 라고 짓겠습니다. 위의 공식을 보고 그대로 만들면 되기 때문에 간단하게 함수를 구현할 수 있습니다.  
 
@@ -112,8 +95,4 @@ plt.plot(x2,y2)
 plt.show()
 ```
 
-
 <center><img src="../../assets//images/ml7.png" ></center>  
-
-
-

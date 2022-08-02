@@ -1,8 +1,7 @@
 ---
 title:  프로세스와 스레드
 date:   2021-11-17 09:00:00 +0300
-categories:  [Program Language]
-tags : [Python]
+categories:  [CS]
 sitemap :
 math: true
 mermaid: true
@@ -12,8 +11,6 @@ use_math: true
 ---
 
 프로세스와 스레드를 완벽하게 이해하려면 동시성(Concurrency)과 병렬성(Parallelism)에 대해서도 알고 있어야 하는데, 오늘은 이 개념들까지 정리해볼까한다. 
-
-----------
 
 ### 프로세스  
 
@@ -30,8 +27,7 @@ use_math: true
 
 <center><img src="../../assets/images/process.jpeg" ></center> 
 
-----------
-### 스레드 (Thread)  
+## 스레드 (Thread)  
 
 한 프로세스내에서도 여러 갈래의 작업들이 동시에 진행될 필요가 있다. 이 갈래를 스레드라고 부른다. 프로세스들은 컴퓨터 자원을 분할해서 쓰지만, 스레드는 프로세스마다 주어진 전체 자원을 함께 사용한다. 
 

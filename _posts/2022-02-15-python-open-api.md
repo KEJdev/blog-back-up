@@ -1,8 +1,7 @@
 ---
 title: 간단하게 오픈 API 사용하기
 date:   2022-02-15 09:00:00 +0300
-categories:  [Program Language , python]
-tags : [Python]
+categories:  [Program Language , Python]
 sitemap :
 math: true
 mermaid: true
@@ -10,12 +9,6 @@ changefreq : always
 priority : 1.0
 use_math: true
 ---
-
-요즘은 읽고 싶은 논문이나, 만들고 싶었던 것들이나, (벽보고)면접 준비하며 하루하루를 보내고 있다.
-작년에 의료 데이터 받으려고 심사 한번 거쳤는데, 떨어졌다가 드디어 IRB심사를 통과해서 데이터를 받게 되어 기분이 좋다. 
-이제 논문에 올릴 GAN기반 모델을 만들어야는데, 아직까진 조금 여유가 있어서 이번에 오픈 API를 사용하는 방법에 대해 포스팅을 할까한다. 
-
-------
 
 회사 그만두고 잠시, 다른 회사 노가다 업무 하나 맡아서 했었는데, 그에 대한 일이다. 
 내가 맡았던 업무는 각종 병원 관련 데이터를 긁어모으는 일이였는데, 생각보다 너무 노가다!
@@ -96,6 +89,3 @@ for val in result:
 <center><img src="../../assets/images/open_api_10.png" ></center> 
 
 아무래도 크롤링 보다 훨씬 빠른데, 1회 호출시 최대 100개씩 받을 수 있기 때문에 빠르고 편리하다.
-
-
-

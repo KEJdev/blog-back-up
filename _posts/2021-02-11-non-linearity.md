@@ -1,7 +1,7 @@
 ---
 title: 머신러닝에서 미적분이 필요한 이유 2
 date:   2021-02-11 09:00:00 +0300
-categories:  [Machine Learning, Statistics]
+categories:  [Machine Learning, ML]
 tags : [통계]
 sitemap :
 math: true
@@ -11,9 +11,7 @@ priority : 1.0
 use_math: true
 ---
 
-
 예전 포스팅에 [미분이 필요한 이유](http://kejdev.github.io/posts/ML-Machine-Learning-Differential-neural-network/)에 대해서 정말 잠깐 이야기 했었는데, 블로그 정리하면서 보니 설명이 부족한거 같아 좀 더 정리할 겸 이렇게 글을 쓰게 되었다. 
-
 
 ## 다항식 
 
@@ -36,7 +34,6 @@ $$
 
 식을 정말 간단하게 설명하자면 $$x$$가 $$h$$값만큼 이동 했을때의 기울기와 값을 구하려고 한다.  그래서 $$f(x+h)$$ 즉, $$x$$가 $$h$$만큼 이동 했을 때의 값 $${f}'(x)h$$를 알 수 있게 된다. 
 
-
 <img src="../../assets/images/non-linearity.jpg" >
 
 ## 오차항
@@ -47,9 +44,6 @@ $$
 
 위 그래프처럼 다차항이 커짐에 따라 실제 데이터와의 fitting이 점점 증가한 모습을 볼 수 있으며, 만약 실제 데이터에 적용한다면 아래의 그림과 같다. 
 
-
 <img src="../../assets/images/non-linearity2.jpg">
 
-
 이렇게 미적분은 기본적으로 많이 사용되니 왜 사용하는지 잘 알아두는 것이 좋다. 
-

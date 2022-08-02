@@ -1,8 +1,7 @@
 ---
 title:  파이썬 클래스로 신경망 구현하기(cross_entropy, softmax, Softmax With loss )
 date:   2020-01-18 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-Python]
-tags : [ML,Python, 신경망]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -13,9 +12,7 @@ use_math: true
 
 저번 포스팅에서는 forward와 backward 그리고 활성화 함수인 Relu함수를 클래스로 구현해보았습니다. 이번에는 cross entropy와 softmax도 함께 구현해보도록 하겠습니다.
 
-------------
-
-### cross entropy 와 softmax
+## cross entropy 와 softmax
 
 보통 신경망에서 분류할 때, softmax를 사용하며, softmax는 신경망의 출력층 마지막에서 사용합니다. softmax에 관한 더 자세한 설명은 [여기](https://kejdev.github.io/2019/11/06/ML-Machine-Learning-activation-function/)서 확인하실 수 있습니다. softmax와 함께 오차 함수로 cross entropy함수를 사용하는데, cross entropy error는 줄여서 CEE라고도 쓸 수 있습니다. 식은 아래와 같습니다. 
 
@@ -74,10 +71,7 @@ def softmax(a):
     y = exp_a / sum_exp_a
     return y
 ```
-
-----
-
-### Softmax With loss 클래스 만들기
+## Softmax With loss 클래스 만들기
 
 클래스 이름은 원하는 걸로 하셔도 되지만, 저는 명확한 구분을 위해 이렇게 짓겠습니다. 위에서 softmax와 cross entropy 함수 두개 다 구현했기 때문에, 추가 할 함수는 없으며 loss함수에 대해 forward와 backward를 사용하여 클래스만 구현하면 Softmax With loss 클래스를 만들 수 있습니다. 
 
@@ -240,5 +234,3 @@ print('dx : \n', dx)
 ```
 
 <img src="../../assets//images/softmax.png" >
-
-

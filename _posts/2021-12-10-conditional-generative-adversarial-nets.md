@@ -1,9 +1,8 @@
 ---
 title:  논문 리뷰 - Conditional Generative Adversarial Nets
 date:   2021-12-10 09:00:00 +0300
-categories:  [Machine Learning,  paper]
+categories:  [Machine Learning,  Paper]
 sitemap :
-tags : [논문]
 math: true
 mermaid: true
 changefreq : always
@@ -39,7 +38,6 @@ MNIST dataset을 기준으로 잡고 이야기 하자면, 내가 숫자 7 이미
 2. Generator는 y에 의해 조건을 토대로 이미지를 생성하고 있다.
 
 수식은 GAN이랑 크게 다르지 않다.
-
 
 <center><img src="../../assets/images/cGAN(4).png" ></center> 
 

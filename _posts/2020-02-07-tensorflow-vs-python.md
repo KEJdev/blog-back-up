@@ -1,8 +1,7 @@
 ---
 title:  파이썬과 텐서플로우의 차이
 date:   2020-02-07 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-Python]
-tags : [ML,Python, 신경망]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -11,12 +10,9 @@ priority : 1.0
 use_math: true
 ---
 
-
 간단하게 텐서플로우와 파이썬 문법 비교 해보겠습니다.
 
--------
-
-### Python ? Tensorflow
+## Python ? Tensorflow
 
 우선 간단하게 1에서 5까지의 숫자를 출력해보도록 하겠습니다. 
 

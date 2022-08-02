@@ -2,7 +2,6 @@
 title:  백준 10171번 고양이를 출력하자 
 date:   2020-07-16 11:00:00 +0300
 categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
 sitemap :
 math: true
 mermaid: true
@@ -11,11 +10,7 @@ priority : 1.0
 use_math: true
 ---
 
-
 백준 10171번의 고양이를 출력하자 문제는 너무나 귀여운 것 같다.. 
-
-
-----------
 
 ### 백준 10171번 
 

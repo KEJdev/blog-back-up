@@ -59,8 +59,8 @@
 }
 
 .post-navigation {
-  padding-top: 3rem;
-  padding-bottom: 4rem;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
 
   .btn {
     @include btn-post-nav;
@@ -314,33 +314,33 @@
 
 }
 
-@media all and (max-width: 768px) {
-  .post-content > p > img {
-    max-width: calc(100% + 1rem);
-  }
-}
+// @media all and (max-width: 768px) {
+//   .post-content > p > img {
+//     max-width: calc(100% + 1rem);
+//   }
+// }
 
-@media all and (min-width: 768px) {
-  #post-wrapper {
-    .post-meta {
-      >div:not(:first-child)::before {
-        @include dot(0.5rem, 0.2rem);
-      }
-      &.flex-column {
-        -webkit-box-orient: horizontal !important;
-        -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-        flex-direction: row !important;
-      }
-    }
-  } // .post
-}
+// @media all and (min-width: 768px) {
+//   #post-wrapper {
+//     .post-meta {
+//       >div:not(:first-child)::before {
+//         @include dot(0.5rem, 0.2rem);
+//       }
+//       &.flex-column {
+//         -webkit-box-orient: horizontal !important;
+//         -webkit-box-direction: normal !important;
+//         -ms-flex-direction: row !important;
+//         flex-direction: row !important;
+//       }
+//     }
+//   } // .post
+// }
 
-@media all and (min-width: 768px) and (max-width: 830px) {
-  .post img {
-    max-width: calc(100% + 2rem);
-  }
-}
+// @media all and (min-width: 768px) and (max-width: 830px) {
+//   .post img {
+//     max-width: calc(100% + 2rem);
+//   }
+// }
 
 /* Hide SideBar and TOC */
 @media all and (max-width: 830px) {

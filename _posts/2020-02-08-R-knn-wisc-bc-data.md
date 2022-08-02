@@ -1,8 +1,7 @@
 ---
 title:  K-Nearest Neighbors(Knn)을 이용하여 유방암 분류하기
 date:   2020-02-08 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-R]
-tags : [R, ML]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -10,12 +9,9 @@ changefreq : always
 priority : 1.0
 ---
 
-
 오늘은 knn을 사용하여 유방암 분류를 해볼까합니다. 데이터는 데이터는 [여기](https://github.com/KEJdev/DataSet/tree/master/DataSet)에서 볼 수 있으며 전체 코드 역시 GitHub에서 보실 수 있습니다. 월래 오늘 적절한 k값을 알아내는 것에 관려하여 포스팅을 할 예정이였으나, R에서 knn 관련 데이터 예제로 가장 많이 사용하는 것중에서 하나만 집고 넘어가는 것도 나쁘지 않고 해서 오늘은 유방암 데이터를 가지고 분류를 해보도록 하겠습니다.
 
--------
-
-### DataSet
+## DataSet
 
 우선 데이터를 load 해보겠습니다.
 
@@ -32,9 +28,7 @@ wbcd$diagnosis <-factor(wbcd$diagnosis, levels = c("B","M"),labels=c("Benign","m
 round(prop.table(table(wbcd$diagnosis)),1)*100
 ```
 
--------
-
-### normalize 
+## normalize 
 
 저번에 만든 정규화 함수를 이용하여 정규화 작업을 하겠습니다. 
 
@@ -62,9 +56,7 @@ wbcd_train_label <- wbcd[1:469,2]
 wbcd_test_label <-wbcd[470:569,2]
 ```
 
--------
-
-### knn
+## knn
 
 knn을 아래와 같이 돌려줍니다.
 
@@ -92,4 +84,3 @@ CrossTable(x=wbcd[470:569,2], y=result1, prop.chisq = FALSE )
 이원 교차표를 보면 악성인데, 양성으로 오진한 결과 때문에 정확도가 떨어짐을 알 수 있습니다. 
 
 <center><img src="../../assets//images/wisc3.png" ></center>
-

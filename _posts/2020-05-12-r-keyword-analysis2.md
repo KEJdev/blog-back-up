@@ -1,8 +1,7 @@
 ---
 title:  헤드라인 뉴스 키워드으로 바라본 한국 경제 흐름
 date:   2020-05-12 21:00:00 +0300
-categories:  [Machine Learning, Machine Learning-R]
-tags : [R, ML]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -11,12 +10,9 @@ priority : 1.0
 use_math: true
 ---
 
-
 저번 포스팅때는 한국 사회의 흐름을 알아보았는데요. 지난 19년을 되돌아보니 사건, 사고가 많았으며, 다시는 일어나면 안되는 사고들과 잊으면 안되는 일들이 많았습니다. 그럼 이번엔 경제를 되돌아보며 한국 경제에는 어떤 일들이 있었는지 알아보겠습니다. 그리고 크롤링은 저번에 했기 때문에 따로 다루지는 않겠습니다.
 
--------
-
-### Keyword
+## Keyword
 
 사회와 마찬가지로 경제도 표를 만들면 아래와 같습니다. 우선 경제하면 가장 많이 떠오르는 것이 부동산이 아닐까 싶습니다.
 
@@ -28,16 +24,13 @@ use_math: true
 
 <center><img src="../../assets/images/keyword3-1.png" ></center>
 
-
 이번에는 직접적으로 한국에 영향을 끼쳤던 것이 무엇인지 알아보겠습니다. 아래와 같이 FTA, 광우병, 갤럭시 등을 볼 수가 있습니다. 
 
 <center><img src="../../assets/images/keyword2-1.png" ></center>
 
-
 FTA나 광우병때는 제가 어려서(?) 뭔지 잘 몰랐었는데, 지금 보니 참 아이러니 했네요. 금융이나 기름값으로도 많은 문제가 있었던 해가 보이기도 하고 갤럭시 휴대폰이 터져서 문제가 되었던 2016년도 보입니다.   
 
 <center><img src="../../assets/images/keyword4-1.png" ></center>
-
 
 경제 불황은 국제 부분과 함께 보면 좋겠지만, 우선 우리나라만 놓고 보면 2009년 이후로 경제 불황 키워드가 보이기 시작합니다. 실제 통계청에서도 경기 성장률 관련 지표를 찾아서 볼 수 있으며 아래와 같습니다. 
 

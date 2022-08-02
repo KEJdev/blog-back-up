@@ -2,7 +2,6 @@
 title:  SQL에서 검색 조건 주기(where)
 date:   2019-08-18 09:00:00 +0300
 categories:  [DB,SQL]
-tags : [DB, Oracle, SQL]
 sitemap :
 math: true
 mermaid: true
@@ -10,12 +9,9 @@ changefreq : always
 priority : 1.0
 ---
 
-
 SQL의 데이터 제한 및 정렬하는 법에 대해 알아보겠습니다. 여기서 말하는 데이터 제한은 검색에 조건을 건다거나, 특정 조건에 부합하는 사람만 출력할 때를 말합니다.  
 
---------
-
-### where 
+## where 
 
 SQL에서 검색에 조건을 줄때는 **where**를 사용합니다.  
 where를 사용하여 월급이 3000인 사원들의 이름과 월급을 출력해보겠습니다.
@@ -171,4 +167,3 @@ selete ename
 from emp
 where ename not like 'S%';
 ```
-

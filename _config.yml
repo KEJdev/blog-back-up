@@ -66,7 +66,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode:   # [light|dark]
+theme_mode: [light]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
@@ -130,18 +130,7 @@ defaults:
       breadcrumb:
         -
           label: Posts
-  -
-    scope:
-      path: tags
-    values:
-      breadcrumb:
-        -
-          label: Home
-          url: /
-        -
-          label: Tags
-          url: /tabs/tags/
-  -
+
     scope:
       path: categories
     values:

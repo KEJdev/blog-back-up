@@ -2,37 +2,41 @@
   The Side Bar
 -->
 
-<div id="sidebar" class="d-flex flex-column align-items-end">
+<div id="sidebar" style="width:190px" class="d-flex flex-column align-items-end">
 
   <div class="profile-wrapper text-center">
-    <div id="avatar">
-      <a href="{{ '/' | relative_url }}" alt="avatar" class="mx-auto">
-        {% capture avatar_url %}
-          {%- if site.avatar contains '://' -%}
-            {{ site.avatar }}
-          {%- elsif site.img_cdn != '' and site.img_cdn -%}
-            {{ site.avatar | prepend: site.img_cdn }}
-          {%- else -%}
-            {{ site.avatar | relative_url }}
-          {%- endif -%}
-        {% endcapture %}
-        <img style="max-width:100%;" src="{{ avatar_url }}" alt="avatar" onerror="this.style.display='none'">
-      </a>
+    <div style="display:flex">
+      <div id="avatar" style="margin:0 auto 0 auto;">
+        <a href="{{ '/' | relative_url }}" alt="avatar" class="mx-auto">
+          {% capture avatar_url %}
+            {%- if site.avatar contains '://' -%}
+              {{ site.avatar }}
+            {%- elsif site.img_cdn != '' and site.img_cdn -%}
+              {{ site.avatar | prepend: site.img_cdn }}
+            {%- else -%}
+              {{ site.avatar | relative_url }}
+            {%- endif -%}
+          {% endcapture %}
+          <img style="max-width:100%;" src="{{ avatar_url }}" alt="avatar" onerror="this.style.display='none'">
+        </a>
+      </div>
     </div>
 
-    <div class="site-title mt-3">
-      <a href="{{ '/' | relative_url }}">{{- site.title -}}</a>
+    <div style="display:flex">
+      <div style="margin:0 auto 0 auto; font-weight:550px;" >
+        <a href="{{ '/' | relative_url }}">{{- site.title -}}</a>
+      </div>
     </div>
 
-    <div class="site-subtitle font-italic">{{- site.tagline -}}</div>
-
+    <div style="display:flex">
+      <div class="site-subtitle font-italic"  style="margin:0 auto 0 auto;">{{- site.tagline -}}</div>
+    </div>
   </div><!-- .profile-wrapper -->
 
   <ul class="w-100">
     <!-- home -->
     <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
       <a href="{{ '/' | relative_url }}" class="nav-link">
-        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
         <span>{{ "HOME" }}</span>
       </a>
     </li>
@@ -40,7 +44,6 @@
     {% for tab in site.tabs %}
     <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
       <a href="{{ tab.url | relative_url }}" class="nav-link">
-        <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
         <span>{{ tab.title | upcase }}</span>
       </a>
     </li> <!-- .nav-item -->

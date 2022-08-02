@@ -1,8 +1,7 @@
 ---
 title:  미디어 트렌드 분석?헤드라인 뉴스 키워드 분석(사회)
 date:   2020-05-10 09:00:00 +0300
-categories:  [Machine Learning, Machine Learning-R]
-tags : [R, ML]
+categories:  [Machine Learning, ML]
 sitemap :
 math: true
 mermaid: true
@@ -15,9 +14,7 @@ use_math: true
 
 이번 포스팅은 사회 부분을 다뤄보겠습니다. SBS뉴스 사회 부분의 헤드라인 부분을 다 크롤링하여 문장을 단어별로 나눈 후 count 하였습니다.
 
--------
-
-### Web Crawling 
+## Web Crawling 
 
 R을 이용하여 크롤링을 하려고 할때 아래와 같은 라이브러리가 필요합니다.
 
@@ -97,10 +94,7 @@ rownames(news_df2) <- 1:nrow(news_df2)
 nrow(news_df)-nrow(news_df2) 
 ```
 
-
-------
-
-### Keyword
+## Keyword
 
 파일을 저장 후 데이터를 따로 전처리를 끝내고 나면 아래와 같이 사회관련 뉴스 부분을 정리 할 수 있는데, 여기서 가장 많은 키워드는 아무래도 ..... 검찰과 경찰이겠죠?
 

@@ -35,8 +35,8 @@
 
 %heading {
   font-weight: 700;
-  color: #7896b1;
-  font-family: 'EliceDigitalBaeum_Bold','Nanum Barun Gothic', sans-serif;
+  color: #000;
+  font-family:Georgia, "Malgun Gothic", serif;
 }
 
 %section {
@@ -57,7 +57,7 @@
   text-decoration: none;
 }
 
-@mixin sidebar-links($color: rgba(113,185,185, 1)) {
+@mixin sidebar-links($color: rgba(0,0,0, 1)) {
   color: $color;
   transition: color 0.35s ease-in-out;
   user-select: none;

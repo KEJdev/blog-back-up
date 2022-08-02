@@ -7,13 +7,13 @@ layout: default
 
   <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
 
-    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+    <div class="post-content" style="margin-top:70px;">
 
       <h1 data-toc-skip>{{ page.title }}</h1>
 
-      <div class="post-meta text-muted d-flex flex-column">
+      <div class="post-meta text-muted d-flex flex-column" style="border-bottom:1px solid black;" >
         <!-- Published date and author -->
-        <div>
+        <div >
           {% include timeago.html date=page.date tooltip=true %}
           by
           <span class="author">
@@ -55,7 +55,7 @@ layout: default
       <div class="post-tail-wrapper text-muted">
 
         <!-- categories -->
-        {% if page.categories.size > 0 %}
+        <!-- {% if page.categories.size > 0 %}
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           {% for category in page.categories %}
@@ -63,10 +63,10 @@ layout: default
             {%- unless forloop.last -%}, {%- endunless -%}
           {% endfor %}
         </div>
-        {% endif %}
+        {% endif %} -->
 
         <!-- tags -->
-        {% if page.tags.size > 0 %}
+        <!-- {% if page.tags.size > 0 %}
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           {% for tag in page.tags %}
@@ -76,7 +76,7 @@ layout: default
           </a>
           {% endfor %}
           </div>
-        {% endif %}
+        {% endif %} -->
 
         <div class="post-tail-bottom
           d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
@@ -92,7 +92,7 @@ layout: default
 
         </div><!-- .post-tail-bottom -->
 
-      </div><!-- div.post-tail -->
+      </div>
 
     </div> <!-- .post -->
 
@@ -112,7 +112,8 @@ layout: default
 </div> <!-- .row -->
 
 <div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
+  <div class="col-12 col-lg-11 col-xl-8" 
+    style="margin:0 auto; margin-top:25px; max-width: 850px; padding:0px 30px">
     <div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
     {% include related-posts.html %}

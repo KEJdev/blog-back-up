@@ -1,8 +1,7 @@
 ---
-title: Anconda 가상환경 구축 후, env name 사라짐 해결.
+title: Anconda 가상환경 구축 후, env name 사라지는 현상
 date:   2022-07-03 09:00:00 +0300
-categories:  [Program Language]
-tags : [Python, Anconda, ENV]
+categories:  [Error, Python]
 sitemap :
 math: true
 mermaid: true
@@ -10,7 +9,6 @@ changefreq : always
 priority : 1.0
 use_math: true
 ---
-
 
 평소 keras만 쓰다가, 갑자기 pytorch를 써야되서 conda 환경 하나 팠다.  
 그리고 몇칠 후, 다른 환경으로 가려고 평소 쓰던 환경으로 `conda activate [env name]`을 쳤는데, 안된다?   
@@ -28,5 +26,3 @@ stackoverflow에서는 conda update 하라고 했는데, 나는 소용없었고,
 <center><img src = "../../assets/images/env-name-missing2.png"></center>  
 
 좀더 찾아보니, 가끔 conda에서 업데이트나 여러 환경을 만들다가 발생할 수 있는 문제라고 한다.  
-
-
