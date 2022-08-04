@@ -47,7 +47,7 @@ use_math: true
 
 ## 관점 지향 프로그래밍(Aspect Oriented Programming)
 
-<center><img src="../../assets/images/AOP2.png" ></center> 
+<center><img src="../../assets/images/AOP2.png" width="650" ></center> 
 
 관점지향 프로그래밍의 핵심은 공통 모듈을 분리시켜 해당 소스코드가 외부의 다른 클래스에서 존재하는 것이다. 참고로 객체지향을 보조하는 역활이기 때문에 객체지향 코드위에서 이루어진다.  
 
@@ -55,7 +55,7 @@ use_math: true
 
 이렇게 모듈 안에서 중복코드가 생기게 되는 것을 횡단 관심사(Crosscutting-Concerns) 라고 한다. 그 중에 자주 언급되는 것은 트랜잭션, 로깅, 성능 분석 등이 있다.  
 
-<center><img src="../../assets/images/AOP.png" ></center> 
+<center><img src="../../assets/images/AOP.png" width="650" ></center> 
 
 횡단 관심사들은 여러 모듈들을 말 그대로 횡단하면서 존재하게 되며 AOP를 이해함에 있어서 매우 중요한 개념이며, AOP를 통해 중복 코드 제거, 효율적인 유지복수, 높은 생산성, 재활용성 극대화 등의 이점을 얻을 수 있다. 
 

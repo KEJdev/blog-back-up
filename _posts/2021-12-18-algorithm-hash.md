@@ -29,7 +29,7 @@ use_math: true
 2. 동일한 값이 입력되면 언제나 동일한 출력값을 보장.
 3. 출력된 결과 값을 토대로 입력 값을 유추할 수 없음.
 
-<center><img src="../../assets/images/hash12.png" ></center> 
+<center><img src="../../assets/images/hash12.png" width="650" ></center> 
 
 ❗️해시는 언제 사용될까?
 

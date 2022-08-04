@@ -31,7 +31,7 @@ use_math: true
 
 위 글을 읽고 눈치 챈 사람도 있겠지만, 인터프리터의 경우 컴파일 과정이 없기 때문에 따라서 컴파일 에러 또한 없다.
 
-<center><img src="../../assets/images/compiler2.png" width="470" height="230" ></center> 
+<center><img src="../../assets/images/compiler2.png" width="650" ></center> 
 
 컴파일 언어와 인터프리터 언어의 가장 큰 차이는 속도다.
 
