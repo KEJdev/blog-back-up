@@ -140,7 +140,7 @@ defaults:
           url: /
         -
           label: Categories
-          url: /categories/
+          url: /tabs/categories/
   -
     scope:
       path: ''
@@ -197,4 +197,4 @@ jekyll-archives:
     tag: tag
   permalinks:
     # tag: /tags/:name/
-    category: /categories/:name/
+    category: /tabs/categories/:name/
