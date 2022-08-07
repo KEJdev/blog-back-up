@@ -140,7 +140,7 @@ defaults:
           url: /
         -
           label: Categories
-          url: /categories/
+          url: /tabs/categories/
   -
     scope:
       path: ''
@@ -152,7 +152,18 @@ defaults:
         -
           label: Home
           url: /
-
+  -
+    scope:
+      path: tags
+    values:
+      breadcrumb:
+        -
+          label: Home
+          url: /
+        -
+          label: Tags
+          url: /tabs/tags/
+          
 sass:
   style: compressed
 
