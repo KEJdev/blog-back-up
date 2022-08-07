@@ -2,7 +2,6 @@
 title:  재귀함수의 장단점과 꼬리 재귀
 date:   2021-09-29 09:00:00 +0300
 categories:  [Program Language, Python]
-tags : [Python]
 sitemap :
 math: true
 mermaid: true

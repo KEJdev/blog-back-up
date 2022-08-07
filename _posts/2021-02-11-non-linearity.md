@@ -2,7 +2,6 @@
 title: 머신러닝에서 미적분이 필요한 이유 2
 date:   2021-02-11 09:00:00 +0300
 categories:  [Machine Learning, ML]
-tags : [통계]
 sitemap :
 math: true
 mermaid: true

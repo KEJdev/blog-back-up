@@ -2,7 +2,6 @@
 title:  Oracle 조인(join)의 종류(equi join, 1999 ANSI)
 date:   2019-12-11 09:00:00 +0300
 categories:  [DB,SQL]
-tags : [DB, Oracle, SQL]
 sitemap :
 math: true
 mermaid: true

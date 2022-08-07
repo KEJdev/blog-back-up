@@ -2,7 +2,6 @@
 title:  샘플링과 리샘플링의 차이는 무엇일까?
 date:   2021-01-25 09:00:00 +0300
 categories:  [Machine Learning, ML]
-tags : [통계]
 sitemap :
 math: true
 mermaid: true

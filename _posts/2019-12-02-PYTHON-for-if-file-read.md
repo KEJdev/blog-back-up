@@ -2,7 +2,6 @@
 title:  파이썬 for문과 if문을 사용해서 파일 읽기
 date:   2019-12-02 09:00:00 +0300
 categories:  [Program Language , Python]
-tags : [문법,Python]
 sitemap :
 math: true
 mermaid: true

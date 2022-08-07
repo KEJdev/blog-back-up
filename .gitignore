@@ -3,6 +3,7 @@
 
 # jekyll cache
 vendor
+_site
 
 # rubygem
 *.gem

@@ -2,7 +2,6 @@
 title:  파이썬 for문을 사용하여 별찍기
 date:   2019-12-01 09:00:00 +0300
 categories:  [Program Language , Python]
-tags : [Python, 문법, 별찍기]
 sitemap :
 math: true
 mermaid: true

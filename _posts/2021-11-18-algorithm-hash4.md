@@ -2,7 +2,6 @@
 title:  프로그래머스 - 베스트 앨범
 date:   2021-11-18 09:00:00 +0300
 categories:  [Program Language , Algorithm]
-tags : [알고리즘,Python]
 sitemap :
 math: true
 mermaid: true

@@ -2,7 +2,6 @@
 title:  파이썬으로 2진수 8진수 16진수 구하기
 date:   2020-03-12 11:00:00 +0300
 categories:  [Program Language , Python]
-tags : [Python ]
 sitemap :
 math: true
 mermaid: true
