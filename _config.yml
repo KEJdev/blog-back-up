@@ -140,7 +140,7 @@ defaults:
           url: /
         -
           label: Categories
-          url: /tabs/categories/
+          url: /categories/
   -
     scope:
       path: ''
