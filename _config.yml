@@ -130,7 +130,18 @@ defaults:
       breadcrumb:
         -
           label: Posts
-
+  -
+    scope:
+      path: tags
+    values:
+      breadcrumb:
+        -
+          label: Home
+          url: /
+        -
+          label: Tags
+          url: /tabs/tags/
+  -
     scope:
       path: categories
     values:
@@ -152,17 +163,7 @@ defaults:
         -
           label: Home
           url: /
-  # -
-  #   scope:
-  #     path: tags
-  #   values:
-  #     breadcrumb:
-  #       -
-  #         label: Home
-  #         url: /
-  #       -
-  #         label: Tags
-  #         url: /tabs/tags/
+
 
 sass:
   style: compressed
@@ -191,10 +192,10 @@ exclude:
   - package-lock.json
 
 jekyll-archives:
-  enabled: [categories]
+  enabled: [categories, tags]
   layouts:
     category: category
     tag: tag
   permalinks:
-    # tag: /tags/:name/
-    category: /tabs/categories/:name/
+    tag: /tags/:name/
+    category: /categories/:name/
